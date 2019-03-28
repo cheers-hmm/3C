@@ -3,24 +3,24 @@ class ControllerCatalogSeries extends Controller {
 	private $error = array();
 
 	public function index() {
-		$this->load->language('catalog/category');
+		$this->load->language('catalog/series');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 		
-		$this->load->model('catalog/category');
+		$this->load->model('catalog/series');
 
 		$this->getList();
 	}
 
 	public function add() {
-		$this->load->language('catalog/category');
+		$this->load->language('catalog/series');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		$this->load->model('catalog/category');
+		$this->load->model('catalog/series');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_category->addSeries($this->request->post);
+			$this->model_catalog_series->addSeries($this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -38,21 +38,21 @@ class ControllerCatalogSeries extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('catalog/category', 'user_token=' . $this->session->data['user_token'] . $url, true));
+			$this->response->redirect($this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'] . $url, true));
 		}
 
 		$this->getForm();
 	}
 
 	public function edit() {
-		$this->load->language('catalog/category');
+		$this->load->language('catalog/series');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		$this->load->model('catalog/category');
+		$this->load->model('catalog/series');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_category->editSeries($this->request->get['category_id'], $this->request->post);
+			$this->model_catalog_series->editSeries($this->request->get['category_id'], $this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -70,22 +70,22 @@ class ControllerCatalogSeries extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('catalog/category', 'user_token=' . $this->session->data['user_token'] . $url, true));
+			$this->response->redirect($this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'] . $url, true));
 		}
 
 		$this->getForm();
 	}
 
 	public function delete() {
-		$this->load->language('catalog/category');
+		$this->load->language('catalog/series');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		$this->load->model('catalog/category');
+		$this->load->model('catalog/series');
 
 		if (isset($this->request->post['selected']) && $this->validateDelete()) {
 			foreach ($this->request->post['selected'] as $category_id) {
-				$this->model_catalog_category->deleteSeries($category_id);
+				$this->model_catalog_series->deleteSeries($category_id);
 			}
 
 			$this->session->data['success'] = $this->language->get('text_success');
@@ -104,21 +104,21 @@ class ControllerCatalogSeries extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('catalog/category', 'user_token=' . $this->session->data['user_token'] . $url, true));
+			$this->response->redirect($this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'] . $url, true));
 		}
 
 		$this->getList();
 	}
 
 	public function repair() {
-		$this->load->language('catalog/category');
+		$this->load->language('catalog/series');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		$this->load->model('catalog/category');
+		$this->load->model('catalog/series');
 
 		if ($this->validateRepair()) {
-			$this->model_catalog_category->repairCategories();
+			$this->model_catalog_series->repairCategories();
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -136,7 +136,7 @@ class ControllerCatalogSeries extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('catalog/category', 'user_token=' . $this->session->data['user_token'] . $url, true));
+			$this->response->redirect($this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'] . $url, true));
 		}
 
 		$this->getList();
@@ -185,12 +185,12 @@ class ControllerCatalogSeries extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('catalog/category', 'user_token=' . $this->session->data['user_token'] . $url, true)
+			'href' => $this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'] . $url, true)
 		);
 
-		$data['add'] = $this->url->link('catalog/category/add', 'user_token=' . $this->session->data['user_token'] . $url, true);
-		$data['delete'] = $this->url->link('catalog/category/delete', 'user_token=' . $this->session->data['user_token'] . $url, true);
-		$data['repair'] = $this->url->link('catalog/category/repair', 'user_token=' . $this->session->data['user_token'] . $url, true);
+		$data['add'] = $this->url->link('catalog/series/add', 'user_token=' . $this->session->data['user_token'] . $url, true);
+		$data['delete'] = $this->url->link('catalog/series/delete', 'user_token=' . $this->session->data['user_token'] . $url, true);
+		$data['repair'] = $this->url->link('catalog/series/repair', 'user_token=' . $this->session->data['user_token'] . $url, true);
 
 		$data['categories'] = array();
 
@@ -201,17 +201,17 @@ class ControllerCatalogSeries extends Controller {
 			'limit' => $this->config->get('config_limit_admin')
 		);
 
-		$category_total = $this->model_catalog_category->getTotalCategories();
+		$category_total = $this->model_catalog_series->getTotalCategories();
 
-		$results = $this->model_catalog_category->getCategories($filter_data);
+		$results = $this->model_catalog_series->getCategories($filter_data);
 
 		foreach ($results as $result) {
 			$data['categories'][] = array(
 				'category_id' => $result['category_id'],
 				'name'        => $result['name'],
 				'sort_order'  => $result['sort_order'],
-				'edit'        => $this->url->link('catalog/category/edit', 'user_token=' . $this->session->data['user_token'] . '&category_id=' . $result['category_id'] . $url, true),
-				'delete'      => $this->url->link('catalog/category/delete', 'user_token=' . $this->session->data['user_token'] . '&category_id=' . $result['category_id'] . $url, true)
+				'edit'        => $this->url->link('catalog/series/edit', 'user_token=' . $this->session->data['user_token'] . '&category_id=' . $result['category_id'] . $url, true),
+				'delete'      => $this->url->link('catalog/series/delete', 'user_token=' . $this->session->data['user_token'] . '&category_id=' . $result['category_id'] . $url, true)
 			);
 		}
 
@@ -247,8 +247,8 @@ class ControllerCatalogSeries extends Controller {
 			$url .= '&page=' . $this->request->get['page'];
 		}
 
-		$data['sort_name'] = $this->url->link('catalog/category', 'user_token=' . $this->session->data['user_token'] . '&sort=name' . $url, true);
-		$data['sort_sort_order'] = $this->url->link('catalog/category', 'user_token=' . $this->session->data['user_token'] . '&sort=sort_order' . $url, true);
+		$data['sort_name'] = $this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'] . '&sort=name' . $url, true);
+		$data['sort_sort_order'] = $this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'] . '&sort=sort_order' . $url, true);
 
 		$url = '';
 
@@ -264,7 +264,7 @@ class ControllerCatalogSeries extends Controller {
 		$pagination->total = $category_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_limit_admin');
-		$pagination->url = $this->url->link('catalog/category', 'user_token=' . $this->session->data['user_token'] . $url . '&page={page}', true);
+		$pagination->url = $this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'] . $url . '&page={page}', true);
 
 		$data['pagination'] = $pagination->render();
 
@@ -277,7 +277,7 @@ class ControllerCatalogSeries extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 		// var_dump($data);
-		$this->response->setOutput($this->load->view('catalog/category_list', $data));
+		$this->response->setOutput($this->load->view('catalog/series_list', $data));
 	}
 
 	protected function getForm() {
@@ -336,19 +336,19 @@ class ControllerCatalogSeries extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('catalog/category', 'user_token=' . $this->session->data['user_token'] . $url, true)
+			'href' => $this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'] . $url, true)
 		);
 
 		if (!isset($this->request->get['category_id'])) {
-			$data['action'] = $this->url->link('catalog/category/add', 'user_token=' . $this->session->data['user_token'] . $url, true);
+			$data['action'] = $this->url->link('catalog/series/add', 'user_token=' . $this->session->data['user_token'] . $url, true);
 		} else {
-			$data['action'] = $this->url->link('catalog/category/edit', 'user_token=' . $this->session->data['user_token'] . '&category_id=' . $this->request->get['category_id'] . $url, true);
+			$data['action'] = $this->url->link('catalog/series/edit', 'user_token=' . $this->session->data['user_token'] . '&category_id=' . $this->request->get['category_id'] . $url, true);
 		}
 
-		$data['cancel'] = $this->url->link('catalog/category', 'user_token=' . $this->session->data['user_token'] . $url, true);
+		$data['cancel'] = $this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'] . $url, true);
 
 		if (isset($this->request->get['category_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
-			$category_info = $this->model_catalog_category->getSeries($this->request->get['category_id']);
+			$category_info = $this->model_catalog_series->getSeries($this->request->get['category_id']);
 		}
 
 		$data['user_token'] = $this->session->data['user_token'];
@@ -360,7 +360,7 @@ class ControllerCatalogSeries extends Controller {
 		if (isset($this->request->post['category_description'])) {
 			$data['category_description'] = $this->request->post['category_description'];
 		} elseif (isset($this->request->get['category_id'])) {
-			$data['category_description'] = $this->model_catalog_category->getSeriesDescriptions($this->request->get['category_id']);
+			$data['category_description'] = $this->model_catalog_series->getSeriesDescriptions($this->request->get['category_id']);
 		} else {
 			$data['category_description'] = array();
 		}
@@ -386,7 +386,7 @@ class ControllerCatalogSeries extends Controller {
 		if (isset($this->request->post['category_filter'])) {
 			$filters = $this->request->post['category_filter'];
 		} elseif (isset($this->request->get['category_id'])) {
-			$filters = $this->model_catalog_category->getSeriesFilters($this->request->get['category_id']);
+			$filters = $this->model_catalog_series->getSeriesFilters($this->request->get['category_id']);
 		} else {
 			$filters = array();
 		}
@@ -425,7 +425,7 @@ class ControllerCatalogSeries extends Controller {
 		if (isset($this->request->post['category_store'])) {
 			$data['category_store'] = $this->request->post['category_store'];
 		} elseif (isset($this->request->get['category_id'])) {
-			$data['category_store'] = $this->model_catalog_category->getSeriesStores($this->request->get['category_id']);
+			$data['category_store'] = $this->model_catalog_series->getSeriesStores($this->request->get['category_id']);
 		} else {
 			$data['category_store'] = array(0);
 		}
@@ -485,7 +485,7 @@ class ControllerCatalogSeries extends Controller {
 		if (isset($this->request->post['category_seo_url'])) {
 			$data['category_seo_url'] = $this->request->post['category_seo_url'];
 		} elseif (isset($this->request->get['category_id'])) {
-			$data['category_seo_url'] = $this->model_catalog_category->getSeriesSeoUrls($this->request->get['category_id']);
+			$data['category_seo_url'] = $this->model_catalog_series->getSeriesSeoUrls($this->request->get['category_id']);
 		} else {
 			$data['category_seo_url'] = array();
 		}
@@ -506,11 +506,11 @@ class ControllerCatalogSeries extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('catalog/category_form', $data));
+		$this->response->setOutput($this->load->view('catalog/series_form', $data));
 	}
 
 	protected function validateForm() {
-		if (!$this->user->hasPermission('modify', 'catalog/category')) {
+		if (!$this->user->hasPermission('modify', 'catalog/series')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
@@ -525,7 +525,7 @@ class ControllerCatalogSeries extends Controller {
 		}
 
 		if (isset($this->request->get['category_id']) && $this->request->post['parent_id']) {
-			$results = $this->model_catalog_category->getSeriesPath($this->request->post['parent_id']);
+			$results = $this->model_catalog_series->getSeriesPath($this->request->post['parent_id']);
 			
 			foreach ($results as $result) {
 				if ($result['path_id'] == $this->request->get['category_id']) {
@@ -568,7 +568,7 @@ class ControllerCatalogSeries extends Controller {
 	}
 
 	protected function validateDelete() {
-		if (!$this->user->hasPermission('modify', 'catalog/category')) {
+		if (!$this->user->hasPermission('modify', 'catalog/series')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
@@ -576,7 +576,7 @@ class ControllerCatalogSeries extends Controller {
 	}
 
 	protected function validateRepair() {
-		if (!$this->user->hasPermission('modify', 'catalog/category')) {
+		if (!$this->user->hasPermission('modify', 'catalog/series')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
@@ -587,7 +587,7 @@ class ControllerCatalogSeries extends Controller {
 		$json = array();
 
 		if (isset($this->request->get['filter_name'])) {
-			$this->load->model('catalog/category');
+			$this->load->model('catalog/series');
 
 			$filter_data = array(
 				'filter_name' => $this->request->get['filter_name'],
@@ -597,7 +597,7 @@ class ControllerCatalogSeries extends Controller {
 				'limit'       => $this->config->get('config_limit_autocomplete')
 			);
 
-			$results = $this->model_catalog_category->getCategories($filter_data);
+			$results = $this->model_catalog_series->getCategories($filter_data);
 
 			foreach ($results as $result) {
 				$json[] = array(

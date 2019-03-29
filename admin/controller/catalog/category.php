@@ -6,7 +6,7 @@ class ControllerCatalogCategory extends Controller {
 		$this->load->language('catalog/category');
 
 		$this->document->setTitle($this->language->get('heading_title'));
-
+		// print_r($this->language->all());
 		$this->load->model('catalog/category');
 
 		$this->getList();

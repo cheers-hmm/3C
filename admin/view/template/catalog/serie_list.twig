@@ -3,7 +3,7 @@
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right"><a href="{{ add }}" data-toggle="tooltip" title="{{ button_add }}" class="btn btn-primary"><i class="fa fa-plus"></i></a> <a href="{{ repair }}" data-toggle="tooltip" title="{{ button_rebuild }}" class="btn btn-default"><i class="fa fa-refresh"></i></a>
-        <button type="button" data-toggle="tooltip" title="{{ button_delete }}" class="btn btn-danger" onclick="confirm('{{ text_confirm }}') ? $('#form-category').submit() : false;"><i class="fa fa-trash-o"></i></button>
+        <button type="button" data-toggle="tooltip" title="{{ button_delete }}" class="btn btn-danger" onclick="confirm('{{ text_confirm }}') ? $('#form-serie').submit() : false;"><i class="fa fa-trash-o"></i></button>
       </div>
       <h1>{{ heading_title }}</h1>
       <ul class="breadcrumb">
@@ -29,7 +29,7 @@
         <h3 class="panel-title"><i class="fa fa-list"></i> {{ text_list }}</h3>
       </div>
       <div class="panel-body">
-        <form action="{{ delete }}" method="post" enctype="multipart/form-data" id="form-category">
+        <form action="{{ delete }}" method="post" enctype="multipart/form-data" id="form-serie">
           <div class="table-responsive">
             <table class="table table-bordered table-hover">
               <thead>
@@ -49,17 +49,17 @@
                 </tr>
               </thead>
               <tbody>
-                {% if categories %}
-                {% for category in categories %}
+                {% if series %}
+                {% for serie in series %}
                 <tr>
-                  <td class="text-center">{% if category.category_id in selected %}
-                    <input type="checkbox" name="selected[]" value="{{ category.category_id }}" checked="checked" />
+                  <td class="text-center">{% if serie.serie_id in selected %}
+                    <input type="checkbox" name="selected[]" value="{{ serie.serie_id }}" checked="checked" />
                     {% else %}
-                    <input type="checkbox" name="selected[]" value="{{ category.category_id }}" />
+                    <input type="checkbox" name="selected[]" value="{{ serie.serie_id }}" />
                     {% endif %}</td>
-                  <td class="text-left">{{ category.name }}</td>
-                  <td class="text-right">{{ category.sort_order }}</td>
-                  <td class="text-right"><a href="{{ category.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
+                  <td class="text-left">{{ serie.name }}</td>
+                  <td class="text-right">{{ serie.sort_order }}</td>
+                  <td class="text-right"><a href="{{ serie.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                 </tr>
                 {% endfor %}
                 {% else %}

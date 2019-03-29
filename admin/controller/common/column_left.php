@@ -27,10 +27,10 @@ class ControllerCommonColumnLeft extends Controller {
 				);
 			}
 			// echo $this->user->hasPermission('access', 'catalog/series').'0123';
-			if ($this->user->hasPermission('access', 'catalog/series')) {
+			if ($this->user->hasPermission('access', 'catalog/serie')) {
 				$catalog[] = array(
-					'name'	   => $this->language->get('text_series'),
-					'href'     => $this->url->link('catalog/series', 'user_token=' . $this->session->data['user_token'], true),
+					'name'	   => $this->language->get('text_serie'),
+					'href'     => $this->url->link('catalog/serie', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()		
 				);
 			}

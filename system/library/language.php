@@ -58,6 +58,7 @@ class Language {
 	 * @return	array
      */	
 	public function load($filename, $key = '') {
+		// echo $key;
 		if (!$key) {
 			$_ = array();
 	

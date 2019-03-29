@@ -45,7 +45,7 @@ class ControllerStartupPermission extends Controller {
 				'error/not_found',
 				'error/permission'
 			);
-			var_dump($route);
+			// var_dump($route);
 			if (!in_array($route, $ignore) && !$this->user->hasPermission('access', $route)) {
 				return new Action('error/permission');
 			}

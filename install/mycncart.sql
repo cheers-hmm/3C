@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-03-28 19:05:24
+Date: 2019-03-29 18:35:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -91,7 +91,7 @@ CREATE TABLE `mc_api_session` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`api_session_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_api_session
@@ -108,6 +108,7 @@ INSERT INTO `mc_api_session` VALUES ('9', '2', '24698c0b8d1bf8999d441fa49a', '12
 INSERT INTO `mc_api_session` VALUES ('10', '2', '14cbe8c11a1a16d789b8bd6225', '127.0.0.1', '2019-03-28 17:19:17', '2019-03-28 17:19:17');
 INSERT INTO `mc_api_session` VALUES ('11', '2', '4fba0b3dcd2ae3e2df244bd6a1', '127.0.0.1', '2019-03-28 17:28:52', '2019-03-28 17:28:52');
 INSERT INTO `mc_api_session` VALUES ('12', '2', '4fbef6f953c2c24b756a976121', '127.0.0.1', '2019-03-28 17:29:17', '2019-03-28 17:29:17');
+INSERT INTO `mc_api_session` VALUES ('13', '2', '915b613ce5dbc834b4dbe9a51a', '127.0.0.1', '2019-03-29 16:32:52', '2019-03-29 16:32:52');
 
 -- ----------------------------
 -- Table structure for mc_attribute
@@ -1835,6 +1836,20 @@ CREATE TABLE `mc_coupon_product` (
 
 -- ----------------------------
 -- Records of mc_coupon_product
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for mc_coupon_serie
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_coupon_serie`;
+CREATE TABLE `mc_coupon_serie` (
+  `coupon_id` int(11) NOT NULL,
+  `serie_id` int(11) NOT NULL,
+  PRIMARY KEY (`coupon_id`,`serie_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_coupon_serie
 -- ----------------------------
 
 -- ----------------------------
@@ -7304,6 +7319,67 @@ CREATE TABLE `mc_product_to_layout` (
 INSERT INTO `mc_product_to_layout` VALUES ('43', '0', '0');
 
 -- ----------------------------
+-- Table structure for mc_product_to_serie
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_product_to_serie`;
+CREATE TABLE `mc_product_to_serie` (
+  `product_id` int(11) NOT NULL,
+  `serie_id` int(11) NOT NULL,
+  PRIMARY KEY (`product_id`,`serie_id`),
+  KEY `category_id` (`serie_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_product_to_serie
+-- ----------------------------
+INSERT INTO `mc_product_to_serie` VALUES ('28', '20');
+INSERT INTO `mc_product_to_serie` VALUES ('28', '26');
+INSERT INTO `mc_product_to_serie` VALUES ('29', '25');
+INSERT INTO `mc_product_to_serie` VALUES ('29', '28');
+INSERT INTO `mc_product_to_serie` VALUES ('29', '36');
+INSERT INTO `mc_product_to_serie` VALUES ('30', '25');
+INSERT INTO `mc_product_to_serie` VALUES ('30', '28');
+INSERT INTO `mc_product_to_serie` VALUES ('30', '57');
+INSERT INTO `mc_product_to_serie` VALUES ('31', '25');
+INSERT INTO `mc_product_to_serie` VALUES ('31', '28');
+INSERT INTO `mc_product_to_serie` VALUES ('31', '36');
+INSERT INTO `mc_product_to_serie` VALUES ('32', '34');
+INSERT INTO `mc_product_to_serie` VALUES ('32', '43');
+INSERT INTO `mc_product_to_serie` VALUES ('33', '25');
+INSERT INTO `mc_product_to_serie` VALUES ('33', '28');
+INSERT INTO `mc_product_to_serie` VALUES ('33', '35');
+INSERT INTO `mc_product_to_serie` VALUES ('34', '34');
+INSERT INTO `mc_product_to_serie` VALUES ('34', '43');
+INSERT INTO `mc_product_to_serie` VALUES ('35', '20');
+INSERT INTO `mc_product_to_serie` VALUES ('35', '27');
+INSERT INTO `mc_product_to_serie` VALUES ('36', '34');
+INSERT INTO `mc_product_to_serie` VALUES ('36', '44');
+INSERT INTO `mc_product_to_serie` VALUES ('40', '20');
+INSERT INTO `mc_product_to_serie` VALUES ('40', '27');
+INSERT INTO `mc_product_to_serie` VALUES ('41', '25');
+INSERT INTO `mc_product_to_serie` VALUES ('41', '29');
+INSERT INTO `mc_product_to_serie` VALUES ('41', '32');
+INSERT INTO `mc_product_to_serie` VALUES ('42', '28');
+INSERT INTO `mc_product_to_serie` VALUES ('42', '36');
+INSERT INTO `mc_product_to_serie` VALUES ('43', '25');
+INSERT INTO `mc_product_to_serie` VALUES ('43', '28');
+INSERT INTO `mc_product_to_serie` VALUES ('43', '36');
+INSERT INTO `mc_product_to_serie` VALUES ('44', '25');
+INSERT INTO `mc_product_to_serie` VALUES ('44', '30');
+INSERT INTO `mc_product_to_serie` VALUES ('44', '32');
+INSERT INTO `mc_product_to_serie` VALUES ('45', '17');
+INSERT INTO `mc_product_to_serie` VALUES ('46', '20');
+INSERT INTO `mc_product_to_serie` VALUES ('46', '27');
+INSERT INTO `mc_product_to_serie` VALUES ('47', '20');
+INSERT INTO `mc_product_to_serie` VALUES ('47', '26');
+INSERT INTO `mc_product_to_serie` VALUES ('48', '34');
+INSERT INTO `mc_product_to_serie` VALUES ('48', '52');
+INSERT INTO `mc_product_to_serie` VALUES ('48', '58');
+INSERT INTO `mc_product_to_serie` VALUES ('49', '25');
+INSERT INTO `mc_product_to_serie` VALUES ('49', '28');
+INSERT INTO `mc_product_to_serie` VALUES ('49', '57');
+
+-- ----------------------------
 -- Table structure for mc_product_to_store
 -- ----------------------------
 DROP TABLE IF EXISTS `mc_product_to_store`;
@@ -7671,6 +7747,353 @@ INSERT INTO `mc_seo_url` VALUES ('994', '0', '3', 'blog_category_id=1', '与-神
 INSERT INTO `mc_seo_url` VALUES ('997', '0', '3', 'blog_category_id=6', '与-神-对-话-3');
 
 -- ----------------------------
+-- Table structure for mc_serie
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_serie`;
+CREATE TABLE `mc_serie` (
+  `serie_id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` varchar(255) DEFAULT NULL,
+  `parent_id` int(11) NOT NULL DEFAULT '0',
+  `top` tinyint(1) NOT NULL,
+  `column` int(3) NOT NULL,
+  `sort_order` int(3) NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL,
+  `date_added` datetime NOT NULL,
+  `date_modified` datetime NOT NULL,
+  PRIMARY KEY (`serie_id`),
+  KEY `parent_id` (`parent_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_serie
+-- ----------------------------
+INSERT INTO `mc_serie` VALUES ('43', '', '34', '0', '0', '0', '1', '2010-09-18 14:06:49', '2011-04-22 01:55:40');
+INSERT INTO `mc_serie` VALUES ('40', '', '34', '0', '0', '0', '1', '2010-09-18 14:05:36', '2010-09-18 14:05:36');
+INSERT INTO `mc_serie` VALUES ('41', '', '34', '0', '0', '0', '1', '2010-09-18 14:05:49', '2011-04-22 01:55:30');
+INSERT INTO `mc_serie` VALUES ('42', '', '34', '0', '0', '0', '1', '2010-09-18 14:06:34', '2010-11-07 20:31:04');
+INSERT INTO `mc_serie` VALUES ('39', '', '34', '0', '0', '0', '1', '2010-09-18 14:04:17', '2011-04-22 01:55:20');
+INSERT INTO `mc_serie` VALUES ('38', '', '34', '0', '0', '0', '1', '2010-09-18 14:03:51', '2010-09-18 14:03:51');
+INSERT INTO `mc_serie` VALUES ('37', '', '34', '0', '0', '0', '1', '2010-09-18 14:03:39', '2011-04-22 01:55:08');
+INSERT INTO `mc_serie` VALUES ('57', '', '28', '0', '0', '3', '1', '2011-04-26 08:53:16', '2016-08-04 12:52:21');
+INSERT INTO `mc_serie` VALUES ('29', '', '32', '0', '0', '1', '1', '2009-02-02 13:11:37', '2016-08-04 12:47:16');
+INSERT INTO `mc_serie` VALUES ('30', '', '32', '0', '0', '1', '1', '2009-02-02 13:11:59', '2016-08-04 12:44:42');
+INSERT INTO `mc_serie` VALUES ('31', '', '32', '0', '0', '1', '1', '2009-02-03 14:17:24', '2016-08-04 12:43:10');
+INSERT INTO `mc_serie` VALUES ('36', '', '28', '0', '0', '0', '1', '2010-09-17 10:07:13', '2016-08-04 12:50:26');
+INSERT INTO `mc_serie` VALUES ('35', '', '28', '0', '0', '0', '1', '2010-09-17 10:06:48', '2016-08-04 12:49:23');
+INSERT INTO `mc_serie` VALUES ('32', '', '25', '0', '0', '1', '1', '2009-02-03 14:17:34', '2016-08-04 12:36:03');
+INSERT INTO `mc_serie` VALUES ('28', '', '25', '0', '0', '1', '1', '2009-02-02 13:11:12', '2016-08-04 12:35:01');
+INSERT INTO `mc_serie` VALUES ('27', '', '20', '0', '0', '2', '1', '2009-01-31 01:55:34', '2017-07-20 09:46:20');
+INSERT INTO `mc_serie` VALUES ('26', '', '20', '0', '0', '1', '1', '2009-01-31 01:55:14', '2016-08-04 12:31:46');
+INSERT INTO `mc_serie` VALUES ('34', 'catalog/demo/ipod_touch_4.jpg', '0', '1', '4', '7', '1', '2009-02-03 14:18:11', '2016-08-13 14:13:13');
+INSERT INTO `mc_serie` VALUES ('17', '', '0', '1', '1', '4', '1', '2009-01-03 21:08:57', '2016-08-04 12:54:23');
+INSERT INTO `mc_serie` VALUES ('25', '', '0', '1', '1', '3', '1', '2009-01-31 01:04:25', '2016-08-04 12:33:28');
+INSERT INTO `mc_serie` VALUES ('20', 'catalog/demo/compaq_presario.jpg', '0', '1', '1', '1', '1', '2009-01-05 21:49:43', '2016-08-04 12:28:28');
+INSERT INTO `mc_serie` VALUES ('44', '', '34', '0', '0', '0', '1', '2010-09-21 15:39:21', '2010-11-07 20:30:55');
+INSERT INTO `mc_serie` VALUES ('47', '', '34', '0', '0', '0', '1', '2010-11-07 11:13:16', '2010-11-07 11:13:16');
+INSERT INTO `mc_serie` VALUES ('48', '', '34', '0', '0', '0', '1', '2010-11-07 11:13:33', '2010-11-07 11:13:33');
+INSERT INTO `mc_serie` VALUES ('49', '', '34', '0', '0', '0', '1', '2010-11-07 11:14:04', '2010-11-07 11:14:04');
+INSERT INTO `mc_serie` VALUES ('50', '', '34', '0', '0', '0', '1', '2010-11-07 11:14:23', '2011-04-22 01:16:01');
+INSERT INTO `mc_serie` VALUES ('51', '', '34', '0', '0', '0', '1', '2010-11-07 11:14:38', '2011-04-22 01:16:13');
+INSERT INTO `mc_serie` VALUES ('52', '', '34', '0', '0', '0', '1', '2010-11-07 11:16:09', '2011-04-22 01:54:57');
+INSERT INTO `mc_serie` VALUES ('53', '', '34', '0', '0', '0', '1', '2010-11-07 11:28:53', '2011-04-22 01:14:36');
+INSERT INTO `mc_serie` VALUES ('54', '', '34', '0', '0', '0', '1', '2010-11-07 11:29:16', '2011-04-22 01:16:50');
+INSERT INTO `mc_serie` VALUES ('55', '', '34', '0', '0', '0', '1', '2010-11-08 10:31:32', '2010-11-08 10:31:32');
+INSERT INTO `mc_serie` VALUES ('56', '', '34', '0', '0', '0', '1', '2010-11-08 10:31:50', '2011-04-22 01:16:37');
+INSERT INTO `mc_serie` VALUES ('58', '', '52', '0', '0', '0', '1', '2011-05-08 13:44:16', '2011-05-08 13:44:16');
+INSERT INTO `mc_serie` VALUES ('59', '', '0', '0', '1', '0', '1', '2019-03-29 17:59:30', '2019-03-29 17:59:30');
+INSERT INTO `mc_serie` VALUES ('60', '', '0', '0', '1', '0', '1', '2019-03-29 18:00:23', '2019-03-29 18:00:23');
+INSERT INTO `mc_serie` VALUES ('61', '', '0', '0', '1', '0', '1', '2019-03-29 18:13:15', '2019-03-29 18:13:15');
+INSERT INTO `mc_serie` VALUES ('62', '', '0', '0', '1', '0', '1', '2019-03-29 18:17:01', '2019-03-29 18:17:01');
+
+-- ----------------------------
+-- Table structure for mc_serie_description
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_serie_description`;
+CREATE TABLE `mc_serie_description` (
+  `serie_id` int(11) NOT NULL,
+  `language_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `meta_title` varchar(255) NOT NULL,
+  `meta_description` varchar(255) NOT NULL,
+  `meta_keyword` varchar(255) NOT NULL,
+  PRIMARY KEY (`serie_id`,`language_id`),
+  KEY `name` (`name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_serie_description
+-- ----------------------------
+INSERT INTO `mc_serie_description` VALUES ('42', '3', 'test 9', '', 'test 9', '', '');
+INSERT INTO `mc_serie_description` VALUES ('39', '3', 'test 6', '', 'test 6', '', '');
+INSERT INTO `mc_serie_description` VALUES ('40', '1', 'test 7', '', 'test 7', '', '');
+INSERT INTO `mc_serie_description` VALUES ('40', '2', 'test 7', '', 'test 7', '', '');
+INSERT INTO `mc_serie_description` VALUES ('40', '3', 'test 7', '', 'test 7', '', '');
+INSERT INTO `mc_serie_description` VALUES ('41', '1', 'test 8', '', 'test 8', '', '');
+INSERT INTO `mc_serie_description` VALUES ('41', '2', 'test 8', '', 'test 8', '', '');
+INSERT INTO `mc_serie_description` VALUES ('41', '3', 'test 8', '', 'test 8', '', '');
+INSERT INTO `mc_serie_description` VALUES ('42', '1', 'test 9', '', 'test 9', '', '');
+INSERT INTO `mc_serie_description` VALUES ('42', '2', 'test 9', '', 'test 9', '', '');
+INSERT INTO `mc_serie_description` VALUES ('30', '1', '梳妆台', '', '梳妆台', '', '');
+INSERT INTO `mc_serie_description` VALUES ('29', '1', '床', '', '床', '', '');
+INSERT INTO `mc_serie_description` VALUES ('57', '1', '咖啡桌', '', '咖啡桌', '', '');
+INSERT INTO `mc_serie_description` VALUES ('36', '1', '椅子', '', '椅子', '', '');
+INSERT INTO `mc_serie_description` VALUES ('35', '2', 'Sofa Set', '', 'Sofa Set', '', '');
+INSERT INTO `mc_serie_description` VALUES ('32', '2', 'Bed Room', '', 'Bed Room', '', '');
+INSERT INTO `mc_serie_description` VALUES ('17', '2', 'Lighting', '', 'Lighting', '', '');
+INSERT INTO `mc_serie_description` VALUES ('25', '1', '实木家具', '&lt;p&gt;分类说明信息&lt;/p&gt;\n', '实木家具', '', '');
+INSERT INTO `mc_serie_description` VALUES ('43', '1', 'test 11', '', 'test 11', '', '');
+INSERT INTO `mc_serie_description` VALUES ('31', '2', 'Reading Table', '', 'Reading Table', '', '');
+INSERT INTO `mc_serie_description` VALUES ('31', '3', '書桌', '', '書桌', '', '');
+INSERT INTO `mc_serie_description` VALUES ('37', '1', 'test 5', '', 'test 5', '', '');
+INSERT INTO `mc_serie_description` VALUES ('37', '2', 'test 5', '', 'test 5', '', '');
+INSERT INTO `mc_serie_description` VALUES ('37', '3', 'test 5', '', 'test 5', '', '');
+INSERT INTO `mc_serie_description` VALUES ('29', '3', '床', '', '床', '', '');
+INSERT INTO `mc_serie_description` VALUES ('57', '2', 'Coffee Table', '', 'Coffee Table', '', '');
+INSERT INTO `mc_serie_description` VALUES ('36', '3', '椅子', '', '椅子', '', '');
+INSERT INTO `mc_serie_description` VALUES ('35', '3', '沙發', '', '沙發', '', '');
+INSERT INTO `mc_serie_description` VALUES ('35', '1', '沙发', '', '沙发', '', '');
+INSERT INTO `mc_serie_description` VALUES ('32', '1', '臥室', '', '臥室', '', '');
+INSERT INTO `mc_serie_description` VALUES ('34', '2', 'Home Decor', '&lt;p&gt;\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\n', 'Home Decor', '', '');
+INSERT INTO `mc_serie_description` VALUES ('34', '1', '装饰品', '&lt;p&gt;\n	装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容\n\n&lt;/p&gt;', '装饰品', '', '');
+INSERT INTO `mc_serie_description` VALUES ('17', '1', '灯具', '', '灯具', '', '');
+INSERT INTO `mc_serie_description` VALUES ('43', '2', 'test 11', '', 'test 11', '', '');
+INSERT INTO `mc_serie_description` VALUES ('38', '1', 'test 4', '', 'test 4', '', '');
+INSERT INTO `mc_serie_description` VALUES ('38', '2', 'test 4', '', 'test 4', '', '');
+INSERT INTO `mc_serie_description` VALUES ('38', '3', 'test 4', '', 'test 4', '', '');
+INSERT INTO `mc_serie_description` VALUES ('39', '1', 'test 6', '', 'test 6', '', '');
+INSERT INTO `mc_serie_description` VALUES ('39', '2', 'test 6', '', 'test 6', '', '');
+INSERT INTO `mc_serie_description` VALUES ('29', '2', 'Beds', '', 'Beds', '', '');
+INSERT INTO `mc_serie_description` VALUES ('57', '3', '咖啡桌', '', '咖啡桌', '', '');
+INSERT INTO `mc_serie_description` VALUES ('36', '2', 'Chair', '', 'Chair', '', '');
+INSERT INTO `mc_serie_description` VALUES ('32', '3', '卧室', '', '卧室', '', '');
+INSERT INTO `mc_serie_description` VALUES ('34', '3', '裝飾品', '&lt;p&gt;\n	装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容\n\n&lt;/p&gt;', 'MP3 Players', '', '');
+INSERT INTO `mc_serie_description` VALUES ('26', '1', '菜板', '', '菜板', '', '');
+INSERT INTO `mc_serie_description` VALUES ('26', '2', 'Chop board', '', 'Chop board', '', '');
+INSERT INTO `mc_serie_description` VALUES ('26', '3', '菜板', '', '菜板', '', '');
+INSERT INTO `mc_serie_description` VALUES ('27', '1', '餐具', '&lt;p&gt;分类描述信息&lt;br&gt;&lt;/p&gt;', '餐具', '', '');
+INSERT INTO `mc_serie_description` VALUES ('27', '2', 'Dining Set', '', 'Dining Set', '', '');
+INSERT INTO `mc_serie_description` VALUES ('27', '3', '餐具', '&lt;p&gt;分類描述信息&lt;br&gt;&lt;/p&gt;', '餐具', '', '');
+INSERT INTO `mc_serie_description` VALUES ('28', '1', '客厅', '', '客厅', '', '');
+INSERT INTO `mc_serie_description` VALUES ('28', '2', 'Living Room', '', 'Living Room', '', '');
+INSERT INTO `mc_serie_description` VALUES ('28', '3', '客廳', '', '客廳', '', '');
+INSERT INTO `mc_serie_description` VALUES ('17', '3', '燈具', '', '燈具', '', '');
+INSERT INTO `mc_serie_description` VALUES ('25', '3', '實木家具', '&lt;p&gt;\n	分類說明信息&lt;/p&gt;\n', '實木家具', '', '');
+INSERT INTO `mc_serie_description` VALUES ('25', '2', 'Solid Wood', '&lt;p&gt;\n	Example of category description text&lt;/p&gt;\n', 'Solid Wood', '', '');
+INSERT INTO `mc_serie_description` VALUES ('20', '1', '厨房用品', '&lt;p&gt;分类说明信息&lt;/p&gt;\n', '厨房用品', '', '');
+INSERT INTO `mc_serie_description` VALUES ('20', '2', 'Kitchen', '&lt;p&gt;\n	Example of category description text&lt;/p&gt;\n', 'Kitchen', '', '');
+INSERT INTO `mc_serie_description` VALUES ('20', '3', '厨房用品', '&lt;p&gt;\n	分類說明信息&lt;/p&gt;\n', '厨房用品', '', '');
+INSERT INTO `mc_serie_description` VALUES ('30', '2', 'Dressing Table', '', 'Dressing Table', '', '');
+INSERT INTO `mc_serie_description` VALUES ('30', '3', '梳妝台', '', '梳妝台', '', '');
+INSERT INTO `mc_serie_description` VALUES ('31', '1', '书桌', '', '书桌', '', '');
+INSERT INTO `mc_serie_description` VALUES ('43', '3', 'test 11', '', 'test 11', '', '');
+INSERT INTO `mc_serie_description` VALUES ('44', '1', 'test 12', '', 'test 12', '', '');
+INSERT INTO `mc_serie_description` VALUES ('44', '2', 'test 12', '', 'test 12', '', '');
+INSERT INTO `mc_serie_description` VALUES ('44', '3', 'test 12', '', 'test 12', '', '');
+INSERT INTO `mc_serie_description` VALUES ('47', '1', 'test 15', '', 'test 15', '', '');
+INSERT INTO `mc_serie_description` VALUES ('47', '2', 'test 15', '', 'test 15', '', '');
+INSERT INTO `mc_serie_description` VALUES ('47', '3', 'test 15', '', 'test 15', '', '');
+INSERT INTO `mc_serie_description` VALUES ('48', '1', 'test 16', '', 'test 16', '', '');
+INSERT INTO `mc_serie_description` VALUES ('48', '2', 'test 16', '', 'test 16', '', '');
+INSERT INTO `mc_serie_description` VALUES ('48', '3', 'test 16', '', 'test 16', '', '');
+INSERT INTO `mc_serie_description` VALUES ('49', '1', 'test 17', '', 'test 17', '', '');
+INSERT INTO `mc_serie_description` VALUES ('49', '2', 'test 17', '', 'test 17', '', '');
+INSERT INTO `mc_serie_description` VALUES ('49', '3', 'test 17', '', 'test 17', '', '');
+INSERT INTO `mc_serie_description` VALUES ('50', '1', 'test 18', '', 'test 18', '', '');
+INSERT INTO `mc_serie_description` VALUES ('50', '2', 'test 18', '', 'test 18', '', '');
+INSERT INTO `mc_serie_description` VALUES ('50', '3', 'test 18', '', 'test 18', '', '');
+INSERT INTO `mc_serie_description` VALUES ('51', '1', 'test 19', '', 'test 19', '', '');
+INSERT INTO `mc_serie_description` VALUES ('51', '2', 'test 19', '', 'test 19', '', '');
+INSERT INTO `mc_serie_description` VALUES ('51', '3', 'test 19', '', 'test 19', '', '');
+INSERT INTO `mc_serie_description` VALUES ('52', '1', 'test 20', '', 'test 20', '', '');
+INSERT INTO `mc_serie_description` VALUES ('52', '2', 'test 20', '', 'test 20', '', '');
+INSERT INTO `mc_serie_description` VALUES ('52', '3', 'test 20', '', 'test 20', '', '');
+INSERT INTO `mc_serie_description` VALUES ('53', '1', 'test 21', '', 'test 21', '', '');
+INSERT INTO `mc_serie_description` VALUES ('53', '2', 'test 21', '', 'test 21', '', '');
+INSERT INTO `mc_serie_description` VALUES ('53', '3', 'test 21', '', 'test 21', '', '');
+INSERT INTO `mc_serie_description` VALUES ('54', '1', 'test 22', '', 'test 22', '', '');
+INSERT INTO `mc_serie_description` VALUES ('54', '2', 'test 22', '', 'test 22', '', '');
+INSERT INTO `mc_serie_description` VALUES ('54', '3', 'test 22', '', 'test 22', '', '');
+INSERT INTO `mc_serie_description` VALUES ('55', '1', 'test 23', '', 'test 23', '', '');
+INSERT INTO `mc_serie_description` VALUES ('55', '2', 'test 23', '', 'test 23', '', '');
+INSERT INTO `mc_serie_description` VALUES ('55', '3', 'test 23', '', 'test 23', '', '');
+INSERT INTO `mc_serie_description` VALUES ('56', '1', 'test 24', '', 'test 24', '', '');
+INSERT INTO `mc_serie_description` VALUES ('56', '2', 'test 24', '', 'test 24', '', '');
+INSERT INTO `mc_serie_description` VALUES ('56', '3', 'test 24', '', 'test 24', '', '');
+INSERT INTO `mc_serie_description` VALUES ('58', '1', 'test 25', '', 'test 25', '', '');
+INSERT INTO `mc_serie_description` VALUES ('58', '2', 'test 25', '', 'test 25', '', '');
+INSERT INTO `mc_serie_description` VALUES ('58', '3', 'test 25', '', 'test 25', '', '');
+
+-- ----------------------------
+-- Table structure for mc_serie_filter
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_serie_filter`;
+CREATE TABLE `mc_serie_filter` (
+  `serie_id` int(11) NOT NULL,
+  `filter_id` int(11) NOT NULL,
+  PRIMARY KEY (`serie_id`,`filter_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_serie_filter
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for mc_serie_path
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_serie_path`;
+CREATE TABLE `mc_serie_path` (
+  `serie_id` int(11) NOT NULL,
+  `path_id` int(11) NOT NULL,
+  `level` int(11) NOT NULL,
+  PRIMARY KEY (`serie_id`,`path_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_serie_path
+-- ----------------------------
+INSERT INTO `mc_serie_path` VALUES ('26', '20', '0');
+INSERT INTO `mc_serie_path` VALUES ('36', '36', '2');
+INSERT INTO `mc_serie_path` VALUES ('36', '28', '1');
+INSERT INTO `mc_serie_path` VALUES ('57', '25', '0');
+INSERT INTO `mc_serie_path` VALUES ('57', '28', '1');
+INSERT INTO `mc_serie_path` VALUES ('28', '28', '1');
+INSERT INTO `mc_serie_path` VALUES ('31', '31', '2');
+INSERT INTO `mc_serie_path` VALUES ('28', '25', '0');
+INSERT INTO `mc_serie_path` VALUES ('31', '32', '1');
+INSERT INTO `mc_serie_path` VALUES ('30', '25', '0');
+INSERT INTO `mc_serie_path` VALUES ('29', '29', '2');
+INSERT INTO `mc_serie_path` VALUES ('29', '25', '0');
+INSERT INTO `mc_serie_path` VALUES ('32', '32', '1');
+INSERT INTO `mc_serie_path` VALUES ('25', '25', '0');
+INSERT INTO `mc_serie_path` VALUES ('17', '17', '0');
+INSERT INTO `mc_serie_path` VALUES ('36', '25', '0');
+INSERT INTO `mc_serie_path` VALUES ('57', '57', '2');
+INSERT INTO `mc_serie_path` VALUES ('26', '26', '1');
+INSERT INTO `mc_serie_path` VALUES ('35', '25', '0');
+INSERT INTO `mc_serie_path` VALUES ('20', '20', '0');
+INSERT INTO `mc_serie_path` VALUES ('35', '35', '2');
+INSERT INTO `mc_serie_path` VALUES ('27', '27', '1');
+INSERT INTO `mc_serie_path` VALUES ('27', '20', '0');
+INSERT INTO `mc_serie_path` VALUES ('56', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('55', '55', '1');
+INSERT INTO `mc_serie_path` VALUES ('55', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('54', '54', '1');
+INSERT INTO `mc_serie_path` VALUES ('54', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('53', '53', '1');
+INSERT INTO `mc_serie_path` VALUES ('53', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('58', '58', '2');
+INSERT INTO `mc_serie_path` VALUES ('58', '52', '1');
+INSERT INTO `mc_serie_path` VALUES ('58', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('52', '52', '1');
+INSERT INTO `mc_serie_path` VALUES ('52', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('51', '51', '1');
+INSERT INTO `mc_serie_path` VALUES ('51', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('50', '50', '1');
+INSERT INTO `mc_serie_path` VALUES ('50', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('49', '49', '1');
+INSERT INTO `mc_serie_path` VALUES ('49', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('48', '48', '1');
+INSERT INTO `mc_serie_path` VALUES ('48', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('47', '47', '1');
+INSERT INTO `mc_serie_path` VALUES ('47', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('44', '44', '1');
+INSERT INTO `mc_serie_path` VALUES ('44', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('37', '37', '1');
+INSERT INTO `mc_serie_path` VALUES ('37', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('38', '38', '1');
+INSERT INTO `mc_serie_path` VALUES ('38', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('43', '43', '1');
+INSERT INTO `mc_serie_path` VALUES ('43', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('34', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('39', '39', '1');
+INSERT INTO `mc_serie_path` VALUES ('39', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('42', '42', '1');
+INSERT INTO `mc_serie_path` VALUES ('42', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('41', '41', '1');
+INSERT INTO `mc_serie_path` VALUES ('41', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('40', '40', '1');
+INSERT INTO `mc_serie_path` VALUES ('40', '34', '0');
+INSERT INTO `mc_serie_path` VALUES ('30', '32', '1');
+INSERT INTO `mc_serie_path` VALUES ('56', '56', '1');
+INSERT INTO `mc_serie_path` VALUES ('32', '25', '0');
+INSERT INTO `mc_serie_path` VALUES ('29', '32', '1');
+INSERT INTO `mc_serie_path` VALUES ('31', '25', '0');
+INSERT INTO `mc_serie_path` VALUES ('30', '30', '2');
+INSERT INTO `mc_serie_path` VALUES ('35', '28', '1');
+INSERT INTO `mc_serie_path` VALUES ('0', '0', '0');
+INSERT INTO `mc_serie_path` VALUES ('59', '0', '0');
+INSERT INTO `mc_serie_path` VALUES ('59', '59', '1');
+INSERT INTO `mc_serie_path` VALUES ('60', '0', '0');
+INSERT INTO `mc_serie_path` VALUES ('60', '60', '1');
+INSERT INTO `mc_serie_path` VALUES ('61', '0', '0');
+INSERT INTO `mc_serie_path` VALUES ('61', '61', '1');
+INSERT INTO `mc_serie_path` VALUES ('62', '0', '0');
+INSERT INTO `mc_serie_path` VALUES ('62', '62', '1');
+
+-- ----------------------------
+-- Table structure for mc_serie_to_layout
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_serie_to_layout`;
+CREATE TABLE `mc_serie_to_layout` (
+  `serie_id` int(11) NOT NULL,
+  `store_id` int(11) NOT NULL,
+  `layout_id` int(11) NOT NULL,
+  PRIMARY KEY (`serie_id`,`store_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_serie_to_layout
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for mc_serie_to_store
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_serie_to_store`;
+CREATE TABLE `mc_serie_to_store` (
+  `serie_id` int(11) NOT NULL,
+  `store_id` int(11) NOT NULL,
+  PRIMARY KEY (`serie_id`,`store_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_serie_to_store
+-- ----------------------------
+INSERT INTO `mc_serie_to_store` VALUES ('17', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('20', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('25', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('26', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('27', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('28', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('29', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('30', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('31', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('32', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('34', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('35', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('36', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('37', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('38', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('39', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('40', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('41', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('42', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('43', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('44', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('47', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('48', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('49', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('50', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('51', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('52', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('53', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('54', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('55', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('56', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('57', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('58', '0');
+
+-- ----------------------------
 -- Table structure for mc_session
 -- ----------------------------
 DROP TABLE IF EXISTS `mc_session`;
@@ -7692,10 +8115,11 @@ INSERT INTO `mc_session` VALUES ('4fba0b3dcd2ae3e2df244bd6a1', '{\"api_id\":\"2\
 INSERT INTO `mc_session` VALUES ('4fbef6f953c2c24b756a976121', '{\"api_id\":\"2\"}', '2019-03-28 17:53:17');
 INSERT INTO `mc_session` VALUES ('56d330b9661bc516d1cc4eb9ef', '{\"api_id\":\"2\"}', '2019-03-27 16:52:52');
 INSERT INTO `mc_session` VALUES ('761708b5dea965b11b7205a101', '{\"api_id\":\"2\"}', '2019-03-26 14:48:31');
+INSERT INTO `mc_session` VALUES ('915b613ce5dbc834b4dbe9a51a', '{\"api_id\":\"2\"}', '2019-03-29 16:56:52');
 INSERT INTO `mc_session` VALUES ('99300c7e33fd9bff8b07ad45f6', '{\"api_id\":\"2\"}', '2019-03-27 16:46:34');
 INSERT INTO `mc_session` VALUES ('9b959657fc460485839153999a', '{\"api_id\":\"2\"}', '2019-03-26 11:59:45');
 INSERT INTO `mc_session` VALUES ('acb8f0e6b7bfb40c49b8ad964b', '{\"api_id\":\"2\"}', '2019-03-26 16:22:59');
-INSERT INTO `mc_session` VALUES ('d6f02c18ae34385b7a81019ddd', '{\"language\":\"zh-cn\",\"currency\":\"CNY\",\"user_id\":\"1\",\"user_token\":\"z7aKYAZYCbzvs4T7XUO5eZvuewKviAlF\",\"captcha\":\"9c7b96\"}', '2019-03-28 19:24:23');
+INSERT INTO `mc_session` VALUES ('d6f02c18ae34385b7a81019ddd', '{\"language\":\"zh-cn\",\"currency\":\"CNY\",\"user_id\":\"1\",\"user_token\":\"z7aKYAZYCbzvs4T7XUO5eZvuewKviAlF\",\"captcha\":\"9c7b96\"}', '2019-03-29 18:41:27');
 INSERT INTO `mc_session` VALUES ('e004f02b2a0d03d90cad8552cf', '{\"api_id\":\"2\"}', '2019-03-27 17:11:32');
 
 -- ----------------------------
@@ -8295,7 +8719,7 @@ CREATE TABLE `mc_user_group` (
 -- ----------------------------
 -- Records of mc_user_group
 -- ----------------------------
-INSERT INTO `mc_user_group` VALUES ('1', 'Administrator', '{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"cms\\/blog\",\"cms\\/blog_category\",\"cms\\/blog_comment\",\"cms\\/blog_config\",\"cms\\/faq\",\"cms\\/faq_category\",\"cms\\/faq_config\",\"cms\\/press\",\"cms\\/press_category\",\"cms\\/press_config\",\"common\\/column_left\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/profile\",\"common\\/security\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"event\\/language\",\"event\\/statistics\",\"event\\/theme\",\"extension\\/analytics\\/google\",\"extension\\/captcha\\/basic\",\"extension\\/captcha\\/google\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/report\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/sms\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/module\\/account\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/blog_category\",\"extension\\/module\\/blog_comment\",\"extension\\/module\\/blog_latest\",\"extension\\/module\\/blog_popular\",\"extension\\/module\\/blog_search\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/faq_category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/kefu\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_braintree_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/press_category\",\"extension\\/module\\/press_latest\",\"extension\\/module\\/qq_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/module\\/weibo_login\",\"extension\\/module\\/weixin_login\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/alipay_cross\",\"extension\\/payment\\/alipay_direct\",\"extension\\/payment\\/alipay_wap\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_braintree\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/squareup\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/wechat_pay\",\"extension\\/payment\\/worldpay\",\"extension\\/payment\\/wxpay\",\"extension\\/payment\\/wxpay_web\",\"extension\\/report\\/customer_activity\",\"extension\\/report\\/customer_order\",\"extension\\/report\\/customer_reward\",\"extension\\/report\\/customer_search\",\"extension\\/report\\/customer_transaction\",\"extension\\/report\\/marketing\",\"extension\\/report\\/product_purchased\",\"extension\\/report\\/product_viewed\",\"extension\\/report\\/sale_coupon\",\"extension\\/report\\/sale_order\",\"extension\\/report\\/sale_return\",\"extension\\/report\\/sale_shipping\",\"extension\\/report\\/sale_tax\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/ec_ship\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/sms\\/chuanglan\",\"extension\\/theme\\/default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/city\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/district\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/return\",\"mail\\/reward\",\"mail\\/transaction\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/install\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/openbay\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/excelexportimport\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/feed\\/google_base\",\"catalog\\/series\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"cms\\/blog\",\"cms\\/blog_category\",\"cms\\/blog_comment\",\"cms\\/blog_config\",\"cms\\/faq\",\"cms\\/faq_category\",\"cms\\/faq_config\",\"cms\\/press\",\"cms\\/press_category\",\"cms\\/press_config\",\"common\\/column_left\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/profile\",\"common\\/security\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"event\\/language\",\"event\\/statistics\",\"event\\/theme\",\"extension\\/analytics\\/google\",\"extension\\/captcha\\/basic\",\"extension\\/captcha\\/google\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/report\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/sms\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/module\\/account\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/blog_category\",\"extension\\/module\\/blog_comment\",\"extension\\/module\\/blog_latest\",\"extension\\/module\\/blog_popular\",\"extension\\/module\\/blog_search\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/faq_category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/kefu\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_braintree_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/press_category\",\"extension\\/module\\/press_latest\",\"extension\\/module\\/qq_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/module\\/weibo_login\",\"extension\\/module\\/weixin_login\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/alipay_cross\",\"extension\\/payment\\/alipay_direct\",\"extension\\/payment\\/alipay_wap\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_braintree\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/squareup\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/wechat_pay\",\"extension\\/payment\\/worldpay\",\"extension\\/payment\\/wxpay\",\"extension\\/payment\\/wxpay_web\",\"extension\\/report\\/customer_activity\",\"extension\\/report\\/customer_order\",\"extension\\/report\\/customer_reward\",\"extension\\/report\\/customer_search\",\"extension\\/report\\/customer_transaction\",\"extension\\/report\\/marketing\",\"extension\\/report\\/product_purchased\",\"extension\\/report\\/product_viewed\",\"extension\\/report\\/sale_coupon\",\"extension\\/report\\/sale_order\",\"extension\\/report\\/sale_return\",\"extension\\/report\\/sale_shipping\",\"extension\\/report\\/sale_tax\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/ec_ship\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/sms\\/chuanglan\",\"extension\\/theme\\/default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/city\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/district\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/return\",\"mail\\/reward\",\"mail\\/transaction\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/install\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/openbay\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/excelexportimport\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/feed\\/google_base\",\"catalog\\/series\"]}');
+INSERT INTO `mc_user_group` VALUES ('1', 'Administrator', '{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"cms\\/blog\",\"cms\\/blog_category\",\"cms\\/blog_comment\",\"cms\\/blog_config\",\"cms\\/faq\",\"cms\\/faq_category\",\"cms\\/faq_config\",\"cms\\/press\",\"cms\\/press_category\",\"cms\\/press_config\",\"common\\/column_left\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/profile\",\"common\\/security\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"event\\/language\",\"event\\/statistics\",\"event\\/theme\",\"extension\\/analytics\\/google\",\"extension\\/captcha\\/basic\",\"extension\\/captcha\\/google\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/report\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/sms\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/module\\/account\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/blog_category\",\"extension\\/module\\/blog_comment\",\"extension\\/module\\/blog_latest\",\"extension\\/module\\/blog_popular\",\"extension\\/module\\/blog_search\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/faq_category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/kefu\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_braintree_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/press_category\",\"extension\\/module\\/press_latest\",\"extension\\/module\\/qq_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/module\\/weibo_login\",\"extension\\/module\\/weixin_login\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/alipay_cross\",\"extension\\/payment\\/alipay_direct\",\"extension\\/payment\\/alipay_wap\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_braintree\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/squareup\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/wechat_pay\",\"extension\\/payment\\/worldpay\",\"extension\\/payment\\/wxpay\",\"extension\\/payment\\/wxpay_web\",\"extension\\/report\\/customer_activity\",\"extension\\/report\\/customer_order\",\"extension\\/report\\/customer_reward\",\"extension\\/report\\/customer_search\",\"extension\\/report\\/customer_transaction\",\"extension\\/report\\/marketing\",\"extension\\/report\\/product_purchased\",\"extension\\/report\\/product_viewed\",\"extension\\/report\\/sale_coupon\",\"extension\\/report\\/sale_order\",\"extension\\/report\\/sale_return\",\"extension\\/report\\/sale_shipping\",\"extension\\/report\\/sale_tax\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/ec_ship\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/sms\\/chuanglan\",\"extension\\/theme\\/default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/city\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/district\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/return\",\"mail\\/reward\",\"mail\\/transaction\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/install\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/openbay\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/excelexportimport\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/feed\\/google_base\",\"catalog\\/serie\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"cms\\/blog\",\"cms\\/blog_category\",\"cms\\/blog_comment\",\"cms\\/blog_config\",\"cms\\/faq\",\"cms\\/faq_category\",\"cms\\/faq_config\",\"cms\\/press\",\"cms\\/press_category\",\"cms\\/press_config\",\"common\\/column_left\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/profile\",\"common\\/security\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"event\\/language\",\"event\\/statistics\",\"event\\/theme\",\"extension\\/analytics\\/google\",\"extension\\/captcha\\/basic\",\"extension\\/captcha\\/google\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/report\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/sms\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/module\\/account\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/blog_category\",\"extension\\/module\\/blog_comment\",\"extension\\/module\\/blog_latest\",\"extension\\/module\\/blog_popular\",\"extension\\/module\\/blog_search\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/faq_category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/kefu\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_braintree_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/press_category\",\"extension\\/module\\/press_latest\",\"extension\\/module\\/qq_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/module\\/weibo_login\",\"extension\\/module\\/weixin_login\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/alipay_cross\",\"extension\\/payment\\/alipay_direct\",\"extension\\/payment\\/alipay_wap\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_braintree\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/squareup\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/wechat_pay\",\"extension\\/payment\\/worldpay\",\"extension\\/payment\\/wxpay\",\"extension\\/payment\\/wxpay_web\",\"extension\\/report\\/customer_activity\",\"extension\\/report\\/customer_order\",\"extension\\/report\\/customer_reward\",\"extension\\/report\\/customer_search\",\"extension\\/report\\/customer_transaction\",\"extension\\/report\\/marketing\",\"extension\\/report\\/product_purchased\",\"extension\\/report\\/product_viewed\",\"extension\\/report\\/sale_coupon\",\"extension\\/report\\/sale_order\",\"extension\\/report\\/sale_return\",\"extension\\/report\\/sale_shipping\",\"extension\\/report\\/sale_tax\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/ec_ship\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/sms\\/chuanglan\",\"extension\\/theme\\/default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/city\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/district\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/return\",\"mail\\/reward\",\"mail\\/transaction\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/install\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/openbay\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/excelexportimport\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/feed\\/google_base\",\"catalog\\/serie\"]}');
 INSERT INTO `mc_user_group` VALUES ('10', 'Demonstration', '');
 
 -- ----------------------------

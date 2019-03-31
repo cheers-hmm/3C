@@ -76,7 +76,10 @@ class ModelCatalogProduct extends Model {
 		}
 
 		$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
-
+		if(!empty($data['serie_id'])&&$data['serie_id']>0){
+			$sql .=" and pd.serie_id=".$data['serie_id'];
+		}
+		// echo $sql;
 		if (!empty($data['filter_category_id'])) {
 			if (!empty($data['filter_sub_category'])) {
 				$sql .= " AND cp.path_id = '" . (int)$data['filter_category_id'] . "'";
@@ -96,7 +99,6 @@ class ModelCatalogProduct extends Model {
 				$sql .= " AND pf.filter_id IN (" . implode(',', $implode) . ")";
 			}
 		}
-
 		if (!empty($data['filter_name']) || !empty($data['filter_tag'])) {
 			$sql .= " AND (";
 
@@ -148,15 +150,13 @@ class ModelCatalogProduct extends Model {
 
 			$sql .= ")";
 		}
-
 		if (!empty($data['filter_manufacturer_id'])) {
 			$sql .= " AND p.manufacturer_id = '" . (int)$data['filter_manufacturer_id'] . "'";
 		}
-		if($data['serie_id']>0){
-			$sql .=" and pd.serie_id=".$data['serie_id'];
-		}
+		// print_r($data['serie_id']);
+		
+		// echo $sql;
 		$sql .= " GROUP BY p.product_id";
-
 		$sort_data = array(
 			'pd.name',
 			'p.model',
@@ -196,9 +196,8 @@ class ModelCatalogProduct extends Model {
 
 			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
 		}
-
+		// echo $sql;
 		$product_data = array();
-
 		$query = $this->db->query($sql);
 
 		foreach ($query->rows as $result) {
@@ -512,9 +511,11 @@ class ModelCatalogProduct extends Model {
 		}
 		// var_dump($data['serie_id']) ;
 		// print_r($data);
-		if((int)$data['serie_id']>0){
+		if(!empty($data['serie_id'])&&$data['serie_id']>0){
 			$sql .=" and pd.serie_id=".$data['serie_id'];
 		}
+		// echo $sql;
+		// echo '<br>';
 		$query = $this->db->query($sql);
 
 		return $query->row['total'];

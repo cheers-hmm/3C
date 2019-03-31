@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-03-29 18:35:48
+Date: 2019-04-01 00:35:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -37,11 +37,18 @@ CREATE TABLE `mc_address` (
   `telephone` varchar(32) NOT NULL,
   PRIMARY KEY (`address_id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_address
 -- ----------------------------
+INSERT INTO `mc_address` VALUES ('1', '1', 'yan', '', '', '高新五路', '', '', '100011', '44', '697', '[]', '133', '1262', 'yan');
+INSERT INTO `mc_address` VALUES ('2', '2', '上官玉蕾', '', '', '陇海路', '', '', '450000', '44', '695', '[]', '116', '1078', '13598822444');
+INSERT INTO `mc_address` VALUES ('3', '3', 'Kandy', '', '', '金地艺境', '', '', '430000', '44', '697', '[]', '133', '1262', '13627245199');
+INSERT INTO `mc_address` VALUES ('4', '4', '安迪', '', '', '西城区阜城外大街', '', '', '', '44', '685', '', '18', '0', '18601207087');
+INSERT INTO `mc_address` VALUES ('5', '5', '王晶晶', '', '', '陇海中路通讯新天地1C22', '', '', '', '44', '695', '', '116', '1078', '13676977677');
+INSERT INTO `mc_address` VALUES ('6', '6', '上官晓辉', '', '', '升龙国际', '', '', '', '44', '695', '', '116', '1077', '15660626666');
+INSERT INTO `mc_address` VALUES ('7', '7', 'yan', '', '', '金地艺境', '', '', '100011', '44', '697', '', '133', '1262', '13146735563');
 
 -- ----------------------------
 -- Table structure for mc_api
@@ -61,7 +68,7 @@ CREATE TABLE `mc_api` (
 -- Records of mc_api
 -- ----------------------------
 INSERT INTO `mc_api` VALUES ('1', 'Default', '4dIXlZnOHIlcjkij6KGB7PHJxQETxLaQWwHBERzD7zCTfnxHBUPOjuFjNPRv5PQF2LedXCQVxlT1uzyYEiZYAHcLBE72FXB4P0ArleMeFnLck4EZOfG5uuVOmHbuFYLegLORfdL0z0sPASgMabVnguVnNEdS00NhxpMdJUMKPP1UGoOUBXwXweGHV2QcurN1ijTVoDzPL0TCrqmijk04VFz3e4PS4DnLUfl0TgTbXCMuNhVP74XzrwaYxQLdWSn4', '1', '2017-09-05 05:47:06', '2017-09-05 05:47:47');
-INSERT INTO `mc_api` VALUES ('2', 'Default', '3biCZghnPg035CB0jXwG0p5TcoLA4MuSlOsqtalaAelGWnKbblLFIF4pcoxlIrK0XNsUA0VXiyjiYSC1akgWsSRDl9o0c9Y9g10wOcyrF6YIIJQ0vzqugXoMxf8bQ1lFfl8TRwQ38u6A6XnfonrR6WKki3rCjSGmLSbHzfcYPDLU3g99wkFiritqMtXzfYLeSNxCpH3gwT5XCJa3gm7vduIeiX2E097o4eFmRRIQJNTSP80tS8sH2ZIfU7HgUewO', '1', '2019-03-26 09:27:36', '2019-03-26 09:27:36');
+INSERT INTO `mc_api` VALUES ('2', 'Default', 'ndApnODGOOxJ87Kwc5JOtbTsiWEktn2zgXFiQibqJB5DACwtSZQl7msAZSqcA6xACNN5p8gLSl33zzi0KkEcXGjNmRY2KUul2cw3HAT9Pmqrz0OrSQCY1o1O2stQlN4cKFl9LXYmKPxtiFKCLo1Mcz1qVSMG1B55FGH9DBscYh5UEhz1H6cLYyUZyOpNxfVyIISnm1n8EjT7gsWLxb7b5WXpurXPIFoW3qU4xM269ehyA4nAUSVdpGJqwWELSRh7', '1', '2018-10-30 13:53:32', '2018-10-30 13:53:32');
 
 -- ----------------------------
 -- Table structure for mc_api_ip
@@ -72,12 +79,41 @@ CREATE TABLE `mc_api_ip` (
   `api_id` int(11) NOT NULL,
   `ip` varchar(40) NOT NULL,
   PRIMARY KEY (`api_ip_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_api_ip
 -- ----------------------------
-INSERT INTO `mc_api_ip` VALUES ('1', '2', '127.0.0.1');
+INSERT INTO `mc_api_ip` VALUES ('1', '2', '35.187.211.154');
+INSERT INTO `mc_api_ip` VALUES ('2', '2', '35.187.234.142');
+INSERT INTO `mc_api_ip` VALUES ('3', '2', '106.121.78.112');
+INSERT INTO `mc_api_ip` VALUES ('4', '2', '42.236.169.51');
+INSERT INTO `mc_api_ip` VALUES ('5', '2', '42.236.167.130');
+INSERT INTO `mc_api_ip` VALUES ('6', '2', '27.18.84.213');
+INSERT INTO `mc_api_ip` VALUES ('7', '2', '27.18.86.98');
+INSERT INTO `mc_api_ip` VALUES ('8', '2', '27.18.87.168');
+INSERT INTO `mc_api_ip` VALUES ('9', '2', '106.121.0.162');
+INSERT INTO `mc_api_ip` VALUES ('10', '2', '115.60.52.198');
+INSERT INTO `mc_api_ip` VALUES ('11', '2', '36.110.199.171');
+INSERT INTO `mc_api_ip` VALUES ('12', '2', '36.110.199.28');
+INSERT INTO `mc_api_ip` VALUES ('13', '2', '42.236.170.133');
+INSERT INTO `mc_api_ip` VALUES ('14', '2', '111.7.165.51');
+INSERT INTO `mc_api_ip` VALUES ('15', '2', '106.121.151.94');
+INSERT INTO `mc_api_ip` VALUES ('16', '2', '42.236.169.37');
+INSERT INTO `mc_api_ip` VALUES ('17', '2', '27.17.232.64');
+INSERT INTO `mc_api_ip` VALUES ('18', '2', '61.135.165.22');
+INSERT INTO `mc_api_ip` VALUES ('19', '2', '61.158.147.192');
+INSERT INTO `mc_api_ip` VALUES ('20', '2', '36.110.199.14');
+INSERT INTO `mc_api_ip` VALUES ('21', '2', '111.206.36.135');
+INSERT INTO `mc_api_ip` VALUES ('22', '2', '115.60.50.146');
+INSERT INTO `mc_api_ip` VALUES ('23', '2', '42.236.171.91');
+INSERT INTO `mc_api_ip` VALUES ('24', '2', '27.17.232.205');
+INSERT INTO `mc_api_ip` VALUES ('25', '2', '42.236.168.139');
+INSERT INTO `mc_api_ip` VALUES ('26', '2', '27.18.87.68');
+INSERT INTO `mc_api_ip` VALUES ('27', '2', '106.121.138.133');
+INSERT INTO `mc_api_ip` VALUES ('28', '2', '106.121.16.88');
+INSERT INTO `mc_api_ip` VALUES ('29', '2', '127.0.0.1');
+INSERT INTO `mc_api_ip` VALUES ('30', '2', '::1');
 
 -- ----------------------------
 -- Table structure for mc_api_session
@@ -91,24 +127,95 @@ CREATE TABLE `mc_api_session` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`api_session_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1747 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_api_session
 -- ----------------------------
-INSERT INTO `mc_api_session` VALUES ('1', '2', '41403e4d5514048160796d03af', '127.0.0.1', '2019-03-26 11:34:44', '2019-03-26 11:34:44');
-INSERT INTO `mc_api_session` VALUES ('2', '2', '9b959657fc460485839153999a', '127.0.0.1', '2019-03-26 11:35:45', '2019-03-26 11:35:45');
-INSERT INTO `mc_api_session` VALUES ('3', '2', '761708b5dea965b11b7205a101', '127.0.0.1', '2019-03-26 14:24:31', '2019-03-26 14:24:31');
-INSERT INTO `mc_api_session` VALUES ('4', '2', 'acb8f0e6b7bfb40c49b8ad964b', '127.0.0.1', '2019-03-26 15:58:59', '2019-03-26 15:58:59');
-INSERT INTO `mc_api_session` VALUES ('5', '2', '99300c7e33fd9bff8b07ad45f6', '127.0.0.1', '2019-03-27 16:22:34', '2019-03-27 16:22:34');
-INSERT INTO `mc_api_session` VALUES ('6', '2', '56d330b9661bc516d1cc4eb9ef', '127.0.0.1', '2019-03-27 16:28:52', '2019-03-27 16:28:52');
-INSERT INTO `mc_api_session` VALUES ('7', '2', '4cf9f0acfbc897e402002d0da8', '127.0.0.1', '2019-03-27 16:41:31', '2019-03-27 16:41:31');
-INSERT INTO `mc_api_session` VALUES ('8', '2', 'e004f02b2a0d03d90cad8552cf', '127.0.0.1', '2019-03-27 16:47:32', '2019-03-27 16:47:32');
-INSERT INTO `mc_api_session` VALUES ('9', '2', '24698c0b8d1bf8999d441fa49a', '127.0.0.1', '2019-03-27 16:48:20', '2019-03-27 16:48:20');
-INSERT INTO `mc_api_session` VALUES ('10', '2', '14cbe8c11a1a16d789b8bd6225', '127.0.0.1', '2019-03-28 17:19:17', '2019-03-28 17:19:17');
-INSERT INTO `mc_api_session` VALUES ('11', '2', '4fba0b3dcd2ae3e2df244bd6a1', '127.0.0.1', '2019-03-28 17:28:52', '2019-03-28 17:28:52');
-INSERT INTO `mc_api_session` VALUES ('12', '2', '4fbef6f953c2c24b756a976121', '127.0.0.1', '2019-03-28 17:29:17', '2019-03-28 17:29:17');
-INSERT INTO `mc_api_session` VALUES ('13', '2', '915b613ce5dbc834b4dbe9a51a', '127.0.0.1', '2019-03-29 16:32:52', '2019-03-29 16:32:52');
+INSERT INTO `mc_api_session` VALUES ('1668', '2', 'aaca054bcc5da6ec2529c54018', '106.121.16.88', '2019-02-13 08:07:29', '2019-02-13 08:07:29');
+INSERT INTO `mc_api_session` VALUES ('1669', '2', '5d06be661e20caace92981a495', '106.121.16.88', '2019-02-13 08:08:04', '2019-02-13 08:08:04');
+INSERT INTO `mc_api_session` VALUES ('1666', '2', '254ae885d1c6996e639e7e34bc', '106.121.16.88', '2019-02-13 07:39:28', '2019-02-13 07:39:28');
+INSERT INTO `mc_api_session` VALUES ('1667', '2', '25e8c586ab81d234f36d8638a1', '106.121.16.88', '2019-02-13 07:39:36', '2019-02-13 07:39:36');
+INSERT INTO `mc_api_session` VALUES ('1665', '2', '10210664c2499fe024463c75d0', '106.121.16.88', '2019-02-13 07:39:21', '2019-02-13 07:39:21');
+INSERT INTO `mc_api_session` VALUES ('1664', '2', '018f67689e27e9f0198d15cd88', '106.121.16.88', '2019-02-13 07:39:11', '2019-02-13 07:39:11');
+INSERT INTO `mc_api_session` VALUES ('1663', '2', '0effb882fc72d992309338d9f5', '106.121.16.88', '2019-02-13 07:35:56', '2019-02-13 07:35:56');
+INSERT INTO `mc_api_session` VALUES ('1670', '2', 'beffc4ca65cae11092ec48109f', '127.0.0.1', '2019-03-25 23:22:11', '2019-03-25 23:22:11');
+INSERT INTO `mc_api_session` VALUES ('1671', '2', '59a8d624f7b36b902e887ea597', '127.0.0.1', '2019-03-25 23:26:20', '2019-03-25 23:26:20');
+INSERT INTO `mc_api_session` VALUES ('1672', '2', '411cfbe2a9ab41852d78689b0a', '127.0.0.1', '2019-03-26 10:08:37', '2019-03-26 10:08:37');
+INSERT INTO `mc_api_session` VALUES ('1673', '2', '6e40c35c187b52d3ac65a9ab4d', '127.0.0.1', '2019-03-26 10:34:22', '2019-03-26 10:34:22');
+INSERT INTO `mc_api_session` VALUES ('1674', '2', '5a6620c249dbc991f6f858c1e6', '127.0.0.1', '2019-03-26 10:37:55', '2019-03-26 10:37:55');
+INSERT INTO `mc_api_session` VALUES ('1675', '2', '9a611cf35c4e6866788b05a717', '127.0.0.1', '2019-03-26 10:44:48', '2019-03-26 10:44:48');
+INSERT INTO `mc_api_session` VALUES ('1676', '2', '2e897391bc962b723363a9db54', '127.0.0.1', '2019-03-26 10:52:03', '2019-03-26 10:52:03');
+INSERT INTO `mc_api_session` VALUES ('1677', '2', '2d4026e143d8859121aa1aeb4c', '127.0.0.1', '2019-03-26 14:50:40', '2019-03-26 14:50:40');
+INSERT INTO `mc_api_session` VALUES ('1678', '2', '9882d1bed5feedfaa214840170', '127.0.0.1', '2019-03-26 14:50:45', '2019-03-26 14:50:45');
+INSERT INTO `mc_api_session` VALUES ('1679', '2', '8c0cede164ee68e5bbefb60254', '127.0.0.1', '2019-03-26 14:50:47', '2019-03-26 14:50:47');
+INSERT INTO `mc_api_session` VALUES ('1680', '2', 'e6fbfe0b00c1ab24d42ff3560f', '127.0.0.1', '2019-03-26 14:50:50', '2019-03-26 14:50:50');
+INSERT INTO `mc_api_session` VALUES ('1681', '2', 'b7ea446b40e8752f9841391b41', '127.0.0.1', '2019-03-26 15:30:31', '2019-03-26 15:30:31');
+INSERT INTO `mc_api_session` VALUES ('1682', '2', 'cc9153b46c44673eed82009f9f', '127.0.0.1', '2019-03-26 15:30:42', '2019-03-26 15:30:42');
+INSERT INTO `mc_api_session` VALUES ('1683', '2', '4ef790c8eb188c69b618fb6037', '127.0.0.1', '2019-03-26 15:30:58', '2019-03-26 15:30:58');
+INSERT INTO `mc_api_session` VALUES ('1684', '2', '6182a91ee2c47f32c0d31e3924', '127.0.0.1', '2019-03-26 15:32:24', '2019-03-26 15:32:24');
+INSERT INTO `mc_api_session` VALUES ('1685', '2', 'c3d9cb70361c3eb652a58488f2', '127.0.0.1', '2019-03-26 15:32:35', '2019-03-26 15:32:35');
+INSERT INTO `mc_api_session` VALUES ('1686', '2', '52e0dc5d0583572f689e1f1110', '127.0.0.1', '2019-03-26 15:32:44', '2019-03-26 15:32:44');
+INSERT INTO `mc_api_session` VALUES ('1687', '2', '862dfe1ce58fa0ce563d7751e8', '127.0.0.1', '2019-03-26 15:47:08', '2019-03-26 15:47:08');
+INSERT INTO `mc_api_session` VALUES ('1688', '2', '882bd07d0a6da7029d4bc7bbd4', '127.0.0.1', '2019-03-26 15:47:14', '2019-03-26 15:47:14');
+INSERT INTO `mc_api_session` VALUES ('1689', '2', '30c3c1bb8265386ab402466093', '127.0.0.1', '2019-03-26 15:47:25', '2019-03-26 15:47:25');
+INSERT INTO `mc_api_session` VALUES ('1690', '2', '051b2fe8f4853cb9d1bd9cf48d', '127.0.0.1', '2019-03-26 15:54:38', '2019-03-26 15:54:38');
+INSERT INTO `mc_api_session` VALUES ('1691', '2', 'bf9e62beae682b1fc3c11ea8fe', '127.0.0.1', '2019-03-26 15:57:45', '2019-03-26 15:57:45');
+INSERT INTO `mc_api_session` VALUES ('1692', '2', '4fa89e84caf3d396d43209dae5', '127.0.0.1', '2019-03-26 15:57:54', '2019-03-26 15:57:54');
+INSERT INTO `mc_api_session` VALUES ('1693', '2', 'b650e7b242eca3fcbdf1629861', '127.0.0.1', '2019-03-26 15:58:08', '2019-03-26 15:58:08');
+INSERT INTO `mc_api_session` VALUES ('1694', '2', '6c5dc894e29dbaeb35b1ca6a5f', '127.0.0.1', '2019-03-26 15:58:16', '2019-03-26 15:58:16');
+INSERT INTO `mc_api_session` VALUES ('1695', '2', 'a4864bf15af3ae563ba9dd8bf0', '127.0.0.1', '2019-03-26 15:58:24', '2019-03-26 15:58:24');
+INSERT INTO `mc_api_session` VALUES ('1696', '2', '403c0fe56907f27a782bb6cd20', '127.0.0.1', '2019-03-27 11:28:45', '2019-03-27 11:28:45');
+INSERT INTO `mc_api_session` VALUES ('1697', '2', '1a6935ac5579958fc06493b357', '127.0.0.1', '2019-03-27 16:49:17', '2019-03-27 16:49:17');
+INSERT INTO `mc_api_session` VALUES ('1698', '2', '0426108eafb7062693bbfc871a', '127.0.0.1', '2019-03-29 00:06:33', '2019-03-29 00:06:33');
+INSERT INTO `mc_api_session` VALUES ('1699', '2', '1387b3628cd7fed3746800d117', '127.0.0.1', '2019-03-29 00:09:13', '2019-03-29 00:09:13');
+INSERT INTO `mc_api_session` VALUES ('1700', '2', '43e89ad7f9a3eda365dcf4c2fa', '127.0.0.1', '2019-03-29 00:10:01', '2019-03-29 00:10:01');
+INSERT INTO `mc_api_session` VALUES ('1701', '2', '925a490cac2039706f6b776f1d', '127.0.0.1', '2019-03-29 11:24:20', '2019-03-29 11:24:20');
+INSERT INTO `mc_api_session` VALUES ('1702', '2', 'd3236171fa430dc2870d93b784', '127.0.0.1', '2019-03-29 14:10:31', '2019-03-29 14:10:31');
+INSERT INTO `mc_api_session` VALUES ('1703', '2', '388688bbf39fe5ecc5566cf422', '127.0.0.1', '2019-03-29 14:22:16', '2019-03-29 14:22:16');
+INSERT INTO `mc_api_session` VALUES ('1704', '2', '0a57df33545f3f4525f9d467e7', '127.0.0.1', '2019-03-29 14:23:15', '2019-03-29 14:23:15');
+INSERT INTO `mc_api_session` VALUES ('1705', '2', 'ff4034afe8719115d6395df18a', '127.0.0.1', '2019-03-29 14:23:36', '2019-03-29 14:23:36');
+INSERT INTO `mc_api_session` VALUES ('1706', '2', '704c0e572ad7baf5b3ed4c2452', '::1', '2019-03-30 12:14:15', '2019-03-30 12:14:15');
+INSERT INTO `mc_api_session` VALUES ('1707', '2', '7a61adf1f684295d4b59c4ebe9', '::1', '2019-03-30 12:30:25', '2019-03-30 12:30:25');
+INSERT INTO `mc_api_session` VALUES ('1708', '2', 'c65fe0ee8779f8f63f5b947998', '::1', '2019-03-30 12:55:42', '2019-03-30 12:55:42');
+INSERT INTO `mc_api_session` VALUES ('1709', '2', 'e46ccb6afe6fe0464aca5e57ee', '::1', '2019-03-30 13:59:44', '2019-03-30 13:59:44');
+INSERT INTO `mc_api_session` VALUES ('1710', '2', 'd4e170fe4ec68a03db4351f165', '::1', '2019-03-30 14:00:07', '2019-03-30 14:00:07');
+INSERT INTO `mc_api_session` VALUES ('1711', '2', 'dcfdcabd5c90abfa03d92864e8', '::1', '2019-03-30 14:00:43', '2019-03-30 14:00:43');
+INSERT INTO `mc_api_session` VALUES ('1712', '2', 'c93b0cfde9c81fea7c138d8429', '::1', '2019-03-30 14:00:47', '2019-03-30 14:00:47');
+INSERT INTO `mc_api_session` VALUES ('1713', '2', '5ee35e4b32099964bb6c21fa3a', '::1', '2019-03-30 14:01:06', '2019-03-30 14:01:06');
+INSERT INTO `mc_api_session` VALUES ('1714', '2', '3982dd0cd0f9163edf84dacabb', '::1', '2019-03-30 14:01:12', '2019-03-30 14:01:12');
+INSERT INTO `mc_api_session` VALUES ('1715', '2', 'd7bffdcf276af5d1d363141fc9', '::1', '2019-03-30 14:01:25', '2019-03-30 14:01:25');
+INSERT INTO `mc_api_session` VALUES ('1716', '2', '44dddf77a6b1ab145c0d3d1cd6', '::1', '2019-03-30 14:01:33', '2019-03-30 14:01:33');
+INSERT INTO `mc_api_session` VALUES ('1717', '2', '97ec1d4169408620b4d399558b', '::1', '2019-03-30 14:01:38', '2019-03-30 14:01:38');
+INSERT INTO `mc_api_session` VALUES ('1718', '2', '04f7616ff7adbe705b142a8648', '::1', '2019-03-30 14:01:48', '2019-03-30 14:01:48');
+INSERT INTO `mc_api_session` VALUES ('1719', '2', '54840a87ed5e2d9346101ef809', '::1', '2019-03-30 14:01:52', '2019-03-30 14:01:52');
+INSERT INTO `mc_api_session` VALUES ('1720', '2', 'e7834516cd724bbc4051d37f0a', '::1', '2019-03-30 14:01:57', '2019-03-30 14:01:57');
+INSERT INTO `mc_api_session` VALUES ('1721', '2', 'e28f404e34c34a3e6d4636a109', '::1', '2019-03-30 14:02:01', '2019-03-30 14:02:01');
+INSERT INTO `mc_api_session` VALUES ('1722', '2', '0c6fde5ac7719766d9ec38ca9a', '::1', '2019-03-30 14:15:01', '2019-03-30 14:15:01');
+INSERT INTO `mc_api_session` VALUES ('1723', '2', '1157fdac1969f8c3bd22a7b1db', '::1', '2019-03-30 14:15:05', '2019-03-30 14:15:05');
+INSERT INTO `mc_api_session` VALUES ('1724', '2', 'ece5e070c8a33c622d73b7938b', '::1', '2019-03-30 14:15:09', '2019-03-30 14:15:09');
+INSERT INTO `mc_api_session` VALUES ('1725', '2', 'e522eee958a253c40118040500', '::1', '2019-03-30 14:15:13', '2019-03-30 14:15:13');
+INSERT INTO `mc_api_session` VALUES ('1726', '2', '61859bf3861b9daf613b77853b', '::1', '2019-03-30 14:15:17', '2019-03-30 14:15:17');
+INSERT INTO `mc_api_session` VALUES ('1727', '2', '092d87fc2903870f28f02181ce', '::1', '2019-03-30 14:15:23', '2019-03-30 14:15:23');
+INSERT INTO `mc_api_session` VALUES ('1728', '2', 'd99065bd2fe1fa36c75bbaf292', '::1', '2019-03-30 14:15:26', '2019-03-30 14:15:26');
+INSERT INTO `mc_api_session` VALUES ('1729', '2', 'c1592337f6beecb6ec572edfa1', '::1', '2019-03-30 14:15:31', '2019-03-30 14:15:31');
+INSERT INTO `mc_api_session` VALUES ('1730', '2', 'd54c83f2fc8abfded60028da6f', '::1', '2019-03-30 14:15:38', '2019-03-30 14:15:38');
+INSERT INTO `mc_api_session` VALUES ('1731', '2', 'da1a1f4c863b477a4db57cd6d4', '::1', '2019-03-30 14:16:06', '2019-03-30 14:16:06');
+INSERT INTO `mc_api_session` VALUES ('1732', '2', 'd28e52f984766338eb5c828a2f', '::1', '2019-03-30 14:16:17', '2019-03-30 14:16:17');
+INSERT INTO `mc_api_session` VALUES ('1733', '2', '11cafe4ac45104aa8d5e482b0c', '::1', '2019-03-30 14:16:23', '2019-03-30 14:16:23');
+INSERT INTO `mc_api_session` VALUES ('1734', '2', 'edaec0c39288a14936301d75ab', '::1', '2019-03-30 14:16:28', '2019-03-30 14:16:28');
+INSERT INTO `mc_api_session` VALUES ('1735', '2', 'd9c824430e26695cc89dbb53ea', '::1', '2019-03-30 14:16:44', '2019-03-30 14:16:44');
+INSERT INTO `mc_api_session` VALUES ('1736', '2', '4817cca31304381ba9da4cddff', '::1', '2019-03-30 14:18:47', '2019-03-30 14:18:47');
+INSERT INTO `mc_api_session` VALUES ('1737', '2', 'b63951bd170f452882249bf486', '::1', '2019-03-30 14:18:54', '2019-03-30 14:18:54');
+INSERT INTO `mc_api_session` VALUES ('1738', '2', 'a32fa21c6d0c6bab8136323821', '::1', '2019-03-30 14:19:18', '2019-03-30 14:19:18');
+INSERT INTO `mc_api_session` VALUES ('1739', '2', '4f4de28361ab06de1e8eb1b02e', '::1', '2019-03-30 14:20:03', '2019-03-30 14:20:03');
+INSERT INTO `mc_api_session` VALUES ('1740', '2', '7486349a4cef7824d6fec8e926', '::1', '2019-03-30 14:22:39', '2019-03-30 14:22:39');
+INSERT INTO `mc_api_session` VALUES ('1741', '2', 'f2269dc640b1ac5a8f5346beb3', '::1', '2019-03-30 14:22:46', '2019-03-30 14:22:46');
+INSERT INTO `mc_api_session` VALUES ('1742', '2', '0dcef656b478c8a2722b45ae2b', '::1', '2019-03-30 14:23:00', '2019-03-30 14:23:00');
+INSERT INTO `mc_api_session` VALUES ('1743', '2', 'ac0e7cd8b1bba721f121ab0a4e', '::1', '2019-03-30 14:23:26', '2019-03-30 14:23:26');
+INSERT INTO `mc_api_session` VALUES ('1744', '2', '174b0b8c6fa5b3a124db1ad0cd', '::1', '2019-03-30 14:23:56', '2019-03-30 14:23:56');
+INSERT INTO `mc_api_session` VALUES ('1745', '2', '76bd952b500e8f894c0d76e64e', '::1', '2019-03-30 14:24:09', '2019-03-30 14:24:09');
+INSERT INTO `mc_api_session` VALUES ('1746', '2', 'dcf3bc888d17024e69648bb6ee', '::1', '2019-03-30 14:24:19', '2019-03-30 14:24:19');
 
 -- ----------------------------
 -- Table structure for mc_attribute
@@ -119,22 +226,17 @@ CREATE TABLE `mc_attribute` (
   `attribute_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`attribute_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_attribute
 -- ----------------------------
-INSERT INTO `mc_attribute` VALUES ('1', '6', '1');
-INSERT INTO `mc_attribute` VALUES ('2', '6', '5');
-INSERT INTO `mc_attribute` VALUES ('3', '6', '3');
-INSERT INTO `mc_attribute` VALUES ('4', '3', '1');
-INSERT INTO `mc_attribute` VALUES ('5', '3', '2');
-INSERT INTO `mc_attribute` VALUES ('6', '3', '3');
-INSERT INTO `mc_attribute` VALUES ('7', '3', '4');
-INSERT INTO `mc_attribute` VALUES ('8', '3', '5');
-INSERT INTO `mc_attribute` VALUES ('9', '3', '6');
-INSERT INTO `mc_attribute` VALUES ('10', '3', '7');
-INSERT INTO `mc_attribute` VALUES ('11', '3', '8');
+INSERT INTO `mc_attribute` VALUES ('1', '4', '1');
+INSERT INTO `mc_attribute` VALUES ('2', '4', '3');
+INSERT INTO `mc_attribute` VALUES ('3', '4', '2');
+INSERT INTO `mc_attribute` VALUES ('14', '4', '6');
+INSERT INTO `mc_attribute` VALUES ('13', '4', '5');
+INSERT INTO `mc_attribute` VALUES ('12', '4', '4');
 
 -- ----------------------------
 -- Table structure for mc_attribute_description
@@ -150,39 +252,12 @@ CREATE TABLE `mc_attribute_description` (
 -- ----------------------------
 -- Records of mc_attribute_description
 -- ----------------------------
-INSERT INTO `mc_attribute_description` VALUES ('4', '3', '测试 1');
-INSERT INTO `mc_attribute_description` VALUES ('5', '3', '测试 2');
-INSERT INTO `mc_attribute_description` VALUES ('6', '3', '测试 3');
-INSERT INTO `mc_attribute_description` VALUES ('7', '3', '测试 4');
-INSERT INTO `mc_attribute_description` VALUES ('8', '3', '测试 5');
-INSERT INTO `mc_attribute_description` VALUES ('9', '3', '测试 6');
-INSERT INTO `mc_attribute_description` VALUES ('10', '3', '测试 7');
-INSERT INTO `mc_attribute_description` VALUES ('11', '3', '测试 8');
-INSERT INTO `mc_attribute_description` VALUES ('1', '2', 'Description');
-INSERT INTO `mc_attribute_description` VALUES ('2', '2', 'No. of Cores');
-INSERT INTO `mc_attribute_description` VALUES ('4', '2', 'test 1');
-INSERT INTO `mc_attribute_description` VALUES ('5', '2', 'test  2');
-INSERT INTO `mc_attribute_description` VALUES ('6', '2', 'test 3');
-INSERT INTO `mc_attribute_description` VALUES ('7', '2', 'test 4');
-INSERT INTO `mc_attribute_description` VALUES ('8', '2', 'test 5');
-INSERT INTO `mc_attribute_description` VALUES ('9', '2', 'test 6');
-INSERT INTO `mc_attribute_description` VALUES ('10', '2', 'test 7');
-INSERT INTO `mc_attribute_description` VALUES ('11', '2', 'test 8');
-INSERT INTO `mc_attribute_description` VALUES ('3', '2', 'Clockspeed');
-INSERT INTO `mc_attribute_description` VALUES ('1', '1', '描述');
-INSERT INTO `mc_attribute_description` VALUES ('2', '1', '核数');
-INSERT INTO `mc_attribute_description` VALUES ('4', '1', '测试 1');
-INSERT INTO `mc_attribute_description` VALUES ('5', '1', '测试 2');
-INSERT INTO `mc_attribute_description` VALUES ('6', '1', '测试 3');
-INSERT INTO `mc_attribute_description` VALUES ('7', '1', '测试 4');
-INSERT INTO `mc_attribute_description` VALUES ('8', '1', '测试 5');
-INSERT INTO `mc_attribute_description` VALUES ('9', '1', '测试 6');
-INSERT INTO `mc_attribute_description` VALUES ('10', '1', '测试 7');
-INSERT INTO `mc_attribute_description` VALUES ('11', '1', '测试 8');
-INSERT INTO `mc_attribute_description` VALUES ('3', '1', '时钟');
-INSERT INTO `mc_attribute_description` VALUES ('3', '3', '时钟');
-INSERT INTO `mc_attribute_description` VALUES ('1', '3', '描述');
-INSERT INTO `mc_attribute_description` VALUES ('2', '3', '核数');
+INSERT INTO `mc_attribute_description` VALUES ('12', '1', '激活');
+INSERT INTO `mc_attribute_description` VALUES ('14', '1', '描述');
+INSERT INTO `mc_attribute_description` VALUES ('13', '1', '单价');
+INSERT INTO `mc_attribute_description` VALUES ('3', '1', '颜色');
+INSERT INTO `mc_attribute_description` VALUES ('1', '1', '品牌');
+INSERT INTO `mc_attribute_description` VALUES ('2', '1', '配置');
 
 -- ----------------------------
 -- Table structure for mc_attribute_group
@@ -192,15 +267,12 @@ CREATE TABLE `mc_attribute_group` (
   `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`attribute_group_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_attribute_group
 -- ----------------------------
-INSERT INTO `mc_attribute_group` VALUES ('3', '2');
 INSERT INTO `mc_attribute_group` VALUES ('4', '1');
-INSERT INTO `mc_attribute_group` VALUES ('5', '3');
-INSERT INTO `mc_attribute_group` VALUES ('6', '4');
 
 -- ----------------------------
 -- Table structure for mc_attribute_group_description
@@ -216,18 +288,7 @@ CREATE TABLE `mc_attribute_group_description` (
 -- ----------------------------
 -- Records of mc_attribute_group_description
 -- ----------------------------
-INSERT INTO `mc_attribute_group_description` VALUES ('3', '3', '内存');
-INSERT INTO `mc_attribute_group_description` VALUES ('6', '3', '处理器');
-INSERT INTO `mc_attribute_group_description` VALUES ('4', '3', '技术参数');
-INSERT INTO `mc_attribute_group_description` VALUES ('3', '2', 'Memory');
-INSERT INTO `mc_attribute_group_description` VALUES ('4', '2', 'Technical');
-INSERT INTO `mc_attribute_group_description` VALUES ('5', '2', 'Motherboard');
-INSERT INTO `mc_attribute_group_description` VALUES ('6', '2', 'Processor');
-INSERT INTO `mc_attribute_group_description` VALUES ('3', '1', '内存');
-INSERT INTO `mc_attribute_group_description` VALUES ('4', '1', '技术参数');
-INSERT INTO `mc_attribute_group_description` VALUES ('5', '3', '主板');
-INSERT INTO `mc_attribute_group_description` VALUES ('6', '1', '处理器');
-INSERT INTO `mc_attribute_group_description` VALUES ('5', '1', '主板');
+INSERT INTO `mc_attribute_group_description` VALUES ('4', '1', '参数');
 
 -- ----------------------------
 -- Table structure for mc_banner
@@ -245,7 +306,7 @@ CREATE TABLE `mc_banner` (
 -- ----------------------------
 INSERT INTO `mc_banner` VALUES ('6', '侧边广告图片', '1');
 INSERT INTO `mc_banner` VALUES ('7', '首页幻灯片', '1');
-INSERT INTO `mc_banner` VALUES ('8', '品牌展示', '1');
+INSERT INTO `mc_banner` VALUES ('8', '底部品牌展示', '1');
 
 -- ----------------------------
 -- Table structure for mc_banner_image
@@ -260,53 +321,21 @@ CREATE TABLE `mc_banner_image` (
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`banner_image_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=260 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=299 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_banner_image
 -- ----------------------------
-INSERT INTO `mc_banner_image` VALUES ('179', '6', '3', 'HP Banner', 'index.php?route=product/manufacturer/info&amp;manufacturer_id=7', 'catalog/demo/compaq_presario.jpg', '0');
-INSERT INTO `mc_banner_image` VALUES ('259', '7', '3', '客廳 2', 'index.php?route=product/product&amp;path=34_43&amp;product_id=34', 'catalog/demo/slider/slide2.jpg', '2');
-INSERT INTO `mc_banner_image` VALUES ('258', '7', '3', '客廳 1', 'index.php?route=product/product&amp;path=57&amp;product_id=49', 'catalog/demo/slider/slide1.jpg', '1');
-INSERT INTO `mc_banner_image` VALUES ('178', '6', '2', 'HP Banner', 'index.php?route=product/manufacturer/info&amp;manufacturer_id=7', 'catalog/demo/compaq_presario.jpg', '0');
-INSERT INTO `mc_banner_image` VALUES ('252', '8', '3', 'Starbucks', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('253', '8', '3', 'Nintendo', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('251', '8', '3', 'Disney', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('248', '8', '3', 'Canon', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('249', '8', '3', 'Harley Davidson', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('250', '8', '3', 'Dell', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('247', '8', '3', 'Burger King', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('257', '7', '2', 'Living Room 2', 'index.php?route=product/product&amp;path=34_43&amp;product_id=34', 'catalog/demo/slider/slide2.jpg', '2');
-INSERT INTO `mc_banner_image` VALUES ('177', '6', '1', 'HP Banner', 'index.php?route=product/manufacturer/info&amp;manufacturer_id=7', 'catalog/demo/banners/banner_left.jpg', '0');
-INSERT INTO `mc_banner_image` VALUES ('246', '8', '3', 'NFL', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('245', '8', '3', 'RedBull', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('243', '8', '3', 'Coca Cola', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('244', '8', '3', 'Sony', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('242', '8', '2', 'Nintendo', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('241', '8', '2', 'Starbucks', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('240', '8', '2', 'Disney', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('256', '7', '2', 'Living Room 1', 'index.php?route=product/product&amp;path=57&amp;product_id=49', 'catalog/demo/slider/slide1.jpg', '1');
-INSERT INTO `mc_banner_image` VALUES ('237', '8', '2', 'Canon', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('238', '8', '2', 'Harley Davidson', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('239', '8', '2', 'Dell', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('255', '7', '1', '客厅 2', 'index.php?route=product/product&amp;path=34_43&amp;product_id=34', 'catalog/demo/slider/slide2.jpg', '2');
-INSERT INTO `mc_banner_image` VALUES ('234', '8', '2', 'Sony', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('235', '8', '2', 'Coca Cola', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('236', '8', '2', 'Burger King', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('232', '8', '2', 'NFL', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('233', '8', '2', 'RedBull', '', '', '0');
-INSERT INTO `mc_banner_image` VALUES ('231', '8', '1', 'Nintendo', '', 'catalog/demo/manufacturer/brand_1.png', '0');
-INSERT INTO `mc_banner_image` VALUES ('229', '8', '1', 'Disney', '', 'catalog/demo/manufacturer/brand_2.png', '0');
-INSERT INTO `mc_banner_image` VALUES ('230', '8', '1', 'Starbucks', '', 'catalog/demo/manufacturer/brand_4.png', '0');
-INSERT INTO `mc_banner_image` VALUES ('227', '8', '1', 'Harley Davidson', '', 'catalog/demo/manufacturer/brand_4.png', '0');
-INSERT INTO `mc_banner_image` VALUES ('228', '8', '1', 'Dell', '', 'catalog/demo/manufacturer/brand_1.png', '0');
-INSERT INTO `mc_banner_image` VALUES ('254', '7', '1', '客厅 1', 'index.php?route=product/product&amp;path=57&amp;product_id=49', 'catalog/demo/slider/slide1.jpg', '1');
-INSERT INTO `mc_banner_image` VALUES ('226', '8', '1', 'Canon', '', 'catalog/demo/manufacturer/brand_3.png', '0');
-INSERT INTO `mc_banner_image` VALUES ('225', '8', '1', 'Burger King', '', 'catalog/demo/manufacturer/brand_2.png', '0');
-INSERT INTO `mc_banner_image` VALUES ('224', '8', '1', 'Coca Cola', '', 'catalog/demo/manufacturer/brand_1.png', '0');
-INSERT INTO `mc_banner_image` VALUES ('223', '8', '1', 'Sony', '', 'catalog/demo/manufacturer/brand_4.png', '0');
-INSERT INTO `mc_banner_image` VALUES ('222', '8', '1', 'RedBull', '', 'catalog/demo/manufacturer/brand_2.png', '0');
-INSERT INTO `mc_banner_image` VALUES ('221', '8', '1', 'NFL', '', 'catalog/demo/manufacturer/brand_1.png', '0');
+INSERT INTO `mc_banner_image` VALUES ('280', '6', '1', 'HP Banner', 'index.php?route=product/manufacturer/info&amp;manufacturer_id=8', 'catalog/59df2e7fN86c99a27.jpg', '1');
+INSERT INTO `mc_banner_image` VALUES ('284', '7', '1', '荣耀', 'index.php?route=product/product&amp;path=20_60&amp;product_id=131', 'catalog/web/002.jpg', '2');
+INSERT INTO `mc_banner_image` VALUES ('298', '8', '1', 'Sumsung', '', 'catalog/brand/logo_sumsung.jpg', '7');
+INSERT INTO `mc_banner_image` VALUES ('283', '7', '1', '三彩', 'index.php?route=product/product&amp;path=57&amp;product_id=49', 'catalog/web/001.jpg', '1');
+INSERT INTO `mc_banner_image` VALUES ('297', '8', '1', 'Oppo', '', 'catalog/brand/logo_oppo.jpg', '6');
+INSERT INTO `mc_banner_image` VALUES ('296', '8', '1', 'Xiaomi', '', 'catalog/brand/logo_mi.jpg', '5');
+INSERT INTO `mc_banner_image` VALUES ('295', '8', '1', 'Meizu', '', 'catalog/brand/logo_meizu.jpg', '4');
+INSERT INTO `mc_banner_image` VALUES ('294', '8', '1', 'Meitu', '', 'catalog/brand/logo_meitu.jpg', '3');
+INSERT INTO `mc_banner_image` VALUES ('293', '8', '1', 'Huawei', '', 'catalog/brand/logo_huawei.jpg', '2');
+INSERT INTO `mc_banner_image` VALUES ('292', '8', '1', 'Apple', '', 'catalog/brand/logo_apple.jpg', '1');
 
 -- ----------------------------
 -- Table structure for mc_blog
@@ -332,23 +361,6 @@ CREATE TABLE `mc_blog` (
 -- ----------------------------
 -- Records of mc_blog
 -- ----------------------------
-INSERT INTO `mc_blog` VALUES ('1', '0', '2016-01-15', '1', '2', '34', 'catalog/demo/blog/blog-1.jpg', '0', '0', '', '1', '2016-01-13 21:25:09', '2016-03-13 14:59:00');
-INSERT INTO `mc_blog` VALUES ('2', '0', '2016-01-13', '1', '2', '71', 'catalog/demo/blog/blog-2.jpg', '', '0', '', '2', '2016-01-14 09:36:37', '2016-08-22 12:07:16');
-INSERT INTO `mc_blog` VALUES ('3', '0', '2016-01-17', '1', '2', '17', 'catalog/demo/blog/blog-3.jpg', '', '0', '', '1', '2016-01-19 14:00:48', '2016-03-13 16:29:40');
-INSERT INTO `mc_blog` VALUES ('4', '0', '2016-01-18', '1', '2', '17', 'catalog/demo/blog/blog-4.jpg', '', '0', '', '1', '2016-01-19 14:01:28', '2016-08-10 15:43:19');
-INSERT INTO `mc_blog` VALUES ('5', '0', '2016-01-14', '1', '2', '6', 'catalog/demo/blog/blog-5.jpg', '', '0', '', '1', '2016-01-19 14:02:13', '2016-03-13 16:29:59');
-INSERT INTO `mc_blog` VALUES ('6', '0', '2016-03-13', '1', '1', '5', 'catalog/demo/blog/blog-6.jpg', ' ', '0', '', '1', '2016-03-13 15:31:33', '2017-09-04 08:07:04');
-INSERT INTO `mc_blog` VALUES ('7', '0', '2016-03-13', '1', '2', '4', 'catalog/demo/blog/blog-7.jpg', '', '0', '', '1', '2016-03-13 15:34:49', '2016-03-13 16:28:08');
-INSERT INTO `mc_blog` VALUES ('8', '0', '2016-03-13', '1', '2', '5', 'catalog/demo/blog/blog-8.jpg', '', '0', '', '1', '2016-03-13 15:42:11', '2016-03-13 16:28:23');
-INSERT INTO `mc_blog` VALUES ('9', '0', '2016-03-13', '1', '2', '5', 'catalog/demo/blog/blog-9.jpg', '', '0', '', '1', '2016-03-13 15:45:35', '2016-03-13 16:30:13');
-INSERT INTO `mc_blog` VALUES ('10', '0', '2016-03-13', '1', '2', '10', 'catalog/demo/blog/blog-10.jpg', '', '0', '', '1', '2016-03-13 15:47:42', '2016-03-13 16:27:53');
-INSERT INTO `mc_blog` VALUES ('11', '0', '2016-03-13', '1', '2', '4', 'catalog/demo/blog/blog-11.jpg', '', '0', '', '1', '2016-03-13 15:50:51', '2016-03-13 16:28:55');
-INSERT INTO `mc_blog` VALUES ('12', '0', '2016-03-13', '1', '2', '8', 'catalog/demo/blog/blog-12.jpg', '', '0', '', '1', '2016-03-13 15:56:30', '2016-03-13 16:27:38');
-INSERT INTO `mc_blog` VALUES ('13', '0', '2016-03-13', '1', '2', '9', 'catalog/demo/blog/blog-13.jpg', '', '0', '', '1', '2016-03-13 16:02:28', '2016-03-13 16:29:23');
-INSERT INTO `mc_blog` VALUES ('14', '0', '2016-03-13', '1', '2', '9', 'catalog/demo/blog/blog-14.jpg', '', '0', '', '1', '2016-03-13 16:06:05', '2016-03-13 16:28:42');
-INSERT INTO `mc_blog` VALUES ('15', '0', '2016-03-13', '1', '2', '15', 'catalog/demo/blog/blog-15.jpg', '', '0', '', '1', '2016-03-13 16:08:21', '2016-08-22 12:17:15');
-INSERT INTO `mc_blog` VALUES ('16', '0', '2017-08-31', '1', '1', '0', 'catalog/demo/blog/blog-23.jpg', '  ', '0', '', '1', '2017-08-31 08:11:46', '2017-08-31 08:12:51');
-INSERT INTO `mc_blog` VALUES ('17', '0', '2017-09-04', '1', '1', '1', '', '  ', '0', '', '1', '2017-09-04 09:48:28', '0000-00-00 00:00:00');
 
 -- ----------------------------
 -- Table structure for mc_blog_category
@@ -391,13 +403,6 @@ CREATE TABLE `mc_blog_category` (
 -- ----------------------------
 -- Records of mc_blog_category
 -- ----------------------------
-INSERT INTO `mc_blog_category` VALUES ('1', '', '0', '2', null, null, null, null, null, '1', '', '2', '1', '0', '1', '0', '0', '0', null, null, '0', 'top', null, '0', '0', '', '1', '1', '2016-01-13 21:18:53', '2017-08-31 14:58:41');
-INSERT INTO `mc_blog_category` VALUES ('2', '', '0', '2', null, null, null, null, null, '1', '', '2', '1', '0', '1', '0', '0', '0', null, null, '0', 'top', null, '0', '0', '', '2', '1', '2016-01-21 11:30:13', '2017-08-31 14:30:50');
-INSERT INTO `mc_blog_category` VALUES ('8', '', '0', '2', null, null, null, null, null, '1', '', '2', '1', '0', '1', '0', '0', '0', null, null, '0', 'top', null, '0', '0', '', '7', '1', '2017-08-31 14:34:03', '2017-08-31 15:01:02');
-INSERT INTO `mc_blog_category` VALUES ('9', '', '0', '2', null, null, null, null, null, '1', '', '2', '1', '0', '1', '0', '0', '0', null, null, '0', 'top', null, '0', '0', '', '4', '1', '2017-08-31 14:52:44', '2017-08-31 14:59:12');
-INSERT INTO `mc_blog_category` VALUES ('6', 'catalog/demo/canon_logo.jpg', '0', '2', null, null, null, null, null, '1', '', '2', '1', '0', '1', '0', '0', '0', null, null, '0', 'top', null, '0', '0', '', '3', '1', '2016-01-21 11:33:00', '2017-08-31 14:58:55');
-INSERT INTO `mc_blog_category` VALUES ('10', '', '0', '2', null, null, null, null, null, '1', '', '2', '1', '0', '1', '0', '0', '0', null, null, '0', 'top', null, '0', '0', '', '5', '1', '2017-08-31 14:54:18', '2017-08-31 14:59:24');
-INSERT INTO `mc_blog_category` VALUES ('11', '', '0', '2', null, null, null, null, null, '1', '', '2', '1', '0', '1', '0', '0', '0', null, null, '0', 'top', null, '0', '0', '', '6', '1', '2017-08-31 14:58:25', '2017-08-31 14:59:33');
 
 -- ----------------------------
 -- Table structure for mc_blog_category_description
@@ -418,27 +423,6 @@ CREATE TABLE `mc_blog_category_description` (
 -- ----------------------------
 -- Records of mc_blog_category_description
 -- ----------------------------
-INSERT INTO `mc_blog_category_description` VALUES ('1', '1', '与神对话1', '&lt;p&gt;与神对话1&lt;br&gt;&lt;/p&gt;', '与神对话1', '与神对话1', '与神对话1');
-INSERT INTO `mc_blog_category_description` VALUES ('1', '3', '与神对话1', '&lt;p&gt;与神对话1&lt;br&gt;&lt;/p&gt;', '与神对话1', '与神对话1', '与神对话1');
-INSERT INTO `mc_blog_category_description` VALUES ('2', '2', 'Conversation With God 2', '&lt;p&gt;Conversation With God 2&lt;br&gt;&lt;/p&gt;', 'Conversation With God 2', 'Conversation With God 2', 'Conversation With God 2');
-INSERT INTO `mc_blog_category_description` VALUES ('2', '1', '与神对话2', '&lt;p&gt;与神对话2&lt;br&gt;&lt;/p&gt;', '与神对话2', '与神对话2', '与神对话2');
-INSERT INTO `mc_blog_category_description` VALUES ('2', '3', '与神对话2', '&lt;p&gt;与神对话2&lt;br&gt;&lt;/p&gt;', '与神对话2', '与神对话2', '与神对话2');
-INSERT INTO `mc_blog_category_description` VALUES ('6', '2', 'Conversation With God 3', '&lt;p&gt;Conversation With God 3&lt;br&gt;&lt;/p&gt;', 'Conversation With God 3', 'Conversation With God 3', 'Conversation With God 3');
-INSERT INTO `mc_blog_category_description` VALUES ('8', '3', '唤醒人类', '&lt;p&gt;唤醒人类&lt;br&gt;&lt;/p&gt;', '唤醒人类', '唤醒人类', '唤醒人类');
-INSERT INTO `mc_blog_category_description` VALUES ('8', '2', 'Awake the species', '&lt;p&gt;Awake the species&lt;br&gt;&lt;/p&gt;', 'Awake the species', 'Awake the species', 'Awake the species');
-INSERT INTO `mc_blog_category_description` VALUES ('8', '1', '唤醒人类', '&lt;p&gt;唤醒人类&lt;br&gt;&lt;/p&gt;', '唤醒人类', '唤醒人类', '唤醒人类');
-INSERT INTO `mc_blog_category_description` VALUES ('9', '3', '与神为友', '&lt;p&gt;与神为友&lt;br&gt;&lt;/p&gt;', '与神为友', '与神为友', '与神为友');
-INSERT INTO `mc_blog_category_description` VALUES ('6', '1', '与神对话3', '&lt;p&gt;与神对话3&lt;br&gt;&lt;/p&gt;', '与神对话3', '与神对话3', '与神对话3');
-INSERT INTO `mc_blog_category_description` VALUES ('6', '3', '与神对话3', '&lt;p&gt;与神对话3&lt;br&gt;&lt;/p&gt;', '与神对话3', '与神对话3', '与神对话3');
-INSERT INTO `mc_blog_category_description` VALUES ('1', '2', 'Conversation With God 1', '&lt;p&gt;Conversation With God 1&lt;br&gt;&lt;/p&gt;', 'Conversation With God 1', 'Conversation With God 1', 'Conversation With God 1');
-INSERT INTO `mc_blog_category_description` VALUES ('9', '1', '与神为友', '&lt;p&gt;与神为友&lt;br&gt;&lt;/p&gt;', '与神为友', '与神为友', '与神为友');
-INSERT INTO `mc_blog_category_description` VALUES ('9', '2', 'Be Friend With God', '&lt;p&gt;Be Friend With God&lt;br&gt;&lt;/p&gt;', 'Be Friend With God', 'Be Friend With God', 'Be Friend With God');
-INSERT INTO `mc_blog_category_description` VALUES ('10', '1', '与神合一', '&lt;p&gt;与神合一&lt;br&gt;&lt;/p&gt;', '与神合一', '与神合一', '与神合一');
-INSERT INTO `mc_blog_category_description` VALUES ('10', '3', '与神合一', '&lt;p&gt;与神合一&lt;br&gt;&lt;/p&gt;', '与神合一', '与神合一', '与神合一');
-INSERT INTO `mc_blog_category_description` VALUES ('10', '2', 'Oneness with God', '&lt;p&gt;Oneness with God&lt;br&gt;&lt;/p&gt;', 'Oneness with God', 'Oneness with God', 'Oneness with God');
-INSERT INTO `mc_blog_category_description` VALUES ('11', '1', '与神回家', '&lt;p&gt;与神回家&lt;br&gt;&lt;/p&gt;', '与神回家', '与神回家', '与神回家');
-INSERT INTO `mc_blog_category_description` VALUES ('11', '3', '与神回家', '&lt;p&gt;与神回家&lt;br&gt;&lt;/p&gt;', '与神回家', '与神回家', '与神回家');
-INSERT INTO `mc_blog_category_description` VALUES ('11', '2', 'Home With God', '&lt;p&gt;Home With God&lt;br&gt;&lt;/p&gt;', 'Home With God', 'Home With God', 'Home With God');
 
 -- ----------------------------
 -- Table structure for mc_blog_category_path
@@ -454,13 +438,6 @@ CREATE TABLE `mc_blog_category_path` (
 -- ----------------------------
 -- Records of mc_blog_category_path
 -- ----------------------------
-INSERT INTO `mc_blog_category_path` VALUES ('1', '1', '0');
-INSERT INTO `mc_blog_category_path` VALUES ('2', '2', '0');
-INSERT INTO `mc_blog_category_path` VALUES ('11', '11', '0');
-INSERT INTO `mc_blog_category_path` VALUES ('10', '10', '0');
-INSERT INTO `mc_blog_category_path` VALUES ('9', '9', '0');
-INSERT INTO `mc_blog_category_path` VALUES ('8', '8', '0');
-INSERT INTO `mc_blog_category_path` VALUES ('6', '6', '0');
 
 -- ----------------------------
 -- Table structure for mc_blog_category_to_layout
@@ -476,13 +453,6 @@ CREATE TABLE `mc_blog_category_to_layout` (
 -- ----------------------------
 -- Records of mc_blog_category_to_layout
 -- ----------------------------
-INSERT INTO `mc_blog_category_to_layout` VALUES ('1', '0', '0');
-INSERT INTO `mc_blog_category_to_layout` VALUES ('2', '0', '0');
-INSERT INTO `mc_blog_category_to_layout` VALUES ('8', '0', '0');
-INSERT INTO `mc_blog_category_to_layout` VALUES ('9', '0', '0');
-INSERT INTO `mc_blog_category_to_layout` VALUES ('10', '0', '0');
-INSERT INTO `mc_blog_category_to_layout` VALUES ('6', '0', '0');
-INSERT INTO `mc_blog_category_to_layout` VALUES ('11', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_blog_category_to_store
@@ -497,13 +467,6 @@ CREATE TABLE `mc_blog_category_to_store` (
 -- ----------------------------
 -- Records of mc_blog_category_to_store
 -- ----------------------------
-INSERT INTO `mc_blog_category_to_store` VALUES ('1', '0');
-INSERT INTO `mc_blog_category_to_store` VALUES ('2', '0');
-INSERT INTO `mc_blog_category_to_store` VALUES ('6', '0');
-INSERT INTO `mc_blog_category_to_store` VALUES ('8', '0');
-INSERT INTO `mc_blog_category_to_store` VALUES ('9', '0');
-INSERT INTO `mc_blog_category_to_store` VALUES ('10', '0');
-INSERT INTO `mc_blog_category_to_store` VALUES ('11', '0');
 
 -- ----------------------------
 -- Table structure for mc_blog_comment
@@ -578,57 +541,6 @@ CREATE TABLE `mc_blog_description` (
 -- ----------------------------
 -- Records of mc_blog_description
 -- ----------------------------
-INSERT INTO `mc_blog_description` VALUES ('1', '2', '神在每一时刻、与每一个人说话', '我跟每个人说话，一向就是如此。问题不是在我跟谁说，而是谁在听？就拿基督为例，为什么有一些人，仿佛比别的人更能听到神的讯息？那因为有些人愿意真正倾听。他们愿意听，纵使当讯息看起来似乎是可怕，或疯狂，或根本就错误时，他们仍愿对这样的通讯保持开放的心态。 除非你不再告诉我你的真理，否则我无法告诉你我的真理。所有的人都是特别的，而所有的片刻也都珍贵如黄金。并没有哪一个人或哪一个时刻比其他的更特别。', '&lt;p&gt;我跟每个人说话，一向就是如此。问题不是在我跟谁说，而是谁在听？就拿基督为例，为什么有一些人，仿佛比别的人更能听到神的讯息？那因为有些人愿意真正倾听。他们愿意听，纵使当讯息看起来似乎是可怕，或疯狂，或根本就错误时，他们仍愿对这样的通讯保持开放的心态。 除非你不再告诉我你的真理，否则我无法告诉你我的真理。所有的人都是特别的，而所有的片刻也都珍贵如黄金。并没有哪一个人或哪一个时刻比其他的更特别。&lt;br&gt;&lt;br&gt;让我们以沟通这个字来取代说话这个字。沟通是个好得多、充实得多、正确得多的字眼。我邀请你来参加与神的一种新型的沟通。一个双向沟通。事实上，是你邀请了我。我最常用的沟通方式是透过感受（又译为“感觉”）。感受是灵魂的语言。我也以思维来沟通。我最强而有力的讯息是体验，但这个你们也忽略了。你们尤其是忽略了这个。而最后，如果感受、思维及体验全都失效时，我才用语言。它们最容易招致错误的诠释，最容易被误解。然而，最大的讽刺是，你们全都将神的话语视为如此重要，反而轻视体验。倾听你的感受。倾听你最高的思维。倾听你的体验。一旦有任何与你的老师们告诉你的，或与你在书里读到的话不同时，就忘掉那些话。话语是最不可靠的真理供应商。&lt;/p&gt;', 'MyCnCart - 神在每一时刻、与每一个人说话', 'MyCnCart - 神在每一时刻、与每一个人说话', 'MyCnCart - 神在每一时刻、与每一个人说话', '1,2,3');
-INSERT INTO `mc_blog_description` VALUES ('1', '1', '神在每一时刻、与每一个人说话', '我跟每个人说话，一向就是如此。问题不是在我跟谁说，而是谁在听？就拿基督为例，为什么有一些人，仿佛比别的人更能听到神的讯息？那因为有些人愿意真正倾听。他们愿意听，纵使当讯息看起来似乎是可怕，或疯狂，或根本就错误时，他们仍愿对这样的通讯保持开放的心态。 除非你不再告诉我你的真理，否则我无法告诉你我的真理。所有的人都是特别的，而所有的片刻也都珍贵如黄金。并没有哪一个人或哪一个时刻比其他的更特别。', '&lt;p&gt;我跟每个人说话，一向就是如此。问题不是在我跟谁说，而是谁在听？就拿基督为例，为什么有一些人，仿佛比别的人更能听到神的讯息？那因为有些人愿意真正倾听。他们愿意听，纵使当讯息看起来似乎是可怕，或疯狂，或根本就错误时，他们仍愿对这样的通讯保持开放的心态。 除非你不再告诉我你的真理，否则我无法告诉你我的真理。所有的人都是特别的，而所有的片刻也都珍贵如黄金。并没有哪一个人或哪一个时刻比其他的更特别。&lt;br&gt;&lt;br&gt;让我们以沟通这个字来取代说话这个字。沟通是个好得多、充实得多、正确得多的字眼。我邀请你来参加与神的一种新型的沟通。一个双向沟通。事实上，是你邀请了我。我最常用的沟通方式是透过感受（又译为“感觉”）。感受是灵魂的语言。我也以思维来沟通。我最强而有力的讯息是体验，但这个你们也忽略了。你们尤其是忽略了这个。而最后，如果感受、思维及体验全都失效时，我才用语言。它们最容易招致错误的诠释，最容易被误解。然而，最大的讽刺是，你们全都将神的话语视为如此重要，反而轻视体验。倾听你的感受。倾听你最高的思维。倾听你的体验。一旦有任何与你的老师们告诉你的，或与你在书里读到的话不同时，就忘掉那些话。话语是最不可靠的真理供应商。&lt;/p&gt;', 'MyCnCart - 神在每一时刻、与每一个人说话', 'MyCnCart - 神在每一时刻、与每一个人说话', 'MyCnCart - 神在每一时刻、与每一个人说话', '1,2,3');
-INSERT INTO `mc_blog_description` VALUES ('2', '3', '你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', '在神的眼里，每件事都“可以接受”。它们是生命，而生命就是礼物；无法形容的宝藏；神圣中的神圣。每件事背后都有一个神圣的目的――因而在每个东西里都有一个神圣的存在。我即生命，因为我是生命所是。其每个面向都有一个神圣的目的。', '&lt;p&gt;神以神的肖像创造了你们。透过神给你们的力量，你们又创造了其余的。神创造了如你们所知的生命过程和生命本身。但是神也给了你们自由选择权，你们可\r\n以随心所欲的去过生活。以这种说法来看，你对自己的意愿也即是神对你的意愿。你就以你自己的方式过你的人生，我在这件事上并没有什么偏好。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;神\r\n的计划，是让你们去创造任何东西――每样东西――不论你们想要的是什么东西。在这种自由里，存在着神之为神的体验――而就是为了这个体验，我才创造你们，\r\n以及生命本身。（神赋予了人选择的自由、创造的自由，人的自由选择、创造，就是一种上帝的状态。）我什么都不轻视。神在悲伤和欢笑里，在苦与甜里。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;在神的眼里，每件事都“可以接受”。它们是生命，而生命就是礼物；无法形容的宝藏；神圣中的神圣。每件事背后都有一个神圣的目的――因而在每个东西里都有一个神圣的存在。我即生命，因为我是生命所是。其每个面向都有一个神圣的目的。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'MyCnCart - 你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', 'MyCnCart - 你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', 'MyCnCart - 你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', '2,3,4');
-INSERT INTO `mc_blog_description` VALUES ('2', '2', '你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', '在神的眼里，每件事都“可以接受”。它们是生命，而生命就是礼物；无法形容的宝藏；神圣中的神圣。每件事背后都有一个神圣的目的――因而在每个东西里都有一个神圣的存在。我即生命，因为我是生命所是。其每个面向都有一个神圣的目的。', '&lt;p&gt;神以神的肖像创造了你们。透过神给你们的力量，你们又创造了其余的。神创造了如你们所知的生命过程和生命本身。但是神也给了你们自由选择权，你们可\r\n以随心所欲的去过生活。以这种说法来看，你对自己的意愿也即是神对你的意愿。你就以你自己的方式过你的人生，我在这件事上并没有什么偏好。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;神\r\n的计划，是让你们去创造任何东西――每样东西――不论你们想要的是什么东西。在这种自由里，存在着神之为神的体验――而就是为了这个体验，我才创造你们，\r\n以及生命本身。（神赋予了人选择的自由、创造的自由，人的自由选择、创造，就是一种上帝的状态。）我什么都不轻视。神在悲伤和欢笑里，在苦与甜里。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;在神的眼里，每件事都“可以接受”。它们是生命，而生命就是礼物；无法形容的宝藏；神圣中的神圣。每件事背后都有一个神圣的目的――因而在每个东西里都有一个神圣的存在。我即生命，因为我是生命所是。其每个面向都有一个神圣的目的。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'MyCnCart - 你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', 'MyCnCart - 你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', 'MyCnCart - 你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', '2,3,4');
-INSERT INTO `mc_blog_description` VALUES ('3', '2', '生命并非一个发现的过程，而是一个创造的过程', '你们会在这儿，为的是忆起，并且重新创造你是谁。', '&lt;p&gt;生命只有一个目的，那就是让你和所有活着的东西体验最完满的荣耀。这个目的的神奇是在于它是永无结束的。一个结束是一个局限，而神的目的没有这样的\r\n界限。一个最深的秘密就是：生命并非一个发现的过程，而是一个创造的过程。你并不是在发现你自己，而是在重新创造你自己。所以，不（仅）要去弄清你是谁，\r\n而（更）要去确定你想成为谁。&lt;/p&gt;&lt;p&gt;你们会在这儿，为的是忆起，并且重新创造你是谁。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'MyCnCart - 生命并非一个发现的过程，而是一个创造的过程', 'MyCnCart - 生命并非一个发现的过程，而是一个创造的过程', 'MyCnCart - 生命并非一个发现的过程，而是一个创造的过程', '3,4,5');
-INSERT INTO `mc_blog_description` VALUES ('3', '3', '生命并非一个发现的过程，而是一个创造的过程', '你们会在这儿，为的是忆起，并且重新创造你是谁。', '&lt;p&gt;生命只有一个目的，那就是让你和所有活着的东西体验最完满的荣耀。这个目的的神奇是在于它是永无结束的。一个结束是一个局限，而神的目的没有这样的\r\n界限。一个最深的秘密就是：生命并非一个发现的过程，而是一个创造的过程。你并不是在发现你自己，而是在重新创造你自己。所以，不（仅）要去弄清你是谁，\r\n而（更）要去确定你想成为谁。&lt;/p&gt;&lt;p&gt;你们会在这儿，为的是忆起，并且重新创造你是谁。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'MyCnCart - 生命并非一个发现的过程，而是一个创造的过程', 'MyCnCart - 生命并非一个发现的过程，而是一个创造的过程', 'MyCnCart - 生命并非一个发现的过程，而是一个创造的过程', '3,4,5');
-INSERT INTO `mc_blog_description` VALUES ('4', '3', '神创造了相对性，你藉由你不是的东西来界定你自己是什么', '就最终的逻辑而言，就是除非你面对了你不是的东西，否则你无法经验自己以为你是的东西。这乃是相对论及所有具体生命的目的。你得藉由你不是的东西来界定你自己是什么。', '&lt;p&gt;我是一切东西（All Things）――可见与不可见的。一切万有（All That Is）无法认识他自己――因为一切万有是所有的一切，而没有任何其他的东西。因此，一切万有……是不在的。（于是，为了认识自己，）神创造了相对性――是神给他自己的最大礼物。因此，关系就是神给你们的最大礼物，这主题后面会再详加讨论。我创造你们――我的心灵儿女――的目的，是为了要体认我自己为神。除了经由你们，我没有其他办法做到这一点。所以可以说（并且也已说过许多次）我要你们做到的是：你们该体认到自己为我。这看似如此令人惊异的简单，然而却变得非常复杂――因为你们只有一个方法得以体认你们自己为我――那就是，首先，你们要先体认自己不是我。就最终的逻辑而言，就是除非你面对了你不是的东西，否则你无法经验自己以为你是的东西。这乃是相对论及所有具体生命的目的。你得藉由你不是的东西来界定你自己是什么。&lt;/p&gt;', 'MyCnCart  - 神创造了相对性，你藉由你不是的东西来界定你自己是什么', 'MyCnCart  - 神创造了相对性，你藉由你不是的东西来界定你自己是什么', 'MyCnCart  - 神创造了相对性，你藉由你不是的东西来界定你自己是什么', '4,5,6');
-INSERT INTO `mc_blog_description` VALUES ('1', '3', '神在每一时刻、与每一个人说话', '我跟每个人说话，一向就是如此。问题不是在我跟谁说，而是谁在听？就拿基督为例，为什么有一些人，仿佛比别的人更能听到神的讯息？那因为有些人愿意真正倾听。他们愿意听，纵使当讯息看起来似乎是可怕，或疯狂，或根本就错误时，他们仍愿对这样的通讯保持开放的心态。 除非你不再告诉我你的真理，否则我无法告诉你我的真理。所有的人都是特别的，而所有的片刻也都珍贵如黄金。并没有哪一个人或哪一个时刻比其他的更特别。', '&lt;p&gt;我跟每个人说话，一向就是如此。问题不是在我跟谁说，而是谁在听？就拿基督为例，为什么有一些人，仿佛比别的人更能听到神的讯息？那因为有些人愿意真正倾听。他们愿意听，纵使当讯息看起来似乎是可怕，或疯狂，或根本就错误时，他们仍愿对这样的通讯保持开放的心态。 除非你不再告诉我你的真理，否则我无法告诉你我的真理。所有的人都是特别的，而所有的片刻也都珍贵如黄金。并没有哪一个人或哪一个时刻比其他的更特别。&lt;br&gt;&lt;br&gt;让我们以沟通这个字来取代说话这个字。沟通是个好得多、充实得多、正确得多的字眼。我邀请你来参加与神的一种新型的沟通。一个双向沟通。事实上，是你邀请了我。我最常用的沟通方式是透过感受（又译为“感觉”）。感受是灵魂的语言。我也以思维来沟通。我最强而有力的讯息是体验，但这个你们也忽略了。你们尤其是忽略了这个。而最后，如果感受、思维及体验全都失效时，我才用语言。它们最容易招致错误的诠释，最容易被误解。然而，最大的讽刺是，你们全都将神的话语视为如此重要，反而轻视体验。倾听你的感受。倾听你最高的思维。倾听你的体验。一旦有任何与你的老师们告诉你的，或与你在书里读到的话不同时，就忘掉那些话。话语是最不可靠的真理供应商。&lt;/p&gt;', 'MyCnCart - 神在每一时刻、与每一个人说话', 'MyCnCart - 神在每一时刻、与每一个人说话', 'MyCnCart - 神在每一时刻、与每一个人说话', '1,2,3');
-INSERT INTO `mc_blog_description` VALUES ('2', '1', '你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', '在神的眼里，每件事都“可以接受”。它们是生命，而生命就是礼物；无法形容的宝藏；神圣中的神圣。每件事背后都有一个神圣的目的――因而在每个东西里都有一个神圣的存在。我即生命，因为我是生命所是。其每个面向都有一个神圣的目的。', '&lt;p&gt;神以神的肖像创造了你们。透过神给你们的力量，你们又创造了其余的。神创造了如你们所知的生命过程和生命本身。但是神也给了你们自由选择权，你们可\r\n以随心所欲的去过生活。以这种说法来看，你对自己的意愿也即是神对你的意愿。你就以你自己的方式过你的人生，我在这件事上并没有什么偏好。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;神\r\n的计划，是让你们去创造任何东西――每样东西――不论你们想要的是什么东西。在这种自由里，存在着神之为神的体验――而就是为了这个体验，我才创造你们，\r\n以及生命本身。（神赋予了人选择的自由、创造的自由，人的自由选择、创造，就是一种上帝的状态。）我什么都不轻视。神在悲伤和欢笑里，在苦与甜里。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;在神的眼里，每件事都“可以接受”。它们是生命，而生命就是礼物；无法形容的宝藏；神圣中的神圣。每件事背后都有一个神圣的目的――因而在每个东西里都有一个神圣的存在。我即生命，因为我是生命所是。其每个面向都有一个神圣的目的。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'MyCnCart - 你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', 'MyCnCart - 你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', 'MyCnCart - 你对自己的意愿也即是神对你的意愿，每件事都是神圣的存在', '2,3,4');
-INSERT INTO `mc_blog_description` VALUES ('3', '1', '生命并非一个发现的过程，而是一个创造的过程', '你们会在这儿，为的是忆起，并且重新创造你是谁。', '&lt;p&gt;生命只有一个目的，那就是让你和所有活着的东西体验最完满的荣耀。这个目的的神奇是在于它是永无结束的。一个结束是一个局限，而神的目的没有这样的\r\n界限。一个最深的秘密就是：生命并非一个发现的过程，而是一个创造的过程。你并不是在发现你自己，而是在重新创造你自己。所以，不（仅）要去弄清你是谁，\r\n而（更）要去确定你想成为谁。&lt;/p&gt;&lt;p&gt;你们会在这儿，为的是忆起，并且重新创造你是谁。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'MyCnCart - 生命并非一个发现的过程，而是一个创造的过程', 'MyCnCart - 生命并非一个发现的过程，而是一个创造的过程', 'MyCnCart - 生命并非一个发现的过程，而是一个创造的过程', '3,4,5');
-INSERT INTO `mc_blog_description` VALUES ('4', '2', '神创造了相对性，你藉由你不是的东西来界定你自己是什么', '就最终的逻辑而言，就是除非你面对了你不是的东西，否则你无法经验自己以为你是的东西。这乃是相对论及所有具体生命的目的。你得藉由你不是的东西来界定你自己是什么。', '&lt;p&gt;我是一切东西（All Things）――可见与不可见的。一切万有（All That Is）无法认识他自己――因为一切万有是所有的一切，而没有任何其他的东西。因此，一切万有……是不在的。（于是，为了认识自己，）神创造了相对性――是神给他自己的最大礼物。因此，关系就是神给你们的最大礼物，这主题后面会再详加讨论。我创造你们――我的心灵儿女――的目的，是为了要体认我自己为神。除了经由你们，我没有其他办法做到这一点。所以可以说（并且也已说过许多次）我要你们做到的是：你们该体认到自己为我。这看似如此令人惊异的简单，然而却变得非常复杂――因为你们只有一个方法得以体认你们自己为我――那就是，首先，你们要先体认自己不是我。就最终的逻辑而言，就是除非你面对了你不是的东西，否则你无法经验自己以为你是的东西。这乃是相对论及所有具体生命的目的。你得藉由你不是的东西来界定你自己是什么。&lt;/p&gt;', 'MyCnCart  - 神创造了相对性，你藉由你不是的东西来界定你自己是什么', 'MyCnCart  - 神创造了相对性，你藉由你不是的东西来界定你自己是什么', 'MyCnCart  - 神创造了相对性，你藉由你不是的东西来界定你自己是什么', '4,5,6');
-INSERT INTO `mc_blog_description` VALUES ('4', '1', '神创造了相对性，你藉由你不是的东西来界定你自己是什么', '就最终的逻辑而言，就是除非你面对了你不是的东西，否则你无法经验自己以为你是的东西。这乃是相对论及所有具体生命的目的。你得藉由你不是的东西来界定你自己是什么。', '&lt;p&gt;我是一切东西（All Things）――可见与不可见的。一切万有（All That Is）无法认识他自己――因为一切万有是所有的一切，而没有任何其他的东西。因此，一切万有……是不在的。（于是，为了认识自己，）神创造了相对性――是神给他自己的最大礼物。因此，关系就是神给你们的最大礼物，这主题后面会再详加讨论。我创造你们――我的心灵儿女――的目的，是为了要体认我自己为神。除了经由你们，我没有其他办法做到这一点。所以可以说（并且也已说过许多次）我要你们做到的是：你们该体认到自己为我。这看似如此令人惊异的简单，然而却变得非常复杂――因为你们只有一个方法得以体认你们自己为我――那就是，首先，你们要先体认自己不是我。就最终的逻辑而言，就是除非你面对了你不是的东西，否则你无法经验自己以为你是的东西。这乃是相对论及所有具体生命的目的。你得藉由你不是的东西来界定你自己是什么。&lt;/p&gt;', 'MyCnCart  - 神创造了相对性，你藉由你不是的东西来界定你自己是什么', 'MyCnCart  - 神创造了相对性，你藉由你不是的东西来界定你自己是什么', 'MyCnCart  - 神创造了相对性，你藉由你不是的东西来界定你自己是什么', '4,5,6');
-INSERT INTO `mc_blog_description` VALUES ('5', '3', '痛苦是错误思想的结果，是你自己创造了这经验', '地狱是你的选择、决定和创造所可能产生的最糟结果的经验。', '&lt;p&gt;你无法改变外在事件（因为那是你们许多人创造的，而你的意识还没成长到你能个别地改变集体创造出来的东西），所以你必须改变内在的经验。这是在生活\r\n中到达主控权之路。没有一件事其本身是痛苦的。痛苦是错误思想的结果。它是思维里的一个谬误。痛苦来自你对一件事的批判。去掉批判，痛苦便消失了。在神的\r\n世界里，没有什么“该”或“不该”。做你想做的事。但不要去批判，也不要去指责，因为你并不知道事情为何发生，也不知是为了什么目的。要祝福一切――因为\r\n一切都是神透过活生生的生命所创造的，而那就是最高的创造。&lt;/p&gt;&lt;p&gt;地狱是你的选择、决定和创造所可能产生的最糟结果的经验。它是否定我或对与我有\r\n关联的你之为谁说“不”的任何思维之自然后果。它是你因为错误的思想而遭受的痛苦。然而，即使“错误思想”这个词也是个误称，因为根本没有错的事。地狱是\r\n喜悦的反面。它是不圆满。它是知道你是谁和是什么，却无法去经验。它是逊于你的本质。那就是地狱，对你的灵魂而言，不可能有的更大痛苦。我告诉你，在死\r\n后，根本没有你们在以恐惧为基础的理论里所建构的那种经验。然而，灵魂有一种经验，会是很不快乐、很不完全、很不完整，而且让你远离神的最大喜悦，以致对\r\n你的灵魂而言会是地狱一般的。但我告诉你，不是我要送你去那儿，也不是我导致你有这经验。而是每当你以任何方式，将你自己与对你自己之最高想法分开时；每\r\n当你排斥你真的是谁或是什么时，是你，你自己，创造了这经验。&lt;/p&gt;&lt;p&gt;你们是你们自己的规则判定者，而你是唯一可评估你做的多好的人。你可以照你希\r\n望的去做而不必害怕报应。不过，事先觉知其后果对你却是有用的。后果只是后果。这些和报应或惩罚完全不同。那些在你看来象是惩罚的事――或你称之为邪恶或\r\n恶运的事――只不过是自然律在维护它自己而已。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 痛苦是错误思想的结果，是你自己创造了这经验', 'MyCnCart  - 痛苦是错误思想的结果，是你自己创造了这经验', 'MyCnCart  - 痛苦是错误思想的结果，是你自己创造了这经验', '');
-INSERT INTO `mc_blog_description` VALUES ('5', '1', '痛苦是错误思想的结果，是你自己创造了这经验', '地狱是你的选择、决定和创造所可能产生的最糟结果的经验。', '&lt;p&gt;你无法改变外在事件（因为那是你们许多人创造的，而你的意识还没成长到你能个别地改变集体创造出来的东西），所以你必须改变内在的经验。这是在生活中到达主控权之路。没有一件事其本身是痛苦的。痛苦是错误思想的结果。它是思维里的一个谬误。痛苦来自你对一件事的批判。去掉批判，痛苦便消失了。在神的世界里，没有什么“该”或“不该”。做你想做的事。但不要去批判，也不要去指责，因为你并不知道事情为何发生，也不知是为了什么目的。要祝福一切――因为一切都是神透过活生生的生命所创造的，而那就是最高的创造。&lt;/p&gt;&lt;p&gt;地狱是你的选择、决定和创造所可能产生的最糟结果的经验。它是否定我或对与我有关联的你之为谁说“不”的任何思维之自然后果。它是你因为错误的思想而遭受的痛苦。然而，即使“错误思想”这个词也是个误称，因为根本没有错的事。地狱是喜悦的反面。它是不圆满。它是知道你是谁和是什么，却无法去经验。它是逊于你的本质。那就是地狱，对你的灵魂而言，不可能有的更大痛苦。我告诉你，在死后，根本没有你们在以恐惧为基础的理论里所建构的那种经验。然而，灵魂有一种经验，会是很不快乐、很不完全、很不完整，而且让你远离神的最大喜悦，以致对你的灵魂而言会是地狱一般的。但我告诉你，不是我要送你去那儿，也不是我导致你有这经验。而是每当你以任何方式，将你自己与对你自己之最高想法分开时；每当你排斥你真的是谁或是什么时，是你，你自己，创造了这经验。&lt;/p&gt;&lt;p&gt;你们是你们自己的规则判定者，而你是唯一可评估你做的多好的人。你可以照你希望的去做而不必害怕报应。不过，事先觉知其后果对你却是有用的。后果只是后果。这些和报应或惩罚完全不同。那些在你看来象是惩罚的事――或你称之为邪恶或恶运的事――只不过是自然律在维护它自己而已。&lt;/p&gt;', 'MyCnCart  - 痛苦是错误思想的结果，是你自己创造了这经验', 'MyCnCart  - 痛苦是错误思想的结果，是你自己创造了这经验', 'MyCnCart  - 痛苦是错误思想的结果，是你自己创造了这经验', '');
-INSERT INTO `mc_blog_description` VALUES ('5', '2', '痛苦是错误思想的结果，是你自己创造了这经验', '地狱是你的选择、决定和创造所可能产生的最糟结果的经验。', '&lt;p&gt;你无法改变外在事件（因为那是你们许多人创造的，而你的意识还没成长到你能个别地改变集体创造出来的东西），所以你必须改变内在的经验。这是在生活\r\n中到达主控权之路。没有一件事其本身是痛苦的。痛苦是错误思想的结果。它是思维里的一个谬误。痛苦来自你对一件事的批判。去掉批判，痛苦便消失了。在神的\r\n世界里，没有什么“该”或“不该”。做你想做的事。但不要去批判，也不要去指责，因为你并不知道事情为何发生，也不知是为了什么目的。要祝福一切――因为\r\n一切都是神透过活生生的生命所创造的，而那就是最高的创造。&lt;/p&gt;&lt;p&gt;地狱是你的选择、决定和创造所可能产生的最糟结果的经验。它是否定我或对与我有\r\n关联的你之为谁说“不”的任何思维之自然后果。它是你因为错误的思想而遭受的痛苦。然而，即使“错误思想”这个词也是个误称，因为根本没有错的事。地狱是\r\n喜悦的反面。它是不圆满。它是知道你是谁和是什么，却无法去经验。它是逊于你的本质。那就是地狱，对你的灵魂而言，不可能有的更大痛苦。我告诉你，在死\r\n后，根本没有你们在以恐惧为基础的理论里所建构的那种经验。然而，灵魂有一种经验，会是很不快乐、很不完全、很不完整，而且让你远离神的最大喜悦，以致对\r\n你的灵魂而言会是地狱一般的。但我告诉你，不是我要送你去那儿，也不是我导致你有这经验。而是每当你以任何方式，将你自己与对你自己之最高想法分开时；每\r\n当你排斥你真的是谁或是什么时，是你，你自己，创造了这经验。&lt;/p&gt;&lt;p&gt;你们是你们自己的规则判定者，而你是唯一可评估你做的多好的人。你可以照你希\r\n望的去做而不必害怕报应。不过，事先觉知其后果对你却是有用的。后果只是后果。这些和报应或惩罚完全不同。那些在你看来象是惩罚的事――或你称之为邪恶或\r\n恶运的事――只不过是自然律在维护它自己而已。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 痛苦是错误思想的结果，是你自己创造了这经验', 'MyCnCart  - 痛苦是错误思想的结果，是你自己创造了这经验', 'MyCnCart  - 痛苦是错误思想的结果，是你自己创造了这经验', '');
-INSERT INTO `mc_blog_description` VALUES ('17', '2', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '', '&lt;p&gt;不可原谅的东西是不存在的。没有任何罪行严重到我会拒绝原谅你。哪怕人类最严厉的宗教也传播这个道理。&lt;/p&gt;&lt;p&gt;这些宗教也许在救赎的方式上有争议，也许在救赎的道路上有争议，但他们全都同意的是，这样的方式和道路是有的。&lt;/p&gt;&lt;p&gt;在你成为死亡的时刻，你自然会得到补赎的机会。&lt;/p&gt;&lt;p&gt;所谓补赎，就是意识到你和所有其他人是一体。那就是明白你和万物——包括我——是合一的。&lt;/p&gt;&lt;p&gt;死亡之后，当你和你的肉体分开之后，你将会立刻拥有——忆起——这种经验。&lt;/p&gt;&lt;p&gt;所有灵魂都以最有意思的方式经验到他们的“合一”。它们将得到机会再次经历他们刚完成的人生的每个时刻——不仅是从它们的角度去经验它，而且也从所有受该时刻影响的人角度去经验它。他们将会重新思考每个思维，重新说出每句话，重新做出每件事，去经验那对每个受牵涉的人的影响，仿佛它们是别人一样——而它们确实就是别人。&lt;/p&gt;&lt;p&gt;它们将会经验地认识到它们的身份。在这个时刻，“我们所有人是一体”这句话不再是概念，它将会变成经验。&lt;/p&gt;&lt;p&gt;让你们承受无尽的折磨和诅咒的地方并不存在，那是你们的神学理论杜撰出来的。但你们——你们所有人——将会经验到你们的选择和决定造成的影响、后果和结局。然而这关乎成长，而非“正义”。这是进化的过程，而非神佛的“惩罚”。&lt;/p&gt;&lt;p&gt;在你进行“人生回顾”——有些人这么称呼它——过程中，你不会受到任何人的审判，而只是有机会去经验你的整体在生活的每时每刻所经验到的东西，而非你那寄居在当前肉身中的个体所经验到的东西。&lt;/p&gt;&lt;p&gt;你经验到的不是痛苦，而是觉悟。你将会深深地理解、深深地省悟每个时刻的总体和它蕴含的意义。然而这不会令你痛苦，这会让你进入光明的境界。&lt;br&gt;&lt;/p&gt;', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '');
-INSERT INTO `mc_blog_description` VALUES ('6', '3', '每件事和每件冒险，都是你的灵魂召来你自己身边的', '', '&lt;p&gt;没有什么是你不能成为的，没有什么是你不能做的。没有什么是你不能拥有的。你可以是、可以做、并可以拥有任何你能想象的东西。相信神就是相信神最伟大的礼物――无条件的爱，及神最大的允诺――无限的潜能。你并不事先选择你将经验的人生。不过，你可以选择用以创造你的经验的任务、地点和事件――条件和情境、挑战和障碍、机会和选择。在你所有选择去做的事里，你的潜能是无限的。所以不要先肯定说，一个投生在你所谓受限的肉体里的灵魂，是无法达到它完全的潜能的，因为你并不知道那个灵魂想做些什么。你并不了解他的生命议程（agenda）。你对他的意图并不清楚。因此，祝福并感谢每个人和每个情况吧！如此，你就是肯定了神的创造之完美――并且表示出你对他的信心。因为在神的世界里是没有意外的，没有一件事是巧合，也没有什么事是“因意外”而发生的。每件事和每件冒险，都是你的灵魂召来你自己身边的，以使你能创造并经验你真的是谁。世界会是这样的现状，是由于你及你做过――或没有做――的选择。（不做决定也是决定。）&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 每件事和每件冒险，都是你的灵魂召来你自己身边的', 'MyCnCart  - 每件事和每件冒险，都是你的灵魂召来你自己身边的', 'MyCnCart  - 每件事和每件冒险，都是你的灵魂召来你自己身边的', '');
-INSERT INTO `mc_blog_description` VALUES ('6', '2', '每件事和每件冒险，都是你的灵魂召来你自己身边的', '', '&lt;p&gt;没有什么是你不能成为的，没有什么是你不能做的。没有什么是你不能拥有的。你可以是、可以做、并可以拥有任何你能想象的东西。相信神就是相信神最伟大的礼物――无条件的爱，及神最大的允诺――无限的潜能。你并不事先选择你将经验的人生。不过，你可以选择用以创造你的经验的任务、地点和事件――条件和情境、挑战和障碍、机会和选择。在你所有选择去做的事里，你的潜能是无限的。所以不要先肯定说，一个投生在你所谓受限的肉体里的灵魂，是无法达到它完全的潜能的，因为你并不知道那个灵魂想做些什么。你并不了解他的生命议程（agenda）。你对他的意图并不清楚。因此，祝福并感谢每个人和每个情况吧！如此，你就是肯定了神的创造之完美――并且表示出你对他的信心。因为在神的世界里是没有意外的，没有一件事是巧合，也没有什么事是“因意外”而发生的。每件事和每件冒险，都是你的灵魂召来你自己身边的，以使你能创造并经验你真的是谁。世界会是这样的现状，是由于你及你做过――或没有做――的选择。（不做决定也是决定。）&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 每件事和每件冒险，都是你的灵魂召来你自己身边的', 'MyCnCart  - 每件事和每件冒险，都是你的灵魂召来你自己身边的', 'MyCnCart  - 每件事和每件冒险，都是你的灵魂召来你自己身边的', '');
-INSERT INTO `mc_blog_description` VALUES ('6', '1', '每件事和每件冒险，都是你的灵魂召来你自己身边的', '', '&lt;p&gt;没有什么是你不能成为的，没有什么是你不能做的。没有什么是你不能拥有的。你可以是、可以做、并可以拥有任何你能想象的东西。相信神就是相信神最伟大的礼物――无条件的爱，及神最大的允诺――无限的潜能。你并不事先选择你将经验的人生。不过，你可以选择用以创造你的经验的任务、地点和事件――条件和情境、挑战和障碍、机会和选择。在你所有选择去做的事里，你的潜能是无限的。所以不要先肯定说，一个投生在你所谓受限的肉体里的灵魂，是无法达到它完全的潜能的，因为你并不知道那个灵魂想做些什么。你并不了解他的生命议程（agenda）。你对他的意图并不清楚。因此，祝福并感谢每个人和每个情况吧！如此，你就是肯定了神的创造之完美――并且表示出你对他的信心。因为在神的世界里是没有意外的，没有一件事是巧合，也没有什么事是“因意外”而发生的。每件事和每件冒险，都是你的灵魂召来你自己身边的，以使你能创造并经验你真的是谁。世界会是这样的现状，是由于你及你做过――或没有做――的选择。（不做决定也是决定。）&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 每件事和每件冒险，都是你的灵魂召来你自己身边的', 'MyCnCart  - 每件事和每件冒险，都是你的灵魂召来你自己身边的', 'MyCnCart  - 每件事和每件冒险，都是你的灵魂召来你自己身边的', '');
-INSERT INTO `mc_blog_description` VALUES ('7', '3', '在宇宙里没有巧合，神在所有的路途上', '你认为是什么将你带到这资料里来的？你怎么会将它拿在你手上的？你认为我不知道我在做什么吗？在宇宙里没有巧合。', '&lt;p&gt;你认为是什么将你带到这资料里来的？你怎么会将它拿在你手上的？你认为我不知道我在做什么吗？在宇宙里没有巧合。我听到了你心的哭喊。我看到了你灵魂的追求。我明白你对真理的渴望有多深。你在痛苦中，也在喜悦中召唤它。你不停不休的恳求我显示我自己，解释我自己，透露我自己。我现在就在这样做，以如此浅白的文字，使你不会误解。以如此简单的语言，让你不会搞混。以如此平凡的语汇，让你不致迷失在冗词中。所以就来吧，问我任何事。任何事！我会设法给你答案。我会用整个宇宙去做这件事。所以注意了！这本书并非我唯一的工具。差得远呢！你可以在问个问题后，就放下这本书。但注意看！注意听！你听到的下一首歌的歌词、你读到的下一篇文章里的资讯、你看的下一部电影的故事情节、你遇见的下一个人无意中说的话，或下一条河、下一片海洋的私语，轻抚你耳朵的下一抹微风――所有这些的设计都是来自我的；所有这些途径都对我开放。如果你肯听我向你说话。如果你邀请我，我会来。那时我会显示给你看，我一直都在那儿。在所有路途上。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 在宇宙里没有巧合，神在所有的路途上', 'MyCnCart  - 在宇宙里没有巧合，神在所有的路途上', 'MyCnCart  - 在宇宙里没有巧合，神在所有的路途上', '');
-INSERT INTO `mc_blog_description` VALUES ('7', '2', '在宇宙里没有巧合，神在所有的路途上', '你认为是什么将你带到这资料里来的？你怎么会将它拿在你手上的？你认为我不知道我在做什么吗？在宇宙里没有巧合。', '&lt;p&gt;你认为是什么将你带到这资料里来的？你怎么会将它拿在你手上的？你认为我不知道我在做什么吗？在宇宙里没有巧合。我听到了你心的哭喊。我看到了你灵魂的追求。我明白你对真理的渴望有多深。你在痛苦中，也在喜悦中召唤它。你不停不休的恳求我显示我自己，解释我自己，透露我自己。我现在就在这样做，以如此浅白的文字，使你不会误解。以如此简单的语言，让你不会搞混。以如此平凡的语汇，让你不致迷失在冗词中。所以就来吧，问我任何事。任何事！我会设法给你答案。我会用整个宇宙去做这件事。所以注意了！这本书并非我唯一的工具。差得远呢！你可以在问个问题后，就放下这本书。但注意看！注意听！你听到的下一首歌的歌词、你读到的下一篇文章里的资讯、你看的下一部电影的故事情节、你遇见的下一个人无意中说的话，或下一条河、下一片海洋的私语，轻抚你耳朵的下一抹微风――所有这些的设计都是来自我的；所有这些途径都对我开放。如果你肯听我向你说话。如果你邀请我，我会来。那时我会显示给你看，我一直都在那儿。在所有路途上。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 在宇宙里没有巧合，神在所有的路途上', 'MyCnCart  - 在宇宙里没有巧合，神在所有的路途上', 'MyCnCart  - 在宇宙里没有巧合，神在所有的路途上', '');
-INSERT INTO `mc_blog_description` VALUES ('7', '1', '在宇宙里没有巧合，神在所有的路途上', '你认为是什么将你带到这资料里来的？你怎么会将它拿在你手上的？你认为我不知道我在做什么吗？在宇宙里没有巧合。', '&lt;p&gt;你认为是什么将你带到这资料里来的？你怎么会将它拿在你手上的？你认为我不知道我在做什么吗？在宇宙里没有巧合。我听到了你心的哭喊。我看到了你灵魂的追求。我明白你对真理的渴望有多深。你在痛苦中，也在喜悦中召唤它。你不停不休的恳求我显示我自己，解释我自己，透露我自己。我现在就在这样做，以如此浅白的文字，使你不会误解。以如此简单的语言，让你不会搞混。以如此平凡的语汇，让你不致迷失在冗词中。所以就来吧，问我任何事。任何事！我会设法给你答案。我会用整个宇宙去做这件事。所以注意了！这本书并非我唯一的工具。差得远呢！你可以在问个问题后，就放下这本书。但注意看！注意听！你听到的下一首歌的歌词、你读到的下一篇文章里的资讯、你看的下一部电影的故事情节、你遇见的下一个人无意中说的话，或下一条河、下一片海洋的私语，轻抚你耳朵的下一抹微风――所有这些的设计都是来自我的；所有这些途径都对我开放。如果你肯听我向你说话。如果你邀请我，我会来。那时我会显示给你看，我一直都在那儿。在所有路途上。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 在宇宙里没有巧合，神在所有的路途上', 'MyCnCart  - 在宇宙里没有巧合，神在所有的路途上', 'MyCnCart  - 在宇宙里没有巧合，神在所有的路途上', '');
-INSERT INTO `mc_blog_description` VALUES ('8', '3', '天堂就是此时此地', '根本没有所谓“上天堂”这一回事。只有你已经在那儿的一种明白。那是一种接受，一种了解，而不是努力追求或奋斗。', '&lt;p&gt;根本没有所谓“上天堂”这一回事。只有你已经在那儿的一种明白。那是一种接受，一种了解，而不是努力追求或奋斗。你无法去你已经在的地方。悟道就是：了解无处可去，无事可做，并且，除了你现在是的那个人之外，你也不必做任何其他人。所以你们所谓的天堂是个乌有之乡（nowhere）。让我们在W与H这两个字之间留一点空间，你就会明白天堂就是此时…此地（now…here）。要知道：没有不正确的途径这种东西――因为在这旅途上，你无法“不到”你去的地方。只不过是速度的问题――只不过是你何时抵达的问题――然而，即使这样也是个幻象，因为并没有“何时”，也没有“之前”或“之后”，只有现在；一个永远的永恒片刻，你在其中经验你自己。人生的重点并非到达任何地方――人生是注意到你已经在那儿，并且一向都在那儿。人生的重点是创造――创造你是谁和是什么，然后去经验它。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 天堂就是此时此地', 'MyCnCart  - 天堂就是此时此地', 'MyCnCart  - 天堂就是此时此地', '');
-INSERT INTO `mc_blog_description` VALUES ('8', '2', '天堂就是此时此地', '根本没有所谓“上天堂”这一回事。只有你已经在那儿的一种明白。那是一种接受，一种了解，而不是努力追求或奋斗。', '&lt;p&gt;根本没有所谓“上天堂”这一回事。只有你已经在那儿的一种明白。那是一种接受，一种了解，而不是努力追求或奋斗。你无法去你已经在的地方。悟道就是：了解无处可去，无事可做，并且，除了你现在是的那个人之外，你也不必做任何其他人。所以你们所谓的天堂是个乌有之乡（nowhere）。让我们在W与H这两个字之间留一点空间，你就会明白天堂就是此时…此地（now…here）。要知道：没有不正确的途径这种东西――因为在这旅途上，你无法“不到”你去的地方。只不过是速度的问题――只不过是你何时抵达的问题――然而，即使这样也是个幻象，因为并没有“何时”，也没有“之前”或“之后”，只有现在；一个永远的永恒片刻，你在其中经验你自己。人生的重点并非到达任何地方――人生是注意到你已经在那儿，并且一向都在那儿。人生的重点是创造――创造你是谁和是什么，然后去经验它。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 天堂就是此时此地', 'MyCnCart  - 天堂就是此时此地', 'MyCnCart  - 天堂就是此时此地', '');
-INSERT INTO `mc_blog_description` VALUES ('8', '1', '天堂就是此时此地', '根本没有所谓“上天堂”这一回事。只有你已经在那儿的一种明白。那是一种接受，一种了解，而不是努力追求或奋斗。', '&lt;p&gt;根本没有所谓“上天堂”这一回事。只有你已经在那儿的一种明白。那是一种接受，一种了解，而不是努力追求或奋斗。你无法去你已经在的地方。悟道就是：了解无处可去，无事可做，并且，除了你现在是的那个人之外，你也不必做任何其他人。所以你们所谓的天堂是个乌有之乡（nowhere）。让我们在W与H这两个字之间留一点空间，你就会明白天堂就是此时…此地（now…here）。要知道：没有不正确的途径这种东西――因为在这旅途上，你无法“不到”你去的地方。只不过是速度的问题――只不过是你何时抵达的问题――然而，即使这样也是个幻象，因为并没有“何时”，也没有“之前”或“之后”，只有现在；一个永远的永恒片刻，你在其中经验你自己。人生的重点并非到达任何地方――人生是注意到你已经在那儿，并且一向都在那儿。人生的重点是创造――创造你是谁和是什么，然后去经验它。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 天堂就是此时此地', 'MyCnCart  - 天堂就是此时此地', 'MyCnCart  - 天堂就是此时此地', '');
-INSERT INTO `mc_blog_description` VALUES ('9', '3', '真正的爱是让人独立', '一旦你上升到神的意识层面，你将了解自己不必为任何别的人负责，而且，虽然希望每个灵魂都过着安适的生活是值得赞扬的，但每个灵魂在每一瞬间都必须选择――都在选择――其本身的命运。', '&lt;p&gt;一旦你上升到神的意识层面，你将了解自己不必为任何别的人负责，而且，虽然希望每个灵魂都过着安适的生活是值得赞扬的，但每个灵魂在每一瞬间都必须选择――都在选择――其本身的命运。让你的爱推你所爱的人进入世界――并且进入完全体验他们是谁的经验里。这样做，你才算是真正爱过人。你的责任是令他们独立。只有当他们醒悟到你是不必要的时候，你才真的是他们的一项赐福。同样的，当你醒悟到你不需要神时，也才是神最快乐的时刻。一位真正的大师并非拥有最多学生的人，而是创造出最多大师的人。而一位真正的神，并非拥有最多佣仆的那一位，却是为最多人服务的，因而使得所有其他人都成为神的那一位。我的喜悦是在你的自由，而非在你的服从。这是神的目标，也是神的荣耀：即，他不再有臣民，并且所有的人都认识到，神并非那不可及的，却是那不可避免的。你快乐的命运是不可避免的。你无法不“得救”。除了不明白此点之外，并没有别的地狱。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 真正的爱是让人独立', 'MyCnCart  - 真正的爱是让人独立', 'MyCnCart  - 真正的爱是让人独立', '');
-INSERT INTO `mc_blog_description` VALUES ('9', '2', '真正的爱是让人独立', '一旦你上升到神的意识层面，你将了解自己不必为任何别的人负责，而且，虽然希望每个灵魂都过着安适的生活是值得赞扬的，但每个灵魂在每一瞬间都必须选择――都在选择――其本身的命运。', '&lt;p&gt;一旦你上升到神的意识层面，你将了解自己不必为任何别的人负责，而且，虽然希望每个灵魂都过着安适的生活是值得赞扬的，但每个灵魂在每一瞬间都必须选择――都在选择――其本身的命运。让你的爱推你所爱的人进入世界――并且进入完全体验他们是谁的经验里。这样做，你才算是真正爱过人。你的责任是令他们独立。只有当他们醒悟到你是不必要的时候，你才真的是他们的一项赐福。同样的，当你醒悟到你不需要神时，也才是神最快乐的时刻。一位真正的大师并非拥有最多学生的人，而是创造出最多大师的人。而一位真正的神，并非拥有最多佣仆的那一位，却是为最多人服务的，因而使得所有其他人都成为神的那一位。我的喜悦是在你的自由，而非在你的服从。这是神的目标，也是神的荣耀：即，他不再有臣民，并且所有的人都认识到，神并非那不可及的，却是那不可避免的。你快乐的命运是不可避免的。你无法不“得救”。除了不明白此点之外，并没有别的地狱。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 真正的爱是让人独立', 'MyCnCart  - 真正的爱是让人独立', 'MyCnCart  - 真正的爱是让人独立', '');
-INSERT INTO `mc_blog_description` VALUES ('9', '1', '真正的爱是让人独立', '一旦你上升到神的意识层面，你将了解自己不必为任何别的人负责，而且，虽然希望每个灵魂都过着安适的生活是值得赞扬的，但每个灵魂在每一瞬间都必须选择――都在选择――其本身的命运。', '&lt;p&gt;一旦你上升到神的意识层面，你将了解自己不必为任何别的人负责，而且，虽然希望每个灵魂都过着安适的生活是值得赞扬的，但每个灵魂在每一瞬间都必须选择――都在选择――其本身的命运。让你的爱推你所爱的人进入世界――并且进入完全体验他们是谁的经验里。这样做，你才算是真正爱过人。你的责任是令他们独立。只有当他们醒悟到你是不必要的时候，你才真的是他们的一项赐福。同样的，当你醒悟到你不需要神时，也才是神最快乐的时刻。一位真正的大师并非拥有最多学生的人，而是创造出最多大师的人。而一位真正的神，并非拥有最多佣仆的那一位，却是为最多人服务的，因而使得所有其他人都成为神的那一位。我的喜悦是在你的自由，而非在你的服从。这是神的目标，也是神的荣耀：即，他不再有臣民，并且所有的人都认识到，神并非那不可及的，却是那不可避免的。你快乐的命运是不可避免的。你无法不“得救”。除了不明白此点之外，并没有别的地狱。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 真正的爱是让人独立', 'MyCnCart  - 真正的爱是让人独立', 'MyCnCart  - 真正的爱是让人独立', '');
-INSERT INTO `mc_blog_description` VALUES ('10', '3', '关系是神圣的，祝福每个关系', '关系是经常具挑战性的；经常召唤你去创造、表现，并且经验你自己之更高又更高的面向，你自己之更宏伟又更宏伟的视野，你自己之越来越崇高的版本。', '&lt;p&gt;关系是经常具挑战性的；经常召唤你去创造、表现，并且经验你自己之更高又更高的面向，你自己之更宏伟又更宏伟的视野，你自己之越来越崇高的版本。唯有透过你与其他人、地及事件的关系，你才能存在于宇宙里！所以，祝福每个关系，将每个都视为特殊，并且都形成了你是谁――并且现在选择做谁。关系的目的是，决定你喜欢看到你自己的哪个部分“显出来”，而非你可以捕获且保留别人的哪个部分。就关系――并且就整个人生――而言，只能有一个目的：去做，并且去决定你真正是谁。由于关系提供了人生最大的机会――的确，其唯一的机会――去创造及制作你对自己之最高观念的经验，所以关系是神圣的。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 关系是神圣的，祝福每个关系', 'MyCnCart  - 关系是神圣的，祝福每个关系', 'MyCnCart  - 关系是神圣的，祝福每个关系', '');
-INSERT INTO `mc_blog_description` VALUES ('10', '2', '关系是神圣的，祝福每个关系', '关系是经常具挑战性的；经常召唤你去创造、表现，并且经验你自己之更高又更高的面向，你自己之更宏伟又更宏伟的视野，你自己之越来越崇高的版本。', '&lt;p&gt;关系是经常具挑战性的；经常召唤你去创造、表现，并且经验你自己之更高又更高的面向，你自己之更宏伟又更宏伟的视野，你自己之越来越崇高的版本。唯有透过你与其他人、地及事件的关系，你才能存在于宇宙里！所以，祝福每个关系，将每个都视为特殊，并且都形成了你是谁――并且现在选择做谁。关系的目的是，决定你喜欢看到你自己的哪个部分“显出来”，而非你可以捕获且保留别人的哪个部分。就关系――并且就整个人生――而言，只能有一个目的：去做，并且去决定你真正是谁。由于关系提供了人生最大的机会――的确，其唯一的机会――去创造及制作你对自己之最高观念的经验，所以关系是神圣的。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 关系是神圣的，祝福每个关系', 'MyCnCart  - 关系是神圣的，祝福每个关系', 'MyCnCart  - 关系是神圣的，祝福每个关系', '');
-INSERT INTO `mc_blog_description` VALUES ('10', '1', '关系是神圣的，祝福每个关系', '关系是经常具挑战性的；经常召唤你去创造、表现，并且经验你自己之更高又更高的面向，你自己之更宏伟又更宏伟的视野，你自己之越来越崇高的版本。', '&lt;p&gt;关系是经常具挑战性的；经常召唤你去创造、表现，并且经验你自己之更高又更高的面向，你自己之更宏伟又更宏伟的视野，你自己之越来越崇高的版本。唯有透过你与其他人、地及事件的关系，你才能存在于宇宙里！所以，祝福每个关系，将每个都视为特殊，并且都形成了你是谁――并且现在选择做谁。关系的目的是，决定你喜欢看到你自己的哪个部分“显出来”，而非你可以捕获且保留别人的哪个部分。就关系――并且就整个人生――而言，只能有一个目的：去做，并且去决定你真正是谁。由于关系提供了人生最大的机会――的确，其唯一的机会――去创造及制作你对自己之最高观念的经验，所以关系是神圣的。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 关系是神圣的，祝福每个关系', 'MyCnCart  - 关系是神圣的，祝福每个关系', 'MyCnCart  - 关系是神圣的，祝福每个关系', '');
-INSERT INTO `mc_blog_description` VALUES ('11', '3', '最有爱心的人就是“自我中心”的人', '当你将关系看作是去创造和制作你对他人之最高观念的经验时，关系便会失败。', '&lt;p&gt;当你将关系看作是去创造和制作你对他人之最高观念的经验时，关系便会失败。让在关系里的每个人都只担心他自己――自己在作谁、做什么和有什么；自己在要什么、要求什么、给与什么；自己在寻求、创造和经验什么，那么，所有的关系都会绰绰有余地满足其目的――及它们的参与者！让在关系里的人别去担心别人，却只、只、只担心自己。最有爱心的人就是“自我中心”的人。如果你无法爱你的自己，你便无法爱别人。在关系中失去自我，是在这种结合中造成大多数痛苦的原因。当你再也看不到彼此为神圣旅程上的神圣灵魂时，你就无法看见在所有关系背后之理由和目的。为了进化的目的，灵魂才进入身体。你是谁就是在与所有其他一切的关系中，你创造自己成为什么。在这过程中，最重要的因素就是你的个人关系。你的第一个关系必然是与你自己的关系。你必须先学会尊重、珍惜，并且爱你自己。在你能视别人为有价值的人之前，你首先必须视你自己为有价值的。在你能视别人为有福的之前，你首先必须视你自己为有福的。在你能承认别人的神圣性之前，你首先必须认识你自己为神圣的。老师们全都带来同样的讯息：并非“我比你神圣”，却是“你与我一样神圣”。因此我告诉你：现在并且永远以你自己为中心。你的救赎并不能在别人的行为（action）中找到，只能在你的反应（re-action）中找到。在与别人的互动过程里，第一个问题是：现在我是谁，还有，与那个相关的，我想要作谁？&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 最有爱心的人就是“自我中心”的人', 'MyCnCart  - 最有爱心的人就是“自我中心”的人', 'MyCnCart  - 最有爱心的人就是“自我中心”的人', '');
-INSERT INTO `mc_blog_description` VALUES ('11', '2', '最有爱心的人就是“自我中心”的人', '当你将关系看作是去创造和制作你对他人之最高观念的经验时，关系便会失败。', '&lt;p&gt;当你将关系看作是去创造和制作你对他人之最高观念的经验时，关系便会失败。让在关系里的每个人都只担心他自己――自己在作谁、做什么和有什么；自己在要什么、要求什么、给与什么；自己在寻求、创造和经验什么，那么，所有的关系都会绰绰有余地满足其目的――及它们的参与者！让在关系里的人别去担心别人，却只、只、只担心自己。最有爱心的人就是“自我中心”的人。如果你无法爱你的自己，你便无法爱别人。在关系中失去自我，是在这种结合中造成大多数痛苦的原因。当你再也看不到彼此为神圣旅程上的神圣灵魂时，你就无法看见在所有关系背后之理由和目的。为了进化的目的，灵魂才进入身体。你是谁就是在与所有其他一切的关系中，你创造自己成为什么。在这过程中，最重要的因素就是你的个人关系。你的第一个关系必然是与你自己的关系。你必须先学会尊重、珍惜，并且爱你自己。在你能视别人为有价值的人之前，你首先必须视你自己为有价值的。在你能视别人为有福的之前，你首先必须视你自己为有福的。在你能承认别人的神圣性之前，你首先必须认识你自己为神圣的。老师们全都带来同样的讯息：并非“我比你神圣”，却是“你与我一样神圣”。因此我告诉你：现在并且永远以你自己为中心。你的救赎并不能在别人的行为（action）中找到，只能在你的反应（re-action）中找到。在与别人的互动过程里，第一个问题是：现在我是谁，还有，与那个相关的，我想要作谁？&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 最有爱心的人就是“自我中心”的人', 'MyCnCart  - 最有爱心的人就是“自我中心”的人', 'MyCnCart  - 最有爱心的人就是“自我中心”的人', '');
-INSERT INTO `mc_blog_description` VALUES ('11', '1', '最有爱心的人就是“自我中心”的人', '当你将关系看作是去创造和制作你对他人之最高观念的经验时，关系便会失败。', '&lt;p&gt;当你将关系看作是去创造和制作你对他人之最高观念的经验时，关系便会失败。让在关系里的每个人都只担心他自己――自己在作谁、做什么和有什么；自己在要什么、要求什么、给与什么；自己在寻求、创造和经验什么，那么，所有的关系都会绰绰有余地满足其目的――及它们的参与者！让在关系里的人别去担心别人，却只、只、只担心自己。最有爱心的人就是“自我中心”的人。如果你无法爱你的自己，你便无法爱别人。在关系中失去自我，是在这种结合中造成大多数痛苦的原因。当你再也看不到彼此为神圣旅程上的神圣灵魂时，你就无法看见在所有关系背后之理由和目的。为了进化的目的，灵魂才进入身体。你是谁就是在与所有其他一切的关系中，你创造自己成为什么。在这过程中，最重要的因素就是你的个人关系。你的第一个关系必然是与你自己的关系。你必须先学会尊重、珍惜，并且爱你自己。在你能视别人为有价值的人之前，你首先必须视你自己为有价值的。在你能视别人为有福的之前，你首先必须视你自己为有福的。在你能承认别人的神圣性之前，你首先必须认识你自己为神圣的。老师们全都带来同样的讯息：并非“我比你神圣”，却是“你与我一样神圣”。因此我告诉你：现在并且永远以你自己为中心。你的救赎并不能在别人的行为（action）中找到，只能在你的反应（re-action）中找到。在与别人的互动过程里，第一个问题是：现在我是谁，还有，与那个相关的，我想要作谁？&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 最有爱心的人就是“自我中心”的人', 'MyCnCart  - 最有爱心的人就是“自我中心”的人', 'MyCnCart  - 最有爱心的人就是“自我中心”的人', '');
-INSERT INTO `mc_blog_description` VALUES ('12', '3', '做神的信使，唤醒每一个人', '灵魂的工作是唤醒你自己。神的工作是唤醒每一个人。', '&lt;p&gt;灵魂的工作是唤醒你自己。神的工作是唤醒每一个人。你能以两种方式做到此点――藉由提醒他们他们是谁（但这非常困难，因为他们不会相信你），或藉由记得你是谁（这容易得多，因为你并不需要他们的相信，只需要你自己的）。经常展现此点终究会提醒别人他们是谁，因为他们会在你身上看到他们自己。许多大师曾被派到地球来展示永恒的真理。你便是这样的一个信使。――你们全都是特殊的……宣告自己为一个属神的人需要很大的勇气。你愿意吗？你的心是否渴望说出关于我的真理？你是否愿意忍受你的人类同胞的耻笑？你是否准备好放弃世上的荣耀，为了使灵魂的更大荣耀得以完全的实现？去与他人分享永恒的真理……并非出于获得光荣的需要，却是出于你内心最深的愿望，去终止别人的痛苦和受罪；去带来喜悦和快乐，以及助力和治愈；去重新让别人与你一向体验到的与神的合伙之感连结。我选择了你做我的信使。你和许多其他人。因为现在，在即刻的眼前，世界将需要许多号角来吹出清亮的召唤。世界将需要许多声音，来说出百千万人渴望的真理和治愈的话语。世界将需要许多心结合在一起，来做灵魂的工作，并且准备去做神的工作。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 做神的信使，唤醒每一个人', 'MyCnCart  - 做神的信使，唤醒每一个人', 'MyCnCart  - 做神的信使，唤醒每一个人', '');
-INSERT INTO `mc_blog_description` VALUES ('12', '2', '做神的信使，唤醒每一个人', '灵魂的工作是唤醒你自己。神的工作是唤醒每一个人。', '&lt;p&gt;灵魂的工作是唤醒你自己。神的工作是唤醒每一个人。你能以两种方式做到此点――藉由提醒他们他们是谁（但这非常困难，因为他们不会相信你），或藉由记得你是谁（这容易得多，因为你并不需要他们的相信，只需要你自己的）。经常展现此点终究会提醒别人他们是谁，因为他们会在你身上看到他们自己。许多大师曾被派到地球来展示永恒的真理。你便是这样的一个信使。――你们全都是特殊的……宣告自己为一个属神的人需要很大的勇气。你愿意吗？你的心是否渴望说出关于我的真理？你是否愿意忍受你的人类同胞的耻笑？你是否准备好放弃世上的荣耀，为了使灵魂的更大荣耀得以完全的实现？去与他人分享永恒的真理……并非出于获得光荣的需要，却是出于你内心最深的愿望，去终止别人的痛苦和受罪；去带来喜悦和快乐，以及助力和治愈；去重新让别人与你一向体验到的与神的合伙之感连结。我选择了你做我的信使。你和许多其他人。因为现在，在即刻的眼前，世界将需要许多号角来吹出清亮的召唤。世界将需要许多声音，来说出百千万人渴望的真理和治愈的话语。世界将需要许多心结合在一起，来做灵魂的工作，并且准备去做神的工作。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 做神的信使，唤醒每一个人', 'MyCnCart  - 做神的信使，唤醒每一个人', 'MyCnCart  - 做神的信使，唤醒每一个人', '');
-INSERT INTO `mc_blog_description` VALUES ('12', '1', '做神的信使，唤醒每一个人', '灵魂的工作是唤醒你自己。神的工作是唤醒每一个人。', '&lt;p&gt;灵魂的工作是唤醒你自己。神的工作是唤醒每一个人。你能以两种方式做到此点――藉由提醒他们他们是谁（但这非常困难，因为他们不会相信你），或藉由记得你是谁（这容易得多，因为你并不需要他们的相信，只需要你自己的）。经常展现此点终究会提醒别人他们是谁，因为他们会在你身上看到他们自己。许多大师曾被派到地球来展示永恒的真理。你便是这样的一个信使。――你们全都是特殊的……宣告自己为一个属神的人需要很大的勇气。你愿意吗？你的心是否渴望说出关于我的真理？你是否愿意忍受你的人类同胞的耻笑？你是否准备好放弃世上的荣耀，为了使灵魂的更大荣耀得以完全的实现？去与他人分享永恒的真理……并非出于获得光荣的需要，却是出于你内心最深的愿望，去终止别人的痛苦和受罪；去带来喜悦和快乐，以及助力和治愈；去重新让别人与你一向体验到的与神的合伙之感连结。我选择了你做我的信使。你和许多其他人。因为现在，在即刻的眼前，世界将需要许多号角来吹出清亮的召唤。世界将需要许多声音，来说出百千万人渴望的真理和治愈的话语。世界将需要许多心结合在一起，来做灵魂的工作，并且准备去做神的工作。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 做神的信使，唤醒每一个人', 'MyCnCart  - 做神的信使，唤醒每一个人', 'MyCnCart  - 做神的信使，唤醒每一个人', '');
-INSERT INTO `mc_blog_description` VALUES ('13', '3', '灵魂只关注你存在的状态', '人生的讽刺是，一旦世俗的物品和世俗的成功不再为你所关心，它们流向你的路便打开了。记住，你无法拥有你想要的东西，但你可以经验你所拥有的不论什么东西。', '&lt;p&gt;做事是身体的一个机能。存在是灵魂的一个机能。你的灵魂不在乎你做什么维生――而当你的人生过完了时，你也不会在意。你的灵魂只在乎，当你在做不论你做的什么时，你是什么。灵魂追求的是一种存在的状态，而非一种做事的状态。“是”吸引“是”，而产生经验。灵魂寻求神，但它寻求的这个我是非常复杂，非常多重次元、多种感觉、多重面向的。在寻求是我的当儿，灵魂在它前面有个宏大的工作；一个可自其中挑选的庞大的“是”之菜单。然后产生正确而完美的条件，在其中创造对那存在状态的经验。所以，真实的事是，没有一件发生在你身上或经由你发生的事，不是为了你自己的最高善的。现在，在这一刻，你的灵魂又创造了机会让你去是、做，并且拥有认识你真的是谁所需的东西。你的灵魂带你到你现在正在读的字句――正如它以前曾带你到智慧和真理的字句。你现在要做什么？你选择要是什么？你的灵魂怀着兴趣等着、看着，正如它以前做过许多次的。我并不关心你世俗的成功，只有你关心。真正的大师们是那些选择去创造一个人生，而非维持一个生活的人。从某种存在状态会跃出一个如此丰富、如此圆满、如此宏伟，而且如此有益的人生，以致世俗的物品和世俗的成功将不再为你所关心了。人生的讽刺是，一旦世俗的物品和世俗的成功不再为你所关心，它们流向你的路便打开了。记住，你无法拥有你想要的东西，但你可以经验你所拥有的不论什么东西。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 灵魂只关注你存在的状态', 'MyCnCart  - 灵魂只关注你存在的状态', 'MyCnCart  - 灵魂只关注你存在的状态', '');
-INSERT INTO `mc_blog_description` VALUES ('13', '2', '灵魂只关注你存在的状态', '人生的讽刺是，一旦世俗的物品和世俗的成功不再为你所关心，它们流向你的路便打开了。记住，你无法拥有你想要的东西，但你可以经验你所拥有的不论什么东西。', '&lt;p&gt;做事是身体的一个机能。存在是灵魂的一个机能。你的灵魂不在乎你做什么维生――而当你的人生过完了时，你也不会在意。你的灵魂只在乎，当你在做不论你做的什么时，你是什么。灵魂追求的是一种存在的状态，而非一种做事的状态。“是”吸引“是”，而产生经验。灵魂寻求神，但它寻求的这个我是非常复杂，非常多重次元、多种感觉、多重面向的。在寻求是我的当儿，灵魂在它前面有个宏大的工作；一个可自其中挑选的庞大的“是”之菜单。然后产生正确而完美的条件，在其中创造对那存在状态的经验。所以，真实的事是，没有一件发生在你身上或经由你发生的事，不是为了你自己的最高善的。现在，在这一刻，你的灵魂又创造了机会让你去是、做，并且拥有认识你真的是谁所需的东西。你的灵魂带你到你现在正在读的字句――正如它以前曾带你到智慧和真理的字句。你现在要做什么？你选择要是什么？你的灵魂怀着兴趣等着、看着，正如它以前做过许多次的。我并不关心你世俗的成功，只有你关心。真正的大师们是那些选择去创造一个人生，而非维持一个生活的人。从某种存在状态会跃出一个如此丰富、如此圆满、如此宏伟，而且如此有益的人生，以致世俗的物品和世俗的成功将不再为你所关心了。人生的讽刺是，一旦世俗的物品和世俗的成功不再为你所关心，它们流向你的路便打开了。记住，你无法拥有你想要的东西，但你可以经验你所拥有的不论什么东西。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 灵魂只关注你存在的状态', 'MyCnCart  - 灵魂只关注你存在的状态', 'MyCnCart  - 灵魂只关注你存在的状态', '');
-INSERT INTO `mc_blog_description` VALUES ('13', '1', '灵魂只关注你存在的状态', '人生的讽刺是，一旦世俗的物品和世俗的成功不再为你所关心，它们流向你的路便打开了。记住，你无法拥有你想要的东西，但你可以经验你所拥有的不论什么东西。', '&lt;p&gt;做事是身体的一个机能。存在是灵魂的一个机能。你的灵魂不在乎你做什么维生――而当你的人生过完了时，你也不会在意。你的灵魂只在乎，当你在做不论你做的什么时，你是什么。灵魂追求的是一种存在的状态，而非一种做事的状态。“是”吸引“是”，而产生经验。灵魂寻求神，但它寻求的这个我是非常复杂，非常多重次元、多种感觉、多重面向的。在寻求是我的当儿，灵魂在它前面有个宏大的工作；一个可自其中挑选的庞大的“是”之菜单。然后产生正确而完美的条件，在其中创造对那存在状态的经验。所以，真实的事是，没有一件发生在你身上或经由你发生的事，不是为了你自己的最高善的。现在，在这一刻，你的灵魂又创造了机会让你去是、做，并且拥有认识你真的是谁所需的东西。你的灵魂带你到你现在正在读的字句――正如它以前曾带你到智慧和真理的字句。你现在要做什么？你选择要是什么？你的灵魂怀着兴趣等着、看着，正如它以前做过许多次的。我并不关心你世俗的成功，只有你关心。真正的大师们是那些选择去创造一个人生，而非维持一个生活的人。从某种存在状态会跃出一个如此丰富、如此圆满、如此宏伟，而且如此有益的人生，以致世俗的物品和世俗的成功将不再为你所关心了。人生的讽刺是，一旦世俗的物品和世俗的成功不再为你所关心，它们流向你的路便打开了。记住，你无法拥有你想要的东西，但你可以经验你所拥有的不论什么东西。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 灵魂只关注你存在的状态', 'MyCnCart  - 灵魂只关注你存在的状态', 'MyCnCart  - 灵魂只关注你存在的状态', '');
-INSERT INTO `mc_blog_description` VALUES ('14', '3', '平衡身、心、灵----三位一体，即神成肉身', '当身、心和灵在和谐与统一中一同创造时，神成肉身。于是，灵魂真的在其自己的经验中认识它自己。于是，天堂真的欢欣鼓舞。', '&lt;p&gt;不要轻视你身体正在做的事。它是重要的。但却非以你所想的方式。身体的行动本意是反映一种存在状态，而非想达到一种存在状态的企图。“你的人生并不是关于你的身体在做什么”这个声明的意思。然而，真实的，你的身体在做什么，却是你的人生是关乎什么的一个反映。你在这星球上并不是要以你的身体生产任何东西。你在这个星球上是要以你的灵魂生产一些东西。你的身体只不过单纯的是你灵魂的工具，你的头脑是令身体做事的力量。所以，你在此所有的是个有力的工具，用来创造灵魂之所欲。&lt;br&gt;&lt;br&gt;发现生命和身体毫无关系，可能创造出另一方面的一个不平衡。虽然一开始实体的行为是――仿佛身体是所有的一切，现在它的行为却象是身体根本不重要。当然，这并不是真的――如果实体很快的忆起来的话。&lt;br&gt;&lt;br&gt;你是个三部分的存在，由身、心和灵构成。你将永远是个三部分的存在，不只当你活在地球上时。在死亡时，身和心并没被丢掉，是身体改变了形式，心智（不可与大脑混淆）也仍与你同行，加入灵和身，成为一个三次元或三面的能量团。事实上，你们全是一个能量，却有三个分别的特征。身与心一起并不需要做任何事去控制灵魂――因为灵魂是全然没有“需要”的（不象身和心都为“需要”所羁绊），因而容许身和心意志照自己的意思而行。服从并非创造，因此永远不能产生救赎。灵魂永远不会凌越身体或心智。我造你们为一个三合一的生灵。你是三个存在合而为一的。按照我的形象造成的。自己的三个面向彼此并非不平等的。每个都有个机能，但没有一个机能比其他的机能更伟大，并且也没有任何一个机能能实际上在另一个之前。灵魂孕育，心智创造，身体体验。所有的都以完全平等的方式彼此相连。灵魂的机能是指明其欲望，并非强加其欲望。头脑的机能是由其选择的余地中选择。身体的机能是表现出那选择。当身、心和灵在和谐与统一中一同创造时，神成肉身。于是，灵魂真的在其自己的经验中认识它自己。于是，天堂真的欢欣鼓舞。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 平衡身、心、灵----三位一体，即神成肉身', 'MyCnCart  - 平衡身、心、灵----三位一体，即神成肉身', 'MyCnCart  - 平衡身、心、灵----三位一体，即神成肉身', '');
-INSERT INTO `mc_blog_description` VALUES ('14', '2', '平衡身、心、灵----三位一体，即神成肉身', '当身、心和灵在和谐与统一中一同创造时，神成肉身。于是，灵魂真的在其自己的经验中认识它自己。于是，天堂真的欢欣鼓舞。', '&lt;p&gt;不要轻视你身体正在做的事。它是重要的。但却非以你所想的方式。身体的行动本意是反映一种存在状态，而非想达到一种存在状态的企图。“你的人生并不是关于你的身体在做什么”这个声明的意思。然而，真实的，你的身体在做什么，却是你的人生是关乎什么的一个反映。你在这星球上并不是要以你的身体生产任何东西。你在这个星球上是要以你的灵魂生产一些东西。你的身体只不过单纯的是你灵魂的工具，你的头脑是令身体做事的力量。所以，你在此所有的是个有力的工具，用来创造灵魂之所欲。&lt;br&gt;&lt;br&gt;发现生命和身体毫无关系，可能创造出另一方面的一个不平衡。虽然一开始实体的行为是――仿佛身体是所有的一切，现在它的行为却象是身体根本不重要。当然，这并不是真的――如果实体很快的忆起来的话。&lt;br&gt;&lt;br&gt;你是个三部分的存在，由身、心和灵构成。你将永远是个三部分的存在，不只当你活在地球上时。在死亡时，身和心并没被丢掉，是身体改变了形式，心智（不可与大脑混淆）也仍与你同行，加入灵和身，成为一个三次元或三面的能量团。事实上，你们全是一个能量，却有三个分别的特征。身与心一起并不需要做任何事去控制灵魂――因为灵魂是全然没有“需要”的（不象身和心都为“需要”所羁绊），因而容许身和心意志照自己的意思而行。服从并非创造，因此永远不能产生救赎。灵魂永远不会凌越身体或心智。我造你们为一个三合一的生灵。你是三个存在合而为一的。按照我的形象造成的。自己的三个面向彼此并非不平等的。每个都有个机能，但没有一个机能比其他的机能更伟大，并且也没有任何一个机能能实际上在另一个之前。灵魂孕育，心智创造，身体体验。所有的都以完全平等的方式彼此相连。灵魂的机能是指明其欲望，并非强加其欲望。头脑的机能是由其选择的余地中选择。身体的机能是表现出那选择。当身、心和灵在和谐与统一中一同创造时，神成肉身。于是，灵魂真的在其自己的经验中认识它自己。于是，天堂真的欢欣鼓舞。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 平衡身、心、灵----三位一体，即神成肉身', 'MyCnCart  - 平衡身、心、灵----三位一体，即神成肉身', 'MyCnCart  - 平衡身、心、灵----三位一体，即神成肉身', '');
-INSERT INTO `mc_blog_description` VALUES ('14', '1', '平衡身、心、灵----三位一体，即神成肉身', '当身、心和灵在和谐与统一中一同创造时，神成肉身。于是，灵魂真的在其自己的经验中认识它自己。于是，天堂真的欢欣鼓舞。', '&lt;p&gt;不要轻视你身体正在做的事。它是重要的。但却非以你所想的方式。身体的行动本意是反映一种存在状态，而非想达到一种存在状态的企图。“你的人生并不是关于你的身体在做什么”这个声明的意思。然而，真实的，你的身体在做什么，却是你的人生是关乎什么的一个反映。你在这星球上并不是要以你的身体生产任何东西。你在这个星球上是要以你的灵魂生产一些东西。你的身体只不过单纯的是你灵魂的工具，你的头脑是令身体做事的力量。所以，你在此所有的是个有力的工具，用来创造灵魂之所欲。&lt;br&gt;&lt;br&gt;发现生命和身体毫无关系，可能创造出另一方面的一个不平衡。虽然一开始实体的行为是――仿佛身体是所有的一切，现在它的行为却象是身体根本不重要。当然，这并不是真的――如果实体很快的忆起来的话。&lt;br&gt;&lt;br&gt;你是个三部分的存在，由身、心和灵构成。你将永远是个三部分的存在，不只当你活在地球上时。在死亡时，身和心并没被丢掉，是身体改变了形式，心智（不可与大脑混淆）也仍与你同行，加入灵和身，成为一个三次元或三面的能量团。事实上，你们全是一个能量，却有三个分别的特征。身与心一起并不需要做任何事去控制灵魂――因为灵魂是全然没有“需要”的（不象身和心都为“需要”所羁绊），因而容许身和心意志照自己的意思而行。服从并非创造，因此永远不能产生救赎。灵魂永远不会凌越身体或心智。我造你们为一个三合一的生灵。你是三个存在合而为一的。按照我的形象造成的。自己的三个面向彼此并非不平等的。每个都有个机能，但没有一个机能比其他的机能更伟大，并且也没有任何一个机能能实际上在另一个之前。灵魂孕育，心智创造，身体体验。所有的都以完全平等的方式彼此相连。灵魂的机能是指明其欲望，并非强加其欲望。头脑的机能是由其选择的余地中选择。身体的机能是表现出那选择。当身、心和灵在和谐与统一中一同创造时，神成肉身。于是，灵魂真的在其自己的经验中认识它自己。于是，天堂真的欢欣鼓舞。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 平衡身、心、灵----三位一体，即神成肉身', 'MyCnCart  - 平衡身、心、灵----三位一体，即神成肉身', 'MyCnCart  - 平衡身、心、灵----三位一体，即神成肉身', '');
-INSERT INTO `mc_blog_description` VALUES ('15', '3', '你是神的身体', '现在我要解释给你听那终极的神秘：你们和我的精确而真实的关系。你们是我的身体。正如你的身体相对于你的心智和灵魂的关系，你们相对于我的心智和灵魂的关系也是一样的。所以：我所经验的每样事，是我透过你们来经验的。正如你的身心和灵是一体的，我的也是一样。', '&lt;p&gt;现在我要解释给你听那终极的神秘：你们和我的精确而真实的关系。你们是我的身体。正如你的身体相对于你的心智和灵魂的关系，你们相对于我的心智和灵魂的关系也是一样的。所以：我所经验的每样事，是我透过你们来经验的。正如你的身心和灵是一体的，我的也是一样。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 你是神的身体', 'MyCnCart  - 你是神的身体', 'MyCnCart  - 你是神的身体', '');
-INSERT INTO `mc_blog_description` VALUES ('15', '2', '你是神的身体', '现在我要解释给你听那终极的神秘：你们和我的精确而真实的关系。你们是我的身体。正如你的身体相对于你的心智和灵魂的关系，你们相对于我的心智和灵魂的关系也是一样的。所以：我所经验的每样事，是我透过你们来经验的。正如你的身心和灵是一体的，我的也是一样。', '&lt;p&gt;现在我要解释给你听那终极的神秘：你们和我的精确而真实的关系。你们是我的身体。正如你的身体相对于你的心智和灵魂的关系，你们相对于我的心智和灵魂的关系也是一样的。所以：我所经验的每样事，是我透过你们来经验的。正如你的身心和灵是一体的，我的也是一样。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 你是神的身体', 'MyCnCart  - 你是神的身体', 'MyCnCart  - 你是神的身体', '');
-INSERT INTO `mc_blog_description` VALUES ('15', '1', '你是神的身体', '现在我要解释给你听那终极的神秘：你们和我的精确而真实的关系。你们是我的身体。正如你的身体相对于你的心智和灵魂的关系，你们相对于我的心智和灵魂的关系也是一样的。所以：我所经验的每样事，是我透过你们来经验的。正如你的身心和灵是一体的，我的也是一样。', '&lt;p&gt;现在我要解释给你听那终极的神秘：你们和我的精确而真实的关系。你们是我的身体。正如你的身体相对于你的心智和灵魂的关系，你们相对于我的心智和灵魂的关系也是一样的。所以：我所经验的每样事，是我透过你们来经验的。正如你的身心和灵是一体的，我的也是一样。&lt;br&gt;&lt;/p&gt;', 'MyCnCart  - 你是神的身体', 'MyCnCart  - 你是神的身体', 'MyCnCart  - 你是神的身体', '');
-INSERT INTO `mc_blog_description` VALUES ('16', '3', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '', '&lt;p&gt;别成为你曾经想要成为的人，要成为你现在希望成为的人&lt;br&gt;&lt;/p&gt;&lt;p&gt;这是你生活中最大的区别。到目前为止，你一直都在努力“成为”你曾经想要成为的人。从现在开始，你将会成为你最崇高愿望的产物。&lt;/p&gt;&lt;p&gt;改变并非为了让神佛接受你。在神佛的眼里，现在的你完全是可以接受的。你改变，只是因为你选择改变，你选择去实现你对自我的新期许。&lt;/p&gt;', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '');
-INSERT INTO `mc_blog_description` VALUES ('16', '1', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '', '&lt;p&gt;别成为你曾经想要成为的人，要成为你现在希望成为的人&lt;br&gt;&lt;/p&gt;&lt;p&gt;这是你生活中最大的区别。到目前为止，你一直都在努力“成为”你曾经想要成为的人。从现在开始，你将会成为你最崇高愿望的产物。&lt;/p&gt;&lt;p&gt;改变并非为了让神佛接受你。在神佛的眼里，现在的你完全是可以接受的。你改变，只是因为你选择改变，你选择去实现你对自我的新期许。&lt;/p&gt;', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '');
-INSERT INTO `mc_blog_description` VALUES ('16', '2', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '', '&lt;p&gt;别成为你曾经想要成为的人，要成为你现在希望成为的人&lt;br&gt;&lt;/p&gt;&lt;p&gt;这是你生活中最大的区别。到目前为止，你一直都在努力“成为”你曾经想要成为的人。从现在开始，你将会成为你最崇高愿望的产物。&lt;/p&gt;&lt;p&gt;改变并非为了让神佛接受你。在神佛的眼里，现在的你完全是可以接受的。你改变，只是因为你选择改变，你选择去实现你对自我的新期许。&lt;/p&gt;', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '别成为你曾经想要成为的人，要成为你现在希望成为的人', '');
-INSERT INTO `mc_blog_description` VALUES ('17', '1', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '', '&lt;p&gt;不可原谅的东西是不存在的。没有任何罪行严重到我会拒绝原谅你。哪怕人类最严厉的宗教也传播这个道理。&lt;/p&gt;&lt;p&gt;这些宗教也许在救赎的方式上有争议，也许在救赎的道路上有争议，但他们全都同意的是，这样的方式和道路是有的。&lt;/p&gt;&lt;p&gt;在你成为死亡的时刻，你自然会得到补赎的机会。&lt;/p&gt;&lt;p&gt;所谓补赎，就是意识到你和所有其他人是一体。那就是明白你和万物——包括我——是合一的。&lt;/p&gt;&lt;p&gt;死亡之后，当你和你的肉体分开之后，你将会立刻拥有——忆起——这种经验。&lt;/p&gt;&lt;p&gt;所有灵魂都以最有意思的方式经验到他们的“合一”。它们将得到机会再次经历他们刚完成的人生的每个时刻——不仅是从它们的角度去经验它，而且也从所有受该时刻影响的人角度去经验它。他们将会重新思考每个思维，重新说出每句话，重新做出每件事，去经验那对每个受牵涉的人的影响，仿佛它们是别人一样——而它们确实就是别人。&lt;/p&gt;&lt;p&gt;它们将会经验地认识到它们的身份。在这个时刻，“我们所有人是一体”这句话不再是概念，它将会变成经验。&lt;/p&gt;&lt;p&gt;让你们承受无尽的折磨和诅咒的地方并不存在，那是你们的神学理论杜撰出来的。但你们——你们所有人——将会经验到你们的选择和决定造成的影响、后果和结局。然而这关乎成长，而非“正义”。这是进化的过程，而非神佛的“惩罚”。&lt;/p&gt;&lt;p&gt;在你进行“人生回顾”——有些人这么称呼它——过程中，你不会受到任何人的审判，而只是有机会去经验你的整体在生活的每时每刻所经验到的东西，而非你那寄居在当前肉身中的个体所经验到的东西。&lt;/p&gt;&lt;p&gt;你经验到的不是痛苦，而是觉悟。你将会深深地理解、深深地省悟每个时刻的总体和它蕴含的意义。然而这不会令你痛苦，这会让你进入光明的境界。&lt;br&gt;&lt;/p&gt;', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '');
-INSERT INTO `mc_blog_description` VALUES ('17', '3', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '', '&lt;p&gt;不可原谅的东西是不存在的。没有任何罪行严重到我会拒绝原谅你。哪怕人类最严厉的宗教也传播这个道理。&lt;/p&gt;&lt;p&gt;这些宗教也许在救赎的方式上有争议，也许在救赎的道路上有争议，但他们全都同意的是，这样的方式和道路是有的。&lt;/p&gt;&lt;p&gt;在你成为死亡的时刻，你自然会得到补赎的机会。&lt;/p&gt;&lt;p&gt;所谓补赎，就是意识到你和所有其他人是一体。那就是明白你和万物——包括我——是合一的。&lt;/p&gt;&lt;p&gt;死亡之后，当你和你的肉体分开之后，你将会立刻拥有——忆起——这种经验。&lt;/p&gt;&lt;p&gt;所有灵魂都以最有意思的方式经验到他们的“合一”。它们将得到机会再次经历他们刚完成的人生的每个时刻——不仅是从它们的角度去经验它，而且也从所有受该时刻影响的人角度去经验它。他们将会重新思考每个思维，重新说出每句话，重新做出每件事，去经验那对每个受牵涉的人的影响，仿佛它们是别人一样——而它们确实就是别人。&lt;/p&gt;&lt;p&gt;它们将会经验地认识到它们的身份。在这个时刻，“我们所有人是一体”这句话不再是概念，它将会变成经验。&lt;/p&gt;&lt;p&gt;让你们承受无尽的折磨和诅咒的地方并不存在，那是你们的神学理论杜撰出来的。但你们——你们所有人——将会经验到你们的选择和决定造成的影响、后果和结局。然而这关乎成长，而非“正义”。这是进化的过程，而非神佛的“惩罚”。&lt;/p&gt;&lt;p&gt;在你进行“人生回顾”——有些人这么称呼它——过程中，你不会受到任何人的审判，而只是有机会去经验你的整体在生活的每时每刻所经验到的东西，而非你那寄居在当前肉身中的个体所经验到的东西。&lt;/p&gt;&lt;p&gt;你经验到的不是痛苦，而是觉悟。你将会深深地理解、深深地省悟每个时刻的总体和它蕴含的意义。然而这不会令你痛苦，这会让你进入光明的境界。&lt;br&gt;&lt;/p&gt;', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '如果我犯下了不可原谅的大错，我如何能够原谅自己？', '');
 
 -- ----------------------------
 -- Table structure for mc_blog_product
@@ -643,18 +555,6 @@ CREATE TABLE `mc_blog_product` (
 -- ----------------------------
 -- Records of mc_blog_product
 -- ----------------------------
-INSERT INTO `mc_blog_product` VALUES ('1', '28');
-INSERT INTO `mc_blog_product` VALUES ('1', '41');
-INSERT INTO `mc_blog_product` VALUES ('2', '48');
-INSERT INTO `mc_blog_product` VALUES ('3', '41');
-INSERT INTO `mc_blog_product` VALUES ('3', '47');
-INSERT INTO `mc_blog_product` VALUES ('15', '29');
-INSERT INTO `mc_blog_product` VALUES ('15', '30');
-INSERT INTO `mc_blog_product` VALUES ('15', '31');
-INSERT INTO `mc_blog_product` VALUES ('16', '33');
-INSERT INTO `mc_blog_product` VALUES ('16', '41');
-INSERT INTO `mc_blog_product` VALUES ('16', '45');
-INSERT INTO `mc_blog_product` VALUES ('16', '46');
 
 -- ----------------------------
 -- Table structure for mc_blog_related
@@ -669,12 +569,6 @@ CREATE TABLE `mc_blog_related` (
 -- ----------------------------
 -- Records of mc_blog_related
 -- ----------------------------
-INSERT INTO `mc_blog_related` VALUES ('1', '2');
-INSERT INTO `mc_blog_related` VALUES ('1', '3');
-INSERT INTO `mc_blog_related` VALUES ('1', '5');
-INSERT INTO `mc_blog_related` VALUES ('3', '1');
-INSERT INTO `mc_blog_related` VALUES ('3', '3');
-INSERT INTO `mc_blog_related` VALUES ('3', '5');
 
 -- ----------------------------
 -- Table structure for mc_blog_to_blog_category
@@ -690,30 +584,6 @@ CREATE TABLE `mc_blog_to_blog_category` (
 -- ----------------------------
 -- Records of mc_blog_to_blog_category
 -- ----------------------------
-INSERT INTO `mc_blog_to_blog_category` VALUES ('1', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('1', '5');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('2', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('2', '2');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('2', '3');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('2', '4');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('3', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('3', '6');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('4', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('4', '4');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('5', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('5', '5');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('6', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('7', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('8', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('9', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('10', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('11', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('12', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('13', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('14', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('15', '1');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('16', '9');
-INSERT INTO `mc_blog_to_blog_category` VALUES ('17', '9');
 
 -- ----------------------------
 -- Table structure for mc_blog_to_layout
@@ -729,23 +599,6 @@ CREATE TABLE `mc_blog_to_layout` (
 -- ----------------------------
 -- Records of mc_blog_to_layout
 -- ----------------------------
-INSERT INTO `mc_blog_to_layout` VALUES ('1', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('2', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('3', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('4', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('5', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('6', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('7', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('8', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('9', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('10', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('11', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('12', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('13', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('14', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('15', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('16', '0', '0');
-INSERT INTO `mc_blog_to_layout` VALUES ('17', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_blog_to_store
@@ -760,23 +613,6 @@ CREATE TABLE `mc_blog_to_store` (
 -- ----------------------------
 -- Records of mc_blog_to_store
 -- ----------------------------
-INSERT INTO `mc_blog_to_store` VALUES ('1', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('2', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('3', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('4', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('5', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('6', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('7', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('8', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('9', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('10', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('11', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('12', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('13', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('14', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('15', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('16', '0');
-INSERT INTO `mc_blog_to_store` VALUES ('17', '0');
 
 -- ----------------------------
 -- Table structure for mc_cart
@@ -794,11 +630,17 @@ CREATE TABLE `mc_cart` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`cart_id`),
   KEY `cart_id` (`api_id`,`customer_id`,`session_id`,`product_id`,`recurring_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_cart
 -- ----------------------------
+INSERT INTO `mc_cart` VALUES ('9', '0', '4', 'e6b1243409b83e2d253d7087dc', '51', '0', '{\"13\":\"19\",\"15\":\"25\"}', '80', '2018-12-06 19:18:01');
+INSERT INTO `mc_cart` VALUES ('19', '0', '5', 'de1cdc24253feed9a61575a4a4', '336', '0', '[]', '1', '2018-12-09 05:31:43');
+INSERT INTO `mc_cart` VALUES ('20', '0', '5', 'de1cdc24253feed9a61575a4a4', '85', '0', '[]', '1', '2018-12-09 05:58:23');
+INSERT INTO `mc_cart` VALUES ('22', '0', '3', '137888ec501fe80dc91d34ce38', '572', '0', '[]', '1', '2018-12-25 09:36:20');
+INSERT INTO `mc_cart` VALUES ('25', '0', '7', 'de1cdc24253feed9a61575a4a4', '994', '0', '[]', '1', '2019-02-13 08:04:09');
+INSERT INTO `mc_cart` VALUES ('26', '0', '7', 'de1cdc24253feed9a61575a4a4', '983', '0', '[]', '1', '2019-02-13 08:04:30');
 
 -- ----------------------------
 -- Table structure for mc_category
@@ -816,44 +658,31 @@ CREATE TABLE `mc_category` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`category_id`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_category
 -- ----------------------------
-INSERT INTO `mc_category` VALUES ('43', '', '34', '0', '0', '0', '1', '2010-09-18 14:06:49', '2011-04-22 01:55:40');
-INSERT INTO `mc_category` VALUES ('40', '', '34', '0', '0', '0', '1', '2010-09-18 14:05:36', '2010-09-18 14:05:36');
-INSERT INTO `mc_category` VALUES ('41', '', '34', '0', '0', '0', '1', '2010-09-18 14:05:49', '2011-04-22 01:55:30');
-INSERT INTO `mc_category` VALUES ('42', '', '34', '0', '0', '0', '1', '2010-09-18 14:06:34', '2010-11-07 20:31:04');
-INSERT INTO `mc_category` VALUES ('39', '', '34', '0', '0', '0', '1', '2010-09-18 14:04:17', '2011-04-22 01:55:20');
-INSERT INTO `mc_category` VALUES ('38', '', '34', '0', '0', '0', '1', '2010-09-18 14:03:51', '2010-09-18 14:03:51');
-INSERT INTO `mc_category` VALUES ('37', '', '34', '0', '0', '0', '1', '2010-09-18 14:03:39', '2011-04-22 01:55:08');
-INSERT INTO `mc_category` VALUES ('57', '', '28', '0', '0', '3', '1', '2011-04-26 08:53:16', '2016-08-04 12:52:21');
-INSERT INTO `mc_category` VALUES ('29', '', '32', '0', '0', '1', '1', '2009-02-02 13:11:37', '2016-08-04 12:47:16');
-INSERT INTO `mc_category` VALUES ('30', '', '32', '0', '0', '1', '1', '2009-02-02 13:11:59', '2016-08-04 12:44:42');
-INSERT INTO `mc_category` VALUES ('31', '', '32', '0', '0', '1', '1', '2009-02-03 14:17:24', '2016-08-04 12:43:10');
-INSERT INTO `mc_category` VALUES ('36', '', '28', '0', '0', '0', '1', '2010-09-17 10:07:13', '2016-08-04 12:50:26');
-INSERT INTO `mc_category` VALUES ('35', '', '28', '0', '0', '0', '1', '2010-09-17 10:06:48', '2016-08-04 12:49:23');
-INSERT INTO `mc_category` VALUES ('32', '', '25', '0', '0', '1', '1', '2009-02-03 14:17:34', '2016-08-04 12:36:03');
-INSERT INTO `mc_category` VALUES ('28', '', '25', '0', '0', '1', '1', '2009-02-02 13:11:12', '2016-08-04 12:35:01');
-INSERT INTO `mc_category` VALUES ('27', '', '20', '0', '0', '2', '1', '2009-01-31 01:55:34', '2017-07-20 09:46:20');
-INSERT INTO `mc_category` VALUES ('26', '', '20', '0', '0', '1', '1', '2009-01-31 01:55:14', '2016-08-04 12:31:46');
-INSERT INTO `mc_category` VALUES ('34', 'catalog/demo/ipod_touch_4.jpg', '0', '1', '4', '7', '1', '2009-02-03 14:18:11', '2016-08-13 14:13:13');
-INSERT INTO `mc_category` VALUES ('17', '', '0', '1', '1', '4', '1', '2009-01-03 21:08:57', '2016-08-04 12:54:23');
-INSERT INTO `mc_category` VALUES ('25', '', '0', '1', '1', '3', '1', '2009-01-31 01:04:25', '2016-08-04 12:33:28');
-INSERT INTO `mc_category` VALUES ('20', 'catalog/demo/compaq_presario.jpg', '0', '1', '1', '1', '1', '2009-01-05 21:49:43', '2016-08-04 12:28:28');
-INSERT INTO `mc_category` VALUES ('44', '', '34', '0', '0', '0', '1', '2010-09-21 15:39:21', '2010-11-07 20:30:55');
-INSERT INTO `mc_category` VALUES ('47', '', '34', '0', '0', '0', '1', '2010-11-07 11:13:16', '2010-11-07 11:13:16');
-INSERT INTO `mc_category` VALUES ('48', '', '34', '0', '0', '0', '1', '2010-11-07 11:13:33', '2010-11-07 11:13:33');
-INSERT INTO `mc_category` VALUES ('49', '', '34', '0', '0', '0', '1', '2010-11-07 11:14:04', '2010-11-07 11:14:04');
-INSERT INTO `mc_category` VALUES ('50', '', '34', '0', '0', '0', '1', '2010-11-07 11:14:23', '2011-04-22 01:16:01');
-INSERT INTO `mc_category` VALUES ('51', '', '34', '0', '0', '0', '1', '2010-11-07 11:14:38', '2011-04-22 01:16:13');
-INSERT INTO `mc_category` VALUES ('52', '', '34', '0', '0', '0', '1', '2010-11-07 11:16:09', '2011-04-22 01:54:57');
-INSERT INTO `mc_category` VALUES ('53', '', '34', '0', '0', '0', '1', '2010-11-07 11:28:53', '2011-04-22 01:14:36');
-INSERT INTO `mc_category` VALUES ('54', '', '34', '0', '0', '0', '1', '2010-11-07 11:29:16', '2011-04-22 01:16:50');
-INSERT INTO `mc_category` VALUES ('55', '', '34', '0', '0', '0', '1', '2010-11-08 10:31:32', '2010-11-08 10:31:32');
-INSERT INTO `mc_category` VALUES ('56', '', '34', '0', '0', '0', '1', '2010-11-08 10:31:50', '2011-04-22 01:16:37');
-INSERT INTO `mc_category` VALUES ('58', '', '52', '0', '0', '0', '1', '2011-05-08 13:44:16', '2011-05-08 13:44:16');
+INSERT INTO `mc_category` VALUES ('91', '', '87', '0', '1', '0', '1', '2018-12-08 02:11:27', '2018-12-08 02:11:27');
+INSERT INTO `mc_category` VALUES ('82', '', '34', '0', '1', '0', '1', '2018-12-08 02:05:08', '2018-12-08 02:05:08');
+INSERT INTO `mc_category` VALUES ('74', '', '20', '0', '1', '1', '1', '2018-11-25 21:33:05', '2018-12-08 01:42:48');
+INSERT INTO `mc_category` VALUES ('73', '', '25', '0', '1', '1', '1', '2018-11-08 13:25:31', '2018-12-08 01:55:02');
+INSERT INTO `mc_category` VALUES ('93', '', '34', '0', '1', '0', '1', '2018-12-08 02:12:54', '2018-12-08 02:12:54');
+INSERT INTO `mc_category` VALUES ('72', '', '25', '0', '1', '0', '1', '2018-11-08 13:20:52', '2018-11-08 13:20:52');
+INSERT INTO `mc_category` VALUES ('87', '', '34', '0', '1', '0', '1', '2018-12-08 02:09:41', '2018-12-08 02:09:41');
+INSERT INTO `mc_category` VALUES ('27', '', '20', '0', '9', '9', '1', '2009-01-31 01:55:34', '2018-12-09 03:56:37');
+INSERT INTO `mc_category` VALUES ('26', '', '20', '0', '2', '2', '1', '2009-01-31 01:55:14', '2018-12-08 01:43:01');
+INSERT INTO `mc_category` VALUES ('34', 'catalog/demo/ipod_touch_4.jpg', '0', '1', '2', '2', '1', '2009-02-03 14:18:11', '2018-12-16 11:24:14');
+INSERT INTO `mc_category` VALUES ('25', '', '0', '1', '1', '1', '1', '2009-01-31 01:04:25', '2018-12-08 01:56:04');
+INSERT INTO `mc_category` VALUES ('20', 'catalog/demo/compaq_presario.jpg', '0', '1', '0', '0', '1', '2009-01-05 21:49:43', '2018-12-08 01:55:48');
+INSERT INTO `mc_category` VALUES ('79', '', '82', '0', '1', '0', '1', '2018-11-26 23:47:45', '2018-12-08 02:05:55');
+INSERT INTO `mc_category` VALUES ('60', '', '20', '0', '0', '0', '1', '2018-11-08 07:49:24', '2018-12-08 01:42:32');
+INSERT INTO `mc_category` VALUES ('61', '', '20', '0', '4', '4', '1', '2018-11-08 08:00:51', '2018-12-08 01:44:08');
+INSERT INTO `mc_category` VALUES ('62', '', '20', '0', '3', '3', '1', '2018-11-08 08:01:19', '2018-12-08 01:43:15');
+INSERT INTO `mc_category` VALUES ('63', '', '20', '0', '8', '8', '1', '2018-11-08 08:04:33', '2018-12-09 03:56:25');
+INSERT INTO `mc_category` VALUES ('64', '', '20', '0', '5', '5', '1', '2018-11-08 08:05:02', '2018-12-08 01:44:34');
+INSERT INTO `mc_category` VALUES ('66', '', '20', '0', '7', '7', '0', '2018-11-08 08:08:23', '2018-12-17 11:00:28');
+INSERT INTO `mc_category` VALUES ('69', '', '20', '0', '6', '6', '1', '2018-11-08 08:33:27', '2018-12-08 01:44:51');
 
 -- ----------------------------
 -- Table structure for mc_category_description
@@ -874,105 +703,27 @@ CREATE TABLE `mc_category_description` (
 -- ----------------------------
 -- Records of mc_category_description
 -- ----------------------------
-INSERT INTO `mc_category_description` VALUES ('42', '3', 'test 9', '', 'test 9', '', '');
-INSERT INTO `mc_category_description` VALUES ('39', '3', 'test 6', '', 'test 6', '', '');
-INSERT INTO `mc_category_description` VALUES ('40', '1', 'test 7', '', 'test 7', '', '');
-INSERT INTO `mc_category_description` VALUES ('40', '2', 'test 7', '', 'test 7', '', '');
-INSERT INTO `mc_category_description` VALUES ('40', '3', 'test 7', '', 'test 7', '', '');
-INSERT INTO `mc_category_description` VALUES ('41', '1', 'test 8', '', 'test 8', '', '');
-INSERT INTO `mc_category_description` VALUES ('41', '2', 'test 8', '', 'test 8', '', '');
-INSERT INTO `mc_category_description` VALUES ('41', '3', 'test 8', '', 'test 8', '', '');
-INSERT INTO `mc_category_description` VALUES ('42', '1', 'test 9', '', 'test 9', '', '');
-INSERT INTO `mc_category_description` VALUES ('42', '2', 'test 9', '', 'test 9', '', '');
-INSERT INTO `mc_category_description` VALUES ('30', '1', '梳妆台', '', '梳妆台', '', '');
-INSERT INTO `mc_category_description` VALUES ('29', '1', '床', '', '床', '', '');
-INSERT INTO `mc_category_description` VALUES ('57', '1', '咖啡桌', '', '咖啡桌', '', '');
-INSERT INTO `mc_category_description` VALUES ('36', '1', '椅子', '', '椅子', '', '');
-INSERT INTO `mc_category_description` VALUES ('35', '2', 'Sofa Set', '', 'Sofa Set', '', '');
-INSERT INTO `mc_category_description` VALUES ('32', '2', 'Bed Room', '', 'Bed Room', '', '');
-INSERT INTO `mc_category_description` VALUES ('17', '2', 'Lighting', '', 'Lighting', '', '');
-INSERT INTO `mc_category_description` VALUES ('25', '1', '实木家具', '&lt;p&gt;分类说明信息&lt;/p&gt;\n', '实木家具', '', '');
-INSERT INTO `mc_category_description` VALUES ('43', '1', 'test 11', '', 'test 11', '', '');
-INSERT INTO `mc_category_description` VALUES ('31', '2', 'Reading Table', '', 'Reading Table', '', '');
-INSERT INTO `mc_category_description` VALUES ('31', '3', '書桌', '', '書桌', '', '');
-INSERT INTO `mc_category_description` VALUES ('37', '1', 'test 5', '', 'test 5', '', '');
-INSERT INTO `mc_category_description` VALUES ('37', '2', 'test 5', '', 'test 5', '', '');
-INSERT INTO `mc_category_description` VALUES ('37', '3', 'test 5', '', 'test 5', '', '');
-INSERT INTO `mc_category_description` VALUES ('29', '3', '床', '', '床', '', '');
-INSERT INTO `mc_category_description` VALUES ('57', '2', 'Coffee Table', '', 'Coffee Table', '', '');
-INSERT INTO `mc_category_description` VALUES ('36', '3', '椅子', '', '椅子', '', '');
-INSERT INTO `mc_category_description` VALUES ('35', '3', '沙發', '', '沙發', '', '');
-INSERT INTO `mc_category_description` VALUES ('35', '1', '沙发', '', '沙发', '', '');
-INSERT INTO `mc_category_description` VALUES ('32', '1', '臥室', '', '臥室', '', '');
-INSERT INTO `mc_category_description` VALUES ('34', '2', 'Home Decor', '&lt;p&gt;\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\n', 'Home Decor', '', '');
-INSERT INTO `mc_category_description` VALUES ('34', '1', '装饰品', '&lt;p&gt;\n	装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容\n\n&lt;/p&gt;', '装饰品', '', '');
-INSERT INTO `mc_category_description` VALUES ('17', '1', '灯具', '', '灯具', '', '');
-INSERT INTO `mc_category_description` VALUES ('43', '2', 'test 11', '', 'test 11', '', '');
-INSERT INTO `mc_category_description` VALUES ('38', '1', 'test 4', '', 'test 4', '', '');
-INSERT INTO `mc_category_description` VALUES ('38', '2', 'test 4', '', 'test 4', '', '');
-INSERT INTO `mc_category_description` VALUES ('38', '3', 'test 4', '', 'test 4', '', '');
-INSERT INTO `mc_category_description` VALUES ('39', '1', 'test 6', '', 'test 6', '', '');
-INSERT INTO `mc_category_description` VALUES ('39', '2', 'test 6', '', 'test 6', '', '');
-INSERT INTO `mc_category_description` VALUES ('29', '2', 'Beds', '', 'Beds', '', '');
-INSERT INTO `mc_category_description` VALUES ('57', '3', '咖啡桌', '', '咖啡桌', '', '');
-INSERT INTO `mc_category_description` VALUES ('36', '2', 'Chair', '', 'Chair', '', '');
-INSERT INTO `mc_category_description` VALUES ('32', '3', '卧室', '', '卧室', '', '');
-INSERT INTO `mc_category_description` VALUES ('34', '3', '裝飾品', '&lt;p&gt;\n	装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容\n\n&lt;/p&gt;', 'MP3 Players', '', '');
-INSERT INTO `mc_category_description` VALUES ('26', '1', '菜板', '', '菜板', '', '');
-INSERT INTO `mc_category_description` VALUES ('26', '2', 'Chop board', '', 'Chop board', '', '');
-INSERT INTO `mc_category_description` VALUES ('26', '3', '菜板', '', '菜板', '', '');
-INSERT INTO `mc_category_description` VALUES ('27', '1', '餐具', '&lt;p&gt;分类描述信息&lt;br&gt;&lt;/p&gt;', '餐具', '', '');
-INSERT INTO `mc_category_description` VALUES ('27', '2', 'Dining Set', '', 'Dining Set', '', '');
-INSERT INTO `mc_category_description` VALUES ('27', '3', '餐具', '&lt;p&gt;分類描述信息&lt;br&gt;&lt;/p&gt;', '餐具', '', '');
-INSERT INTO `mc_category_description` VALUES ('28', '1', '客厅', '', '客厅', '', '');
-INSERT INTO `mc_category_description` VALUES ('28', '2', 'Living Room', '', 'Living Room', '', '');
-INSERT INTO `mc_category_description` VALUES ('28', '3', '客廳', '', '客廳', '', '');
-INSERT INTO `mc_category_description` VALUES ('17', '3', '燈具', '', '燈具', '', '');
-INSERT INTO `mc_category_description` VALUES ('25', '3', '實木家具', '&lt;p&gt;\n	分類說明信息&lt;/p&gt;\n', '實木家具', '', '');
-INSERT INTO `mc_category_description` VALUES ('25', '2', 'Solid Wood', '&lt;p&gt;\n	Example of category description text&lt;/p&gt;\n', 'Solid Wood', '', '');
-INSERT INTO `mc_category_description` VALUES ('20', '1', '厨房用品', '&lt;p&gt;分类说明信息&lt;/p&gt;\n', '厨房用品', '', '');
-INSERT INTO `mc_category_description` VALUES ('20', '2', 'Kitchen', '&lt;p&gt;\n	Example of category description text&lt;/p&gt;\n', 'Kitchen', '', '');
-INSERT INTO `mc_category_description` VALUES ('20', '3', '厨房用品', '&lt;p&gt;\n	分類說明信息&lt;/p&gt;\n', '厨房用品', '', '');
-INSERT INTO `mc_category_description` VALUES ('30', '2', 'Dressing Table', '', 'Dressing Table', '', '');
-INSERT INTO `mc_category_description` VALUES ('30', '3', '梳妝台', '', '梳妝台', '', '');
-INSERT INTO `mc_category_description` VALUES ('31', '1', '书桌', '', '书桌', '', '');
-INSERT INTO `mc_category_description` VALUES ('43', '3', 'test 11', '', 'test 11', '', '');
-INSERT INTO `mc_category_description` VALUES ('44', '1', 'test 12', '', 'test 12', '', '');
-INSERT INTO `mc_category_description` VALUES ('44', '2', 'test 12', '', 'test 12', '', '');
-INSERT INTO `mc_category_description` VALUES ('44', '3', 'test 12', '', 'test 12', '', '');
-INSERT INTO `mc_category_description` VALUES ('47', '1', 'test 15', '', 'test 15', '', '');
-INSERT INTO `mc_category_description` VALUES ('47', '2', 'test 15', '', 'test 15', '', '');
-INSERT INTO `mc_category_description` VALUES ('47', '3', 'test 15', '', 'test 15', '', '');
-INSERT INTO `mc_category_description` VALUES ('48', '1', 'test 16', '', 'test 16', '', '');
-INSERT INTO `mc_category_description` VALUES ('48', '2', 'test 16', '', 'test 16', '', '');
-INSERT INTO `mc_category_description` VALUES ('48', '3', 'test 16', '', 'test 16', '', '');
-INSERT INTO `mc_category_description` VALUES ('49', '1', 'test 17', '', 'test 17', '', '');
-INSERT INTO `mc_category_description` VALUES ('49', '2', 'test 17', '', 'test 17', '', '');
-INSERT INTO `mc_category_description` VALUES ('49', '3', 'test 17', '', 'test 17', '', '');
-INSERT INTO `mc_category_description` VALUES ('50', '1', 'test 18', '', 'test 18', '', '');
-INSERT INTO `mc_category_description` VALUES ('50', '2', 'test 18', '', 'test 18', '', '');
-INSERT INTO `mc_category_description` VALUES ('50', '3', 'test 18', '', 'test 18', '', '');
-INSERT INTO `mc_category_description` VALUES ('51', '1', 'test 19', '', 'test 19', '', '');
-INSERT INTO `mc_category_description` VALUES ('51', '2', 'test 19', '', 'test 19', '', '');
-INSERT INTO `mc_category_description` VALUES ('51', '3', 'test 19', '', 'test 19', '', '');
-INSERT INTO `mc_category_description` VALUES ('52', '1', 'test 20', '', 'test 20', '', '');
-INSERT INTO `mc_category_description` VALUES ('52', '2', 'test 20', '', 'test 20', '', '');
-INSERT INTO `mc_category_description` VALUES ('52', '3', 'test 20', '', 'test 20', '', '');
-INSERT INTO `mc_category_description` VALUES ('53', '1', 'test 21', '', 'test 21', '', '');
-INSERT INTO `mc_category_description` VALUES ('53', '2', 'test 21', '', 'test 21', '', '');
-INSERT INTO `mc_category_description` VALUES ('53', '3', 'test 21', '', 'test 21', '', '');
-INSERT INTO `mc_category_description` VALUES ('54', '1', 'test 22', '', 'test 22', '', '');
-INSERT INTO `mc_category_description` VALUES ('54', '2', 'test 22', '', 'test 22', '', '');
-INSERT INTO `mc_category_description` VALUES ('54', '3', 'test 22', '', 'test 22', '', '');
-INSERT INTO `mc_category_description` VALUES ('55', '1', 'test 23', '', 'test 23', '', '');
-INSERT INTO `mc_category_description` VALUES ('55', '2', 'test 23', '', 'test 23', '', '');
-INSERT INTO `mc_category_description` VALUES ('55', '3', 'test 23', '', 'test 23', '', '');
-INSERT INTO `mc_category_description` VALUES ('56', '1', 'test 24', '', 'test 24', '', '');
-INSERT INTO `mc_category_description` VALUES ('56', '2', 'test 24', '', 'test 24', '', '');
-INSERT INTO `mc_category_description` VALUES ('56', '3', 'test 24', '', 'test 24', '', '');
-INSERT INTO `mc_category_description` VALUES ('58', '1', 'test 25', '', 'test 25', '', '');
-INSERT INTO `mc_category_description` VALUES ('58', '2', 'test 25', '', 'test 25', '', '');
-INSERT INTO `mc_category_description` VALUES ('58', '3', 'test 25', '', 'test 25', '', '');
+INSERT INTO `mc_category_description` VALUES ('87', '1', '手环', '', '手环', '', '');
+INSERT INTO `mc_category_description` VALUES ('93', '1', '音响', '', '音响', '', '');
+INSERT INTO `mc_category_description` VALUES ('72', '2', 'Nokia', '', 'Nokia', '', '');
+INSERT INTO `mc_category_description` VALUES ('73', '1', '飞利浦', '', '飞利浦', '', '');
+INSERT INTO `mc_category_description` VALUES ('79', '1', '小天才', '', '小天才', '', '');
+INSERT INTO `mc_category_description` VALUES ('91', '1', '华为手环', '', '华为手环', '', '');
+INSERT INTO `mc_category_description` VALUES ('82', '1', '儿童手表', '', '儿童手表', '', '');
+INSERT INTO `mc_category_description` VALUES ('74', '1', '荣耀', '', '荣耀', '', '');
+INSERT INTO `mc_category_description` VALUES ('62', '1', '小米', '&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;/p&gt;', '小米', '', '');
+INSERT INTO `mc_category_description` VALUES ('34', '1', '智能设备', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '智能设备', '', '');
+INSERT INTO `mc_category_description` VALUES ('26', '1', '苹果', '', '苹果', '', '');
+INSERT INTO `mc_category_description` VALUES ('60', '1', '华为', '', '华为', '', '');
+INSERT INTO `mc_category_description` VALUES ('27', '1', 'vivo', '&lt;p&gt;分类描述信息&lt;br&gt;&lt;/p&gt;', 'vivo', '', '');
+INSERT INTO `mc_category_description` VALUES ('25', '1', '功能手机', '&lt;p&gt;分类说明信息&lt;/p&gt;\r\n', '功能手机', '', '');
+INSERT INTO `mc_category_description` VALUES ('20', '1', '智能手机', '&lt;p&gt;分类说明信息&lt;/p&gt;\r\n', '智能手机', '', '');
+INSERT INTO `mc_category_description` VALUES ('72', '1', '诺基亚', '', '诺基亚', '', '');
+INSERT INTO `mc_category_description` VALUES ('61', '1', '三星', '', '三星', '', '');
+INSERT INTO `mc_category_description` VALUES ('64', '1', '魅族', '', '魅族', '', '');
+INSERT INTO `mc_category_description` VALUES ('63', '1', 'oppo', '', 'oppo', '', '');
+INSERT INTO `mc_category_description` VALUES ('66', '1', '诺基亚', '', '诺基亚', '', '');
+INSERT INTO `mc_category_description` VALUES ('69', '1', '美图', '', '美图', '', '');
 
 -- ----------------------------
 -- Table structure for mc_category_filter
@@ -1002,76 +753,101 @@ CREATE TABLE `mc_category_path` (
 -- ----------------------------
 -- Records of mc_category_path
 -- ----------------------------
-INSERT INTO `mc_category_path` VALUES ('26', '20', '0');
-INSERT INTO `mc_category_path` VALUES ('36', '36', '2');
-INSERT INTO `mc_category_path` VALUES ('36', '28', '1');
-INSERT INTO `mc_category_path` VALUES ('57', '25', '0');
-INSERT INTO `mc_category_path` VALUES ('57', '28', '1');
-INSERT INTO `mc_category_path` VALUES ('28', '28', '1');
-INSERT INTO `mc_category_path` VALUES ('31', '31', '2');
-INSERT INTO `mc_category_path` VALUES ('28', '25', '0');
-INSERT INTO `mc_category_path` VALUES ('31', '32', '1');
-INSERT INTO `mc_category_path` VALUES ('30', '25', '0');
-INSERT INTO `mc_category_path` VALUES ('29', '29', '2');
-INSERT INTO `mc_category_path` VALUES ('29', '25', '0');
-INSERT INTO `mc_category_path` VALUES ('32', '32', '1');
-INSERT INTO `mc_category_path` VALUES ('25', '25', '0');
-INSERT INTO `mc_category_path` VALUES ('17', '17', '0');
-INSERT INTO `mc_category_path` VALUES ('36', '25', '0');
-INSERT INTO `mc_category_path` VALUES ('57', '57', '2');
-INSERT INTO `mc_category_path` VALUES ('26', '26', '1');
-INSERT INTO `mc_category_path` VALUES ('35', '25', '0');
-INSERT INTO `mc_category_path` VALUES ('20', '20', '0');
-INSERT INTO `mc_category_path` VALUES ('35', '35', '2');
-INSERT INTO `mc_category_path` VALUES ('27', '27', '1');
-INSERT INTO `mc_category_path` VALUES ('27', '20', '0');
-INSERT INTO `mc_category_path` VALUES ('56', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('55', '55', '1');
-INSERT INTO `mc_category_path` VALUES ('55', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('54', '54', '1');
-INSERT INTO `mc_category_path` VALUES ('54', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('53', '53', '1');
-INSERT INTO `mc_category_path` VALUES ('53', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('58', '58', '2');
-INSERT INTO `mc_category_path` VALUES ('58', '52', '1');
-INSERT INTO `mc_category_path` VALUES ('58', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('52', '52', '1');
-INSERT INTO `mc_category_path` VALUES ('52', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('51', '51', '1');
-INSERT INTO `mc_category_path` VALUES ('51', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('50', '50', '1');
-INSERT INTO `mc_category_path` VALUES ('50', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('49', '49', '1');
-INSERT INTO `mc_category_path` VALUES ('49', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('48', '48', '1');
-INSERT INTO `mc_category_path` VALUES ('48', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('47', '47', '1');
-INSERT INTO `mc_category_path` VALUES ('47', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('44', '44', '1');
-INSERT INTO `mc_category_path` VALUES ('44', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('37', '37', '1');
-INSERT INTO `mc_category_path` VALUES ('37', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('38', '38', '1');
-INSERT INTO `mc_category_path` VALUES ('38', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('43', '43', '1');
-INSERT INTO `mc_category_path` VALUES ('43', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('34', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('39', '39', '1');
-INSERT INTO `mc_category_path` VALUES ('39', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('42', '42', '1');
-INSERT INTO `mc_category_path` VALUES ('42', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('41', '41', '1');
-INSERT INTO `mc_category_path` VALUES ('41', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('40', '40', '1');
-INSERT INTO `mc_category_path` VALUES ('40', '34', '0');
-INSERT INTO `mc_category_path` VALUES ('30', '32', '1');
-INSERT INTO `mc_category_path` VALUES ('56', '56', '1');
-INSERT INTO `mc_category_path` VALUES ('32', '25', '0');
-INSERT INTO `mc_category_path` VALUES ('29', '32', '1');
-INSERT INTO `mc_category_path` VALUES ('31', '25', '0');
-INSERT INTO `mc_category_path` VALUES ('30', '30', '2');
-INSERT INTO `mc_category_path` VALUES ('35', '28', '1');
+INSERT INTO `mc_category_path` VALUES ('26', '26', '2');
+INSERT INTO `mc_category_path` VALUES ('73', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('73', '73', '2');
+INSERT INTO `mc_category_path` VALUES ('72', '72', '2');
+INSERT INTO `mc_category_path` VALUES ('72', '25', '1');
+INSERT INTO `mc_category_path` VALUES ('25', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('26', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('20', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('74', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('27', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('27', '27', '2');
+INSERT INTO `mc_category_path` VALUES ('79', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('79', '79', '3');
+INSERT INTO `mc_category_path` VALUES ('82', '34', '1');
+INSERT INTO `mc_category_path` VALUES ('82', '82', '2');
+INSERT INTO `mc_category_path` VALUES ('91', '87', '2');
+INSERT INTO `mc_category_path` VALUES ('79', '82', '2');
+INSERT INTO `mc_category_path` VALUES ('34', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('87', '87', '2');
+INSERT INTO `mc_category_path` VALUES ('87', '34', '1');
+INSERT INTO `mc_category_path` VALUES ('62', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('87', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('93', '93', '2');
+INSERT INTO `mc_category_path` VALUES ('73', '25', '1');
+INSERT INTO `mc_category_path` VALUES ('74', '74', '2');
 INSERT INTO `mc_category_path` VALUES ('0', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('26', '20', '1');
+INSERT INTO `mc_category_path` VALUES ('20', '20', '1');
+INSERT INTO `mc_category_path` VALUES ('27', '20', '1');
+INSERT INTO `mc_category_path` VALUES ('93', '34', '1');
+INSERT INTO `mc_category_path` VALUES ('72', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('25', '25', '1');
+INSERT INTO `mc_category_path` VALUES ('74', '20', '1');
+INSERT INTO `mc_category_path` VALUES ('82', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('91', '34', '1');
+INSERT INTO `mc_category_path` VALUES ('34', '34', '1');
+INSERT INTO `mc_category_path` VALUES ('79', '34', '1');
+INSERT INTO `mc_category_path` VALUES ('91', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('60', '60', '2');
+INSERT INTO `mc_category_path` VALUES ('60', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('60', '20', '1');
+INSERT INTO `mc_category_path` VALUES ('61', '61', '2');
+INSERT INTO `mc_category_path` VALUES ('61', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('61', '20', '1');
+INSERT INTO `mc_category_path` VALUES ('62', '62', '2');
+INSERT INTO `mc_category_path` VALUES ('62', '20', '1');
+INSERT INTO `mc_category_path` VALUES ('63', '63', '2');
+INSERT INTO `mc_category_path` VALUES ('63', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('64', '64', '2');
+INSERT INTO `mc_category_path` VALUES ('64', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('64', '20', '1');
+INSERT INTO `mc_category_path` VALUES ('63', '20', '1');
+INSERT INTO `mc_category_path` VALUES ('91', '91', '3');
+INSERT INTO `mc_category_path` VALUES ('93', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('66', '66', '2');
+INSERT INTO `mc_category_path` VALUES ('66', '20', '1');
+INSERT INTO `mc_category_path` VALUES ('66', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('69', '69', '2');
+INSERT INTO `mc_category_path` VALUES ('69', '0', '0');
+INSERT INTO `mc_category_path` VALUES ('69', '20', '1');
+
+-- ----------------------------
+-- Table structure for mc_category_series
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_category_series`;
+CREATE TABLE `mc_category_series` (
+  `category_id` int(11) NOT NULL,
+  `series_id` int(11) NOT NULL,
+  PRIMARY KEY (`category_id`,`series_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_category_series
+-- ----------------------------
+INSERT INTO `mc_category_series` VALUES ('0', '0');
+INSERT INTO `mc_category_series` VALUES ('20', '20');
+INSERT INTO `mc_category_series` VALUES ('25', '25');
+INSERT INTO `mc_category_series` VALUES ('26', '26');
+INSERT INTO `mc_category_series` VALUES ('27', '27');
+INSERT INTO `mc_category_series` VALUES ('34', '34');
+INSERT INTO `mc_category_series` VALUES ('60', '60');
+INSERT INTO `mc_category_series` VALUES ('61', '61');
+INSERT INTO `mc_category_series` VALUES ('62', '62');
+INSERT INTO `mc_category_series` VALUES ('63', '63');
+INSERT INTO `mc_category_series` VALUES ('64', '64');
+INSERT INTO `mc_category_series` VALUES ('66', '66');
+INSERT INTO `mc_category_series` VALUES ('69', '69');
+INSERT INTO `mc_category_series` VALUES ('72', '72');
+INSERT INTO `mc_category_series` VALUES ('73', '73');
+INSERT INTO `mc_category_series` VALUES ('74', '74');
+INSERT INTO `mc_category_series` VALUES ('79', '79');
+INSERT INTO `mc_category_series` VALUES ('82', '82');
+INSERT INTO `mc_category_series` VALUES ('87', '87');
+INSERT INTO `mc_category_series` VALUES ('91', '91');
+INSERT INTO `mc_category_series` VALUES ('93', '93');
 
 -- ----------------------------
 -- Table structure for mc_category_to_layout
@@ -1087,6 +863,26 @@ CREATE TABLE `mc_category_to_layout` (
 -- ----------------------------
 -- Records of mc_category_to_layout
 -- ----------------------------
+INSERT INTO `mc_category_to_layout` VALUES ('20', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('25', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('34', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('26', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('27', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('60', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('61', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('62', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('63', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('64', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('66', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('69', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('93', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('72', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('73', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('74', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('91', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('82', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('87', '0', '0');
+INSERT INTO `mc_category_to_layout` VALUES ('79', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_category_to_store
@@ -1101,39 +897,26 @@ CREATE TABLE `mc_category_to_store` (
 -- ----------------------------
 -- Records of mc_category_to_store
 -- ----------------------------
-INSERT INTO `mc_category_to_store` VALUES ('17', '0');
 INSERT INTO `mc_category_to_store` VALUES ('20', '0');
 INSERT INTO `mc_category_to_store` VALUES ('25', '0');
 INSERT INTO `mc_category_to_store` VALUES ('26', '0');
 INSERT INTO `mc_category_to_store` VALUES ('27', '0');
-INSERT INTO `mc_category_to_store` VALUES ('28', '0');
-INSERT INTO `mc_category_to_store` VALUES ('29', '0');
-INSERT INTO `mc_category_to_store` VALUES ('30', '0');
-INSERT INTO `mc_category_to_store` VALUES ('31', '0');
-INSERT INTO `mc_category_to_store` VALUES ('32', '0');
 INSERT INTO `mc_category_to_store` VALUES ('34', '0');
-INSERT INTO `mc_category_to_store` VALUES ('35', '0');
-INSERT INTO `mc_category_to_store` VALUES ('36', '0');
-INSERT INTO `mc_category_to_store` VALUES ('37', '0');
-INSERT INTO `mc_category_to_store` VALUES ('38', '0');
-INSERT INTO `mc_category_to_store` VALUES ('39', '0');
-INSERT INTO `mc_category_to_store` VALUES ('40', '0');
-INSERT INTO `mc_category_to_store` VALUES ('41', '0');
-INSERT INTO `mc_category_to_store` VALUES ('42', '0');
-INSERT INTO `mc_category_to_store` VALUES ('43', '0');
-INSERT INTO `mc_category_to_store` VALUES ('44', '0');
-INSERT INTO `mc_category_to_store` VALUES ('47', '0');
-INSERT INTO `mc_category_to_store` VALUES ('48', '0');
-INSERT INTO `mc_category_to_store` VALUES ('49', '0');
-INSERT INTO `mc_category_to_store` VALUES ('50', '0');
-INSERT INTO `mc_category_to_store` VALUES ('51', '0');
-INSERT INTO `mc_category_to_store` VALUES ('52', '0');
-INSERT INTO `mc_category_to_store` VALUES ('53', '0');
-INSERT INTO `mc_category_to_store` VALUES ('54', '0');
-INSERT INTO `mc_category_to_store` VALUES ('55', '0');
-INSERT INTO `mc_category_to_store` VALUES ('56', '0');
-INSERT INTO `mc_category_to_store` VALUES ('57', '0');
-INSERT INTO `mc_category_to_store` VALUES ('58', '0');
+INSERT INTO `mc_category_to_store` VALUES ('60', '0');
+INSERT INTO `mc_category_to_store` VALUES ('61', '0');
+INSERT INTO `mc_category_to_store` VALUES ('62', '0');
+INSERT INTO `mc_category_to_store` VALUES ('63', '0');
+INSERT INTO `mc_category_to_store` VALUES ('64', '0');
+INSERT INTO `mc_category_to_store` VALUES ('66', '0');
+INSERT INTO `mc_category_to_store` VALUES ('69', '0');
+INSERT INTO `mc_category_to_store` VALUES ('72', '0');
+INSERT INTO `mc_category_to_store` VALUES ('73', '0');
+INSERT INTO `mc_category_to_store` VALUES ('74', '0');
+INSERT INTO `mc_category_to_store` VALUES ('79', '0');
+INSERT INTO `mc_category_to_store` VALUES ('82', '0');
+INSERT INTO `mc_category_to_store` VALUES ('87', '0');
+INSERT INTO `mc_category_to_store` VALUES ('91', '0');
+INSERT INTO `mc_category_to_store` VALUES ('93', '0');
 
 -- ----------------------------
 -- Table structure for mc_city
@@ -1508,288 +1291,287 @@ CREATE TABLE `mc_country` (
 -- ----------------------------
 -- Records of mc_country
 -- ----------------------------
-INSERT INTO `mc_country` VALUES ('1', 'Afghanistan', 'AF', 'AFG', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('2', 'Albania', 'AL', 'ALB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('3', 'Algeria', 'DZ', 'DZA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('4', 'American Samoa', 'AS', 'ASM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('5', 'Andorra', 'AD', 'AND', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('6', 'Angola', 'AO', 'AGO', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('7', 'Anguilla', 'AI', 'AIA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('8', 'Antarctica', 'AQ', 'ATA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('9', 'Antigua and Barbuda', 'AG', 'ATG', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('10', 'Argentina', 'AR', 'ARG', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('11', 'Armenia', 'AM', 'ARM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('12', 'Aruba', 'AW', 'ABW', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('13', 'Australia', 'AU', 'AUS', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('14', 'Austria', 'AT', 'AUT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('15', 'Azerbaijan', 'AZ', 'AZE', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('16', 'Bahamas', 'BS', 'BHS', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('17', 'Bahrain', 'BH', 'BHR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('18', 'Bangladesh', 'BD', 'BGD', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('19', 'Barbados', 'BB', 'BRB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('20', 'Belarus', 'BY', 'BLR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('21', 'Belgium', 'BE', 'BEL', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{postcode} {city}\r\n{country}', '0', '1');
-INSERT INTO `mc_country` VALUES ('22', 'Belize', 'BZ', 'BLZ', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('23', 'Benin', 'BJ', 'BEN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('24', 'Bermuda', 'BM', 'BMU', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('25', 'Bhutan', 'BT', 'BTN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('26', 'Bolivia', 'BO', 'BOL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('27', 'Bosnia and Herzegovina', 'BA', 'BIH', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('28', 'Botswana', 'BW', 'BWA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('29', 'Bouvet Island', 'BV', 'BVT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('30', 'Brazil', 'BR', 'BRA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('31', 'British Indian Ocean Territory', 'IO', 'IOT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('32', 'Brunei Darussalam', 'BN', 'BRN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('33', 'Bulgaria', 'BG', 'BGR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('34', 'Burkina Faso', 'BF', 'BFA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('35', 'Burundi', 'BI', 'BDI', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('36', 'Cambodia', 'KH', 'KHM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('37', 'Cameroon', 'CM', 'CMR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('38', 'Canada', 'CA', 'CAN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('39', 'Cape Verde', 'CV', 'CPV', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('40', 'Cayman Islands', 'KY', 'CYM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('41', 'Central African Republic', 'CF', 'CAF', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('42', 'Chad', 'TD', 'TCD', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('43', 'Chile', 'CL', 'CHL', '', '0', '1');
+INSERT INTO `mc_country` VALUES ('1', 'Afghanistan', 'AF', 'AFG', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('2', 'Albania', 'AL', 'ALB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('3', 'Algeria', 'DZ', 'DZA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('4', 'American Samoa', 'AS', 'ASM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('5', 'Andorra', 'AD', 'AND', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('6', 'Angola', 'AO', 'AGO', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('7', 'Anguilla', 'AI', 'AIA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('8', 'Antarctica', 'AQ', 'ATA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('9', 'Antigua and Barbuda', 'AG', 'ATG', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('10', 'Argentina', 'AR', 'ARG', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('11', 'Armenia', 'AM', 'ARM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('12', 'Aruba', 'AW', 'ABW', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('13', 'Australia', 'AU', 'AUS', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('14', 'Austria', 'AT', 'AUT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('15', 'Azerbaijan', 'AZ', 'AZE', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('16', 'Bahamas', 'BS', 'BHS', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('17', 'Bahrain', 'BH', 'BHR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('18', 'Bangladesh', 'BD', 'BGD', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('19', 'Barbados', 'BB', 'BRB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('20', 'Belarus', 'BY', 'BLR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('21', 'Belgium', 'BE', 'BEL', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{postcode} {city}\r\n{country}', '0', '0');
+INSERT INTO `mc_country` VALUES ('22', 'Belize', 'BZ', 'BLZ', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('23', 'Benin', 'BJ', 'BEN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('24', 'Bermuda', 'BM', 'BMU', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('25', 'Bhutan', 'BT', 'BTN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('26', 'Bolivia', 'BO', 'BOL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('27', 'Bosnia and Herzegovina', 'BA', 'BIH', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('28', 'Botswana', 'BW', 'BWA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('29', 'Bouvet Island', 'BV', 'BVT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('30', 'Brazil', 'BR', 'BRA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('31', 'British Indian Ocean Territory', 'IO', 'IOT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('32', 'Brunei Darussalam', 'BN', 'BRN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('33', 'Bulgaria', 'BG', 'BGR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('34', 'Burkina Faso', 'BF', 'BFA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('35', 'Burundi', 'BI', 'BDI', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('36', 'Cambodia', 'KH', 'KHM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('37', 'Cameroon', 'CM', 'CMR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('38', 'Canada', 'CA', 'CAN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('39', 'Cape Verde', 'CV', 'CPV', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('40', 'Cayman Islands', 'KY', 'CYM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('41', 'Central African Republic', 'CF', 'CAF', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('42', 'Chad', 'TD', 'TCD', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('43', 'Chile', 'CL', 'CHL', '', '0', '0');
 INSERT INTO `mc_country` VALUES ('44', '中国', 'CN', 'CHN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('45', 'Christmas Island', 'CX', 'CXR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('46', 'Cocos (Keeling) Islands', 'CC', 'CCK', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('47', 'Colombia', 'CO', 'COL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('48', 'Comoros', 'KM', 'COM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('49', 'Congo', 'CG', 'COG', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('50', 'Cook Islands', 'CK', 'COK', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('51', 'Costa Rica', 'CR', 'CRI', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('52', 'Cote D\'Ivoire', 'CI', 'CIV', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('53', 'Croatia', 'HR', 'HRV', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('54', 'Cuba', 'CU', 'CUB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('55', 'Cyprus', 'CY', 'CYP', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('56', 'Czech Republic', 'CZ', 'CZE', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('57', 'Denmark', 'DK', 'DNK', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('58', 'Djibouti', 'DJ', 'DJI', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('59', 'Dominica', 'DM', 'DMA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('60', 'Dominican Republic', 'DO', 'DOM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('61', 'East Timor', 'TL', 'TLS', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('62', 'Ecuador', 'EC', 'ECU', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('63', 'Egypt', 'EG', 'EGY', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('64', 'El Salvador', 'SV', 'SLV', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('65', 'Equatorial Guinea', 'GQ', 'GNQ', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('66', 'Eritrea', 'ER', 'ERI', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('67', 'Estonia', 'EE', 'EST', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('68', 'Ethiopia', 'ET', 'ETH', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('69', 'Falkland Islands (Malvinas)', 'FK', 'FLK', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('70', 'Faroe Islands', 'FO', 'FRO', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('71', 'Fiji', 'FJ', 'FJI', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('72', 'Finland', 'FI', 'FIN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('74', 'France, Metropolitan', 'FR', 'FRA', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{postcode} {city}\r\n{country}', '1', '1');
-INSERT INTO `mc_country` VALUES ('75', 'French Guiana', 'GF', 'GUF', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('76', 'French Polynesia', 'PF', 'PYF', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('77', 'French Southern Territories', 'TF', 'ATF', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('78', 'Gabon', 'GA', 'GAB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('79', 'Gambia', 'GM', 'GMB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('80', 'Georgia', 'GE', 'GEO', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('81', 'Germany', 'DE', 'DEU', '{company}\r\n{firstname} {lastname}\r\n{address_1}\r\n{address_2}\r\n{postcode} {city}\r\n{country}', '1', '1');
-INSERT INTO `mc_country` VALUES ('82', 'Ghana', 'GH', 'GHA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('83', 'Gibraltar', 'GI', 'GIB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('84', 'Greece', 'GR', 'GRC', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('85', 'Greenland', 'GL', 'GRL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('86', 'Grenada', 'GD', 'GRD', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('87', 'Guadeloupe', 'GP', 'GLP', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('88', 'Guam', 'GU', 'GUM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('89', 'Guatemala', 'GT', 'GTM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('90', 'Guinea', 'GN', 'GIN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('91', 'Guinea-Bissau', 'GW', 'GNB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('92', 'Guyana', 'GY', 'GUY', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('93', 'Haiti', 'HT', 'HTI', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('94', 'Heard and Mc Donald Islands', 'HM', 'HMD', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('95', 'Honduras', 'HN', 'HND', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('96', 'Hong Kong', 'HK', 'HKG', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('97', 'Hungary', 'HU', 'HUN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('98', 'Iceland', 'IS', 'ISL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('99', 'India', 'IN', 'IND', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('100', 'Indonesia', 'ID', 'IDN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('101', 'Iran (Islamic Republic of)', 'IR', 'IRN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('102', 'Iraq', 'IQ', 'IRQ', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('103', 'Ireland', 'IE', 'IRL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('104', 'Israel', 'IL', 'ISR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('105', 'Italy', 'IT', 'ITA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('106', 'Jamaica', 'JM', 'JAM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('107', 'Japan', 'JP', 'JPN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('108', 'Jordan', 'JO', 'JOR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('109', 'Kazakhstan', 'KZ', 'KAZ', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('110', 'Kenya', 'KE', 'KEN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('111', 'Kiribati', 'KI', 'KIR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('112', 'North Korea', 'KP', 'PRK', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('113', 'South Korea', 'KR', 'KOR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('114', 'Kuwait', 'KW', 'KWT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('115', 'Kyrgyzstan', 'KG', 'KGZ', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('116', 'Lao People\'s Democratic Republic', 'LA', 'LAO', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('117', 'Latvia', 'LV', 'LVA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('118', 'Lebanon', 'LB', 'LBN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('119', 'Lesotho', 'LS', 'LSO', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('120', 'Liberia', 'LR', 'LBR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('121', 'Libyan Arab Jamahiriya', 'LY', 'LBY', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('122', 'Liechtenstein', 'LI', 'LIE', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('123', 'Lithuania', 'LT', 'LTU', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('124', 'Luxembourg', 'LU', 'LUX', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('125', 'Macau', 'MO', 'MAC', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('126', 'FYROM', 'MK', 'MKD', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('127', 'Madagascar', 'MG', 'MDG', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('128', 'Malawi', 'MW', 'MWI', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('129', 'Malaysia', 'MY', 'MYS', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('130', 'Maldives', 'MV', 'MDV', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('131', 'Mali', 'ML', 'MLI', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('132', 'Malta', 'MT', 'MLT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('133', 'Marshall Islands', 'MH', 'MHL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('134', 'Martinique', 'MQ', 'MTQ', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('135', 'Mauritania', 'MR', 'MRT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('136', 'Mauritius', 'MU', 'MUS', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('137', 'Mayotte', 'YT', 'MYT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('138', 'Mexico', 'MX', 'MEX', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('139', 'Micronesia, Federated States of', 'FM', 'FSM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('140', 'Moldova, Republic of', 'MD', 'MDA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('141', 'Monaco', 'MC', 'MCO', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('142', 'Mongolia', 'MN', 'MNG', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('143', 'Montserrat', 'MS', 'MSR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('144', 'Morocco', 'MA', 'MAR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('145', 'Mozambique', 'MZ', 'MOZ', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('146', 'Myanmar', 'MM', 'MMR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('147', 'Namibia', 'NA', 'NAM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('148', 'Nauru', 'NR', 'NRU', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('149', 'Nepal', 'NP', 'NPL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('150', 'Netherlands', 'NL', 'NLD', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('151', 'Netherlands Antilles', 'AN', 'ANT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('152', 'New Caledonia', 'NC', 'NCL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('153', 'New Zealand', 'NZ', 'NZL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('154', 'Nicaragua', 'NI', 'NIC', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('155', 'Niger', 'NE', 'NER', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('156', 'Nigeria', 'NG', 'NGA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('157', 'Niue', 'NU', 'NIU', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('158', 'Norfolk Island', 'NF', 'NFK', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('159', 'Northern Mariana Islands', 'MP', 'MNP', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('160', 'Norway', 'NO', 'NOR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('161', 'Oman', 'OM', 'OMN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('162', 'Pakistan', 'PK', 'PAK', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('163', 'Palau', 'PW', 'PLW', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('164', 'Panama', 'PA', 'PAN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('165', 'Papua New Guinea', 'PG', 'PNG', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('166', 'Paraguay', 'PY', 'PRY', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('167', 'Peru', 'PE', 'PER', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('168', 'Philippines', 'PH', 'PHL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('169', 'Pitcairn', 'PN', 'PCN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('170', 'Poland', 'PL', 'POL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('171', 'Portugal', 'PT', 'PRT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('172', 'Puerto Rico', 'PR', 'PRI', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('173', 'Qatar', 'QA', 'QAT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('174', 'Reunion', 'RE', 'REU', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('175', 'Romania', 'RO', 'ROM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('176', 'Russian Federation', 'RU', 'RUS', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('177', 'Rwanda', 'RW', 'RWA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('178', 'Saint Kitts and Nevis', 'KN', 'KNA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('179', 'Saint Lucia', 'LC', 'LCA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('180', 'Saint Vincent and the Grenadines', 'VC', 'VCT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('181', 'Samoa', 'WS', 'WSM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('182', 'San Marino', 'SM', 'SMR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('183', 'Sao Tome and Principe', 'ST', 'STP', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('184', 'Saudi Arabia', 'SA', 'SAU', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('185', 'Senegal', 'SN', 'SEN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('186', 'Seychelles', 'SC', 'SYC', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('187', 'Sierra Leone', 'SL', 'SLE', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('188', 'Singapore', 'SG', 'SGP', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('189', 'Slovak Republic', 'SK', 'SVK', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city} {postcode}\r\n{zone}\r\n{country}', '0', '1');
-INSERT INTO `mc_country` VALUES ('190', 'Slovenia', 'SI', 'SVN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('191', 'Solomon Islands', 'SB', 'SLB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('192', 'Somalia', 'SO', 'SOM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('193', 'South Africa', 'ZA', 'ZAF', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('194', 'South Georgia &amp; South Sandwich Islands', 'GS', 'SGS', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('195', 'Spain', 'ES', 'ESP', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('196', 'Sri Lanka', 'LK', 'LKA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('197', 'St. Helena', 'SH', 'SHN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('198', 'St. Pierre and Miquelon', 'PM', 'SPM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('199', 'Sudan', 'SD', 'SDN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('200', 'Suriname', 'SR', 'SUR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('201', 'Svalbard and Jan Mayen Islands', 'SJ', 'SJM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('202', 'Swaziland', 'SZ', 'SWZ', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('203', 'Sweden', 'SE', 'SWE', '{company}\r\n{firstname} {lastname}\r\n{address_1}\r\n{address_2}\r\n{postcode} {city}\r\n{country}', '1', '1');
-INSERT INTO `mc_country` VALUES ('204', 'Switzerland', 'CH', 'CHE', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('205', 'Syrian Arab Republic', 'SY', 'SYR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('206', 'Taiwan', 'TW', 'TWN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('207', 'Tajikistan', 'TJ', 'TJK', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('208', 'Tanzania, United Republic of', 'TZ', 'TZA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('209', 'Thailand', 'TH', 'THA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('210', 'Togo', 'TG', 'TGO', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('211', 'Tokelau', 'TK', 'TKL', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('212', 'Tonga', 'TO', 'TON', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('213', 'Trinidad and Tobago', 'TT', 'TTO', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('214', 'Tunisia', 'TN', 'TUN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('215', 'Turkey', 'TR', 'TUR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('216', 'Turkmenistan', 'TM', 'TKM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('217', 'Turks and Caicos Islands', 'TC', 'TCA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('218', 'Tuvalu', 'TV', 'TUV', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('219', 'Uganda', 'UG', 'UGA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('220', 'Ukraine', 'UA', 'UKR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('221', 'United Arab Emirates', 'AE', 'ARE', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('222', 'United Kingdom', 'GB', 'GBR', '', '1', '1');
-INSERT INTO `mc_country` VALUES ('223', 'United States', 'US', 'USA', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '0', '1');
-INSERT INTO `mc_country` VALUES ('224', 'United States Minor Outlying Islands', 'UM', 'UMI', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('225', 'Uruguay', 'UY', 'URY', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('226', 'Uzbekistan', 'UZ', 'UZB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('227', 'Vanuatu', 'VU', 'VUT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('228', 'Vatican City State (Holy See)', 'VA', 'VAT', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('229', 'Venezuela', 'VE', 'VEN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('230', 'Viet Nam', 'VN', 'VNM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('231', 'Virgin Islands (British)', 'VG', 'VGB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('232', 'Virgin Islands (U.S.)', 'VI', 'VIR', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('233', 'Wallis and Futuna Islands', 'WF', 'WLF', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('234', 'Western Sahara', 'EH', 'ESH', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('235', 'Yemen', 'YE', 'YEM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('237', 'Democratic Republic of Congo', 'CD', 'COD', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('238', 'Zambia', 'ZM', 'ZMB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('239', 'Zimbabwe', 'ZW', 'ZWE', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('242', 'Montenegro', 'ME', 'MNE', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('243', 'Serbia', 'RS', 'SRB', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('244', 'Aaland Islands', 'AX', 'ALA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('245', 'Bonaire, Sint Eustatius and Saba', 'BQ', 'BES', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('246', 'Curacao', 'CW', 'CUW', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('247', 'Palestinian Territory, Occupied', 'PS', 'PSE', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('248', 'South Sudan', 'SS', 'SSD', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('249', 'St. Barthelemy', 'BL', 'BLM', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('250', 'St. Martin (French part)', 'MF', 'MAF', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('251', 'Canary Islands', 'IC', 'ICA', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('252', 'Ascension Island (British)', 'AC', 'ASC', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('253', 'Kosovo, Republic of', 'XK', 'UNK', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('254', 'Isle of Man', 'IM', 'IMN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('255', 'Tristan da Cunha', 'TA', 'SHN', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('256', 'Guernsey', 'GG', 'GGY', '', '0', '1');
-INSERT INTO `mc_country` VALUES ('257', 'Jersey', 'JE', 'JEY', '', '0', '1');
+INSERT INTO `mc_country` VALUES ('45', 'Christmas Island', 'CX', 'CXR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('46', 'Cocos (Keeling) Islands', 'CC', 'CCK', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('47', 'Colombia', 'CO', 'COL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('48', 'Comoros', 'KM', 'COM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('49', 'Congo', 'CG', 'COG', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('50', 'Cook Islands', 'CK', 'COK', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('51', 'Costa Rica', 'CR', 'CRI', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('52', 'Cote D\'Ivoire', 'CI', 'CIV', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('53', 'Croatia', 'HR', 'HRV', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('54', 'Cuba', 'CU', 'CUB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('55', 'Cyprus', 'CY', 'CYP', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('56', 'Czech Republic', 'CZ', 'CZE', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('57', 'Denmark', 'DK', 'DNK', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('58', 'Djibouti', 'DJ', 'DJI', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('59', 'Dominica', 'DM', 'DMA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('60', 'Dominican Republic', 'DO', 'DOM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('61', 'East Timor', 'TL', 'TLS', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('62', 'Ecuador', 'EC', 'ECU', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('63', 'Egypt', 'EG', 'EGY', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('64', 'El Salvador', 'SV', 'SLV', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('65', 'Equatorial Guinea', 'GQ', 'GNQ', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('66', 'Eritrea', 'ER', 'ERI', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('67', 'Estonia', 'EE', 'EST', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('68', 'Ethiopia', 'ET', 'ETH', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('69', 'Falkland Islands (Malvinas)', 'FK', 'FLK', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('70', 'Faroe Islands', 'FO', 'FRO', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('71', 'Fiji', 'FJ', 'FJI', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('72', 'Finland', 'FI', 'FIN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('74', 'France, Metropolitan', 'FR', 'FRA', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{postcode} {city}\r\n{country}', '1', '0');
+INSERT INTO `mc_country` VALUES ('75', 'French Guiana', 'GF', 'GUF', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('76', 'French Polynesia', 'PF', 'PYF', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('77', 'French Southern Territories', 'TF', 'ATF', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('78', 'Gabon', 'GA', 'GAB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('79', 'Gambia', 'GM', 'GMB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('80', 'Georgia', 'GE', 'GEO', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('81', 'Germany', 'DE', 'DEU', '{company}\r\n{firstname} {lastname}\r\n{address_1}\r\n{address_2}\r\n{postcode} {city}\r\n{country}', '1', '0');
+INSERT INTO `mc_country` VALUES ('82', 'Ghana', 'GH', 'GHA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('83', 'Gibraltar', 'GI', 'GIB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('84', 'Greece', 'GR', 'GRC', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('85', 'Greenland', 'GL', 'GRL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('86', 'Grenada', 'GD', 'GRD', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('87', 'Guadeloupe', 'GP', 'GLP', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('88', 'Guam', 'GU', 'GUM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('89', 'Guatemala', 'GT', 'GTM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('90', 'Guinea', 'GN', 'GIN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('91', 'Guinea-Bissau', 'GW', 'GNB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('92', 'Guyana', 'GY', 'GUY', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('93', 'Haiti', 'HT', 'HTI', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('94', 'Heard and Mc Donald Islands', 'HM', 'HMD', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('95', 'Honduras', 'HN', 'HND', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('96', 'Hong Kong', 'HK', 'HKG', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('97', 'Hungary', 'HU', 'HUN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('98', 'Iceland', 'IS', 'ISL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('99', 'India', 'IN', 'IND', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('100', 'Indonesia', 'ID', 'IDN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('101', 'Iran (Islamic Republic of)', 'IR', 'IRN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('102', 'Iraq', 'IQ', 'IRQ', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('103', 'Ireland', 'IE', 'IRL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('104', 'Israel', 'IL', 'ISR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('105', 'Italy', 'IT', 'ITA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('106', 'Jamaica', 'JM', 'JAM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('107', 'Japan', 'JP', 'JPN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('108', 'Jordan', 'JO', 'JOR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('109', 'Kazakhstan', 'KZ', 'KAZ', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('110', 'Kenya', 'KE', 'KEN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('111', 'Kiribati', 'KI', 'KIR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('112', 'North Korea', 'KP', 'PRK', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('113', 'South Korea', 'KR', 'KOR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('114', 'Kuwait', 'KW', 'KWT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('115', 'Kyrgyzstan', 'KG', 'KGZ', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('116', 'Lao People\'s Democratic Republic', 'LA', 'LAO', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('117', 'Latvia', 'LV', 'LVA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('118', 'Lebanon', 'LB', 'LBN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('119', 'Lesotho', 'LS', 'LSO', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('120', 'Liberia', 'LR', 'LBR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('121', 'Libyan Arab Jamahiriya', 'LY', 'LBY', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('122', 'Liechtenstein', 'LI', 'LIE', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('123', 'Lithuania', 'LT', 'LTU', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('124', 'Luxembourg', 'LU', 'LUX', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('125', 'Macau', 'MO', 'MAC', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('126', 'FYROM', 'MK', 'MKD', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('127', 'Madagascar', 'MG', 'MDG', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('128', 'Malawi', 'MW', 'MWI', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('129', 'Malaysia', 'MY', 'MYS', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('130', 'Maldives', 'MV', 'MDV', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('131', 'Mali', 'ML', 'MLI', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('132', 'Malta', 'MT', 'MLT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('133', 'Marshall Islands', 'MH', 'MHL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('134', 'Martinique', 'MQ', 'MTQ', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('135', 'Mauritania', 'MR', 'MRT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('136', 'Mauritius', 'MU', 'MUS', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('137', 'Mayotte', 'YT', 'MYT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('138', 'Mexico', 'MX', 'MEX', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('139', 'Micronesia, Federated States of', 'FM', 'FSM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('140', 'Moldova, Republic of', 'MD', 'MDA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('141', 'Monaco', 'MC', 'MCO', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('142', 'Mongolia', 'MN', 'MNG', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('143', 'Montserrat', 'MS', 'MSR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('144', 'Morocco', 'MA', 'MAR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('145', 'Mozambique', 'MZ', 'MOZ', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('146', 'Myanmar', 'MM', 'MMR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('147', 'Namibia', 'NA', 'NAM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('148', 'Nauru', 'NR', 'NRU', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('149', 'Nepal', 'NP', 'NPL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('150', 'Netherlands', 'NL', 'NLD', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('151', 'Netherlands Antilles', 'AN', 'ANT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('152', 'New Caledonia', 'NC', 'NCL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('153', 'New Zealand', 'NZ', 'NZL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('154', 'Nicaragua', 'NI', 'NIC', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('155', 'Niger', 'NE', 'NER', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('156', 'Nigeria', 'NG', 'NGA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('157', 'Niue', 'NU', 'NIU', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('158', 'Norfolk Island', 'NF', 'NFK', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('159', 'Northern Mariana Islands', 'MP', 'MNP', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('160', 'Norway', 'NO', 'NOR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('161', 'Oman', 'OM', 'OMN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('162', 'Pakistan', 'PK', 'PAK', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('163', 'Palau', 'PW', 'PLW', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('164', 'Panama', 'PA', 'PAN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('165', 'Papua New Guinea', 'PG', 'PNG', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('166', 'Paraguay', 'PY', 'PRY', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('167', 'Peru', 'PE', 'PER', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('168', 'Philippines', 'PH', 'PHL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('169', 'Pitcairn', 'PN', 'PCN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('170', 'Poland', 'PL', 'POL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('171', 'Portugal', 'PT', 'PRT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('172', 'Puerto Rico', 'PR', 'PRI', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('173', 'Qatar', 'QA', 'QAT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('174', 'Reunion', 'RE', 'REU', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('175', 'Romania', 'RO', 'ROM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('176', 'Russian Federation', 'RU', 'RUS', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('177', 'Rwanda', 'RW', 'RWA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('178', 'Saint Kitts and Nevis', 'KN', 'KNA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('179', 'Saint Lucia', 'LC', 'LCA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('180', 'Saint Vincent and the Grenadines', 'VC', 'VCT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('181', 'Samoa', 'WS', 'WSM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('182', 'San Marino', 'SM', 'SMR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('183', 'Sao Tome and Principe', 'ST', 'STP', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('184', 'Saudi Arabia', 'SA', 'SAU', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('185', 'Senegal', 'SN', 'SEN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('186', 'Seychelles', 'SC', 'SYC', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('187', 'Sierra Leone', 'SL', 'SLE', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('188', 'Singapore', 'SG', 'SGP', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('189', 'Slovak Republic', 'SK', 'SVK', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city} {postcode}\r\n{zone}\r\n{country}', '0', '0');
+INSERT INTO `mc_country` VALUES ('190', 'Slovenia', 'SI', 'SVN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('191', 'Solomon Islands', 'SB', 'SLB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('192', 'Somalia', 'SO', 'SOM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('193', 'South Africa', 'ZA', 'ZAF', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('194', 'South Georgia &amp; South Sandwich Islands', 'GS', 'SGS', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('195', 'Spain', 'ES', 'ESP', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('196', 'Sri Lanka', 'LK', 'LKA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('197', 'St. Helena', 'SH', 'SHN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('198', 'St. Pierre and Miquelon', 'PM', 'SPM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('199', 'Sudan', 'SD', 'SDN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('200', 'Suriname', 'SR', 'SUR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('201', 'Svalbard and Jan Mayen Islands', 'SJ', 'SJM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('202', 'Swaziland', 'SZ', 'SWZ', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('203', 'Sweden', 'SE', 'SWE', '{company}\r\n{firstname} {lastname}\r\n{address_1}\r\n{address_2}\r\n{postcode} {city}\r\n{country}', '1', '0');
+INSERT INTO `mc_country` VALUES ('204', 'Switzerland', 'CH', 'CHE', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('205', 'Syrian Arab Republic', 'SY', 'SYR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('206', 'Taiwan', 'TW', 'TWN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('207', 'Tajikistan', 'TJ', 'TJK', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('208', 'Tanzania, United Republic of', 'TZ', 'TZA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('209', 'Thailand', 'TH', 'THA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('210', 'Togo', 'TG', 'TGO', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('211', 'Tokelau', 'TK', 'TKL', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('212', 'Tonga', 'TO', 'TON', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('213', 'Trinidad and Tobago', 'TT', 'TTO', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('214', 'Tunisia', 'TN', 'TUN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('215', 'Turkey', 'TR', 'TUR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('216', 'Turkmenistan', 'TM', 'TKM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('217', 'Turks and Caicos Islands', 'TC', 'TCA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('218', 'Tuvalu', 'TV', 'TUV', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('219', 'Uganda', 'UG', 'UGA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('220', 'Ukraine', 'UA', 'UKR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('221', 'United Arab Emirates', 'AE', 'ARE', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('222', 'United Kingdom', 'GB', 'GBR', '', '1', '0');
+INSERT INTO `mc_country` VALUES ('223', 'United States', 'US', 'USA', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '0', '0');
+INSERT INTO `mc_country` VALUES ('224', 'United States Minor Outlying Islands', 'UM', 'UMI', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('225', 'Uruguay', 'UY', 'URY', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('226', 'Uzbekistan', 'UZ', 'UZB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('227', 'Vanuatu', 'VU', 'VUT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('228', 'Vatican City State (Holy See)', 'VA', 'VAT', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('229', 'Venezuela', 'VE', 'VEN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('230', 'Viet Nam', 'VN', 'VNM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('231', 'Virgin Islands (British)', 'VG', 'VGB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('232', 'Virgin Islands (U.S.)', 'VI', 'VIR', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('233', 'Wallis and Futuna Islands', 'WF', 'WLF', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('234', 'Western Sahara', 'EH', 'ESH', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('235', 'Yemen', 'YE', 'YEM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('237', 'Democratic Republic of Congo', 'CD', 'COD', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('238', 'Zambia', 'ZM', 'ZMB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('239', 'Zimbabwe', 'ZW', 'ZWE', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('242', 'Montenegro', 'ME', 'MNE', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('243', 'Serbia', 'RS', 'SRB', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('244', 'Aaland Islands', 'AX', 'ALA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('245', 'Bonaire, Sint Eustatius and Saba', 'BQ', 'BES', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('246', 'Curacao', 'CW', 'CUW', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('247', 'Palestinian Territory, Occupied', 'PS', 'PSE', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('248', 'South Sudan', 'SS', 'SSD', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('249', 'St. Barthelemy', 'BL', 'BLM', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('250', 'St. Martin (French part)', 'MF', 'MAF', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('251', 'Canary Islands', 'IC', 'ICA', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('252', 'Ascension Island (British)', 'AC', 'ASC', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('253', 'Kosovo, Republic of', 'XK', 'UNK', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('254', 'Isle of Man', 'IM', 'IMN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('255', 'Tristan da Cunha', 'TA', 'SHN', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('256', 'Guernsey', 'GG', 'GGY', '', '0', '0');
+INSERT INTO `mc_country` VALUES ('257', 'Jersey', 'JE', 'JEY', '', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_coupon
 -- ----------------------------
 DROP TABLE IF EXISTS `mc_coupon`;
 CREATE TABLE `mc_coupon` (
-  `coupon_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) NOT NULL,
-  `code` varchar(20) NOT NULL,
-  `type` char(1) NOT NULL,
-  `discount` decimal(15,4) NOT NULL,
-  `logged` tinyint(1) NOT NULL,
-  `shipping` tinyint(1) NOT NULL,
-  `total` decimal(15,4) NOT NULL,
-  `date_start` date NOT NULL DEFAULT '0000-00-00',
-  `date_end` date NOT NULL DEFAULT '0000-00-00',
-  `uses_total` int(11) NOT NULL,
-  `uses_customer` varchar(11) NOT NULL,
-  `status` tinyint(1) NOT NULL,
-  `date_added` datetime NOT NULL,
-  PRIMARY KEY (`coupon_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  `coupon_id` varchar(255) DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `code` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `discount` varchar(255) DEFAULT NULL,
+  `logged` varchar(255) DEFAULT NULL,
+  `shipping` varchar(255) DEFAULT NULL,
+  `total` varchar(255) DEFAULT NULL,
+  `date_start` varchar(255) DEFAULT NULL,
+  `date_end` varchar(255) DEFAULT NULL,
+  `uses_total` varchar(255) DEFAULT NULL,
+  `uses_customer` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `date_added` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of mc_coupon
 -- ----------------------------
-INSERT INTO `mc_coupon` VALUES ('4', '10% 折扣', '2222', 'P', '10.0000', '0', '0', '0.0000', '2015-04-01', '2020-01-01', '10', '10', '0', '2009-01-27 13:55:03');
-INSERT INTO `mc_coupon` VALUES ('5', '免费配送', '3333', 'P', '0.0000', '0', '1', '100.0000', '2015-01-01', '2015-02-01', '10', '10', '0', '2009-03-14 21:13:53');
-INSERT INTO `mc_coupon` VALUES ('6', '10元折扣券', '1111', 'F', '10.0000', '0', '0', '10.0000', '2015-01-01', '2020-01-01', '100000', '10000', '0', '2009-03-14 21:15:18');
+INSERT INTO `mc_coupon` VALUES ('7', '5', 'CNY5', 'F', '5.0000', '1', '0', '500.0000', '2018-08-08', '2020-08-08', '0', '2', '1', '2018-11-11 02:57:03');
+INSERT INTO `mc_coupon` VALUES ('6', '10', 'CNY10', 'F', '10.0000', '1', '1', '100.0000', '2018-08-08', '2020-01-01', '50000', '5', '1', '2009-03-14 21:15:18');
+INSERT INTO `mc_coupon` VALUES ('4', '10%折扣券', 'CNYP10', 'P', '10.0000', '0', '0', '0.0000', '2015-04-01', '2020-01-01', '10', '10', '0', '2009-01-27 13:55:03');
 
 -- ----------------------------
 -- Table structure for mc_coupon_category
@@ -1804,6 +1586,9 @@ CREATE TABLE `mc_coupon_category` (
 -- ----------------------------
 -- Records of mc_coupon_category
 -- ----------------------------
+INSERT INTO `mc_coupon_category` VALUES ('6', '20');
+INSERT INTO `mc_coupon_category` VALUES ('6', '25');
+INSERT INTO `mc_coupon_category` VALUES ('6', '34');
 
 -- ----------------------------
 -- Table structure for mc_coupon_history
@@ -1817,11 +1602,13 @@ CREATE TABLE `mc_coupon_history` (
   `amount` decimal(15,4) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`coupon_history_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_coupon_history
 -- ----------------------------
+INSERT INTO `mc_coupon_history` VALUES ('4', '7', '19', '7', '-5.0000', '2018-12-25 23:10:59');
+INSERT INTO `mc_coupon_history` VALUES ('2', '7', '15', '7', '-5.0000', '2018-12-11 09:48:38');
 
 -- ----------------------------
 -- Table structure for mc_coupon_product
@@ -1872,9 +1659,7 @@ CREATE TABLE `mc_currency` (
 -- ----------------------------
 -- Records of mc_currency
 -- ----------------------------
-INSERT INTO `mc_currency` VALUES ('6', '港币', 'HKD', '$', '', '2', '1.16110003', '1', '2016-08-31 11:07:00');
-INSERT INTO `mc_currency` VALUES ('5', 'US Dollar', 'USD', '$', '', '2', '0.14970000', '1', '2016-08-31 11:07:00');
-INSERT INTO `mc_currency` VALUES ('4', '人民币', 'CNY', '￥', '', '2', '1.00000000', '1', '2016-09-01 03:23:33');
+INSERT INTO `mc_currency` VALUES ('4', '人民币', 'CNY', '￥', '', '2', '1.00000000', '1', '2018-11-26 17:26:19');
 
 -- ----------------------------
 -- Table structure for mc_customer
@@ -1909,11 +1694,20 @@ CREATE TABLE `mc_customer` (
   `weibo_login_uid` varchar(50) NOT NULL,
   `qq_openid` varchar(64) NOT NULL,
   PRIMARY KEY (`customer_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_customer
 -- ----------------------------
+INSERT INTO `mc_customer` VALUES ('1', '1', '0', '1', 'yan', '', '17319201435', '17319201435', '', 'f00badd1e42a4b73cccccc24ff4cafdd1edd950f', 'g4LNUXByY', null, null, '1', '1', '[]', '27.18.87.168', '0', '0', '', '', '2018-10-30 20:10:07', '', '', '', '', '');
+INSERT INTO `mc_customer` VALUES ('2', '2', '0', '1', '上官玉蕾', '', '13598822444', '13598822444', '', '2ba6eee471ac59027309c79a589384ae33603e18', 'jgQvPbIyb', null, null, '0', '2', '[]', '117.136.36.128', '1', '0', '', '', '2018-11-27 02:27:08', '', '', '', '', '');
+INSERT INTO `mc_customer` VALUES ('3', '2', '0', '1', 'Kandy', '', '13627245199@qq.com', '13627245199', '', '4fb379c9e79b2d302613a67199bae7a7781604b0', 'utuB3AZK7', null, null, '0', '3', '[]', '35.187.234.142', '1', '0', '', '', '2018-12-02 09:22:52', '', '', '', '', '');
+INSERT INTO `mc_customer` VALUES ('8', '1', '0', '1', '董聚才', '', '18637761978', '18637761978', '', '49b96688ce278370c0b12fc3aa961c0ffb74fa91', 'F57LQIYz1', null, null, '0', '0', '', '42.236.167.206', '0', '0', '', '', '2018-12-24 01:12:26', '', '', '', '', '');
+INSERT INTO `mc_customer` VALUES ('4', '1', '0', '1', '安迪', '', '18601207087', '18601207087', '', '48326417bd99e3f73d53a56a7330f1644c28e672', 'ntVKAojRe', null, null, '1', '4', '', '124.65.183.226', '1', '0', '', '', '2018-12-05 20:18:24', '', '', '', '', '');
+INSERT INTO `mc_customer` VALUES ('5', '1', '0', '1', '王晶晶', '', '13676977677', '13676977677', '', '7b8a16304682f2c668889459facba0794e8ee13e', 'Lt1vee9jH', null, null, '0', '5', '', '42.236.171.91', '1', '0', '', '', '2018-12-09 04:06:52', '', '', '', '', '');
+INSERT INTO `mc_customer` VALUES ('6', '1', '0', '1', '上官晓辉', '', '15660626666', '15660626666', '', 'f99992bfa5bcfcd7c122dcd0fd841182c7309477', 'DDYeWdZ39', null, null, '0', '6', '', '123.160.94.37', '1', '0', '', '', '2018-12-10 02:02:09', '', '', '', '', '');
+INSERT INTO `mc_customer` VALUES ('7', '1', '0', '1', '李峰', '', '13146735563', '13146735563', '', 'ee1af46776cfd8ec35e8255b6a860e7b1c840586', 'kW4BlbZnn', null, null, '0', '7', '', '27.18.84.225', '1', '0', '', '', '2018-12-11 08:23:47', '', '', '', '', '');
+INSERT INTO `mc_customer` VALUES ('9', '1', '0', '1', '上官志航', '', '15738811559', '15738811559', '', 'e4f6d7bef2b134f5c5cf09dba84299a4642ac402', 'u3FeL7Kzc', null, null, '1', '0', '', '115.60.184.159', '0', '0', '', '', '2019-03-23 21:15:35', '', '', '', '', '');
 
 -- ----------------------------
 -- Table structure for mc_customer_activity
@@ -1927,11 +1721,26 @@ CREATE TABLE `mc_customer_activity` (
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_activity_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_customer_activity
 -- ----------------------------
+INSERT INTO `mc_customer_activity` VALUES ('1', '7', 'register', '{\"customer_id\":7,\"name\":\"\\u674e\\u5cf0 \"}', '27.18.87.168', '2018-12-11 08:23:47');
+INSERT INTO `mc_customer_activity` VALUES ('2', '7', 'login', '{\"customer_id\":\"7\",\"name\":\"\\u674e\\u5cf0 \"}', '27.18.87.168', '2018-12-11 08:25:10');
+INSERT INTO `mc_customer_activity` VALUES ('3', '7', 'address_add', '{\"customer_id\":\"7\",\"name\":\"\\u674e\\u5cf0 \"}', '27.18.87.168', '2018-12-11 09:47:25');
+INSERT INTO `mc_customer_activity` VALUES ('4', '7', 'order_account', '{\"customer_id\":\"7\",\"name\":\"\\u674e\\u5cf0 \",\"order_id\":14}', '27.18.87.168', '2018-12-11 09:47:38');
+INSERT INTO `mc_customer_activity` VALUES ('5', '7', 'order_account', '{\"customer_id\":\"7\",\"name\":\"\\u674e\\u5cf0 \",\"order_id\":15}', '27.18.87.168', '2018-12-11 09:48:38');
+INSERT INTO `mc_customer_activity` VALUES ('6', '7', 'order_account', '{\"customer_id\":\"7\",\"name\":\"\\u674e\\u5cf0 \",\"order_id\":16}', '27.18.87.168', '2018-12-11 09:49:14');
+INSERT INTO `mc_customer_activity` VALUES ('7', '7', 'return_account', '{\"customer_id\":\"7\",\"name\":\"\\u674e\\u5cf0 \",\"return_id\":1}', '27.17.232.205', '2018-12-13 07:20:04');
+INSERT INTO `mc_customer_activity` VALUES ('8', '7', 'order_account', '{\"customer_id\":\"7\",\"name\":\"\\u674e\\u5cf0 \",\"order_id\":17}', '27.18.87.168', '2018-12-14 23:01:20');
+INSERT INTO `mc_customer_activity` VALUES ('9', '8', 'register', '{\"customer_id\":8,\"name\":\"\\u8463\\u805a\\u624d \"}', '42.236.167.206', '2018-12-24 01:12:26');
+INSERT INTO `mc_customer_activity` VALUES ('10', '3', 'login', '{\"customer_id\":\"3\",\"name\":\"Kandy \"}', '35.187.234.142', '2018-12-25 09:28:52');
+INSERT INTO `mc_customer_activity` VALUES ('11', '3', 'order_account', '{\"customer_id\":\"3\",\"name\":\"Kandy \",\"order_id\":18}', '35.187.234.142', '2018-12-25 09:29:52');
+INSERT INTO `mc_customer_activity` VALUES ('12', '7', 'order_account', '{\"customer_id\":\"7\",\"name\":\"\\u674e\\u5cf0 \",\"order_id\":19}', '35.187.234.142', '2018-12-25 23:10:59');
+INSERT INTO `mc_customer_activity` VALUES ('13', '3', 'login', '{\"customer_id\":\"3\",\"name\":\"Kandy \"}', '35.187.234.142', '2018-12-26 21:26:17');
+INSERT INTO `mc_customer_activity` VALUES ('14', '6', 'login', '{\"customer_id\":\"6\",\"name\":\"\\u4e0a\\u5b98\\u6653\\u8f89 \"}', '59.83.198.102', '2018-12-28 10:06:55');
+INSERT INTO `mc_customer_activity` VALUES ('15', '9', 'register', '{\"customer_id\":9,\"name\":\"\\u4e0a\\u5b98\\u5fd7\\u822a \"}', '115.60.184.159', '2019-03-23 21:15:35');
 
 -- ----------------------------
 -- Table structure for mc_customer_affiliate
@@ -1967,16 +1776,17 @@ CREATE TABLE `mc_customer_affiliate` (
 -- ----------------------------
 DROP TABLE IF EXISTS `mc_customer_approval`;
 CREATE TABLE `mc_customer_approval` (
-  `customer_approval_id` int(11) NOT NULL AUTO_INCREMENT,
-  `customer_id` int(11) NOT NULL,
-  `type` varchar(9) NOT NULL,
-  `date_added` datetime NOT NULL,
-  PRIMARY KEY (`customer_approval_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `customer_approval_id` varchar(255) DEFAULT NULL,
+  `customer_id` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `date_added` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of mc_customer_approval
 -- ----------------------------
+INSERT INTO `mc_customer_approval` VALUES ('2', '8', 'customer', '2018/12/24 01:12:26');
+INSERT INTO `mc_customer_approval` VALUES ('3', '9', 'customer', '2019/3/23 21:15:35');
 
 -- ----------------------------
 -- Table structure for mc_customer_group
@@ -1992,9 +1802,9 @@ CREATE TABLE `mc_customer_group` (
 -- ----------------------------
 -- Records of mc_customer_group
 -- ----------------------------
-INSERT INTO `mc_customer_group` VALUES ('1', '0', '1');
-INSERT INTO `mc_customer_group` VALUES ('2', '0', '3');
-INSERT INTO `mc_customer_group` VALUES ('3', '0', '2');
+INSERT INTO `mc_customer_group` VALUES ('1', '1', '1');
+INSERT INTO `mc_customer_group` VALUES ('2', '1', '3');
+INSERT INTO `mc_customer_group` VALUES ('3', '1', '2');
 
 -- ----------------------------
 -- Table structure for mc_customer_group_description
@@ -2011,15 +1821,9 @@ CREATE TABLE `mc_customer_group_description` (
 -- ----------------------------
 -- Records of mc_customer_group_description
 -- ----------------------------
-INSERT INTO `mc_customer_group_description` VALUES ('1', '1', '普通', '测试');
-INSERT INTO `mc_customer_group_description` VALUES ('1', '2', 'Default', 'Test');
-INSERT INTO `mc_customer_group_description` VALUES ('1', '3', '普通', '测试');
-INSERT INTO `mc_customer_group_description` VALUES ('2', '3', 'VIP', '');
-INSERT INTO `mc_customer_group_description` VALUES ('2', '2', 'VIP', '');
-INSERT INTO `mc_customer_group_description` VALUES ('2', '1', 'VIP', '');
-INSERT INTO `mc_customer_group_description` VALUES ('3', '1', '批发商', '');
-INSERT INTO `mc_customer_group_description` VALUES ('3', '2', 'WholeSale', '');
-INSERT INTO `mc_customer_group_description` VALUES ('3', '3', '批發商', '');
+INSERT INTO `mc_customer_group_description` VALUES ('1', '1', '普通', '普通会员');
+INSERT INTO `mc_customer_group_description` VALUES ('2', '1', 'VIP', 'VIP会员');
+INSERT INTO `mc_customer_group_description` VALUES ('3', '1', '批发商', '批发商');
 
 -- ----------------------------
 -- Table structure for mc_customer_history
@@ -2031,11 +1835,12 @@ CREATE TABLE `mc_customer_history` (
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_history_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_customer_history
 -- ----------------------------
+INSERT INTO `mc_customer_history` VALUES ('1', '7', '111', '2018-12-11 10:56:39');
 
 -- ----------------------------
 -- Table structure for mc_customer_ip
@@ -2048,11 +1853,47 @@ CREATE TABLE `mc_customer_ip` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_ip_id`),
   KEY `ip` (`ip`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_customer_ip
 -- ----------------------------
+INSERT INTO `mc_customer_ip` VALUES ('1', '1', '27.18.59.253', '2018-10-30 20:10:08');
+INSERT INTO `mc_customer_ip` VALUES ('2', '1', '35.187.211.154', '2018-10-30 20:19:08');
+INSERT INTO `mc_customer_ip` VALUES ('3', '1', '27.18.85.129', '2018-11-11 02:51:10');
+INSERT INTO `mc_customer_ip` VALUES ('4', '1', '35.187.234.142', '2018-11-14 09:16:36');
+INSERT INTO `mc_customer_ip` VALUES ('5', '1', '42.236.169.51', '2018-11-25 22:13:12');
+INSERT INTO `mc_customer_ip` VALUES ('6', '1', '106.121.78.112', '2018-11-25 22:53:03');
+INSERT INTO `mc_customer_ip` VALUES ('7', '1', '42.236.167.130', '2018-11-26 21:19:54');
+INSERT INTO `mc_customer_ip` VALUES ('8', '2', '117.136.61.88', '2018-11-27 02:27:08');
+INSERT INTO `mc_customer_ip` VALUES ('9', '1', '27.18.84.213', '2018-11-27 08:55:31');
+INSERT INTO `mc_customer_ip` VALUES ('10', '3', '35.187.234.142', '2018-12-02 09:22:52');
+INSERT INTO `mc_customer_ip` VALUES ('11', '1', '27.18.86.98', '2018-12-02 20:44:07');
+INSERT INTO `mc_customer_ip` VALUES ('12', '4', '124.65.183.226', '2018-12-05 20:18:25');
+INSERT INTO `mc_customer_ip` VALUES ('13', '2', '117.136.36.128', '2018-12-05 20:31:19');
+INSERT INTO `mc_customer_ip` VALUES ('14', '5', '42.236.169.37', '2018-12-09 04:06:52');
+INSERT INTO `mc_customer_ip` VALUES ('15', '5', '106.121.151.94', '2018-12-09 05:03:19');
+INSERT INTO `mc_customer_ip` VALUES ('16', '5', '115.60.50.146', '2018-12-09 20:52:10');
+INSERT INTO `mc_customer_ip` VALUES ('17', '1', '115.60.50.146', '2018-12-09 23:37:18');
+INSERT INTO `mc_customer_ip` VALUES ('18', '5', '42.236.171.91', '2018-12-10 01:47:49');
+INSERT INTO `mc_customer_ip` VALUES ('19', '6', '42.236.171.91', '2018-12-10 02:02:10');
+INSERT INTO `mc_customer_ip` VALUES ('20', '1', '27.17.232.205', '2018-12-10 11:58:28');
+INSERT INTO `mc_customer_ip` VALUES ('21', '1', '27.18.87.168', '2018-12-11 06:50:53');
+INSERT INTO `mc_customer_ip` VALUES ('22', '7', '27.18.87.168', '2018-12-11 08:25:11');
+INSERT INTO `mc_customer_ip` VALUES ('23', '7', '27.17.232.205', '2018-12-11 10:51:31');
+INSERT INTO `mc_customer_ip` VALUES ('24', '7', '35.187.234.142', '2018-12-15 04:17:57');
+INSERT INTO `mc_customer_ip` VALUES ('25', '7', '27.18.87.68', '2018-12-21 02:23:15');
+INSERT INTO `mc_customer_ip` VALUES ('26', '7', '106.121.138.133', '2018-12-24 02:46:44');
+INSERT INTO `mc_customer_ip` VALUES ('27', '7', '27.18.87.79', '2018-12-24 06:15:03');
+INSERT INTO `mc_customer_ip` VALUES ('28', '6', '59.83.198.102', '2018-12-28 10:06:55');
+INSERT INTO `mc_customer_ip` VALUES ('29', '6', '123.160.94.37', '2018-12-28 10:11:07');
+INSERT INTO `mc_customer_ip` VALUES ('30', '7', '27.18.87.150', '2018-12-31 04:45:24');
+INSERT INTO `mc_customer_ip` VALUES ('31', '7', '115.60.55.77', '2019-02-12 22:02:44');
+INSERT INTO `mc_customer_ip` VALUES ('32', '7', '106.121.16.88', '2019-02-13 07:27:59');
+INSERT INTO `mc_customer_ip` VALUES ('33', '7', '106.121.141.43', '2019-02-14 20:38:00');
+INSERT INTO `mc_customer_ip` VALUES ('34', '7', '27.18.59.146', '2019-02-15 07:57:51');
+INSERT INTO `mc_customer_ip` VALUES ('35', '7', '27.18.59.117', '2019-02-19 08:35:28');
+INSERT INTO `mc_customer_ip` VALUES ('36', '7', '27.18.84.225', '2019-03-01 22:03:42');
 
 -- ----------------------------
 -- Table structure for mc_customer_login
@@ -2068,11 +1909,12 @@ CREATE TABLE `mc_customer_login` (
   PRIMARY KEY (`customer_login_id`),
   KEY `email` (`email`),
   KEY `ip` (`ip`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_customer_login
 -- ----------------------------
+INSERT INTO `mc_customer_login` VALUES ('1', 'admin', '106.121.0.162', '1', '2018-12-08 17:24:25', '2018-12-08 17:24:25');
 
 -- ----------------------------
 -- Table structure for mc_customer_online
@@ -2090,6 +1932,7 @@ CREATE TABLE `mc_customer_online` (
 -- ----------------------------
 -- Records of mc_customer_online
 -- ----------------------------
+INSERT INTO `mc_customer_online` VALUES ('::1', '0', 'http://localhost/2019/3C-master/3C/index.php?route=product/category&amp;path=20_60_64', 'http://localhost/2019/3C-master/3C/index.php?route=product/category&amp;path=20_60', '2019-04-01 00:02:52');
 
 -- ----------------------------
 -- Table structure for mc_customer_reward
@@ -2103,11 +1946,12 @@ CREATE TABLE `mc_customer_reward` (
   `points` int(8) NOT NULL DEFAULT '0',
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_reward_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_customer_reward
 -- ----------------------------
+INSERT INTO `mc_customer_reward` VALUES ('1', '7', '0', 'zc', '100', '2018-12-11 10:57:10');
 
 -- ----------------------------
 -- Table structure for mc_customer_search
@@ -2126,11 +1970,78 @@ CREATE TABLE `mc_customer_search` (
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_search_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_customer_search
 -- ----------------------------
+INSERT INTO `mc_customer_search` VALUES ('1', '0', '1', '0', 'iphone 7', '0', '0', '0', '10', '35.187.234.142', '2018-12-22 08:12:32');
+INSERT INTO `mc_customer_search` VALUES ('2', '0', '1', '7', 'iPhone 7', '0', '0', '0', '10', '27.18.87.68', '2018-12-24 00:49:57');
+INSERT INTO `mc_customer_search` VALUES ('3', '0', '1', '7', 'iPhone 8', '0', '0', '0', '17', '27.18.87.68', '2018-12-24 00:50:09');
+INSERT INTO `mc_customer_search` VALUES ('4', '0', '1', '0', '8X', '0', '0', '0', '19', '36.110.199.15', '2018-12-24 00:58:22');
+INSERT INTO `mc_customer_search` VALUES ('5', '0', '1', '7', '荣耀 ', '0', '0', '0', '116', '27.18.87.68', '2018-12-24 00:58:24');
+INSERT INTO `mc_customer_search` VALUES ('6', '0', '1', '7', '荣耀 10', '0', '0', '0', '34', '27.18.87.68', '2018-12-24 00:58:31');
+INSERT INTO `mc_customer_search` VALUES ('7', '0', '1', '7', '荣耀 7', '0', '0', '0', '25', '27.18.87.68', '2018-12-24 00:58:38');
+INSERT INTO `mc_customer_search` VALUES ('8', '0', '1', '0', 'mate20', '0', '0', '0', '1', '61.135.169.42', '2018-12-24 01:01:02');
+INSERT INTO `mc_customer_search` VALUES ('9', '0', '1', '0', 'mate20', '0', '0', '0', '1', '61.135.169.10', '2018-12-24 01:01:42');
+INSERT INTO `mc_customer_search` VALUES ('10', '0', '1', '0', '7c', '0', '0', '0', '7', '42.236.167.206', '2018-12-24 01:02:35');
+INSERT INTO `mc_customer_search` VALUES ('11', '0', '1', '0', '7c', '60', '0', '0', '7', '42.236.167.206', '2018-12-24 01:03:26');
+INSERT INTO `mc_customer_search` VALUES ('12', '0', '1', '0', '7c', '0', '0', '0', '7', '223.167.152.70', '2018-12-24 01:03:35');
+INSERT INTO `mc_customer_search` VALUES ('13', '0', '1', '0', 'mate10', '0', '0', '0', '0', '36.110.199.19', '2018-12-24 01:03:37');
+INSERT INTO `mc_customer_search` VALUES ('14', '0', '1', '0', '10', '60', '0', '0', '52', '42.236.167.206', '2018-12-24 01:03:40');
+INSERT INTO `mc_customer_search` VALUES ('15', '0', '1', '0', '10', '60', '0', '0', '52', '42.236.167.206', '2018-12-24 01:03:52');
+INSERT INTO `mc_customer_search` VALUES ('16', '0', '1', '0', 'MATE20', '0', '0', '0', '1', '36.110.199.136', '2018-12-24 01:04:15');
+INSERT INTO `mc_customer_search` VALUES ('17', '0', '1', '0', '7c', '60', '0', '0', '7', '58.246.221.61', '2018-12-24 01:04:26');
+INSERT INTO `mc_customer_search` VALUES ('18', '0', '1', '0', 'mate', '60', '0', '0', '52', '42.236.167.206', '2018-12-24 01:04:29');
+INSERT INTO `mc_customer_search` VALUES ('19', '0', '1', '0', '10', '60', '0', '0', '52', '223.166.151.197', '2018-12-24 01:04:40');
+INSERT INTO `mc_customer_search` VALUES ('20', '0', '1', '0', '20', '60', '0', '0', '57', '42.236.167.206', '2018-12-24 01:04:48');
+INSERT INTO `mc_customer_search` VALUES ('21', '0', '1', '0', '10', '60', '0', '0', '52', '223.166.151.191', '2018-12-24 01:04:52');
+INSERT INTO `mc_customer_search` VALUES ('22', '0', '1', '0', '20', '0', '0', '0', '65', '61.135.169.56', '2018-12-24 01:04:59');
+INSERT INTO `mc_customer_search` VALUES ('23', '0', '1', '0', 'mate 20', '60', '0', '0', '33', '42.236.167.206', '2018-12-24 01:05:03');
+INSERT INTO `mc_customer_search` VALUES ('24', '0', '1', '0', '20', '60', '0', '0', '57', '61.135.165.40', '2018-12-24 01:05:20');
+INSERT INTO `mc_customer_search` VALUES ('25', '0', '1', '0', 'mate', '60', '0', '0', '52', '223.166.151.199', '2018-12-24 01:05:28');
+INSERT INTO `mc_customer_search` VALUES ('26', '0', '1', '0', '20', '60', '0', '0', '57', '223.167.152.53', '2018-12-24 01:05:48');
+INSERT INTO `mc_customer_search` VALUES ('27', '0', '1', '0', '20', '60', '0', '0', '57', '61.135.165.43', '2018-12-24 01:05:58');
+INSERT INTO `mc_customer_search` VALUES ('28', '0', '1', '0', 'mate20', '60', '0', '0', '1', '58.246.221.162', '2018-12-24 01:06:04');
+INSERT INTO `mc_customer_search` VALUES ('29', '0', '1', '0', '7', '0', '0', '0', '56', '36.110.199.171', '2018-12-24 01:06:26');
+INSERT INTO `mc_customer_search` VALUES ('30', '0', '1', '0', '畅玩 7', '74', '0', '0', '25', '61.135.190.72', '2018-12-24 01:07:13');
+INSERT INTO `mc_customer_search` VALUES ('31', '0', '1', '0', '畅玩 7', '74', '0', '0', '25', '42.236.167.206', '2018-12-24 01:08:01');
+INSERT INTO `mc_customer_search` VALUES ('32', '0', '1', '0', '畅玩 7', '74', '0', '0', '25', '42.236.167.206', '2018-12-24 01:08:21');
+INSERT INTO `mc_customer_search` VALUES ('33', '0', '1', '0', '??????7', '74', '0', '0', '0', '58.247.204.63', '2018-12-24 01:09:02');
+INSERT INTO `mc_customer_search` VALUES ('34', '0', '1', '0', '畅玩 7', '74', '0', '0', '25', '58.247.212.141', '2018-12-24 01:09:02');
+INSERT INTO `mc_customer_search` VALUES ('35', '0', '1', '0', '?????? 7', '74', '0', '0', '0', '223.167.152.70', '2018-12-24 01:09:20');
+INSERT INTO `mc_customer_search` VALUES ('36', '0', '1', '0', '畅玩 7', '74', '0', '0', '25', '223.166.151.191', '2018-12-24 01:09:21');
+INSERT INTO `mc_customer_search` VALUES ('37', '0', '1', '7', '荣耀 7', '60', '0', '0', '25', '106.121.138.133', '2018-12-24 02:46:45');
+INSERT INTO `mc_customer_search` VALUES ('38', '0', '1', '7', '8', '60', '0', '0', '48', '106.121.138.133', '2018-12-24 02:46:51');
+INSERT INTO `mc_customer_search` VALUES ('39', '0', '1', '7', '8', '26', '0', '0', '17', '106.121.138.133', '2018-12-24 02:47:01');
+INSERT INTO `mc_customer_search` VALUES ('40', '0', '1', '0', '6', '0', '0', '0', '92', '59.83.198.102', '2018-12-28 10:03:15');
+INSERT INTO `mc_customer_search` VALUES ('41', '0', '1', '6', '畅玩7', '0', '0', '0', '25', '59.83.198.102', '2018-12-28 10:16:32');
+INSERT INTO `mc_customer_search` VALUES ('42', '0', '1', '6', '畅享9', '0', '0', '0', '0', '59.83.198.102', '2018-12-28 10:23:13');
+INSERT INTO `mc_customer_search` VALUES ('43', '0', '1', '6', '畅享 9', '0', '0', '0', '6', '59.83.198.102', '2018-12-28 10:23:40');
+INSERT INTO `mc_customer_search` VALUES ('44', '0', '1', '6', '畅享 9', '0', '0', '0', '6', '123.160.94.37', '2018-12-28 10:24:37');
+INSERT INTO `mc_customer_search` VALUES ('45', '0', '1', '6', '畅享 8', '0', '0', '0', '17', '123.160.94.37', '2018-12-28 10:25:42');
+INSERT INTO `mc_customer_search` VALUES ('46', '0', '1', '0', '畅玩 7', '74', '0', '0', '25', '122.49.28.47', '2019-01-17 14:25:20');
+INSERT INTO `mc_customer_search` VALUES ('47', '0', '1', '7', '8x', '0', '0', '0', '19', '106.121.16.88', '2019-02-13 08:03:38');
+INSERT INTO `mc_customer_search` VALUES ('48', '0', '1', '7', '荣耀V20', '0', '0', '0', '0', '35.187.234.142', '2019-02-20 22:57:06');
+INSERT INTO `mc_customer_search` VALUES ('49', '0', '1', '7', '荣耀', '0', '0', '0', '116', '35.187.234.142', '2019-02-20 22:57:11');
+INSERT INTO `mc_customer_search` VALUES ('50', '0', '1', '7', '荣耀 20', '0', '0', '0', '0', '35.187.234.142', '2019-02-20 22:57:23');
+INSERT INTO `mc_customer_search` VALUES ('51', '0', '1', '7', '20', '0', '0', '0', '65', '35.187.234.142', '2019-02-20 22:57:27');
+INSERT INTO `mc_customer_search` VALUES ('52', '0', '1', '7', '20', '74', '0', '0', '0', '35.187.234.142', '2019-02-20 22:57:37');
+INSERT INTO `mc_customer_search` VALUES ('53', '0', '1', '0', '华为p20', '0', '0', '0', '0', '115.60.184.159', '2019-03-23 21:18:35');
+INSERT INTO `mc_customer_search` VALUES ('54', '0', '1', '0', '华为p20', '0', '0', '0', '0', '180.163.220.66', '2019-03-23 21:18:44');
+INSERT INTO `mc_customer_search` VALUES ('55', '0', '1', '0', '华为p20', '60', '0', '0', '0', '115.60.184.159', '2019-03-23 21:18:44');
+INSERT INTO `mc_customer_search` VALUES ('56', '0', '1', '0', '华为p20', '60', '0', '0', '0', '115.60.184.159', '2019-03-23 21:18:46');
+INSERT INTO `mc_customer_search` VALUES ('57', '0', '1', '0', '华为p20', '60', '0', '0', '0', '42.236.10.78', '2019-03-23 21:18:49');
+INSERT INTO `mc_customer_search` VALUES ('58', '0', '1', '0', '华为p20', '60', '0', '0', '0', '180.163.220.5', '2019-03-23 21:19:03');
+INSERT INTO `mc_customer_search` VALUES ('59', '0', '1', '0', '华为mate20', '60', '0', '0', '0', '115.60.184.159', '2019-03-23 21:19:03');
+INSERT INTO `mc_customer_search` VALUES ('60', '0', '1', '0', '华为p20', '0', '0', '0', '0', '42.236.10.124', '2019-03-23 21:19:06');
+INSERT INTO `mc_customer_search` VALUES ('61', '0', '1', '0', '华为mate20', '60', '0', '0', '0', '115.60.184.159', '2019-03-23 21:19:12');
+INSERT INTO `mc_customer_search` VALUES ('62', '0', '1', '0', '华为mate20', '60', '0', '0', '0', '115.60.184.159', '2019-03-23 21:19:16');
+INSERT INTO `mc_customer_search` VALUES ('63', '0', '1', '0', '华为mate20', '60', '0', '0', '0', '115.60.184.159', '2019-03-23 21:19:18');
+INSERT INTO `mc_customer_search` VALUES ('64', '0', '1', '0', '华为mate20', '60', '0', '0', '0', '180.163.220.5', '2019-03-23 21:19:20');
+INSERT INTO `mc_customer_search` VALUES ('65', '0', '1', '0', '华为mate20', '60', '0', '0', '0', '42.236.10.114', '2019-03-23 21:19:27');
+INSERT INTO `mc_customer_search` VALUES ('66', '0', '1', '0', '华为mate20', '60', '0', '0', '0', '180.163.220.3', '2019-03-23 21:19:41');
+INSERT INTO `mc_customer_search` VALUES ('67', '0', '1', '0', '华为mate20', '60', '0', '0', '0', '180.163.220.68', '2019-03-23 21:19:59');
 
 -- ----------------------------
 -- Table structure for mc_customer_transaction
@@ -2144,11 +2055,15 @@ CREATE TABLE `mc_customer_transaction` (
   `amount` decimal(15,4) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_transaction_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_customer_transaction
 -- ----------------------------
+INSERT INTO `mc_customer_transaction` VALUES ('1', '5', '0', '', '0.0000', '2018-12-09 05:02:35');
+INSERT INTO `mc_customer_transaction` VALUES ('2', '5', '0', '充值', '100.0000', '2018-12-09 05:05:45');
+INSERT INTO `mc_customer_transaction` VALUES ('3', '7', '0', 'cz', '100.0000', '2018-12-11 10:56:55');
+INSERT INTO `mc_customer_transaction` VALUES ('5', '7', '19', '订单号: #19', '-100.0000', '2018-12-25 23:10:59');
 
 -- ----------------------------
 -- Table structure for mc_customer_wishlist
@@ -2164,6 +2079,12 @@ CREATE TABLE `mc_customer_wishlist` (
 -- ----------------------------
 -- Records of mc_customer_wishlist
 -- ----------------------------
+INSERT INTO `mc_customer_wishlist` VALUES ('4', '51', '2018-12-05 22:11:01');
+INSERT INTO `mc_customer_wishlist` VALUES ('5', '85', '2018-12-09 05:58:23');
+INSERT INTO `mc_customer_wishlist` VALUES ('1', '52', '2018-12-10 11:58:28');
+INSERT INTO `mc_customer_wishlist` VALUES ('1', '54', '2018-12-10 11:58:28');
+INSERT INTO `mc_customer_wishlist` VALUES ('1', '85', '2018-12-10 11:58:28');
+INSERT INTO `mc_customer_wishlist` VALUES ('1', '131', '2018-12-10 11:58:28');
 
 -- ----------------------------
 -- Table structure for mc_custom_field
@@ -5220,26 +5141,26 @@ CREATE TABLE `mc_extension` (
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL,
   PRIMARY KEY (`extension_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=86 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=99 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_extension
 -- ----------------------------
 INSERT INTO `mc_extension` VALUES ('1', 'payment', 'cod');
-INSERT INTO `mc_extension` VALUES ('2', 'total', 'shipping');
+INSERT INTO `mc_extension` VALUES ('91', 'total', 'reward');
 INSERT INTO `mc_extension` VALUES ('3', 'total', 'sub_total');
-INSERT INTO `mc_extension` VALUES ('4', 'total', 'tax');
+INSERT INTO `mc_extension` VALUES ('96', 'shipping', 'ccd');
 INSERT INTO `mc_extension` VALUES ('5', 'total', 'total');
 INSERT INTO `mc_extension` VALUES ('6', 'module', 'banner');
 INSERT INTO `mc_extension` VALUES ('7', 'module', 'carousel');
 INSERT INTO `mc_extension` VALUES ('8', 'total', 'credit');
 INSERT INTO `mc_extension` VALUES ('9', 'shipping', 'flat');
-INSERT INTO `mc_extension` VALUES ('10', 'total', 'handling');
+INSERT INTO `mc_extension` VALUES ('94', 'shipping', 'jd');
 INSERT INTO `mc_extension` VALUES ('11', 'total', 'low_order_fee');
-INSERT INTO `mc_extension` VALUES ('12', 'total', 'coupon');
+INSERT INTO `mc_extension` VALUES ('93', 'shipping', 'free');
 INSERT INTO `mc_extension` VALUES ('13', 'module', 'category');
 INSERT INTO `mc_extension` VALUES ('14', 'module', 'account');
-INSERT INTO `mc_extension` VALUES ('15', 'total', 'reward');
+INSERT INTO `mc_extension` VALUES ('95', 'shipping', 'sf');
 INSERT INTO `mc_extension` VALUES ('16', 'total', 'voucher');
 INSERT INTO `mc_extension` VALUES ('17', 'payment', 'free_checkout');
 INSERT INTO `mc_extension` VALUES ('18', 'module', 'featured');
@@ -5261,23 +5182,22 @@ INSERT INTO `mc_extension` VALUES ('34', 'report', 'product_viewed');
 INSERT INTO `mc_extension` VALUES ('35', 'report', 'sale_return');
 INSERT INTO `mc_extension` VALUES ('36', 'report', 'sale_order');
 INSERT INTO `mc_extension` VALUES ('37', 'report', 'sale_shipping');
-INSERT INTO `mc_extension` VALUES ('38', 'report', 'sale_tax');
+INSERT INTO `mc_extension` VALUES ('90', 'total', 'coupon');
 INSERT INTO `mc_extension` VALUES ('39', 'report', 'customer_activity');
 INSERT INTO `mc_extension` VALUES ('40', 'report', 'customer_order');
 INSERT INTO `mc_extension` VALUES ('41', 'report', 'customer_reward');
 INSERT INTO `mc_extension` VALUES ('50', 'captcha', 'basic');
 INSERT INTO `mc_extension` VALUES ('52', 'module', 'kefu');
-INSERT INTO `mc_extension` VALUES ('67', 'module', 'qq_login');
+INSERT INTO `mc_extension` VALUES ('86', 'module', 'filter');
 INSERT INTO `mc_extension` VALUES ('69', 'module', 'blog_comment');
-INSERT INTO `mc_extension` VALUES ('68', 'module', 'blog_latest');
 INSERT INTO `mc_extension` VALUES ('59', 'module', 'press_category');
 INSERT INTO `mc_extension` VALUES ('60', 'module', 'faq_category');
-INSERT INTO `mc_extension` VALUES ('63', 'module', 'blog_category');
+INSERT INTO `mc_extension` VALUES ('98', 'shipping', 'feiying');
 INSERT INTO `mc_extension` VALUES ('64', 'module', 'blog_search');
 INSERT INTO `mc_extension` VALUES ('66', 'module', 'press_latest');
-INSERT INTO `mc_extension` VALUES ('71', 'module', 'weibo_login');
+INSERT INTO `mc_extension` VALUES ('97', 'shipping', 'zt');
 INSERT INTO `mc_extension` VALUES ('79', 'analytics', 'google');
-INSERT INTO `mc_extension` VALUES ('80', 'feed', 'google_sitemap');
+INSERT INTO `mc_extension` VALUES ('92', 'shipping', 'pickup');
 INSERT INTO `mc_extension` VALUES ('82', 'report', 'marketing');
 
 -- ----------------------------
@@ -5329,16 +5249,9 @@ CREATE TABLE `mc_faq` (
 -- ----------------------------
 -- Records of mc_faq
 -- ----------------------------
-INSERT INTO `mc_faq` VALUES ('25', null, '1', '1', '2016-02-19 14:09:56', '2016-03-13 16:40:19');
+INSERT INTO `mc_faq` VALUES ('25', null, '1', '1', '2016-02-19 14:09:56', '2018-12-08 03:22:32');
 INSERT INTO `mc_faq` VALUES ('26', null, '1', '1', '2016-02-19 14:10:24', '2016-02-19 14:40:46');
 INSERT INTO `mc_faq` VALUES ('27', null, '1', '1', '2016-02-19 14:10:56', '2016-02-19 14:40:58');
-INSERT INTO `mc_faq` VALUES ('28', null, '1', '1', '2016-02-25 10:23:07', '0000-00-00 00:00:00');
-INSERT INTO `mc_faq` VALUES ('29', null, '1', '1', '2016-02-25 10:23:28', '0000-00-00 00:00:00');
-INSERT INTO `mc_faq` VALUES ('30', null, '1', '1', '2016-02-25 10:23:49', '0000-00-00 00:00:00');
-INSERT INTO `mc_faq` VALUES ('31', null, '1', '1', '2016-02-25 10:24:07', '0000-00-00 00:00:00');
-INSERT INTO `mc_faq` VALUES ('32', null, '1', '1', '2016-02-25 10:24:25', '0000-00-00 00:00:00');
-INSERT INTO `mc_faq` VALUES ('33', null, '1', '1', '2016-02-25 10:24:41', '0000-00-00 00:00:00');
-INSERT INTO `mc_faq` VALUES ('34', null, '1', '1', '2016-02-25 10:24:57', '0000-00-00 00:00:00');
 
 -- ----------------------------
 -- Table structure for mc_faq_category
@@ -5353,15 +5266,16 @@ CREATE TABLE `mc_faq_category` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`faq_category_id`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_faq_category
 -- ----------------------------
-INSERT INTO `mc_faq_category` VALUES ('13', '0', '1', '1', '2016-02-19 14:01:16', '2016-02-19 14:01:16');
-INSERT INTO `mc_faq_category` VALUES ('14', '0', '2', '1', '2016-02-19 14:01:59', '2016-02-19 14:01:59');
-INSERT INTO `mc_faq_category` VALUES ('15', '13', '1', '1', '2016-02-19 14:02:44', '2016-02-19 14:02:44');
-INSERT INTO `mc_faq_category` VALUES ('16', '13', '2', '1', '2016-02-19 14:03:23', '2016-08-22 15:03:20');
+INSERT INTO `mc_faq_category` VALUES ('13', '0', '1', '1', '2016-02-19 14:01:16', '2018-12-08 03:16:54');
+INSERT INTO `mc_faq_category` VALUES ('14', '0', '2', '1', '2016-02-19 14:01:59', '2018-12-08 03:17:53');
+INSERT INTO `mc_faq_category` VALUES ('15', '13', '1', '1', '2016-02-19 14:02:44', '2018-12-08 03:19:39');
+INSERT INTO `mc_faq_category` VALUES ('16', '13', '2', '1', '2016-02-19 14:03:23', '2018-12-08 03:19:06');
+INSERT INTO `mc_faq_category` VALUES ('18', '13', '3', '1', '2018-12-08 03:20:55', '2018-12-08 03:21:26');
 
 -- ----------------------------
 -- Table structure for mc_faq_category_description
@@ -5382,18 +5296,11 @@ CREATE TABLE `mc_faq_category_description` (
 -- ----------------------------
 -- Records of mc_faq_category_description
 -- ----------------------------
-INSERT INTO `mc_faq_category_description` VALUES ('13', '1', '常见问题分类一', '&lt;p&gt;常见问题分类一&lt;br&gt;&lt;/p&gt;', '常见问题分类一', '常见问题分类一', '常见问题分类一');
-INSERT INTO `mc_faq_category_description` VALUES ('13', '2', '常见问题分类一', '&lt;p&gt;常见问题分类一&lt;br&gt;&lt;/p&gt;', '常见问题分类一', '常见问题分类一', '常见问题分类一');
-INSERT INTO `mc_faq_category_description` VALUES ('13', '3', '常见问题分类一', '&lt;p&gt;常见问题分类一&lt;br&gt;&lt;/p&gt;', '常见问题分类一', '常见问题分类一', '常见问题分类一');
-INSERT INTO `mc_faq_category_description` VALUES ('14', '1', '常见问题分类二', '&lt;p&gt;常见问题分类二&lt;br&gt;&lt;/p&gt;', '常见问题分类二', '常见问题分类二', '常见问题分类二');
-INSERT INTO `mc_faq_category_description` VALUES ('14', '2', '常见问题分类二', '&lt;p&gt;常见问题分类二&lt;br&gt;&lt;/p&gt;', '常见问题分类二', '常见问题分类二', '常见问题分类二');
-INSERT INTO `mc_faq_category_description` VALUES ('14', '3', '常见问题分类二', '&lt;p&gt;常见问题分类二&lt;br&gt;&lt;/p&gt;', '常见问题分类二', '常见问题分类二', '常见问题分类二');
-INSERT INTO `mc_faq_category_description` VALUES ('15', '1', '苹果问题', '&lt;p&gt;苹果问题&lt;br&gt;&lt;/p&gt;', '苹果问题', '苹果问题', '苹果问题');
-INSERT INTO `mc_faq_category_description` VALUES ('15', '2', '苹果问题', '&lt;p&gt;苹果问题&lt;br&gt;&lt;/p&gt;', '苹果问题', '苹果问题', '苹果问题');
-INSERT INTO `mc_faq_category_description` VALUES ('15', '3', '苹果问题', '&lt;p&gt;苹果问题&lt;br&gt;&lt;/p&gt;', '苹果问题', '苹果问题', '苹果问题');
-INSERT INTO `mc_faq_category_description` VALUES ('16', '3', '桔子问题', '&lt;p&gt;桔子问题&lt;br&gt;&lt;/p&gt;', '桔子问题', '桔子问题', '桔子问题');
-INSERT INTO `mc_faq_category_description` VALUES ('16', '1', '桔子问题', '&lt;p&gt;桔子问题&lt;br&gt;&lt;/p&gt;', '桔子问题', '桔子问题', '桔子问题');
-INSERT INTO `mc_faq_category_description` VALUES ('16', '2', '桔子问题', '&lt;p&gt;桔子问题&lt;br&gt;&lt;/p&gt;', '桔子问题', '桔子问题', '桔子问题');
+INSERT INTO `mc_faq_category_description` VALUES ('13', '1', '常见问题', '&lt;p&gt;常见问题&lt;br&gt;&lt;/p&gt;', '常见问题', '常见问题', '常见问题');
+INSERT INTO `mc_faq_category_description` VALUES ('14', '1', '法律问题', '&lt;p&gt;法律问题&lt;br&gt;&lt;/p&gt;', '法律问题', '法律问题', '法律问题');
+INSERT INTO `mc_faq_category_description` VALUES ('18', '1', '地区', '&lt;p&gt;地区&lt;br&gt;&lt;/p&gt;', '地区', '地区', '地区');
+INSERT INTO `mc_faq_category_description` VALUES ('15', '1', '返修', '&lt;p&gt;返修&lt;br&gt;&lt;/p&gt;', '返修', '返修', '返修');
+INSERT INTO `mc_faq_category_description` VALUES ('16', '1', '运费', '&lt;p&gt;运费&lt;br&gt;&lt;/p&gt;', '运费', '运费', '运费');
 
 -- ----------------------------
 -- Table structure for mc_faq_category_path
@@ -5415,6 +5322,8 @@ INSERT INTO `mc_faq_category_path` VALUES ('15', '13', '0');
 INSERT INTO `mc_faq_category_path` VALUES ('15', '15', '1');
 INSERT INTO `mc_faq_category_path` VALUES ('16', '13', '0');
 INSERT INTO `mc_faq_category_path` VALUES ('16', '16', '1');
+INSERT INTO `mc_faq_category_path` VALUES ('18', '13', '0');
+INSERT INTO `mc_faq_category_path` VALUES ('18', '18', '1');
 
 -- ----------------------------
 -- Table structure for mc_faq_category_to_layout
@@ -5434,6 +5343,7 @@ INSERT INTO `mc_faq_category_to_layout` VALUES ('13', '0', '0');
 INSERT INTO `mc_faq_category_to_layout` VALUES ('14', '0', '0');
 INSERT INTO `mc_faq_category_to_layout` VALUES ('15', '0', '0');
 INSERT INTO `mc_faq_category_to_layout` VALUES ('16', '0', '0');
+INSERT INTO `mc_faq_category_to_layout` VALUES ('18', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_faq_category_to_store
@@ -5452,6 +5362,7 @@ INSERT INTO `mc_faq_category_to_store` VALUES ('13', '0');
 INSERT INTO `mc_faq_category_to_store` VALUES ('14', '0');
 INSERT INTO `mc_faq_category_to_store` VALUES ('15', '0');
 INSERT INTO `mc_faq_category_to_store` VALUES ('16', '0');
+INSERT INTO `mc_faq_category_to_store` VALUES ('18', '0');
 
 -- ----------------------------
 -- Table structure for mc_faq_description
@@ -5475,30 +5386,7 @@ INSERT INTO `mc_faq_description` VALUES ('26', '1', '问题2', '&lt;p&gt;问题2
 INSERT INTO `mc_faq_description` VALUES ('27', '3', '问题3', '&lt;p&gt;问题3&lt;br&gt;&lt;/p&gt;');
 INSERT INTO `mc_faq_description` VALUES ('27', '2', '问题3', '&lt;p&gt;问题3&lt;br&gt;&lt;/p&gt;');
 INSERT INTO `mc_faq_description` VALUES ('27', '1', '问题3', '&lt;p&gt;问题3&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('25', '1', 'MyCnCart系统可以商用吗？', '&lt;p&gt;是的，完全可以！!！&lt;br&gt;&lt;br&gt;mycncart系统遵循GPL3协议，您可以用它来用作商业网站，并且免费使用。&lt;br&gt;&lt;br&gt;你所需要遵循的就是：如果您做了二次开发并且将其销售，则您必须保持所做的二次开发也是开源的，不能做任何加密。&lt;br&gt;&lt;br&gt;mycncart系统本身可以被免费使用，但不能包装起来后被销售。&lt;br&gt;&lt;br&gt;您可以将【技术支持 MyCnCart】移除， 但希望您能够做一捐款， 如此MyCnCart的开发者才能够投入更多的时间精力为大家提供更好的版本服务。&lt;br&gt;&lt;br&gt;请使用支付宝捐款至支付宝账户：tonyspace2010@gmail.com&amp;nbsp; 姓名： 杨兆锋&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('28', '1', '问题4', '&lt;p&gt;问题4&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('28', '2', '问题4', '&lt;p&gt;问题4&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('28', '3', '问题4', '&lt;p&gt;问题4&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('29', '1', '问题5', '&lt;p&gt;问题5&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('29', '2', '问题5', '&lt;p&gt;问题5&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('29', '3', '问题5', '&lt;p&gt;问题5&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('30', '1', '问题6', '&lt;p&gt;问题6&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('30', '2', '问题6', '&lt;p&gt;问题6&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('30', '3', '问题6', '&lt;p&gt;问题6&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('31', '1', '问题7', '&lt;p&gt;问题7&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('31', '2', '问题7', '&lt;p&gt;问题7&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('31', '3', '问题7', '&lt;p&gt;问题7&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('32', '1', '问题8', '&lt;p&gt;问题8&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('32', '2', '问题8', '&lt;p&gt;问题8&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('32', '3', '问题8', '&lt;p&gt;问题8&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('33', '1', '问题9', '&lt;p&gt;问题9&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('33', '2', '问题9', '&lt;p&gt;问题9&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('33', '3', '问题9', '&lt;p&gt;问题9&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('34', '1', '问题10', '&lt;p&gt;问题10&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('34', '2', '问题10', '&lt;p&gt;问题10&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('34', '3', '问题10', '&lt;p&gt;问题10&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('25', '2', 'MyCnCart系统可以商用吗？', '&lt;p&gt;是的，完全可以！!！&lt;br&gt;&lt;br&gt;mycncart系统遵循GPL3协议，您可以用它来用作商业网站，并且免费使用。&lt;br&gt;&lt;br&gt;你所需要遵循的就是：如果您做了二次开发并且将其销售，则您必须保持所做的二次开发也是开源的，不能做任何加密。&lt;br&gt;&lt;br&gt;mycncart系统本身可以被免费使用，但不能包装起来后被销售。&lt;br&gt;&lt;br&gt;您可以将【技术支持 MyCnCart】移除， 但希望您能够做一捐款， 如此MyCnCart的开发者才能够投入更多的时间精力为大家提供更好的版本服务。&lt;br&gt;&lt;br&gt;请使用支付宝捐款至支付宝账户：tonyspace2010@gmail.com&amp;nbsp; 姓名： 杨兆锋&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;');
-INSERT INTO `mc_faq_description` VALUES ('25', '3', 'MyCnCart系统可以商用吗？', '&lt;p&gt;是的，完全可以！!！&lt;br&gt;&lt;br&gt;mycncart系统遵循GPL3协议，您可以用它来用作商业网站，并且免费使用。&lt;br&gt;&lt;br&gt;你所需要遵循的就是：如果您做了二次开发并且将其销售，则您必须保持所做的二次开发也是开源的，不能做任何加密。&lt;br&gt;&lt;br&gt;mycncart系统本身可以被免费使用，但不能包装起来后被销售。&lt;br&gt;&lt;br&gt;您可以将【技术支持 MyCnCart】移除， 但希望您能够做一捐款， 如此MyCnCart的开发者才能够投入更多的时间精力为大家提供更好的版本服务。&lt;br&gt;&lt;br&gt;请使用支付宝捐款至支付宝账户：tonyspace2010@gmail.com&amp;nbsp; 姓名： 杨兆锋&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;');
+INSERT INTO `mc_faq_description` VALUES ('25', '1', '系统可以商用吗？', '&lt;p&gt;是的，完全可以！!！&lt;br&gt;&lt;br&gt;mycncart系统遵循GPL3协议，您可以用它来用作商业网站，并且免费使用。&lt;br&gt;&lt;br&gt;你所需要遵循的就是：如果您做了二次开发并且将其销售，则您必须保持所做的二次开发也是开源的，不能做任何加密。&lt;br&gt;&lt;br&gt;mycncart系统本身可以被免费使用，但不能包装起来后被销售。&lt;br&gt;&lt;br&gt;您可以将【技术支持 MyCnCart】移除， 但希望您能够做一捐款， 如此MyCnCart的开发者才能够投入更多的时间精力为大家提供更好的版本服务。&lt;br&gt;&lt;br&gt;请使用支付宝捐款至支付宝账户：tonyspace2010@gmail.com&amp;nbsp; 姓名： 杨兆锋&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;');
 
 -- ----------------------------
 -- Table structure for mc_faq_product
@@ -5541,13 +5429,6 @@ INSERT INTO `mc_faq_to_faq_category` VALUES ('25', '15');
 INSERT INTO `mc_faq_to_faq_category` VALUES ('26', '13');
 INSERT INTO `mc_faq_to_faq_category` VALUES ('26', '16');
 INSERT INTO `mc_faq_to_faq_category` VALUES ('27', '14');
-INSERT INTO `mc_faq_to_faq_category` VALUES ('28', '16');
-INSERT INTO `mc_faq_to_faq_category` VALUES ('29', '16');
-INSERT INTO `mc_faq_to_faq_category` VALUES ('30', '16');
-INSERT INTO `mc_faq_to_faq_category` VALUES ('31', '16');
-INSERT INTO `mc_faq_to_faq_category` VALUES ('32', '16');
-INSERT INTO `mc_faq_to_faq_category` VALUES ('33', '16');
-INSERT INTO `mc_faq_to_faq_category` VALUES ('34', '16');
 
 -- ----------------------------
 -- Table structure for mc_faq_to_layout
@@ -5566,13 +5447,6 @@ CREATE TABLE `mc_faq_to_layout` (
 INSERT INTO `mc_faq_to_layout` VALUES ('25', '0', '0');
 INSERT INTO `mc_faq_to_layout` VALUES ('26', '0', '0');
 INSERT INTO `mc_faq_to_layout` VALUES ('27', '0', '0');
-INSERT INTO `mc_faq_to_layout` VALUES ('28', '0', '0');
-INSERT INTO `mc_faq_to_layout` VALUES ('29', '0', '0');
-INSERT INTO `mc_faq_to_layout` VALUES ('30', '0', '0');
-INSERT INTO `mc_faq_to_layout` VALUES ('31', '0', '0');
-INSERT INTO `mc_faq_to_layout` VALUES ('32', '0', '0');
-INSERT INTO `mc_faq_to_layout` VALUES ('33', '0', '0');
-INSERT INTO `mc_faq_to_layout` VALUES ('34', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_faq_to_store
@@ -5590,13 +5464,6 @@ CREATE TABLE `mc_faq_to_store` (
 INSERT INTO `mc_faq_to_store` VALUES ('25', '0');
 INSERT INTO `mc_faq_to_store` VALUES ('26', '0');
 INSERT INTO `mc_faq_to_store` VALUES ('27', '0');
-INSERT INTO `mc_faq_to_store` VALUES ('28', '0');
-INSERT INTO `mc_faq_to_store` VALUES ('29', '0');
-INSERT INTO `mc_faq_to_store` VALUES ('30', '0');
-INSERT INTO `mc_faq_to_store` VALUES ('31', '0');
-INSERT INTO `mc_faq_to_store` VALUES ('32', '0');
-INSERT INTO `mc_faq_to_store` VALUES ('33', '0');
-INSERT INTO `mc_faq_to_store` VALUES ('34', '0');
 
 -- ----------------------------
 -- Table structure for mc_filter
@@ -5607,11 +5474,41 @@ CREATE TABLE `mc_filter` (
   `filter_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`filter_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_filter
 -- ----------------------------
+INSERT INTO `mc_filter` VALUES ('10', '1', '10');
+INSERT INTO `mc_filter` VALUES ('9', '1', '9');
+INSERT INTO `mc_filter` VALUES ('8', '1', '8');
+INSERT INTO `mc_filter` VALUES ('7', '1', '7');
+INSERT INTO `mc_filter` VALUES ('6', '1', '6');
+INSERT INTO `mc_filter` VALUES ('5', '1', '5');
+INSERT INTO `mc_filter` VALUES ('4', '1', '4');
+INSERT INTO `mc_filter` VALUES ('3', '1', '3');
+INSERT INTO `mc_filter` VALUES ('2', '1', '2');
+INSERT INTO `mc_filter` VALUES ('1', '1', '1');
+INSERT INTO `mc_filter` VALUES ('23', '2', '13');
+INSERT INTO `mc_filter` VALUES ('22', '2', '12');
+INSERT INTO `mc_filter` VALUES ('21', '2', '11');
+INSERT INTO `mc_filter` VALUES ('20', '2', '10');
+INSERT INTO `mc_filter` VALUES ('19', '2', '9');
+INSERT INTO `mc_filter` VALUES ('18', '2', '8');
+INSERT INTO `mc_filter` VALUES ('17', '2', '7');
+INSERT INTO `mc_filter` VALUES ('16', '2', '6');
+INSERT INTO `mc_filter` VALUES ('15', '2', '5');
+INSERT INTO `mc_filter` VALUES ('14', '2', '4');
+INSERT INTO `mc_filter` VALUES ('13', '2', '3');
+INSERT INTO `mc_filter` VALUES ('12', '2', '2');
+INSERT INTO `mc_filter` VALUES ('11', '2', '1');
+INSERT INTO `mc_filter` VALUES ('24', '3', '1');
+INSERT INTO `mc_filter` VALUES ('25', '3', '2');
+INSERT INTO `mc_filter` VALUES ('26', '3', '3');
+INSERT INTO `mc_filter` VALUES ('27', '3', '4');
+INSERT INTO `mc_filter` VALUES ('28', '3', '5');
+INSERT INTO `mc_filter` VALUES ('29', '3', '6');
+INSERT INTO `mc_filter` VALUES ('30', '3', '7');
 
 -- ----------------------------
 -- Table structure for mc_filter_description
@@ -5628,6 +5525,36 @@ CREATE TABLE `mc_filter_description` (
 -- ----------------------------
 -- Records of mc_filter_description
 -- ----------------------------
+INSERT INTO `mc_filter_description` VALUES ('8', '1', '1', '4G');
+INSERT INTO `mc_filter_description` VALUES ('7', '1', '1', '8G');
+INSERT INTO `mc_filter_description` VALUES ('6', '1', '1', '16G');
+INSERT INTO `mc_filter_description` VALUES ('5', '1', '1', '32G');
+INSERT INTO `mc_filter_description` VALUES ('4', '1', '1', '64G');
+INSERT INTO `mc_filter_description` VALUES ('3', '1', '1', '128G');
+INSERT INTO `mc_filter_description` VALUES ('2', '1', '1', '256G');
+INSERT INTO `mc_filter_description` VALUES ('1', '1', '1', '512G');
+INSERT INTO `mc_filter_description` VALUES ('23', '1', '2', '其他');
+INSERT INTO `mc_filter_description` VALUES ('22', '1', '2', '橙色');
+INSERT INTO `mc_filter_description` VALUES ('21', '1', '2', '紫色');
+INSERT INTO `mc_filter_description` VALUES ('20', '1', '2', '绿色');
+INSERT INTO `mc_filter_description` VALUES ('19', '1', '2', '黄色');
+INSERT INTO `mc_filter_description` VALUES ('18', '1', '2', '红色');
+INSERT INTO `mc_filter_description` VALUES ('17', '1', '2', '蓝色');
+INSERT INTO `mc_filter_description` VALUES ('16', '1', '2', '粉色');
+INSERT INTO `mc_filter_description` VALUES ('15', '1', '2', '银色');
+INSERT INTO `mc_filter_description` VALUES ('14', '1', '2', '金色');
+INSERT INTO `mc_filter_description` VALUES ('13', '1', '2', '灰色');
+INSERT INTO `mc_filter_description` VALUES ('12', '1', '2', '黑色');
+INSERT INTO `mc_filter_description` VALUES ('11', '1', '2', '白色');
+INSERT INTO `mc_filter_description` VALUES ('9', '1', '1', '2G');
+INSERT INTO `mc_filter_description` VALUES ('10', '1', '1', '其他');
+INSERT INTO `mc_filter_description` VALUES ('24', '1', '3', '8G');
+INSERT INTO `mc_filter_description` VALUES ('25', '1', '3', '6G');
+INSERT INTO `mc_filter_description` VALUES ('26', '1', '3', '4G');
+INSERT INTO `mc_filter_description` VALUES ('27', '1', '3', '3G');
+INSERT INTO `mc_filter_description` VALUES ('28', '1', '3', '2G');
+INSERT INTO `mc_filter_description` VALUES ('29', '1', '3', '1G');
+INSERT INTO `mc_filter_description` VALUES ('30', '1', '3', '其他');
 
 -- ----------------------------
 -- Table structure for mc_filter_group
@@ -5637,11 +5564,14 @@ CREATE TABLE `mc_filter_group` (
   `filter_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`filter_group_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_filter_group
 -- ----------------------------
+INSERT INTO `mc_filter_group` VALUES ('1', '1');
+INSERT INTO `mc_filter_group` VALUES ('2', '2');
+INSERT INTO `mc_filter_group` VALUES ('3', '0');
 
 -- ----------------------------
 -- Table structure for mc_filter_group_description
@@ -5657,6 +5587,9 @@ CREATE TABLE `mc_filter_group_description` (
 -- ----------------------------
 -- Records of mc_filter_group_description
 -- ----------------------------
+INSERT INTO `mc_filter_group_description` VALUES ('1', '1', '存储大小');
+INSERT INTO `mc_filter_group_description` VALUES ('2', '1', '外观颜色');
+INSERT INTO `mc_filter_group_description` VALUES ('3', '1', '内存大小');
 
 -- ----------------------------
 -- Table structure for mc_geo_zone
@@ -5718,17 +5651,15 @@ CREATE TABLE `mc_information_description` (
 -- Records of mc_information_description
 -- ----------------------------
 INSERT INTO `mc_information_description` VALUES ('6', '2', 'Delivery Information', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;\r\n', 'Delivery Information', '', '');
-INSERT INTO `mc_information_description` VALUES ('4', '2', 'About Us', '&lt;p&gt;\r\n	About Us&lt;/p&gt;\r\n', 'About Us', '', '');
 INSERT INTO `mc_information_description` VALUES ('3', '2', 'Privacy Policy', '&lt;p&gt;\r\n	Privacy Policy&lt;/p&gt;\r\n', 'Privacy Policy', '', '');
 INSERT INTO `mc_information_description` VALUES ('5', '2', 'Terms &amp; Conditions', 'Terms &amp;amp; Conditions', 'Terms &amp; Conditions', '', '');
-INSERT INTO `mc_information_description` VALUES ('4', '1', '关于我们', '&lt;p&gt;\r\n	About Us&lt;/p&gt;\r\n', '关于我们', '', '');
 INSERT INTO `mc_information_description` VALUES ('3', '1', '隐私政策', '&lt;p&gt;\r\n	隐私政策&lt;/p&gt;\r\n', '隐私政策', '', '');
 INSERT INTO `mc_information_description` VALUES ('6', '1', '物流配送', '&lt;p&gt;\r\n	物流配送&lt;/p&gt;\r\n', '物流配送', '', '');
 INSERT INTO `mc_information_description` VALUES ('5', '1', '使用条款', '&lt;p&gt;使用条款&lt;br&gt;&lt;/p&gt;', '使用条款', '', '');
 INSERT INTO `mc_information_description` VALUES ('6', '3', '物流配送', '&lt;p&gt;\r\n	物流配送&lt;/p&gt;\r\n', '物流配送', '', '');
 INSERT INTO `mc_information_description` VALUES ('5', '3', '使用條款', '&lt;p&gt;\r\n	使用條款&lt;/p&gt;\r\n', '使用條款', '', '');
 INSERT INTO `mc_information_description` VALUES ('3', '3', '隱私政策', '&lt;p&gt;\r\n	隱私政策&lt;/p&gt;\r\n', '隱私政策', '', '');
-INSERT INTO `mc_information_description` VALUES ('4', '3', '关于我们', '&lt;p&gt;\r\n	关于我们&lt;/p&gt;\r\n', '关于我们', '', '');
+INSERT INTO `mc_information_description` VALUES ('4', '1', '关于我们', '&lt;p&gt;About Us&amp;nbsp; About Us . About Us&amp;nbsp; About Us . About Us&amp;nbsp; About Us .&amp;nbsp;&lt;br&gt;&lt;/p&gt;\r\n', '关于我们', '', '');
 
 -- ----------------------------
 -- Table structure for mc_information_to_layout
@@ -5744,6 +5675,7 @@ CREATE TABLE `mc_information_to_layout` (
 -- ----------------------------
 -- Records of mc_information_to_layout
 -- ----------------------------
+INSERT INTO `mc_information_to_layout` VALUES ('4', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_information_to_store
@@ -5783,9 +5715,7 @@ CREATE TABLE `mc_language` (
 -- ----------------------------
 -- Records of mc_language
 -- ----------------------------
-INSERT INTO `mc_language` VALUES ('2', 'English', 'en-gb', 'en-US,en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', '1', '1');
 INSERT INTO `mc_language` VALUES ('1', '简体中文', 'zh-cn', 'zh-CN,zh-CN.UTF-8,zh-cn', '', '', '1', '1');
-INSERT INTO `mc_language` VALUES ('3', '繁體中文', 'zh-hk', 'zh-HK,tchinese,zh-hk,ZH-HK', '', '', '1', '1');
 
 -- ----------------------------
 -- Table structure for mc_layout
@@ -5804,7 +5734,7 @@ INSERT INTO `mc_layout` VALUES ('1', '首页布局');
 INSERT INTO `mc_layout` VALUES ('2', '商品详情');
 INSERT INTO `mc_layout` VALUES ('3', '分类布局');
 INSERT INTO `mc_layout` VALUES ('4', '默认布局');
-INSERT INTO `mc_layout` VALUES ('5', '品牌 / 制造商');
+INSERT INTO `mc_layout` VALUES ('5', '品牌信息');
 INSERT INTO `mc_layout` VALUES ('6', '会员账户');
 INSERT INTO `mc_layout` VALUES ('7', '结帐布局');
 INSERT INTO `mc_layout` VALUES ('8', '联系我们');
@@ -5813,8 +5743,6 @@ INSERT INTO `mc_layout` VALUES ('10', '加盟推广');
 INSERT INTO `mc_layout` VALUES ('11', '信息文章');
 INSERT INTO `mc_layout` VALUES ('12', '商品比较');
 INSERT INTO `mc_layout` VALUES ('13', '检索布局');
-INSERT INTO `mc_layout` VALUES ('14', '博客列表');
-INSERT INTO `mc_layout` VALUES ('15', '博客詳情');
 INSERT INTO `mc_layout` VALUES ('16', '新闻列表');
 INSERT INTO `mc_layout` VALUES ('17', '新闻详情');
 INSERT INTO `mc_layout` VALUES ('18', '常见问题与解答(FAQs)布局');
@@ -5831,31 +5759,24 @@ CREATE TABLE `mc_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=153 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=185 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_layout_module
 -- ----------------------------
-INSERT INTO `mc_layout_module` VALUES ('83', '5', 'account', 'column_left', '2');
 INSERT INTO `mc_layout_module` VALUES ('75', '10', 'account', 'column_right', '1');
 INSERT INTO `mc_layout_module` VALUES ('119', '6', 'account', 'column_right', '3');
-INSERT INTO `mc_layout_module` VALUES ('130', '1', 'carousel.29', 'content_top', '3');
-INSERT INTO `mc_layout_module` VALUES ('127', '3', 'banner.30', 'column_left', '2');
-INSERT INTO `mc_layout_module` VALUES ('126', '3', 'category', 'column_left', '1');
-INSERT INTO `mc_layout_module` VALUES ('129', '1', 'featured.28', 'content_top', '2');
-INSERT INTO `mc_layout_module` VALUES ('142', '14', 'blog_latest.36', 'column_left', '2');
-INSERT INTO `mc_layout_module` VALUES ('86', '15', 'blog_search', 'column_left', '0');
-INSERT INTO `mc_layout_module` VALUES ('143', '14', 'blog_comment.37', 'column_left', '3');
-INSERT INTO `mc_layout_module` VALUES ('141', '14', 'blog_category', 'column_left', '1');
-INSERT INTO `mc_layout_module` VALUES ('131', '1', 'kefu.35', 'content_bottom', '0');
-INSERT INTO `mc_layout_module` VALUES ('140', '14', 'blog_search', 'column_left', '0');
+INSERT INTO `mc_layout_module` VALUES ('184', '3', 'filter', 'column_left', '1');
+INSERT INTO `mc_layout_module` VALUES ('183', '3', 'category', 'column_left', '0');
+INSERT INTO `mc_layout_module` VALUES ('163', '1', 'carousel.29', 'content_top', '3');
+INSERT INTO `mc_layout_module` VALUES ('164', '1', 'kefu.35', 'content_bottom', '0');
+INSERT INTO `mc_layout_module` VALUES ('166', '5', 'banner.31', 'column_left', '2');
+INSERT INTO `mc_layout_module` VALUES ('162', '1', 'featured.28', 'content_top', '2');
 INSERT INTO `mc_layout_module` VALUES ('93', '18', 'faq_category', 'column_left', '0');
-INSERT INTO `mc_layout_module` VALUES ('128', '1', 'slideshow.27', 'content_top', '1');
+INSERT INTO `mc_layout_module` VALUES ('161', '1', 'slideshow.27', 'content_top', '1');
 INSERT INTO `mc_layout_module` VALUES ('145', '16', 'press_category', 'column_left', '0');
 INSERT INTO `mc_layout_module` VALUES ('146', '16', 'press_latest', 'column_left', '1');
 INSERT INTO `mc_layout_module` VALUES ('147', '17', 'press_category', 'column_left', '0');
-INSERT INTO `mc_layout_module` VALUES ('152', '19', 'weibo_login', 'content_top', '1');
-INSERT INTO `mc_layout_module` VALUES ('151', '19', 'qq_login', 'content_top', '0');
 
 -- ----------------------------
 -- Table structure for mc_layout_route
@@ -5867,29 +5788,26 @@ CREATE TABLE `mc_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(64) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=141 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_layout_route
 -- ----------------------------
 INSERT INTO `mc_layout_route` VALUES ('86', '6', '0', 'account/%');
 INSERT INTO `mc_layout_route` VALUES ('55', '10', '0', 'affiliate/%');
-INSERT INTO `mc_layout_route` VALUES ('89', '3', '0', 'product/category');
-INSERT INTO `mc_layout_route` VALUES ('90', '1', '0', 'common/home');
+INSERT INTO `mc_layout_route` VALUES ('140', '3', '0', 'product/category');
+INSERT INTO `mc_layout_route` VALUES ('112', '1', '0', 'common/home');
 INSERT INTO `mc_layout_route` VALUES ('64', '2', '0', 'product/product');
 INSERT INTO `mc_layout_route` VALUES ('62', '11', '0', 'information/information');
 INSERT INTO `mc_layout_route` VALUES ('106', '7', '0', 'checkout/%');
 INSERT INTO `mc_layout_route` VALUES ('59', '8', '0', 'information/contact');
 INSERT INTO `mc_layout_route` VALUES ('66', '9', '0', 'information/sitemap');
 INSERT INTO `mc_layout_route` VALUES ('67', '4', '0', '');
-INSERT INTO `mc_layout_route` VALUES ('63', '5', '0', 'product/manufacturer');
+INSERT INTO `mc_layout_route` VALUES ('114', '5', '0', 'product/manufacturer');
 INSERT INTO `mc_layout_route` VALUES ('58', '12', '0', 'product/compare');
 INSERT INTO `mc_layout_route` VALUES ('65', '13', '0', 'product/search');
-INSERT INTO `mc_layout_route` VALUES ('100', '14', '0', 'blog/category');
-INSERT INTO `mc_layout_route` VALUES ('70', '15', '0', 'blog/blog');
 INSERT INTO `mc_layout_route` VALUES ('105', '17', '0', 'press/press');
 INSERT INTO `mc_layout_route` VALUES ('77', '18', '0', 'faq/%');
-INSERT INTO `mc_layout_route` VALUES ('99', '14', '0', 'blog/all');
 INSERT INTO `mc_layout_route` VALUES ('103', '16', '0', 'press/category');
 INSERT INTO `mc_layout_route` VALUES ('104', '16', '0', 'press/all');
 INSERT INTO `mc_layout_route` VALUES ('109', '19', '0', 'account/login');
@@ -5909,7 +5827,6 @@ CREATE TABLE `mc_length_class` (
 -- ----------------------------
 INSERT INTO `mc_length_class` VALUES ('1', '1.00000000');
 INSERT INTO `mc_length_class` VALUES ('2', '10.00000000');
-INSERT INTO `mc_length_class` VALUES ('3', '0.39370000');
 
 -- ----------------------------
 -- Table structure for mc_length_class_description
@@ -5926,13 +5843,10 @@ CREATE TABLE `mc_length_class_description` (
 -- ----------------------------
 -- Records of mc_length_class_description
 -- ----------------------------
-INSERT INTO `mc_length_class_description` VALUES ('3', '3', '英寸', 'in');
 INSERT INTO `mc_length_class_description` VALUES ('1', '2', 'Centimeter', 'cm');
 INSERT INTO `mc_length_class_description` VALUES ('2', '2', 'Millimeter', 'mm');
-INSERT INTO `mc_length_class_description` VALUES ('3', '2', 'Inch', 'in');
 INSERT INTO `mc_length_class_description` VALUES ('1', '1', '厘米', 'cm');
 INSERT INTO `mc_length_class_description` VALUES ('2', '1', '毫米', 'mm');
-INSERT INTO `mc_length_class_description` VALUES ('3', '1', '英寸', 'in');
 INSERT INTO `mc_length_class_description` VALUES ('1', '3', '厘米', 'cm');
 INSERT INTO `mc_length_class_description` VALUES ('2', '3', '毫米', 'mm');
 
@@ -5968,17 +5882,24 @@ CREATE TABLE `mc_manufacturer` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`manufacturer_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_manufacturer
 -- ----------------------------
-INSERT INTO `mc_manufacturer` VALUES ('5', 'HTC', 'catalog/demo/htc_logo.jpg', '0');
-INSERT INTO `mc_manufacturer` VALUES ('6', 'Palm', 'catalog/demo/palm_logo.jpg', '0');
-INSERT INTO `mc_manufacturer` VALUES ('7', 'Hewlett-Packard', 'catalog/demo/hp_logo.jpg', '0');
-INSERT INTO `mc_manufacturer` VALUES ('8', 'Apple', 'catalog/demo/apple_logo.jpg', '0');
-INSERT INTO `mc_manufacturer` VALUES ('9', 'Canon', 'catalog/demo/canon_logo.jpg', '0');
-INSERT INTO `mc_manufacturer` VALUES ('10', 'Sony', 'catalog/demo/sony_logo.jpg', '0');
+INSERT INTO `mc_manufacturer` VALUES ('8', '苹果', 'catalog/demo/apple_logo.jpg', '2');
+INSERT INTO `mc_manufacturer` VALUES ('11', '华为', 'catalog/brand/logo_huawei.jpg', '0');
+INSERT INTO `mc_manufacturer` VALUES ('12', '小米', '', '3');
+INSERT INTO `mc_manufacturer` VALUES ('14', '三星', '', '4');
+INSERT INTO `mc_manufacturer` VALUES ('15', '魅族', '', '5');
+INSERT INTO `mc_manufacturer` VALUES ('17', 'vivo', '', '9');
+INSERT INTO `mc_manufacturer` VALUES ('18', '中兴', '', '11');
+INSERT INTO `mc_manufacturer` VALUES ('19', 'oppo', '', '8');
+INSERT INTO `mc_manufacturer` VALUES ('22', '美图', '', '6');
+INSERT INTO `mc_manufacturer` VALUES ('23', '诺基亚', '', '7');
+INSERT INTO `mc_manufacturer` VALUES ('24', '飞利浦', '', '10');
+INSERT INTO `mc_manufacturer` VALUES ('26', '荣耀', '', '1');
+INSERT INTO `mc_manufacturer` VALUES ('27', '小天才', '', '12');
 
 -- ----------------------------
 -- Table structure for mc_manufacturer_to_store
@@ -5993,12 +5914,19 @@ CREATE TABLE `mc_manufacturer_to_store` (
 -- ----------------------------
 -- Records of mc_manufacturer_to_store
 -- ----------------------------
-INSERT INTO `mc_manufacturer_to_store` VALUES ('5', '0');
-INSERT INTO `mc_manufacturer_to_store` VALUES ('6', '0');
-INSERT INTO `mc_manufacturer_to_store` VALUES ('7', '0');
 INSERT INTO `mc_manufacturer_to_store` VALUES ('8', '0');
-INSERT INTO `mc_manufacturer_to_store` VALUES ('9', '0');
-INSERT INTO `mc_manufacturer_to_store` VALUES ('10', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('11', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('12', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('14', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('15', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('17', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('18', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('19', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('22', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('23', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('24', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('26', '0');
+INSERT INTO `mc_manufacturer_to_store` VALUES ('27', '0');
 
 -- ----------------------------
 -- Table structure for mc_marketing
@@ -6012,11 +5940,12 @@ CREATE TABLE `mc_marketing` (
   `clicks` int(5) NOT NULL DEFAULT '0',
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`marketing_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_marketing
 -- ----------------------------
+INSERT INTO `mc_marketing` VALUES ('1', '新用户注册', '新用户注册、会员推广', '5c0fbfaca95cd', '0', '2018-12-11 08:46:53');
 
 -- ----------------------------
 -- Table structure for mc_modification
@@ -6057,13 +5986,12 @@ CREATE TABLE `mc_module` (
 -- ----------------------------
 INSERT INTO `mc_module` VALUES ('30', 'Category', 'banner', '{\"name\":\"Category\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}');
 INSERT INTO `mc_module` VALUES ('29', 'Home Page', 'carousel', '{\"name\":\"Home Page\",\"banner_id\":\"8\",\"width\":\"130\",\"height\":\"100\",\"status\":\"1\"}');
-INSERT INTO `mc_module` VALUES ('28', 'Home Page', 'featured', '{\"name\":\"Home Page\",\"product\":[\"43\",\"40\",\"42\",\"30\"],\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}');
+INSERT INTO `mc_module` VALUES ('28', 'Home Page', 'featured', '{\"name\":\"Home Page\",\"product_name\":\"\",\"product\":[\"167\",\"393\",\"518\",\"556\"],\"limit\":\"8\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}');
 INSERT INTO `mc_module` VALUES ('27', 'Home Page', 'slideshow', '{\"name\":\"Home Page\",\"banner_id\":\"7\",\"width\":\"1140\",\"height\":\"580\",\"status\":\"1\"}');
 INSERT INTO `mc_module` VALUES ('31', 'Banner 1', 'banner', '{\"name\":\"Banner 1\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}');
-INSERT INTO `mc_module` VALUES ('36', '博客详情页面', 'blog_latest', '{\"name\":\"\\u535a\\u5ba2\\u8be6\\u60c5\\u9875\\u9762\",\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}');
-INSERT INTO `mc_module` VALUES ('37', '博客列表页面', 'blog_comment', '{\"name\":\"\\u535a\\u5ba2\\u5217\\u8868\\u9875\\u9762\",\"limit\":\"3\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}');
-INSERT INTO `mc_module` VALUES ('35', '首页侧边栏客服', 'kefu', '{\"name\":\"\\u9996\\u9875\\u4fa7\\u8fb9\\u680f\\u5ba2\\u670d\",\"status\":\"1\",\"telephone\":\"18561800618\",\"image_title\":\"\\u5fae\\u4fe1\\u4e8c\\u7ef4\\u7801\",\"image\":\"catalog\\/demo\\/banners\\/qrcode_for_gh_29f75db0e2c0_430.jpg\",\"service_qq\":[{\"qq_number\":\"909835012\",\"qq_name\":\"\\u9500\\u552e\",\"sort_order\":\"1\"},{\"qq_number\":\"150766998\",\"qq_name\":\"\\u6280\\u672f\\u652f\\u6301\",\"sort_order\":\"2\"}]}');
-INSERT INTO `mc_module` VALUES ('38', '博客分类页面', 'blog_comment', '{\"name\":\"\\u535a\\u5ba2\\u5206\\u7c7b\\u9875\\u9762\",\"limit\":\"5\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}');
+INSERT INTO `mc_module` VALUES ('37', '博客列表页面', 'blog_comment', '{\"name\":\"\\u535a\\u5ba2\\u5217\\u8868\\u9875\\u9762\",\"limit\":\"3\",\"width\":\"200\",\"height\":\"200\",\"status\":\"0\"}');
+INSERT INTO `mc_module` VALUES ('35', '首页侧边栏客服', 'kefu', '{\"name\":\"\\u9996\\u9875\\u4fa7\\u8fb9\\u680f\\u5ba2\\u670d\",\"status\":\"1\",\"telephone\":\"1566062666\",\"image_title\":\"\\u652f\\u4ed8\\u5b9d\\u626b\\u7801\\u652f\\u4ed8\",\"image\":\"catalog\\/alipay1.jpeg\",\"service_qq\":[{\"qq_number\":\"472556417\",\"qq_name\":\"\\u9500\\u552e\",\"sort_order\":\"1\"},{\"qq_number\":\"472556417\",\"qq_name\":\"\\u6280\\u672f\\u652f\\u6301\",\"sort_order\":\"2\"}]}');
+INSERT INTO `mc_module` VALUES ('38', '博客分类页面', 'blog_comment', '{\"name\":\"\\u535a\\u5ba2\\u5206\\u7c7b\\u9875\\u9762\",\"limit\":\"5\",\"width\":\"200\",\"height\":\"200\",\"status\":\"0\"}');
 
 -- ----------------------------
 -- Table structure for mc_option
@@ -6074,20 +6002,14 @@ CREATE TABLE `mc_option` (
   `type` varchar(32) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`option_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_option
 -- ----------------------------
 INSERT INTO `mc_option` VALUES ('10', 'datetime', '9');
-INSERT INTO `mc_option` VALUES ('9', 'time', '8');
-INSERT INTO `mc_option` VALUES ('8', 'date', '7');
-INSERT INTO `mc_option` VALUES ('7', 'file', '6');
-INSERT INTO `mc_option` VALUES ('6', 'textarea', '5');
-INSERT INTO `mc_option` VALUES ('5', 'select', '4');
-INSERT INTO `mc_option` VALUES ('4', 'text', '3');
-INSERT INTO `mc_option` VALUES ('2', 'checkbox', '2');
-INSERT INTO `mc_option` VALUES ('1', 'radio', '1');
+INSERT INTO `mc_option` VALUES ('13', 'radio', '5');
+INSERT INTO `mc_option` VALUES ('5', 'radio', '4');
 INSERT INTO `mc_option` VALUES ('11', 'select', '10');
 INSERT INTO `mc_option` VALUES ('12', 'date', '11');
 
@@ -6106,30 +6028,8 @@ CREATE TABLE `mc_option_description` (
 -- Records of mc_option_description
 -- ----------------------------
 INSERT INTO `mc_option_description` VALUES ('10', '1', '日期 &amp; 时间');
-INSERT INTO `mc_option_description` VALUES ('9', '3', '时间');
-INSERT INTO `mc_option_description` VALUES ('9', '2', 'Time');
-INSERT INTO `mc_option_description` VALUES ('9', '1', '时间');
-INSERT INTO `mc_option_description` VALUES ('8', '3', '日期');
-INSERT INTO `mc_option_description` VALUES ('8', '2', 'Date');
-INSERT INTO `mc_option_description` VALUES ('8', '1', '日期');
-INSERT INTO `mc_option_description` VALUES ('7', '3', '文件');
-INSERT INTO `mc_option_description` VALUES ('7', '2', 'File');
-INSERT INTO `mc_option_description` VALUES ('7', '1', '文件');
-INSERT INTO `mc_option_description` VALUES ('6', '3', '文本区块');
-INSERT INTO `mc_option_description` VALUES ('6', '2', 'Textarea');
-INSERT INTO `mc_option_description` VALUES ('6', '1', '文本区块');
-INSERT INTO `mc_option_description` VALUES ('5', '3', '下拉列表');
-INSERT INTO `mc_option_description` VALUES ('5', '2', 'Select');
-INSERT INTO `mc_option_description` VALUES ('5', '1', '下拉列表');
-INSERT INTO `mc_option_description` VALUES ('1', '3', '单选按钮组');
-INSERT INTO `mc_option_description` VALUES ('2', '1', '复选框');
-INSERT INTO `mc_option_description` VALUES ('2', '2', 'Checkbox');
-INSERT INTO `mc_option_description` VALUES ('2', '3', '复选框');
-INSERT INTO `mc_option_description` VALUES ('4', '1', '文本');
-INSERT INTO `mc_option_description` VALUES ('4', '2', 'Text');
-INSERT INTO `mc_option_description` VALUES ('4', '3', '文本');
-INSERT INTO `mc_option_description` VALUES ('1', '2', 'Radio');
-INSERT INTO `mc_option_description` VALUES ('1', '1', '单选按钮组');
+INSERT INTO `mc_option_description` VALUES ('13', '1', '颜色');
+INSERT INTO `mc_option_description` VALUES ('5', '1', '型号');
 INSERT INTO `mc_option_description` VALUES ('10', '2', 'Date &amp; Time');
 INSERT INTO `mc_option_description` VALUES ('10', '3', '日期 &amp; 时间');
 INSERT INTO `mc_option_description` VALUES ('11', '1', '尺寸');
@@ -6149,22 +6049,18 @@ CREATE TABLE `mc_option_value` (
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`option_value_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_option_value
 -- ----------------------------
+INSERT INTO `mc_option_value` VALUES ('42', '5', '', '4');
+INSERT INTO `mc_option_value` VALUES ('41', '5', '', '3');
+INSERT INTO `mc_option_value` VALUES ('51', '13', '', '3');
+INSERT INTO `mc_option_value` VALUES ('50', '13', '', '2');
+INSERT INTO `mc_option_value` VALUES ('49', '13', '', '1');
 INSERT INTO `mc_option_value` VALUES ('40', '5', '', '2');
 INSERT INTO `mc_option_value` VALUES ('39', '5', '', '1');
-INSERT INTO `mc_option_value` VALUES ('23', '2', '', '1');
-INSERT INTO `mc_option_value` VALUES ('24', '2', '', '2');
-INSERT INTO `mc_option_value` VALUES ('44', '2', '', '3');
-INSERT INTO `mc_option_value` VALUES ('45', '2', '', '4');
-INSERT INTO `mc_option_value` VALUES ('43', '1', '', '3');
-INSERT INTO `mc_option_value` VALUES ('32', '1', '', '1');
-INSERT INTO `mc_option_value` VALUES ('31', '1', '', '2');
-INSERT INTO `mc_option_value` VALUES ('41', '5', '', '3');
-INSERT INTO `mc_option_value` VALUES ('42', '5', '', '4');
 INSERT INTO `mc_option_value` VALUES ('46', '11', '', '1');
 INSERT INTO `mc_option_value` VALUES ('47', '11', '', '2');
 INSERT INTO `mc_option_value` VALUES ('48', '11', '', '3');
@@ -6184,39 +6080,13 @@ CREATE TABLE `mc_option_value_description` (
 -- ----------------------------
 -- Records of mc_option_value_description
 -- ----------------------------
-INSERT INTO `mc_option_value_description` VALUES ('41', '1', '5', '绿色');
-INSERT INTO `mc_option_value_description` VALUES ('40', '3', '5', '蓝色');
-INSERT INTO `mc_option_value_description` VALUES ('40', '2', '5', 'Blue');
-INSERT INTO `mc_option_value_description` VALUES ('40', '1', '5', '蓝色');
-INSERT INTO `mc_option_value_description` VALUES ('39', '3', '5', '红色');
-INSERT INTO `mc_option_value_description` VALUES ('39', '2', '5', 'Red');
-INSERT INTO `mc_option_value_description` VALUES ('39', '1', '5', '红色');
-INSERT INTO `mc_option_value_description` VALUES ('45', '3', '2', '复选框4');
-INSERT INTO `mc_option_value_description` VALUES ('24', '3', '2', '复选框2');
-INSERT INTO `mc_option_value_description` VALUES ('44', '1', '2', '复选框3');
-INSERT INTO `mc_option_value_description` VALUES ('44', '2', '2', '复选框3');
-INSERT INTO `mc_option_value_description` VALUES ('44', '3', '2', '复选框3');
-INSERT INTO `mc_option_value_description` VALUES ('45', '1', '2', '复选框4');
-INSERT INTO `mc_option_value_description` VALUES ('45', '2', '2', '复选框4');
-INSERT INTO `mc_option_value_description` VALUES ('24', '2', '2', '复选框2');
-INSERT INTO `mc_option_value_description` VALUES ('24', '1', '2', '复选框2');
-INSERT INTO `mc_option_value_description` VALUES ('32', '2', '1', 'Small');
-INSERT INTO `mc_option_value_description` VALUES ('32', '3', '1', '小');
-INSERT INTO `mc_option_value_description` VALUES ('43', '1', '1', '大');
-INSERT INTO `mc_option_value_description` VALUES ('43', '2', '1', 'Large');
-INSERT INTO `mc_option_value_description` VALUES ('43', '3', '1', '大');
-INSERT INTO `mc_option_value_description` VALUES ('23', '1', '2', '复选框1');
-INSERT INTO `mc_option_value_description` VALUES ('23', '2', '2', '复选框1');
-INSERT INTO `mc_option_value_description` VALUES ('23', '3', '2', '复选框1');
-INSERT INTO `mc_option_value_description` VALUES ('32', '1', '1', '小');
-INSERT INTO `mc_option_value_description` VALUES ('31', '3', '1', '中');
-INSERT INTO `mc_option_value_description` VALUES ('31', '2', '1', 'Medium');
-INSERT INTO `mc_option_value_description` VALUES ('31', '1', '1', '中');
-INSERT INTO `mc_option_value_description` VALUES ('41', '2', '5', 'Green');
-INSERT INTO `mc_option_value_description` VALUES ('41', '3', '5', '绿色');
-INSERT INTO `mc_option_value_description` VALUES ('42', '1', '5', '黄色');
-INSERT INTO `mc_option_value_description` VALUES ('42', '2', '5', 'Yellow');
-INSERT INTO `mc_option_value_description` VALUES ('42', '3', '5', '黄色');
+INSERT INTO `mc_option_value_description` VALUES ('51', '1', '13', '红色');
+INSERT INTO `mc_option_value_description` VALUES ('50', '1', '13', '白色');
+INSERT INTO `mc_option_value_description` VALUES ('49', '1', '13', '黑色');
+INSERT INTO `mc_option_value_description` VALUES ('42', '1', '5', '256G');
+INSERT INTO `mc_option_value_description` VALUES ('41', '1', '5', '128G');
+INSERT INTO `mc_option_value_description` VALUES ('40', '1', '5', '64G');
+INSERT INTO `mc_option_value_description` VALUES ('39', '1', '5', '32G');
 INSERT INTO `mc_option_value_description` VALUES ('46', '1', '11', '小号');
 INSERT INTO `mc_option_value_description` VALUES ('46', '2', '11', 'Small');
 INSERT INTO `mc_option_value_description` VALUES ('46', '3', '11', '小号');
@@ -6302,11 +6172,23 @@ CREATE TABLE `mc_order` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_order
 -- ----------------------------
+INSERT INTO `mc_order` VALUES ('4', '0', 'INV-2018-00', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '3', '1', 'Kandy', '', 'kandy.ye@foxmail.com', '13627245199', '', '', 'Kandy', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '430000', '中国', '44', '湖北省', '697', '', '[]', '线下付款', 'cod', '13627245199', 'Kandy', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '430000', '中国', '44', '湖北省', '697', '', '[]', '固定运费率', 'flat.flat', '13627245199', '', '4365.0000', '2', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '35.187.234.142', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36', 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7', '2018-12-02 09:25:52', '2018-12-02 09:25:54');
+INSERT INTO `mc_order` VALUES ('5', '0', 'INV-2018-00', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '3', '1', 'Kandy', '', 'kandy.ye@foxmail.com', '13627245199', '', '', 'Kandy', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '430000', '中国', '44', '湖北省', '697', '', '[]', '线下付款', 'cod', '13627245199', 'Kandy', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '430000', '中国', '44', '湖北省', '697', '', '[]', '固定运费率', 'flat.flat', '13627245199', '', '604.0000', '2', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '35.187.234.142', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36', 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7', '2018-12-02 09:44:20', '2018-12-02 09:44:22');
+INSERT INTO `mc_order` VALUES ('3', '0', 'INV-2018-00', '0', '3C.SHOP - 三采商城', 'http://3c.shop/', '2', '1', '上官玉蕾', '', '13598822444', '13598822444', '', '', '上官玉蕾', '', '', '陇海路', '', '管城回族区', '1078', '郑州市', '116', '450000', '中国', '44', '河南省', '695', '', '[]', '货到付款', 'cod', '13598822444', '上官玉蕾', '', '', '陇海路', '', '管城回族区', '1078', '郑州市', '116', '450000', '中国', '44', '河南省', '695', '', '[]', '固定运费率', 'flat.flat', '13598822444', '', '604.0000', '2', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '117.136.61.88', '', 'Mozilla/5.0 (Linux; U; Android 7.1.1; zh-cn; OPPO R11t Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.134 Mobile Safari/537.36 OppoBrowser/4.8.4', 'zh-CN,zh;q=0.8', '2018-11-27 02:27:58', '2018-11-27 02:31:16');
+INSERT INTO `mc_order` VALUES ('7', '0', 'INV-2018-00', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '4', '1', '安迪', '', '18601207087', '18601207087', '', '', '安迪', '', '', '西城区阜城外大街', '', '', '0', '北京市', '18', '', '中国', '44', '北京市', '685', '', '[]', '线下付款', 'cod', '18601207087', '安迪', '', '', '西城区阜城外大街', '', '', '0', '北京市', '18', '', '中国', '44', '北京市', '685', '', '[]', '固定运费率', 'flat.flat', '18601207087', '', '604.0000', '2', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '124.65.183.226', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8', 'zh-cn', '2018-12-05 21:47:27', '2018-12-05 21:47:30');
+INSERT INTO `mc_order` VALUES ('12', '0', 'INV-2018-00', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '1', '1', 'yan', '', '472556417@qq.com', '17319201435', '', '[]', 'yan', '', '', '高新五路', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '线下付款', 'cod', 'yan', 'yan', '', '', '高新五路', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '固定运费率', 'flat.flat', 'yan', '', '1776.0000', '2', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '27.17.232.205', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36', 'zh-CN,zh;q=0.9,hu;q=0.8', '2018-12-10 11:59:12', '2018-12-10 11:59:17');
+INSERT INTO `mc_order` VALUES ('13', '0', 'INV-2018-00', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '1', '1', 'yan', '', '472556417@qq.com', '17319201435', '', '[]', 'yan', '', '', '高新五路', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '线下付款', 'cod', 'yan', 'yan', '', '', '高新五路', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '固定运费率', 'flat.flat', 'yan', '', '1500.0000', '2', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '27.17.232.205', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36', 'zh-CN,zh;q=0.9,hu;q=0.8', '2018-12-10 19:58:54', '2018-12-10 19:58:59');
+INSERT INTO `mc_order` VALUES ('10', '0', 'INV-2018-00', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '5', '1', '王晶晶', '', '13676977677', '13676977677', '', '', '王晶晶', '', '', '陇海中路通讯新天地1C22', '', '管城回族区', '1078', '郑州市', '116', '', '中国', '44', '河南省', '695', '', '[]', '线下付款', 'cod', '13676977677', '王晶晶', '', '', '陇海中路通讯新天地1C22', '', '管城回族区', '1078', '郑州市', '116', '', '中国', '44', '河南省', '695', '', '[]', '固定运费率', 'flat.flat', '13676977677', '', '4322.0000', '2', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '42.236.169.37', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36', 'zh-CN,zh;q=0.9', '2018-12-09 04:19:37', '2018-12-09 04:19:40');
+INSERT INTO `mc_order` VALUES ('14', '0', 'INV2018-', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '7', '1', '李峰', '', '13146735563', '13146735563', '', '', 'yan', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '线下付款', 'cod', '13146735563', 'yan', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '固定运费率', 'flat.flat', '13146735563', '', '883.0000', '15', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '27.18.87.168', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36', 'zh-CN,zh;q=0.9,hu;q=0.8', '2018-12-11 09:47:34', '2018-12-13 20:47:12');
+INSERT INTO `mc_order` VALUES ('15', '0', 'INV2018-', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '7', '1', '李峰', '', '13146735563', '13146735563', '', '', 'yan', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '线下付款', 'cod', '13146735563', 'yan', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '固定运费率', 'flat.flat', '13146735563', '', '883.0000', '2', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '27.18.87.168', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36', 'zh-CN,zh;q=0.9,hu;q=0.8', '2018-12-11 09:48:36', '2018-12-11 09:48:38');
+INSERT INTO `mc_order` VALUES ('16', '1', 'INV2018-', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '7', '1', '李峰', '', '13146735563', '13146735563', '', '', 'yan', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '线下付款', 'cod', '13146735563', 'yan', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '固定运费率', 'flat.flat', '13146735563', '', '888.0000', '2', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '27.18.87.168', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36', 'zh-CN,zh;q=0.9,hu;q=0.8', '2018-12-11 09:49:12', '2018-12-11 09:49:14');
+INSERT INTO `mc_order` VALUES ('17', '0', 'INV2018-', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '7', '1', '李峰', '', '13146735563', '13146735563', '', '', 'yan', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '线下付款', 'cod', '13146735563', 'yan', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '固定运费率', 'flat.flat', '13146735563', '', '5143.0000', '14', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '27.18.87.168', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36', 'zh-CN,zh;q=0.9,hu;q=0.8', '2018-12-14 23:01:18', '2018-12-22 08:14:27');
+INSERT INTO `mc_order` VALUES ('19', '0', 'INV2018-', '0', '3C.SHOP - 三彩商城', 'http://3c.shop/', '7', '1', '李峰', '', '13146735563', '13146735563', '', '', 'yan', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '线下付款', 'cod', '13146735563', 'yan', '', '', '金地艺境', '', '江夏区', '1262', '武汉市', '133', '100011', '中国', '44', '湖北省', '697', '', '[]', '飞鹰物流', 'feiying.feiying', '13146735563', '', '1745.0000', '2', '0', '0.0000', '0', '', '1', '4', 'CNY', '1.00000000', '35.187.234.142', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', 'zh-CN,zh;q=0.9,hu;q=0.8', '2018-12-25 23:10:57', '2018-12-25 23:10:59');
 
 -- ----------------------------
 -- Table structure for mc_order_history
@@ -6320,11 +6202,27 @@ CREATE TABLE `mc_order_history` (
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`order_history_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_order_history
 -- ----------------------------
+INSERT INTO `mc_order_history` VALUES ('36', '15', '2', '0', '', '2018-12-11 09:48:38');
+INSERT INTO `mc_order_history` VALUES ('35', '14', '2', '0', '', '2018-12-11 09:47:38');
+INSERT INTO `mc_order_history` VALUES ('34', '13', '2', '0', '', '2018-12-10 19:58:59');
+INSERT INTO `mc_order_history` VALUES ('33', '12', '2', '0', '', '2018-12-10 11:59:17');
+INSERT INTO `mc_order_history` VALUES ('28', '10', '2', '0', '', '2018-12-09 04:19:40');
+INSERT INTO `mc_order_history` VALUES ('20', '5', '2', '0', '', '2018-12-02 09:44:22');
+INSERT INTO `mc_order_history` VALUES ('19', '4', '2', '0', '', '2018-12-02 09:25:54');
+INSERT INTO `mc_order_history` VALUES ('23', '7', '2', '0', '', '2018-12-05 21:47:30');
+INSERT INTO `mc_order_history` VALUES ('18', '3', '2', '0', '', '2018-11-27 02:31:16');
+INSERT INTO `mc_order_history` VALUES ('37', '16', '2', '0', '', '2018-12-11 09:49:14');
+INSERT INTO `mc_order_history` VALUES ('38', '14', '15', '0', '', '2018-12-13 20:47:12');
+INSERT INTO `mc_order_history` VALUES ('39', '17', '2', '0', '', '2018-12-14 23:01:20');
+INSERT INTO `mc_order_history` VALUES ('40', '17', '3', '0', '', '2018-12-14 23:02:20');
+INSERT INTO `mc_order_history` VALUES ('41', '17', '5', '0', '', '2018-12-14 23:02:26');
+INSERT INTO `mc_order_history` VALUES ('42', '17', '14', '0', '状态变化', '2018-12-22 08:14:27');
+INSERT INTO `mc_order_history` VALUES ('45', '19', '2', '0', '', '2018-12-25 23:10:59');
 
 -- ----------------------------
 -- Table structure for mc_order_option
@@ -6363,11 +6261,25 @@ CREATE TABLE `mc_order_product` (
   `reward` int(8) NOT NULL,
   PRIMARY KEY (`order_product_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_order_product
 -- ----------------------------
+INSERT INTO `mc_order_product` VALUES ('14', '5', '40', '荣耀畅玩7', '华为荣耀', '1', '599.0000', '599.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('12', '3', '40', '荣耀畅玩7', '华为荣耀', '1', '599.0000', '599.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('13', '4', '53', '苹果 iPhone 7', '苹果 iPhone 7 32G 全网通 金色', '1', '4360.0000', '4360.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('16', '7', '40', '荣耀畅玩7', '华为荣耀', '1', '599.0000', '599.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('20', '10', '131', '华为 mate20 X ', '华为mate20X  6+128G全网通 宝石蓝', '1', '4317.0000', '4317.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('25', '12', '197', '苹果 iPhone 7 ', '苹果 iPhone 7 128G 全网通 黑色', '1', '888.0000', '888.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('24', '12', '190', '苹果 iPhone 7 ', '苹果 iPhone 7 128G 全网通 玫瑰金', '1', '888.0000', '888.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('26', '13', '339', '荣耀10 ', '荣耀10 6+128G 全网通 幻影紫', '1', '1500.0000', '1500.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('27', '14', '306', '小米 红米5 Plus ', '小米 红米5 Plus 3G 32G 全网通 黑色', '1', '888.0000', '888.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('28', '15', '262', '小米6X ', '小米6X 4G 64G 全网通 樱花粉', '1', '888.0000', '888.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('29', '16', '207', '苹果 iPhone 7 Plus ', '苹果 iPhone 7 Plus 全网通 32G 黑色', '1', '888.0000', '888.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('30', '17', '57', '苹果 iPhone 7', '苹果 iPhone 7 128G 全网通 金色', '1', '4360.0000', '4360.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('31', '17', '191', '苹果 iPhone 7 ', '苹果 iPhone 7 32G 全网通 玫瑰金', '1', '888.0000', '888.0000', '0.0000', '0');
+INSERT INTO `mc_order_product` VALUES ('33', '19', '280', '诺基亚 7 Plus', '诺基亚 7 Plus 4G 64G 全网通 黑色 ', '1', '1850.0000', '1850.0000', '0.0000', '0');
 
 -- ----------------------------
 -- Table structure for mc_order_recurring
@@ -6455,7 +6367,6 @@ INSERT INTO `mc_order_status` VALUES ('7', '3', '已取消');
 INSERT INTO `mc_order_status` VALUES ('10', '3', '失败');
 INSERT INTO `mc_order_status` VALUES ('11', '3', '已退款');
 INSERT INTO `mc_order_status` VALUES ('3', '3', '已配送');
-INSERT INTO `mc_order_status` VALUES ('16', '3', '无效');
 INSERT INTO `mc_order_status` VALUES ('15', '3', '已处理');
 INSERT INTO `mc_order_status` VALUES ('14', '3', '失效');
 INSERT INTO `mc_order_status` VALUES ('8', '3', '已拒绝');
@@ -6468,9 +6379,7 @@ INSERT INTO `mc_order_status` VALUES ('8', '2', 'Denied');
 INSERT INTO `mc_order_status` VALUES ('9', '2', 'Canceled Reversal');
 INSERT INTO `mc_order_status` VALUES ('10', '2', 'Failed');
 INSERT INTO `mc_order_status` VALUES ('11', '2', 'Refunded');
-INSERT INTO `mc_order_status` VALUES ('13', '2', 'Chargeback');
 INSERT INTO `mc_order_status` VALUES ('1', '2', 'Pending ');
-INSERT INTO `mc_order_status` VALUES ('16', '2', 'Voided');
 INSERT INTO `mc_order_status` VALUES ('15', '2', 'Processed');
 INSERT INTO `mc_order_status` VALUES ('14', '2', 'Expired');
 INSERT INTO `mc_order_status` VALUES ('2', '1', '处理中');
@@ -6481,13 +6390,10 @@ INSERT INTO `mc_order_status` VALUES ('8', '1', '已拒绝');
 INSERT INTO `mc_order_status` VALUES ('9', '1', '撤销取消');
 INSERT INTO `mc_order_status` VALUES ('10', '1', '失败');
 INSERT INTO `mc_order_status` VALUES ('11', '1', '已退款');
-INSERT INTO `mc_order_status` VALUES ('13', '1', '拒付');
 INSERT INTO `mc_order_status` VALUES ('1', '1', '等待处理');
-INSERT INTO `mc_order_status` VALUES ('16', '1', '无效');
 INSERT INTO `mc_order_status` VALUES ('15', '1', '已处理');
 INSERT INTO `mc_order_status` VALUES ('14', '1', '失效');
 INSERT INTO `mc_order_status` VALUES ('9', '3', '撤销取消');
-INSERT INTO `mc_order_status` VALUES ('13', '3', '拒付');
 INSERT INTO `mc_order_status` VALUES ('5', '3', '完成');
 
 -- ----------------------------
@@ -6503,11 +6409,46 @@ CREATE TABLE `mc_order_total` (
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`order_total_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=73 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_order_total
 -- ----------------------------
+INSERT INTO `mc_order_total` VALUES ('30', '4', 'total', '总计', '4365.0000', '9');
+INSERT INTO `mc_order_total` VALUES ('28', '4', 'sub_total', '小计', '4360.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('29', '4', 'shipping', '固定运费率', '5.0000', '3');
+INSERT INTO `mc_order_total` VALUES ('27', '3', 'total', '总计', '604.0000', '9');
+INSERT INTO `mc_order_total` VALUES ('25', '3', 'sub_total', '小计', '599.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('26', '3', 'shipping', '固定运费率', '5.0000', '3');
+INSERT INTO `mc_order_total` VALUES ('31', '5', 'sub_total', '小计', '599.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('32', '5', 'shipping', '固定运费率', '5.0000', '3');
+INSERT INTO `mc_order_total` VALUES ('33', '5', 'total', '总计', '604.0000', '9');
+INSERT INTO `mc_order_total` VALUES ('38', '7', 'shipping', '固定运费率', '5.0000', '3');
+INSERT INTO `mc_order_total` VALUES ('37', '7', 'sub_total', '小计', '599.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('39', '7', 'total', '总计', '604.0000', '9');
+INSERT INTO `mc_order_total` VALUES ('48', '10', 'total', '总计', '4322.0000', '9');
+INSERT INTO `mc_order_total` VALUES ('47', '10', 'shipping', '固定运费率', '5.0000', '3');
+INSERT INTO `mc_order_total` VALUES ('46', '10', 'sub_total', '小计', '4317.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('51', '12', 'sub_total', '小计', '1776.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('52', '12', 'total', '总计', '1776.0000', '4');
+INSERT INTO `mc_order_total` VALUES ('53', '13', 'sub_total', '小计', '1500.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('54', '13', 'total', '总计', '1500.0000', '4');
+INSERT INTO `mc_order_total` VALUES ('55', '14', 'sub_total', '小计', '888.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('56', '14', 'total', '总计', '888.0000', '4');
+INSERT INTO `mc_order_total` VALUES ('57', '14', 'coupon', '折扣券 (CNY5)', '-5.0000', '5');
+INSERT INTO `mc_order_total` VALUES ('58', '15', 'sub_total', '小计', '888.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('59', '15', 'total', '总计', '888.0000', '4');
+INSERT INTO `mc_order_total` VALUES ('60', '15', 'coupon', '折扣券 (CNY5)', '-5.0000', '5');
+INSERT INTO `mc_order_total` VALUES ('61', '16', 'sub_total', '小计', '888.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('62', '16', 'total', '总计', '888.0000', '4');
+INSERT INTO `mc_order_total` VALUES ('63', '17', 'sub_total', '小计', '5248.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('64', '17', 'credit', '账户余额', '-100.0000', '2');
+INSERT INTO `mc_order_total` VALUES ('65', '17', 'total', '总计', '5148.0000', '4');
+INSERT INTO `mc_order_total` VALUES ('66', '17', 'coupon', '折扣券 (CNY5)', '-5.0000', '5');
+INSERT INTO `mc_order_total` VALUES ('69', '19', 'sub_total', '小计', '1850.0000', '1');
+INSERT INTO `mc_order_total` VALUES ('70', '19', 'credit', '账户余额', '-100.0000', '2');
+INSERT INTO `mc_order_total` VALUES ('71', '19', 'total', '总计', '1750.0000', '4');
+INSERT INTO `mc_order_total` VALUES ('72', '19', 'coupon', '折扣券 (CNY5)', '-5.0000', '5');
 
 -- ----------------------------
 -- Table structure for mc_order_voucher
@@ -6553,13 +6494,6 @@ CREATE TABLE `mc_press` (
 INSERT INTO `mc_press` VALUES ('1', '', '1', '1', '2015-12-29 19:27:12', '2017-08-31 07:45:54');
 INSERT INTO `mc_press` VALUES ('2', '', '2', '1', '2016-02-18 14:02:30', '2016-02-18 14:02:51');
 INSERT INTO `mc_press` VALUES ('3', '', '1', '1', '2016-02-18 14:35:34', '2016-08-22 12:06:23');
-INSERT INTO `mc_press` VALUES ('4', '', '1', '1', '2016-02-25 10:35:26', '2016-08-22 12:06:16');
-INSERT INTO `mc_press` VALUES ('5', '', '1', '1', '2016-02-25 10:40:23', '2016-08-22 12:06:23');
-INSERT INTO `mc_press` VALUES ('6', '', '1', '1', '2016-02-25 10:40:51', '2016-08-22 12:06:23');
-INSERT INTO `mc_press` VALUES ('7', '', '1', '1', '2016-02-25 10:41:20', '2016-08-22 12:06:23');
-INSERT INTO `mc_press` VALUES ('8', '', '1', '1', '2016-02-25 10:41:47', '2016-08-22 12:06:23');
-INSERT INTO `mc_press` VALUES ('9', '', '1', '1', '2016-02-25 10:42:17', '2016-08-22 12:06:23');
-INSERT INTO `mc_press` VALUES ('10', '', '1', '1', '2016-02-25 10:42:48', '2016-08-22 12:06:01');
 
 -- ----------------------------
 -- Table structure for mc_press_category
@@ -6580,9 +6514,8 @@ CREATE TABLE `mc_press_category` (
 -- ----------------------------
 -- Records of mc_press_category
 -- ----------------------------
-INSERT INTO `mc_press_category` VALUES ('1', '', '0', '0', '1', '2015-12-29 19:20:03', '2017-08-31 14:11:45');
-INSERT INTO `mc_press_category` VALUES ('2', 'catalog/demo/28_2.jpg', '0', '0', '1', '2015-12-29 19:25:58', '2017-08-31 14:18:41');
-INSERT INTO `mc_press_category` VALUES ('7', 'catalog/demo/apple_logo.jpg', '0', '0', '1', '2017-08-31 14:24:10', '2017-08-31 14:24:30');
+INSERT INTO `mc_press_category` VALUES ('1', '', '0', '0', '1', '2015-12-29 19:20:03', '2018-12-08 16:06:46');
+INSERT INTO `mc_press_category` VALUES ('2', 'catalog/demo/28_2.jpg', '0', '0', '1', '2015-12-29 19:25:58', '2018-12-08 16:07:27');
 
 -- ----------------------------
 -- Table structure for mc_press_category_description
@@ -6603,15 +6536,8 @@ CREATE TABLE `mc_press_category_description` (
 -- ----------------------------
 -- Records of mc_press_category_description
 -- ----------------------------
-INSERT INTO `mc_press_category_description` VALUES ('1', '2', '新闻分类一', '&lt;p&gt;新闻分类一&lt;br&gt;&lt;/p&gt;', '新闻分类一', '新闻分类一', '新闻分类一');
-INSERT INTO `mc_press_category_description` VALUES ('1', '1', '新闻分类一', '&lt;p&gt;新闻分类一&lt;br&gt;&lt;/p&gt;', '新闻分类一', '新闻分类一', '新闻分类一');
-INSERT INTO `mc_press_category_description` VALUES ('1', '3', '新闻分类一', '&lt;p&gt;新闻分类一&lt;br&gt;&lt;/p&gt;', '新闻分类一', '新闻分类一', '新闻分类一');
-INSERT INTO `mc_press_category_description` VALUES ('2', '3', '新闻分类二', '&lt;p&gt;新闻分类二&lt;br&gt;&lt;/p&gt;', '新闻分类二', '新闻分类二', '新闻分类二');
-INSERT INTO `mc_press_category_description` VALUES ('2', '1', '新闻分类二', '&lt;p&gt;新闻分类二&lt;br&gt;&lt;/p&gt;', '新闻分类二', '新闻分类二', '新闻分类二');
-INSERT INTO `mc_press_category_description` VALUES ('2', '2', 'Press Category Two', '&lt;p&gt;Press Category Two&lt;br&gt;&lt;/p&gt;', 'Press Category Two', 'Press Category Two', 'Press Category Two');
-INSERT INTO `mc_press_category_description` VALUES ('7', '2', 'Press Category Three', '&lt;p&gt;Press Category Three&lt;br&gt;&lt;/p&gt;', 'Press Category Three', 'Press Category Three', 'Press Category Three');
-INSERT INTO `mc_press_category_description` VALUES ('7', '1', '新闻分类三', '&lt;p&gt;新闻分类三&lt;br&gt;&lt;/p&gt;', '新闻分类三', '新闻分类三', '新闻分类三');
-INSERT INTO `mc_press_category_description` VALUES ('7', '3', '新闻分类三', '&lt;p&gt;新闻分类三&lt;br&gt;&lt;/p&gt;', '新闻分类三', '新闻分类三', '新闻分类三');
+INSERT INTO `mc_press_category_description` VALUES ('1', '1', '新品发布', '&lt;p&gt;新品发布&lt;br&gt;&lt;/p&gt;', '新品发布', '新品发布', '新品发布');
+INSERT INTO `mc_press_category_description` VALUES ('2', '1', '价格快讯', '&lt;p&gt;价格快讯&lt;br&gt;&lt;/p&gt;', '价格快讯', '价格快讯', '价格快讯');
 
 -- ----------------------------
 -- Table structure for mc_press_category_path
@@ -6629,7 +6555,6 @@ CREATE TABLE `mc_press_category_path` (
 -- ----------------------------
 INSERT INTO `mc_press_category_path` VALUES ('1', '1', '0');
 INSERT INTO `mc_press_category_path` VALUES ('2', '2', '0');
-INSERT INTO `mc_press_category_path` VALUES ('7', '7', '0');
 
 -- ----------------------------
 -- Table structure for mc_press_category_to_layout
@@ -6647,7 +6572,6 @@ CREATE TABLE `mc_press_category_to_layout` (
 -- ----------------------------
 INSERT INTO `mc_press_category_to_layout` VALUES ('1', '0', '0');
 INSERT INTO `mc_press_category_to_layout` VALUES ('2', '0', '0');
-INSERT INTO `mc_press_category_to_layout` VALUES ('7', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_press_category_to_store
@@ -6664,7 +6588,6 @@ CREATE TABLE `mc_press_category_to_store` (
 -- ----------------------------
 INSERT INTO `mc_press_category_to_store` VALUES ('1', '0');
 INSERT INTO `mc_press_category_to_store` VALUES ('2', '0');
-INSERT INTO `mc_press_category_to_store` VALUES ('7', '0');
 
 -- ----------------------------
 -- Table structure for mc_press_description
@@ -6694,27 +6617,6 @@ INSERT INTO `mc_press_description` VALUES ('2', '1', '新闻二', '&lt;p&gt;新�
 INSERT INTO `mc_press_description` VALUES ('3', '1', '新闻三', '&lt;p&gt;新闻三&lt;br&gt;&lt;/p&gt;', '新闻三', '新闻三', '新闻三');
 INSERT INTO `mc_press_description` VALUES ('3', '2', '新闻三', '&lt;p&gt;新闻三&lt;br&gt;&lt;/p&gt;', '新闻三', '新闻三', '新闻三');
 INSERT INTO `mc_press_description` VALUES ('3', '3', '新闻三', '&lt;p&gt;新闻三&lt;br&gt;&lt;/p&gt;', '新闻三', '新闻三', '新闻三');
-INSERT INTO `mc_press_description` VALUES ('4', '3', '新闻4', '&lt;p&gt;新闻4&lt;br&gt;&lt;/p&gt;', '新闻4', '新闻4', '新闻4');
-INSERT INTO `mc_press_description` VALUES ('4', '2', '新闻4', '&lt;p&gt;新闻4&lt;br&gt;&lt;/p&gt;', '新闻4', '新闻4', '新闻4');
-INSERT INTO `mc_press_description` VALUES ('4', '1', '新闻4', '&lt;p&gt;新闻4&lt;br&gt;&lt;/p&gt;', '新闻4', '新闻4', '新闻4');
-INSERT INTO `mc_press_description` VALUES ('5', '3', '新闻5', '&lt;p&gt;新闻5&lt;br&gt;&lt;/p&gt;', '新闻5', '新闻5', '新闻5');
-INSERT INTO `mc_press_description` VALUES ('5', '2', '新闻5', '&lt;p&gt;新闻5&lt;br&gt;&lt;/p&gt;', '新闻5', '新闻5', '新闻5');
-INSERT INTO `mc_press_description` VALUES ('5', '1', '新闻5', '&lt;p&gt;新闻5&lt;br&gt;&lt;/p&gt;', '新闻5', '新闻5', '新闻5');
-INSERT INTO `mc_press_description` VALUES ('6', '1', '新闻6', '&lt;p&gt;新闻6&lt;br&gt;&lt;/p&gt;', '新闻6', '新闻6', '新闻6');
-INSERT INTO `mc_press_description` VALUES ('6', '2', '新闻6', '&lt;p&gt;新闻6&lt;br&gt;&lt;/p&gt;', '新闻6', '新闻6', '新闻6');
-INSERT INTO `mc_press_description` VALUES ('6', '3', '新闻6', '&lt;p&gt;新闻6&lt;br&gt;&lt;/p&gt;', '新闻6', '新闻6', '新闻6');
-INSERT INTO `mc_press_description` VALUES ('7', '1', '新闻7', '&lt;p&gt;新闻7&lt;br&gt;&lt;/p&gt;', '新闻7', '新闻7', '新闻7');
-INSERT INTO `mc_press_description` VALUES ('7', '2', '新闻7', '&lt;p&gt;新闻7&lt;br&gt;&lt;/p&gt;', '新闻7', '新闻7', '新闻7');
-INSERT INTO `mc_press_description` VALUES ('7', '3', '新闻7', '&lt;p&gt;新闻7&lt;br&gt;&lt;/p&gt;', '新闻7', '新闻7', '新闻7');
-INSERT INTO `mc_press_description` VALUES ('8', '1', '新闻8', '&lt;p&gt;新闻8&lt;br&gt;&lt;/p&gt;', '新闻8', '新闻8', '新闻8');
-INSERT INTO `mc_press_description` VALUES ('8', '2', '新闻8', '&lt;p&gt;新闻8&lt;br&gt;&lt;/p&gt;', '新闻8', '新闻8', '新闻8');
-INSERT INTO `mc_press_description` VALUES ('8', '3', '新闻8', '&lt;p&gt;新闻8&lt;br&gt;&lt;/p&gt;', '新闻8', '新闻8', '新闻8');
-INSERT INTO `mc_press_description` VALUES ('9', '1', '新闻9', '&lt;p&gt;新闻9&lt;br&gt;&lt;/p&gt;', '新闻9', '新闻9', '新闻9');
-INSERT INTO `mc_press_description` VALUES ('9', '2', '新闻9', '&lt;p&gt;新闻9&lt;br&gt;&lt;/p&gt;', '新闻9', '新闻9', '新闻9');
-INSERT INTO `mc_press_description` VALUES ('9', '3', '新闻9', '&lt;p&gt;新闻9&lt;br&gt;&lt;/p&gt;', '新闻9', '新闻9', '新闻9');
-INSERT INTO `mc_press_description` VALUES ('10', '3', '新闻10', '&lt;p&gt;新闻10&lt;br&gt;&lt;/p&gt;', '新闻10', '新闻10', '新闻10');
-INSERT INTO `mc_press_description` VALUES ('10', '2', '新闻10', '&lt;p&gt;新闻10&lt;br&gt;&lt;/p&gt;', '新闻10', '新闻10', '新闻10');
-INSERT INTO `mc_press_description` VALUES ('10', '1', '新闻10', '&lt;p&gt;新闻10&lt;br&gt;&lt;/p&gt;', '新闻10', '新闻10', '新闻10');
 
 -- ----------------------------
 -- Table structure for mc_press_product
@@ -6755,13 +6657,6 @@ CREATE TABLE `mc_press_to_layout` (
 INSERT INTO `mc_press_to_layout` VALUES ('1', '0', '0');
 INSERT INTO `mc_press_to_layout` VALUES ('2', '0', '0');
 INSERT INTO `mc_press_to_layout` VALUES ('3', '0', '0');
-INSERT INTO `mc_press_to_layout` VALUES ('4', '0', '0');
-INSERT INTO `mc_press_to_layout` VALUES ('5', '0', '0');
-INSERT INTO `mc_press_to_layout` VALUES ('6', '0', '0');
-INSERT INTO `mc_press_to_layout` VALUES ('7', '0', '0');
-INSERT INTO `mc_press_to_layout` VALUES ('8', '0', '0');
-INSERT INTO `mc_press_to_layout` VALUES ('9', '0', '0');
-INSERT INTO `mc_press_to_layout` VALUES ('10', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_press_to_press_category
@@ -6781,13 +6676,6 @@ INSERT INTO `mc_press_to_press_category` VALUES ('1', '2');
 INSERT INTO `mc_press_to_press_category` VALUES ('2', '2');
 INSERT INTO `mc_press_to_press_category` VALUES ('3', '1');
 INSERT INTO `mc_press_to_press_category` VALUES ('3', '2');
-INSERT INTO `mc_press_to_press_category` VALUES ('4', '2');
-INSERT INTO `mc_press_to_press_category` VALUES ('5', '2');
-INSERT INTO `mc_press_to_press_category` VALUES ('6', '2');
-INSERT INTO `mc_press_to_press_category` VALUES ('7', '2');
-INSERT INTO `mc_press_to_press_category` VALUES ('8', '2');
-INSERT INTO `mc_press_to_press_category` VALUES ('9', '2');
-INSERT INTO `mc_press_to_press_category` VALUES ('10', '2');
 
 -- ----------------------------
 -- Table structure for mc_press_to_store
@@ -6805,13 +6693,6 @@ CREATE TABLE `mc_press_to_store` (
 INSERT INTO `mc_press_to_store` VALUES ('1', '0');
 INSERT INTO `mc_press_to_store` VALUES ('2', '0');
 INSERT INTO `mc_press_to_store` VALUES ('3', '0');
-INSERT INTO `mc_press_to_store` VALUES ('4', '0');
-INSERT INTO `mc_press_to_store` VALUES ('5', '0');
-INSERT INTO `mc_press_to_store` VALUES ('6', '0');
-INSERT INTO `mc_press_to_store` VALUES ('7', '0');
-INSERT INTO `mc_press_to_store` VALUES ('8', '0');
-INSERT INTO `mc_press_to_store` VALUES ('9', '0');
-INSERT INTO `mc_press_to_store` VALUES ('10', '0');
 
 -- ----------------------------
 -- Table structure for mc_product
@@ -6835,7 +6716,7 @@ CREATE TABLE `mc_product` (
   `price` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `points` int(8) NOT NULL DEFAULT '0',
   `tax_class_id` int(11) NOT NULL,
-  `date_available` date NOT NULL DEFAULT '0000-00-00',
+  `date_available` date NOT NULL,
   `weight` decimal(15,8) NOT NULL DEFAULT '0.00000000',
   `weight_class_id` int(11) NOT NULL DEFAULT '0',
   `length` decimal(15,8) NOT NULL DEFAULT '0.00000000',
@@ -6850,30 +6731,671 @@ CREATE TABLE `mc_product` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1058 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_product
 -- ----------------------------
-INSERT INTO `mc_product` VALUES ('47', 'Product 7', '', '', '', '', '', '', '', '1000', '5', 'catalog/demo/product/product_2/product2_1.jpg', '7', '1', '1.0000', '400', '0', '2009-02-03', '1.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '0', '1', '0', '1', '0', '2009-02-03 21:08:40', '2016-08-23 08:54:32');
-INSERT INTO `mc_product` VALUES ('46', 'Product 3', '', '', '', '', '', '', '', '1000', '5', 'catalog/demo/product/product16/product16_1.jpg', '10', '1', '1.0000', '0', '0', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:29', '2016-08-23 09:56:36');
-INSERT INTO `mc_product` VALUES ('45', 'Product 5', '', '', '', '', '', '', '', '998', '5', 'catalog/demo/product/product_11/product11_1.jpg', '8', '1', '2.0000', '0', '0', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:17', '2016-08-23 08:54:02');
-INSERT INTO `mc_product` VALUES ('44', 'Product 9', '', '', '', '', '', '', '', '1000', '5', 'catalog/demo/product/product_10/product10_1.jpg', '8', '1', '2.0000', '0', '0', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:00', '2016-08-23 08:55:07');
-INSERT INTO `mc_product` VALUES ('43', 'Product 8', '', '', '', '', '', '', '', '999975', '5', 'catalog/demo/product/product_9/product9_1.jpg', '8', '0', '0.0100', '0', '0', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '4', '2009-02-03 21:07:49', '2017-09-03 05:00:16');
-INSERT INTO `mc_product` VALUES ('42', 'Product 1', '', '', '', '', '', '', '', '990', '5', 'catalog/demo/product/product_1/product1_1.jpg', '8', '1', '100.0000', '400', '0', '2009-02-04', '12.50000000', '1', '1.00000000', '2.00000000', '3.00000000', '1', '1', '2', '0', '1', '0', '2009-02-03 21:07:37', '2017-07-16 19:43:42');
-INSERT INTO `mc_product` VALUES ('41', 'Product 4', '', '', '', '', '', '', '', '977', '5', 'catalog/demo/product/product_4/product4_1.jpg', '8', '1', '1.0000', '0', '0', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 21:07:26', '2016-08-23 08:53:47');
-INSERT INTO `mc_product` VALUES ('40', 'Product 19', '', '', '', '', '', '', '', '956', '5', 'catalog/demo/product/product19/product19_1.jpg', '8', '1', '6.9900', '0', '0', '2009-02-03', '10.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 21:07:12', '2016-08-23 08:58:04');
-INSERT INTO `mc_product` VALUES ('36', 'Product 6', '', '', '', '', '', '', '', '994', '6', 'catalog/demo/product/product_6/product6_1.jpg', '8', '0', '1.0000', '100', '0', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '2', '2009-02-03 18:09:19', '2016-08-23 08:54:16');
-INSERT INTO `mc_product` VALUES ('35', 'Product 10', '', '', '', '', '', '', '', '1000', '5', 'catalog/demo/product/product_14/product14_1.jpg', '0', '0', '1.0000', '0', '0', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 18:08:31', '2016-08-23 08:55:32');
-INSERT INTO `mc_product` VALUES ('34', 'Product 15', '', '', '', '', '', '', '', '1000', '6', 'catalog/demo/product/product_7/product7_1.jpg', '8', '1', '1.0000', '0', '0', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '1', '2009-02-03 18:07:54', '2016-08-23 08:56:50');
-INSERT INTO `mc_product` VALUES ('33', 'Product 2', '', '', '', '', '', '', '', '1000', '6', 'catalog/demo/product/product17/product17_1.jpg', '0', '1', '1.0000', '0', '0', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 17:08:31', '2016-08-23 09:56:25');
-INSERT INTO `mc_product` VALUES ('32', 'Product 11', '', '', '', '', '', '', '', '999', '6', 'catalog/demo/product/product_8/product8_1.jpg', '8', '1', '1.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 17:07:26', '2016-08-23 08:55:50');
-INSERT INTO `mc_product` VALUES ('31', 'Product 12', '', '', '', '', '', '', '', '1000', '6', 'catalog/demo/product/product_12/product12_1.jpg', '0', '1', '1.0000', '0', '0', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '3', '1', '1', '0', '1', '0', '2009-02-03 17:00:10', '2016-08-23 08:56:07');
-INSERT INTO `mc_product` VALUES ('30', 'Product 13', '', '', '', '', '', '', '', '2', '6', 'catalog/demo/product/product21/product21_1.jpg', '9', '1', '100.0000', '0', '0', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 16:59:00', '2017-07-16 19:44:40');
-INSERT INTO `mc_product` VALUES ('29', 'Product 14', '', '', '', '', '', '', '', '999', '6', 'catalog/demo/product/product_13/product13_1.jpg', '6', '1', '1.9900', '0', '0', '2009-02-03', '133.00000000', '2', '0.00000000', '0.00000000', '0.00000000', '3', '1', '1', '0', '1', '0', '2009-02-03 16:42:17', '2016-08-23 08:56:28');
-INSERT INTO `mc_product` VALUES ('28', 'Product 17', '', '', '', '', '', '', '', '939', '7', 'catalog/demo/product/product_3/product3_1.jpg', '5', '1', '0.9900', '200', '0', '2009-02-03', '146.40000000', '2', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 16:06:50', '2016-08-23 08:57:18');
-INSERT INTO `mc_product` VALUES ('48', 'Product 18', 'test 1', '', '', '', '', '', 'test 2', '995', '5', 'catalog/demo/product/product_5/product5_1.jpg', '8', '1', '2.9900', '0', '0', '2009-02-08', '1.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-08 17:21:51', '2016-08-23 08:57:42');
-INSERT INTO `mc_product` VALUES ('49', 'Product 16', '', '', '', '', '', '', '', '0', '8', 'catalog/demo/product/product15/product15_1.jpg', '0', '1', '199.9900', '0', '0', '2011-04-25', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2011-04-26 08:57:34', '2016-08-13 14:04:21');
+INSERT INTO `mc_product` VALUES ('90', '三星 Galaxy S8  G9500 4G 64G 全网通 烟晶灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyS8G95004G64G全网通烟晶灰/SamsungGalaxyS8G95004G64G全网通烟晶灰.jpg', '14', '1', '3180.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:41:27', '2018-12-15 20:51:20');
+INSERT INTO `mc_product` VALUES ('91', '三星 Galaxy S8 G9500 4G 64G 全网通 谜夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyS8G95004G64G全网通谜夜黑/SamsungGalaxyS8G95004G64G全网通谜夜黑.jpg', '14', '1', '3120.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:41:27', '2018-12-15 20:52:25');
+INSERT INTO `mc_product` VALUES ('92', '三星 Galaxy S8+ (G9550) 4G 64G 全网通 芭比粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyS8+(G9550)4G64G全网通芭比粉/SamsungGalaxyS8+(G9550)4G64G全网通芭比粉.jpg', '14', '1', '3465.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:41:27', '2018-12-15 22:41:27');
+INSERT INTO `mc_product` VALUES ('93', '三星 Galaxy S8+ (G9550) 4G 64G 全网通 谜夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyS8+(G9550)4G64G全网通谜夜黑/SamsungGalaxyS8+(G9550)4G64G全网通谜夜黑.png', '14', '1', '3460.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:41:28', '2018-12-15 21:47:58');
+INSERT INTO `mc_product` VALUES ('95', '三星 Galaxy C9 Pro 6G 64G 全网通 粉色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyC9Pro6G64G全网通粉色/SamsungGalaxyC9Pro6G64G全网通粉色.jpg', '14', '1', '2110.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:41:28', '2018-12-15 20:52:57');
+INSERT INTO `mc_product` VALUES ('96', '三星 W2016 电信4G 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungW2016电信4G金色/SamsungW2016电信4G金色.jpg', '14', '1', '2720.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:41:28', '2018-12-15 21:48:51');
+INSERT INTO `mc_product` VALUES ('97', '三星 W2016 电信4G 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungW2016电信4G银色/SamsungW2016电信4G银色.jpg', '14', '1', '3720.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:41:28', '2018-12-15 21:49:33');
+INSERT INTO `mc_product` VALUES ('98', '小米 MIX 2S 6G 128G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米MIX2S6G128G全网通白色/小米MIX2S6G128G全网通白色.jpg', '12', '1', '2480.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:41:29', '2018-12-15 21:52:27');
+INSERT INTO `mc_product` VALUES ('99', '三星 W2017 电信4G 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/t01415a67455a61ebcb.jpg', '14', '1', '7600.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:41:29', '2018-12-17 00:33:57');
+INSERT INTO `mc_product` VALUES ('100', '小米 MIX 2S 6G 128G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米MIX2S6G128G全网通黑色/小米MIX2S6G128G全网通黑色.jpg', '12', '1', '2498.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:41:29', '2018-12-15 21:53:00');
+INSERT INTO `mc_product` VALUES ('101', '三星 W2017 电信4G 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/t01dfa7b44a680d617f.jpg', '14', '1', '7100.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:41:29', '2018-12-17 00:32:34');
+INSERT INTO `mc_product` VALUES ('103', '小米 MIX 2S 8G 256G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米MIX2S8G256G全网通白色/小米MIX2S8G256G全网通白色.jpg', '12', '1', '3120.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:41:30', '2018-12-15 23:33:09');
+INSERT INTO `mc_product` VALUES ('104', '三星 A6S(sm-G6200) 全网通 6G 128G 花木蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungA6S(sm-G6200)全网通6G128G花木蓝/SamsungA6S(sm-G6200)全网通6G128G花木蓝.jpg', '14', '1', '1650.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:41:30', '2018-12-15 22:49:14');
+INSERT INTO `mc_product` VALUES ('106', '小米 MIX 2S 8G 256G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米MIX2S8G256G全网通黑色/小米MIX2S8G256G全网通黑色.jpg', '12', '1', '3090.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:41:31', '2018-12-15 23:32:44');
+INSERT INTO `mc_product` VALUES ('107', '三星 A6S(sm-G6200) 全网通 6G 128G 撒浪黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungA6S(sm-G6200)全网通6G128G撒浪黑/SamsungA6S(sm-G6200)全网通6G128G撒浪黑.jpg', '14', '1', '1630.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:41:31', '2018-12-15 23:07:30');
+INSERT INTO `mc_product` VALUES ('109', '小米 小米Note 3 4G 64G 全网通 亮蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米Note34G64G全网通亮蓝色/小米小米Note34G64G全网通亮蓝色.jpg', '12', '1', '1628.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:41:31', '2018-12-15 22:41:31');
+INSERT INTO `mc_product` VALUES ('110', '三星 A6S(sm-G6200) 全网通 6G 64G 花木蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungA6S(sm-G6200)全网通6G64G花木蓝/SamsungA6S(sm-G6200)全网通6G64G花木蓝.jpg', '14', '1', '1385.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:41:32', '2018-12-15 22:49:49');
+INSERT INTO `mc_product` VALUES ('113', '小米 小米Max 2 4G 128G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米Max24G128G全网通金色/小米小米Max24G128G全网通金色.jpg', '12', '1', '1195.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:41:33', '2018-12-15 22:41:33');
+INSERT INTO `mc_product` VALUES ('114', '三星 A6S(sm-G6200) 全网通 6G 64G 撒浪黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungA6S(sm-G6200)全网通6G64G撒浪黑/SamsungA6S(sm-G6200)全网通6G64G撒浪黑.jpg', '14', '1', '1380.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:41:33', '2018-12-15 22:50:16');
+INSERT INTO `mc_product` VALUES ('117', '小米 红米5 4G 32G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米MIX2S6G128G全网通黑色/小米MIX2S6G128G全网通黑色.jpg', '12', '1', '810.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:41:33', '2018-12-15 23:34:33');
+INSERT INTO `mc_product` VALUES ('118', '三星 A9S（sm-A9200） 全网通 6G 128G 柠沁蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungA9S（sm-A9200）全网通6G128G柠沁蓝/SamsungA9S（sm-A9200）全网通6G128G柠沁蓝.jpg', '14', '1', '2715.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:41:33', '2018-12-15 22:50:44');
+INSERT INTO `mc_product` VALUES ('120', '小米 红米5 Plus 3G 32G 全网通  玫瑰金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米5Plus3G32G全网通玫瑰金/小米红米5Plus3G32G全网通玫瑰金.jpg', '12', '1', '765.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:41:34', '2018-12-15 23:35:18');
+INSERT INTO `mc_product` VALUES ('121', '三星 A9S（sm-A9200） 全网通 6G 128G 泡泡粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungA9S（sm-A9200）全网通6G128G泡泡粉/SamsungA9S（sm-A9200）全网通6G128G泡泡粉.jpg', '14', '1', '2750.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:41:34', '2018-12-15 23:08:07');
+INSERT INTO `mc_product` VALUES ('122', '三星 A9S（sm-A9200） 全网通 6G 128G 鱼子黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungA9S（sm-A9200）全网通6G128G鱼子黑/SamsungA9S（sm-A9200）全网通6G128G鱼子黑.jpg', '14', '1', '2655.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:41:34', '2018-12-15 22:51:12');
+INSERT INTO `mc_product` VALUES ('126', '小米 红米5 Plus 3G 32G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米5Plus3G32G全网通金色/小米红米5Plus3G32G全网通金色.jpg', '12', '1', '777.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:41:35', '2018-12-15 23:38:48');
+INSERT INTO `mc_product` VALUES ('127', '三星 C8 C7100 3G 32G 全网通 墨玉黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungC8C71003G32G全网通墨玉黑/SamsungC8C71003G32G全网通墨玉黑.jpg', '14', '1', '1010.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:41:35', '2018-12-15 22:51:41');
+INSERT INTO `mc_product` VALUES ('130', '小米 红米5 Plus 4G 64G 全网通  玫瑰金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米5Plus4G64G全网通玫瑰金/小米红米5Plus4G64G全网通玫瑰金.jpg', '12', '1', '905.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:41:36', '2018-12-15 22:41:36');
+INSERT INTO `mc_product` VALUES ('131', '三星 C8 C7100 4G 64G 全网通 墨玉黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungC8C71004G64G全网通墨玉黑/SamsungC8C71004G64G全网通墨玉黑.jpg', '14', '1', '1130.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:41:36', '2018-12-15 11:27:54');
+INSERT INTO `mc_product` VALUES ('133', '小米 红米5 Plus 4G 64G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米5Plus4G64G全网通黑色/小米红米5Plus4G64G全网通黑色.jpg', '12', '1', '927.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:41:36', '2018-12-15 23:39:31');
+INSERT INTO `mc_product` VALUES ('134', '三星 Galaxy A9 Star 4G 64G 公开版全网通 极夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyA9Star4G64G公开版全网通极夜黑/SamsungGalaxyA9Star4G64G公开版全网通极夜黑.jpg', '14', '1', '1710.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:41:37', '2018-12-15 23:08:34');
+INSERT INTO `mc_product` VALUES ('139', '小米 红米5 Plus 4G 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米5Plus4G64G全网通金色/小米红米5Plus4G64G全网通金色.jpg', '12', '1', '927.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:41:37', '2018-12-15 22:41:37');
+INSERT INTO `mc_product` VALUES ('140', '三星 Galaxy A9 Star 4G 64G 公开版全网通 极昼白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyA9Star4G64G公开版全网通极昼白/SamsungGalaxyA9Star4G64G公开版全网通极昼白.jpg', '14', '1', '1715.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:41:37', '2018-12-15 22:56:42');
+INSERT INTO `mc_product` VALUES ('147', '小米 红米5 Plus 4G 64G 全网通 浅蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米5Plus4G64G全网通浅蓝色/小米红米5Plus4G64G全网通浅蓝色.jpg', '12', '1', '905.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:41:38', '2018-12-15 23:39:58');
+INSERT INTO `mc_product` VALUES ('148', '三星 Galaxy A9 Star Lite 4G 64G 公开版全网通 深海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyA9StarLite4G64G公开版全网通深海蓝/SamsungGalaxyA9StarLite4G64G公开版全网通深海蓝.jpg', '14', '1', '1340.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:41:38', '2018-12-15 23:10:36');
+INSERT INTO `mc_product` VALUES ('152', '苹果 iPhone 8 Plus 64G 全网通 红色特别版 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8Plus64G全网通红色特别版/苹果iPhone8Plus64G全网通红色特别版.jpg', '8', '1', '5390.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:41:39', '2018-12-15 22:41:39');
+INSERT INTO `mc_product` VALUES ('153', '小米 黑鲨 6G 64G 极夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米黑鲨6G64G极夜黑/小米黑鲨6G64G极夜黑.jpg', '12', '1', '2175.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:41:39', '2018-12-15 22:41:39');
+INSERT INTO `mc_product` VALUES ('154', '三星 Galaxy A9 Star Lite 4G 64G 公开版全网通 夜空黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyA9StarLite4G64G公开版全网通夜空黑/SamsungGalaxyA9StarLite4G64G公开版全网通夜空黑.jpg', '14', '1', '1340.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:41:39', '2018-12-15 22:57:24');
+INSERT INTO `mc_product` VALUES ('158', '苹果 iPhone 7 128G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone7128G全网通金色/苹果iPhone7128G全网通金色.jpg', '8', '1', '4350.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '48', '2018-12-15 22:41:40', '2018-12-15 23:22:39');
+INSERT INTO `mc_product` VALUES ('159', '小米 黑鲨 6G 64G 套装版（含手柄） 极夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米黑鲨6G64G套装版（含手柄）极夜黑/小米黑鲨6G64G套装版（含手柄）极夜黑.jpg', '12', '1', '2245.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:41:41', '2018-12-15 23:40:21');
+INSERT INTO `mc_product` VALUES ('161', '三星 GALAXY Note 8 6G 128G 全网通 粉色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGALAXYNote86G128G全网通粉色/SamsungGALAXYNote86G128G全网通粉色.jpg', '14', '1', '4480.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '47', '2018-12-15 22:41:41', '2018-12-15 23:11:07');
+INSERT INTO `mc_product` VALUES ('162', '三星 GALAXY Note 8 6G 128G 全网通 旷野灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGALAXYNote86G128G全网通旷野灰/SamsungGALAXYNote86G128G全网通旷野灰.jpg', '14', '1', '4400.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:41:41', '2018-12-15 23:11:35');
+INSERT INTO `mc_product` VALUES ('164', '华为 荣耀V10 6G 64G 全网通高配版 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀V106G64G全网通高配版极光蓝/华为荣耀V106G64G全网通高配版极光蓝.jpg', '11', '1', '1708.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:41:41', '2018-12-15 22:41:41');
+INSERT INTO `mc_product` VALUES ('167', '苹果 iPhone 8 64G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone864G全网通银色/苹果iPhone864G全网通银色.jpg', '8', '1', '4445.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '111', '2018-12-15 22:41:42', '2018-12-15 23:23:03');
+INSERT INTO `mc_product` VALUES ('168', '小米 黑鲨 8G 128G 苍穹灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米黑鲨8G128G苍穹灰/小米黑鲨8G128G苍穹灰.jpg', '12', '1', '2490.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:41:42', '2018-12-15 23:40:45');
+INSERT INTO `mc_product` VALUES ('169', '三星 GALAXY Note 8 6G 128G 全网通 谜夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGALAXYNote86G128G全网通谜夜黑/SamsungGALAXYNote86G128G全网通谜夜黑.jpg', '14', '1', '4450.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '48', '2018-12-15 22:41:42', '2018-12-15 22:58:51');
+INSERT INTO `mc_product` VALUES ('174', '华为 P20 6G 128G 全网通 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P206G128G全网通极光色/华为P206G128G全网通极光色.jpg', '11', '1', '3360.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:41:43', '2018-12-15 23:41:10');
+INSERT INTO `mc_product` VALUES ('177', '苹果 iPhone X 64G 全网通 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneX64G全网通深空灰色/苹果iphoneX64G全网通深空灰色.png', '8', '1', '5916.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '15', '2018-12-15 22:41:44', '2018-12-19 09:18:37');
+INSERT INTO `mc_product` VALUES ('178', '小米 黑鲨 8G 128G 极夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米黑鲨8G128G极夜黑/小米黑鲨8G128G极夜黑.jpg', '12', '1', '2460.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:41:44', '2018-12-15 23:41:33');
+INSERT INTO `mc_product` VALUES ('179', '三星 GALAXY Note 8 6G 128G 全网通 星河蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGALAXYNote86G128G全网通星河蓝/SamsungGALAXYNote86G128G全网通星河蓝.jpg', '14', '1', '4458.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:41:44', '2018-12-15 23:00:47');
+INSERT INTO `mc_product` VALUES ('183', '华为 P20 6G 128G 全网通 极光闪蝶 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P206G128G全网通极光闪蝶/华为P206G128G全网通极光闪蝶.jpg', '11', '1', '3320.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:41:45', '2018-12-15 22:41:45');
+INSERT INTO `mc_product` VALUES ('185', '苹果 iPhone X 64G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneX64G全网通银色/苹果iphoneX64G全网通银色.png', '8', '1', '5916.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:41:46', '2018-12-19 09:21:12');
+INSERT INTO `mc_product` VALUES ('186', '小米 黑鲨 8G 128G 套装版（含手柄） 苍穹灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米黑鲨8G128G套装版（含手柄）苍穹灰/小米黑鲨8G128G套装版（含手柄）苍穹灰.jpg', '12', '1', '2570.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:41:46', '2018-12-15 22:41:46');
+INSERT INTO `mc_product` VALUES ('187', '三星 GALAXY Note 8 6G 64G 全网通 旷野灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGALAXYNote86G64G全网通旷野灰/SamsungGALAXYNote86G64G全网通旷野灰.jpg', '14', '1', '4030.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:41:46', '2018-12-15 23:01:22');
+INSERT INTO `mc_product` VALUES ('193', '华为 P20 6G 128G 全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P206G128G全网通亮黑色/华为P206G128G全网通亮黑色.jpg', '11', '1', '3387.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:41:47', '2018-12-15 22:41:47');
+INSERT INTO `mc_product` VALUES ('195', '苹果 iPhone 8 Plus 256G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8Plus256G全网通金色/苹果iPhone8Plus256G全网通金色.jpg', '8', '1', '6640.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:41:47', '2018-12-15 23:21:59');
+INSERT INTO `mc_product` VALUES ('196', '小米 黑鲨 8G 128G 套装版（含手柄） 极夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米黑鲨8G128G套装版（含手柄）极夜黑/小米黑鲨8G128G套装版（含手柄）极夜黑.jpg', '12', '1', '2530.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:41:48', '2018-12-15 23:30:11');
+INSERT INTO `mc_product` VALUES ('197', '三星 GALAXY Note 8 6G 64G 全网通 星河蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGALAXYNote86G64G全网通星河蓝/SamsungGALAXYNote86G64G全网通星河蓝.jpg', '14', '1', '3980.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:41:48', '2018-12-15 23:06:18');
+INSERT INTO `mc_product` VALUES ('200', '华为 P20 6G 128G 全网通 珠光贝母 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P206G128G全网通珠光贝母/华为P206G128G全网通珠光贝母.jpg', '11', '1', '3420.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:41:49', '2019-03-30 14:16:06');
+INSERT INTO `mc_product` VALUES ('202', '苹果 iPhone 8 Plus 256G 全网通 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8Plus256G全网通深空灰色/苹果iPhone8Plus256G全网通深空灰色.jpg', '8', '1', '6636.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:41:49', '2018-12-15 23:14:22');
+INSERT INTO `mc_product` VALUES ('203', '小米 黑鲨 8G 256G 极夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米黑鲨8G256G极夜黑/小米黑鲨8G256G极夜黑.jpg', '12', '1', '3520.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:41:49', '2018-12-15 23:31:13');
+INSERT INTO `mc_product` VALUES ('204', '三星 Galaxy Note9 6G 128G 全网通 寒霜蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyNote96G128G全网通寒霜蓝/SamsungGalaxyNote96G128G全网通寒霜蓝.jpg', '14', '1', '5528.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '45', '2018-12-15 22:41:50', '2018-12-15 23:01:52');
+INSERT INTO `mc_product` VALUES ('207', '华为 P20 6G 64G 全网通 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P206G64G全网通极光色/华为P206G64G全网通极光色.jpg', '11', '1', '2817.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:41:50', '2018-12-15 23:32:08');
+INSERT INTO `mc_product` VALUES ('209', '苹果 iPhone 8 Plus 256G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8Plus256G全网通银色/苹果iPhone8Plus256G全网通银色.jpg', '8', '1', '6645.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:41:51', '2018-12-15 23:21:38');
+INSERT INTO `mc_product` VALUES ('210', '小米 黑鲨 8G 256G 套装版（含手柄） 极夜黑', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米黑鲨8G256G套装版（含手柄）极夜黑/小米黑鲨8G256G套装版（含手柄）极夜黑.jpg', '12', '1', '3590.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:41:51', '2018-12-15 23:31:46');
+INSERT INTO `mc_product` VALUES ('211', '三星 Galaxy Note9 6G 128G 全网通 玄镜铜 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyNote96G128G全网通玄镜铜/SamsungGalaxyNote96G128G全网通玄镜铜.jpg', '14', '1', '5550.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:41:51', '2018-12-15 23:02:17');
+INSERT INTO `mc_product` VALUES ('216', '华为 P20 6G 64G 全网通 极光闪蝶 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P206G64G全网通极光闪蝶/华为P206G64G全网通极光闪蝶.jpg', '11', '1', '2780.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:41:52', '2018-12-15 22:41:52');
+INSERT INTO `mc_product` VALUES ('218', '苹果 iPhone 8 Plus 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8Plus64G全网通金色/苹果iPhone8Plus64G全网通金色.jpg', '8', '1', '5380.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:41:52', '2018-12-15 23:14:48');
+INSERT INTO `mc_product` VALUES ('219', '小米 黑鲨游戏手机Helo 6G 128G 全网通 极夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米黑鲨游戏手机Helo6G128G全网通极夜黑/小米黑鲨游戏手机Helo6G128G全网通极夜黑.jpg', '12', '1', '3150.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:41:52', '2018-12-15 22:41:52');
+INSERT INTO `mc_product` VALUES ('220', '三星 Galaxy S轻奢版 4G 64G 全网通 勃艮第红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyS轻奢版4G64G全网通勃艮第红/SamsungGalaxyS轻奢版4G64G全网通勃艮第红.jpg', '14', '1', '2395.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:41:52', '2018-12-15 23:05:23');
+INSERT INTO `mc_product` VALUES ('227', '华为 P20 6G 64G 全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P206G64G全网通亮黑色/华为P206G64G全网通亮黑色.jpg', '11', '1', '2871.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:41:53', '2018-12-15 22:41:53');
+INSERT INTO `mc_product` VALUES ('229', '苹果 iPhone 8 Plus 64G 全网通 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8Plus64G全网通深空灰色/苹果iPhone8Plus64G全网通深空灰色.jpg', '8', '1', '5370.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:41:53', '2018-12-15 23:16:01');
+INSERT INTO `mc_product` VALUES ('230', '小米 黑鲨游戏手机Helo 8G 128G 全网通 极夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米黑鲨游戏手机Helo8G128G全网通极夜黑/小米黑鲨游戏手机Helo8G128G全网通极夜黑.jpg', '12', '1', '3350.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:41:54', '2018-12-15 22:41:54');
+INSERT INTO `mc_product` VALUES ('231', '三星 Galaxy S轻奢版 4G 64G 全网通 谜夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungGalaxyS轻奢版4G64G全网通谜夜黑/SamsungGalaxyS轻奢版4G64G全网通谜夜黑.jpg', '14', '1', '2395.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:41:54', '2018-12-15 23:02:50');
+INSERT INTO `mc_product` VALUES ('233', '美图 M8 4G 64G 全网通 月光白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图M84G64G全网通月光白/美图M84G64G全网通月光白.jpg', '22', '1', '788.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:41:54', '2018-12-15 22:41:54');
+INSERT INTO `mc_product` VALUES ('235', '华为 P20 6G 64G 全网通 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20金.jpeg', '11', '1', '2810.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:41:55', '2018-12-17 00:49:29');
+INSERT INTO `mc_product` VALUES ('237', '苹果 iPhone 8 Plus 64G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8Plus64G全网通银色/苹果iPhone8Plus64G全网通银色.jpg', '8', '1', '5385.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:41:55', '2018-12-15 23:16:24');
+INSERT INTO `mc_product` VALUES ('238', '小米 红米 Note5 3G 32G 全网通  玫瑰金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米Note53G32G全网通玫瑰金/小米红米Note53G32G全网通玫瑰金.jpg', '12', '1', '778.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:41:56', '2018-12-15 22:41:56');
+INSERT INTO `mc_product` VALUES ('239', '三星 S9 （SM-G9600）4G 128G 全网通 莱茵蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9（SM-G9600）4G128G全网通莱茵蓝/SamsungS9（SM-G9600）4G128G全网通莱茵蓝.jpg', '14', '1', '4430.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '43', '2018-12-15 22:41:56', '2018-12-15 21:00:09');
+INSERT INTO `mc_product` VALUES ('241', '美图 M6 hello Kitty特别版 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图M6helloKitty特别版白色/美图M6helloKitty特别版白色.jpg', '22', '1', '1060.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:41:56', '2018-12-15 22:41:56');
+INSERT INTO `mc_product` VALUES ('245', '华为 P20 6G 64G 全网通 珠光贝母 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P206G64G全网通珠光贝母/华为P206G64G全网通珠光贝母.jpg', '11', '1', '2849.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '15', '2018-12-15 22:41:57', '2018-12-15 21:03:24');
+INSERT INTO `mc_product` VALUES ('246', '苹果 iPhone 8 Plus 64G 移动联通双4G 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8Plus64G移动联通双4G金色/苹果iPhone8Plus64G移动联通双4G金色.jpg', '8', '1', '5200.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:41:57', '2018-12-15 23:16:49');
+INSERT INTO `mc_product` VALUES ('247', '小米 红米 Note5 3G 32G 全网通 魔力蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米Note53G32G全网通魔力蓝/小米红米Note53G32G全网通魔力蓝.jpg', '12', '1', '790.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:41:58', '2018-12-15 21:02:27');
+INSERT INTO `mc_product` VALUES ('248', '三星 S9 （SM-G9600）4G 128G 全网通 谜夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9（SM-G9600）4G128G全网通谜夜黑/SamsungS9（SM-G9600）4G128G全网通谜夜黑.jpg', '14', '1', '4440.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:41:58', '2018-12-15 21:02:57');
+INSERT INTO `mc_product` VALUES ('252', '美图 M8s 4G 128G 全网通 Hello Kitty限量版 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图M8s4G128G全网通HelloKitty限量版/美图M8s4G128G全网通HelloKitty限量版.jpg', '22', '1', '1160.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:41:59', '2018-12-15 22:41:59');
+INSERT INTO `mc_product` VALUES ('258', '华为 P20 Pro 6G 128G 全网通 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p蓝2.jpg', '11', '1', '4135.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:42:00', '2018-12-17 01:02:15');
+INSERT INTO `mc_product` VALUES ('259', '苹果 iPhone 8 Plus 64G 移动联通双4G 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8Plus64G移动联通双4G深空灰色/苹果iPhone8Plus64G移动联通双4G深空灰色.jpg', '8', '1', '5200.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '50', '2018-12-15 22:42:00', '2018-12-15 21:00:45');
+INSERT INTO `mc_product` VALUES ('260', '小米 红米 Note5 4G 64G 全网通  玫瑰金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米Note54G64G全网通玫瑰金/小米红米Note54G64G全网通玫瑰金.jpg', '12', '1', '956.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:42:00', '2018-12-15 21:01:23');
+INSERT INTO `mc_product` VALUES ('261', '三星 S9 （SM-G9600）4G 128G 全网通 夕雾紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9（SM-G9600）4G128G全网通夕雾紫/SamsungS9（SM-G9600）4G128G全网通夕雾紫.jpg', '14', '1', '4445.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:42:01', '2018-12-15 22:42:01');
+INSERT INTO `mc_product` VALUES ('264', '诺基亚 Nokia 6 全网通 4G 32G 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/诺基亚/诺基亚Nokia6全网通4G32G黑色/诺基亚Nokia6全网通4G32G黑色.jpg', '23', '1', '895.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:42:01', '2018-12-15 21:04:49');
+INSERT INTO `mc_product` VALUES ('266', '美图 M8s 4G 128G 全网通 美少女战士限量版 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图M8s4G128G全网通美少女战士限量版/美图M8s4G128G全网通美少女战士限量版.jpg', '22', '1', '1470.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:42:02', '2018-12-15 22:42:02');
+INSERT INTO `mc_product` VALUES ('271', '华为 P20 Pro 6G 128G 全网通 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p极光.jpg', '11', '1', '4219.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:42:03', '2018-12-17 01:05:31');
+INSERT INTO `mc_product` VALUES ('272', '苹果 iPhone 8 Plus 64G 移动联通双4G 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8Plus64G移动联通双4G银色/苹果iPhone8Plus64G移动联通双4G银色.jpg', '8', '1', '5200.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:42:03', '2018-12-15 22:42:03');
+INSERT INTO `mc_product` VALUES ('273', '苹果 iPhone 7 128G 全网通  玫瑰金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone7128G全网通玫瑰金/苹果iPhone7128G全网通玫瑰金.jpg', '8', '1', '4340.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '58', '2018-12-15 22:42:03', '2018-12-15 23:17:40');
+INSERT INTO `mc_product` VALUES ('274', '小米 红米 Note5 4G 64G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米Note54G64G全网通黑色/小米红米Note54G64G全网通黑色.jpg', '12', '1', '1045.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:42:03', '2018-12-15 22:42:03');
+INSERT INTO `mc_product` VALUES ('275', '三星 S9 （SM-G9600）4G 64G 全网通 谜夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9（SM-G9600）4G64G全网通谜夜黑/SamsungS9（SM-G9600）4G64G全网通谜夜黑.jpg', '14', '1', '4060.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:42:04', '2018-12-15 22:42:04');
+INSERT INTO `mc_product` VALUES ('280', '诺基亚 7 Plus 4G 64G 全网通 黑色 ', '', '', '', '', '', '', '', '9', '5', 'catalog/images/诺基亚/诺基亚7Plus4G64G全网通黑色/诺基亚7Plus4G64G全网通黑色.jpg', '23', '1', '1850.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:42:05', '2018-12-15 22:42:05');
+INSERT INTO `mc_product` VALUES ('282', '美图 M8s 4G 64G 全网通 芭比粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图M8s4G64G全网通芭比粉/美图M8s4G64G全网通芭比粉.jpg', '22', '1', '888.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '137', '2018-12-15 22:42:05', '2018-12-15 22:42:05');
+INSERT INTO `mc_product` VALUES ('286', '华为 P20 Pro 6G 128G 全网通 极光闪蝶 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P20Pro6G128G全网通极光闪蝶/华为P20Pro6G128G全网通极光闪蝶.jpg', '11', '1', '4183.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:42:06', '2018-12-15 22:42:06');
+INSERT INTO `mc_product` VALUES ('287', '苹果 iPhone 7 128G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone7128G全网通黑色/苹果iPhone7128G全网通黑色.jpg', '8', '1', '4339.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:42:07', '2018-12-15 23:18:51');
+INSERT INTO `mc_product` VALUES ('288', '小米 红米 Note5 4G 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米Note54G64G全网通金色/小米红米Note54G64G全网通金色.jpg', '12', '1', '990.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:42:07', '2018-12-15 22:42:07');
+INSERT INTO `mc_product` VALUES ('289', '三星 S9 （SM-G9608）4G 64G 移动版全网通 谜夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9（SM-G9608）4G64G移动版全网通谜夜黑/SamsungS9（SM-G9608）4G64G移动版全网通谜夜黑.jpg', '14', '1', '3605.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:42:07', '2018-12-15 22:42:07');
+INSERT INTO `mc_product` VALUES ('294', '诺基亚 X5 3G 32G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/诺基亚/诺基亚X53G32G全网通黑色/诺基亚X53G32G全网通黑色.jpg', '23', '1', '843.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:42:09', '2018-12-15 22:42:09');
+INSERT INTO `mc_product` VALUES ('296', '美图 M8s 4G 64G 全网通 宝贝蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图M8s4G64G全网通宝贝蓝/美图M8s4G64G全网通宝贝蓝.jpg', '22', '1', '808.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:42:09', '2018-12-15 22:42:09');
+INSERT INTO `mc_product` VALUES ('301', '华为 P20 Pro 6G 128G 全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p 黑d.jpg', '11', '1', '4105.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:42:10', '2018-12-17 01:08:38');
+INSERT INTO `mc_product` VALUES ('302', '苹果 iPhone 7 Plus 全网通 128G  玫瑰金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone7Plus全网通128G玫瑰金/苹果iPhone7Plus全网通128G玫瑰金.jpg', '8', '1', '5280.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:42:10', '2018-12-15 23:18:29');
+INSERT INTO `mc_product` VALUES ('303', '小米 红米 Note5 4G 64G 全网通 魔力蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米Note54G64G全网通魔力蓝/小米红米Note54G64G全网通魔力蓝.jpg', '12', '1', '953.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:42:11', '2018-12-15 22:42:11');
+INSERT INTO `mc_product` VALUES ('304', '三星 S9 （SM-G9608）4G 64G 移动版全网通 夕雾紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9（SM-G9608）4G64G移动版全网通夕雾紫/SamsungS9（SM-G9608）4G64G移动版全网通夕雾紫.jpg', '14', '1', '3610.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:42:11', '2018-12-15 23:03:46');
+INSERT INTO `mc_product` VALUES ('311', '诺基亚 X5 4G 64G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/诺基亚/诺基亚X54G64G全网通黑色/诺基亚X54G64G全网通黑色.jpg', '23', '1', '1008.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:42:12', '2018-12-15 22:42:12');
+INSERT INTO `mc_product` VALUES ('313', '美图 T8 4G 128G 全网通 极光绿 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T84G128G全网通极光绿/美图T84G128G全网通极光绿.jpg', '22', '1', '1300.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:42:13', '2018-12-15 22:42:13');
+INSERT INTO `mc_product` VALUES ('317', '华为 P20 Pro 6G 128G 全网通 樱粉金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p fen.jpg', '11', '1', '4263.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:42:14', '2018-12-17 01:09:53');
+INSERT INTO `mc_product` VALUES ('318', '苹果 iPhone 7 Plus 全网通 128G 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone7Plus全网通128G黑色/苹果iPhone7Plus全网通128G黑色.jpg', '8', '1', '5289.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:42:14', '2018-12-15 23:18:01');
+INSERT INTO `mc_product` VALUES ('319', '小米 红米 Note5 6G 64G 全网通  玫瑰金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米Note56G64G全网通玫瑰金/小米红米Note56G64G全网通玫瑰金.jpg', '12', '1', '1133.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:42:14', '2018-12-15 22:42:14');
+INSERT INTO `mc_product` VALUES ('320', '三星 S9+ 6G 128G 全网通 莱茵蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9+6G128G全网通莱茵蓝/SamsungS9+6G128G全网通莱茵蓝.jpg', '14', '1', '5280.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:42:15', '2018-12-15 23:03:18');
+INSERT INTO `mc_product` VALUES ('326', '诺基亚 X6 4G 64G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/诺基亚/诺基亚X64G64G全网通白色/诺基亚X64G64G全网通白色.jpg', '23', '1', '1235.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:42:16', '2018-12-15 22:42:16');
+INSERT INTO `mc_product` VALUES ('327', '诺基亚 X6 4G 64G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/诺基亚/诺基亚X64G64G全网通黑色/诺基亚X64G64G全网通黑色.png', '23', '1', '1240.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:42:16', '2018-12-15 22:42:16');
+INSERT INTO `mc_product` VALUES ('329', '美图 T8s 4G 128G 全网通 冰川蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T8s4G128G全网通冰川蓝/美图T8s4G128G全网通冰川蓝.jpg', '22', '1', '1335.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:42:17', '2018-12-15 22:42:17');
+INSERT INTO `mc_product` VALUES ('333', '华为 P20 Pro 6G 128G 全网通 珠光贝母 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P20Pro6G128G全网通珠光贝母/华为P20Pro6G128G全网通珠光贝母.jpg', '11', '1', '4215.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:42:17', '2018-12-15 22:42:17');
+INSERT INTO `mc_product` VALUES ('334', '苹果 iPhone 7 Plus 全网通 128G 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone7Plus全网通128G金色/苹果iPhone7Plus全网通128G金色.jpg', '8', '1', '5270.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:42:18', '2018-12-15 23:20:10');
+INSERT INTO `mc_product` VALUES ('335', '小米 红米6 3G 32G 全网通 巴厘蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米63G32G全网通巴厘蓝/小米红米63G32G全网通巴厘蓝.png', '12', '1', '665.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:42:18', '2018-12-15 22:42:18');
+INSERT INTO `mc_product` VALUES ('343', '诺基亚 X6 6G 64G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/诺基亚/诺基亚X66G64G全网通白色/诺基亚X66G64G全网通白色.jpg', '23', '1', '1298.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '15', '2018-12-15 22:42:19', '2018-12-15 22:42:19');
+INSERT INTO `mc_product` VALUES ('344', '诺基亚 X6 6G 64G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/诺基亚/诺基亚X66G64G全网通黑色/诺基亚X66G64G全网通黑色.png', '23', '1', '1328.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:42:19', '2018-12-15 22:42:19');
+INSERT INTO `mc_product` VALUES ('345', '美图 T8s 4G 128G 全网通 莫奈粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T8s4G128G全网通莫奈粉/美图T8s4G128G全网通莫奈粉.jpg', '22', '1', '1510.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:42:19', '2018-12-15 22:42:19');
+INSERT INTO `mc_product` VALUES ('349', '华为 P20 Pro 6G 256G 全网通 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p蓝.jpg', '11', '1', '4890.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:42:20', '2018-12-17 01:10:08');
+INSERT INTO `mc_product` VALUES ('350', '苹果 iPhone 7 Plus 全网通 32G  玫瑰金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone7Plus全网通32G玫瑰金/苹果iPhone7Plus全网通32G玫瑰金.jpg', '8', '1', '3629.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:42:20', '2018-12-15 23:19:25');
+INSERT INTO `mc_product` VALUES ('351', '小米 红米6 3G 32G 全网通 铂银灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米63G32G全网通铂银灰/小米红米63G32G全网通铂银灰.png', '12', '1', '671.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:42:21', '2018-12-15 22:42:21');
+INSERT INTO `mc_product` VALUES ('352', '魅族 魅蓝 S6 3G 32G 全网通公开版 月光银 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅蓝S63G32G全网通公开版月光银/魅族魅蓝S63G32G全网通公开版月光银.jpg', '15', '1', '737.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:42:21', '2018-12-15 22:42:21');
+INSERT INTO `mc_product` VALUES ('359', '诺基亚 X6 6G 64G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/诺基亚/诺基亚X66G64G全网通蓝色/诺基亚X66G64G全网通蓝色.jpg', '23', '1', '1323.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:42:22', '2018-12-15 22:42:22');
+INSERT INTO `mc_product` VALUES ('360', '美图 T9 4G 128G 全网通 摩卡少女樱 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T94G128G全网通摩卡少女樱/美图T94G128G全网通摩卡少女樱.jpg', '22', '1', '3110.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:42:22', '2018-12-15 22:42:22');
+INSERT INTO `mc_product` VALUES ('361', '美图 T9 4G 64G 全网通 浆果红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T94G64G全网通浆果红/美图T94G64G全网通浆果红.jpg', '22', '1', '2220.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:42:23', '2018-12-15 22:42:23');
+INSERT INTO `mc_product` VALUES ('365', '华为 P20 Pro 6G 256G 全网通 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p极光.jpg', '11', '1', '4850.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:42:23', '2018-12-17 01:10:22');
+INSERT INTO `mc_product` VALUES ('366', '苹果 iPhone 7 Plus 全网通 32G 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone7Plus全网通32G黑色/苹果iPhone7Plus全网通32G黑色.jpg', '8', '1', '3640.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '48', '2018-12-15 22:42:23', '2018-12-15 23:19:47');
+INSERT INTO `mc_product` VALUES ('367', '小米 红米6 3G 32G 全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米63G32G全网通流沙金/小米红米63G32G全网通流沙金.png', '12', '1', '674.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:42:24', '2018-12-15 22:42:24');
+INSERT INTO `mc_product` VALUES ('368', '魅族 魅蓝 S6 3G 64G 全网通公开版 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅蓝S63G64G全网通公开版香槟金/魅族魅蓝S63G64G全网通公开版香槟金.jpg', '15', '1', '843.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:42:24', '2018-12-15 22:42:24');
+INSERT INTO `mc_product` VALUES ('376', '美图 T9 4G 64G 全网通 仙踪绿 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T94G64G全网通仙踪绿/美图T94G64G全网通仙踪绿.jpg', '22', '1', '2220.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:42:25', '2018-12-15 22:42:25');
+INSERT INTO `mc_product` VALUES ('378', '华为 P20 Pro 6G 64G 全网通 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p蓝.jpg', '11', '1', '3700.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:42:26', '2018-12-17 01:10:37');
+INSERT INTO `mc_product` VALUES ('379', '苹果 iPhone 7 Plus 全网通 32G 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone7Plus全网通32G金色/苹果iPhone7Plus全网通32G金色.jpg', '8', '1', '3680.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '57', '2018-12-15 22:42:26', '2018-12-15 22:42:26');
+INSERT INTO `mc_product` VALUES ('380', '小米 红米6 3G 32G 全网通 樱花粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米63G32G全网通樱花粉/小米红米63G32G全网通樱花粉.png', '12', '1', '655.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:42:26', '2018-12-15 22:42:26');
+INSERT INTO `mc_product` VALUES ('381', '魅族 魅蓝 E 全网通 3G 32G 月光银 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅蓝E全网通3G32G月光银/魅族魅蓝E全网通3G32G月光银.jpg', '15', '1', '640.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:42:26', '2018-12-16 11:58:00');
+INSERT INTO `mc_product` VALUES ('387', '美图 T9 4G 64G 全网通 星云粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T94G64G全网通星云粉/美图T94G64G全网通星云粉.jpg', '22', '1', '2220.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:42:28', '2018-12-15 22:42:28');
+INSERT INTO `mc_product` VALUES ('389', '华为 P20 Pro 6G 64G 全网通 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p极光.jpg', '11', '1', '3699.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:42:29', '2018-12-17 01:10:53');
+INSERT INTO `mc_product` VALUES ('390', '苹果 iPhone 7 Plus 全网通 32G 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone7Plus全网通32G银色/苹果iPhone7Plus全网通32G银色.jpg', '8', '1', '3760.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:42:29', '2018-12-15 22:42:29');
+INSERT INTO `mc_product` VALUES ('391', '小米 红米6 4G 64G 全网通 巴厘蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米64G64G全网通巴厘蓝/小米红米64G64G全网通巴厘蓝.png', '12', '1', '785.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:42:29', '2018-12-15 22:42:29');
+INSERT INTO `mc_product` VALUES ('392', '魅族 15 Plus 6G 128G 全网通公开版 砚墨 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族15Plus6G128G全网通公开版砚墨/魅族15Plus6G128G全网通公开版砚墨.jpg', '15', '1', '1958.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:42:29', '2018-12-15 22:42:29');
+INSERT INTO `mc_product` VALUES ('398', '美图 T9 6G 128G 全网通 湖光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T96G128G全网通湖光蓝/美图T96G128G全网通湖光蓝.jpg', '22', '1', '2850.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:42:31', '2018-12-15 22:42:31');
+INSERT INTO `mc_product` VALUES ('400', '华为 P20 Pro 6G 64G 全网通 极光闪蝶 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P20Pro6G64G全网通极光闪蝶/华为P20Pro6G64G全网通极光闪蝶.jpg', '11', '1', '3750.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:42:31', '2018-12-15 22:42:31');
+INSERT INTO `mc_product` VALUES ('401', '苹果 iPhone 8 256G 全网通 红色特别版 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8256G全网通红色特别版/苹果iPhone8256G全网通红色特别版.jpg', '8', '1', '5710.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:42:32', '2018-12-15 22:42:32');
+INSERT INTO `mc_product` VALUES ('402', '小米 红米6 4G 64G 全网通 铂银灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米64G64G全网通铂银灰/小米红米64G64G全网通铂银灰.png', '12', '1', '766.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:42:32', '2018-12-15 22:42:32');
+INSERT INTO `mc_product` VALUES ('403', '魅族 M15 全网通公开版 4G 64G 砂砾金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族M15全网通公开版4G64G砂砾金/魅族M15全网通公开版4G64G砂砾金.jpg', '15', '1', '1045.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:42:32', '2018-12-15 22:42:32');
+INSERT INTO `mc_product` VALUES ('409', '美图 T9 6G 128G 全网通 浆果红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T96G128G全网通浆果红/美图T96G128G全网通浆果红.jpg', '22', '1', '2735.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:42:34', '2018-12-15 22:42:34');
+INSERT INTO `mc_product` VALUES ('411', '华为 P20 Pro 6G 64G 全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p 黑d.jpg', '11', '1', '3720.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:42:34', '2018-12-17 01:11:11');
+INSERT INTO `mc_product` VALUES ('412', '苹果 iPhone 8 256G 全网通 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8256G全网通深空灰色/苹果iPhone8256G全网通深空灰色.jpg', '8', '1', '5800.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '50', '2018-12-15 22:42:34', '2018-12-15 22:42:34');
+INSERT INTO `mc_product` VALUES ('413', '小米 红米6 4G 64G 全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米64G64G全网通流沙金/小米红米64G64G全网通流沙金.png', '12', '1', '784.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:42:35', '2018-12-15 22:42:35');
+INSERT INTO `mc_product` VALUES ('414', '三星 S9+ 6G 128G 全网通 谜夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9+6G128G全网通谜夜黑/SamsungS9+6G128G全网通谜夜黑.jpg', '14', '1', '5180.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:42:35', '2018-12-15 22:42:35');
+INSERT INTO `mc_product` VALUES ('415', '魅族 M15 全网通公开版 4G 64G 曜岩黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族M15全网通公开版4G64G曜岩黑/魅族M15全网通公开版4G64G曜岩黑.jpg', '15', '1', '1045.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:42:35', '2018-12-15 22:42:35');
+INSERT INTO `mc_product` VALUES ('416', 'OPPO A3 4G 128G 全网通 骑士黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOA34G128G全网通骑士黑/OPPOA34G128G全网通骑士黑.png', '19', '1', '1452.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:42:35', '2019-03-29 14:22:16');
+INSERT INTO `mc_product` VALUES ('417', 'vivo Y79 4G 64G 全网通 磨砂黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY794G64G全网通磨砂黑/vivoY794G64G全网通磨砂黑.png', '17', '1', '1173.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:42:35', '2018-12-15 22:42:35');
+INSERT INTO `mc_product` VALUES ('421', '美图 T9 6G 128G 全网通 仙踪绿 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T96G128G全网通仙踪绿/美图T96G128G全网通仙踪绿.jpg', '22', '1', '2740.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:42:36', '2018-12-15 22:42:36');
+INSERT INTO `mc_product` VALUES ('423', '华为 P20 Pro 6G 64G 移动版全网通 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p蓝.jpg', '11', '1', '3370.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:42:36', '2018-12-17 01:11:33');
+INSERT INTO `mc_product` VALUES ('424', '苹果 iPhone 8 256G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone8256G全网通银色/苹果iPhone8256G全网通银色.jpg', '8', '1', '5880.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:42:37', '2018-12-15 22:42:37');
+INSERT INTO `mc_product` VALUES ('425', '小米 红米6 4G 64G 全网通 樱花粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米64G64G全网通樱花粉/小米红米64G64G全网通樱花粉.png', '12', '1', '788.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:42:37', '2018-12-15 22:42:37');
+INSERT INTO `mc_product` VALUES ('426', '三星 S9+ 6G 128G 全网通 夕雾紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9+6G128G全网通夕雾紫/SamsungS9+6G128G全网通夕雾紫.jpg', '14', '1', '5180.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:42:37', '2018-12-15 22:42:37');
+INSERT INTO `mc_product` VALUES ('427', '魅族 M15 全网通公开版 4G 64G 朱雀红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族M15全网通公开版4G64G朱雀红/魅族M15全网通公开版4G64G朱雀红.jpg', '15', '1', '1060.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:42:37', '2018-12-15 22:42:37');
+INSERT INTO `mc_product` VALUES ('428', 'OPPO A3 4G 128G 全网通 石榴红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOA34G128G全网通石榴红/OPPOA34G128G全网通石榴红.png', '19', '1', '1458.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '45', '2018-12-15 22:42:38', '2018-12-15 22:42:38');
+INSERT INTO `mc_product` VALUES ('433', '美图 T9 6G 128G 全网通 星云粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图T96G128G全网通星云粉/美图T96G128G全网通星云粉.jpg', '22', '1', '2740.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:42:39', '2018-12-15 22:42:39');
+INSERT INTO `mc_product` VALUES ('435', '华为 P20 Pro 6G 64G 移动版全网通 樱粉金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/p20p fen.jpg', '11', '1', '3650.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:42:39', '2018-12-17 01:11:58');
+INSERT INTO `mc_product` VALUES ('436', '苹果 iPhone 8 64G 全网通 红色特别版 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone864G全网通红色特别版/苹果iPhone864G全网通红色特别版.jpg', '8', '1', '4455.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '49', '2018-12-15 22:42:39', '2018-12-15 22:42:39');
+INSERT INTO `mc_product` VALUES ('437', '小米 红米6 Pro 3G 32G 全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro3G32G全网通流沙金/小米红米6Pro3G32G全网通流沙金.jpg', '12', '1', '820.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:42:39', '2018-12-15 22:42:39');
+INSERT INTO `mc_product` VALUES ('438', '三星 S9+ 6G 64G 全网通 谜夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9+6G64G全网通谜夜黑/SamsungS9+6G64G全网通谜夜黑.jpg', '14', '1', '4900.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:42:39', '2018-12-15 22:42:39');
+INSERT INTO `mc_product` VALUES ('439', '魅族 魅蓝 6T 3G 32G 公开版全网通 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅蓝6T3G32G公开版全网通香槟金/魅族魅蓝6T3G32G公开版全网通香槟金.jpg', '15', '1', '646.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:42:40', '2018-12-15 22:42:40');
+INSERT INTO `mc_product` VALUES ('440', 'OPPO A5 4G 64G 全网通 幻镜粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOA54G64G全网通幻镜粉/OPPOA54G64G全网通幻镜粉.png', '19', '1', '1098.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:42:40', '2018-12-15 22:42:40');
+INSERT INTO `mc_product` VALUES ('441', 'vivo NEX 6G 128G 全网通 星钻黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoNEX6G128G全网通星钻黑/vivoNEX6G128G全网通星钻黑.png', '17', '1', '2907.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:42:40', '2018-12-15 22:42:40');
+INSERT INTO `mc_product` VALUES ('446', '美图 V6 6G 128G 全网通 京城红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图V66G128G全网通京城红/美图V66G128G全网通京城红.jpg', '22', '1', '1710.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:42:41', '2018-12-15 22:42:41');
+INSERT INTO `mc_product` VALUES ('448', '华为 P20 Pro 8G 128G 全网通 珠光贝母 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P20Pro8G128G全网通珠光贝母/华为P20Pro8G128G全网通珠光贝母.jpg', '11', '1', '4520.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:42:42', '2018-12-15 22:42:42');
+INSERT INTO `mc_product` VALUES ('449', '苹果 iPhone 8 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone864G全网通金色/苹果iPhone864G全网通金色.jpg', '8', '1', '4424.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:42:42', '2018-12-15 22:42:42');
+INSERT INTO `mc_product` VALUES ('450', '小米 红米6 Pro 3G 32G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro3G32G全网通曜石黑/小米红米6Pro3G32G全网通曜石黑.jpg', '12', '1', '834.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:42:42', '2018-12-15 22:42:42');
+INSERT INTO `mc_product` VALUES ('451', '三星 S9+ 6G 64G 全网通 夕雾紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungS9+6G64G全网通夕雾紫/SamsungS9+6G64G全网通夕雾紫.jpg', '14', '1', '4450.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:42:43', '2018-12-15 22:42:43');
+INSERT INTO `mc_product` VALUES ('452', '魅族 魅蓝 6T 3G 32G 公开版全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅蓝6T3G32G公开版全网通曜石黑/魅族魅蓝6T3G32G公开版全网通曜石黑.jpg', '15', '1', '647.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:42:43', '2018-12-15 22:42:43');
+INSERT INTO `mc_product` VALUES ('453', 'OPPO A5 4G 64G 全网通 幻镜蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOA54G64G全网通幻镜蓝/OPPOA54G64G全网通幻镜蓝.png', '19', '1', '1098.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '0', '5', '2018-12-15 22:42:43', '2018-12-15 22:42:43');
+INSERT INTO `mc_product` VALUES ('454', 'vivo NEX 8G 128G 全网通 星迹版 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoNEX8G128G全网通星迹版/vivoNEX8G128G全网通星迹版.jpg', '17', '1', '3050.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:42:44', '2018-12-15 22:42:44');
+INSERT INTO `mc_product` VALUES ('458', '美图 V6 6G 128G 全网通 鹿特丹橙 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图V66G128G全网通鹿特丹橙/美图V66G128G全网通鹿特丹橙.jpg', '22', '1', '1660.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:42:44', '2018-12-15 22:42:44');
+INSERT INTO `mc_product` VALUES ('460', '华为 Mate RS 保时捷设计 6G 256G 全网通 瑞红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/rs 红2.jpg', '11', '1', '8210.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:42:45', '2018-12-17 01:24:41');
+INSERT INTO `mc_product` VALUES ('461', '华为 Mate RS 保时捷设计 6G 256G 全网通 玄黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/rs保时捷6.jpg', '11', '1', '8710.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:42:45', '2018-12-17 01:22:46');
+INSERT INTO `mc_product` VALUES ('462', '苹果 iPhone 8 64G 全网通 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone864G全网通深空灰色/苹果iPhone864G全网通深空灰色.jpg', '8', '1', '4464.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:42:45', '2018-12-15 22:42:45');
+INSERT INTO `mc_product` VALUES ('463', '三星 W2018 6G 256G 全网通 尊铂 ', '', '', '', '', '', '', '', '10', '5', 'catalog/t0196429958a912018ze.jpg', '14', '1', '9880.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:42:45', '2018-12-17 00:45:18');
+INSERT INTO `mc_product` VALUES ('464', '魅族 魅蓝 6T 4G 64G 公开版全网通 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅蓝6T4G64G公开版全网通香槟金/魅族魅蓝6T4G64G公开版全网通香槟金.jpg', '15', '1', '855.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:42:46', '2018-12-15 22:42:46');
+INSERT INTO `mc_product` VALUES ('465', 'OPPO A7x 4G 128G 全网通 冰焰蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOA7x4G128G全网通冰焰蓝/OPPOA7x4G128G全网通冰焰蓝.jpg', '19', '1', '1540.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:42:46', '2018-12-15 22:42:46');
+INSERT INTO `mc_product` VALUES ('466', 'vivo NEX 8G 128G 全网通 星钻黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoNEX8G128G全网通星钻黑/vivoNEX8G128G全网通星钻黑.png', '17', '1', '2978.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:42:46', '2018-12-15 22:42:46');
+INSERT INTO `mc_product` VALUES ('470', '美图 V6 6G 128G 全网通 墨尔本绿 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/美图/美图V66G128G全网通墨尔本绿/美图V66G128G全网通墨尔本绿.jpg', '22', '1', '1710.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:42:48', '2018-12-15 22:42:48');
+INSERT INTO `mc_product` VALUES ('472', '华为 Mate RS 保时捷设计 6G 512G 全网通 瑞红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/rs 红2.jpg', '11', '1', '8750.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:42:48', '2018-12-17 01:25:22');
+INSERT INTO `mc_product` VALUES ('473', '华为 Mate RS 保时捷设计 6G 512G 全网通 玄黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/rs保时捷6.jpg', '11', '1', '11640.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:42:48', '2018-12-17 01:25:38');
+INSERT INTO `mc_product` VALUES ('474', '苹果 iPhone 6S Plus 128G 全网通  玫瑰金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone6SPlus128G全网通玫瑰金/苹果iPhone6SPlus128G全网通玫瑰金.jpg', '8', '1', '3135.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '63', '2018-12-15 22:42:48', '2018-12-15 22:42:48');
+INSERT INTO `mc_product` VALUES ('475', '三星 W2018 6G 64G 全网通 雅金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/t010cab0e0a0bbe2018.jpg', '14', '1', '7850.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:42:48', '2018-12-17 00:43:33');
+INSERT INTO `mc_product` VALUES ('476', '魅族 魅蓝 6T 4G 64G 公开版全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅蓝6T4G64G公开版全网通曜石黑/魅族魅蓝6T4G64G公开版全网通曜石黑.jpg', '15', '1', '855.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:42:49', '2018-12-15 22:42:49');
+INSERT INTO `mc_product` VALUES ('477', 'OPPO A7x 4G 128G 全网通 星空紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOA7x4G128G全网通星空紫/OPPOA7x4G128G全网通星空紫.jpg', '19', '1', '1540.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:42:49', '2018-12-15 22:42:49');
+INSERT INTO `mc_product` VALUES ('478', 'vivo X21 6G 128G FIFA世界杯非凡版 典藏蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX216G128GFIFA世界杯非凡版典藏蓝/vivoX216G128GFIFA世界杯非凡版典藏蓝.png', '17', '1', '2550.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:42:49', '2018-12-15 22:42:49');
+INSERT INTO `mc_product` VALUES ('483', '华为 P10 Plus 6G 64G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P10Plus6G64G全网通曜石黑/华为P10Plus6G64G全网通曜石黑.jpg', '11', '1', '2250.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:42:50', '2018-12-15 22:42:50');
+INSERT INTO `mc_product` VALUES ('484', '苹果 iPhone 6S Plus 128G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone6SPlus128G全网通金色/苹果iPhone6SPlus128G全网通金色.jpg', '8', '1', '3130.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '54', '2018-12-15 22:42:51', '2018-12-15 22:42:51');
+INSERT INTO `mc_product` VALUES ('485', '三星 大器III（G9092） 联通版 名仕蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/Samsung大器III（G9092）联通版名仕蓝/Samsung大器III（G9092）联通版名仕蓝.png', '14', '1', '1998.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:42:51', '2018-12-15 22:42:51');
+INSERT INTO `mc_product` VALUES ('486', '魅族 魅蓝 E3 6G 64G 全网通 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅蓝E36G64G全网通香槟金/魅族魅蓝E36G64G全网通香槟金.jpg', '15', '1', '1398.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:42:51', '2018-12-15 22:42:51');
+INSERT INTO `mc_product` VALUES ('487', 'OPPO Find X 8G 128G 标准版全网通版 冰珀蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOFindX8G128G标准版全网通版冰珀蓝/OPPOFindX8G128G标准版全网通版冰珀蓝.png', '19', '1', '4070.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:42:51', '2018-12-15 22:42:51');
+INSERT INTO `mc_product` VALUES ('488', 'vivo X21 6G 128G 屏幕指纹版全网通 宝石红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX216G128G屏幕指纹版全网通宝石红/vivoX216G128G屏幕指纹版全网通宝石红.jpg', '17', '1', '2179.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:42:52', '2018-12-15 22:42:52');
+INSERT INTO `mc_product` VALUES ('493', '华为 P10 Plus 6G 64G 全网通 钻雕金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P10Plus6G64G全网通钻雕金/华为P10Plus6G64G全网通钻雕金.jpg', '11', '1', '2075.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:42:53', '2018-12-15 22:42:53');
+INSERT INTO `mc_product` VALUES ('494', '苹果 iPhone 6S Plus 128G 全网通 星空灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone6SPlus128G全网通星空灰/苹果iPhone6SPlus128G全网通星空灰.jpg', '8', '1', '3159.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '63', '2018-12-15 22:42:53', '2018-12-15 22:42:53');
+INSERT INTO `mc_product` VALUES ('495', '三星 领世旗舰8（G9298） 4G 64G 移动联通4G 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/Samsung领世旗舰8（G9298）4G64G移动联通4G黑色/Samsung领世旗舰8（G9298）4G64G移动联通4G黑色.png', '14', '1', '7305.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:42:53', '2018-12-15 22:42:53');
+INSERT INTO `mc_product` VALUES ('496', '魅族 魅蓝 E3 6G 64G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅蓝E36G64G全网通曜石黑/魅族魅蓝E36G64G全网通曜石黑.jpg', '15', '1', '1415.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '48', '2018-12-15 22:42:53', '2018-12-15 22:42:53');
+INSERT INTO `mc_product` VALUES ('497', 'OPPO Find X 8G 128G 标准版全网通版 波尔多红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOFindX8G128G标准版全网通版波尔多红/OPPOFindX8G128G标准版全网通版波尔多红.png', '19', '1', '4080.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:42:53', '2018-12-15 22:42:53');
+INSERT INTO `mc_product` VALUES ('498', 'vivo X21 6G 128G 屏幕指纹版全网通 冰钻黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX216G128G屏幕指纹版全网通冰钻黑/vivoX216G128G屏幕指纹版全网通冰钻黑.jpg', '17', '1', '2250.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:42:54', '2018-12-15 22:42:54');
+INSERT INTO `mc_product` VALUES ('504', '华为 P10 4G 64G 移动版全网通 钻雕金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为P104G64G移动版全网通钻雕金/华为P104G64G移动版全网通钻雕金.jpg', '11', '1', '1798.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:42:55', '2018-12-15 22:42:55');
+INSERT INTO `mc_product` VALUES ('505', '苹果 iPhone 6S Plus 128G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone6SPlus128G全网通银色/苹果iPhone6SPlus128G全网通银色.jpg', '8', '1', '3139.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '50', '2018-12-15 22:42:55', '2018-12-15 22:42:55');
+INSERT INTO `mc_product` VALUES ('506', '三星 三星W2019 6G 128G 全网通 睿金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungSamsungW20196G128G全网通睿金/SamsungSamsungW20196G128G全网通睿金.jpg', '14', '1', '13800.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '43', '2018-12-15 22:42:55', '2018-12-15 22:42:55');
+INSERT INTO `mc_product` VALUES ('507', '魅族 魅族 16th Plus 6G 128G 全网通公开版 静夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16thPlus6G128G全网通公开版静夜黑/魅族魅族16thPlus6G128G全网通公开版静夜黑.jpg', '15', '1', '2903.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:42:56', '2018-12-15 22:42:56');
+INSERT INTO `mc_product` VALUES ('508', 'OPPO Find X 8G 256G 超级闪充版全网通版 冰珀蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOFindX8G256G超级闪充版全网通版冰珀蓝/OPPOFindX8G256G超级闪充版全网通版冰珀蓝.png', '19', '1', '4535.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:42:56', '2018-12-15 22:42:56');
+INSERT INTO `mc_product` VALUES ('509', 'vivo X21 6G 128G 普通版全网通 宝石红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX216G128G普通版全网通宝石红/vivoX216G128G普通版全网通宝石红.jpg', '17', '1', '2125.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:42:56', '2018-12-15 22:42:56');
+INSERT INTO `mc_product` VALUES ('514', '华为 畅享7 plus 3G 32G 移动版全网通 灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享7plus3G32G移动版全网通灰色/华为畅享7plus3G32G移动版全网通灰色.jpg', '11', '1', '738.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:42:57', '2018-12-15 22:42:57');
+INSERT INTO `mc_product` VALUES ('515', '苹果 iPhone 6S Plus 32G 全网通  玫瑰金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone6SPlus32G全网通玫瑰金/苹果iPhone6SPlus32G全网通玫瑰金.jpg', '8', '1', '2539.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '59', '2018-12-15 22:42:57', '2018-12-15 22:42:57');
+INSERT INTO `mc_product` VALUES ('516', '三星 三星W2019 6G 256G 全网通 尊铂 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/Samsung/SamsungSamsungW20196G256G全网通尊铂/SamsungSamsungW20196G256G全网通尊铂.jpg', '14', '1', '16200.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '45', '2018-12-15 22:42:58', '2018-12-15 22:42:58');
+INSERT INTO `mc_product` VALUES ('517', '魅族 魅族 16th Plus 6G 128G 全网通公开版 远山白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16thPlus6G128G全网通公开版远山白/魅族魅族16thPlus6G128G全网通公开版远山白.jpg', '15', '1', '2938.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:42:58', '2018-12-15 22:42:58');
+INSERT INTO `mc_product` VALUES ('518', 'OPPO Find X 8G 256G 超级闪充版全网通版 波尔多红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOFindX8G256G超级闪充版全网通版波尔多红/OPPOFindX8G256G超级闪充版全网通版波尔多红.png', '19', '1', '4535.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '69', '2018-12-15 22:42:58', '2018-12-15 22:42:58');
+INSERT INTO `mc_product` VALUES ('519', 'vivo X21 6G 128G 普通版全网通 冰钻黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX216G128G普通版全网通冰钻黑/vivoX216G128G普通版全网通冰钻黑.jpg', '17', '1', '2080.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:42:58', '2018-12-15 22:42:58');
+INSERT INTO `mc_product` VALUES ('524', '华为 Mate 10 4G 64G 全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate104G64G全网通亮黑色/华为Mate104G64G全网通亮黑色.jpg', '11', '1', '2430.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '98', '2018-12-15 22:42:59', '2019-03-26 15:58:08');
+INSERT INTO `mc_product` VALUES ('525', '苹果 iPhone 6S Plus 32G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone6SPlus32G全网通金色/苹果iPhone6SPlus32G全网通金色.jpg', '8', '1', '2610.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '45', '2018-12-15 22:43:00', '2018-12-15 22:43:00');
+INSERT INTO `mc_product` VALUES ('526', '魅族 魅族 16th Plus 8G 128G 全网通公开版 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16thPlus8G128G全网通公开版极光蓝/魅族魅族16thPlus8G128G全网通公开版极光蓝.jpg', '15', '1', '3288.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:43:00', '2018-12-15 22:43:00');
+INSERT INTO `mc_product` VALUES ('527', 'OPPO Find X 8G 512G 兰博基尼版全网通版 碳纤黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOFindX8G512G兰博基尼版全网通版碳纤黑/OPPOFindX8G512G兰博基尼版全网通版碳纤黑.png', '19', '1', '7915.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:43:00', '2018-12-15 22:43:00');
+INSERT INTO `mc_product` VALUES ('528', 'vivo X21 6G 128G 普通版全网通 极光白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX216G128G普通版全网通极光白/vivoX216G128G普通版全网通极光白.jpg', '17', '1', '2085.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:43:00', '2018-12-15 22:43:00');
+INSERT INTO `mc_product` VALUES ('535', '华为 Mate 10 4G 64G 全网通 摩卡金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate104G64G全网通摩卡金/华为Mate104G64G全网通摩卡金.jpg', '11', '1', '2350.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:43:01', '2018-12-15 22:43:01');
+INSERT INTO `mc_product` VALUES ('536', '苹果 iPhone 6S Plus 32G 全网通 星空灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone6SPlus32G全网通星空灰/苹果iPhone6SPlus32G全网通星空灰.jpg', '8', '1', '2675.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '61', '2018-12-15 22:43:02', '2018-12-15 22:43:02');
+INSERT INTO `mc_product` VALUES ('537', '魅族 魅族 16th Plus 8G 128G 全网通公开版 静夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16thPlus8G128G全网通公开版静夜黑/魅族魅族16thPlus8G128G全网通公开版静夜黑.jpg', '15', '1', '3138.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:43:02', '2018-12-15 22:43:02');
+INSERT INTO `mc_product` VALUES ('538', 'OPPO K1 4G 64G 全网通 梵星蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOK14G64G全网通梵星蓝/OPPOK14G64G全网通梵星蓝.jpg', '19', '1', '1467.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:43:02', '2018-12-15 22:43:02');
+INSERT INTO `mc_product` VALUES ('539', 'vivo X21i 4G 128G 全网通 极夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX21i4G128G全网通极夜黑/vivoX21i4G128G全网通极夜黑.png', '17', '1', '1860.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:43:02', '2018-12-15 22:43:02');
+INSERT INTO `mc_product` VALUES ('543', '华为 Mate 10 4G 64G 全网通 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate104G64G全网通香槟金/华为Mate104G64G全网通香槟金.jpg', '11', '1', '2500.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:43:04', '2018-12-15 22:43:04');
+INSERT INTO `mc_product` VALUES ('544', '苹果 iPhone 6S Plus 32G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iPhone6SPlus32G全网通银色/苹果iPhone6SPlus32G全网通银色.jpg', '8', '1', '2580.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '53', '2018-12-15 22:43:04', '2018-12-15 22:43:04');
+INSERT INTO `mc_product` VALUES ('545', '小米 红米6 Pro 3G 32G 全网通 樱花粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro3G32G全网通樱花粉/小米红米6Pro3G32G全网通樱花粉.jpg', '12', '1', '778.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:43:04', '2018-12-15 22:43:04');
+INSERT INTO `mc_product` VALUES ('546', '魅族 魅族 16th Plus 8G 128G 全网通公开版 远山白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16thPlus8G128G全网通公开版远山白/魅族魅族16thPlus8G128G全网通公开版远山白.jpg', '15', '1', '3128.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:43:04', '2018-12-15 22:43:04');
+INSERT INTO `mc_product` VALUES ('547', 'OPPO K1 4G 64G 全网通 摩卡红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOK14G64G全网通摩卡红/OPPOK14G64G全网通摩卡红.jpg', '19', '1', '1493.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:04', '2018-12-15 22:43:04');
+INSERT INTO `mc_product` VALUES ('548', 'vivo X21i 6G 64G 全网通 极光白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX21i6G64G全网通极光白/vivoX21i6G64G全网通极光白.png', '17', '1', '1760.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:43:05', '2018-12-15 22:43:05');
+INSERT INTO `mc_product` VALUES ('552', '华为 Mate 10 6G 128G 全网通 摩卡金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate106G128G全网通摩卡金/华为Mate106G128G全网通摩卡金.jpg', '11', '1', '2950.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:43:06', '2018-12-15 22:43:06');
+INSERT INTO `mc_product` VALUES ('553', '苹果 iPhone XR 128G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR128G全网通白色/苹果iphoneXR128G全网通白色.jpg', '8', '1', '6179.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:43:06', '2018-12-19 09:19:10');
+INSERT INTO `mc_product` VALUES ('554', '小米 红米6 Pro 4G 32G 全网通 巴厘蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro4G32G全网通巴厘蓝/小米红米6Pro4G32G全网通巴厘蓝.jpg', '12', '1', '855.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:43:06', '2018-12-15 22:43:06');
+INSERT INTO `mc_product` VALUES ('555', '魅族 魅族 16X 6G 128G 全网通公开版 晨曦金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16X6G128G全网通公开版晨曦金/魅族魅族16X6G128G全网通公开版晨曦金.jpg', '15', '1', '2186.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:43:06', '2018-12-15 22:43:06');
+INSERT INTO `mc_product` VALUES ('556', 'OPPO K1 4G 64G 全网通 银光绿 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOK14G64G全网通银光绿/OPPOK14G64G全网通银光绿.jpg', '19', '1', '1520.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:43:07', '2018-12-15 22:43:07');
+INSERT INTO `mc_product` VALUES ('557', 'vivo X21s 6G 128G 全网通 千禧粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX21s6G128G全网通千禧粉/vivoX21s6G128G全网通千禧粉.jpg', '17', '1', '2078.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:43:07', '2018-12-15 22:43:07');
+INSERT INTO `mc_product` VALUES ('558', 'vivo X21s 6G 128G 全网通 星夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX21s6G128G全网通星夜黑/vivoX21s6G128G全网通星夜黑.jpg', '17', '1', '2025.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:43:07', '2018-12-15 22:43:07');
+INSERT INTO `mc_product` VALUES ('562', '华为 Mate 10 6G 128G 全网通 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate106G128G全网通香槟金/华为Mate106G128G全网通香槟金.jpg', '11', '1', '2790.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:43:08', '2018-12-15 22:43:08');
+INSERT INTO `mc_product` VALUES ('563', '苹果 iPhone XR 128G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR128G全网通黑色/苹果iphoneXR128G全网通黑色.jpg', '8', '1', '6180.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:43:08', '2018-12-19 09:19:37');
+INSERT INTO `mc_product` VALUES ('564', '小米 红米6 Pro 4G 32G 全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro4G32G全网通流沙金/小米红米6Pro4G32G全网通流沙金.jpg', '12', '1', '833.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:43:08', '2018-12-15 22:43:08');
+INSERT INTO `mc_product` VALUES ('565', '魅族 魅族 16X 6G 128G 全网通公开版 汝窑白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16X6G128G全网通公开版汝窑白/魅族魅族16X6G128G全网通公开版汝窑白.jpg', '15', '1', '2220.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:43:09', '2018-12-15 22:43:09');
+INSERT INTO `mc_product` VALUES ('566', 'OPPO K1 6G 64G 全网通 梵星蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOK16G64G全网通梵星蓝/OPPOK16G64G全网通梵星蓝.jpg', '19', '1', '1638.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:43:09', '2018-12-15 22:43:09');
+INSERT INTO `mc_product` VALUES ('567', 'vivo X23  8G 128G 全网通 幻夜蓝   ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX238G128G全网通幻夜蓝/vivoX238G128G全网通幻夜蓝.jpg', '17', '1', '2783.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:43:09', '2018-12-15 22:43:09');
+INSERT INTO `mc_product` VALUES ('572', '华为 Mate 10 6G 128G 移动版全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate106G128G移动版全网通亮黑色/华为Mate106G128G移动版全网通亮黑色.jpg', '11', '1', '2800.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:43:10', '2018-12-15 22:43:10');
+INSERT INTO `mc_product` VALUES ('573', '苹果 iPhone XR 128G 全网通 红色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR128G全网通红色/苹果iphoneXR128G全网通红色.jpg', '8', '1', '6213.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:43:10', '2018-12-19 09:19:59');
+INSERT INTO `mc_product` VALUES ('574', '小米 红米6 Pro 4G 32G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro4G32G全网通曜石黑/小米红米6Pro4G32G全网通曜石黑.jpg', '12', '1', '835.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:43:10', '2018-12-15 22:43:10');
+INSERT INTO `mc_product` VALUES ('575', '魅族 魅族 16X 6G 128G 全网通公开版 云山蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16X6G128G全网通公开版云山蓝/魅族魅族16X6G128G全网通公开版云山蓝.jpg', '15', '1', '2180.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:43:11', '2018-12-15 22:43:11');
+INSERT INTO `mc_product` VALUES ('576', 'OPPO K1 6G 64G 全网通 摩卡红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOK16G64G全网通摩卡红/OPPOK16G64G全网通摩卡红.jpg', '19', '1', '1650.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:43:11', '2018-12-15 22:43:11');
+INSERT INTO `mc_product` VALUES ('577', 'vivo X23 8G 128G 全网通 幻影红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX238G128G全网通幻影红/vivoX238G128G全网通幻影红.jpg', '17', '1', '2783.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:43:11', '2018-12-15 22:43:11');
+INSERT INTO `mc_product` VALUES ('581', '华为 Mate 10 6G 128G 移动版全网通 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate106G128G移动版全网通香槟金/华为Mate106G128G移动版全网通香槟金.jpg', '11', '1', '2690.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:43:12', '2018-12-15 22:43:12');
+INSERT INTO `mc_product` VALUES ('582', '小米 红米6 Pro 4G 32G 全网通 樱花粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro4G32G全网通樱花粉/小米红米6Pro4G32G全网通樱花粉.jpg', '12', '1', '855.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:12', '2018-12-15 22:43:12');
+INSERT INTO `mc_product` VALUES ('583', '魅族 魅族 Note8 4G 64G 全网通 曜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族Note84G64G全网通曜黑/魅族魅族Note84G64G全网通曜黑.jpg', '15', '1', '1107.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:43:13', '2018-12-15 22:43:13');
+INSERT INTO `mc_product` VALUES ('584', 'OPPO K1 6G 64G 全网通 银光绿 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOK16G64G全网通银光绿/OPPOK16G64G全网通银光绿.jpg', '19', '1', '1652.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:13', '2018-12-15 22:43:13');
+INSERT INTO `mc_product` VALUES ('585', 'vivo X23 8G 128G 全网通 魅影紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX238G128G全网通魅影紫/vivoX238G128G全网通魅影紫.jpg', '17', '1', '2782.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:13', '2018-12-15 22:43:13');
+INSERT INTO `mc_product` VALUES ('590', '小米 红米6 Pro 4G 64G 全网通 巴厘蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro4G64G全网通巴厘蓝/小米红米6Pro4G64G全网通巴厘蓝.jpg', '12', '1', '990.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:43:14', '2018-12-15 22:43:14');
+INSERT INTO `mc_product` VALUES ('591', '魅族 魅族15 4G 64G 全网通公开版 砚墨 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族154G64G全网通公开版砚墨/魅族魅族154G64G全网通公开版砚墨.jpg', '15', '1', '1438.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:43:14', '2018-12-15 22:43:14');
+INSERT INTO `mc_product` VALUES ('592', 'OPPO R15 6G 128G 梦境版全网通 梦境红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR156G128G梦境版全网通梦境红/OPPOR156G128G梦境版全网通梦境红.jpg', '19', '1', '2433.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:43:15', '2018-12-15 22:43:15');
+INSERT INTO `mc_product` VALUES ('593', 'vivo X23 8G 128G 全网通 时尚橙 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX238G128G全网通时尚橙/vivoX238G128G全网通时尚橙.jpg', '17', '1', '2788.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:43:15', '2018-12-15 22:43:15');
+INSERT INTO `mc_product` VALUES ('599', '小米 红米6 Pro 4G 64G 全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro4G64G全网通流沙金/小米红米6Pro4G64G全网通流沙金.jpg', '12', '1', '978.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:16', '2018-12-15 22:43:16');
+INSERT INTO `mc_product` VALUES ('600', '魅族 魅族16th 6G 128G 全网通公开版 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16th6G128G全网通公开版极光蓝/魅族魅族16th6G128G全网通公开版极光蓝.jpg', '15', '1', '2858.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:16', '2018-12-15 22:43:16');
+INSERT INTO `mc_product` VALUES ('601', 'OPPO R15 6G 128G 梦境版全网通 梦境紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR156G128G梦境版全网通梦境紫/OPPOR156G128G梦境版全网通梦境紫.jpg', '19', '1', '2522.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:43:16', '2018-12-15 22:43:16');
+INSERT INTO `mc_product` VALUES ('602', 'vivo X23 8G 128G 全网通 时尚紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX238G128G全网通时尚紫/vivoX238G128G全网通时尚紫.jpg', '17', '1', '2788.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:17', '2018-12-15 22:43:17');
+INSERT INTO `mc_product` VALUES ('607', '小米 红米6 Pro 4G 64G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro4G64G全网通曜石黑/小米红米6Pro4G64G全网通曜石黑.jpg', '12', '1', '989.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:43:17', '2018-12-15 22:43:17');
+INSERT INTO `mc_product` VALUES ('608', '魅族 魅族16th 6G 128G 全网通公开版 静夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16th6G128G全网通公开版静夜黑/魅族魅族16th6G128G全网通公开版静夜黑.jpg', '15', '1', '2768.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:43:18', '2018-12-15 22:43:18');
+INSERT INTO `mc_product` VALUES ('609', 'OPPO R15 6G 128G 全网通 陶瓷黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR156G128G全网通陶瓷黑/OPPOR156G128G全网通陶瓷黑.jpg', '19', '1', '2575.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '47', '2018-12-15 22:43:18', '2018-12-15 22:43:18');
+INSERT INTO `mc_product` VALUES ('610', 'vivo X23 8G 128G 全网通 星芒版 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoX238G128G全网通星芒版/vivoX238G128G全网通星芒版.png', '17', '1', '2788.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:18', '2018-12-15 22:43:18');
+INSERT INTO `mc_product` VALUES ('613', '小米 红米6 Pro 4G 64G 全网通 樱花粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6Pro4G64G全网通樱花粉/小米红米6Pro4G64G全网通樱花粉.jpg', '12', '1', '983.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:43:19', '2018-12-15 22:43:19');
+INSERT INTO `mc_product` VALUES ('614', '魅族 魅族16th 6G 128G 全网通公开版 远山白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16th6G128G全网通公开版远山白/魅族魅族16th6G128G全网通公开版远山白.jpg', '15', '1', '2758.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:43:19', '2018-12-15 22:43:19');
+INSERT INTO `mc_product` VALUES ('615', 'OPPO R15 6G 128G 全网通 星空紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR156G128G全网通星空紫/OPPOR156G128G全网通星空紫.png', '19', '1', '2040.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:43:19', '2018-12-15 22:43:19');
+INSERT INTO `mc_product` VALUES ('617', '小米 红米6A 2G 16G 全网通 巴厘蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6A2G16G全网通巴厘蓝/小米红米6A2G16G全网通巴厘蓝.jpg', '12', '1', '513.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:20', '2018-12-15 22:43:20');
+INSERT INTO `mc_product` VALUES ('618', '魅族 魅族16th 8G 128G 全网通公开版 静夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16th8G128G全网通公开版静夜黑/魅族魅族16th8G128G全网通公开版静夜黑.jpg', '15', '1', '2938.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:43:20', '2018-12-15 22:43:20');
+INSERT INTO `mc_product` VALUES ('619', 'OPPO R15 6G 128G 全网通 雪盈白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR156G128G全网通雪盈白/OPPOR156G128G全网通雪盈白.jpg', '19', '1', '2057.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:43:20', '2018-12-15 22:43:20');
+INSERT INTO `mc_product` VALUES ('621', '小米 红米6A 2G 16G 全网通 铂银灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6A2G16G全网通铂银灰/小米红米6A2G16G全网通铂银灰.jpg', '12', '1', '498.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:24', '2018-12-15 22:43:24');
+INSERT INTO `mc_product` VALUES ('622', '魅族 魅族16th 8G 128G 全网通公开版 远山白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族16th8G128G全网通公开版远山白/魅族魅族16th8G128G全网通公开版远山白.jpg', '15', '1', '2878.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:43:24', '2018-12-15 22:43:24');
+INSERT INTO `mc_product` VALUES ('623', 'OPPO R15 6G 128G 移动版全网通 陶瓷黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR156G128G移动版全网通陶瓷黑/OPPOR156G128G移动版全网通陶瓷黑.jpg', '19', '1', '2400.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:43:24', '2018-12-15 22:43:24');
+INSERT INTO `mc_product` VALUES ('624', 'vivo Y81s 3G 32G 全网通 宝石红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY81s3G32G全网通宝石红/vivoY81s3G32G全网通宝石红.jpg', '17', '1', '830.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:43:24', '2018-12-15 22:43:24');
+INSERT INTO `mc_product` VALUES ('625', '苹果 iPhone XR 128G 全网通 黄色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR128G全网通黄色/苹果iphoneXR128G全网通黄色.jpg', '8', '1', '6200.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:43:25', '2018-12-19 09:20:38');
+INSERT INTO `mc_product` VALUES ('626', '小米 红米6A 2G 16G 全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6A2G16G全网通流沙金/小米红米6A2G16G全网通流沙金.jpg', '12', '1', '501.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:25', '2018-12-15 22:43:25');
+INSERT INTO `mc_product` VALUES ('627', '魅族 魅族V8 3G 32G 全网通公开版 纯白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族V83G32G全网通公开版纯白/魅族魅族V83G32G全网通公开版纯白.jpg', '15', '1', '612.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:43:25', '2018-12-15 22:43:25');
+INSERT INTO `mc_product` VALUES ('628', 'OPPO R15 6G 128G 移动版全网通 星空紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR156G128G移动版全网通星空紫/OPPOR156G128G移动版全网通星空紫.jpg', '19', '1', '1908.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:25', '2018-12-15 22:43:25');
+INSERT INTO `mc_product` VALUES ('629', 'vivo Y81s 3G 64G 全网通 宝石红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY81s3G64G全网通宝石红/vivoY81s3G64G全网通宝石红.jpg', '17', '1', '940.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:43:26', '2018-12-15 22:43:26');
+INSERT INTO `mc_product` VALUES ('630', '苹果 iPhone XR 128G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR128G全网通蓝色/苹果iphoneXR128G全网通蓝色.jpg', '8', '1', '6175.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:43:26', '2018-12-19 09:21:35');
+INSERT INTO `mc_product` VALUES ('631', '小米 红米6A 2G 16G 全网通 樱花粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6A2G16G全网通樱花粉/小米红米6A2G16G全网通樱花粉.jpg', '12', '1', '513.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:43:26', '2018-12-15 22:43:26');
+INSERT INTO `mc_product` VALUES ('632', '魅族 魅族V8 3G 32G 全网通公开版 磨砂黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族V83G32G全网通公开版磨砂黑/魅族魅族V83G32G全网通公开版磨砂黑.jpg', '15', '1', '628.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:43:26', '2018-12-15 22:43:26');
+INSERT INTO `mc_product` VALUES ('633', 'OPPO R15 6G 128G 移动版全网通 雪盈白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR156G128G移动版全网通雪盈白/OPPOR156G128G移动版全网通雪盈白.jpg', '19', '1', '1845.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:43:26', '2018-12-15 22:43:26');
+INSERT INTO `mc_product` VALUES ('634', 'vivo Y81s 3G 64G 全网通 黑金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY81s3G64G全网通黑金色/vivoY81s3G64G全网通黑金色.jpg', '17', '1', '940.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:43:27', '2018-12-15 22:43:27');
+INSERT INTO `mc_product` VALUES ('635', '华为 Mate 10 保时捷版 6G 256G 全网通 钻石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate10保时捷版6G256G全网通钻石黑/华为Mate10保时捷版6G256G全网通钻石黑.png', '11', '1', '4920.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:43:27', '2018-12-15 22:43:27');
+INSERT INTO `mc_product` VALUES ('636', '苹果 iPhone XR 128G 全网通 珊瑚色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR128G全网通珊瑚色/苹果iphoneXR128G全网通珊瑚色.jpg', '8', '1', '6240.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:43:27', '2018-12-19 09:22:08');
+INSERT INTO `mc_product` VALUES ('637', '小米 红米6A 2G 16G 移动全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6A2G16G移动全网通流沙金/小米红米6A2G16G移动全网通流沙金.jpg', '12', '1', '493.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '42', '2018-12-15 22:43:27', '2018-12-15 22:43:27');
+INSERT INTO `mc_product` VALUES ('638', '魅族 魅族V8 4G 64G 全网通公开版 雅金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族V84G64G全网通公开版雅金/魅族魅族V84G64G全网通公开版雅金.jpg', '15', '1', '917.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:43:28', '2018-12-15 22:43:28');
+INSERT INTO `mc_product` VALUES ('639', 'OPPO R15x 6G 128G 全网通 冰萃银 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR15x6G128G全网通冰萃银/OPPOR15x6G128G全网通冰萃银.jpg', '19', '1', '2048.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:43:28', '2018-12-15 22:43:28');
+INSERT INTO `mc_product` VALUES ('640', 'vivo Y81s 3G 64G 全网通 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY81s3G64G全网通香槟金/vivoY81s3G64G全网通香槟金.jpg', '17', '1', '950.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:43:28', '2018-12-15 22:43:28');
+INSERT INTO `mc_product` VALUES ('641', '华为 Mate 10 Pro 6G 128G 全网通 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate10Pro6G128G全网通宝石蓝/华为Mate10Pro6G128G全网通宝石蓝.png', '11', '1', '2860.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:43:28', '2019-03-26 15:58:24');
+INSERT INTO `mc_product` VALUES ('642', '苹果 iPhone XR 256G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR256G全网通白色/苹果iphoneXR256G全网通白色.jpg', '8', '1', '7030.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:43:28', '2018-12-19 09:22:35');
+INSERT INTO `mc_product` VALUES ('643', '小米 红米6A 3G 32G 全网通 巴厘蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6A3G32G全网通巴厘蓝/小米红米6A3G32G全网通巴厘蓝.jpg', '12', '1', '615.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:43:29', '2018-12-15 22:43:29');
+INSERT INTO `mc_product` VALUES ('644', '魅族 魅族V8 4G 64G 全网通公开版 曜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族V84G64G全网通公开版曜黑/魅族魅族V84G64G全网通公开版曜黑.jpg', '15', '1', '899.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:43:29', '2018-12-15 22:43:29');
+INSERT INTO `mc_product` VALUES ('645', 'OPPO R15x 6G 128G 全网通 星云渐变 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR15x6G128G全网通星云渐变/OPPOR15x6G128G全网通星云渐变.jpg', '19', '1', '2103.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:29', '2018-12-15 22:43:29');
+INSERT INTO `mc_product` VALUES ('646', 'vivo Y83 4G 64G 全网通 极夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY834G64G全网通极夜黑/vivoY834G64G全网通极夜黑.png', '17', '1', '1092.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:43:30', '2018-12-15 22:43:30');
+INSERT INTO `mc_product` VALUES ('647', '华为 Mate 10 Pro 6G 128G 全网通 摩卡金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate10Pro6G128G全网通摩卡金/华为Mate10Pro6G128G全网通摩卡金.jpg', '11', '1', '2860.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:43:30', '2018-12-15 22:43:30');
+INSERT INTO `mc_product` VALUES ('648', '苹果 iPhone XR 256G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR256G全网通黑色/苹果iphoneXR256G全网通黑色.jpg', '8', '1', '7045.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:43:30', '2018-12-19 09:26:27');
+INSERT INTO `mc_product` VALUES ('649', '小米 红米6A 3G 32G 全网通 铂银灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6A3G32G全网通铂银灰/小米红米6A3G32G全网通铂银灰.jpg', '12', '1', '606.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:43:30', '2018-12-15 22:43:30');
+INSERT INTO `mc_product` VALUES ('650', '魅族 魅族X8 4G 64G 全网通 幻蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族X84G64G全网通幻蓝/魅族魅族X84G64G全网通幻蓝.jpg', '15', '1', '1478.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:31', '2018-12-15 22:43:31');
+INSERT INTO `mc_product` VALUES ('651', 'OPPO R17 6G 128G 全网通 流光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR176G128G全网通流光蓝/OPPOR176G128G全网通流光蓝.jpg', '19', '1', '2460.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:43:31', '2018-12-15 22:43:31');
+INSERT INTO `mc_product` VALUES ('652', 'vivo Y83 4G 64G 全网通 魅力红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY834G64G全网通魅力红/vivoY834G64G全网通魅力红.png', '17', '1', '1058.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:43:31', '2018-12-15 22:43:31');
+INSERT INTO `mc_product` VALUES ('655', '华为 Mate 10 Pro 6G 128G 全网通 银钻灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate10Pro6G128G全网通银钻灰/华为Mate10Pro6G128G全网通银钻灰.png', '11', '1', '2915.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '59', '2018-12-15 22:43:31', '2018-12-15 22:43:31');
+INSERT INTO `mc_product` VALUES ('656', '苹果 iPhone XR 256G 全网通 红色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR256G全网通红色/苹果iphoneXR256G全网通红色.jpg', '8', '1', '7100.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:43:32', '2018-12-19 09:26:56');
+INSERT INTO `mc_product` VALUES ('657', '小米 红米6A 3G 32G 全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6A3G32G全网通流沙金/小米红米6A3G32G全网通流沙金.jpg', '12', '1', '612.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:43:32', '2018-12-15 22:43:32');
+INSERT INTO `mc_product` VALUES ('658', '魅族 魅族X8 4G 64G 全网通 亮黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族X84G64G全网通亮黑/魅族魅族X84G64G全网通亮黑.jpg', '15', '1', '1478.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:43:32', '2018-12-15 22:43:32');
+INSERT INTO `mc_product` VALUES ('659', 'OPPO R17 6G 128G 全网通 霓光紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR176G128G全网通霓光紫/OPPOR176G128G全网通霓光紫.jpg', '19', '1', '2520.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:43:32', '2018-12-15 22:43:32');
+INSERT INTO `mc_product` VALUES ('660', 'vivo Y85 4G 64G 全网通 黑金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY854G64G全网通黑金色/vivoY854G64G全网通黑金色.jpg', '17', '1', '1193.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:43:33', '2018-12-15 22:43:33');
+INSERT INTO `mc_product` VALUES ('664', '华为 Mate 10 Pro 6G 128G 移动版全网通 银钻灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/mate10pro 黑.jpg', '11', '1', '2920.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:43:36', '2018-12-17 01:28:29');
+INSERT INTO `mc_product` VALUES ('665', '华为 Mate 10 Pro 6G 64G 全网通 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate10Pro6G64G全网通宝石蓝/华为Mate10Pro6G64G全网通宝石蓝.png', '11', '1', '2530.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '43', '2018-12-15 22:43:36', '2018-12-15 22:43:36');
+INSERT INTO `mc_product` VALUES ('666', '苹果 iPhone XR 256G 全网通 黄色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR256G全网通黄色/苹果iphoneXR256G全网通黄色.jpg', '8', '1', '7030.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:43:36', '2018-12-19 13:10:57');
+INSERT INTO `mc_product` VALUES ('667', '小米 红米6A 3G 32G 全网通 樱花粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米6A3G32G全网通樱花粉/小米红米6A3G32G全网通樱花粉.jpg', '12', '1', '608.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:37', '2018-12-15 22:43:37');
+INSERT INTO `mc_product` VALUES ('668', '魅族 魅族X8 4G 64G 全网通 玉白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族X84G64G全网通玉白/魅族魅族X84G64G全网通玉白.png', '15', '1', '1478.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:43:37', '2018-12-15 22:43:37');
+INSERT INTO `mc_product` VALUES ('669', 'OPPO R17 8G 128G 全网通 流光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR178G128G全网通流光蓝/OPPOR178G128G全网通流光蓝.jpg', '19', '1', '2810.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:43:37', '2018-12-15 22:43:37');
+INSERT INTO `mc_product` VALUES ('670', 'vivo Y85 4G 64G 全网通 红色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY854G64G全网通红色/vivoY854G64G全网通红色.jpg', '17', '1', '1188.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:37', '2018-12-15 22:43:37');
+INSERT INTO `mc_product` VALUES ('673', '华为 Mate 10 Pro 6G 64G 全网通 摩卡金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate10Pro6G64G全网通摩卡金/华为Mate10Pro6G64G全网通摩卡金.jpg', '11', '1', '2530.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:43:38', '2018-12-15 22:43:38');
+INSERT INTO `mc_product` VALUES ('674', '苹果 iPhone XR 256G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR256G全网通蓝色/苹果iphoneXR256G全网通蓝色.jpg', '8', '1', '7044.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:43:38', '2018-12-19 13:18:19');
+INSERT INTO `mc_product` VALUES ('675', '小米 红米S2 4G 64G 全网通 铂银灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米S24G64G全网通铂银灰/小米红米S24G64G全网通铂银灰.jpg', '12', '1', '888.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:43:39', '2018-12-15 22:43:39');
+INSERT INTO `mc_product` VALUES ('676', '魅族 魅族X8 6G 128G 全网通 幻蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族X86G128G全网通幻蓝/魅族魅族X86G128G全网通幻蓝.jpg', '15', '1', '1788.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:43:39', '2018-12-15 22:43:39');
+INSERT INTO `mc_product` VALUES ('677', 'OPPO R17 8G 128G 全网通 霓光紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR178G128G全网通霓光紫/OPPOR178G128G全网通霓光紫.jpg', '19', '1', '2820.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:43:39', '2018-12-15 22:43:39');
+INSERT INTO `mc_product` VALUES ('678', 'vivo Y85 4G 64G 全网通 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY854G64G全网通极光色/vivoY854G64G全网通极光色.jpg', '17', '1', '1198.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:43:39', '2018-12-15 22:43:39');
+INSERT INTO `mc_product` VALUES ('679', 'vivo Y85 4G 64G 全网通 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY854G64G全网通香槟金/vivoY854G64G全网通香槟金.jpg', '17', '1', '1180.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:43:39', '2018-12-15 22:43:39');
+INSERT INTO `mc_product` VALUES ('686', '华为 Mate 10 Pro 6G 64G 全网通 银钻灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate10Pro6G64G全网通银钻灰/华为Mate10Pro6G64G全网通银钻灰.png', '11', '1', '2540.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:43:40', '2018-12-15 22:43:40');
+INSERT INTO `mc_product` VALUES ('687', '苹果 iPhone XR 256G 全网通 珊瑚色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR256G全网通珊瑚色/苹果iphoneXR256G全网通珊瑚色.jpg', '8', '1', '7047.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:43:40', '2018-12-19 13:18:31');
+INSERT INTO `mc_product` VALUES ('688', '小米 红米S2 4G 64G 全网通 香槟金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米红米S24G64G全网通香槟金/小米红米S24G64G全网通香槟金.jpg', '12', '1', '910.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:43:40', '2018-12-15 22:43:40');
+INSERT INTO `mc_product` VALUES ('689', '魅族 魅族X8 6G 128G 全网通 亮黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族X86G128G全网通亮黑/魅族魅族X86G128G全网通亮黑.jpg', '15', '1', '1788.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:43:41', '2018-12-15 22:43:41');
+INSERT INTO `mc_product` VALUES ('690', 'OPPO R17 8G 128G 全网通 雾光渐变色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/OPPO/OPPOR178G128G全网通雾光渐变色/OPPOR178G128G全网通雾光渐变色.jpg', '19', '1', '2810.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:41', '2018-12-15 22:43:41');
+INSERT INTO `mc_product` VALUES ('691', 'vivo Y93 4G 64G 全网通 星夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY934G64G全网通星夜黑/vivoY934G64G全网通星夜黑.png', '17', '1', '1146.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:43:41', '2018-12-15 22:43:41');
+INSERT INTO `mc_product` VALUES ('694', '华为 麦芒6 4G 64G 全网通 流光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为麦芒64G64G全网通流光金/华为麦芒64G64G全网通流光金.jpg', '11', '1', '1285.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:43:42', '2018-12-15 22:43:42');
+INSERT INTO `mc_product` VALUES ('695', '苹果 iPhone XR 64G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR64G全网通白色/苹果iphoneXR64G全网通白色.jpg', '8', '1', '5810.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:43:42', '2018-12-19 13:15:32');
+INSERT INTO `mc_product` VALUES ('696', '小米 小米6X 4G 64G 全网通 冰川蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X4G64G全网通冰川蓝/小米小米6X4G64G全网通冰川蓝.jpg', '12', '1', '1125.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:43:42', '2018-12-15 22:43:42');
+INSERT INTO `mc_product` VALUES ('697', '魅族 魅族X8 6G 128G 全网通 玉白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族X86G128G全网通玉白/魅族魅族X86G128G全网通玉白.png', '15', '1', '1788.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:43:43', '2018-12-15 22:43:43');
+INSERT INTO `mc_product` VALUES ('698', 'vivo Y93 4G 64G 全网通 紫霞红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY934G64G全网通紫霞红/vivoY934G64G全网通紫霞红.png', '17', '1', '1146.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:43:43', '2018-12-15 22:43:43');
+INSERT INTO `mc_product` VALUES ('701', '华为 荣耀V10 6G 128G 全网通尊享版 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀V106G128G全网通尊享版幻夜黑/华为荣耀V106G128G全网通尊享版幻夜黑.jpg', '11', '1', '2140.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:44', '2018-12-15 22:43:44');
+INSERT INTO `mc_product` VALUES ('702', '苹果 iPhone XR 64G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR64G全网通黑色/苹果iphoneXR64G全网通黑色.jpg', '8', '1', '5813.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:43:44', '2018-12-19 13:18:43');
+INSERT INTO `mc_product` VALUES ('703', '小米 小米6X 4G 64G 全网通 赤焰红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X4G64G全网通赤焰红/小米小米6X4G64G全网通赤焰红.jpg', '12', '1', '1128.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:43:44', '2018-12-15 22:43:44');
+INSERT INTO `mc_product` VALUES ('704', '魅族 魅族X8 6G 64G 全网通 幻蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族X86G64G全网通幻蓝/魅族魅族X86G64G全网通幻蓝.jpg', '15', '1', '1658.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:43:45', '2018-12-15 22:43:45');
+INSERT INTO `mc_product` VALUES ('705', 'vivo Y97 4G 128G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY974G128G全网通极光蓝/vivoY974G128G全网通极光蓝.png', '17', '1', '1438.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:45', '2018-12-15 22:43:45');
+INSERT INTO `mc_product` VALUES ('710', '华为 荣耀V10 6G 128G 全网通尊享版 魅丽红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀V106G128G全网通尊享版魅丽红/华为荣耀V106G128G全网通尊享版魅丽红.jpg', '11', '1', '2178.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:43:46', '2018-12-15 22:43:46');
+INSERT INTO `mc_product` VALUES ('711', '苹果 iPhone XR 64G 全网通 红色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR64G全网通红色/苹果iphoneXR64G全网通红色.jpg', '8', '1', '5840.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:43:46', '2018-12-19 13:16:15');
+INSERT INTO `mc_product` VALUES ('712', '小米 小米6X 4G 64G 全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X4G64G全网通流沙金/小米小米6X4G64G全网通流沙金.jpg', '12', '1', '1180.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '43', '2018-12-15 22:43:46', '2018-12-15 22:43:46');
+INSERT INTO `mc_product` VALUES ('713', '魅族 魅族X8 6G 64G 全网通 亮黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族X86G64G全网通亮黑/魅族魅族X86G64G全网通亮黑.jpg', '15', '1', '1658.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:43:47', '2018-12-15 22:43:47');
+INSERT INTO `mc_product` VALUES ('716', '华为 荣耀V10 6G 64G 全网通高配版 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀V106G64G全网通高配版幻夜黑/华为荣耀V106G64G全网通高配版幻夜黑.jpg', '11', '1', '1713.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:43:48', '2018-12-15 22:43:48');
+INSERT INTO `mc_product` VALUES ('717', '苹果 iPhone XR 64G 全网通 黄色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR64G全网通黄色/苹果iphoneXR64G全网通黄色.jpg', '8', '1', '5800.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:43:49', '2018-12-19 13:16:55');
+INSERT INTO `mc_product` VALUES ('718', '小米 小米6X 4G 64G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X4G64G全网通曜石黑/小米小米6X4G64G全网通曜石黑.jpg', '12', '1', '1170.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '43', '2018-12-15 22:43:49', '2018-12-15 22:43:49');
+INSERT INTO `mc_product` VALUES ('721', '华为 荣耀V10 6G 64G 全网通高配版 魅丽红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀V106G64G全网通高配版魅丽红/华为荣耀V106G64G全网通高配版魅丽红.jpg', '11', '1', '1655.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:43:50', '2018-12-15 22:43:50');
+INSERT INTO `mc_product` VALUES ('722', '苹果 iPhone XR 64G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR64G全网通蓝色/苹果iphoneXR64G全网通蓝色.jpg', '8', '1', '5790.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:43:51', '2018-12-19 13:17:05');
+INSERT INTO `mc_product` VALUES ('723', '小米 小米6X 4G 64G 全网通 樱花粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X4G64G全网通樱花粉/小米小米6X4G64G全网通樱花粉.jpg', '12', '1', '1160.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:43:51', '2018-12-15 22:43:51');
+INSERT INTO `mc_product` VALUES ('726', '华为 荣耀V10 6G 64G 全网通高配版 沙滩金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀V106G64G全网通高配版沙滩金/华为荣耀V106G64G全网通高配版沙滩金.jpg', '11', '1', '1663.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:43:51', '2018-12-15 22:43:51');
+INSERT INTO `mc_product` VALUES ('727', '苹果 iPhone XR 64G 全网通 珊瑚色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXR64G全网通珊瑚色/苹果iphoneXR64G全网通珊瑚色.jpg', '8', '1', '5796.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:43:51', '2018-12-19 13:17:32');
+INSERT INTO `mc_product` VALUES ('728', '小米 小米6X 6G 128G 全网通 冰川蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G128G全网通冰川蓝/小米小米6X6G128G全网通冰川蓝.jpg', '12', '1', '1475.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '50', '2018-12-15 22:43:52', '2018-12-15 22:43:52');
+INSERT INTO `mc_product` VALUES ('731', '华为 荣耀V10 6G 64G 全网通高配版 炫影蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀V106G64G全网通高配版炫影蓝/华为荣耀V106G64G全网通高配版炫影蓝.jpg', '11', '1', '1702.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:43:53', '2018-12-15 22:43:53');
+INSERT INTO `mc_product` VALUES ('732', '苹果 iPhone XS 256G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXS256G全网通金色/苹果iphoneXS256G全网通金色.jpg', '8', '1', '8800.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:43:53', '2018-12-19 13:16:31');
+INSERT INTO `mc_product` VALUES ('733', '小米 小米6X 6G 128G 全网通 赤焰红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G128G全网通赤焰红/小米小米6X6G128G全网通赤焰红.jpg', '12', '1', '1473.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '49', '2018-12-15 22:43:53', '2018-12-15 22:43:53');
+INSERT INTO `mc_product` VALUES ('737', '华为 荣耀V10 6G 64G 移动版全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀V106G64G移动版全网通极光蓝/华为荣耀V106G64G移动版全网通极光蓝.jpg', '11', '1', '1568.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:54', '2018-12-15 22:43:54');
+INSERT INTO `mc_product` VALUES ('738', '苹果 iPhone XS 256G 全网通 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXS256G全网通深空灰色/苹果iphoneXS256G全网通深空灰色.jpg', '8', '1', '8930.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:43:54', '2018-12-19 13:16:45');
+INSERT INTO `mc_product` VALUES ('739', '小米 小米6X 6G 128G 全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G128G全网通流沙金/小米小米6X6G128G全网通流沙金.jpg', '12', '1', '1495.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:43:54', '2018-12-15 22:43:54');
+INSERT INTO `mc_product` VALUES ('742', '华为 荣耀V10 6G 64G 移动版全网通 沙滩金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀V106G64G移动版全网通沙滩金/华为荣耀V106G64G移动版全网通沙滩金.jpg', '11', '1', '1608.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:43:55', '2018-12-15 22:43:55');
+INSERT INTO `mc_product` VALUES ('743', '苹果 iPhone XS 256G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXS256G全网通银色/苹果iphoneXS256G全网通银色.jpg', '8', '1', '8685.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:43:55', '2018-12-19 13:17:49');
+INSERT INTO `mc_product` VALUES ('744', '小米 小米6X 6G 128G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G128G全网通曜石黑/小米小米6X6G128G全网通曜石黑.jpg', '12', '1', '1490.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:43:55', '2018-12-15 22:43:55');
+INSERT INTO `mc_product` VALUES ('745', '魅族 魅族X8 6G 64G 全网通 玉白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/魅族/魅族魅族X86G64G全网通玉白/魅族魅族X86G64G全网通玉白.png', '15', '1', '1628.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:43:56', '2018-12-15 22:43:56');
+INSERT INTO `mc_product` VALUES ('748', '华为 荣耀9 青春版 3G 32G 全网通标配版 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9青春版3G32G全网通标配版幻夜黑/华为荣耀9青春版3G32G全网通标配版幻夜黑.jpg', '11', '1', '808.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:43:56', '2018-12-15 22:43:56');
+INSERT INTO `mc_product` VALUES ('749', '苹果 iPhone XS 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXS64G全网通金色/苹果iphoneXS64G全网通金色.jpg', '8', '1', '7587.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:43:57', '2018-12-19 13:17:19');
+INSERT INTO `mc_product` VALUES ('750', '小米 小米6X 6G 128G 全网通 樱花粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G128G全网通樱花粉/小米小米6X6G128G全网通樱花粉.jpg', '12', '1', '1490.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:43:57', '2018-12-15 22:43:57');
+INSERT INTO `mc_product` VALUES ('751', 'vivo Y97 4G 128G 全网通 梦幻粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY974G128G全网通梦幻粉/vivoY974G128G全网通梦幻粉.png', '17', '1', '1438.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:43:57', '2018-12-15 22:43:57');
+INSERT INTO `mc_product` VALUES ('754', '华为 荣耀9 青春版 3G 32G 全网通标配版 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9青春版3G32G全网通标配版魅海蓝/华为荣耀9青春版3G32G全网通标配版魅海蓝.jpg', '11', '1', '808.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:43:58', '2018-12-15 22:43:58');
+INSERT INTO `mc_product` VALUES ('755', '苹果 iPhone XS 64G 全网通 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXS64G全网通深空灰色/苹果iphoneXS64G全网通深空灰色.jpg', '8', '1', '7775.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:43:58', '2018-12-19 13:15:57');
+INSERT INTO `mc_product` VALUES ('756', '小米 小米6X 6G 64G 全网通 冰川蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G64G全网通冰川蓝/小米小米6X6G64G全网通冰川蓝.jpg', '12', '1', '1263.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '51', '2018-12-15 22:43:58', '2018-12-15 22:43:58');
+INSERT INTO `mc_product` VALUES ('757', 'vivo Y97 4G 128G 全网通 星夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoY974G128G全网通星夜黑/vivoY974G128G全网通星夜黑.png', '17', '1', '1438.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:43:58', '2018-12-15 22:43:58');
+INSERT INTO `mc_product` VALUES ('761', '华为 荣耀9 青春版 4G 32G 全网通高配版 海鸥灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9青春版4G32G全网通高配版海鸥灰/华为荣耀9青春版4G32G全网通高配版海鸥灰.jpg', '11', '1', '899.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:43:59', '2018-12-15 22:43:59');
+INSERT INTO `mc_product` VALUES ('762', '苹果 iPhone XS 64G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXS64G全网通银色/苹果iphoneXS64G全网通银色.jpg', '8', '1', '7770.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:43:59', '2018-12-19 13:09:41');
+INSERT INTO `mc_product` VALUES ('763', '小米 小米6X 6G 64G 全网通 赤焰红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G64G全网通赤焰红/小米小米6X6G64G全网通赤焰红.jpg', '12', '1', '1285.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:44:00', '2018-12-15 22:44:00');
+INSERT INTO `mc_product` VALUES ('764', 'vivo Z1 4G 64G 全网通 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoZ14G64G全网通宝石蓝/vivoZ14G64G全网通宝石蓝.png', '17', '1', '1355.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:00', '2018-12-15 22:44:00');
+INSERT INTO `mc_product` VALUES ('767', '华为 荣耀9 青春版 4G 32G 全网通高配版 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9青春版4G32G全网通高配版幻夜黑/华为荣耀9青春版4G32G全网通高配版幻夜黑.jpg', '11', '1', '968.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:44:00', '2018-12-15 22:44:00');
+INSERT INTO `mc_product` VALUES ('768', '苹果 iPhone XS Max 256G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXSMax256G全网通金色/苹果iphoneXSMax256G全网通金色.jpg', '8', '1', '9557.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:44:01', '2018-12-19 13:10:24');
+INSERT INTO `mc_product` VALUES ('769', '小米 小米6X 6G 64G 全网通 流沙金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G64G全网通流沙金/小米小米6X6G64G全网通流沙金.jpg', '12', '1', '1294.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:44:01', '2018-12-15 22:44:01');
+INSERT INTO `mc_product` VALUES ('770', 'vivo Z1 4G 64G 全网通 瓷釉黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoZ14G64G全网通瓷釉黑/vivoZ14G64G全网通瓷釉黑.png', '17', '1', '1228.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:01', '2018-12-15 22:44:01');
+INSERT INTO `mc_product` VALUES ('773', '华为 荣耀9 青春版 4G 32G 全网通高配版 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9青春版4G32G全网通高配版魅海蓝/华为荣耀9青春版4G32G全网通高配版魅海蓝.jpg', '11', '1', '895.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:44:02', '2018-12-15 22:44:02');
+INSERT INTO `mc_product` VALUES ('774', '苹果 iPhone XS Max 256G 全网通 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXSMax256G全网通深空灰色/苹果iphoneXSMax256G全网通深空灰色.jpg', '8', '1', '9591.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:44:02', '2018-12-19 13:10:12');
+INSERT INTO `mc_product` VALUES ('775', '小米 小米6X 6G 64G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G64G全网通曜石黑/小米小米6X6G64G全网通曜石黑.jpg', '12', '1', '1305.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:44:02', '2018-12-15 22:44:02');
+INSERT INTO `mc_product` VALUES ('776', 'vivo Z1 4G 64G 全网通 瓷釉蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoZ14G64G全网通瓷釉蓝/vivoZ14G64G全网通瓷釉蓝.png', '17', '1', '1240.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:44:02', '2018-12-15 22:44:02');
+INSERT INTO `mc_product` VALUES ('779', '华为 荣耀9 青春版 4G 64G 全网通尊享版 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9青春版4G64G全网通尊享版幻夜黑/华为荣耀9青春版4G64G全网通尊享版幻夜黑.jpg', '11', '1', '1188.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:44:03', '2018-12-15 22:44:03');
+INSERT INTO `mc_product` VALUES ('780', '苹果 iPhone XS Max 256G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXSMax256G全网通银色/苹果iphoneXSMax256G全网通银色.jpg', '8', '1', '9597.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:44:03', '2018-12-19 13:10:00');
+INSERT INTO `mc_product` VALUES ('781', '小米 小米6X 6G 64G 全网通 樱花粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G64G全网通樱花粉/小米小米6X6G64G全网通樱花粉.jpg', '12', '1', '1268.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '48', '2018-12-15 22:44:03', '2018-12-15 22:44:03');
+INSERT INTO `mc_product` VALUES ('784', '华为 荣耀9 青春版 4G 64G 全网通尊享版 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9青春版4G64G全网通尊享版魅海蓝/华为荣耀9青春版4G64G全网通尊享版魅海蓝.jpg', '11', '1', '1185.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:44:04', '2018-12-15 22:44:04');
+INSERT INTO `mc_product` VALUES ('785', '苹果 iPhone XS Max 512G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXSMax512G全网通金色/苹果iphoneXSMax512G全网通金色.jpg', '8', '1', '11130.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:44:04', '2018-12-19 13:09:27');
+INSERT INTO `mc_product` VALUES ('786', '小米 小米6X 6G 64G 移动全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米6X6G64G移动全网通曜石黑/小米小米6X6G64G移动全网通曜石黑.jpg', '12', '1', '1210.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:44:04', '2018-12-15 22:44:04');
+INSERT INTO `mc_product` VALUES ('789', '华为 荣耀8青春版 4G 64G 中国移动全网通定制版（高配版） 幻海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8青春版4G64G中国移动全网通定制版（高配版）幻海蓝/华为荣耀8青春版4G64G中国移动全网通定制版（高配版）幻海蓝.png', '11', '1', '1048.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:44:05', '2018-12-15 22:44:05');
+INSERT INTO `mc_product` VALUES ('790', '苹果 iPhone XS Max 512G 全网通 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXSMax512G全网通深空灰色/苹果iphoneXSMax512G全网通深空灰色.jpg', '8', '1', '11370.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:44:05', '2018-12-19 10:01:12');
+INSERT INTO `mc_product` VALUES ('791', '小米 小米8 6G 128G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G128G全网通白色/小米小米86G128G全网通白色.jpg', '12', '1', '2470.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:44:06', '2018-12-15 22:44:06');
+INSERT INTO `mc_product` VALUES ('792', 'vivo Z1i 4G 128G 全网通 黑金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoZ1i4G128G全网通黑金色/vivoZ1i4G128G全网通黑金色.jpg', '17', '1', '1545.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:44:06', '2018-12-15 22:44:06');
+INSERT INTO `mc_product` VALUES ('794', '华为 荣耀8青春版 4G 64G 中国移动全网通定制版（高配版） 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8青春版4G64G中国移动全网通定制版（高配版）幻夜黑/华为荣耀8青春版4G64G中国移动全网通定制版（高配版）幻夜黑.png', '11', '1', '1008.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:44:06', '2018-12-15 22:44:06');
+INSERT INTO `mc_product` VALUES ('795', '苹果 iPhone XS Max 512G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXSMax512G全网通银色/苹果iphoneXSMax512G全网通银色.jpg', '8', '1', '11140.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:07', '2018-12-19 10:00:56');
+INSERT INTO `mc_product` VALUES ('796', '小米 小米8 6G 128G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G128G全网通黑色/小米小米86G128G全网通黑色.jpg', '12', '1', '2560.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:07', '2018-12-15 22:44:07');
+INSERT INTO `mc_product` VALUES ('797', 'vivo Z1i 4G 128G 全网通 炫慕红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoZ1i4G128G全网通炫慕红/vivoZ1i4G128G全网通炫慕红.jpg', '17', '1', '1545.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:44:07', '2018-12-15 22:44:07');
+INSERT INTO `mc_product` VALUES ('799', '华为 荣耀8青春版 4G 64G 中国移动全网通定制版（高配版） 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8青春版4G64G中国移动全网通定制版（高配版）魅海蓝/华为荣耀8青春版4G64G中国移动全网通定制版（高配版）魅海蓝.png', '11', '1', '1048.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:44:08', '2018-12-15 22:44:08');
+INSERT INTO `mc_product` VALUES ('800', '苹果 iPhone XS Max 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXSMax64G全网通金色/苹果iphoneXSMax64G全网通金色.jpg', '8', '1', '8389.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:44:08', '2018-12-19 09:59:48');
+INSERT INTO `mc_product` VALUES ('801', '小米 小米8 6G 128G 全网通屏幕指纹版 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G128G全网通屏幕指纹版黑色/小米小米86G128G全网通屏幕指纹版黑色.png', '12', '1', '2775.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:44:08', '2018-12-15 22:44:08');
+INSERT INTO `mc_product` VALUES ('802', 'vivo z3 4G 64G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoz34G64G全网通极光蓝/vivoz34G64G全网通极光蓝.jpg', '17', '1', '1428.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:44:08', '2018-12-15 22:44:08');
+INSERT INTO `mc_product` VALUES ('804', '华为 荣耀8青春版 4G 64G 中国移动全网通定制版（高配版） 珠光白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8青春版4G64G中国移动全网通定制版（高配版）珠光白/华为荣耀8青春版4G64G中国移动全网通定制版（高配版）珠光白.png', '11', '1', '1048.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:44:09', '2018-12-15 22:44:09');
+INSERT INTO `mc_product` VALUES ('805', '苹果 iPhone XS Max 64G 全网通 深空灰色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXSMax64G全网通深空灰色/苹果iphoneXSMax64G全网通深空灰色.jpg', '8', '1', '8410.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:44:09', '2018-12-19 09:58:24');
+INSERT INTO `mc_product` VALUES ('806', '小米 小米8 6G 128G 全网通屏幕指纹版 暮光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G128G全网通屏幕指纹版暮光金/小米小米86G128G全网通屏幕指纹版暮光金.png', '12', '1', '2835.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:44:09', '2018-12-15 22:44:09');
+INSERT INTO `mc_product` VALUES ('807', 'vivo z3 4G 64G 全网通 梦幻粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoz34G64G全网通梦幻粉/vivoz34G64G全网通梦幻粉.jpg', '17', '1', '1483.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:09', '2018-12-15 22:44:09');
+INSERT INTO `mc_product` VALUES ('808', '华为 荣耀畅玩7X 4G 128G 全网通尊享版 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7X4G128G全网通尊享版幻夜黑/华为荣耀畅玩7X4G128G全网通尊享版幻夜黑.jpg', '11', '1', '1388.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:44:10', '2018-12-15 22:44:10');
+INSERT INTO `mc_product` VALUES ('809', '苹果 iPhone XS Max 64G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/苹果/苹果iphoneXSMax64G全网通银色/苹果iphoneXSMax64G全网通银色.jpg', '8', '1', '8403.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:44:10', '2018-12-19 09:54:33');
+INSERT INTO `mc_product` VALUES ('810', 'vivo z3 4G 64G 全网通 星夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoz34G64G全网通星夜黑/vivoz34G64G全网通星夜黑.jpg', '17', '1', '1500.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:44:10', '2018-12-15 22:44:10');
+INSERT INTO `mc_product` VALUES ('811', '华为 荣耀畅玩7X 4G 32G 全网通标配版 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7X4G32G全网通标配版铂光金/华为荣耀畅玩7X4G32G全网通标配版铂光金.jpg', '11', '1', '813.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:10', '2018-12-15 22:44:10');
+INSERT INTO `mc_product` VALUES ('812', 'vivo z3 6G 64G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoz36G64G全网通极光蓝/vivoz36G64G全网通极光蓝.jpg', '17', '1', '1628.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:11', '2018-12-15 22:44:11');
+INSERT INTO `mc_product` VALUES ('813', '华为 荣耀畅玩7X 4G 32G 全网通标配版 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7X4G32G全网通标配版幻夜黑/华为荣耀畅玩7X4G32G全网通标配版幻夜黑.jpg', '11', '1', '823.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:44:11', '2018-12-15 22:44:11');
+INSERT INTO `mc_product` VALUES ('814', 'vivo z3 6G 64G 全网通 梦幻粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoz36G64G全网通梦幻粉/vivoz36G64G全网通梦幻粉.jpg', '17', '1', '1680.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:44:11', '2018-12-15 22:44:11');
+INSERT INTO `mc_product` VALUES ('815', '华为 荣耀畅玩7X 4G 32G 全网通标配版 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7X4G32G全网通标配版极光蓝/华为荣耀畅玩7X4G32G全网通标配版极光蓝.jpg', '11', '1', '806.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:44:11', '2018-12-15 22:44:11');
+INSERT INTO `mc_product` VALUES ('816', 'vivo z3 6G 64G 全网通 星夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoz36G64G全网通星夜黑/vivoz36G64G全网通星夜黑.jpg', '17', '1', '1680.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:44:12', '2018-12-15 22:44:12');
+INSERT INTO `mc_product` VALUES ('817', '华为 荣耀畅玩7X 4G 32G 全网通标配版 魅焰红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7X4G32G全网通标配版魅焰红/华为荣耀畅玩7X4G32G全网通标配版魅焰红.png', '11', '1', '813.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:12', '2018-12-15 22:44:12');
+INSERT INTO `mc_product` VALUES ('818', 'vivo Z3i 6G 128G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoZ3i6G128G全网通极光蓝/vivoZ3i6G128G全网通极光蓝.png', '17', '1', '1880.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:44:12', '2018-12-15 22:44:12');
+INSERT INTO `mc_product` VALUES ('819', '华为 荣耀畅玩7X 4G 64G 全网通高配版 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7X4G64G全网通高配版铂光金/华为荣耀畅玩7X4G64G全网通高配版铂光金.jpg', '11', '1', '1063.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:12', '2018-12-15 22:44:12');
+INSERT INTO `mc_product` VALUES ('820', 'vivo Z3i 6G 128G 全网通 千禧粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/vivo/vivoZ3i6G128G全网通千禧粉/vivoZ3i6G128G全网通千禧粉.png', '17', '1', '1838.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:44:13', '2018-12-15 22:44:13');
+INSERT INTO `mc_product` VALUES ('821', '华为 荣耀畅玩7X 4G 64G 全网通高配版 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7X4G64G全网通高配版幻夜黑/华为荣耀畅玩7X4G64G全网通高配版幻夜黑.jpg', '11', '1', '1048.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:44:13', '2018-12-15 22:44:13');
+INSERT INTO `mc_product` VALUES ('822', '华为 荣耀畅玩7X 4G 64G 全网通高配版 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7X4G64G全网通高配版极光蓝/华为荣耀畅玩7X4G64G全网通高配版极光蓝.jpg', '11', '1', '1038.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:44:13', '2018-12-15 22:44:13');
+INSERT INTO `mc_product` VALUES ('823', '华为 荣耀畅玩7X 4G 64G 全网通高配版 魅焰红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7X4G64G全网通高配版魅焰红/华为荣耀畅玩7X4G64G全网通高配版魅焰红.png', '11', '1', '1006.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:44:13', '2018-12-15 22:44:13');
+INSERT INTO `mc_product` VALUES ('824', '小米 小米8 6G 256G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G256G全网通白色/小米小米86G256G全网通白色.jpg', '12', '1', '2790.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:44:13', '2018-12-15 22:44:13');
+INSERT INTO `mc_product` VALUES ('825', '华为 荣耀畅玩6 2G 16G 全网通标配版 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩62G16G全网通标配版白色/华为荣耀畅玩62G16G全网通标配版白色.jpg', '11', '1', '498.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:44:14', '2018-12-15 22:44:14');
+INSERT INTO `mc_product` VALUES ('826', '小米 小米8 6G 256G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G256G全网通黑色/小米小米86G256G全网通黑色.jpg', '12', '1', '2695.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:44:14', '2018-12-15 22:44:14');
+INSERT INTO `mc_product` VALUES ('827', '华为 荣耀畅玩6 2G 16G 全网通标配版 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩62G16G全网通标配版金色/华为荣耀畅玩62G16G全网通标配版金色.jpg', '11', '1', '498.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:44:14', '2018-12-15 22:44:14');
+INSERT INTO `mc_product` VALUES ('828', '小米 小米8 6G 256G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G256G全网通蓝色/小米小米86G256G全网通蓝色.jpg', '12', '1', '2790.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '42', '2018-12-15 22:44:15', '2018-12-15 22:44:15');
+INSERT INTO `mc_product` VALUES ('829', '华为 荣耀畅玩6X 3G 32G 全网通 银色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩6X3G32G全网通银色/华为荣耀畅玩6X3G32G全网通银色.jpg', '11', '1', '685.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:15', '2018-12-15 22:44:15');
+INSERT INTO `mc_product` VALUES ('830', '小米 小米8 6G 64G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G64G全网通白色/小米小米86G64G全网通白色.jpg', '12', '1', '2150.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:44:15', '2018-12-15 22:44:15');
+INSERT INTO `mc_product` VALUES ('831', '小米 小米8 6G 64G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G64G全网通黑色/小米小米86G64G全网通黑色.jpg', '12', '1', '2199.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:44:16', '2018-12-15 22:44:16');
+INSERT INTO `mc_product` VALUES ('832', '小米 小米8 6G 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G64G全网通金色/小米小米86G64G全网通金色.jpg', '12', '1', '2160.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:44:16', '2018-12-15 22:44:16');
+INSERT INTO `mc_product` VALUES ('833', '小米 小米8 6G 64G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米86G64G全网通蓝色/小米小米86G64G全网通蓝色.jpg', '12', '1', '2195.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:16', '2018-12-15 22:44:16');
+INSERT INTO `mc_product` VALUES ('834', '小米 小米8 8G 128G 全网通 白色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米88G128G全网通白色/小米小米88G128G全网通白色.jpg', '12', '1', '2790.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:44:16', '2018-12-15 22:44:16');
+INSERT INTO `mc_product` VALUES ('835', '小米 小米8 8G 128G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米88G128G全网通黑色/小米小米88G128G全网通黑色.jpg', '12', '1', '2823.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:44:17', '2018-12-15 22:44:17');
+INSERT INTO `mc_product` VALUES ('836', '小米 小米8 8G 128G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米88G128G全网通蓝色/小米小米88G128G全网通蓝色.jpg', '12', '1', '2795.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '84', '2018-12-15 22:44:17', '2018-12-15 22:44:17');
+INSERT INTO `mc_product` VALUES ('837', '小米 小米8 8G 128G 全网通屏幕指纹版 暮光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米88G128G全网通屏幕指纹版暮光金/小米小米88G128G全网通屏幕指纹版暮光金.png', '12', '1', '3125.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '42', '2018-12-15 22:44:17', '2018-12-15 22:44:17');
+INSERT INTO `mc_product` VALUES ('838', '小米 小米8 8G 128G 全网通屏幕指纹版 透明 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米88G128G全网通屏幕指纹版透明/小米小米88G128G全网通屏幕指纹版透明.png', '12', '1', '3153.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:44:17', '2018-12-15 22:44:17');
+INSERT INTO `mc_product` VALUES ('839', '小米 小米8 8G 128G 透明探索版 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米88G128G透明探索版/小米小米88G128G透明探索版.jpg', '12', '1', '3520.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:18', '2018-12-15 22:44:18');
+INSERT INTO `mc_product` VALUES ('840', '小米 小米8 SE 4G 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8SE4G64G全网通金色/小米小米8SE4G64G全网通金色.jpg', '12', '1', '1468.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:44:18', '2018-12-15 22:44:18');
+INSERT INTO `mc_product` VALUES ('841', '小米 小米8 SE 4G 64G 全网通 亮红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8SE4G64G全网通亮红/小米小米8SE4G64G全网通亮红.jpg', '12', '1', '1415.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:44:18', '2018-12-15 22:44:18');
+INSERT INTO `mc_product` VALUES ('842', '小米 小米8 SE 4G 64G 全网通 亮蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8SE4G64G全网通亮蓝/小米小米8SE4G64G全网通亮蓝.jpg', '12', '1', '1440.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:44:18', '2018-12-15 22:44:18');
+INSERT INTO `mc_product` VALUES ('843', '华为 荣耀畅玩6X 移动版/全网通 3G 32G 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩6X移动版全网通3G32G铂光金/华为荣耀畅玩6X移动版全网通3G32G铂光金.png', '11', '1', '718.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:19', '2018-12-15 22:44:19');
+INSERT INTO `mc_product` VALUES ('844', '小米 小米8 SE 4G 64G 全网通 深灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8SE4G64G全网通深灰/小米小米8SE4G64G全网通深灰.jpg', '12', '1', '1485.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:44:19', '2018-12-15 22:44:19');
+INSERT INTO `mc_product` VALUES ('845', '华为 mate 20 全网通 6G 128G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20全网通6G128G宝石蓝/华为mate20全网通6G128G宝石蓝.jpg', '11', '1', '4080.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:19', '2018-12-15 22:44:19');
+INSERT INTO `mc_product` VALUES ('846', '小米 小米8 SE 6G 128G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8SE6G128G全网通金色/小米小米8SE6G128G全网通金色.jpg', '12', '1', '1780.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:44:19', '2018-12-15 22:44:19');
+INSERT INTO `mc_product` VALUES ('847', '华为 mate 20 全网通 6G 128G 翡冷翠 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20全网通6G128G翡冷翠/华为mate20全网通6G128G翡冷翠.jpg', '11', '1', '4060.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:44:20', '2018-12-15 22:44:20');
+INSERT INTO `mc_product` VALUES ('848', '小米 小米8 SE 6G 128G 全网通 深灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8SE6G128G全网通深灰/小米小米8SE6G128G全网通深灰.jpg', '12', '1', '1780.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:44:20', '2018-12-15 22:44:20');
+INSERT INTO `mc_product` VALUES ('849', '华为 mate 20 全网通 6G 128G 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20全网通6G128G极光色/华为mate20全网通6G128G极光色.jpg', '11', '1', '4090.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:44:20', '2018-12-15 22:44:20');
+INSERT INTO `mc_product` VALUES ('850', '小米 小米8 SE 6G 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8SE6G64G全网通金色/小米小米8SE6G64G全网通金色.jpg', '12', '1', '1543.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:20', '2018-12-15 22:44:20');
+INSERT INTO `mc_product` VALUES ('851', '华为 mate 20 全网通 6G 128G 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20全网通6G128G亮黑色/华为mate20全网通6G128G亮黑色.jpg', '11', '1', '4160.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:44:21', '2018-12-15 22:44:21');
+INSERT INTO `mc_product` VALUES ('852', '小米 小米8 SE 6G 64G 全网通 亮红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8SE6G64G全网通亮红/小米小米8SE6G64G全网通亮红.jpg', '12', '1', '1655.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '43', '2018-12-15 22:44:21', '2018-12-15 22:44:21');
+INSERT INTO `mc_product` VALUES ('853', '华为 mate 20 全网通 6G 128G 樱粉金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20全网通6G128G樱粉金/华为mate20全网通6G128G樱粉金.jpg', '11', '1', '4080.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '45', '2018-12-15 22:44:21', '2018-12-15 22:44:21');
+INSERT INTO `mc_product` VALUES ('854', '小米 小米8 SE 6G 64G 全网通 亮蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8SE6G64G全网通亮蓝/小米小米8SE6G64G全网通亮蓝.jpg', '12', '1', '1650.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:44:22', '2018-12-15 22:44:22');
+INSERT INTO `mc_product` VALUES ('855', '华为 mate 20 全网通 6G 64G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20全网通6G64G宝石蓝/华为mate20全网通6G64G宝石蓝.jpg', '11', '1', '3493.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:22', '2018-12-15 22:44:22');
+INSERT INTO `mc_product` VALUES ('856', '小米 小米8 SE 6G 64G 全网通 深灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8SE6G64G全网通深灰/小米小米8SE6G64G全网通深灰.jpg', '12', '1', '1620.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:44:22', '2018-12-15 22:44:22');
+INSERT INTO `mc_product` VALUES ('857', '华为 mate 20 全网通 6G 64G 翡冷翠 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20全网通6G64G翡冷翠/华为mate20全网通6G64G翡冷翠.jpg', '11', '1', '3465.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:44:22', '2018-12-15 22:44:22');
+INSERT INTO `mc_product` VALUES ('858', '小米 小米8 青春版 4G 128G 全网通 深空灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8青春版4G128G全网通深空灰/小米小米8青春版4G128G全网通深空灰.jpg', '12', '1', '1510.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:44:23', '2018-12-15 22:44:23');
+INSERT INTO `mc_product` VALUES ('859', '华为 mate 20 全网通 6G 64G 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20全网通6G64G极光色/华为mate20全网通6G64G极光色.jpg', '11', '1', '3562.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:23', '2018-12-15 22:44:23');
+INSERT INTO `mc_product` VALUES ('860', '小米 小米8 青春版 6G 128G 全网通 梦幻蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8青春版6G128G全网通梦幻蓝/小米小米8青春版6G128G全网通梦幻蓝.jpg', '12', '1', '1760.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:44:23', '2018-12-15 22:44:23');
+INSERT INTO `mc_product` VALUES ('861', '华为 mate 20 全网通 6G 64G 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20全网通6G64G亮黑色/华为mate20全网通6G64G亮黑色.jpg', '11', '1', '3580.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:23', '2018-12-15 22:44:23');
+INSERT INTO `mc_product` VALUES ('862', '小米 小米8 青春版 6G 128G 全网通 暮光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8青春版6G128G全网通暮光金/小米小米8青春版6G128G全网通暮光金.jpg', '12', '1', '1810.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:44:24', '2018-12-15 22:44:24');
+INSERT INTO `mc_product` VALUES ('863', '华为 mate 20 全网通 6G 64G 樱粉金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20全网通6G64G樱粉金/华为mate20全网通6G64G樱粉金.jpg', '11', '1', '3460.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:44:24', '2018-12-15 22:44:24');
+INSERT INTO `mc_product` VALUES ('864', '小米 小米8 青春版 6G 128G 全网通 深空灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8青春版6G128G全网通深空灰/小米小米8青春版6G128G全网通深空灰.jpg', '12', '1', '1708.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:44:24', '2018-12-15 22:44:24');
+INSERT INTO `mc_product` VALUES ('865', '华为 mate 20 移动版全网通 6G 128G 翡冷翠 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20移动版全网通6G128G翡冷翠/华为mate20移动版全网通6G128G翡冷翠.jpg', '11', '1', '3730.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:44:24', '2018-12-15 22:44:24');
+INSERT INTO `mc_product` VALUES ('866', '小米 小米8 青春版 6G 64G 全网通 梦幻蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8青春版6G64G全网通梦幻蓝/小米小米8青春版6G64G全网通梦幻蓝.jpg', '12', '1', '1552.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '45', '2018-12-15 22:44:25', '2018-12-15 22:44:25');
+INSERT INTO `mc_product` VALUES ('867', '华为 mate 20 移动版全网通 6G 64G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20移动版全网通6G64G宝石蓝/华为mate20移动版全网通6G64G宝石蓝.jpg', '11', '1', '3292.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:44:25', '2018-12-15 22:44:25');
+INSERT INTO `mc_product` VALUES ('868', '小米 小米8 青春版 6G 64G 全网通 暮光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8青春版6G64G全网通暮光金/小米小米8青春版6G64G全网通暮光金.jpg', '12', '1', '1615.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:44:25', '2018-12-15 22:44:25');
+INSERT INTO `mc_product` VALUES ('869', '华为 mate 20 移动版全网通 6G 64G 翡冷翠 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20移动版全网通6G64G翡冷翠/华为mate20移动版全网通6G64G翡冷翠.jpg', '11', '1', '3350.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:44:25', '2018-12-15 22:44:25');
+INSERT INTO `mc_product` VALUES ('870', '小米 小米8 青春版 6G 64G 全网通 深空灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米8青春版6G64G全网通深空灰/小米小米8青春版6G64G全网通深空灰.jpg', '12', '1', '1558.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:44:26', '2018-12-15 22:44:26');
+INSERT INTO `mc_product` VALUES ('871', '华为 mate 20 移动版全网通 6G 64G 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20移动版全网通6G64G亮黑色/华为mate20移动版全网通6G64G亮黑色.jpg', '11', '1', '3302.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:44:26', '2018-12-15 22:44:26');
+INSERT INTO `mc_product` VALUES ('872', '小米 小米Max3 4G 64G 全网通 梦幻金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米Max34G64G全网通梦幻金/小米小米Max34G64G全网通梦幻金.jpg', '12', '1', '1487.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '56', '2018-12-15 22:44:26', '2018-12-15 22:44:26');
+INSERT INTO `mc_product` VALUES ('873', '华为 mate 20 pro 全网通 6G 128G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通6G128G宝石蓝/华为mate20pro全网通6G128G宝石蓝.jpg', '11', '1', '5750.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:44:27', '2018-12-15 22:44:27');
+INSERT INTO `mc_product` VALUES ('874', '小米 小米Max3 4G 64G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米Max34G64G全网通曜石黑/小米小米Max34G64G全网通曜石黑.jpg', '12', '1', '1465.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:44:27', '2018-12-15 22:44:27');
+INSERT INTO `mc_product` VALUES ('875', '华为 mate 20 pro 全网通 6G 128G 翡冷翠 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通6G128G翡冷翠/华为mate20pro全网通6G128G翡冷翠.jpg', '11', '1', '5715.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:44:27', '2018-12-15 22:44:27');
+INSERT INTO `mc_product` VALUES ('876', '小米 小米Max3 6G 128G 全网通 梦幻金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米Max36G128G全网通梦幻金/小米小米Max36G128G全网通梦幻金.jpg', '12', '1', '1723.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '83', '2018-12-15 22:44:27', '2018-12-15 22:44:27');
+INSERT INTO `mc_product` VALUES ('877', '华为 mate 20 pro 全网通 6G 128G 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通6G128G极光色/华为mate20pro全网通6G128G极光色.jpg', '11', '1', '5730.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:28', '2018-12-15 22:44:28');
+INSERT INTO `mc_product` VALUES ('878', '小米 小米Max3 6G 128G 全网通 深海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米Max36G128G全网通深海蓝/小米小米Max36G128G全网通深海蓝.jpg', '12', '1', '1720.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '63', '2018-12-15 22:44:28', '2018-12-15 22:44:28');
+INSERT INTO `mc_product` VALUES ('879', '华为 mate 20 pro 全网通 6G 128G 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通6G128G亮黑色/华为mate20pro全网通6G128G亮黑色.jpg', '11', '1', '5764.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:44:28', '2018-12-15 22:44:28');
+INSERT INTO `mc_product` VALUES ('880', '小米 小米Max3 6G 128G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米Max36G128G全网通曜石黑/小米小米Max36G128G全网通曜石黑.jpg', '12', '1', '1725.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:44:29', '2018-12-15 22:44:29');
+INSERT INTO `mc_product` VALUES ('881', '华为 mate 20 pro 全网通(UD版) 8G 128G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通(UD版)8G128G宝石蓝/华为mate20pro全网通(UD版)8G128G宝石蓝.jpg', '11', '1', '6201.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '42', '2018-12-15 22:44:29', '2018-12-15 22:44:29');
+INSERT INTO `mc_product` VALUES ('882', '小米 小米MIX 3 6G 128G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米MIX36G128G全网通黑色/小米小米MIX36G128G全网通黑色.jpg', '12', '1', '3168.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:29', '2018-12-15 22:44:29');
+INSERT INTO `mc_product` VALUES ('883', '华为 mate 20 pro 全网通(UD版) 8G 128G 翡冷翠 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通(UD版)8G128G翡冷翠/华为mate20pro全网通(UD版)8G128G翡冷翠.jpg', '11', '1', '6280.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:44:29', '2018-12-15 22:44:29');
+INSERT INTO `mc_product` VALUES ('884', '华为 mate 20 pro 全网通(UD版) 8G 128G 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通(UD版)8G128G极光色/华为mate20pro全网通(UD版)8G128G极光色.jpg', '11', '1', '6399.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:44:29', '2018-12-15 22:44:29');
+INSERT INTO `mc_product` VALUES ('885', '华为 mate 20 pro 全网通(UD版) 8G 128G 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通(UD版)8G128G亮黑色/华为mate20pro全网通(UD版)8G128G亮黑色.jpg', '11', '1', '6397.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:44:30', '2018-12-15 22:44:30');
+INSERT INTO `mc_product` VALUES ('886', '小米 小米MIX 3 8G 128G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米MIX38G128G全网通黑色/小米小米MIX38G128G全网通黑色.jpg', '12', '1', '3473.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:44:30', '2018-12-15 22:44:30');
+INSERT INTO `mc_product` VALUES ('887', '华为 mate 20 pro 全网通(UD版) 8G 128G 樱粉金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通(UD版)8G128G樱粉金/华为mate20pro全网通(UD版)8G128G樱粉金.png', '11', '1', '6500.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:44:30', '2018-12-15 22:44:30');
+INSERT INTO `mc_product` VALUES ('888', '小米 小米MIX 3 8G 256G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/小米/小米小米MIX38G256G全网通黑色/小米小米MIX38G256G全网通黑色.jpg', '12', '1', '3840.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:30', '2018-12-15 22:44:30');
+INSERT INTO `mc_product` VALUES ('889', '华为 mate 20 pro 全网通(UD版) 8G 256G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通(UD版)8G256G宝石蓝/华为mate20pro全网通(UD版)8G256G宝石蓝.jpg', '11', '1', '7070.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:44:31', '2018-12-15 22:44:31');
+INSERT INTO `mc_product` VALUES ('890', '华为 mate 20 pro 全网通(UD版) 8G 256G 翡冷翠 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通(UD版)8G256G翡冷翠/华为mate20pro全网通(UD版)8G256G翡冷翠.jpg', '11', '1', '7050.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:44:31', '2018-12-15 22:44:31');
+INSERT INTO `mc_product` VALUES ('891', '华为 mate 20 pro 全网通(UD版) 8G 256G 极光色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通(UD版)8G256G极光色/华为mate20pro全网通(UD版)8G256G极光色.jpg', '11', '1', '7075.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '45', '2018-12-15 22:44:31', '2018-12-15 22:44:31');
+INSERT INTO `mc_product` VALUES ('892', '华为 mate 20 pro 全网通(UD版) 8G 256G 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通(UD版)8G256G亮黑色/华为mate20pro全网通(UD版)8G256G亮黑色.jpg', '11', '1', '7070.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:44:31', '2018-12-15 22:44:31');
+INSERT INTO `mc_product` VALUES ('893', '华为 mate 20 pro 全网通(UD版) 8G 256G 樱粉金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20pro全网通(UD版)8G256G樱粉金/华为mate20pro全网通(UD版)8G256G樱粉金.png', '11', '1', '7115.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:44:32', '2018-12-15 22:44:32');
+INSERT INTO `mc_product` VALUES ('894', '华为 mate 20 X 全网通 6G 128G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20X全网通6G128G宝石蓝/华为mate20X全网通6G128G宝石蓝.jpg', '11', '1', '4380.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:44:32', '2018-12-15 22:44:32');
+INSERT INTO `mc_product` VALUES ('895', '华为 mate 20 X 全网通 6G 128G 幻影银 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20X全网通6G128G幻影银/华为mate20X全网通6G128G幻影银.jpg', '11', '1', '4410.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:44:32', '2018-12-15 22:44:32');
+INSERT INTO `mc_product` VALUES ('896', '华为 mate 20 X 全网通 8G 256G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20X全网通8G256G宝石蓝/华为mate20X全网通8G256G宝石蓝.jpg', '11', '1', '5290.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:44:33', '2018-12-15 22:44:33');
+INSERT INTO `mc_product` VALUES ('897', '华为 mate 20 X 全网通 8G 256G 幻影银 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为mate20X全网通8G256G幻影银/华为mate20X全网通8G256G幻影银.jpg', '11', '1', '5395.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:44:33', '2018-12-15 22:44:33');
+INSERT INTO `mc_product` VALUES ('898', '华为 Mate20 RS保时捷 8G 512G 全网通 玄黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为Mate20RS保时捷8G512G全网通玄黑/华为Mate20RS保时捷8G512G全网通玄黑.jpg', '11', '1', '14640.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:44:33', '2018-12-15 22:44:33');
+INSERT INTO `mc_product` VALUES ('899', '华为 nova 2s 4G 64G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s4G64G全网通曜石黑/华为nova2s4G64G全网通曜石黑.jpg', '11', '1', '1427.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:33', '2018-12-15 22:44:33');
+INSERT INTO `mc_product` VALUES ('900', '华为 nova 2s 4G 64G 全网通 银钻灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s4G64G全网通银钻灰/华为nova2s4G64G全网通银钻灰.jpg', '11', '1', '1432.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:44:34', '2018-12-15 22:44:34');
+INSERT INTO `mc_product` VALUES ('901', '华为 nova 2s 4G 64G 移动4G+版全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s4G64G移动4G+版全网通曜石黑/华为nova2s4G64G移动4G+版全网通曜石黑.jpg', '11', '1', '1378.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:44:34', '2018-12-15 22:44:34');
+INSERT INTO `mc_product` VALUES ('902', '华为 nova 2s 6G 128G 全网通 浅艾蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s6G128G全网通浅艾蓝/华为nova2s6G128G全网通浅艾蓝.jpg', '11', '1', '1870.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '80', '2018-12-15 22:44:34', '2018-12-15 22:44:34');
+INSERT INTO `mc_product` VALUES ('903', '华为 nova 2s 6G 128G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s6G128G全网通曜石黑/华为nova2s6G128G全网通曜石黑.jpg', '11', '1', '1905.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:44:34', '2018-12-15 22:44:34');
+INSERT INTO `mc_product` VALUES ('904', '华为 nova 2s 6G 128G 全网通 银钻灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s6G128G全网通银钻灰/华为nova2s6G128G全网通银钻灰.jpg', '11', '1', '1900.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:35', '2018-12-15 22:44:35');
+INSERT INTO `mc_product` VALUES ('905', '华为 nova 2s 6G 128G 全网通 樱粉金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s6G128G全网通樱粉金/华为nova2s6G128G全网通樱粉金.jpg', '11', '1', '1900.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:44:36', '2018-12-15 22:44:36');
+INSERT INTO `mc_product` VALUES ('906', '华为 nova 2s 6G 64G 全网通 浅艾蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s6G64G全网通浅艾蓝/华为nova2s6G64G全网通浅艾蓝.jpg', '11', '1', '1515.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:36', '2018-12-15 22:44:36');
+INSERT INTO `mc_product` VALUES ('907', '华为 nova 2s 6G 64G 全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s6G64G全网通曜石黑/华为nova2s6G64G全网通曜石黑.jpg', '11', '1', '1555.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:36', '2018-12-15 22:44:36');
+INSERT INTO `mc_product` VALUES ('908', '华为 nova 2s 6G 64G 全网通 银钻灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s6G64G全网通银钻灰/华为nova2s6G64G全网通银钻灰.jpg', '11', '1', '1590.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:44:37', '2018-12-15 22:44:37');
+INSERT INTO `mc_product` VALUES ('909', '华为 nova 2s 6G 64G 全网通 樱粉金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s6G64G全网通樱粉金/华为nova2s6G64G全网通樱粉金.jpg', '11', '1', '1595.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:44:37', '2018-12-15 22:44:37');
+INSERT INTO `mc_product` VALUES ('910', '华为 nova 2s 6G 64G 移动4G+版全网通 曜石黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s6G64G移动4G+版全网通曜石黑/华为nova2s6G64G移动4G+版全网通曜石黑.jpg', '11', '1', '1490.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:37', '2018-12-15 22:44:37');
+INSERT INTO `mc_product` VALUES ('911', '华为 nova 2s 6G 64G 移动4G+版全网通 银钻灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova2s6G64G移动4G+版全网通银钻灰/华为nova2s6G64G移动4G+版全网通银钻灰.jpg', '11', '1', '1490.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:37', '2018-12-15 22:44:37');
+INSERT INTO `mc_product` VALUES ('912', '华为 nova 3 6G 128G 全网通 蓝楹紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova36G128G全网通蓝楹紫/华为nova36G128G全网通蓝楹紫.jpg', '11', '1', '2245.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:44:37', '2018-12-15 22:44:37');
+INSERT INTO `mc_product` VALUES ('913', '华为 nova 3 6G 128G 全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova36G128G全网通亮黑色/华为nova36G128G全网通亮黑色.jpg', '11', '1', '2228.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:44:38', '2018-12-15 22:44:38');
+INSERT INTO `mc_product` VALUES ('914', '华为 nova 3 6G 128G 全网通 浅艾蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova36G128G全网通浅艾蓝/华为nova36G128G全网通浅艾蓝.jpg', '11', '1', '2136.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '87', '2018-12-15 22:44:38', '2018-12-15 22:44:38');
+INSERT INTO `mc_product` VALUES ('915', '华为 nova 3 6G 128G 全网通 相思红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova36G128G全网通相思红/华为nova36G128G全网通相思红.jpg', '11', '1', '2251.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:44:38', '2018-12-15 22:44:38');
+INSERT INTO `mc_product` VALUES ('916', '华为 nova 3 6G 128G 全网通版星耀版 樱草金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova36G128G全网通版星耀版樱草金/华为nova36G128G全网通版星耀版樱草金.jpg', '11', '1', '2194.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:38', '2018-12-15 22:44:38');
+INSERT INTO `mc_product` VALUES ('917', '华为 nova 3 6G 64G 全网通 蓝楹紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova36G64G全网通蓝楹紫/华为nova36G64G全网通蓝楹紫.jpg', '11', '1', '2060.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:44:38', '2018-12-15 22:44:38');
+INSERT INTO `mc_product` VALUES ('918', '华为 nova 3 6G 64G 全网通 浅艾蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova36G64G全网通浅艾蓝/华为nova36G64G全网通浅艾蓝.jpg', '11', '1', '2050.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:44:38', '2018-12-15 22:44:38');
+INSERT INTO `mc_product` VALUES ('919', '华为 nova 3e 4G 128G 移动版全网通 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3e4G128G移动版全网通铂光金/华为nova3e4G128G移动版全网通铂光金.jpg', '11', '1', '1550.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:44:38', '2018-12-15 22:44:38');
+INSERT INTO `mc_product` VALUES ('920', '华为 nova 3e 4G 128G 移动版全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3e4G128G移动版全网通幻夜黑/华为nova3e4G128G移动版全网通幻夜黑.jpg', '11', '1', '1608.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:44:39', '2018-12-15 22:44:39');
+INSERT INTO `mc_product` VALUES ('921', '华为 nova 3e 4G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3e4G64G全网通幻夜黑/华为nova3e4G64G全网通幻夜黑.jpg', '11', '1', '1479.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:39', '2018-12-15 22:44:39');
+INSERT INTO `mc_product` VALUES ('922', '华为 nova 3i 4G 128G 全网通 蓝楹紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3i4G128G全网通蓝楹紫/华为nova3i4G128G全网通蓝楹紫.jpg', '11', '1', '1477.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '25', '2018-12-15 22:44:39', '2018-12-15 22:44:39');
+INSERT INTO `mc_product` VALUES ('923', '华为 nova 3i 4G 128G 全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3i4G128G全网通亮黑色/华为nova3i4G128G全网通亮黑色.jpg', '11', '1', '1465.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:44:39', '2018-12-15 22:44:39');
+INSERT INTO `mc_product` VALUES ('924', '华为 nova 3i 4G 128G 全网通 相思红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3i4G128G全网通相思红/华为nova3i4G128G全网通相思红.png', '11', '1', '1483.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:40', '2018-12-15 22:44:40');
+INSERT INTO `mc_product` VALUES ('925', '华为 nova 3i 4G 128G 全网通 珍珠白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3i4G128G全网通珍珠白/华为nova3i4G128G全网通珍珠白.jpg', '11', '1', '1480.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:44:40', '2018-12-15 22:44:40');
+INSERT INTO `mc_product` VALUES ('926', '华为 nova 3i 6G 128G 全网通 蓝楹紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3i6G128G全网通蓝楹紫/华为nova3i6G128G全网通蓝楹紫.jpg', '11', '1', '1760.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:40', '2018-12-15 22:44:40');
+INSERT INTO `mc_product` VALUES ('927', '华为 nova 3i 6G 128G 全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3i6G128G全网通亮黑色/华为nova3i6G128G全网通亮黑色.jpg', '11', '1', '1720.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:44:40', '2018-12-15 22:44:40');
+INSERT INTO `mc_product` VALUES ('928', '华为 nova 3i 6G 128G 全网通 相思红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3i6G128G全网通相思红/华为nova3i6G128G全网通相思红.jpg', '11', '1', '1768.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:44:40', '2018-12-15 22:44:40');
+INSERT INTO `mc_product` VALUES ('929', '华为 nova 3i 6G 128G 全网通 珍珠白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3i6G128G全网通珍珠白/华为nova3i6G128G全网通珍珠白.jpg', '11', '1', '1765.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:44:40', '2018-12-15 22:44:40');
+INSERT INTO `mc_product` VALUES ('930', '华为 nova 3i 6G 64G 全网通 蓝楹紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3i6G64G全网通蓝楹紫/华为nova3i6G64G全网通蓝楹紫.jpg', '11', '1', '1712.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:44:40', '2018-12-15 22:44:40');
+INSERT INTO `mc_product` VALUES ('931', '华为 nova 3i 6G 64G 全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为nova3i6G64G全网通亮黑色/华为nova3i6G64G全网通亮黑色.jpg', '11', '1', '1693.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:44:41', '2018-12-15 22:44:41');
+INSERT INTO `mc_product` VALUES ('932', '华为 畅玩8C 4G 32G 全网通 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅玩8C4G32G全网通铂光金/华为畅玩8C4G32G全网通铂光金.jpg', '11', '1', '910.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:44:41', '2018-12-15 22:44:41');
+INSERT INTO `mc_product` VALUES ('933', '华为 畅玩8C 4G 32G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅玩8C4G32G全网通幻夜黑/华为畅玩8C4G32G全网通幻夜黑.jpg', '11', '1', '906.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:44:41', '2018-12-15 22:44:41');
+INSERT INTO `mc_product` VALUES ('934', '华为 畅玩8C 4G 32G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅玩8C4G32G全网通极光蓝/华为畅玩8C4G32G全网通极光蓝.jpg', '11', '1', '913.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:44:41', '2018-12-15 22:44:41');
+INSERT INTO `mc_product` VALUES ('935', '华为 畅玩8C 4G 32G 全网通 星云紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅玩8C4G32G全网通星云紫/华为畅玩8C4G32G全网通星云紫.jpg', '11', '1', '910.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:42', '2018-12-15 22:44:42');
+INSERT INTO `mc_product` VALUES ('936', '华为 畅玩8C 4G 64G 全网通 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅玩8C4G64G全网通铂光金/华为畅玩8C4G64G全网通铂光金.jpg', '11', '1', '1107.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:44:42', '2018-12-15 22:44:42');
+INSERT INTO `mc_product` VALUES ('937', '华为 畅玩8C 4G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅玩8C4G64G全网通幻夜黑/华为畅玩8C4G64G全网通幻夜黑.jpg', '11', '1', '1113.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:44:42', '2018-12-15 22:44:42');
+INSERT INTO `mc_product` VALUES ('938', '华为 畅玩8C 4G 64G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅玩8C4G64G全网通极光蓝/华为畅玩8C4G64G全网通极光蓝.jpg', '11', '1', '1124.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:44:43', '2018-12-15 22:44:43');
+INSERT INTO `mc_product` VALUES ('939', '华为 畅玩8C 4G 64G 全网通 星云紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅玩8C4G64G全网通星云紫/华为畅玩8C4G64G全网通星云紫.jpg', '11', '1', '1113.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:44:43', '2018-12-15 22:44:43');
+INSERT INTO `mc_product` VALUES ('940', '华为 畅享 9 plus 全网通 4G 128G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享9plus全网通4G128G宝石蓝/华为畅享9plus全网通4G128G宝石蓝.jpg', '11', '1', '1430.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:44:43', '2018-12-15 22:44:43');
+INSERT INTO `mc_product` VALUES ('941', '华为 畅享 9 plus 全网通 4G 128G 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享9plus全网通4G128G幻夜黑/华为畅享9plus全网通4G128G幻夜黑.jpg', '11', '1', '1402.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:44:43', '2018-12-15 22:44:43');
+INSERT INTO `mc_product` VALUES ('942', '华为 畅享 9 plus 全网通 4G 128G 樱语粉 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享9plus全网通4G128G樱语粉/华为畅享9plus全网通4G128G樱语粉.jpg', '11', '1', '1478.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:43', '2018-12-15 22:44:43');
+INSERT INTO `mc_product` VALUES ('943', '华为 畅享 9 plus 全网通 4G 64G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享9plus全网通4G64G宝石蓝/华为畅享9plus全网通4G64G宝石蓝.jpg', '11', '1', '1408.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:44:44', '2018-12-15 22:44:44');
+INSERT INTO `mc_product` VALUES ('944', '华为 畅享 9 plus 全网通 6G 128G 宝石蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享9plus全网通6G128G宝石蓝/华为畅享9plus全网通6G128G宝石蓝.jpg', '11', '1', '1675.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '16', '2018-12-15 22:44:44', '2018-12-15 22:44:44');
+INSERT INTO `mc_product` VALUES ('945', '华为 畅享 9 plus 全网通 6G 128G 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享9plus全网通6G128G幻夜黑/华为畅享9plus全网通6G128G幻夜黑.jpg', '11', '1', '1667.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:45', '2018-12-15 22:44:45');
+INSERT INTO `mc_product` VALUES ('946', '华为 畅享7S 4G 64G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享7S4G64G全网通黑色/华为畅享7S4G64G全网通黑色.png', '11', '1', '1018.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:44:46', '2018-12-15 22:44:46');
+INSERT INTO `mc_product` VALUES ('947', '华为 畅享7S 4G 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享7S4G64G全网通金色/华为畅享7S4G64G全网通金色.png', '11', '1', '999.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:46', '2018-12-15 22:44:46');
+INSERT INTO `mc_product` VALUES ('948', '华为 畅享7S 4G 64G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享7S4G64G全网通蓝色/华为畅享7S4G64G全网通蓝色.jpg', '11', '1', '1048.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '23', '2018-12-15 22:44:46', '2018-12-15 22:44:46');
+INSERT INTO `mc_product` VALUES ('949', '华为 畅享8 3G 32G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享83G32G全网通蓝色/华为畅享83G32G全网通蓝色.jpg', '11', '1', '830.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:44:46', '2018-12-15 22:44:46');
+INSERT INTO `mc_product` VALUES ('950', '华为 畅享8 3G 32G 移动全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享83G32G移动全网通黑色/华为畅享83G32G移动全网通黑色.jpg', '11', '1', '768.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:44:46', '2018-12-15 22:44:46');
+INSERT INTO `mc_product` VALUES ('951', '华为 畅享8 4G 64G 全网通 粉色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享84G64G全网通粉色/华为畅享84G64G全网通粉色.jpg', '11', '1', '1060.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:47', '2018-12-15 22:44:47');
+INSERT INTO `mc_product` VALUES ('952', '华为 畅享8 4G 64G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享84G64G全网通黑色/华为畅享84G64G全网通黑色.jpg', '11', '1', '978.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:47', '2018-12-15 22:44:47');
+INSERT INTO `mc_product` VALUES ('953', '华为 畅享8 4G 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享84G64G全网通金色/华为畅享84G64G全网通金色.jpg', '11', '1', '950.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:44:47', '2018-12-15 22:44:47');
+INSERT INTO `mc_product` VALUES ('954', '华为 畅享8 4G 64G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享84G64G全网通蓝色/华为畅享84G64G全网通蓝色.jpg', '11', '1', '960.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:47', '2018-12-15 22:44:47');
+INSERT INTO `mc_product` VALUES ('955', '华为 畅享8 plus 4G 128G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8plus4G128G全网通黑色/华为畅享8plus4G128G全网通黑色.jpg', '11', '1', '1430.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:44:48', '2018-12-15 22:44:48');
+INSERT INTO `mc_product` VALUES ('956', '华为 畅享8 plus 4G 128G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8plus4G128G全网通金色/华为畅享8plus4G128G全网通金色.jpg', '11', '1', '1430.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:44:48', '2018-12-15 22:44:48');
+INSERT INTO `mc_product` VALUES ('957', '华为 畅享8 plus 4G 64G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8plus4G64G全网通黑色/华为畅享8plus4G64G全网通黑色.jpg', '11', '1', '1236.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:44:48', '2018-12-15 22:44:48');
+INSERT INTO `mc_product` VALUES ('958', '华为 畅享8 plus 4G 64G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8plus4G64G全网通金色/华为畅享8plus4G64G全网通金色.jpg', '11', '1', '1147.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:48', '2018-12-15 22:44:48');
+INSERT INTO `mc_product` VALUES ('959', '华为 畅享8 plus 4G 64G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8plus4G64G全网通蓝色/华为畅享8plus4G64G全网通蓝色.jpg', '11', '1', '1230.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '22', '2018-12-15 22:44:49', '2018-12-15 22:44:49');
+INSERT INTO `mc_product` VALUES ('960', '华为 畅享8e 3G 32G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8e3G32G全网通黑色/华为畅享8e3G32G全网通黑色.jpg', '11', '1', '719.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:44:49', '2018-12-15 22:44:49');
+INSERT INTO `mc_product` VALUES ('961', '华为 畅享8e 3G 32G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8e3G32G全网通金色/华为畅享8e3G32G全网通金色.jpg', '11', '1', '717.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:49', '2018-12-15 22:44:49');
+INSERT INTO `mc_product` VALUES ('962', '华为 畅享8e 3G 32G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8e3G32G全网通蓝色/华为畅享8e3G32G全网通蓝色.jpg', '11', '1', '717.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '21', '2018-12-15 22:44:49', '2018-12-15 22:44:49');
+INSERT INTO `mc_product` VALUES ('963', '华为 畅享8e 青春版 2G 32G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8e青春版2G32G全网通黑色/华为畅享8e青春版2G32G全网通黑色.jpg', '11', '1', '574.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:44:50', '2018-12-15 22:44:50');
+INSERT INTO `mc_product` VALUES ('964', '华为 畅享8e 青春版 2G 32G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8e青春版2G32G全网通金色/华为畅享8e青春版2G32G全网通金色.jpg', '11', '1', '570.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:50', '2018-12-15 22:44:50');
+INSERT INTO `mc_product` VALUES ('965', '华为 畅享8e 青春版 2G 32G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享8e青春版2G32G全网通蓝色/华为畅享8e青春版2G32G全网通蓝色.jpg', '11', '1', '575.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:44:50', '2018-12-15 22:44:50');
+INSERT INTO `mc_product` VALUES ('966', '华为 畅享max 4G 128G 全网通 琥珀棕 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享max4G128G全网通琥珀棕/华为畅享max4G128G全网通琥珀棕.jpg', '11', '1', '1570.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '19', '2018-12-15 22:44:50', '2018-12-15 22:44:50');
+INSERT INTO `mc_product` VALUES ('967', '华为 畅享max 4G 128G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享max4G128G全网通幻夜黑/华为畅享max4G128G全网通幻夜黑.jpg', '11', '1', '1519.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '24', '2018-12-15 22:44:50', '2018-12-15 22:44:50');
+INSERT INTO `mc_product` VALUES ('968', '华为 畅享max 4G 128G 全网通 天际白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为畅享max4G128G全网通天际白/华为畅享max4G128G全网通天际白.jpg', '11', '1', '1512.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:50', '2018-12-15 22:44:50');
+INSERT INTO `mc_product` VALUES ('969', '华为 麦芒7 6G 64G 全网通 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为麦芒76G64G全网通铂光金/华为麦芒76G64G全网通铂光金.jpg', '11', '1', '1698.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '20', '2018-12-15 22:44:50', '2018-12-15 22:44:50');
+INSERT INTO `mc_product` VALUES ('970', '华为 麦芒7 6G 64G 全网通 亮黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为麦芒76G64G全网通亮黑色/华为麦芒76G64G全网通亮黑色.jpg', '11', '1', '1705.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '18', '2018-12-15 22:44:51', '2018-12-15 22:44:51');
+INSERT INTO `mc_product` VALUES ('971', '华为 麦芒7 6G 64G 全网通 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为麦芒76G64G全网通魅海蓝/华为麦芒76G64G全网通魅海蓝.jpg', '11', '1', '1698.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '17', '2018-12-15 22:44:51', '2018-12-15 22:44:51');
+INSERT INTO `mc_product` VALUES ('972', '华为 荣耀10 4G 128G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀104G128G全网通幻夜黑/华为荣耀104G128G全网通幻夜黑.png', '11', '1', '1769.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:44:51', '2018-12-17 09:34:53');
+INSERT INTO `mc_product` VALUES ('973', '华为 荣耀10 6G 128G 全网通 海鸥灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀106G128G全网通海鸥灰/华为荣耀106G128G全网通海鸥灰.png', '11', '1', '2158.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:44:51', '2018-12-15 22:44:51');
+INSERT INTO `mc_product` VALUES ('974', '华为 荣耀10 6G 128G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀106G128G全网通幻夜黑/华为荣耀106G128G全网通幻夜黑.png', '11', '1', '2165.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:44:52', '2018-12-15 22:44:52');
+INSERT INTO `mc_product` VALUES ('975', '华为 荣耀10 6G 128G 全网通 幻影蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀106G128G全网通幻影蓝/华为荣耀106G128G全网通幻影蓝.png', '11', '1', '2175.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:44:52', '2018-12-15 22:44:52');
+INSERT INTO `mc_product` VALUES ('976', '华为 荣耀10 6G 128G 全网通 幻影紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀106G128G全网通幻影紫/华为荣耀106G128G全网通幻影紫.png', '11', '1', '2164.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:44:52', '2018-12-15 22:44:52');
+INSERT INTO `mc_product` VALUES ('977', '华为 荣耀10 6G 128G 全网通 铃兰白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀106G128G全网通铃兰白/华为荣耀106G128G全网通铃兰白.jpg', '11', '1', '2188.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '50', '2018-12-15 22:44:52', '2018-12-15 22:44:52');
+INSERT INTO `mc_product` VALUES ('978', '华为 荣耀10 6G 64G 全网通 海鸥灰 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀106G64G全网通海鸥灰/华为荣耀106G64G全网通海鸥灰.png', '11', '1', '1945.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:44:52', '2018-12-15 22:44:52');
+INSERT INTO `mc_product` VALUES ('979', '华为 荣耀10 6G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀106G64G全网通幻夜黑/华为荣耀106G64G全网通幻夜黑.png', '11', '1', '1910.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:44:53', '2018-12-15 22:44:53');
+INSERT INTO `mc_product` VALUES ('980', '华为 荣耀10 6G 64G 全网通 幻影蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀106G64G全网通幻影蓝/华为荣耀106G64G全网通幻影蓝.png', '11', '1', '1899.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:44:53', '2018-12-15 22:44:53');
+INSERT INTO `mc_product` VALUES ('981', '华为 荣耀10 6G 64G 全网通 幻影紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀106G64G全网通幻影紫/华为荣耀106G64G全网通幻影紫.png', '11', '1', '1923.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:44:53', '2018-12-15 22:44:53');
+INSERT INTO `mc_product` VALUES ('982', '华为 荣耀10 6G 64G 全网通 铃兰白 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀106G64G全网通铃兰白/华为荣耀106G64G全网通铃兰白.jpg', '11', '1', '1955.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '55', '2018-12-15 22:44:53', '2018-12-15 22:44:53');
+INSERT INTO `mc_product` VALUES ('983', '华为 荣耀10青春版 4G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀10青春版4G64G全网通幻夜黑/华为荣耀10青春版4G64G全网通幻夜黑.jpg', '11', '1', '1337.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:54', '2018-12-15 22:44:54');
+INSERT INTO `mc_product` VALUES ('984', '华为 荣耀10青春版 4G 64G 全网通 渐变红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀10青春版4G64G全网通渐变红/华为荣耀10青春版4G64G全网通渐变红.jpg', '11', '1', '1352.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:44:54', '2018-12-15 22:44:54');
+INSERT INTO `mc_product` VALUES ('985', '华为 荣耀10青春版 4G 64G 全网通 渐变蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀10青春版4G64G全网通渐变蓝/华为荣耀10青春版4G64G全网通渐变蓝.jpg', '11', '1', '1347.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:44:55', '2018-12-15 22:44:55');
+INSERT INTO `mc_product` VALUES ('986', '华为 荣耀10青春版 6G 128G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀10青春版6G128G全网通幻夜黑/华为荣耀10青春版6G128G全网通幻夜黑.jpg', '11', '1', '1750.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '50', '2018-12-15 22:44:55', '2018-12-15 22:44:55');
+INSERT INTO `mc_product` VALUES ('987', '华为 荣耀10青春版 6G 128G 全网通 渐变红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀10青春版6G128G全网通渐变红/华为荣耀10青春版6G128G全网通渐变红.jpg', '11', '1', '1740.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:56', '2018-12-15 22:44:56');
+INSERT INTO `mc_product` VALUES ('988', '华为 荣耀10青春版 6G 128G 全网通 渐变蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀10青春版6G128G全网通渐变蓝/华为荣耀10青春版6G128G全网通渐变蓝.jpg', '11', '1', '1748.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '47', '2018-12-15 22:44:56', '2018-12-15 22:44:56');
+INSERT INTO `mc_product` VALUES ('989', '华为 荣耀10青春版 6G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀10青春版6G64G全网通幻夜黑/华为荣耀10青春版6G64G全网通幻夜黑.jpg', '11', '1', '1556.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:44:56', '2018-12-15 22:44:56');
+INSERT INTO `mc_product` VALUES ('990', '华为 荣耀10青春版 6G 64G 全网通 渐变红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀10青春版6G64G全网通渐变红/华为荣耀10青春版6G64G全网通渐变红.jpg', '11', '1', '1560.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:56', '2018-12-15 22:44:56');
+INSERT INTO `mc_product` VALUES ('991', '华为 荣耀10青春版 6G 64G 全网通 渐变蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀10青春版6G64G全网通渐变蓝/华为荣耀10青春版6G64G全网通渐变蓝.jpg', '11', '1', '1555.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:44:57', '2018-12-15 22:44:57');
+INSERT INTO `mc_product` VALUES ('992', '华为 荣耀8X 4G 128G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X4G128G全网通幻夜黑/华为荣耀8X4G128G全网通幻夜黑.jpg', '11', '1', '1444.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:57', '2018-12-15 22:44:57');
+INSERT INTO `mc_product` VALUES ('993', '华为 荣耀8X 4G 128G 全网通 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X4G128G全网通魅海蓝/华为荣耀8X4G128G全网通魅海蓝.jpg', '11', '1', '1460.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:44:57', '2018-12-15 22:44:57');
+INSERT INTO `mc_product` VALUES ('994', '华为 荣耀8X 4G 128G 全网通 梦幻紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X4G128G全网通梦幻紫/华为荣耀8X4G128G全网通梦幻紫.jpg', '11', '1', '1455.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:44:57', '2018-12-15 22:44:57');
+INSERT INTO `mc_product` VALUES ('995', '华为 荣耀8X 4G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X4G64G全网通幻夜黑/华为荣耀8X4G64G全网通幻夜黑.jpg', '11', '1', '1308.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:44:58', '2018-12-15 22:44:58');
+INSERT INTO `mc_product` VALUES ('996', '华为 荣耀8X 4G 64G 全网通 幻影蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X4G64G全网通幻影蓝/华为荣耀8X4G64G全网通幻影蓝.jpg', '11', '1', '1315.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:44:58', '2018-12-15 22:44:58');
+INSERT INTO `mc_product` VALUES ('997', '华为 荣耀8X 4G 64G 全网通 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X4G64G全网通魅海蓝/华为荣耀8X4G64G全网通魅海蓝.jpg', '11', '1', '1308.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:44:58', '2018-12-15 22:44:58');
+INSERT INTO `mc_product` VALUES ('998', '华为 荣耀8X 4G 64G 全网通 魅焰红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X4G64G全网通魅焰红/华为荣耀8X4G64G全网通魅焰红.jpg', '11', '1', '1325.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '42', '2018-12-15 22:44:58', '2018-12-15 22:44:58');
+INSERT INTO `mc_product` VALUES ('999', '华为 荣耀8X 4G 64G 全网通 梦幻紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X4G64G全网通梦幻紫/华为荣耀8X4G64G全网通梦幻紫.jpg', '11', '1', '1327.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:44:58', '2018-12-15 22:44:58');
+INSERT INTO `mc_product` VALUES ('1000', '华为 荣耀8X 6G 128G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X6G128G全网通幻夜黑/华为荣耀8X6G128G全网通幻夜黑.jpg', '11', '1', '1621.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:44:59', '2018-12-15 22:44:59');
+INSERT INTO `mc_product` VALUES ('1001', '华为 荣耀8X 6G 128G 全网通 幻影蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X6G128G全网通幻影蓝/华为荣耀8X6G128G全网通幻影蓝.jpg', '11', '1', '1658.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '45', '2018-12-15 22:44:59', '2018-12-15 22:44:59');
+INSERT INTO `mc_product` VALUES ('1002', '华为 荣耀8X 6G 128G 全网通 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X6G128G全网通魅海蓝/华为荣耀8X6G128G全网通魅海蓝.jpg', '11', '1', '1623.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '47', '2018-12-15 22:44:59', '2018-12-15 22:44:59');
+INSERT INTO `mc_product` VALUES ('1003', '华为 荣耀8X 6G 128G 全网通 魅焰红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X6G128G全网通魅焰红/华为荣耀8X6G128G全网通魅焰红.jpg', '11', '1', '1639.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:44:59', '2018-12-15 22:44:59');
+INSERT INTO `mc_product` VALUES ('1004', '华为 荣耀8X 6G 128G 全网通 梦幻紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X6G128G全网通梦幻紫/华为荣耀8X6G128G全网通梦幻紫.jpg', '11', '1', '1629.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:45:00', '2018-12-15 22:45:00');
+INSERT INTO `mc_product` VALUES ('1005', '华为 荣耀8X 6G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X6G64G全网通幻夜黑/华为荣耀8X6G64G全网通幻夜黑.jpg', '11', '1', '1530.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:45:00', '2018-12-15 22:45:00');
+INSERT INTO `mc_product` VALUES ('1006', '华为 荣耀8X 6G 64G 全网通 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X6G64G全网通魅海蓝/华为荣耀8X6G64G全网通魅海蓝.jpg', '11', '1', '1524.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:45:00', '2018-12-15 22:45:00');
+INSERT INTO `mc_product` VALUES ('1007', '华为 荣耀8X 6G 64G 全网通 魅焰红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X6G64G全网通魅焰红/华为荣耀8X6G64G全网通魅焰红.jpg', '11', '1', '1525.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:45:00', '2018-12-15 22:45:00');
+INSERT INTO `mc_product` VALUES ('1008', '华为 荣耀8X 6G 64G 全网通 梦幻紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8X6G64G全网通梦幻紫/华为荣耀8X6G64G全网通梦幻紫.jpg', '11', '1', '1525.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '40', '2018-12-15 22:45:01', '2018-12-15 22:45:01');
+INSERT INTO `mc_product` VALUES ('1009', '华为 荣耀8X Max 4G 128G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8XMax4G128G全网通幻夜黑/华为荣耀8XMax4G128G全网通幻夜黑.jpg', '11', '1', '1495.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '49', '2018-12-15 22:45:01', '2018-12-15 22:45:01');
+INSERT INTO `mc_product` VALUES ('1010', '华为 荣耀8X Max 4G 128G 全网通 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀8XMax4G128G全网通魅海蓝/华为荣耀8XMax4G128G全网通魅海蓝.jpg', '11', '1', '1515.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '35', '2018-12-15 22:45:01', '2018-12-15 22:45:01');
+INSERT INTO `mc_product` VALUES ('1011', '华为 荣耀9i 4G 128G 全网通 碧玉青 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9i4G128G全网通碧玉青/华为荣耀9i4G128G全网通碧玉青.jpg', '11', '1', '1309.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:45:01', '2018-12-15 22:45:01');
+INSERT INTO `mc_product` VALUES ('1012', '华为 荣耀9i 4G 128G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9i4G128G全网通幻夜黑/华为荣耀9i4G128G全网通幻夜黑.jpg', '11', '1', '1284.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:45:01', '2018-12-15 22:45:01');
+INSERT INTO `mc_product` VALUES ('1013', '华为 荣耀9i 4G 128G 全网通 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9i4G128G全网通魅海蓝/华为荣耀9i4G128G全网通魅海蓝.jpg', '11', '1', '1285.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:45:02', '2018-12-15 22:45:02');
+INSERT INTO `mc_product` VALUES ('1014', '华为 荣耀9i 4G 128G 全网通 梦幻紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9i4G128G全网通梦幻紫/华为荣耀9i4G128G全网通梦幻紫.jpg', '11', '1', '1313.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:45:02', '2018-12-15 22:45:02');
+INSERT INTO `mc_product` VALUES ('1015', '华为 荣耀9i 4G 64G 全网通 碧玉青 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9i4G64G全网通碧玉青/华为荣耀9i4G64G全网通碧玉青.jpg', '11', '1', '1058.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:45:02', '2018-12-15 22:45:02');
+INSERT INTO `mc_product` VALUES ('1016', '华为 荣耀9i 4G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9i4G64G全网通幻夜黑/华为荣耀9i4G64G全网通幻夜黑.jpg', '11', '1', '1005.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '32', '2018-12-15 22:45:02', '2018-12-15 22:45:02');
+INSERT INTO `mc_product` VALUES ('1017', '华为 荣耀9i 4G 64G 全网通 魅海蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9i4G64G全网通魅海蓝/华为荣耀9i4G64G全网通魅海蓝.jpg', '11', '1', '1008.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '37', '2018-12-15 22:45:02', '2018-12-15 22:45:02');
+INSERT INTO `mc_product` VALUES ('1018', '华为 荣耀9i 4G 64G 全网通 梦幻紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀9i4G64G全网通梦幻紫/华为荣耀9i4G64G全网通梦幻紫.jpg', '11', '1', '1012.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:45:02', '2018-12-15 22:45:02');
+INSERT INTO `mc_product` VALUES ('1019', '华为 荣耀Magic2 6G 128G 全网通 渐变黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Magic26G128G全网通渐变黑/华为荣耀Magic26G128G全网通渐变黑.jpg', '11', '1', '3783.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:45:03', '2018-12-15 22:45:03');
+INSERT INTO `mc_product` VALUES ('1020', '华为 荣耀Magic2 6G 128G 全网通 渐变蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Magic26G128G全网通渐变蓝/华为荣耀Magic26G128G全网通渐变蓝.jpg', '11', '1', '3890.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:45:03', '2018-12-15 22:45:03');
+INSERT INTO `mc_product` VALUES ('1021', '华为 荣耀Magic2 8G 128G 全网通 渐变黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Magic28G128G全网通渐变黑/华为荣耀Magic28G128G全网通渐变黑.jpg', '11', '1', '3927.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:45:03', '2018-12-15 22:45:03');
+INSERT INTO `mc_product` VALUES ('1022', '华为 荣耀Magic2 8G 128G 全网通 渐变红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Magic28G128G全网通渐变红/华为荣耀Magic28G128G全网通渐变红.jpg', '11', '1', '3951.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:45:03', '2018-12-15 22:45:03');
+INSERT INTO `mc_product` VALUES ('1023', '华为 荣耀Magic2 8G 128G 全网通 渐变蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Magic28G128G全网通渐变蓝/华为荣耀Magic28G128G全网通渐变蓝.jpg', '11', '1', '3917.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:45:04', '2018-12-15 22:45:04');
+INSERT INTO `mc_product` VALUES ('1024', '华为 荣耀Magic2 8G 256G 全网通 渐变黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Magic28G256G全网通渐变黑/华为荣耀Magic28G256G全网通渐变黑.jpg', '11', '1', '4420.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '44', '2018-12-15 22:45:04', '2018-12-15 22:45:04');
+INSERT INTO `mc_product` VALUES ('1025', '华为 荣耀Magic2 8G 256G 全网通 渐变红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Magic28G256G全网通渐变红/华为荣耀Magic28G256G全网通渐变红.jpg', '11', '1', '4250.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:45:05', '2018-12-15 22:45:05');
+INSERT INTO `mc_product` VALUES ('1026', '华为 荣耀Magic2 8G 256G 全网通 渐变蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Magic28G256G全网通渐变蓝/华为荣耀Magic28G256G全网通渐变蓝.jpg', '11', '1', '4379.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '39', '2018-12-15 22:45:05', '2018-12-15 22:45:05');
+INSERT INTO `mc_product` VALUES ('1027', '华为 荣耀Note10 6G 128G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Note106G128G全网通幻夜黑/华为荣耀Note106G128G全网通幻夜黑.jpg', '11', '1', '2467.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:45:06', '2018-12-15 22:45:06');
+INSERT INTO `mc_product` VALUES ('1028', '华为 荣耀Note10 6G 128G 全网通 幻影蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Note106G128G全网通幻影蓝/华为荣耀Note106G128G全网通幻影蓝.jpg', '11', '1', '2472.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '36', '2018-12-15 22:45:06', '2018-12-15 22:45:06');
+INSERT INTO `mc_product` VALUES ('1029', '华为 荣耀Note10 6G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Note106G64G全网通幻夜黑/华为荣耀Note106G64G全网通幻夜黑.jpg', '11', '1', '2235.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '45', '2018-12-15 22:45:06', '2018-12-15 22:45:06');
+INSERT INTO `mc_product` VALUES ('1030', '华为 荣耀Note10 6G 64G 全网通 幻影蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Note106G64G全网通幻影蓝/华为荣耀Note106G64G全网通幻影蓝.jpg', '11', '1', '2235.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '34', '2018-12-15 22:45:06', '2018-12-15 22:45:06');
+INSERT INTO `mc_product` VALUES ('1031', '华为 荣耀Note10 8G 128G 全网通 幻影蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Note108G128G全网通幻影蓝/华为荣耀Note108G128G全网通幻影蓝.jpg', '11', '1', '3230.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '41', '2018-12-15 22:45:06', '2018-12-15 22:45:06');
+INSERT INTO `mc_product` VALUES ('1032', '华为 荣耀Play 4G 64G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Play4G64G全网通极光蓝/华为荣耀Play4G64G全网通极光蓝.jpg', '11', '1', '1450.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '28', '2018-12-15 22:45:07', '2018-12-15 22:45:07');
+INSERT INTO `mc_product` VALUES ('1033', '华为 荣耀Play 6G 128G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Play6G128G全网通幻夜黑/华为荣耀Play6G128G全网通幻夜黑.jpg', '11', '1', '1728.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:45:07', '2018-12-15 22:45:07');
+INSERT INTO `mc_product` VALUES ('1034', '华为 荣耀Play 6G 128G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Play6G128G全网通极光蓝/华为荣耀Play6G128G全网通极光蓝.jpg', '11', '1', '1728.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:45:07', '2018-12-15 22:45:07');
+INSERT INTO `mc_product` VALUES ('1035', '华为 荣耀Play 6G 128G 全网通 星云紫 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Play6G128G全网通星云紫/华为荣耀Play6G128G全网通星云紫.jpg', '11', '1', '1728.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '38', '2018-12-15 22:45:07', '2018-12-15 22:45:07');
+INSERT INTO `mc_product` VALUES ('1036', '华为 荣耀Play 6G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Play6G64G全网通幻夜黑/华为荣耀Play6G64G全网通幻夜黑.jpg', '11', '1', '1655.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:45:07', '2018-12-15 22:45:07');
+INSERT INTO `mc_product` VALUES ('1037', '华为 荣耀Play 6G 64G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Play6G64G全网通极光蓝/华为荣耀Play6G64G全网通极光蓝.jpg', '11', '1', '1655.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '26', '2018-12-15 22:45:08', '2018-12-15 22:45:08');
+INSERT INTO `mc_product` VALUES ('1038', '华为 荣耀Play 6G 64G 移动全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀Play6G64G移动全网通幻夜黑/华为荣耀Play6G64G移动全网通幻夜黑.jpg', '11', '1', '1495.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:45:08', '2018-12-15 22:45:08');
+INSERT INTO `mc_product` VALUES ('1039', '华为 荣耀畅玩7 2G 16G 全网通 黑色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩72G16G全网通黑色/华为荣耀畅玩72G16G全网通黑色.jpg', '11', '1', '445.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:45:08', '2018-12-15 22:45:08');
+INSERT INTO `mc_product` VALUES ('1040', '华为 荣耀畅玩7 2G 16G 全网通 金色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩72G16G全网通金色/华为荣耀畅玩72G16G全网通金色.jpg', '11', '1', '443.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:45:08', '2018-12-15 22:45:08');
+INSERT INTO `mc_product` VALUES ('1041', '华为 荣耀畅玩7 2G 16G 全网通 蓝色 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩72G16G全网通蓝色/华为荣耀畅玩72G16G全网通蓝色.jpg', '11', '1', '444.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:45:09', '2018-12-15 22:45:09');
+INSERT INTO `mc_product` VALUES ('1042', '华为 荣耀畅玩7A 2G 32G 全网通 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7A2G32G全网通铂光金/华为荣耀畅玩7A2G32G全网通铂光金.jpg', '11', '1', '535.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:45:09', '2018-12-15 22:45:09');
+INSERT INTO `mc_product` VALUES ('1043', '华为 荣耀畅玩7A 2G 32G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7A2G32G全网通幻夜黑/华为荣耀畅玩7A2G32G全网通幻夜黑.jpg', '11', '1', '534.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:45:09', '2018-12-15 22:45:09');
+INSERT INTO `mc_product` VALUES ('1044', '华为 荣耀畅玩7A 2G 32G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7A2G32G全网通极光蓝/华为荣耀畅玩7A2G32G全网通极光蓝.jpg', '11', '1', '534.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '27', '2018-12-15 22:45:09', '2018-12-15 22:45:09');
+INSERT INTO `mc_product` VALUES ('1045', '华为 荣耀畅玩7A 3G 32G 全网通 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7A3G32G全网通铂光金/华为荣耀畅玩7A3G32G全网通铂光金.jpg', '11', '1', '738.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:45:09', '2018-12-15 22:45:09');
+INSERT INTO `mc_product` VALUES ('1046', '华为 荣耀畅玩7A 3G 32G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7A3G32G全网通幻夜黑/华为荣耀畅玩7A3G32G全网通幻夜黑.jpg', '11', '1', '712.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '29', '2018-12-15 22:45:10', '2018-12-15 22:45:10');
+INSERT INTO `mc_product` VALUES ('1047', '华为 荣耀畅玩7A 3G 32G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7A3G32G全网通极光蓝/华为荣耀畅玩7A3G32G全网通极光蓝.jpg', '11', '1', '712.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:45:10', '2018-12-15 22:45:10');
+INSERT INTO `mc_product` VALUES ('1048', '华为 荣耀畅玩7C 3G 32G 全网通 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7C3G32G全网通铂光金/华为荣耀畅玩7C3G32G全网通铂光金.jpg', '11', '1', '705.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:45:10', '2018-12-15 22:45:10');
+INSERT INTO `mc_product` VALUES ('1049', '华为 荣耀畅玩7C 3G 32G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7C3G32G全网通幻夜黑/华为荣耀畅玩7C3G32G全网通幻夜黑.jpg', '11', '1', '706.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:45:10', '2018-12-15 22:45:10');
+INSERT INTO `mc_product` VALUES ('1050', '华为 荣耀畅玩7C 3G 32G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7C3G32G全网通极光蓝/华为荣耀畅玩7C3G32G全网通极光蓝.jpg', '11', '1', '705.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '46', '2018-12-15 22:45:11', '2018-12-15 22:45:11');
+INSERT INTO `mc_product` VALUES ('1051', '华为 荣耀畅玩7C 3G 32G 全网通 烈焰红 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7C3G32G全网通烈焰红/华为荣耀畅玩7C3G32G全网通烈焰红.jpg', '11', '1', '751.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '30', '2018-12-15 22:45:11', '2018-12-15 22:45:11');
+INSERT INTO `mc_product` VALUES ('1052', '华为 荣耀畅玩7C 4G 64G 全网通 铂光金 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7C4G64G全网通铂光金/华为荣耀畅玩7C4G64G全网通铂光金.jpg', '11', '1', '1068.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:45:11', '2018-12-15 22:45:11');
+INSERT INTO `mc_product` VALUES ('1053', '华为 荣耀畅玩7C 4G 64G 全网通 幻夜黑 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7C4G64G全网通幻夜黑/华为荣耀畅玩7C4G64G全网通幻夜黑.jpg', '11', '1', '1005.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '31', '2018-12-15 22:45:11', '2018-12-15 22:45:11');
+INSERT INTO `mc_product` VALUES ('1054', '华为 荣耀畅玩7C 4G 64G 全网通 极光蓝 ', '', '', '', '', '', '', '', '10', '5', 'catalog/images/华为/华为荣耀畅玩7C4G64G全网通极光蓝/华为荣耀畅玩7C4G64G全网通极光蓝.jpg', '11', '1', '999.0000', '0', '0', '2018-12-15', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '33', '2018-12-15 22:45:11', '2018-12-15 22:45:11');
+INSERT INTO `mc_product` VALUES ('1055', 'huawei meta20-0001', '', '', '', '', '', '', '', '1', '5', '', '11', '1', '10.0000', '10', '0', '2019-03-30', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '0', '2019-03-30 12:45:54', '2019-03-30 12:45:54');
+INSERT INTO `mc_product` VALUES ('1056', 'huawei meta20-0001', '', '', '', '', '', '', '', '1', '5', '', '11', '1', '10.0000', '10', '0', '2019-03-30', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '0', '2019-03-30 12:55:42', '2019-03-30 12:56:30');
+INSERT INTO `mc_product` VALUES ('1057', '华为1001', '', '', '', '', '', '', '', '1', '5', '', '0', '1', '0.0000', '0', '0', '2019-03-30', '0.00000000', '0', '0.00000000', '0.00000000', '0.00000000', '0', '1', '1', '1', '1', '0', '2019-03-30 14:18:47', '2019-03-30 14:24:19');
 
 -- ----------------------------
 -- Table structure for mc_product_attribute
@@ -6890,21 +7412,15 @@ CREATE TABLE `mc_product_attribute` (
 -- ----------------------------
 -- Records of mc_product_attribute
 -- ----------------------------
-INSERT INTO `mc_product_attribute` VALUES ('43', '4', '1', '8gb');
-INSERT INTO `mc_product_attribute` VALUES ('43', '4', '2', '8gb');
-INSERT INTO `mc_product_attribute` VALUES ('42', '3', '2', '100mhz');
-INSERT INTO `mc_product_attribute` VALUES ('42', '3', '1', '100mhz');
-INSERT INTO `mc_product_attribute` VALUES ('42', '3', '3', '100mhz');
-INSERT INTO `mc_product_attribute` VALUES ('43', '2', '3', '1');
-INSERT INTO `mc_product_attribute` VALUES ('47', '4', '2', '16GB');
-INSERT INTO `mc_product_attribute` VALUES ('47', '4', '1', '16GB');
-INSERT INTO `mc_product_attribute` VALUES ('47', '4', '3', '16GB');
-INSERT INTO `mc_product_attribute` VALUES ('47', '2', '3', '4');
-INSERT INTO `mc_product_attribute` VALUES ('47', '2', '2', '4');
-INSERT INTO `mc_product_attribute` VALUES ('47', '2', '1', '4');
-INSERT INTO `mc_product_attribute` VALUES ('43', '2', '1', '1');
-INSERT INTO `mc_product_attribute` VALUES ('43', '2', '2', '1');
-INSERT INTO `mc_product_attribute` VALUES ('43', '4', '3', '8gb');
+INSERT INTO `mc_product_attribute` VALUES ('52', '13', '1', '5999');
+INSERT INTO `mc_product_attribute` VALUES ('40', '14', '1', '机器描述机器描述机器描述机器描述机器描述');
+INSERT INTO `mc_product_attribute` VALUES ('40', '12', '1', '是');
+INSERT INTO `mc_product_attribute` VALUES ('40', '1', '1', '华为荣耀');
+INSERT INTO `mc_product_attribute` VALUES ('40', '2', '1', '256G / 全网通 ');
+INSERT INTO `mc_product_attribute` VALUES ('40', '3', '1', '黑色');
+INSERT INTO `mc_product_attribute` VALUES ('52', '3', '1', '红色');
+INSERT INTO `mc_product_attribute` VALUES ('56', '3', '1', '红色');
+INSERT INTO `mc_product_attribute` VALUES ('56', '13', '1', '5999');
 
 -- ----------------------------
 -- Table structure for mc_product_description
@@ -6919,6 +7435,7 @@ CREATE TABLE `mc_product_description` (
   `meta_title` varchar(255) NOT NULL,
   `meta_description` varchar(255) NOT NULL,
   `meta_keyword` varchar(255) NOT NULL,
+  `serie_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_id`,`language_id`),
   KEY `name` (`name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -6926,87 +7443,683 @@ CREATE TABLE `mc_product_description` (
 -- ----------------------------
 -- Records of mc_product_description
 -- ----------------------------
-INSERT INTO `mc_product_description` VALUES ('47', '3', '木藝設計', '&lt;p&gt;\n	Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you&#039;re at the office&lt;/p&gt;\n', '', 'HP LP3065', '', '');
-INSERT INTO `mc_product_description` VALUES ('45', '3', '時尚儲物櫃', '&lt;div class=&quot;cpt_product_description &quot;&gt;\n	&lt;div&gt;\n		&lt;p&gt;\n			&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\n	&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- cpt_container_end --&gt;', '', 'MacBook Pro', '', '');
-INSERT INTO `mc_product_description` VALUES ('46', '1', '复古镂空展厨', '&lt;div&gt;\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel&amp;#39;s latest, most powerful innovation yet: Intel&amp;reg; Centrino&amp;reg; 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\n', '', '复古镂空展厨', '复古镂空展厨', '复古镂空展厨');
-INSERT INTO `mc_product_description` VALUES ('46', '2', 'Sony VAIO', '&lt;div&gt;\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel&amp;#39;s latest, most powerful innovation yet: Intel&amp;reg; Centrino&amp;reg; 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\n', '', 'Sony VAIO', '', '');
-INSERT INTO `mc_product_description` VALUES ('46', '3', '復古鏤空展廚', '&lt;div&gt;\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel&amp;#39;s latest, most powerful innovation yet: Intel&amp;reg; Centrino&amp;reg; 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\n', '', 'Sony VAIO', '', '');
-INSERT INTO `mc_product_description` VALUES ('47', '1', '木艺设计', '&lt;p&gt;\n	Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you&#039;re at the office&lt;/p&gt;\n', '', ' 木艺设计', '木艺设计', '木艺设计');
-INSERT INTO `mc_product_description` VALUES ('47', '2', 'HP LP3065', '&lt;p&gt;\n	Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you&#039;re at the office&lt;/p&gt;\n', '', 'HP LP3065', '', '');
-INSERT INTO `mc_product_description` VALUES ('42', '3', '包式座椅', '&lt;p&gt;AMD 785G，一个定位于AMD 780G和AMD \n790GX之间的产品，近期成为所有主板厂商推广的重点，同时也是所有DIY用户关注的焦点。抛开其整合DirectX 10.1规格的Radeon \nHD 4200图形显示核心不提，全新升级的UVD2.0高清解码引擎，让AMD \n785G更适合高清应用。诚然，目前在卖场里攒HTPC专用电脑的人并不多，但随着广大民众生活水平的不断提高，这种个性化应用必将是未来大势所趋，故在\nAMD 785G上设计更多的HTPC应用功能，也成为有实力的主板品牌必须做的一件事。&lt;/p&gt;&lt;p&gt;一向以代工著称的富士康在个性化产品上的设计近年来有了很大的改观，除了推出面向超频玩家的&quot;Quantum Force（量子力量）&quot;系列外，还针对高品质家庭用户推出了Digital Life（数字家庭）系列，其在DIY产品线上的用心程度不言而喻。&lt;br&gt;&lt;/p&gt;', '', 'Apple Cinema 30&quot;', '', '');
-INSERT INTO `mc_product_description` VALUES ('43', '2', 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', 'MacBook', '', '');
-INSERT INTO `mc_product_description` VALUES ('43', '1', '玻璃茶几', '&lt;p&gt;在本次3月份苹果春季新品发布会上，除了最为耀眼的新款MacBook外，苹果还对MacBook Air与13英寸的Retina MacBook Pro进行了常规硬件升级。其中13英寸的Retina MacBook Pro更新最受关注，因为其在性能上做出了许多重大升级，包括第五代Intel Broadwell处理器、Iris 6100核心显卡、读写速度翻倍的PCIe SSD固态硬盘、更高频率的内存，同时电池续航还增加了一个小时。除此之外，它还首先搭载了与新款MacBook一样的全新Force Touch触控板。&lt;/p&gt;&lt;p&gt;由于国行版的13英寸的Retina MacBook Pro现在已经全面铺货，笔者也得以体验到这款搭载全新压感触控设计的触控板。苹果电脑的触控板体验一直很优秀，配合OS X系统中的多指手势操作，可以轻松完成拖拽文件、切换应用程序、切换不同桌面等操作。如今压力感应操作的加入可以说在原本多指手势的基础上加入了一个全新的维度，使得在触控板上可以进行更多的操作命令。&lt;/p&gt;&lt;p&gt;苹果如此重视笔记本电脑上触控板的用户体验，使得MacBook用户几乎可以不用鼠标，也提升了用户的便利性。由于其长续航的特性，外出也基本不需要携带电源，只需要带一台笔记本就足够。笔者在体验了一天2015款苹果MacBook Pro后，写下这篇评测文章，希望能给关注这款产品的网友一些参考&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;', '', '玻璃茶几', '玻璃茶几', '玻璃茶几');
-INSERT INTO `mc_product_description` VALUES ('43', '3', '玻璃茶幾', '&lt;p&gt;在本次3月份苹果春季新品发布会上，除了最为耀眼的新款MacBook外，苹果还对MacBook Air与13英寸的Retina \r\nMacBook Pro进行了常规硬件升级。其中13英寸的Retina MacBook \r\nPro更新最受关注，因为其在性能上做出了许多重大升级，包括第五代Intel Broadwell处理器、Iris \r\n6100核心显卡、读写速度翻倍的PCIe \r\nSSD固态硬盘、更高频率的内存，同时电池续航还增加了一个小时。除此之外，它还首先搭载了与新款MacBook一样的全新Force \r\nTouch触控板。&lt;/p&gt;&lt;p&gt;由于国行版的13英寸的Retina MacBook \r\nPro现在已经全面铺货，笔者也得以体验到这款搭载全新压感触控设计的触控板。苹果电脑的触控板体验一直很优秀，配合OS \r\nX系统中的多指手势操作，可以轻松完成拖拽文件、切换应用程序、切换不同桌面等操作。如今压力感应操作的加入可以说在原本多指手势的基础上加入了一个全新\r\n的维度，使得在触控板上可以进行更多的操作命令。&lt;/p&gt;&lt;p&gt;苹果如此重视笔记本电脑上触控板的用户体验，使得MacBook用户几乎可以不用鼠标，也\r\n提升了用户的便利性。由于其长续航的特性，外出也基本不需要携带电源，只需要带一台笔记本就足够。笔者在体验了一天2015款苹果MacBook \r\nPro后，写下这篇评测文章，希望能给关注这款产品的网友一些参考&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;', '', 'MacBook', '', '');
-INSERT INTO `mc_product_description` VALUES ('34', '2', 'iPod Shuffle', '&lt;div&gt;\n	&lt;strong&gt;Born to be worn.&lt;/strong&gt;\n	&lt;p&gt;\n		Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\n	&lt;strong&gt;Everything is easy.&lt;/strong&gt;\n	&lt;p&gt;\n		Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\n&lt;/div&gt;\n', '', 'iPod Shuffle', '', '');
-INSERT INTO `mc_product_description` VALUES ('34', '3', '線條式展架', '&lt;div&gt;\n	&lt;strong&gt;Born to be worn.&lt;/strong&gt;\n	&lt;p&gt;\n		Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\n	&lt;strong&gt;Everything is easy.&lt;/strong&gt;\n	&lt;p&gt;\n		Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\n&lt;/div&gt;\n', '', 'iPod Shuffle', '', '');
-INSERT INTO `mc_product_description` VALUES ('35', '1', '真皮座椅', '&lt;p&gt;\n	Product 8&lt;/p&gt;\n', '', '真皮座椅', '真皮座椅', '真皮座椅');
-INSERT INTO `mc_product_description` VALUES ('35', '2', 'Product 8', '&lt;p&gt;\n	Product 8&lt;/p&gt;\n', '', 'Product 8', '', '');
-INSERT INTO `mc_product_description` VALUES ('35', '3', '真皮座椅', '&lt;p&gt;\n	Product 8&lt;/p&gt;\n', '', 'Product 8', '', '');
-INSERT INTO `mc_product_description` VALUES ('36', '1', '时尚简约办公小桌', '&lt;div&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Experience a whole new way to browse and view your music and video.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\n&lt;/div&gt;\n', '', '时尚简约办公小桌', '时尚简约办公小桌', '时尚简约办公小桌');
-INSERT INTO `mc_product_description` VALUES ('36', '2', 'iPod Nano', '&lt;div&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Experience a whole new way to browse and view your music and video.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\n&lt;/div&gt;\n', '', 'iPod Nano', '', '');
-INSERT INTO `mc_product_description` VALUES ('36', '3', '時尚簡約辦公小桌', '&lt;div&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Experience a whole new way to browse and view your music and video.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\n&lt;/div&gt;\n', '', 'iPod Nano', '', '');
-INSERT INTO `mc_product_description` VALUES ('40', '1', '躺式沙发', '2015年3月6日，苹果iPhone6 Plus（行货）在&quot;拍易得&quot;现货促销，现在在其网上购买苹果iPhone6 Plus仅需95元即可秒杀。这款手机的配件包括：充电器、耳机和数据线等。苹果iPhone6 Plus是一款配置有光学防抖技术的智能手机。', '', '躺式沙发', '躺式沙发', '躺式沙发');
-INSERT INTO `mc_product_description` VALUES ('40', '2', 'iPhone 6 Plus', 'iPhone is a revolutionary new mobile phone that allows you to make a \ncall by simply tapping a name or number in your address book, a \nfavorites list, or a call log. It also automatically syncs all your \ncontacts from a PC, Mac, or Internet service. And it lets you select and\n listen to voicemail messages in whatever order you want just like \nemail.', '', 'iPhone 6 Plus', '', '');
-INSERT INTO `mc_product_description` VALUES ('40', '3', '躺式沙發', '2015年3月6日，苹果iPhone6 Plus（行货）在&quot;拍易得&quot;现货促销，现在在其网上购买苹果iPhone6 Plus仅需95元即可秒杀。这款手机的配件包括：充电器、耳机和数据线等。苹果iPhone6 Plus是一款配置有光学防抖技术的智能手机。', '', '苹果iPhone 6 Plus', '', '');
-INSERT INTO `mc_product_description` VALUES ('41', '1', '布艺沙发', '&lt;div&gt;\n	Just when you thought iMac had everything, now there&acute;s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife &acute;08, and it&acute;s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\n', '', '布艺沙发', '布艺沙发', '布艺沙发');
-INSERT INTO `mc_product_description` VALUES ('41', '2', 'iMac', '&lt;div&gt;\n	Just when you thought iMac had everything, now there&acute;s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife &acute;08, and it&acute;s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\n', '', 'iMac', '', '');
-INSERT INTO `mc_product_description` VALUES ('41', '3', '布藝沙發', '&lt;div&gt;\n	Just when you thought iMac had everything, now there&acute;s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife &acute;08, and it&acute;s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\n', '', 'iMac', '', '');
-INSERT INTO `mc_product_description` VALUES ('42', '1', '包式座椅', '&lt;p&gt;AMD 785G，一个定位于AMD 780G和AMD \n790GX之间的产品，近期成为所有主板厂商推广的重点，同时也是所有DIY用户关注的焦点。抛开其整合DirectX 10.1规格的Radeon \nHD 4200图形显示核心不提，全新升级的UVD2.0高清解码引擎，让AMD \n785G更适合高清应用。诚然，目前在卖场里攒HTPC专用电脑的人并不多，但随着广大民众生活水平的不断提高，这种个性化应用必将是未来大势所趋，故在\nAMD 785G上设计更多的HTPC应用功能，也成为有实力的主板品牌必须做的一件事。&lt;/p&gt;&lt;p&gt;一向以代工著称的富士康在个性化产品上的设计近年来有了很大的改观，除了推出面向超频玩家的&quot;Quantum Force（量子力量）&quot;系列外，还针对高品质家庭用户推出了Digital Life（数字家庭）系列，其在DIY产品线上的用心程度不言而喻。&lt;br&gt;&lt;/p&gt;', '', '包式座椅', '包式座椅', '包式座椅');
-INSERT INTO `mc_product_description` VALUES ('42', '2', 'Apple Cinema 30&quot;', '&lt;p&gt;\n	&lt;font size=&quot;2&quot; face=&quot;helvetica,geneva,arial&quot;&gt;&lt;font size=&quot;2&quot; face=&quot;Helvetica&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there&#039;s no limit to what you can achieve. &lt;br&gt;\n	&lt;br&gt;\n	&lt;/font&gt;&lt;font size=&quot;2&quot; face=&quot;Helvetica&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it&#039;s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br&gt;\n	&lt;br&gt;\n	&lt;/font&gt;&lt;font size=&quot;2&quot; face=&quot;Helvetica&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple&#039;s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br&gt;\n	&lt;br&gt;\n	&lt;/font&gt;&lt;font size=&quot;2&quot; face=&quot;Helvetica&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br&gt;\n	&lt;br&gt;\n	&lt;/font&gt;&lt;font size=&quot;2&quot; face=&quot;Helvetica&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br&gt;\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\n&lt;h3&gt;\n	Features:&lt;/h3&gt;\n&lt;p&gt;\n	Unrivaled display performance&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\n	&lt;li&gt;\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\n	&lt;li&gt;\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\n	&lt;li&gt;\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\n	&lt;li&gt;\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\n	&lt;li&gt;\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\n	&lt;li&gt;\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	Simple setup and operation&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Single cable with elegant breakout for \nconnection to DVI, USB and FireWire ports&lt;/li&gt;\n	&lt;li&gt;\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\n	&lt;li&gt;\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	Sleek, elegant design&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\n	&lt;li&gt;\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\n	&lt;li&gt;\n		Unique hinge design for effortless adjustment&lt;/li&gt;\n	&lt;li&gt;\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;\n	Technical specifications&lt;/h3&gt;\n&lt;p&gt;\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\n	&lt;li&gt;\n		2048 x 1280&lt;/li&gt;\n	&lt;li&gt;\n		1920 x 1200&lt;/li&gt;\n	&lt;li&gt;\n		1280 x 800&lt;/li&gt;\n	&lt;li&gt;\n		1024 x 640&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		16.7 million&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		170&deg; horizontal; 170&deg; vertical&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		700:1&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		16 ms&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Antiglare hardcoat&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Display Power,&lt;/li&gt;\n	&lt;li&gt;\n		System sleep, wake&lt;/li&gt;\n	&lt;li&gt;\n		Brightness&lt;/li&gt;\n	&lt;li&gt;\n		Monitor tilt&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br&gt;\n	Cable&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		DVI (Digital Visual Interface)&lt;/li&gt;\n	&lt;li&gt;\n		FireWire 400&lt;/li&gt;\n	&lt;li&gt;\n		USB 2.0&lt;/li&gt;\n	&lt;li&gt;\n		DC power (24 V)&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	Connectors&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\n	&lt;li&gt;\n		Two FireWire 400 ports&lt;/li&gt;\n	&lt;li&gt;\n		Kensington security port&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br&gt;\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\n	&lt;li&gt;\n		Maximum power when operating: 150W&lt;/li&gt;\n	&lt;li&gt;\n		Energy saver mode: 3W or less&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Operating temperature: \n50&deg; to 95&deg; F (10&deg; to 35&deg; C)&lt;/li&gt;\n	&lt;li&gt;\n		Storage temperature: -40&deg; to 116&deg; F (-40&deg; to 47&deg; C)&lt;/li&gt;\n	&lt;li&gt;\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\n	&lt;li&gt;\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		FCC Part 15 Class B&lt;/li&gt;\n	&lt;li&gt;\n		EN55022 Class B&lt;/li&gt;\n	&lt;li&gt;\n		EN55024&lt;/li&gt;\n	&lt;li&gt;\n		VCCI Class B&lt;/li&gt;\n	&lt;li&gt;\n		AS/NZS 3548 Class B&lt;/li&gt;\n	&lt;li&gt;\n		CNS 13438 Class B&lt;/li&gt;\n	&lt;li&gt;\n		ICES-003 Class B&lt;/li&gt;\n	&lt;li&gt;\n		ISO 13406 part 2&lt;/li&gt;\n	&lt;li&gt;\n		MPR II&lt;/li&gt;\n	&lt;li&gt;\n		IEC 60950&lt;/li&gt;\n	&lt;li&gt;\n		UL 60950&lt;/li&gt;\n	&lt;li&gt;\n		CSA 60950&lt;/li&gt;\n	&lt;li&gt;\n		EN60950&lt;/li&gt;\n	&lt;li&gt;\n		ENERGY STAR&lt;/li&gt;\n	&lt;li&gt;\n		TCO &#039;03&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br&gt;\n	30-inch Apple Cinema HD Display&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\n	&lt;li&gt;\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\n	&lt;li&gt;\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\n	&lt;li&gt;\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Mac Pro, all graphic options&lt;/li&gt;\n	&lt;li&gt;\n		MacBook Pro&lt;/li&gt;\n	&lt;li&gt;\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\n	&lt;li&gt;\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\n	&lt;li&gt;\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\n	&lt;li&gt;\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\n&lt;/ul&gt;\n', '', 'Apple Cinema 30&quot;', '', '');
-INSERT INTO `mc_product_description` VALUES ('28', '2', 'HTC Touch HD', '&lt;p&gt;\n	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Processor Qualcomm&reg; MSM 7201A&trade; 528 MHz&lt;/li&gt;\n	&lt;li&gt;\n		Windows Mobile&reg; 6.1 Professional Operating System&lt;/li&gt;\n	&lt;li&gt;\n		Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\n	&lt;li&gt;\n		Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\n	&lt;li&gt;\n		3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\n	&lt;li&gt;\n		HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\n	&lt;li&gt;\n		Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\n	&lt;li&gt;\n		Device Control via HTC TouchFLO&trade; 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\n	&lt;li&gt;\n		GPS and A-GPS ready&lt;/li&gt;\n	&lt;li&gt;\n		Bluetooth&reg; 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\n	&lt;li&gt;\n		Wi-Fi&reg;: IEEE 802.11 b/g&lt;/li&gt;\n	&lt;li&gt;\n		HTC ExtUSB&trade; (11-pin mini-USB 2.0)&lt;/li&gt;\n	&lt;li&gt;\n		5 megapixel color camera with auto focus&lt;/li&gt;\n	&lt;li&gt;\n		VGA CMOS color camera&lt;/li&gt;\n	&lt;li&gt;\n		Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\n	&lt;li&gt;\n		Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\n	&lt;li&gt;\n		40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\n	&lt;li&gt;\n		Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\n	&lt;li&gt;\n		Expansion Slot: microSD&trade; memory card (SD 2.0 compatible)&lt;/li&gt;\n	&lt;li&gt;\n		AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\n	&lt;li&gt;\n		Special Features: FM Radio, G-Sensor&lt;/li&gt;\n&lt;/ul&gt;\n', '', 'HTC Touch HD', '', '');
-INSERT INTO `mc_product_description` VALUES ('28', '3', '藝術坐椅', '&lt;p&gt;\n	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Processor Qualcomm&reg; MSM 7201A&trade; 528 MHz&lt;/li&gt;\n	&lt;li&gt;\n		Windows Mobile&reg; 6.1 Professional Operating System&lt;/li&gt;\n	&lt;li&gt;\n		Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\n	&lt;li&gt;\n		Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\n	&lt;li&gt;\n		3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\n	&lt;li&gt;\n		HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\n	&lt;li&gt;\n		Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\n	&lt;li&gt;\n		Device Control via HTC TouchFLO&trade; 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\n	&lt;li&gt;\n		GPS and A-GPS ready&lt;/li&gt;\n	&lt;li&gt;\n		Bluetooth&reg; 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\n	&lt;li&gt;\n		Wi-Fi&reg;: IEEE 802.11 b/g&lt;/li&gt;\n	&lt;li&gt;\n		HTC ExtUSB&trade; (11-pin mini-USB 2.0)&lt;/li&gt;\n	&lt;li&gt;\n		5 megapixel color camera with auto focus&lt;/li&gt;\n	&lt;li&gt;\n		VGA CMOS color camera&lt;/li&gt;\n	&lt;li&gt;\n		Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\n	&lt;li&gt;\n		Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\n	&lt;li&gt;\n		40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\n	&lt;li&gt;\n		Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\n	&lt;li&gt;\n		Expansion Slot: microSD&trade; memory card (SD 2.0 compatible)&lt;/li&gt;\n	&lt;li&gt;\n		AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\n	&lt;li&gt;\n		Special Features: FM Radio, G-Sensor&lt;/li&gt;\n&lt;/ul&gt;\n', '', 'HTC Touch HD', '', '');
-INSERT INTO `mc_product_description` VALUES ('29', '1', '纯香家具', '&lt;p&gt;\n	Redefine your workday with the Palm Treo Pro smartphone. Perfectly balanced, you can respond to business and personal email, stay on top of appointments and contacts, and use Wi-Fi or GPS when you&amp;rsquo;re out and about. Then watch a video on YouTube, catch up with news and sports on the web, or listen to a few songs. Balance your work and play the way you like it, with the Palm Treo Pro.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Windows Mobile&amp;reg; 6.1 Professional Edition&lt;/li&gt;\n	&lt;li&gt;\n		Qualcomm&amp;reg; MSM7201 400MHz Processor&lt;/li&gt;\n	&lt;li&gt;\n		320x320 transflective colour TFT touchscreen&lt;/li&gt;\n	&lt;li&gt;\n		HSDPA/UMTS/EDGE/GPRS/GSM radio&lt;/li&gt;\n	&lt;li&gt;\n		Tri-band UMTS &amp;mdash; 850MHz, 1900MHz, 2100MHz&lt;/li&gt;\n	&lt;li&gt;\n		Quad-band GSM &amp;mdash; 850/900/1800/1900&lt;/li&gt;\n	&lt;li&gt;\n		802.11b/g with WPA, WPA2, and 801.1x authentication&lt;/li&gt;\n	&lt;li&gt;\n		Built-in GPS&lt;/li&gt;\n	&lt;li&gt;\n		Bluetooth Version: 2.0 + Enhanced Data Rate&lt;/li&gt;\n	&lt;li&gt;\n		256MB storage (100MB user available), 128MB RAM&lt;/li&gt;\n	&lt;li&gt;\n		2.0 megapixel camera, up to 8x digital zoom and video capture&lt;/li&gt;\n	&lt;li&gt;\n		Removable, rechargeable 1500mAh lithium-ion battery&lt;/li&gt;\n	&lt;li&gt;\n		Up to 5.0 hours talk time and up to 250 hours standby&lt;/li&gt;\n	&lt;li&gt;\n		MicroSDHC card expansion (up to 32GB supported)&lt;/li&gt;\n	&lt;li&gt;\n		MicroUSB 2.0 for synchronization and charging&lt;/li&gt;\n	&lt;li&gt;\n		3.5mm stereo headset jack&lt;/li&gt;\n	&lt;li&gt;\n		60mm (W) x 114mm (L) x 13.5mm (D) / 133g&lt;/li&gt;\n&lt;/ul&gt;\n', '', '纯香家具', '纯香家具', '纯香家具');
-INSERT INTO `mc_product_description` VALUES ('29', '2', 'Palm Treo Pro', '&lt;p&gt;\n	Redefine your workday with the Palm Treo Pro smartphone. Perfectly balanced, you can respond to business and personal email, stay on top of appointments and contacts, and use Wi-Fi or GPS when you&amp;rsquo;re out and about. Then watch a video on YouTube, catch up with news and sports on the web, or listen to a few songs. Balance your work and play the way you like it, with the Palm Treo Pro.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Windows Mobile&amp;reg; 6.1 Professional Edition&lt;/li&gt;\n	&lt;li&gt;\n		Qualcomm&amp;reg; MSM7201 400MHz Processor&lt;/li&gt;\n	&lt;li&gt;\n		320x320 transflective colour TFT touchscreen&lt;/li&gt;\n	&lt;li&gt;\n		HSDPA/UMTS/EDGE/GPRS/GSM radio&lt;/li&gt;\n	&lt;li&gt;\n		Tri-band UMTS &amp;mdash; 850MHz, 1900MHz, 2100MHz&lt;/li&gt;\n	&lt;li&gt;\n		Quad-band GSM &amp;mdash; 850/900/1800/1900&lt;/li&gt;\n	&lt;li&gt;\n		802.11b/g with WPA, WPA2, and 801.1x authentication&lt;/li&gt;\n	&lt;li&gt;\n		Built-in GPS&lt;/li&gt;\n	&lt;li&gt;\n		Bluetooth Version: 2.0 + Enhanced Data Rate&lt;/li&gt;\n	&lt;li&gt;\n		256MB storage (100MB user available), 128MB RAM&lt;/li&gt;\n	&lt;li&gt;\n		2.0 megapixel camera, up to 8x digital zoom and video capture&lt;/li&gt;\n	&lt;li&gt;\n		Removable, rechargeable 1500mAh lithium-ion battery&lt;/li&gt;\n	&lt;li&gt;\n		Up to 5.0 hours talk time and up to 250 hours standby&lt;/li&gt;\n	&lt;li&gt;\n		MicroSDHC card expansion (up to 32GB supported)&lt;/li&gt;\n	&lt;li&gt;\n		MicroUSB 2.0 for synchronization and charging&lt;/li&gt;\n	&lt;li&gt;\n		3.5mm stereo headset jack&lt;/li&gt;\n	&lt;li&gt;\n		60mm (W) x 114mm (L) x 13.5mm (D) / 133g&lt;/li&gt;\n&lt;/ul&gt;\n', '', 'Palm Treo Pro', '', '');
-INSERT INTO `mc_product_description` VALUES ('29', '3', '純香家具', '&lt;p&gt;\n	Redefine your workday with the Palm Treo Pro smartphone. Perfectly balanced, you can respond to business and personal email, stay on top of appointments and contacts, and use Wi-Fi or GPS when you&amp;rsquo;re out and about. Then watch a video on YouTube, catch up with news and sports on the web, or listen to a few songs. Balance your work and play the way you like it, with the Palm Treo Pro.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Windows Mobile&amp;reg; 6.1 Professional Edition&lt;/li&gt;\n	&lt;li&gt;\n		Qualcomm&amp;reg; MSM7201 400MHz Processor&lt;/li&gt;\n	&lt;li&gt;\n		320x320 transflective colour TFT touchscreen&lt;/li&gt;\n	&lt;li&gt;\n		HSDPA/UMTS/EDGE/GPRS/GSM radio&lt;/li&gt;\n	&lt;li&gt;\n		Tri-band UMTS &amp;mdash; 850MHz, 1900MHz, 2100MHz&lt;/li&gt;\n	&lt;li&gt;\n		Quad-band GSM &amp;mdash; 850/900/1800/1900&lt;/li&gt;\n	&lt;li&gt;\n		802.11b/g with WPA, WPA2, and 801.1x authentication&lt;/li&gt;\n	&lt;li&gt;\n		Built-in GPS&lt;/li&gt;\n	&lt;li&gt;\n		Bluetooth Version: 2.0 + Enhanced Data Rate&lt;/li&gt;\n	&lt;li&gt;\n		256MB storage (100MB user available), 128MB RAM&lt;/li&gt;\n	&lt;li&gt;\n		2.0 megapixel camera, up to 8x digital zoom and video capture&lt;/li&gt;\n	&lt;li&gt;\n		Removable, rechargeable 1500mAh lithium-ion battery&lt;/li&gt;\n	&lt;li&gt;\n		Up to 5.0 hours talk time and up to 250 hours standby&lt;/li&gt;\n	&lt;li&gt;\n		MicroSDHC card expansion (up to 32GB supported)&lt;/li&gt;\n	&lt;li&gt;\n		MicroUSB 2.0 for synchronization and charging&lt;/li&gt;\n	&lt;li&gt;\n		3.5mm stereo headset jack&lt;/li&gt;\n	&lt;li&gt;\n		60mm (W) x 114mm (L) x 13.5mm (D) / 133g&lt;/li&gt;\n&lt;/ul&gt;\n', '', 'Palm Treo Pro', '', '');
-INSERT INTO `mc_product_description` VALUES ('30', '1', '简约座椅', '&lt;p&gt;佳能EOS-5D终于揭开了其神秘的面纱，相信大家都对佳能EOS-5D的性能感到满意，但是佳能EOS-5D拍出来的片子如何呢？为此，我们特地从佳能网站上找到几张原尺寸的佳能EOS-5D实拍样张。&lt;/p&gt;', '', '简约座椅', '简约座椅', '简约座椅');
-INSERT INTO `mc_product_description` VALUES ('30', '2', 'Canon EOS 5D', '&lt;p&gt;\n	Canon&#039;s press material for the EOS 5D states that it &#039;defines (a) new D-SLR category&#039;, while we&#039;re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably &#039;chunkier&#039;). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR&#039;s, an important difference when compared to the latter is that the EOS 5D doesn&#039;t have any environmental seals. While Canon don&#039;t specifically refer to the EOS 5D as a &#039;professional&#039; digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they&#039;ve not bought too many EF-S lenses...) &auml;&euml;&lt;/p&gt;\n', '', 'Canon EOS 5D', '', '');
-INSERT INTO `mc_product_description` VALUES ('30', '3', '簡約座椅', '&lt;p&gt;佳能EOS-5D终于揭开了其神秘的面纱，相信大家都对佳能EOS-5D的性能感到满意，但是佳能EOS-5D拍出来的片子如何呢？为此，我们特地从佳能网站上找到几张原尺寸的佳能EOS-5D实拍样张。&lt;/p&gt;', '', '佳能EOS-5D', '', '');
-INSERT INTO `mc_product_description` VALUES ('31', '1', '简约小桌', '&lt;div class=&quot;cpt_product_description &quot;&gt;\n	&lt;div&gt;\n		Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&amp;#39;s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\n		&lt;br /&gt;\n		Similar to the D3, the D300 features Nikon&amp;#39;s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera&amp;#39;s new features. The D300 features a new 51-point autofocus system with Nikon&amp;#39;s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera&amp;#39;s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\n		&lt;br /&gt;\n		The D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\n		&lt;br /&gt;\n		The D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon&amp;#39;s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- cpt_container_end --&gt;', '', '简约小桌', '简约小桌', '简约小桌');
-INSERT INTO `mc_product_description` VALUES ('31', '2', 'Nikon D300', '&lt;div class=&quot;cpt_product_description &quot;&gt;\n	&lt;div&gt;\n		Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&amp;#39;s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\n		&lt;br /&gt;\n		Similar to the D3, the D300 features Nikon&amp;#39;s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera&amp;#39;s new features. The D300 features a new 51-point autofocus system with Nikon&amp;#39;s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera&amp;#39;s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\n		&lt;br /&gt;\n		The D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\n		&lt;br /&gt;\n		The D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon&amp;#39;s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- cpt_container_end --&gt;', '', 'Nikon D300', '', '');
-INSERT INTO `mc_product_description` VALUES ('31', '3', '簡約小桌', '&lt;div class=&quot;cpt_product_description &quot;&gt;\n	&lt;div&gt;\n		Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&amp;#39;s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\n		&lt;br /&gt;\n		Similar to the D3, the D300 features Nikon&amp;#39;s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera&amp;#39;s new features. The D300 features a new 51-point autofocus system with Nikon&amp;#39;s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera&amp;#39;s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\n		&lt;br /&gt;\n		The D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\n		&lt;br /&gt;\n		The D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon&amp;#39;s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- cpt_container_end --&gt;', '', 'Nikon D300', '', '');
-INSERT INTO `mc_product_description` VALUES ('32', '1', '立式书架', '&lt;p&gt;\n	&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br&gt;\n	iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br&gt;\n	Watch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br&gt;\n	Shop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br&gt;\n	Browse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br&gt;\n	&amp;nbsp;&lt;/p&gt;\n', '', '立式书架', '立式书架', '立式书架');
-INSERT INTO `mc_product_description` VALUES ('32', '2', 'iPod Touch', '&lt;p&gt;\n	&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br&gt;\n	iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br&gt;\n	Watch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br&gt;\n	Shop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br&gt;\n	Browse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br&gt;\n	&amp;nbsp;&lt;/p&gt;\n', '', 'iPod Touch', '', '');
-INSERT INTO `mc_product_description` VALUES ('32', '3', '立式書架', '&lt;p&gt;\n	&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br&gt;\n	iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br&gt;\n	Watch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br&gt;\n	Shop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br&gt;\n	Browse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br&gt;\n	&amp;nbsp;&lt;/p&gt;\n', '', 'iPod Touch', '', '');
-INSERT INTO `mc_product_description` VALUES ('33', '1', '古色展厨', '是一款19英寸，拥有16:10黄金屏幕比例的产品。这款产品在外观上采用了黑色烤漆工艺，底边框位置我们看到了其印有品牌LOGO，非常精致。而我们在其它边框位置看到了产品信息，方便了用户购买时挑选。\n', '', '古色展厨', '古色展厨', '古色展厨');
-INSERT INTO `mc_product_description` VALUES ('33', '2', 'Samsung SyncMaster 941BW', '&lt;div&gt;\n	Imagine the advantages of going big without slowing down. The big 19&quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver the ideal image in every situation, while sleek, narrow bezels and adjustable stands deliver style just the way you want it. With the Samsung 941BW widescreen analog/digital LCD monitor, it&#039;s not hard to imagine.&lt;/div&gt;\n', '', 'Samsung SyncMaster 941BW', '', '');
-INSERT INTO `mc_product_description` VALUES ('33', '3', '古色展廚', '是一款19英寸，拥有16:10黄金屏幕比例的产品。这款产品在外观上采用了黑色烤漆工艺，底边框位置我们看到了其印有品牌LOGO，非常精致。而我们在其它边框位置看到了产品信息，方便了用户购买时挑选。\n', '', '三星 941BW', '', '');
-INSERT INTO `mc_product_description` VALUES ('34', '1', '线条式展架', '&lt;div&gt;\n	&lt;strong&gt;Born to be worn.&lt;/strong&gt;\n	&lt;p&gt;\n		Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\n	&lt;p&gt;\n		&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\n	&lt;p&gt;\n		With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\n	&lt;strong&gt;Everything is easy.&lt;/strong&gt;\n	&lt;p&gt;\n		Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\n&lt;/div&gt;\n', '', '线条式展架', '线条式展架', '线条式展架');
-INSERT INTO `mc_product_description` VALUES ('28', '1', '艺术坐椅', '&lt;p&gt;\n	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\n&lt;p&gt;\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\n&lt;ul&gt;\n	&lt;li&gt;\n		Processor Qualcomm&reg; MSM 7201A&trade; 528 MHz&lt;/li&gt;\n	&lt;li&gt;\n		Windows Mobile&reg; 6.1 Professional Operating System&lt;/li&gt;\n	&lt;li&gt;\n		Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\n	&lt;li&gt;\n		Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\n	&lt;li&gt;\n		3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\n	&lt;li&gt;\n		HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\n	&lt;li&gt;\n		Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\n	&lt;li&gt;\n		Device Control via HTC TouchFLO&trade; 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\n	&lt;li&gt;\n		GPS and A-GPS ready&lt;/li&gt;\n	&lt;li&gt;\n		Bluetooth&reg; 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\n	&lt;li&gt;\n		Wi-Fi&reg;: IEEE 802.11 b/g&lt;/li&gt;\n	&lt;li&gt;\n		HTC ExtUSB&trade; (11-pin mini-USB 2.0)&lt;/li&gt;\n	&lt;li&gt;\n		5 megapixel color camera with auto focus&lt;/li&gt;\n	&lt;li&gt;\n		VGA CMOS color camera&lt;/li&gt;\n	&lt;li&gt;\n		Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\n	&lt;li&gt;\n		Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\n	&lt;li&gt;\n		40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\n	&lt;li&gt;\n		Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\n	&lt;li&gt;\n		Expansion Slot: microSD&trade; memory card (SD 2.0 compatible)&lt;/li&gt;\n	&lt;li&gt;\n		AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\n	&lt;li&gt;\n		Special Features: FM Radio, G-Sensor&lt;/li&gt;\n&lt;/ul&gt;\n', '', '艺术坐椅', '艺术坐椅', '艺术坐椅');
-INSERT INTO `mc_product_description` VALUES ('49', '3', '緣木立櫃', '&lt;p&gt;\n	Samsung Galaxy Tab 10.1, is the world&rsquo;s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\n&lt;p&gt;\n	Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 &ndash; includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick &ndash; a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\n&lt;p&gt;\n	Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader&rsquo;s Hub, Music Hub and Samsung Mini Apps Tray &ndash; which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;&auml;&ouml;&lt;/p&gt;\n', '', 'Samsung Galaxy Tab 10.1', '', '');
-INSERT INTO `mc_product_description` VALUES ('48', '1', '莲式木几', '&lt;div class=&quot;cpt_product_description &quot;&gt;\n	&lt;div&gt;\n		&lt;p&gt;\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\n	&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- cpt_container_end --&gt;', '', '莲式木几', '莲式木几', '莲式木几');
-INSERT INTO `mc_product_description` VALUES ('48', '2', 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\n	&lt;div&gt;\n		&lt;p&gt;\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\n	&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', '');
-INSERT INTO `mc_product_description` VALUES ('48', '3', '蓮式木幾', '&lt;div class=&quot;cpt_product_description &quot;&gt;\n	&lt;div&gt;\n		&lt;p&gt;\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\n	&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', '');
-INSERT INTO `mc_product_description` VALUES ('49', '1', '缘木立柜', '&lt;p&gt;\n	Samsung Galaxy Tab 10.1, is the world&rsquo;s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\n&lt;p&gt;\n	Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 &ndash; includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick &ndash; a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\n&lt;p&gt;\n	Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader&rsquo;s Hub, Music Hub and Samsung Mini Apps Tray &ndash; which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;&auml;&ouml;&lt;/p&gt;\n', '', '缘木立柜', '缘木立柜', '缘木立柜');
-INSERT INTO `mc_product_description` VALUES ('44', '1', '田方格书架', '&lt;div&gt;\n	MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don&amp;rsquo;t lose inches and pounds overnight. It&amp;rsquo;s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\n', '', '田方格书架', '田方格书架', '田方格书架');
-INSERT INTO `mc_product_description` VALUES ('44', '2', 'MacBook Air', '&lt;div&gt;\n	MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don&amp;rsquo;t lose inches and pounds overnight. It&amp;rsquo;s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\n', '', 'MacBook Air', '', '');
-INSERT INTO `mc_product_description` VALUES ('44', '3', '田方格書架', '&lt;div&gt;\n	MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don&amp;rsquo;t lose inches and pounds overnight. It&amp;rsquo;s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\n', '', 'MacBook Air', '', '');
-INSERT INTO `mc_product_description` VALUES ('45', '1', '时尚储物柜', '&lt;div class=&quot;cpt_product_description &quot;&gt;\n	&lt;div&gt;\n		&lt;p&gt;\n			&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\n	&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- cpt_container_end --&gt;', '', '时尚储物柜', '时尚储物柜', '时尚储物柜');
-INSERT INTO `mc_product_description` VALUES ('45', '2', 'MacBook Pro', '&lt;div class=&quot;cpt_product_description &quot;&gt;\n	&lt;div&gt;\n		&lt;p&gt;\n			&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\n	&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- cpt_container_end --&gt;', '', 'MacBook Pro', '', '');
-INSERT INTO `mc_product_description` VALUES ('49', '2', 'Samsung Galaxy Tab 10.1', '&lt;p&gt;\n	Samsung Galaxy Tab 10.1, is the world&rsquo;s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\n&lt;p&gt;\n	Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 &ndash; includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick &ndash; a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\n&lt;p&gt;\n	Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader&rsquo;s Hub, Music Hub and Samsung Mini Apps Tray &ndash; which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;&auml;&ouml;&lt;/p&gt;\n', '', 'Samsung Galaxy Tab 10.1', '', '');
+INSERT INTO `mc_product_description` VALUES ('90', '1', '三星 Galaxy S8', '三星 Galaxy S8  G9500 4G 64G 全网通 烟晶灰 ', '', '三星 Galaxy S8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('91', '1', '三星 Galaxy S8', '三星 Galaxy S8 G9500 4G 64G 全网通 谜夜黑 ', '', '三星 Galaxy S8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('92', '1', '三星 Galaxy S8+', '三星 Galaxy S8+ (G9550) 4G 64G 全网通 芭比粉 ', '', '三星 Galaxy S8+', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('93', '1', '三星 Galaxy S8+', '三星 Galaxy S8+ (G9550) 4G 64G 全网通 谜夜黑 ', '', '三星 Galaxy S8+', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('95', '1', '三星 Galaxy C9', '三星 Galaxy C9 Pro 6G 64G 全网通 粉色 ', '', '三星 Galaxy C9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('96', '1', '三星 W2016', '三星 W2016 电信4G 金色 ', '', '三星 W2016', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('97', '1', '三星 W2016', '三星 W2016 电信4G 银色 ', '', '三星 W2016', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('98', '1', '小米 MIX 2S', '小米 MIX 2S 6G 128G 全网通 白色 ', '', '小米 MIX 2S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('99', '1', '三星 W2017', '三星 W2017 电信4G 黑色 ', '', '三星 W2017', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('100', '1', '小米 MIX 2S', '小米 MIX 2S 6G 128G 全网通 黑色 ', '', '小米 MIX 2S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('101', '1', '三星 W2017', '三星 W2017 电信4G 金色 ', '', '三星 W2017', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('103', '1', '小米 MIX 2S', '小米 MIX 2S 8G 256G 全网通 白色 ', '', '小米 MIX 2S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('104', '1', '三星 A6S', '三星 A6S(sm-G6200) 全网通 6G 128G 花木蓝 ', '', '三星 A6S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('106', '1', '小米 MIX 2S', '小米 MIX 2S 8G 256G 全网通 黑色 ', '', '小米 MIX 2S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('107', '1', '三星 A6S', '三星 A6S(sm-G6200) 全网通 6G 128G 撒浪黑 ', '', '三星 A6S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('109', '1', '小米 小米Note 3', '小米 小米Note 3 4G 64G 全网通 亮蓝色 ', '', '小米 小米Note 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('110', '1', '三星 A6S', '三星 A6S(sm-G6200) 全网通 6G 64G 花木蓝 ', '', '三星 A6S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('113', '1', '小米 小米Max 2', '小米 小米Max 2 4G 128G 全网通 金色 ', '', '小米 小米Max 2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('114', '1', '三星 A6S', '三星 A6S(sm-G6200) 全网通 6G 64G 撒浪黑 ', '', '三星 A6S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('117', '1', '小米 红米5', '小米 红米5 4G 32G 全网通 黑色 ', '', '小米 红米5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('118', '1', '三星 A9S', '三星 A9S（sm-A9200） 全网通 6G 128G 柠沁蓝 ', '', '三星 A9S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('120', '1', '小米 红米5 Plus', '小米 红米5 Plus 3G 32G 全网通  玫瑰金 ', '', '小米 红米5 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('121', '1', '三星 A9S', '三星 A9S（sm-A9200） 全网通 6G 128G 泡泡粉 ', '', '三星 A9S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('122', '1', '三星 A9S', '三星 A9S（sm-A9200） 全网通 6G 128G 鱼子黑 ', '', '三星 A9S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('126', '1', '小米 红米5 Plus', '小米 红米5 Plus 3G 32G 全网通 金色 ', '', '小米 红米5 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('127', '1', '三星 C8', '三星 C8 C7100 3G 32G 全网通 墨玉黑 ', '', '三星 C8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('130', '1', '小米 红米5 Plus', '小米 红米5 Plus 4G 64G 全网通  玫瑰金 ', '', '小米 红米5 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('131', '1', '三星 C8', '三星 C8 C7100 4G 64G 全网通 墨玉黑 ', '', '三星 C8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('133', '1', '小米 红米5 Plus', '小米 红米5 Plus 4G 64G 全网通 黑色 ', '', '小米 红米5 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('134', '1', '三星 Galaxy A9', '三星 Galaxy A9 Star 4G 64G 公开版全网通 极夜黑 ', '', '三星 Galaxy A9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('139', '1', '小米 红米5 Plus', '小米 红米5 Plus 4G 64G 全网通 金色 ', '', '小米 红米5 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('140', '1', '三星 Galaxy A9', '三星 Galaxy A9 Star 4G 64G 公开版全网通 极昼白 ', '', '三星 Galaxy A9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('147', '1', '小米 红米5 Plus', '小米 红米5 Plus 4G 64G 全网通 浅蓝色 ', '', '小米 红米5 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('148', '1', '三星 Galaxy A9', '三星 Galaxy A9 Star Lite 4G 64G 公开版全网通 深海蓝 ', '', '三星 Galaxy A9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('152', '1', '苹果 iPhone 8 Plus', '苹果 iPhone 8 Plus 64G 全网通 红色特别版 ', '', '苹果 iPhone 8 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('153', '1', '小米 黑鲨', '小米 黑鲨 6G 64G 极夜黑 ', '', '小米 黑鲨', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('154', '1', '三星 Galaxy A9', '三星 Galaxy A9 Star Lite 4G 64G 公开版全网通 夜空黑 ', '', '三星 Galaxy A9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('158', '1', '苹果 iPhone 7', '苹果 iPhone 7 128G 全网通 金色 ', '', '苹果 iPhone 7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('159', '1', '小米 黑鲨', '小米 黑鲨 6G 64G 套装版（含手柄） 极夜黑 ', '', '小米 黑鲨', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('161', '1', '三星 GALAXY Note8', '三星 GALAXY Note 8 6G 128G 全网通 粉色 ', '', '三星 GALAXY Note8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('162', '1', '三星 GALAXY Note8', '三星 GALAXY Note 8 6G 128G 全网通 旷野灰 ', '', '三星 GALAXY Note8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('164', '1', '华为 荣耀V10', '华为 荣耀V10 6G 64G 全网通高配版 极光蓝 ', '', '华为 荣耀V10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('167', '1', '苹果 iPhone 8', '苹果 iPhone 8 64G 全网通 银色 ', '', '苹果 iPhone 8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('168', '1', '小米 黑鲨', '小米 黑鲨 8G 128G 苍穹灰 ', '', '小米 黑鲨', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('169', '1', '三星 GALAXY Note8', '三星 GALAXY Note 8 6G 128G 全网通 谜夜黑 ', '', '三星 GALAXY Note8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('174', '1', '华为 P20', '华为 P20 6G 128G 全网通 极光色 ', '', '华为 P20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('178', '1', '小米 黑鲨', '小米 黑鲨 8G 128G 极夜黑 ', '', '小米 黑鲨', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('179', '1', '三星 GALAXY Note8', '三星 GALAXY Note 8 6G 128G 全网通 星河蓝 ', '', '三星 GALAXY Note8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('183', '1', '华为 P20', '华为 P20 6G 128G 全网通 极光闪蝶 ', '', '华为 P20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('186', '1', '小米 黑鲨', '小米 黑鲨 8G 128G 套装版（含手柄） 苍穹灰 ', '', '小米 黑鲨', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('187', '1', '三星 GALAXY Note8', '三星 GALAXY Note 8 6G 64G 全网通 旷野灰 ', '', '三星 GALAXY Note8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('193', '1', '华为 P20', '华为 P20 6G 128G 全网通 亮黑色 ', '', '华为 P20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('195', '1', '苹果 iPhone 8 Plus', '苹果 iPhone 8 Plus 256G 全网通 金色 ', '', '苹果 iPhone 8 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('196', '1', '小米 黑鲨', '小米 黑鲨 8G 128G 套装版（含手柄） 极夜黑 ', '', '小米 黑鲨', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('197', '1', '三星 GALAXY Note8', '三星 GALAXY Note 8 6G 64G 全网通 星河蓝 ', '', '三星 GALAXY Note8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('200', '1', '华为 P20', '华为 P20 6G 128G 全网通 珠光贝母 ', '', '华为 P20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('202', '1', '苹果 iPhone 8 Plus', '苹果 iPhone 8 Plus 256G 全网通 深空灰色 ', '', '苹果 iPhone 8 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('203', '1', '小米 黑鲨', '小米 黑鲨 8G 256G 极夜黑 ', '', '小米 黑鲨', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('204', '1', '三星 Galaxy Note9', '三星 Galaxy Note9 6G 128G 全网通 寒霜蓝 ', '', '三星 Galaxy Note9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('207', '1', '华为 P20', '华为 P20 6G 64G 全网通 极光色 ', '', '华为 P20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('209', '1', '苹果 iPhone 8 Plus', '苹果 iPhone 8 Plus 256G 全网通 银色 ', '', '苹果 iPhone 8 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('210', '1', '小米 黑鲨', '小米 黑鲨 8G 256G 套装版（含手柄） 极夜黑', '', '小米 黑鲨', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('211', '1', '三星 Galaxy Note9', '三星 Galaxy Note9 6G 128G 全网通 玄镜铜 ', '', '三星 Galaxy Note9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('216', '1', '华为 P20', '华为 P20 6G 64G 全网通 极光闪蝶 ', '', '华为 P20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('218', '1', '苹果 iPhone 8 Plus', '苹果 iPhone 8 Plus 64G 全网通 金色 ', '', '苹果 iPhone 8 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('219', '1', '小米 黑鲨', '小米 黑鲨游戏手机Helo 6G 128G 全网通 极夜黑 ', '', '小米 黑鲨', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('220', '1', '三星 Galaxy S轻奢版', '三星 Galaxy S轻奢版 4G 64G 全网通 勃艮第红 ', '', '三星 Galaxy S轻奢版', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('227', '1', '华为 P20', '华为 P20 6G 64G 全网通 亮黑色 ', '', '华为 P20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('229', '1', '苹果 iPhone 8 Plus', '苹果 iPhone 8 Plus 64G 全网通 深空灰色 ', '', '苹果 iPhone 8 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('230', '1', '小米 黑鲨', '小米 黑鲨游戏手机Helo 8G 128G 全网通 极夜黑 ', '', '小米 黑鲨', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('231', '1', '三星 Galaxy S轻奢版', '三星 Galaxy S轻奢版 4G 64G 全网通 谜夜黑 ', '', '三星 Galaxy S轻奢版', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('233', '1', '美图 M8', '美图 M8 4G 64G 全网通 月光白 ', '', '美图 M8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('235', '1', '华为 P20', '华为 P20 6G 64G 全网通 香槟金 ', '', '华为 P20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('237', '1', '苹果 iPhone 8 Plus', '苹果 iPhone 8 Plus 64G 全网通 银色 ', '', '苹果 iPhone 8 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('238', '1', '小米 红米 Note5', '小米 红米 Note5 3G 32G 全网通  玫瑰金 ', '', '小米 红米 Note5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('239', '1', '三星 S9', '三星 S9 （SM-G9600）4G 128G 全网通 莱茵蓝 ', '', '三星 S9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('241', '1', '美图 M6', '美图 M6 hello Kitty特别版 白色 ', '', '美图 M6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('245', '1', '华为 P20', '华为 P20 6G 64G 全网通 珠光贝母 ', '', '华为 P20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('246', '1', '苹果 iPhone 8 Plus', '苹果 iPhone 8 Plus 64G 移动联通双4G 金色 ', '', '苹果 iPhone 8 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('247', '1', '小米 红米 Note5', '小米 红米 Note5 3G 32G 全网通 魔力蓝 ', '', '小米 红米 Note5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('248', '1', '三星 S9', '三星 S9 （SM-G9600）4G 128G 全网通 谜夜黑 ', '', '三星 S9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('252', '1', '美图 M8s', '美图 M8s 4G 128G 全网通 Hello Kitty限量版 ', '', '美图 M8s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('258', '1', '华为 P20 Pro', '华为 P20 Pro 6G 128G 全网通 宝石蓝 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('259', '1', '苹果 iPhone 8 Plus', '苹果 iPhone 8 Plus 64G 移动联通双4G 深空灰色 ', '', '苹果 iPhone 8 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('260', '1', '小米 红米 Note5', '小米 红米 Note5 4G 64G 全网通  玫瑰金 ', '', '小米 红米 Note5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('261', '1', '三星 S9', '三星 S9 （SM-G9600）4G 128G 全网通 夕雾紫 ', '', '三星 S9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('264', '1', '诺基亚 Nokia 6', '诺基亚 Nokia 6 全网通 4G 32G 黑色 ', '', '诺基亚 Nokia 6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('266', '1', '美图 M8s', '美图 M8s 4G 128G 全网通 美少女战士限量版 ', '', '美图 M8s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('271', '1', '华为 P20 Pro', '华为 P20 Pro 6G 128G 全网通 极光色 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('272', '1', '苹果 iPhone 8 Plus', '苹果 iPhone 8 Plus 64G 移动联通双4G 银色 ', '', '苹果 iPhone 8 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('273', '1', '苹果 iPhone 7', '苹果 iPhone 7 128G 全网通  玫瑰金 ', '', '苹果 iPhone 7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('274', '1', '小米 红米 Note5', '小米 红米 Note5 4G 64G 全网通 黑色 ', '', '小米 红米 Note5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('275', '1', '三星 S9', '三星 S9 （SM-G9600）4G 64G 全网通 谜夜黑 ', '', '三星 S9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('280', '1', '诺基亚 7 Plus', '诺基亚 7 Plus 4G 64G 全网通 黑色 ', '', '诺基亚 7 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('282', '1', '美图 M8s', '美图 M8s 4G 64G 全网通 芭比粉 ', '', '美图 M8s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('286', '1', '华为 P20 Pro', '华为 P20 Pro 6G 128G 全网通 极光闪蝶 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('287', '1', '苹果 iPhone 7', '苹果 iPhone 7 128G 全网通 黑色 ', '', '苹果 iPhone 7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('288', '1', '小米 红米 Note5', '小米 红米 Note5 4G 64G 全网通 金色 ', '', '小米 红米 Note5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('289', '1', '三星 S9', '三星 S9 （SM-G9608）4G 64G 移动版全网通 谜夜黑 ', '', '三星 S9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('294', '1', '诺基亚 X5', '诺基亚 X5 3G 32G 全网通 黑色 ', '', '诺基亚 X5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('296', '1', '美图 M8s', '美图 M8s 4G 64G 全网通 宝贝蓝 ', '', '美图 M8s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('301', '1', '华为 P20 Pro', '华为 P20 Pro 6G 128G 全网通 亮黑色 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('302', '1', '苹果 iPhone 7', '苹果 iPhone 7 Plus 全网通 128G  玫瑰金 ', '', '苹果 iPhone 7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('303', '1', '小米 红米 Note5', '小米 红米 Note5 4G 64G 全网通 魔力蓝 ', '', '小米 红米 Note5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('304', '1', '三星 S9', '三星 S9 （SM-G9608）4G 64G 移动版全网通 夕雾紫 ', '', '三星 S9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('311', '1', '诺基亚 X5', '诺基亚 X5 4G 64G 全网通 黑色 ', '', '诺基亚 X5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('313', '1', '美图 T8', '美图 T8 4G 128G 全网通 极光绿 ', '', '美图 T8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('317', '1', '华为 P20 Pro', '华为 P20 Pro 6G 128G 全网通 樱粉金 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('318', '1', '苹果 iPhone 7', '苹果 iPhone 7 Plus 全网通 128G 黑色 ', '', '苹果 iPhone 7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('319', '1', '小米 红米 Note5', '小米 红米 Note5 6G 64G 全网通  玫瑰金 ', '', '小米 红米 Note5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('320', '1', '三星 S9+', '三星 S9+ 6G 128G 全网通 莱茵蓝 ', '', '三星 S9+', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('326', '1', '诺基亚 X6', '诺基亚 X6 4G 64G 全网通 白色 ', '', '诺基亚 X6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('327', '1', '诺基亚 X6', '诺基亚 X6 4G 64G 全网通 黑色 ', '', '诺基亚 X6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('329', '1', '美图 T8s', '美图 T8s 4G 128G 全网通 冰川蓝 ', '', '美图 T8s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('333', '1', '华为 P20 Pro', '华为 P20 Pro 6G 128G 全网通 珠光贝母 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('334', '1', '苹果 iPhone 7', '苹果 iPhone 7 Plus 全网通 128G 金色 ', '', '苹果 iPhone 7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('335', '1', '小米 红米6', '小米 红米6 3G 32G 全网通 巴厘蓝 ', '', '小米 红米6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('343', '1', '诺基亚 X6', '诺基亚 X6 6G 64G 全网通 白色 ', '', '诺基亚 X6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('344', '1', '诺基亚 X6', '诺基亚 X6 6G 64G 全网通 黑色 ', '', '诺基亚 X6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('345', '1', '美图 T8s', '美图 T8s 4G 128G 全网通 莫奈粉 ', '', '美图 T8s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('349', '1', '华为 P20 Pro', '华为 P20 Pro 6G 256G 全网通 宝石蓝 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('350', '1', '苹果 iPhone 7', '苹果 iPhone 7 Plus 全网通 32G  玫瑰金 ', '', '苹果 iPhone 7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('351', '1', '小米 红米6', '小米 红米6 3G 32G 全网通 铂银灰 ', '', '小米 红米6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('352', '1', '魅族 魅蓝 S6', '魅族 魅蓝 S6 3G 32G 全网通公开版 月光银 ', '', '魅族 魅蓝 S6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('359', '1', '诺基亚 X6', '诺基亚 X6 6G 64G 全网通 蓝色 ', '', '诺基亚 X6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('360', '1', '美图 T9', '美图 T9 4G 128G 全网通 摩卡少女樱 ', '', '美图 T9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('361', '1', '美图 T9', '美图 T9 4G 64G 全网通 浆果红 ', '', '美图 T9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('365', '1', '华为 P20 Pro', '华为 P20 Pro 6G 256G 全网通 极光色 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('366', '1', '苹果 iPhone 7', '苹果 iPhone 7 Plus 全网通 32G 黑色 ', '', '苹果 iPhone 7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('367', '1', '小米 红米6', '小米 红米6 3G 32G 全网通 流沙金 ', '', '小米 红米6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('368', '1', '魅族 魅蓝 S6', '魅族 魅蓝 S6 3G 64G 全网通公开版 香槟金 ', '', '魅族 魅蓝 S6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('376', '1', '美图 T9', '美图 T9 4G 64G 全网通 仙踪绿 ', '', '美图 T9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('378', '1', '华为 P20 Pro', '华为 P20 Pro 6G 64G 全网通 宝石蓝 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('379', '1', '苹果 iPhone 7', '苹果 iPhone 7 Plus 全网通 32G 金色 ', '', '苹果 iPhone 7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('380', '1', '小米 红米6', '小米 红米6 3G 32G 全网通 樱花粉 ', '', '小米 红米6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('387', '1', '美图 T9', '美图 T9 4G 64G 全网通 星云粉 ', '', '美图 T9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('389', '1', '华为 P20 Pro', '华为 P20 Pro 6G 64G 全网通 极光色 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('390', '1', '苹果 iPhone 7', '苹果 iPhone 7 Plus 全网通 32G 银色 ', '', '苹果 iPhone 7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('391', '1', '小米 红米6', '小米 红米6 4G 64G 全网通 巴厘蓝 ', '', '小米 红米6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('392', '1', '魅族 15 Plus', '魅族 15 Plus 6G 128G 全网通公开版 砚墨 ', '', '魅族 15 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('398', '1', '美图 T9', '美图 T9 6G 128G 全网通 湖光蓝 ', '', '美图 T9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('400', '1', '华为 P20 Pro', '华为 P20 Pro 6G 64G 全网通 极光闪蝶 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('401', '1', '苹果 iPhone 8', '苹果 iPhone 8 256G 全网通 红色特别版 ', '', '苹果 iPhone 8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('402', '1', '小米 红米6', '小米 红米6 4G 64G 全网通 铂银灰 ', '', '小米 红米6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('403', '1', '魅族 M15', '魅族 M15 全网通公开版 4G 64G 砂砾金 ', '', '魅族 M15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('409', '1', '美图 T9', '美图 T9 6G 128G 全网通 浆果红 ', '', '美图 T9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('411', '1', '华为 P20 Pro', '华为 P20 Pro 6G 64G 全网通 亮黑色 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('412', '1', '苹果 iPhone 8', '苹果 iPhone 8 256G 全网通 深空灰色 ', '', '苹果 iPhone 8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('413', '1', '小米 红米6', '小米 红米6 4G 64G 全网通 流沙金 ', '', '小米 红米6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('414', '1', '三星 S9+', '三星 S9+ 6G 128G 全网通 谜夜黑 ', '', '三星 S9+', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('415', '1', '魅族 M15', '魅族 M15 全网通公开版 4G 64G 曜岩黑 ', '', '魅族 M15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('416', '1', 'OPPO A3', 'OPPO A3 4G 128G 全网通 骑士黑 ', '', 'OPPO A3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('417', '1', 'vivo Y79', 'vivo Y79 4G 64G 全网通 磨砂黑 ', '', 'vivo Y79', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('421', '1', '美图 T9', '美图 T9 6G 128G 全网通 仙踪绿 ', '', '美图 T9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('423', '1', '华为 P20 Pro', '华为 P20 Pro 6G 64G 移动版全网通 宝石蓝 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('424', '1', '苹果 iPhone 8', '苹果 iPhone 8 256G 全网通 银色 ', '', '苹果 iPhone 8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('425', '1', '小米 红米6', '小米 红米6 4G 64G 全网通 樱花粉 ', '', '小米 红米6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('426', '1', '三星 S9+', '三星 S9+ 6G 128G 全网通 夕雾紫 ', '', '三星 S9+', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('427', '1', '魅族 M15', '魅族 M15 全网通公开版 4G 64G 朱雀红 ', '', '魅族 M15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('428', '1', 'OPPO A3', 'OPPO A3 4G 128G 全网通 石榴红 ', '', 'OPPO A3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('433', '1', '美图 T9', '美图 T9 6G 128G 全网通 星云粉 ', '', '美图 T9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('435', '1', '华为 P20 Pro', '华为 P20 Pro 6G 64G 移动版全网通 樱粉金 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('436', '1', '苹果 iPhone 8', '苹果 iPhone 8 64G 全网通 红色特别版 ', '', '苹果 iPhone 8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('437', '1', '小米 红米6 Pro', '小米 红米6 Pro 3G 32G 全网通 流沙金 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('438', '1', '三星 S9+', '三星 S9+ 6G 64G 全网通 谜夜黑 ', '', '三星 S9+', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('439', '1', '魅族 魅蓝 6T', '魅族 魅蓝 6T 3G 32G 公开版全网通 香槟金 ', '', '魅族 魅蓝 6T', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('440', '1', 'OPPO A5', 'OPPO A5 4G 64G 全网通 幻镜粉 ', '', 'OPPO A5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('441', '1', 'vivo NEX', 'vivo NEX 6G 128G 全网通 星钻黑 ', '', 'vivo NEX', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('446', '1', '美图 V6', '美图 V6 6G 128G 全网通 京城红 ', '', '美图 V6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('448', '1', '华为 P20 Pro', '华为 P20 Pro 8G 128G 全网通 珠光贝母 ', '', '华为 P20 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('449', '1', '苹果 iPhone 8', '苹果 iPhone 8 64G 全网通 金色 ', '', '苹果 iPhone 8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('450', '1', '小米 红米6 Pro', '小米 红米6 Pro 3G 32G 全网通 曜石黑 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('451', '1', '三星 S9+', '三星 S9+ 6G 64G 全网通 夕雾紫 ', '', '三星 S9+', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('452', '1', '魅族 魅蓝 6T', '魅族 魅蓝 6T 3G 32G 公开版全网通 曜石黑 ', '', '魅族 魅蓝 6T', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('453', '1', 'OPPO A5', 'OPPO A5 4G 64G 全网通 幻镜蓝 ', '', 'OPPO A5', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('454', '1', 'vivo NEX', 'vivo NEX 8G 128G 全网通 星迹版 ', '', 'vivo NEX', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('458', '1', '美图 V6', '美图 V6 6G 128G 全网通 鹿特丹橙 ', '', '美图 V6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('460', '1', '华为 Mate RS', '华为 Mate RS 保时捷设计 6G 256G 全网通 瑞红 ', '', '华为 Mate RS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('461', '1', '华为 Mate RS', '华为 Mate RS 保时捷设计 6G 256G 全网通 玄黑 ', '', '华为 Mate RS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('462', '1', '苹果 iPhone 8', '苹果 iPhone 8 64G 全网通 深空灰色 ', '', '苹果 iPhone 8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('463', '1', '三星 W2018', '三星 W2018 6G 256G 全网通 尊铂 ', '', '三星 W2018', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('464', '1', '魅族 魅蓝 6T', '魅族 魅蓝 6T 4G 64G 公开版全网通 香槟金 ', '', '魅族 魅蓝 6T', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('465', '1', 'OPPO A7x', 'OPPO A7x 4G 128G 全网通 冰焰蓝 ', '', 'OPPO A7x', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('466', '1', 'vivo NEX', 'vivo NEX 8G 128G 全网通 星钻黑 ', '', 'vivo NEX', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('470', '1', '美图 V6', '美图 V6 6G 128G 全网通 墨尔本绿 ', '', '美图 V6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('472', '1', '华为 Mate RS', '华为 Mate RS 保时捷设计 6G 512G 全网通 瑞红 ', '', '华为 Mate RS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('473', '1', '华为 Mate RS', '华为 Mate RS 保时捷设计 6G 512G 全网通 玄黑 ', '', '华为 Mate RS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('474', '1', '苹果 iPhone 6S Plus', '苹果 iPhone 6S Plus 128G 全网通  玫瑰金 ', '', '苹果 iPhone 6S Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('475', '1', '三星 W2018', '三星 W2018 6G 64G 全网通 雅金色 ', '', '三星 W2018', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('476', '1', '魅族 魅蓝 6T', '魅族 魅蓝 6T 4G 64G 公开版全网通 曜石黑 ', '', '魅族 魅蓝 6T', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('477', '1', 'OPPO A7x', 'OPPO A7x 4G 128G 全网通 星空紫 ', '', 'OPPO A7x', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('478', '1', 'vivo X21', 'vivo X21 6G 128G FIFA世界杯非凡版 典藏蓝 ', '', 'vivo X21', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('483', '1', '华为 P10 Plus', '华为 P10 Plus 6G 64G 全网通 曜石黑 ', '', '华为 P10 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('484', '1', '苹果 iPhone 6S Plus', '苹果 iPhone 6S Plus 128G 全网通 金色 ', '', '苹果 iPhone 6S Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('485', '1', '三星 大器III', '三星 大器III（G9092） 联通版 名仕蓝 ', '', '三星 大器III', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('486', '1', '魅族 魅蓝 E3', '魅族 魅蓝 E3 6G 64G 全网通 香槟金 ', '', '魅族 魅蓝 E3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('487', '1', 'OPPO Find X', 'OPPO Find X 8G 128G 标准版全网通版 冰珀蓝 ', '', 'OPPO Find X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('488', '1', 'vivo X21', 'vivo X21 6G 128G 屏幕指纹版全网通 宝石红 ', '', 'vivo X21', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('493', '1', '华为 P10 Plus', '华为 P10 Plus 6G 64G 全网通 钻雕金 ', '', '华为 P10 Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('494', '1', '苹果 iPhone 6S Plus', '苹果 iPhone 6S Plus 128G 全网通 星空灰 ', '', '苹果 iPhone 6S Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('495', '1', '三星 领世旗舰8', '三星 领世旗舰8（G9298） 4G 64G 移动联通4G 黑色 ', '', '三星 领世旗舰8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('496', '1', '魅族 魅蓝 E3', '魅族 魅蓝 E3 6G 64G 全网通 曜石黑 ', '', '魅族 魅蓝 E3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('497', '1', 'OPPO Find X', 'OPPO Find X 8G 128G 标准版全网通版 波尔多红 ', '', 'OPPO Find X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('498', '1', 'vivo X21', 'vivo X21 6G 128G 屏幕指纹版全网通 冰钻黑 ', '', 'vivo X21', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('504', '1', '华为 P10', '华为 P10 4G 64G 移动版全网通 钻雕金 ', '', '华为 P10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('505', '1', '苹果 iPhone 6S Plus', '苹果 iPhone 6S Plus 128G 全网通 银色 ', '', '苹果 iPhone 6S Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('506', '1', '三星 三星W2019', '三星 三星W2019 6G 128G 全网通 睿金 ', '', '三星 三星W2019', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('507', '1', '魅族 16th Plus', '魅族 魅族 16th Plus 6G 128G 全网通公开版 静夜黑 ', '', '魅族 16th Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('508', '1', 'OPPO Find X', 'OPPO Find X 8G 256G 超级闪充版全网通版 冰珀蓝 ', '', 'OPPO Find X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('509', '1', 'vivo X21', 'vivo X21 6G 128G 普通版全网通 宝石红 ', '', 'vivo X21', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('514', '1', '华为 畅享7 plus', '华为 畅享7 plus 3G 32G 移动版全网通 灰色 ', '', '华为 畅享7 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('515', '1', '苹果 iPhone 6S Plus', '苹果 iPhone 6S Plus 32G 全网通  玫瑰金 ', '', '苹果 iPhone 6S Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('516', '1', '三星 三星W2019', '三星 三星W2019 6G 256G 全网通 尊铂 ', '', '三星 三星W2019', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('517', '1', '魅族 16th Plus', '魅族 魅族 16th Plus 6G 128G 全网通公开版 远山白 ', '', '魅族 16th Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('518', '1', 'OPPO Find X', 'OPPO Find X 8G 256G 超级闪充版全网通版 波尔多红 ', '', 'OPPO Find X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('519', '1', 'vivo X21', 'vivo X21 6G 128G 普通版全网通 冰钻黑 ', '', 'vivo X21', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('524', '1', '华为 Mate 10', '华为 Mate 10 4G 64G 全网通 亮黑色 ', '', '华为 Mate 10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('525', '1', '苹果 iPhone 6S Plus', '苹果 iPhone 6S Plus 32G 全网通 金色 ', '', '苹果 iPhone 6S Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('526', '1', '魅族 16th Plus', '魅族 魅族 16th Plus 8G 128G 全网通公开版 极光蓝 ', '', '魅族 16th Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('527', '1', 'OPPO Find X', 'OPPO Find X 8G 512G 兰博基尼版全网通版 碳纤黑 ', '', 'OPPO Find X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('528', '1', 'vivo X21', 'vivo X21 6G 128G 普通版全网通 极光白 ', '', 'vivo X21', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('535', '1', '华为 Mate 10', '华为 Mate 10 4G 64G 全网通 摩卡金 ', '', '华为 Mate 10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('536', '1', '苹果 iPhone 6S Plus', '苹果 iPhone 6S Plus 32G 全网通 星空灰 ', '', '苹果 iPhone 6S Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('537', '1', '魅族 16th Plus', '魅族 魅族 16th Plus 8G 128G 全网通公开版 静夜黑 ', '', '魅族 16th Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('538', '1', 'OPPO K1', 'OPPO K1 4G 64G 全网通 梵星蓝 ', '', 'OPPO K1', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('539', '1', 'vivo X21i', 'vivo X21i 4G 128G 全网通 极夜黑 ', '', 'vivo X21i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('543', '1', '华为 Mate 10', '华为 Mate 10 4G 64G 全网通 香槟金 ', '', '华为 Mate 10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('544', '1', '苹果 iPhone 6S Plus', '苹果 iPhone 6S Plus 32G 全网通 银色 ', '', '苹果 iPhone 6S Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('545', '1', '小米 红米6 Pro', '小米 红米6 Pro 3G 32G 全网通 樱花粉 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('546', '1', '魅族 16th Plus', '魅族 魅族 16th Plus 8G 128G 全网通公开版 远山白 ', '', '魅族 16th Plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('547', '1', 'OPPO K1', 'OPPO K1 4G 64G 全网通 摩卡红 ', '', 'OPPO K1', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('548', '1', 'vivo X21i', 'vivo X21i 6G 64G 全网通 极光白 ', '', 'vivo X21i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('552', '1', '华为 Mate 10', '华为 Mate 10 6G 128G 全网通 摩卡金 ', '', '华为 Mate 10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('554', '1', '小米 红米6 Pro', '小米 红米6 Pro 4G 32G 全网通 巴厘蓝 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('555', '1', '魅族 16X', '魅族 魅族 16X 6G 128G 全网通公开版 晨曦金 ', '', '魅族 16X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('556', '1', 'OPPO K1', 'OPPO K1 4G 64G 全网通 银光绿 ', '', 'OPPO K1', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('557', '1', 'vivo X21s', 'vivo X21s 6G 128G 全网通 千禧粉 ', '', 'vivo X21s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('558', '1', 'vivo X21s', 'vivo X21s 6G 128G 全网通 星夜黑 ', '', 'vivo X21s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('562', '1', '华为 Mate 10', '华为 Mate 10 6G 128G 全网通 香槟金 ', '', '华为 Mate 10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('564', '1', '小米 红米6 Pro', '小米 红米6 Pro 4G 32G 全网通 流沙金 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('565', '1', '魅族 16X', '魅族 魅族 16X 6G 128G 全网通公开版 汝窑白 ', '', '魅族 16X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('566', '1', 'OPPO K1', 'OPPO K1 6G 64G 全网通 梵星蓝 ', '', 'OPPO K1', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('567', '1', 'vivo X23', 'vivo X23  8G 128G 全网通 幻夜蓝   ', '', 'vivo X23', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('572', '1', '华为 Mate 10', '华为 Mate 10 6G 128G 移动版全网通 亮黑色 ', '', '华为 Mate 10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('574', '1', '小米 红米6 Pro', '小米 红米6 Pro 4G 32G 全网通 曜石黑 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('575', '1', '魅族 16X', '魅族 魅族 16X 6G 128G 全网通公开版 云山蓝 ', '', '魅族 16X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('576', '1', 'OPPO K1', 'OPPO K1 6G 64G 全网通 摩卡红 ', '', 'OPPO K1', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('577', '1', 'vivo X23', 'vivo X23 8G 128G 全网通 幻影红 ', '', 'vivo X23', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('581', '1', '华为 Mate 10', '华为 Mate 10 6G 128G 移动版全网通 香槟金 ', '', '华为 Mate 10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('582', '1', '小米 红米6 Pro', '小米 红米6 Pro 4G 32G 全网通 樱花粉 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('583', '1', '魅族 Note8', '魅族 魅族 Note8 4G 64G 全网通 曜黑 ', '', '魅族 Note8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('584', '1', 'OPPO K1', 'OPPO K1 6G 64G 全网通 银光绿 ', '', 'OPPO K1', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('585', '1', 'vivo X23', 'vivo X23 8G 128G 全网通 魅影紫 ', '', 'vivo X23', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('590', '1', '小米 红米6 Pro', '小米 红米6 Pro 4G 64G 全网通 巴厘蓝 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('591', '1', '魅族15', '魅族 魅族15 4G 64G 全网通公开版 砚墨 ', '', '魅族15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('592', '1', 'OPPO R15', 'OPPO R15 6G 128G 梦境版全网通 梦境红 ', '', 'OPPO R15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('593', '1', 'vivo X23', 'vivo X23 8G 128G 全网通 时尚橙 ', '', 'vivo X23', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('599', '1', '小米 红米6 Pro', '小米 红米6 Pro 4G 64G 全网通 流沙金 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('600', '1', '魅族16th', '魅族 魅族16th 6G 128G 全网通公开版 极光蓝 ', '', '魅族16th', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('601', '1', 'OPPO R15', 'OPPO R15 6G 128G 梦境版全网通 梦境紫 ', '', 'OPPO R15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('602', '1', 'vivo X23', 'vivo X23 8G 128G 全网通 时尚紫 ', '', 'vivo X23', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('607', '1', '小米 红米6 Pro', '小米 红米6 Pro 4G 64G 全网通 曜石黑 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('608', '1', '魅族16th', '魅族 魅族16th 6G 128G 全网通公开版 静夜黑 ', '', '魅族16th', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('609', '1', 'OPPO R15', 'OPPO R15 6G 128G 全网通 陶瓷黑 ', '', 'OPPO R15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('610', '1', 'vivo X23', 'vivo X23 8G 128G 全网通 星芒版 ', '', 'vivo X23', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('613', '1', '小米 红米6 Pro', '小米 红米6 Pro 4G 64G 全网通 樱花粉 ', '', '小米 红米6 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('614', '1', '魅族16th', '魅族 魅族16th 6G 128G 全网通公开版 远山白 ', '', '魅族16th', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('615', '1', 'OPPO R15', 'OPPO R15 6G 128G 全网通 星空紫 ', '', 'OPPO R15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('617', '1', '小米 红米6A', '小米 红米6A 2G 16G 全网通 巴厘蓝 ', '', '小米 红米6A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('618', '1', '魅族16th', '魅族 魅族16th 8G 128G 全网通公开版 静夜黑 ', '', '魅族16th', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('619', '1', 'OPPO R15', 'OPPO R15 6G 128G 全网通 雪盈白 ', '', 'OPPO R15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('621', '1', '小米 红米6A', '小米 红米6A 2G 16G 全网通 铂银灰 ', '', '小米 红米6A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('622', '1', '魅族16th', '魅族 魅族16th 8G 128G 全网通公开版 远山白 ', '', '魅族16th', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('623', '1', 'OPPO R15', 'OPPO R15 6G 128G 移动版全网通 陶瓷黑 ', '', 'OPPO R15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('624', '1', 'vivo Y81s', 'vivo Y81s 3G 32G 全网通 宝石红 ', '', 'vivo Y81s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('626', '1', '小米 红米6A', '小米 红米6A 2G 16G 全网通 流沙金 ', '', '小米 红米6A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('627', '1', '魅族V8', '魅族 魅族V8 3G 32G 全网通公开版 纯白 ', '', '魅族V8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('628', '1', 'OPPO R15', 'OPPO R15 6G 128G 移动版全网通 星空紫 ', '', 'OPPO R15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('629', '1', 'vivo Y81s', 'vivo Y81s 3G 64G 全网通 宝石红 ', '', 'vivo Y81s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('631', '1', '小米 红米6A', '小米 红米6A 2G 16G 全网通 樱花粉 ', '', '小米 红米6A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('632', '1', '魅族V8', '魅族 魅族V8 3G 32G 全网通公开版 磨砂黑 ', '', '魅族V8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('633', '1', 'OPPO R15', 'OPPO R15 6G 128G 移动版全网通 雪盈白 ', '', 'OPPO R15', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('634', '1', 'vivo Y81s', 'vivo Y81s 3G 64G 全网通 黑金色 ', '', 'vivo Y81s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('635', '1', '华为 Mate 10', '华为 Mate 10 保时捷版 6G 256G 全网通 钻石黑 ', '', '华为 Mate 10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('637', '1', '小米 红米6A', '小米 红米6A 2G 16G 移动全网通 流沙金 ', '', '小米 红米6A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('638', '1', '魅族V8', '魅族 魅族V8 4G 64G 全网通公开版 雅金 ', '', '魅族V8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('639', '1', 'OPPO R15x', 'OPPO R15x 6G 128G 全网通 冰萃银 ', '', 'OPPO R15x', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('640', '1', 'vivo Y81s', 'vivo Y81s 3G 64G 全网通 香槟金 ', '', 'vivo Y81s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('641', '1', '华为 Mate 10 Pro', '华为 Mate 10 Pro 6G 128G 全网通 宝石蓝 ', '', '华为 Mate 10 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('643', '1', '小米 红米6A', '小米 红米6A 3G 32G 全网通 巴厘蓝 ', '', '小米 红米6A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('644', '1', '魅族V8', '魅族 魅族V8 4G 64G 全网通公开版 曜黑 ', '', '魅族V8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('645', '1', 'OPPO R15x', 'OPPO R15x 6G 128G 全网通 星云渐变 ', '', 'OPPO R15x', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('646', '1', 'vivo Y83', 'vivo Y83 4G 64G 全网通 极夜黑 ', '', 'vivo Y83', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('647', '1', '华为 Mate 10 Pro', '华为 Mate 10 Pro 6G 128G 全网通 摩卡金 ', '', '华为 Mate 10 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('649', '1', '小米 红米6A', '小米 红米6A 3G 32G 全网通 铂银灰 ', '', '小米 红米6A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('650', '1', '魅族X8', '魅族 魅族X8 4G 64G 全网通 幻蓝 ', '', '魅族X8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('651', '1', 'OPPO R17', 'OPPO R17 6G 128G 全网通 流光蓝 ', '', 'OPPO R17', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('652', '1', 'vivo Y83', 'vivo Y83 4G 64G 全网通 魅力红 ', '', 'vivo Y83', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('655', '1', '华为 Mate 10 Pro', '华为 Mate 10 Pro 6G 128G 全网通 银钻灰 ', '', '华为 Mate 10 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('657', '1', '小米 红米6A', '小米 红米6A 3G 32G 全网通 流沙金 ', '', '小米 红米6A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('658', '1', '魅族X8', '魅族 魅族X8 4G 64G 全网通 亮黑 ', '', '魅族X8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('659', '1', 'OPPO R17', 'OPPO R17 6G 128G 全网通 霓光紫 ', '', 'OPPO R17', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('660', '1', 'vivo Y85', 'vivo Y85 4G 64G 全网通 黑金色 ', '', 'vivo Y85', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('664', '1', '华为 Mate 10 Pro', '华为 Mate 10 Pro 6G 128G 移动版全网通 银钻灰 ', '', '华为 Mate 10 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('665', '1', '华为 Mate 10 Pro', '华为 Mate 10 Pro 6G 64G 全网通 宝石蓝 ', '', '华为 Mate 10 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('667', '1', '小米 红米6A', '小米 红米6A 3G 32G 全网通 樱花粉 ', '', '小米 红米6A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('668', '1', '魅族X8', '魅族 魅族X8 4G 64G 全网通 玉白 ', '', '魅族X8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('669', '1', 'OPPO R17', 'OPPO R17 8G 128G 全网通 流光蓝 ', '', 'OPPO R17', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('670', '1', 'vivo Y85', 'vivo Y85 4G 64G 全网通 红色 ', '', 'vivo Y85', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('673', '1', '华为 Mate 10 Pro', '华为 Mate 10 Pro 6G 64G 全网通 摩卡金 ', '', '华为 Mate 10 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('675', '1', '小米 红米S2', '小米 红米S2 4G 64G 全网通 铂银灰 ', '', '小米 红米S2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('676', '1', '魅族X8', '魅族 魅族X8 6G 128G 全网通 幻蓝 ', '', '魅族X8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('677', '1', 'OPPO R17', 'OPPO R17 8G 128G 全网通 霓光紫 ', '', 'OPPO R17', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('678', '1', 'vivo Y85', 'vivo Y85 4G 64G 全网通 极光色 ', '', 'vivo Y85', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('679', '1', 'vivo Y85', 'vivo Y85 4G 64G 全网通 香槟金 ', '', 'vivo Y85', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('686', '1', '华为 Mate 10 Pro', '华为 Mate 10 Pro 6G 64G 全网通 银钻灰 ', '', '华为 Mate 10 Pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('688', '1', '小米 红米S2', '小米 红米S2 4G 64G 全网通 香槟金 ', '', '小米 红米S2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('689', '1', '魅族X8', '魅族 魅族X8 6G 128G 全网通 亮黑 ', '', '魅族X8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('690', '1', 'OPPO R17', 'OPPO R17 8G 128G 全网通 雾光渐变色 ', '', 'OPPO R17', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('691', '1', 'vivo Y93', 'vivo Y93 4G 64G 全网通 星夜黑 ', '', 'vivo Y93', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('694', '1', '华为 麦芒6', '华为 麦芒6 4G 64G 全网通 流光金 ', '', '华为 麦芒6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('696', '1', '小米 小米6X', '小米 小米6X 4G 64G 全网通 冰川蓝 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('697', '1', '魅族X8', '魅族 魅族X8 6G 128G 全网通 玉白 ', '', '魅族X8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('698', '1', 'vivo Y93', 'vivo Y93 4G 64G 全网通 紫霞红 ', '', 'vivo Y93', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('701', '1', '华为 荣耀V10', '华为 荣耀V10 6G 128G 全网通尊享版 幻夜黑 ', '', '华为 荣耀V10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('703', '1', '小米 小米6X', '小米 小米6X 4G 64G 全网通 赤焰红 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('704', '1', '魅族X8', '魅族 魅族X8 6G 64G 全网通 幻蓝 ', '', '魅族X8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('705', '1', 'vivo Y97', 'vivo Y97 4G 128G 全网通 极光蓝 ', '', 'vivo Y97', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('710', '1', '华为 荣耀V10', '华为 荣耀V10 6G 128G 全网通尊享版 魅丽红 ', '', '华为 荣耀V10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('712', '1', '小米 小米6X', '小米 小米6X 4G 64G 全网通 流沙金 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('713', '1', '魅族X8', '魅族 魅族X8 6G 64G 全网通 亮黑 ', '', '魅族X8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('716', '1', '华为 荣耀V10', '华为 荣耀V10 6G 64G 全网通高配版 幻夜黑 ', '', '华为 荣耀V10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('718', '1', '小米 小米6X', '小米 小米6X 4G 64G 全网通 曜石黑 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('721', '1', '华为 荣耀V10', '华为 荣耀V10 6G 64G 全网通高配版 魅丽红 ', '', '华为 荣耀V10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('723', '1', '小米 小米6X', '小米 小米6X 4G 64G 全网通 樱花粉 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('726', '1', '华为 荣耀V10', '华为 荣耀V10 6G 64G 全网通高配版 沙滩金 ', '', '华为 荣耀V10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('728', '1', '小米 小米6X', '小米 小米6X 6G 128G 全网通 冰川蓝 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('731', '1', '华为 荣耀V10', '华为 荣耀V10 6G 64G 全网通高配版 炫影蓝 ', '', '华为 荣耀V10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('733', '1', '小米 小米6X', '小米 小米6X 6G 128G 全网通 赤焰红 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('737', '1', '华为 荣耀V10', '华为 荣耀V10 6G 64G 移动版全网通 极光蓝 ', '', '华为 荣耀V10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('739', '1', '小米 小米6X', '小米 小米6X 6G 128G 全网通 流沙金 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('742', '1', '华为 荣耀V10', '华为 荣耀V10 6G 64G 移动版全网通 沙滩金 ', '', '华为 荣耀V10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('744', '1', '小米 小米6X', '小米 小米6X 6G 128G 全网通 曜石黑 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('745', '1', '魅族X8', '魅族 魅族X8 6G 64G 全网通 玉白 ', '', '魅族X8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('748', '1', '华为 荣耀9', '华为 荣耀9 青春版 3G 32G 全网通标配版 幻夜黑 ', '', '华为 荣耀9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('750', '1', '小米 小米6X', '小米 小米6X 6G 128G 全网通 樱花粉 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('751', '1', 'vivo Y97', 'vivo Y97 4G 128G 全网通 梦幻粉 ', '', 'vivo Y97', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('754', '1', '华为 荣耀9', '华为 荣耀9 青春版 3G 32G 全网通标配版 魅海蓝 ', '', '华为 荣耀9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('756', '1', '小米 小米6X', '小米 小米6X 6G 64G 全网通 冰川蓝 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('757', '1', 'vivo Y97', 'vivo Y97 4G 128G 全网通 星夜黑 ', '', 'vivo Y97', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('761', '1', '华为 荣耀9', '华为 荣耀9 青春版 4G 32G 全网通高配版 海鸥灰 ', '', '华为 荣耀9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('763', '1', '小米 小米6X', '小米 小米6X 6G 64G 全网通 赤焰红 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('764', '1', 'vivo Z1', 'vivo Z1 4G 64G 全网通 宝石蓝 ', '', 'vivo Z1', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('767', '1', '华为 荣耀9', '华为 荣耀9 青春版 4G 32G 全网通高配版 幻夜黑 ', '', '华为 荣耀9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('769', '1', '小米 小米6X', '小米 小米6X 6G 64G 全网通 流沙金 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('770', '1', 'vivo Z1', 'vivo Z1 4G 64G 全网通 瓷釉黑 ', '', 'vivo Z1', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('773', '1', '华为 荣耀9', '华为 荣耀9 青春版 4G 32G 全网通高配版 魅海蓝 ', '', '华为 荣耀9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('775', '1', '小米 小米6X', '小米 小米6X 6G 64G 全网通 曜石黑 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('776', '1', 'vivo Z1', 'vivo Z1 4G 64G 全网通 瓷釉蓝 ', '', 'vivo Z1', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('779', '1', '华为 荣耀9', '华为 荣耀9 青春版 4G 64G 全网通尊享版 幻夜黑 ', '', '华为 荣耀9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('781', '1', '小米 小米6X', '小米 小米6X 6G 64G 全网通 樱花粉 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('784', '1', '华为 荣耀9', '华为 荣耀9 青春版 4G 64G 全网通尊享版 魅海蓝 ', '', '华为 荣耀9', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('786', '1', '小米 小米6X', '小米 小米6X 6G 64G 移动全网通 曜石黑 ', '', '小米 小米6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('789', '1', '华为 荣耀8', '华为 荣耀8青春版 4G 64G 中国移动全网通定制版（高配版） 幻海蓝 ', '', '华为 荣耀8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('791', '1', '小米 小米8', '小米 小米8 6G 128G 全网通 白色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('792', '1', 'vivo Z1i', 'vivo Z1i 4G 128G 全网通 黑金色 ', '', 'vivo Z1i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('794', '1', '华为 荣耀8', '华为 荣耀8青春版 4G 64G 中国移动全网通定制版（高配版） 幻夜黑 ', '', '华为 荣耀8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('796', '1', '小米 小米8', '小米 小米8 6G 128G 全网通 黑色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('797', '1', 'vivo Z1i', 'vivo Z1i 4G 128G 全网通 炫慕红 ', '', 'vivo Z1i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('799', '1', '华为 荣耀8', '华为 荣耀8青春版 4G 64G 中国移动全网通定制版（高配版） 魅海蓝 ', '', '华为 荣耀8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('801', '1', '小米 小米8', '小米 小米8 6G 128G 全网通屏幕指纹版 黑色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('802', '1', 'vivo z3', 'vivo z3 4G 64G 全网通 极光蓝 ', '', 'vivo z3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('804', '1', '华为 荣耀8', '华为 荣耀8青春版 4G 64G 中国移动全网通定制版（高配版） 珠光白 ', '', '华为 荣耀8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('806', '1', '小米 小米8', '小米 小米8 6G 128G 全网通屏幕指纹版 暮光金 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('807', '1', 'vivo z3', 'vivo z3 4G 64G 全网通 梦幻粉 ', '', 'vivo z3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('808', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7X 4G 128G 全网通尊享版 幻夜黑 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('810', '1', 'vivo z3', 'vivo z3 4G 64G 全网通 星夜黑 ', '', 'vivo z3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('811', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7X 4G 32G 全网通标配版 铂光金 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('812', '1', 'vivo z3', 'vivo z3 6G 64G 全网通 极光蓝 ', '', 'vivo z3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('813', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7X 4G 32G 全网通标配版 幻夜黑 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('814', '1', 'vivo z3', 'vivo z3 6G 64G 全网通 梦幻粉 ', '', 'vivo z3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('815', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7X 4G 32G 全网通标配版 极光蓝 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('816', '1', 'vivo z3', 'vivo z3 6G 64G 全网通 星夜黑 ', '', 'vivo z3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('817', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7X 4G 32G 全网通标配版 魅焰红 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('818', '1', 'vivo Z3i', 'vivo Z3i 6G 128G 全网通 极光蓝 ', '', 'vivo Z3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('819', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7X 4G 64G 全网通高配版 铂光金 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('820', '1', 'vivo Z3i', 'vivo Z3i 6G 128G 全网通 千禧粉 ', '', 'vivo Z3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('821', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7X 4G 64G 全网通高配版 幻夜黑 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('822', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7X 4G 64G 全网通高配版 极光蓝 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('823', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7X 4G 64G 全网通高配版 魅焰红 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('824', '1', '小米 小米8', '小米 小米8 6G 256G 全网通 白色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('825', '1', '华为 荣耀畅玩6', '华为 荣耀畅玩6 2G 16G 全网通标配版 白色 ', '', '华为 荣耀畅玩6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('826', '1', '小米 小米8', '小米 小米8 6G 256G 全网通 黑色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('827', '1', '华为 荣耀畅玩6', '华为 荣耀畅玩6 2G 16G 全网通标配版 金色 ', '', '华为 荣耀畅玩6', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('828', '1', '小米 小米8', '小米 小米8 6G 256G 全网通 蓝色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('829', '1', '华为 荣耀畅玩6X', '华为 荣耀畅玩6X 3G 32G 全网通 银色 ', '', '华为 荣耀畅玩6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('830', '1', '小米 小米8', '小米 小米8 6G 64G 全网通 白色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('831', '1', '小米 小米8', '小米 小米8 6G 64G 全网通 黑色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('832', '1', '小米 小米8', '小米 小米8 6G 64G 全网通 金色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('833', '1', '小米 小米8', '小米 小米8 6G 64G 全网通 蓝色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('834', '1', '小米 小米8', '小米 小米8 8G 128G 全网通 白色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('835', '1', '小米 小米8', '小米 小米8 8G 128G 全网通 黑色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('836', '1', '小米 小米8', '小米 小米8 8G 128G 全网通 蓝色 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('837', '1', '小米 小米8', '小米 小米8 8G 128G 全网通屏幕指纹版 暮光金 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('838', '1', '小米 小米8', '小米 小米8 8G 128G 全网通屏幕指纹版 透明 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('839', '1', '小米 小米8', '小米 小米8 8G 128G 透明探索版 ', '', '小米 小米8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('840', '1', '小米 小米8 SE', '小米 小米8 SE 4G 64G 全网通 金色 ', '', '小米 小米8 SE', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('841', '1', '小米 小米8 SE', '小米 小米8 SE 4G 64G 全网通 亮红 ', '', '小米 小米8 SE', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('842', '1', '小米 小米8 SE', '小米 小米8 SE 4G 64G 全网通 亮蓝 ', '', '小米 小米8 SE', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('843', '1', '华为 荣耀畅玩6X', '华为 荣耀畅玩6X 移动版/全网通 3G 32G 铂光金 ', '', '华为 荣耀畅玩6X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('844', '1', '小米 小米8 SE', '小米 小米8 SE 4G 64G 全网通 深灰 ', '', '小米 小米8 SE', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('845', '1', '华为 mate 20', '华为 mate 20 全网通 6G 128G 宝石蓝 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('846', '1', '小米 小米8 SE', '小米 小米8 SE 6G 128G 全网通 金色 ', '', '小米 小米8 SE', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('847', '1', '华为 mate 20', '华为 mate 20 全网通 6G 128G 翡冷翠 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('848', '1', '小米 小米8 SE', '小米 小米8 SE 6G 128G 全网通 深灰 ', '', '小米 小米8 SE', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('849', '1', '华为 mate 20', '华为 mate 20 全网通 6G 128G 极光色 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('850', '1', '小米 小米8 SE', '小米 小米8 SE 6G 64G 全网通 金色 ', '', '小米 小米8 SE', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('851', '1', '华为 mate 20', '华为 mate 20 全网通 6G 128G 亮黑色 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('852', '1', '小米 小米8 SE', '小米 小米8 SE 6G 64G 全网通 亮红 ', '', '小米 小米8 SE', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('853', '1', '华为 mate 20', '华为 mate 20 全网通 6G 128G 樱粉金 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('854', '1', '小米 小米8 SE', '小米 小米8 SE 6G 64G 全网通 亮蓝 ', '', '小米 小米8 SE', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('855', '1', '华为 mate 20', '华为 mate 20 全网通 6G 64G 宝石蓝 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('856', '1', '小米 小米8 SE', '小米 小米8 SE 6G 64G 全网通 深灰 ', '', '小米 小米8 SE', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('857', '1', '华为 mate 20', '华为 mate 20 全网通 6G 64G 翡冷翠 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('858', '1', '小米 小米8 青春版', '小米 小米8 青春版 4G 128G 全网通 深空灰 ', '', '小米 小米8 青春版', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('859', '1', '华为 mate 20', '华为 mate 20 全网通 6G 64G 极光色 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('860', '1', '小米 小米8 青春版', '小米 小米8 青春版 6G 128G 全网通 梦幻蓝 ', '', '小米 小米8 青春版', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('861', '1', '华为 mate 20', '华为 mate 20 全网通 6G 64G 亮黑色 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('862', '1', '小米 小米8 青春版', '小米 小米8 青春版 6G 128G 全网通 暮光金 ', '', '小米 小米8 青春版', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('863', '1', '华为 mate 20', '华为 mate 20 全网通 6G 64G 樱粉金 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('864', '1', '小米 小米8 青春版', '小米 小米8 青春版 6G 128G 全网通 深空灰 ', '', '小米 小米8 青春版', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('865', '1', '华为 mate 20', '华为 mate 20 移动版全网通 6G 128G 翡冷翠 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('866', '1', '小米 小米8 青春版', '小米 小米8 青春版 6G 64G 全网通 梦幻蓝 ', '', '小米 小米8 青春版', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('867', '1', '华为 mate 20', '华为 mate 20 移动版全网通 6G 64G 宝石蓝 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('868', '1', '小米 小米8 青春版', '小米 小米8 青春版 6G 64G 全网通 暮光金 ', '', '小米 小米8 青春版', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('869', '1', '华为 mate 20', '华为 mate 20 移动版全网通 6G 64G 翡冷翠 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('870', '1', '小米 小米8 青春版', '小米 小米8 青春版 6G 64G 全网通 深空灰 ', '', '小米 小米8 青春版', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('871', '1', '华为 mate 20', '华为 mate 20 移动版全网通 6G 64G 亮黑色 ', '', '华为 mate 20', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('872', '1', '小米 小米Max3', '小米 小米Max3 4G 64G 全网通 梦幻金 ', '', '小米 小米Max3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('873', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通 6G 128G 宝石蓝 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('874', '1', '小米 小米Max3', '小米 小米Max3 4G 64G 全网通 曜石黑 ', '', '小米 小米Max3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('875', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通 6G 128G 翡冷翠 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('876', '1', '小米 小米Max3', '小米 小米Max3 6G 128G 全网通 梦幻金 ', '', '小米 小米Max3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('877', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通 6G 128G 极光色 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('878', '1', '小米 小米Max3', '小米 小米Max3 6G 128G 全网通 深海蓝 ', '', '小米 小米Max3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('879', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通 6G 128G 亮黑色 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('880', '1', '小米 小米Max3', '小米 小米Max3 6G 128G 全网通 曜石黑 ', '', '小米 小米Max3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('881', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通(UD版) 8G 128G 宝石蓝 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('882', '1', '小米 小米MIX 3', '小米 小米MIX 3 6G 128G 全网通 黑色 ', '', '小米 小米MIX 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('883', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通(UD版) 8G 128G 翡冷翠 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('884', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通(UD版) 8G 128G 极光色 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('885', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通(UD版) 8G 128G 亮黑色 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('886', '1', '小米 小米MIX 3', '小米 小米MIX 3 8G 128G 全网通 黑色 ', '', '小米 小米MIX 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('887', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通(UD版) 8G 128G 樱粉金 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('888', '1', '小米 小米MIX 3', '小米 小米MIX 3 8G 256G 全网通 黑色 ', '', '小米 小米MIX 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('889', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通(UD版) 8G 256G 宝石蓝 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('890', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通(UD版) 8G 256G 翡冷翠 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('891', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通(UD版) 8G 256G 极光色 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('892', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通(UD版) 8G 256G 亮黑色 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('893', '1', '华为 mate 20 pro', '华为 mate 20 pro 全网通(UD版) 8G 256G 樱粉金 ', '', '华为 mate 20 pro', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('894', '1', '华为 mate 20 X', '华为 mate 20 X 全网通 6G 128G 宝石蓝 ', '', '华为 mate 20 X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('895', '1', '华为 mate 20 X', '华为 mate 20 X 全网通 6G 128G 幻影银 ', '', '华为 mate 20 X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('896', '1', '华为 mate 20 X', '华为 mate 20 X 全网通 8G 256G 宝石蓝 ', '', '华为 mate 20 X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('897', '1', '华为 mate 20 X', '华为 mate 20 X 全网通 8G 256G 幻影银 ', '', '华为 mate 20 X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('898', '1', '华为 Mate20 RS', '华为 Mate20 RS保时捷 8G 512G 全网通 玄黑 ', '', '华为 Mate20 RS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('899', '1', '华为 nova 2s', '华为 nova 2s 4G 64G 全网通 曜石黑 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('900', '1', '华为 nova 2s', '华为 nova 2s 4G 64G 全网通 银钻灰 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('901', '1', '华为 nova 2s', '华为 nova 2s 4G 64G 移动4G+版全网通 曜石黑 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('902', '1', '华为 nova 2s', '华为 nova 2s 6G 128G 全网通 浅艾蓝 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('903', '1', '华为 nova 2s', '华为 nova 2s 6G 128G 全网通 曜石黑 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('904', '1', '华为 nova 2s', '华为 nova 2s 6G 128G 全网通 银钻灰 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('905', '1', '华为 nova 2s', '华为 nova 2s 6G 128G 全网通 樱粉金 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('906', '1', '华为 nova 2s', '华为 nova 2s 6G 64G 全网通 浅艾蓝 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('907', '1', '华为 nova 2s', '华为 nova 2s 6G 64G 全网通 曜石黑 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('908', '1', '华为 nova 2s', '华为 nova 2s 6G 64G 全网通 银钻灰 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('909', '1', '华为 nova 2s', '华为 nova 2s 6G 64G 全网通 樱粉金 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('910', '1', '华为 nova 2s', '华为 nova 2s 6G 64G 移动4G+版全网通 曜石黑 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('911', '1', '华为 nova 2s', '华为 nova 2s 6G 64G 移动4G+版全网通 银钻灰 ', '', '华为 nova 2s', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('912', '1', '华为 nova 3', '华为 nova 3 6G 128G 全网通 蓝楹紫 ', '', '华为 nova 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('913', '1', '华为 nova 3', '华为 nova 3 6G 128G 全网通 亮黑色 ', '', '华为 nova 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('914', '1', '华为 nova 3', '华为 nova 3 6G 128G 全网通 浅艾蓝 ', '', '华为 nova 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('915', '1', '华为 nova 3', '华为 nova 3 6G 128G 全网通 相思红 ', '', '华为 nova 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('916', '1', '华为 nova 3', '华为 nova 3 6G 128G 全网通版星耀版 樱草金 ', '', '华为 nova 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('917', '1', '华为 nova 3', '华为 nova 3 6G 64G 全网通 蓝楹紫 ', '', '华为 nova 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('918', '1', '华为 nova 3', '华为 nova 3 6G 64G 全网通 浅艾蓝 ', '', '华为 nova 3', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('919', '1', '华为 nova 3e', '华为 nova 3e 4G 128G 移动版全网通 铂光金 ', '', '华为 nova 3e', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('920', '1', '华为 nova 3e', '华为 nova 3e 4G 128G 移动版全网通 幻夜黑 ', '', '华为 nova 3e', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('921', '1', '华为 nova 3e', '华为 nova 3e 4G 64G 全网通 幻夜黑 ', '', '华为 nova 3e', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('922', '1', '华为 nova 3i', '华为 nova 3i 4G 128G 全网通 蓝楹紫 ', '', '华为 nova 3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('923', '1', '华为 nova 3i', '华为 nova 3i 4G 128G 全网通 亮黑色 ', '', '华为 nova 3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('924', '1', '华为 nova 3i', '华为 nova 3i 4G 128G 全网通 相思红 ', '', '华为 nova 3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('925', '1', '华为 nova 3i', '华为 nova 3i 4G 128G 全网通 珍珠白 ', '', '华为 nova 3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('926', '1', '华为 nova 3i', '华为 nova 3i 6G 128G 全网通 蓝楹紫 ', '', '华为 nova 3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('927', '1', '华为 nova 3i', '华为 nova 3i 6G 128G 全网通 亮黑色 ', '', '华为 nova 3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('928', '1', '华为 nova 3i', '华为 nova 3i 6G 128G 全网通 相思红 ', '', '华为 nova 3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('929', '1', '华为 nova 3i', '华为 nova 3i 6G 128G 全网通 珍珠白 ', '', '华为 nova 3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('930', '1', '华为 nova 3i', '华为 nova 3i 6G 64G 全网通 蓝楹紫 ', '', '华为 nova 3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('931', '1', '华为 nova 3i', '华为 nova 3i 6G 64G 全网通 亮黑色 ', '', '华为 nova 3i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('932', '1', '华为 畅玩8C', '华为 畅玩8C 4G 32G 全网通 铂光金 ', '', '华为 畅玩8C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('933', '1', '华为 畅玩8C', '华为 畅玩8C 4G 32G 全网通 幻夜黑 ', '', '华为 畅玩8C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('934', '1', '华为 畅玩8C', '华为 畅玩8C 4G 32G 全网通 极光蓝 ', '', '华为 畅玩8C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('935', '1', '华为 畅玩8C', '华为 畅玩8C 4G 32G 全网通 星云紫 ', '', '华为 畅玩8C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('936', '1', '华为 畅玩8C', '华为 畅玩8C 4G 64G 全网通 铂光金 ', '', '华为 畅玩8C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('937', '1', '华为 畅玩8C', '华为 畅玩8C 4G 64G 全网通 幻夜黑 ', '', '华为 畅玩8C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('938', '1', '华为 畅玩8C', '华为 畅玩8C 4G 64G 全网通 极光蓝 ', '', '华为 畅玩8C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('939', '1', '华为 畅玩8C', '华为 畅玩8C 4G 64G 全网通 星云紫 ', '', '华为 畅玩8C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('940', '1', '华为 畅享 9 plus', '华为 畅享 9 plus 全网通 4G 128G 宝石蓝 ', '', '华为 畅享 9 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('941', '1', '华为 畅享 9 plus', '华为 畅享 9 plus 全网通 4G 128G 幻夜黑 ', '', '华为 畅享 9 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('942', '1', '华为 畅享 9 plus', '华为 畅享 9 plus 全网通 4G 128G 樱语粉 ', '', '华为 畅享 9 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('943', '1', '华为 畅享 9 plus', '华为 畅享 9 plus 全网通 4G 64G 宝石蓝 ', '', '华为 畅享 9 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('944', '1', '华为 畅享 9 plus', '华为 畅享 9 plus 全网通 6G 128G 宝石蓝 ', '', '华为 畅享 9 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('945', '1', '华为 畅享 9 plus', '华为 畅享 9 plus 全网通 6G 128G 幻夜黑 ', '', '华为 畅享 9 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('946', '1', '华为 畅享7S', '华为 畅享7S 4G 64G 全网通 黑色 ', '', '华为 畅享7S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('947', '1', '华为 畅享7S', '华为 畅享7S 4G 64G 全网通 金色 ', '', '华为 畅享7S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('948', '1', '华为 畅享7S', '华为 畅享7S 4G 64G 全网通 蓝色 ', '', '华为 畅享7S', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('949', '1', '华为 畅享8', '华为 畅享8 3G 32G 全网通 蓝色 ', '', '华为 畅享8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('950', '1', '华为 畅享8', '华为 畅享8 3G 32G 移动全网通 黑色 ', '', '华为 畅享8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('951', '1', '华为 畅享8', '华为 畅享8 4G 64G 全网通 粉色 ', '', '华为 畅享8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('952', '1', '华为 畅享8', '华为 畅享8 4G 64G 全网通 黑色 ', '', '华为 畅享8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('953', '1', '华为 畅享8', '华为 畅享8 4G 64G 全网通 金色 ', '', '华为 畅享8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('954', '1', '华为 畅享8', '华为 畅享8 4G 64G 全网通 蓝色 ', '', '华为 畅享8', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('955', '1', '华为 畅享8 plus', '华为 畅享8 plus 4G 128G 全网通 黑色 ', '', '华为 畅享8 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('956', '1', '华为 畅享8 plus', '华为 畅享8 plus 4G 128G 全网通 金色 ', '', '华为 畅享8 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('957', '1', '华为 畅享8 plus', '华为 畅享8 plus 4G 64G 全网通 黑色 ', '', '华为 畅享8 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('958', '1', '华为 畅享8 plus', '华为 畅享8 plus 4G 64G 全网通 金色 ', '', '华为 畅享8 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('959', '1', '华为 畅享8 plus', '华为 畅享8 plus 4G 64G 全网通 蓝色 ', '', '华为 畅享8 plus', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('960', '1', '华为 畅享8e', '华为 畅享8e 3G 32G 全网通 黑色 ', '', '华为 畅享8e', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('961', '1', '华为 畅享8e', '华为 畅享8e 3G 32G 全网通 金色 ', '', '华为 畅享8e', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('962', '1', '华为 畅享8e', '华为 畅享8e 3G 32G 全网通 蓝色 ', '', '华为 畅享8e', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('963', '1', '华为 畅享8e', '华为 畅享8e 青春版 2G 32G 全网通 黑色 ', '', '华为 畅享8e', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('964', '1', '华为 畅享8e', '华为 畅享8e 青春版 2G 32G 全网通 金色 ', '', '华为 畅享8e', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('965', '1', '华为 畅享8e', '华为 畅享8e 青春版 2G 32G 全网通 蓝色 ', '', '华为 畅享8e', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('966', '1', '华为 畅享max', '华为 畅享max 4G 128G 全网通 琥珀棕 ', '', '华为 畅享max', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('967', '1', '华为 畅享max', '华为 畅享max 4G 128G 全网通 幻夜黑 ', '', '华为 畅享max', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('968', '1', '华为 畅享max', '华为 畅享max 4G 128G 全网通 天际白 ', '', '华为 畅享max', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('969', '1', '华为 麦芒7', '华为 麦芒7 6G 64G 全网通 铂光金 ', '', '华为 麦芒7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('970', '1', '华为 麦芒7', '华为 麦芒7 6G 64G 全网通 亮黑色 ', '', '华为 麦芒7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('971', '1', '华为 麦芒7', '华为 麦芒7 6G 64G 全网通 魅海蓝 ', '', '华为 麦芒7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('973', '1', '华为 荣耀10', '华为 荣耀10 6G 128G 全网通 海鸥灰 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('974', '1', '华为 荣耀10', '华为 荣耀10 6G 128G 全网通 幻夜黑 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('975', '1', '华为 荣耀10', '华为 荣耀10 6G 128G 全网通 幻影蓝 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('976', '1', '华为 荣耀10', '华为 荣耀10 6G 128G 全网通 幻影紫 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('977', '1', '华为 荣耀10', '华为 荣耀10 6G 128G 全网通 铃兰白 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('978', '1', '华为 荣耀10', '华为 荣耀10 6G 64G 全网通 海鸥灰 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('979', '1', '华为 荣耀10', '华为 荣耀10 6G 64G 全网通 幻夜黑 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('980', '1', '华为 荣耀10', '华为 荣耀10 6G 64G 全网通 幻影蓝 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('981', '1', '华为 荣耀10', '华为 荣耀10 6G 64G 全网通 幻影紫 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('982', '1', '华为 荣耀10', '华为 荣耀10 6G 64G 全网通 铃兰白 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('983', '1', '华为 荣耀10', '华为 荣耀10青春版 4G 64G 全网通 幻夜黑 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('984', '1', '华为 荣耀10', '华为 荣耀10青春版 4G 64G 全网通 渐变红 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('985', '1', '华为 荣耀10', '华为 荣耀10青春版 4G 64G 全网通 渐变蓝 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('986', '1', '华为 荣耀10', '华为 荣耀10青春版 6G 128G 全网通 幻夜黑 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('987', '1', '华为 荣耀10', '华为 荣耀10青春版 6G 128G 全网通 渐变红 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('988', '1', '华为 荣耀10', '华为 荣耀10青春版 6G 128G 全网通 渐变蓝 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('989', '1', '华为 荣耀10', '华为 荣耀10青春版 6G 64G 全网通 幻夜黑 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('990', '1', '华为 荣耀10', '华为 荣耀10青春版 6G 64G 全网通 渐变红 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('991', '1', '华为 荣耀10', '华为 荣耀10青春版 6G 64G 全网通 渐变蓝 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('992', '1', '华为 荣耀8X', '华为 荣耀8X 4G 128G 全网通 幻夜黑 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('993', '1', '华为 荣耀8X', '华为 荣耀8X 4G 128G 全网通 魅海蓝 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('994', '1', '华为 荣耀8X', '华为 荣耀8X 4G 128G 全网通 梦幻紫 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('995', '1', '华为 荣耀8X', '华为 荣耀8X 4G 64G 全网通 幻夜黑 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('996', '1', '华为 荣耀8X', '华为 荣耀8X 4G 64G 全网通 幻影蓝 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('997', '1', '华为 荣耀8X', '华为 荣耀8X 4G 64G 全网通 魅海蓝 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('998', '1', '华为 荣耀8X', '华为 荣耀8X 4G 64G 全网通 魅焰红 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('999', '1', '华为 荣耀8X', '华为 荣耀8X 4G 64G 全网通 梦幻紫 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1000', '1', '华为 荣耀8X', '华为 荣耀8X 6G 128G 全网通 幻夜黑 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1001', '1', '华为 荣耀8X', '华为 荣耀8X 6G 128G 全网通 幻影蓝 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1002', '1', '华为 荣耀8X', '华为 荣耀8X 6G 128G 全网通 魅海蓝 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1003', '1', '华为 荣耀8X', '华为 荣耀8X 6G 128G 全网通 魅焰红 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1004', '1', '华为 荣耀8X', '华为 荣耀8X 6G 128G 全网通 梦幻紫 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1005', '1', '华为 荣耀8X', '华为 荣耀8X 6G 64G 全网通 幻夜黑 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1006', '1', '华为 荣耀8X', '华为 荣耀8X 6G 64G 全网通 魅海蓝 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1007', '1', '华为 荣耀8X', '华为 荣耀8X 6G 64G 全网通 魅焰红 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1008', '1', '华为 荣耀8X', '华为 荣耀8X 6G 64G 全网通 梦幻紫 ', '', '华为 荣耀8X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1009', '1', '华为 荣耀8X Max', '华为 荣耀8X Max 4G 128G 全网通 幻夜黑 ', '', '华为 荣耀8X Max', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1010', '1', '华为 荣耀8X Max', '华为 荣耀8X Max 4G 128G 全网通 魅海蓝 ', '', '华为 荣耀8X Max', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1011', '1', '华为 荣耀9i', '华为 荣耀9i 4G 128G 全网通 碧玉青 ', '', '华为 荣耀9i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1012', '1', '华为 荣耀9i', '华为 荣耀9i 4G 128G 全网通 幻夜黑 ', '', '华为 荣耀9i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1013', '1', '华为 荣耀9i', '华为 荣耀9i 4G 128G 全网通 魅海蓝 ', '', '华为 荣耀9i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1014', '1', '华为 荣耀9i', '华为 荣耀9i 4G 128G 全网通 梦幻紫 ', '', '华为 荣耀9i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1015', '1', '华为 荣耀9i', '华为 荣耀9i 4G 64G 全网通 碧玉青 ', '', '华为 荣耀9i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1016', '1', '华为 荣耀9i', '华为 荣耀9i 4G 64G 全网通 幻夜黑 ', '', '华为 荣耀9i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1017', '1', '华为 荣耀9i', '华为 荣耀9i 4G 64G 全网通 魅海蓝 ', '', '华为 荣耀9i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1018', '1', '华为 荣耀9i', '华为 荣耀9i 4G 64G 全网通 梦幻紫 ', '', '华为 荣耀9i', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1019', '1', '华为 荣耀Magic2', '华为 荣耀Magic2 6G 128G 全网通 渐变黑 ', '', '华为 荣耀Magic2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1020', '1', '华为 荣耀Magic2', '华为 荣耀Magic2 6G 128G 全网通 渐变蓝 ', '', '华为 荣耀Magic2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1021', '1', '华为 荣耀Magic2', '华为 荣耀Magic2 8G 128G 全网通 渐变黑 ', '', '华为 荣耀Magic2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1022', '1', '华为 荣耀Magic2', '华为 荣耀Magic2 8G 128G 全网通 渐变红 ', '', '华为 荣耀Magic2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1023', '1', '华为 荣耀Magic2', '华为 荣耀Magic2 8G 128G 全网通 渐变蓝 ', '', '华为 荣耀Magic2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1024', '1', '华为 荣耀Magic2', '华为 荣耀Magic2 8G 256G 全网通 渐变黑 ', '', '华为 荣耀Magic2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1025', '1', '华为 荣耀Magic2', '华为 荣耀Magic2 8G 256G 全网通 渐变红 ', '', '华为 荣耀Magic2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1026', '1', '华为 荣耀Magic2', '华为 荣耀Magic2 8G 256G 全网通 渐变蓝 ', '', '华为 荣耀Magic2', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1027', '1', '华为 荣耀Note10', '华为 荣耀Note10 6G 128G 全网通 幻夜黑 ', '', '华为 荣耀Note10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1028', '1', '华为 荣耀Note10', '华为 荣耀Note10 6G 128G 全网通 幻影蓝 ', '', '华为 荣耀Note10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1029', '1', '华为 荣耀Note10', '华为 荣耀Note10 6G 64G 全网通 幻夜黑 ', '', '华为 荣耀Note10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1030', '1', '华为 荣耀Note10', '华为 荣耀Note10 6G 64G 全网通 幻影蓝 ', '', '华为 荣耀Note10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1031', '1', '华为 荣耀Note10', '华为 荣耀Note10 8G 128G 全网通 幻影蓝 ', '', '华为 荣耀Note10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1032', '1', '华为 荣耀Play', '华为 荣耀Play 4G 64G 全网通 极光蓝 ', '', '华为 荣耀Play', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1033', '1', '华为 荣耀Play', '华为 荣耀Play 6G 128G 全网通 幻夜黑 ', '', '华为 荣耀Play', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1034', '1', '华为 荣耀Play', '华为 荣耀Play 6G 128G 全网通 极光蓝 ', '', '华为 荣耀Play', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1035', '1', '华为 荣耀Play', '华为 荣耀Play 6G 128G 全网通 星云紫 ', '', '华为 荣耀Play', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1036', '1', '华为 荣耀Play', '华为 荣耀Play 6G 64G 全网通 幻夜黑 ', '', '华为 荣耀Play', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1037', '1', '华为 荣耀Play', '华为 荣耀Play 6G 64G 全网通 极光蓝 ', '', '华为 荣耀Play', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1038', '1', '华为 荣耀Play', '华为 荣耀Play 6G 64G 移动全网通 幻夜黑 ', '', '华为 荣耀Play', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1039', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7 2G 16G 全网通 黑色 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1040', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7 2G 16G 全网通 金色 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1041', '1', '华为 荣耀畅玩7', '华为 荣耀畅玩7 2G 16G 全网通 蓝色 ', '', '华为 荣耀畅玩7', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1042', '1', '华为 荣耀畅玩7A', '华为 荣耀畅玩7A 2G 32G 全网通 铂光金 ', '', '华为 荣耀畅玩7A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1043', '1', '华为 荣耀畅玩7A', '华为 荣耀畅玩7A 2G 32G 全网通 幻夜黑 ', '', '华为 荣耀畅玩7A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1044', '1', '华为 荣耀畅玩7A', '华为 荣耀畅玩7A 2G 32G 全网通 极光蓝 ', '', '华为 荣耀畅玩7A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1045', '1', '华为 荣耀畅玩7A', '华为 荣耀畅玩7A 3G 32G 全网通 铂光金 ', '', '华为 荣耀畅玩7A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1046', '1', '华为 荣耀畅玩7A', '华为 荣耀畅玩7A 3G 32G 全网通 幻夜黑 ', '', '华为 荣耀畅玩7A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1047', '1', '华为 荣耀畅玩7A', '华为 荣耀畅玩7A 3G 32G 全网通 极光蓝 ', '', '华为 荣耀畅玩7A', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1048', '1', '华为 荣耀畅玩7C', '华为 荣耀畅玩7C 3G 32G 全网通 铂光金 ', '', '华为 荣耀畅玩7C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1049', '1', '华为 荣耀畅玩7C', '华为 荣耀畅玩7C 3G 32G 全网通 幻夜黑 ', '', '华为 荣耀畅玩7C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1050', '1', '华为 荣耀畅玩7C', '华为 荣耀畅玩7C 3G 32G 全网通 极光蓝 ', '', '华为 荣耀畅玩7C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1051', '1', '华为 荣耀畅玩7C', '华为 荣耀畅玩7C 3G 32G 全网通 烈焰红 ', '', '华为 荣耀畅玩7C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1052', '1', '华为 荣耀畅玩7C', '华为 荣耀畅玩7C 4G 64G 全网通 铂光金 ', '', '华为 荣耀畅玩7C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1053', '1', '华为 荣耀畅玩7C', '华为 荣耀畅玩7C 4G 64G 全网通 幻夜黑 ', '', '华为 荣耀畅玩7C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1054', '1', '华为 荣耀畅玩7C', '华为 荣耀畅玩7C 4G 64G 全网通 极光蓝 ', '', '华为 荣耀畅玩7C', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('381', '1', '魅族 魅蓝 E', '魅族 魅蓝 E 全网通 3G 32G 月光银 ', '', '魅族 魅蓝 E', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('177', '1', '苹果 iPhone X', '苹果 iPhone X 64G 全网通 深空灰色 ', '', '苹果 iPhone X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('185', '1', '苹果 iPhone X', '苹果 iPhone X 64G 全网通 银色 ', '', '苹果 iPhone X', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('727', '1', '苹果 iPhone XR', '苹果 iPhone XR 64G 全网通 珊瑚色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('738', '1', '苹果 iPhone XS', '苹果 iPhone XS 256G 全网通 深空灰色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('755', '1', '苹果 iPhone XS', '苹果 iPhone XS 64G 全网通 深空灰色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('774', '1', '苹果 iPhone XS', '苹果 iPhone XS Max 256G 全网通 深空灰色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('790', '1', '苹果 iPhone XS', '苹果 iPhone XS Max 512G 全网通 深空灰色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('805', '1', '苹果 iPhone XS', '苹果 iPhone XS Max 64G 全网通 深空灰色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('553', '1', '苹果 iPhone XR', '苹果 iPhone XR 128G 全网通 白色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('563', '1', '苹果 iPhone XR', '苹果 iPhone XR 128G 全网通 黑色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('573', '1', '苹果 iPhone XR', '苹果 iPhone XR 128G 全网通 红色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('625', '1', '苹果 iPhone XR', '苹果 iPhone XR 128G 全网通 黄色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('630', '1', '苹果 iPhone XR', '苹果 iPhone XR 128G 全网通 蓝色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('636', '1', '苹果 iPhone XR', '苹果 iPhone XR 128G 全网通 珊瑚色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('642', '1', '苹果 iPhone XR', '苹果 iPhone XR 256G 全网通 白色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('648', '1', '苹果 iPhone XR', '苹果 iPhone XR 256G 全网通 黑色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('656', '1', '苹果 iPhone XR', '苹果 iPhone XR 256G 全网通 红色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('666', '1', '苹果 iPhone XR', '苹果 iPhone XR 256G 全网通 黄色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('674', '1', '苹果 iPhone XR', '苹果 iPhone XR 256G 全网通 蓝色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('687', '1', '苹果 iPhone XR', '苹果 iPhone XR 256G 全网通 珊瑚色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('695', '1', '苹果 iPhone XR', '苹果 iPhone XR 64G 全网通 白色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('702', '1', '苹果 iPhone XR', '苹果 iPhone XR 64G 全网通 黑色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('711', '1', '苹果 iPhone XR', '苹果 iPhone XR 64G 全网通 红色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('717', '1', '苹果 iPhone XR', '苹果 iPhone XR 64G 全网通 黄色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('722', '1', '苹果 iPhone XR', '苹果 iPhone XR 64G 全网通 蓝色 ', '', '苹果 iPhone XR', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('732', '1', '苹果 iPhone XS', '苹果 iPhone XS 256G 全网通 金色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('743', '1', '苹果 iPhone XS', '苹果 iPhone XS 256G 全网通 银色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('749', '1', '苹果 iPhone XS', '苹果 iPhone XS 64G 全网通 金色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('762', '1', '苹果 iPhone XS', '苹果 iPhone XS 64G 全网通 银色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('768', '1', '苹果 iPhone XS', '苹果 iPhone XS Max 256G 全网通 金色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('780', '1', '苹果 iPhone XS', '苹果 iPhone XS Max 256G 全网通 银色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('785', '1', '苹果 iPhone XS', '苹果 iPhone XS Max 512G 全网通 金色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('795', '1', '苹果 iPhone XS', '苹果 iPhone XS Max 512G 全网通 银色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('800', '1', '苹果 iPhone XS', '苹果 iPhone XS Max 64G 全网通 金色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('809', '1', '苹果 iPhone XS', '苹果 iPhone XS Max 64G 全网通 银色 ', '', '苹果 iPhone XS', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('972', '1', '华为 荣耀10', '华为 荣耀10 4G 128G 全网通 幻夜黑 ', '', '华为 荣耀10', '', '', '0');
+INSERT INTO `mc_product_description` VALUES ('1057', '1', '华为100', '&lt;p&gt;华为p1001&lt;br&gt;&lt;/p&gt;', '华为100', 'meta20', '华为100', '华为100', '64');
 
 -- ----------------------------
 -- Table structure for mc_product_discount
 -- ----------------------------
 DROP TABLE IF EXISTS `mc_product_discount`;
 CREATE TABLE `mc_product_discount` (
-  `product_discount_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` int(11) NOT NULL,
-  `customer_group_id` int(11) NOT NULL,
-  `quantity` int(4) NOT NULL DEFAULT '0',
-  `priority` int(5) NOT NULL DEFAULT '1',
-  `price` decimal(15,4) NOT NULL DEFAULT '0.0000',
-  `date_start` date NOT NULL DEFAULT '0000-00-00',
-  `date_end` date NOT NULL DEFAULT '0000-00-00',
-  PRIMARY KEY (`product_discount_id`),
-  KEY `product_id` (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `product_discount_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `customer_group_id` varchar(255) DEFAULT NULL,
+  `quantity` varchar(255) DEFAULT NULL,
+  `priority` varchar(255) DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `date_start` varchar(255) DEFAULT NULL,
+  `date_end` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of mc_product_discount
 -- ----------------------------
-INSERT INTO `mc_product_discount` VALUES ('3', '42', '1', '10', '1', '88.0000', '2015-01-01', '2055-12-31');
-INSERT INTO `mc_product_discount` VALUES ('2', '42', '1', '20', '1', '77.0000', '2015-01-01', '2055-12-31');
-INSERT INTO `mc_product_discount` VALUES ('1', '42', '1', '30', '1', '66.0000', '2015-01-01', '2055-12-31');
 
 -- ----------------------------
 -- Table structure for mc_product_filter
@@ -7021,6 +8134,9 @@ CREATE TABLE `mc_product_filter` (
 -- ----------------------------
 -- Records of mc_product_filter
 -- ----------------------------
+INSERT INTO `mc_product_filter` VALUES ('1056', '17');
+INSERT INTO `mc_product_filter` VALUES ('1056', '22');
+INSERT INTO `mc_product_filter` VALUES ('1056', '26');
 
 -- ----------------------------
 -- Table structure for mc_product_image
@@ -7033,49 +8149,24 @@ CREATE TABLE `mc_product_image` (
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=96 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_product_image
 -- ----------------------------
-INSERT INTO `mc_product_image` VALUES ('47', '43', 'catalog/demo/product/product_9/product9_2.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('28', '44', 'catalog/demo/product/product_10/product10_2.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('15', '35', 'catalog/demo/product/product_14/product14_7.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('16', '36', 'catalog/demo/product/product_6/product6_3.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('17', '36', 'catalog/demo/product/product_6/product6_4.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('18', '36', 'catalog/demo/product/product_6/product6_5.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('19', '36', 'catalog/demo/product/product_6/product6_6.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('20', '41', 'catalog/demo/product/product_4/product4_2.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('21', '41', 'catalog/demo/product/product_4/product4_3.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('22', '41', 'catalog/demo/product/product_4/product4_7.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('23', '42', 'catalog/demo/product/product_1/product1_2.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('13', '35', 'catalog/demo/product/product_14/product14_4.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('14', '35', 'catalog/demo/product/product_14/product14_6.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('46', '43', 'catalog/demo/product/product_9/product9_4.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('24', '42', 'catalog/demo/product/product_1/product1_3.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('45', '43', 'catalog/demo/product/product_9/product9_5.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('30', '45', 'catalog/demo/product/product_11/product11_2.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('29', '44', 'catalog/demo/product/product_10/product10_3.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('1', '28', 'catalog/demo/product/product_3/product3_2.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('2', '28', 'catalog/demo/product/product_3/product3_4.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('3', '28', 'catalog/demo/product/product_3/product3_5.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('4', '29', 'catalog/demo/product/product_13/product13_2.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('5', '29', 'catalog/demo/product/product_13/product13_2.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('6', '31', 'catalog/demo/product/product_12/product12_3.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('7', '31', 'catalog/demo/product/product_12/product12_5.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('8', '32', 'catalog/demo/product/product_8/product8_2.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('9', '32', 'catalog/demo/product/product_8/product8_4.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('10', '34', 'catalog/demo/product/product_7/product7_2.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('11', '34', 'catalog/demo/product/product_7/product7_4.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('12', '34', 'catalog/demo/product/product_7/product7_5.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('31', '45', 'catalog/demo/product/product_11/product11_4.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('32', '47', 'catalog/demo/product/product_2/product2_3.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('33', '47', 'catalog/demo/product/product_2/product2_4.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('34', '47', 'catalog/demo/product/product_2/product2_5.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('35', '47', 'catalog/demo/product/product_2/product2_6.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('36', '48', 'catalog/demo/product/product_5/product5_4.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('37', '48', 'catalog/demo/product/product_5/product5_5.jpg', '0');
-INSERT INTO `mc_product_image` VALUES ('38', '48', 'catalog/demo/product/product_5/product5_7.jpg', '0');
+INSERT INTO `mc_product_image` VALUES ('85', '40', 'catalog/p20p 粉.png', '0');
+INSERT INTO `mc_product_image` VALUES ('86', '40', 'catalog/p20p  闪蝶.png', '0');
+INSERT INTO `mc_product_image` VALUES ('92', '106', '', '0');
+INSERT INTO `mc_product_image` VALUES ('88', '107', '', '0');
+INSERT INTO `mc_product_image` VALUES ('73', '155', 'catalog/351108a5-6a29-4415-a5cc-7771173be751_big_vW-rhh0HyJDpg9qrCT-jtw.jpg', '0');
+INSERT INTO `mc_product_image` VALUES ('74', '156', 'catalog/351108a5-6a29-4415-a5cc-7771173be751_big_vW-rhh0HyJDpg9qrCT-jtw.jpg', '0');
+INSERT INTO `mc_product_image` VALUES ('91', '158', '', '0');
+INSERT INTO `mc_product_image` VALUES ('94', '159', '', '0');
+INSERT INTO `mc_product_image` VALUES ('89', '161', '', '0');
+INSERT INTO `mc_product_image` VALUES ('90', '162', '', '0');
+INSERT INTO `mc_product_image` VALUES ('84', '40', 'catalog/3f900ee0-05f1-47e0-8301-9e514f5db4bd_big_Zt_IRWs2NDK_BFgSl7LTEw==.jpg', '0');
+INSERT INTO `mc_product_image` VALUES ('93', '103', '', '0');
+INSERT INTO `mc_product_image` VALUES ('95', '99', '', '0');
 
 -- ----------------------------
 -- Table structure for mc_product_option
@@ -7088,23 +8179,11 @@ CREATE TABLE `mc_product_option` (
   `value` text NOT NULL,
   `required` tinyint(1) NOT NULL,
   PRIMARY KEY (`product_option_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_product_option
 -- ----------------------------
-INSERT INTO `mc_product_option` VALUES ('1', '30', '5', '', '1');
-INSERT INTO `mc_product_option` VALUES ('2', '35', '11', '', '1');
-INSERT INTO `mc_product_option` VALUES ('3', '42', '1', '', '1');
-INSERT INTO `mc_product_option` VALUES ('4', '42', '2', '', '1');
-INSERT INTO `mc_product_option` VALUES ('10', '42', '9', '22:25', '1');
-INSERT INTO `mc_product_option` VALUES ('8', '42', '7', '', '1');
-INSERT INTO `mc_product_option` VALUES ('9', '42', '8', '2011-02-20', '1');
-INSERT INTO `mc_product_option` VALUES ('7', '42', '6', '', '1');
-INSERT INTO `mc_product_option` VALUES ('6', '42', '5', '', '1');
-INSERT INTO `mc_product_option` VALUES ('5', '42', '4', 'test', '1');
-INSERT INTO `mc_product_option` VALUES ('11', '42', '10', '2011-02-20 22:25', '1');
-INSERT INTO `mc_product_option` VALUES ('12', '47', '12', '2011-04-22', '1');
 
 -- ----------------------------
 -- Table structure for mc_product_option_value
@@ -7125,27 +8204,11 @@ CREATE TABLE `mc_product_option_value` (
   `weight` decimal(15,8) NOT NULL,
   `weight_prefix` varchar(1) NOT NULL,
   PRIMARY KEY (`product_option_value_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_product_option_value
 -- ----------------------------
-INSERT INTO `mc_product_option_value` VALUES ('12', '4', '42', '2', '45', '3998', '1', '40.0000', '+', '0', '+', '40.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('13', '6', '42', '5', '39', '92', '1', '4.0000', '+', '0', '+', '4.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('8', '3', '42', '1', '43', '300', '1', '30.0000', '+', '3', '+', '30.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('9', '4', '42', '2', '23', '48', '1', '10.0000', '+', '0', '+', '10.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('10', '4', '42', '2', '24', '194', '1', '20.0000', '+', '0', '+', '20.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('11', '4', '42', '2', '44', '2696', '1', '30.0000', '+', '0', '+', '30.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('6', '3', '42', '1', '31', '146', '1', '20.0000', '+', '2', '-', '20.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('7', '3', '42', '1', '32', '96', '1', '10.0000', '+', '1', '+', '10.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('5', '2', '35', '11', '48', '15', '1', '15.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('4', '2', '35', '11', '47', '10', '1', '10.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('3', '2', '35', '11', '46', '0', '1', '5.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('2', '1', '30', '5', '40', '2', '1', '0.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('1', '1', '30', '5', '39', '0', '1', '0.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('14', '6', '42', '5', '40', '300', '0', '3.0000', '+', '0', '+', '3.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('15', '6', '42', '5', '41', '100', '0', '1.0000', '+', '0', '+', '1.00000000', '+');
-INSERT INTO `mc_product_option_value` VALUES ('16', '6', '42', '5', '42', '200', '1', '2.0000', '+', '0', '+', '2.00000000', '+');
 
 -- ----------------------------
 -- Table structure for mc_product_recurring
@@ -7175,10 +8238,8 @@ CREATE TABLE `mc_product_related` (
 -- ----------------------------
 -- Records of mc_product_related
 -- ----------------------------
-INSERT INTO `mc_product_related` VALUES ('40', '42');
-INSERT INTO `mc_product_related` VALUES ('41', '42');
-INSERT INTO `mc_product_related` VALUES ('42', '40');
-INSERT INTO `mc_product_related` VALUES ('42', '41');
+INSERT INTO `mc_product_related` VALUES ('493', '1056');
+INSERT INTO `mc_product_related` VALUES ('1056', '493');
 
 -- ----------------------------
 -- Table structure for mc_product_reward
@@ -7190,42 +8251,32 @@ CREATE TABLE `mc_product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_product_reward
 -- ----------------------------
-INSERT INTO `mc_product_reward` VALUES ('6', '45', '1', '800');
-INSERT INTO `mc_product_reward` VALUES ('2', '30', '1', '200');
-INSERT INTO `mc_product_reward` VALUES ('8', '49', '1', '1000');
-INSERT INTO `mc_product_reward` VALUES ('5', '44', '1', '700');
-INSERT INTO `mc_product_reward` VALUES ('7', '47', '1', '300');
-INSERT INTO `mc_product_reward` VALUES ('11', '43', '1', '600');
-INSERT INTO `mc_product_reward` VALUES ('3', '42', '1', '100');
-INSERT INTO `mc_product_reward` VALUES ('1', '28', '1', '400');
+INSERT INTO `mc_product_reward` VALUES ('12', '1056', '2', '100');
+INSERT INTO `mc_product_reward` VALUES ('13', '1056', '3', '90');
+INSERT INTO `mc_product_reward` VALUES ('14', '1056', '1', '10');
 
 -- ----------------------------
 -- Table structure for mc_product_special
 -- ----------------------------
 DROP TABLE IF EXISTS `mc_product_special`;
 CREATE TABLE `mc_product_special` (
-  `product_special_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` int(11) NOT NULL,
-  `customer_group_id` int(11) NOT NULL,
-  `priority` int(5) NOT NULL DEFAULT '1',
-  `price` decimal(15,4) NOT NULL DEFAULT '0.0000',
-  `date_start` date NOT NULL DEFAULT '0000-00-00',
-  `date_end` date NOT NULL DEFAULT '0000-00-00',
-  PRIMARY KEY (`product_special_id`),
-  KEY `product_id` (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `product_special_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `customer_group_id` varchar(255) DEFAULT NULL,
+  `priority` varchar(255) DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `date_start` varchar(255) DEFAULT NULL,
+  `date_end` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of mc_product_special
 -- ----------------------------
-INSERT INTO `mc_product_special` VALUES ('1', '30', '1', '2', '90.0000', '2015-01-01', '2055-12-31');
-INSERT INTO `mc_product_special` VALUES ('3', '42', '1', '1', '90.0000', '2015-01-01', '2055-12-31');
-INSERT INTO `mc_product_special` VALUES ('2', '30', '1', '1', '80.0000', '2015-01-01', '2055-12-31');
 
 -- ----------------------------
 -- Table structure for mc_product_to_category
@@ -7241,52 +8292,780 @@ CREATE TABLE `mc_product_to_category` (
 -- ----------------------------
 -- Records of mc_product_to_category
 -- ----------------------------
-INSERT INTO `mc_product_to_category` VALUES ('28', '20');
-INSERT INTO `mc_product_to_category` VALUES ('28', '26');
-INSERT INTO `mc_product_to_category` VALUES ('29', '25');
-INSERT INTO `mc_product_to_category` VALUES ('29', '28');
-INSERT INTO `mc_product_to_category` VALUES ('29', '36');
-INSERT INTO `mc_product_to_category` VALUES ('30', '25');
-INSERT INTO `mc_product_to_category` VALUES ('30', '28');
-INSERT INTO `mc_product_to_category` VALUES ('30', '57');
-INSERT INTO `mc_product_to_category` VALUES ('31', '25');
-INSERT INTO `mc_product_to_category` VALUES ('31', '28');
-INSERT INTO `mc_product_to_category` VALUES ('31', '36');
-INSERT INTO `mc_product_to_category` VALUES ('32', '34');
-INSERT INTO `mc_product_to_category` VALUES ('32', '43');
-INSERT INTO `mc_product_to_category` VALUES ('33', '25');
-INSERT INTO `mc_product_to_category` VALUES ('33', '28');
-INSERT INTO `mc_product_to_category` VALUES ('33', '35');
-INSERT INTO `mc_product_to_category` VALUES ('34', '34');
-INSERT INTO `mc_product_to_category` VALUES ('34', '43');
-INSERT INTO `mc_product_to_category` VALUES ('35', '20');
-INSERT INTO `mc_product_to_category` VALUES ('35', '27');
-INSERT INTO `mc_product_to_category` VALUES ('36', '34');
-INSERT INTO `mc_product_to_category` VALUES ('36', '44');
-INSERT INTO `mc_product_to_category` VALUES ('40', '20');
-INSERT INTO `mc_product_to_category` VALUES ('40', '27');
-INSERT INTO `mc_product_to_category` VALUES ('41', '25');
-INSERT INTO `mc_product_to_category` VALUES ('41', '29');
-INSERT INTO `mc_product_to_category` VALUES ('41', '32');
-INSERT INTO `mc_product_to_category` VALUES ('42', '28');
-INSERT INTO `mc_product_to_category` VALUES ('42', '36');
-INSERT INTO `mc_product_to_category` VALUES ('43', '25');
-INSERT INTO `mc_product_to_category` VALUES ('43', '28');
-INSERT INTO `mc_product_to_category` VALUES ('43', '36');
-INSERT INTO `mc_product_to_category` VALUES ('44', '25');
-INSERT INTO `mc_product_to_category` VALUES ('44', '30');
-INSERT INTO `mc_product_to_category` VALUES ('44', '32');
-INSERT INTO `mc_product_to_category` VALUES ('45', '17');
-INSERT INTO `mc_product_to_category` VALUES ('46', '20');
-INSERT INTO `mc_product_to_category` VALUES ('46', '27');
-INSERT INTO `mc_product_to_category` VALUES ('47', '20');
-INSERT INTO `mc_product_to_category` VALUES ('47', '26');
-INSERT INTO `mc_product_to_category` VALUES ('48', '34');
-INSERT INTO `mc_product_to_category` VALUES ('48', '52');
-INSERT INTO `mc_product_to_category` VALUES ('48', '58');
-INSERT INTO `mc_product_to_category` VALUES ('49', '25');
-INSERT INTO `mc_product_to_category` VALUES ('49', '28');
-INSERT INTO `mc_product_to_category` VALUES ('49', '57');
+INSERT INTO `mc_product_to_category` VALUES ('90', '61');
+INSERT INTO `mc_product_to_category` VALUES ('91', '61');
+INSERT INTO `mc_product_to_category` VALUES ('92', '61');
+INSERT INTO `mc_product_to_category` VALUES ('93', '61');
+INSERT INTO `mc_product_to_category` VALUES ('95', '61');
+INSERT INTO `mc_product_to_category` VALUES ('96', '61');
+INSERT INTO `mc_product_to_category` VALUES ('97', '61');
+INSERT INTO `mc_product_to_category` VALUES ('98', '62');
+INSERT INTO `mc_product_to_category` VALUES ('99', '61');
+INSERT INTO `mc_product_to_category` VALUES ('100', '62');
+INSERT INTO `mc_product_to_category` VALUES ('101', '61');
+INSERT INTO `mc_product_to_category` VALUES ('103', '62');
+INSERT INTO `mc_product_to_category` VALUES ('104', '61');
+INSERT INTO `mc_product_to_category` VALUES ('106', '62');
+INSERT INTO `mc_product_to_category` VALUES ('107', '61');
+INSERT INTO `mc_product_to_category` VALUES ('109', '62');
+INSERT INTO `mc_product_to_category` VALUES ('110', '61');
+INSERT INTO `mc_product_to_category` VALUES ('113', '62');
+INSERT INTO `mc_product_to_category` VALUES ('114', '61');
+INSERT INTO `mc_product_to_category` VALUES ('117', '62');
+INSERT INTO `mc_product_to_category` VALUES ('118', '61');
+INSERT INTO `mc_product_to_category` VALUES ('120', '62');
+INSERT INTO `mc_product_to_category` VALUES ('121', '61');
+INSERT INTO `mc_product_to_category` VALUES ('122', '61');
+INSERT INTO `mc_product_to_category` VALUES ('126', '62');
+INSERT INTO `mc_product_to_category` VALUES ('127', '61');
+INSERT INTO `mc_product_to_category` VALUES ('130', '62');
+INSERT INTO `mc_product_to_category` VALUES ('131', '61');
+INSERT INTO `mc_product_to_category` VALUES ('133', '62');
+INSERT INTO `mc_product_to_category` VALUES ('134', '61');
+INSERT INTO `mc_product_to_category` VALUES ('139', '62');
+INSERT INTO `mc_product_to_category` VALUES ('140', '61');
+INSERT INTO `mc_product_to_category` VALUES ('147', '62');
+INSERT INTO `mc_product_to_category` VALUES ('148', '61');
+INSERT INTO `mc_product_to_category` VALUES ('152', '26');
+INSERT INTO `mc_product_to_category` VALUES ('153', '62');
+INSERT INTO `mc_product_to_category` VALUES ('154', '61');
+INSERT INTO `mc_product_to_category` VALUES ('158', '26');
+INSERT INTO `mc_product_to_category` VALUES ('159', '62');
+INSERT INTO `mc_product_to_category` VALUES ('161', '61');
+INSERT INTO `mc_product_to_category` VALUES ('162', '61');
+INSERT INTO `mc_product_to_category` VALUES ('164', '60');
+INSERT INTO `mc_product_to_category` VALUES ('164', '74');
+INSERT INTO `mc_product_to_category` VALUES ('167', '26');
+INSERT INTO `mc_product_to_category` VALUES ('168', '62');
+INSERT INTO `mc_product_to_category` VALUES ('169', '61');
+INSERT INTO `mc_product_to_category` VALUES ('174', '60');
+INSERT INTO `mc_product_to_category` VALUES ('177', '26');
+INSERT INTO `mc_product_to_category` VALUES ('178', '62');
+INSERT INTO `mc_product_to_category` VALUES ('179', '61');
+INSERT INTO `mc_product_to_category` VALUES ('183', '60');
+INSERT INTO `mc_product_to_category` VALUES ('185', '26');
+INSERT INTO `mc_product_to_category` VALUES ('186', '62');
+INSERT INTO `mc_product_to_category` VALUES ('187', '61');
+INSERT INTO `mc_product_to_category` VALUES ('193', '60');
+INSERT INTO `mc_product_to_category` VALUES ('195', '26');
+INSERT INTO `mc_product_to_category` VALUES ('196', '62');
+INSERT INTO `mc_product_to_category` VALUES ('197', '61');
+INSERT INTO `mc_product_to_category` VALUES ('200', '60');
+INSERT INTO `mc_product_to_category` VALUES ('202', '26');
+INSERT INTO `mc_product_to_category` VALUES ('203', '62');
+INSERT INTO `mc_product_to_category` VALUES ('204', '61');
+INSERT INTO `mc_product_to_category` VALUES ('207', '60');
+INSERT INTO `mc_product_to_category` VALUES ('209', '26');
+INSERT INTO `mc_product_to_category` VALUES ('210', '62');
+INSERT INTO `mc_product_to_category` VALUES ('211', '61');
+INSERT INTO `mc_product_to_category` VALUES ('216', '60');
+INSERT INTO `mc_product_to_category` VALUES ('218', '26');
+INSERT INTO `mc_product_to_category` VALUES ('219', '62');
+INSERT INTO `mc_product_to_category` VALUES ('220', '61');
+INSERT INTO `mc_product_to_category` VALUES ('227', '60');
+INSERT INTO `mc_product_to_category` VALUES ('229', '26');
+INSERT INTO `mc_product_to_category` VALUES ('230', '62');
+INSERT INTO `mc_product_to_category` VALUES ('231', '61');
+INSERT INTO `mc_product_to_category` VALUES ('233', '69');
+INSERT INTO `mc_product_to_category` VALUES ('235', '60');
+INSERT INTO `mc_product_to_category` VALUES ('237', '26');
+INSERT INTO `mc_product_to_category` VALUES ('238', '62');
+INSERT INTO `mc_product_to_category` VALUES ('239', '61');
+INSERT INTO `mc_product_to_category` VALUES ('241', '69');
+INSERT INTO `mc_product_to_category` VALUES ('245', '60');
+INSERT INTO `mc_product_to_category` VALUES ('246', '26');
+INSERT INTO `mc_product_to_category` VALUES ('247', '62');
+INSERT INTO `mc_product_to_category` VALUES ('248', '61');
+INSERT INTO `mc_product_to_category` VALUES ('252', '69');
+INSERT INTO `mc_product_to_category` VALUES ('258', '60');
+INSERT INTO `mc_product_to_category` VALUES ('259', '26');
+INSERT INTO `mc_product_to_category` VALUES ('260', '62');
+INSERT INTO `mc_product_to_category` VALUES ('261', '61');
+INSERT INTO `mc_product_to_category` VALUES ('264', '72');
+INSERT INTO `mc_product_to_category` VALUES ('266', '69');
+INSERT INTO `mc_product_to_category` VALUES ('271', '60');
+INSERT INTO `mc_product_to_category` VALUES ('272', '26');
+INSERT INTO `mc_product_to_category` VALUES ('273', '26');
+INSERT INTO `mc_product_to_category` VALUES ('274', '62');
+INSERT INTO `mc_product_to_category` VALUES ('275', '61');
+INSERT INTO `mc_product_to_category` VALUES ('280', '72');
+INSERT INTO `mc_product_to_category` VALUES ('282', '69');
+INSERT INTO `mc_product_to_category` VALUES ('286', '60');
+INSERT INTO `mc_product_to_category` VALUES ('287', '26');
+INSERT INTO `mc_product_to_category` VALUES ('288', '62');
+INSERT INTO `mc_product_to_category` VALUES ('289', '61');
+INSERT INTO `mc_product_to_category` VALUES ('294', '72');
+INSERT INTO `mc_product_to_category` VALUES ('296', '69');
+INSERT INTO `mc_product_to_category` VALUES ('301', '60');
+INSERT INTO `mc_product_to_category` VALUES ('302', '26');
+INSERT INTO `mc_product_to_category` VALUES ('303', '62');
+INSERT INTO `mc_product_to_category` VALUES ('304', '61');
+INSERT INTO `mc_product_to_category` VALUES ('311', '72');
+INSERT INTO `mc_product_to_category` VALUES ('313', '69');
+INSERT INTO `mc_product_to_category` VALUES ('317', '60');
+INSERT INTO `mc_product_to_category` VALUES ('318', '26');
+INSERT INTO `mc_product_to_category` VALUES ('319', '62');
+INSERT INTO `mc_product_to_category` VALUES ('320', '61');
+INSERT INTO `mc_product_to_category` VALUES ('326', '72');
+INSERT INTO `mc_product_to_category` VALUES ('327', '72');
+INSERT INTO `mc_product_to_category` VALUES ('329', '69');
+INSERT INTO `mc_product_to_category` VALUES ('333', '60');
+INSERT INTO `mc_product_to_category` VALUES ('334', '26');
+INSERT INTO `mc_product_to_category` VALUES ('335', '62');
+INSERT INTO `mc_product_to_category` VALUES ('343', '72');
+INSERT INTO `mc_product_to_category` VALUES ('344', '72');
+INSERT INTO `mc_product_to_category` VALUES ('345', '69');
+INSERT INTO `mc_product_to_category` VALUES ('349', '60');
+INSERT INTO `mc_product_to_category` VALUES ('350', '26');
+INSERT INTO `mc_product_to_category` VALUES ('351', '62');
+INSERT INTO `mc_product_to_category` VALUES ('352', '64');
+INSERT INTO `mc_product_to_category` VALUES ('359', '72');
+INSERT INTO `mc_product_to_category` VALUES ('360', '69');
+INSERT INTO `mc_product_to_category` VALUES ('361', '69');
+INSERT INTO `mc_product_to_category` VALUES ('365', '60');
+INSERT INTO `mc_product_to_category` VALUES ('366', '26');
+INSERT INTO `mc_product_to_category` VALUES ('367', '62');
+INSERT INTO `mc_product_to_category` VALUES ('368', '64');
+INSERT INTO `mc_product_to_category` VALUES ('376', '69');
+INSERT INTO `mc_product_to_category` VALUES ('378', '60');
+INSERT INTO `mc_product_to_category` VALUES ('379', '26');
+INSERT INTO `mc_product_to_category` VALUES ('380', '62');
+INSERT INTO `mc_product_to_category` VALUES ('381', '64');
+INSERT INTO `mc_product_to_category` VALUES ('387', '69');
+INSERT INTO `mc_product_to_category` VALUES ('389', '60');
+INSERT INTO `mc_product_to_category` VALUES ('390', '26');
+INSERT INTO `mc_product_to_category` VALUES ('391', '62');
+INSERT INTO `mc_product_to_category` VALUES ('392', '64');
+INSERT INTO `mc_product_to_category` VALUES ('398', '69');
+INSERT INTO `mc_product_to_category` VALUES ('400', '60');
+INSERT INTO `mc_product_to_category` VALUES ('401', '26');
+INSERT INTO `mc_product_to_category` VALUES ('402', '62');
+INSERT INTO `mc_product_to_category` VALUES ('403', '64');
+INSERT INTO `mc_product_to_category` VALUES ('409', '69');
+INSERT INTO `mc_product_to_category` VALUES ('411', '60');
+INSERT INTO `mc_product_to_category` VALUES ('412', '26');
+INSERT INTO `mc_product_to_category` VALUES ('413', '62');
+INSERT INTO `mc_product_to_category` VALUES ('414', '61');
+INSERT INTO `mc_product_to_category` VALUES ('415', '64');
+INSERT INTO `mc_product_to_category` VALUES ('416', '63');
+INSERT INTO `mc_product_to_category` VALUES ('417', '27');
+INSERT INTO `mc_product_to_category` VALUES ('421', '69');
+INSERT INTO `mc_product_to_category` VALUES ('423', '60');
+INSERT INTO `mc_product_to_category` VALUES ('424', '26');
+INSERT INTO `mc_product_to_category` VALUES ('425', '62');
+INSERT INTO `mc_product_to_category` VALUES ('426', '61');
+INSERT INTO `mc_product_to_category` VALUES ('427', '64');
+INSERT INTO `mc_product_to_category` VALUES ('428', '63');
+INSERT INTO `mc_product_to_category` VALUES ('433', '69');
+INSERT INTO `mc_product_to_category` VALUES ('435', '60');
+INSERT INTO `mc_product_to_category` VALUES ('436', '26');
+INSERT INTO `mc_product_to_category` VALUES ('437', '62');
+INSERT INTO `mc_product_to_category` VALUES ('438', '61');
+INSERT INTO `mc_product_to_category` VALUES ('439', '64');
+INSERT INTO `mc_product_to_category` VALUES ('440', '63');
+INSERT INTO `mc_product_to_category` VALUES ('441', '27');
+INSERT INTO `mc_product_to_category` VALUES ('446', '69');
+INSERT INTO `mc_product_to_category` VALUES ('448', '60');
+INSERT INTO `mc_product_to_category` VALUES ('449', '26');
+INSERT INTO `mc_product_to_category` VALUES ('450', '62');
+INSERT INTO `mc_product_to_category` VALUES ('451', '61');
+INSERT INTO `mc_product_to_category` VALUES ('452', '64');
+INSERT INTO `mc_product_to_category` VALUES ('453', '63');
+INSERT INTO `mc_product_to_category` VALUES ('454', '27');
+INSERT INTO `mc_product_to_category` VALUES ('458', '69');
+INSERT INTO `mc_product_to_category` VALUES ('460', '60');
+INSERT INTO `mc_product_to_category` VALUES ('461', '60');
+INSERT INTO `mc_product_to_category` VALUES ('462', '26');
+INSERT INTO `mc_product_to_category` VALUES ('463', '61');
+INSERT INTO `mc_product_to_category` VALUES ('464', '64');
+INSERT INTO `mc_product_to_category` VALUES ('465', '63');
+INSERT INTO `mc_product_to_category` VALUES ('466', '27');
+INSERT INTO `mc_product_to_category` VALUES ('470', '69');
+INSERT INTO `mc_product_to_category` VALUES ('472', '60');
+INSERT INTO `mc_product_to_category` VALUES ('473', '60');
+INSERT INTO `mc_product_to_category` VALUES ('474', '26');
+INSERT INTO `mc_product_to_category` VALUES ('475', '61');
+INSERT INTO `mc_product_to_category` VALUES ('476', '64');
+INSERT INTO `mc_product_to_category` VALUES ('477', '63');
+INSERT INTO `mc_product_to_category` VALUES ('478', '27');
+INSERT INTO `mc_product_to_category` VALUES ('483', '60');
+INSERT INTO `mc_product_to_category` VALUES ('484', '26');
+INSERT INTO `mc_product_to_category` VALUES ('485', '61');
+INSERT INTO `mc_product_to_category` VALUES ('486', '64');
+INSERT INTO `mc_product_to_category` VALUES ('487', '63');
+INSERT INTO `mc_product_to_category` VALUES ('488', '27');
+INSERT INTO `mc_product_to_category` VALUES ('493', '60');
+INSERT INTO `mc_product_to_category` VALUES ('494', '26');
+INSERT INTO `mc_product_to_category` VALUES ('495', '61');
+INSERT INTO `mc_product_to_category` VALUES ('496', '64');
+INSERT INTO `mc_product_to_category` VALUES ('497', '63');
+INSERT INTO `mc_product_to_category` VALUES ('498', '27');
+INSERT INTO `mc_product_to_category` VALUES ('504', '60');
+INSERT INTO `mc_product_to_category` VALUES ('505', '26');
+INSERT INTO `mc_product_to_category` VALUES ('506', '61');
+INSERT INTO `mc_product_to_category` VALUES ('507', '64');
+INSERT INTO `mc_product_to_category` VALUES ('508', '63');
+INSERT INTO `mc_product_to_category` VALUES ('509', '27');
+INSERT INTO `mc_product_to_category` VALUES ('514', '60');
+INSERT INTO `mc_product_to_category` VALUES ('515', '26');
+INSERT INTO `mc_product_to_category` VALUES ('516', '61');
+INSERT INTO `mc_product_to_category` VALUES ('517', '64');
+INSERT INTO `mc_product_to_category` VALUES ('518', '63');
+INSERT INTO `mc_product_to_category` VALUES ('519', '27');
+INSERT INTO `mc_product_to_category` VALUES ('524', '60');
+INSERT INTO `mc_product_to_category` VALUES ('525', '26');
+INSERT INTO `mc_product_to_category` VALUES ('526', '64');
+INSERT INTO `mc_product_to_category` VALUES ('527', '63');
+INSERT INTO `mc_product_to_category` VALUES ('528', '27');
+INSERT INTO `mc_product_to_category` VALUES ('535', '60');
+INSERT INTO `mc_product_to_category` VALUES ('536', '26');
+INSERT INTO `mc_product_to_category` VALUES ('537', '64');
+INSERT INTO `mc_product_to_category` VALUES ('538', '63');
+INSERT INTO `mc_product_to_category` VALUES ('539', '27');
+INSERT INTO `mc_product_to_category` VALUES ('543', '60');
+INSERT INTO `mc_product_to_category` VALUES ('544', '26');
+INSERT INTO `mc_product_to_category` VALUES ('545', '62');
+INSERT INTO `mc_product_to_category` VALUES ('546', '64');
+INSERT INTO `mc_product_to_category` VALUES ('547', '63');
+INSERT INTO `mc_product_to_category` VALUES ('548', '27');
+INSERT INTO `mc_product_to_category` VALUES ('552', '60');
+INSERT INTO `mc_product_to_category` VALUES ('553', '26');
+INSERT INTO `mc_product_to_category` VALUES ('554', '62');
+INSERT INTO `mc_product_to_category` VALUES ('555', '64');
+INSERT INTO `mc_product_to_category` VALUES ('556', '63');
+INSERT INTO `mc_product_to_category` VALUES ('557', '27');
+INSERT INTO `mc_product_to_category` VALUES ('558', '27');
+INSERT INTO `mc_product_to_category` VALUES ('562', '60');
+INSERT INTO `mc_product_to_category` VALUES ('563', '26');
+INSERT INTO `mc_product_to_category` VALUES ('564', '62');
+INSERT INTO `mc_product_to_category` VALUES ('565', '64');
+INSERT INTO `mc_product_to_category` VALUES ('566', '63');
+INSERT INTO `mc_product_to_category` VALUES ('567', '27');
+INSERT INTO `mc_product_to_category` VALUES ('572', '60');
+INSERT INTO `mc_product_to_category` VALUES ('573', '26');
+INSERT INTO `mc_product_to_category` VALUES ('574', '62');
+INSERT INTO `mc_product_to_category` VALUES ('575', '64');
+INSERT INTO `mc_product_to_category` VALUES ('576', '63');
+INSERT INTO `mc_product_to_category` VALUES ('577', '27');
+INSERT INTO `mc_product_to_category` VALUES ('581', '60');
+INSERT INTO `mc_product_to_category` VALUES ('582', '62');
+INSERT INTO `mc_product_to_category` VALUES ('583', '64');
+INSERT INTO `mc_product_to_category` VALUES ('584', '63');
+INSERT INTO `mc_product_to_category` VALUES ('585', '27');
+INSERT INTO `mc_product_to_category` VALUES ('590', '62');
+INSERT INTO `mc_product_to_category` VALUES ('591', '64');
+INSERT INTO `mc_product_to_category` VALUES ('592', '63');
+INSERT INTO `mc_product_to_category` VALUES ('593', '27');
+INSERT INTO `mc_product_to_category` VALUES ('599', '62');
+INSERT INTO `mc_product_to_category` VALUES ('600', '64');
+INSERT INTO `mc_product_to_category` VALUES ('601', '63');
+INSERT INTO `mc_product_to_category` VALUES ('602', '27');
+INSERT INTO `mc_product_to_category` VALUES ('607', '62');
+INSERT INTO `mc_product_to_category` VALUES ('608', '64');
+INSERT INTO `mc_product_to_category` VALUES ('609', '63');
+INSERT INTO `mc_product_to_category` VALUES ('610', '27');
+INSERT INTO `mc_product_to_category` VALUES ('613', '62');
+INSERT INTO `mc_product_to_category` VALUES ('614', '64');
+INSERT INTO `mc_product_to_category` VALUES ('615', '63');
+INSERT INTO `mc_product_to_category` VALUES ('617', '62');
+INSERT INTO `mc_product_to_category` VALUES ('618', '64');
+INSERT INTO `mc_product_to_category` VALUES ('619', '63');
+INSERT INTO `mc_product_to_category` VALUES ('621', '62');
+INSERT INTO `mc_product_to_category` VALUES ('622', '64');
+INSERT INTO `mc_product_to_category` VALUES ('623', '63');
+INSERT INTO `mc_product_to_category` VALUES ('624', '27');
+INSERT INTO `mc_product_to_category` VALUES ('625', '26');
+INSERT INTO `mc_product_to_category` VALUES ('626', '62');
+INSERT INTO `mc_product_to_category` VALUES ('627', '64');
+INSERT INTO `mc_product_to_category` VALUES ('628', '63');
+INSERT INTO `mc_product_to_category` VALUES ('629', '27');
+INSERT INTO `mc_product_to_category` VALUES ('630', '26');
+INSERT INTO `mc_product_to_category` VALUES ('631', '62');
+INSERT INTO `mc_product_to_category` VALUES ('632', '64');
+INSERT INTO `mc_product_to_category` VALUES ('633', '63');
+INSERT INTO `mc_product_to_category` VALUES ('634', '27');
+INSERT INTO `mc_product_to_category` VALUES ('635', '60');
+INSERT INTO `mc_product_to_category` VALUES ('636', '26');
+INSERT INTO `mc_product_to_category` VALUES ('637', '62');
+INSERT INTO `mc_product_to_category` VALUES ('638', '64');
+INSERT INTO `mc_product_to_category` VALUES ('639', '63');
+INSERT INTO `mc_product_to_category` VALUES ('640', '27');
+INSERT INTO `mc_product_to_category` VALUES ('641', '60');
+INSERT INTO `mc_product_to_category` VALUES ('642', '26');
+INSERT INTO `mc_product_to_category` VALUES ('643', '62');
+INSERT INTO `mc_product_to_category` VALUES ('644', '64');
+INSERT INTO `mc_product_to_category` VALUES ('645', '63');
+INSERT INTO `mc_product_to_category` VALUES ('646', '27');
+INSERT INTO `mc_product_to_category` VALUES ('647', '60');
+INSERT INTO `mc_product_to_category` VALUES ('648', '26');
+INSERT INTO `mc_product_to_category` VALUES ('649', '62');
+INSERT INTO `mc_product_to_category` VALUES ('650', '64');
+INSERT INTO `mc_product_to_category` VALUES ('651', '63');
+INSERT INTO `mc_product_to_category` VALUES ('652', '27');
+INSERT INTO `mc_product_to_category` VALUES ('655', '60');
+INSERT INTO `mc_product_to_category` VALUES ('656', '26');
+INSERT INTO `mc_product_to_category` VALUES ('657', '62');
+INSERT INTO `mc_product_to_category` VALUES ('658', '64');
+INSERT INTO `mc_product_to_category` VALUES ('659', '63');
+INSERT INTO `mc_product_to_category` VALUES ('660', '27');
+INSERT INTO `mc_product_to_category` VALUES ('664', '60');
+INSERT INTO `mc_product_to_category` VALUES ('665', '60');
+INSERT INTO `mc_product_to_category` VALUES ('666', '26');
+INSERT INTO `mc_product_to_category` VALUES ('667', '62');
+INSERT INTO `mc_product_to_category` VALUES ('668', '64');
+INSERT INTO `mc_product_to_category` VALUES ('669', '63');
+INSERT INTO `mc_product_to_category` VALUES ('670', '27');
+INSERT INTO `mc_product_to_category` VALUES ('673', '60');
+INSERT INTO `mc_product_to_category` VALUES ('674', '26');
+INSERT INTO `mc_product_to_category` VALUES ('675', '62');
+INSERT INTO `mc_product_to_category` VALUES ('676', '64');
+INSERT INTO `mc_product_to_category` VALUES ('677', '63');
+INSERT INTO `mc_product_to_category` VALUES ('678', '27');
+INSERT INTO `mc_product_to_category` VALUES ('679', '27');
+INSERT INTO `mc_product_to_category` VALUES ('686', '60');
+INSERT INTO `mc_product_to_category` VALUES ('687', '26');
+INSERT INTO `mc_product_to_category` VALUES ('688', '62');
+INSERT INTO `mc_product_to_category` VALUES ('689', '64');
+INSERT INTO `mc_product_to_category` VALUES ('690', '63');
+INSERT INTO `mc_product_to_category` VALUES ('691', '27');
+INSERT INTO `mc_product_to_category` VALUES ('694', '60');
+INSERT INTO `mc_product_to_category` VALUES ('695', '26');
+INSERT INTO `mc_product_to_category` VALUES ('696', '62');
+INSERT INTO `mc_product_to_category` VALUES ('697', '64');
+INSERT INTO `mc_product_to_category` VALUES ('698', '27');
+INSERT INTO `mc_product_to_category` VALUES ('701', '60');
+INSERT INTO `mc_product_to_category` VALUES ('701', '74');
+INSERT INTO `mc_product_to_category` VALUES ('702', '26');
+INSERT INTO `mc_product_to_category` VALUES ('703', '62');
+INSERT INTO `mc_product_to_category` VALUES ('704', '64');
+INSERT INTO `mc_product_to_category` VALUES ('705', '27');
+INSERT INTO `mc_product_to_category` VALUES ('710', '60');
+INSERT INTO `mc_product_to_category` VALUES ('710', '74');
+INSERT INTO `mc_product_to_category` VALUES ('711', '26');
+INSERT INTO `mc_product_to_category` VALUES ('712', '62');
+INSERT INTO `mc_product_to_category` VALUES ('713', '64');
+INSERT INTO `mc_product_to_category` VALUES ('716', '60');
+INSERT INTO `mc_product_to_category` VALUES ('716', '74');
+INSERT INTO `mc_product_to_category` VALUES ('717', '26');
+INSERT INTO `mc_product_to_category` VALUES ('718', '62');
+INSERT INTO `mc_product_to_category` VALUES ('721', '60');
+INSERT INTO `mc_product_to_category` VALUES ('721', '74');
+INSERT INTO `mc_product_to_category` VALUES ('722', '26');
+INSERT INTO `mc_product_to_category` VALUES ('723', '62');
+INSERT INTO `mc_product_to_category` VALUES ('726', '60');
+INSERT INTO `mc_product_to_category` VALUES ('726', '74');
+INSERT INTO `mc_product_to_category` VALUES ('727', '26');
+INSERT INTO `mc_product_to_category` VALUES ('728', '62');
+INSERT INTO `mc_product_to_category` VALUES ('731', '60');
+INSERT INTO `mc_product_to_category` VALUES ('731', '74');
+INSERT INTO `mc_product_to_category` VALUES ('732', '26');
+INSERT INTO `mc_product_to_category` VALUES ('733', '62');
+INSERT INTO `mc_product_to_category` VALUES ('737', '60');
+INSERT INTO `mc_product_to_category` VALUES ('737', '74');
+INSERT INTO `mc_product_to_category` VALUES ('738', '26');
+INSERT INTO `mc_product_to_category` VALUES ('739', '62');
+INSERT INTO `mc_product_to_category` VALUES ('742', '60');
+INSERT INTO `mc_product_to_category` VALUES ('742', '74');
+INSERT INTO `mc_product_to_category` VALUES ('743', '26');
+INSERT INTO `mc_product_to_category` VALUES ('744', '62');
+INSERT INTO `mc_product_to_category` VALUES ('745', '64');
+INSERT INTO `mc_product_to_category` VALUES ('748', '60');
+INSERT INTO `mc_product_to_category` VALUES ('748', '74');
+INSERT INTO `mc_product_to_category` VALUES ('749', '26');
+INSERT INTO `mc_product_to_category` VALUES ('750', '62');
+INSERT INTO `mc_product_to_category` VALUES ('751', '27');
+INSERT INTO `mc_product_to_category` VALUES ('754', '60');
+INSERT INTO `mc_product_to_category` VALUES ('754', '74');
+INSERT INTO `mc_product_to_category` VALUES ('755', '26');
+INSERT INTO `mc_product_to_category` VALUES ('756', '62');
+INSERT INTO `mc_product_to_category` VALUES ('757', '27');
+INSERT INTO `mc_product_to_category` VALUES ('761', '60');
+INSERT INTO `mc_product_to_category` VALUES ('761', '74');
+INSERT INTO `mc_product_to_category` VALUES ('762', '26');
+INSERT INTO `mc_product_to_category` VALUES ('763', '62');
+INSERT INTO `mc_product_to_category` VALUES ('764', '27');
+INSERT INTO `mc_product_to_category` VALUES ('767', '60');
+INSERT INTO `mc_product_to_category` VALUES ('767', '74');
+INSERT INTO `mc_product_to_category` VALUES ('768', '26');
+INSERT INTO `mc_product_to_category` VALUES ('769', '62');
+INSERT INTO `mc_product_to_category` VALUES ('770', '27');
+INSERT INTO `mc_product_to_category` VALUES ('773', '60');
+INSERT INTO `mc_product_to_category` VALUES ('773', '74');
+INSERT INTO `mc_product_to_category` VALUES ('774', '26');
+INSERT INTO `mc_product_to_category` VALUES ('775', '62');
+INSERT INTO `mc_product_to_category` VALUES ('776', '27');
+INSERT INTO `mc_product_to_category` VALUES ('779', '60');
+INSERT INTO `mc_product_to_category` VALUES ('779', '74');
+INSERT INTO `mc_product_to_category` VALUES ('780', '26');
+INSERT INTO `mc_product_to_category` VALUES ('781', '62');
+INSERT INTO `mc_product_to_category` VALUES ('784', '60');
+INSERT INTO `mc_product_to_category` VALUES ('784', '74');
+INSERT INTO `mc_product_to_category` VALUES ('785', '26');
+INSERT INTO `mc_product_to_category` VALUES ('786', '62');
+INSERT INTO `mc_product_to_category` VALUES ('789', '60');
+INSERT INTO `mc_product_to_category` VALUES ('789', '74');
+INSERT INTO `mc_product_to_category` VALUES ('790', '26');
+INSERT INTO `mc_product_to_category` VALUES ('791', '62');
+INSERT INTO `mc_product_to_category` VALUES ('792', '27');
+INSERT INTO `mc_product_to_category` VALUES ('794', '60');
+INSERT INTO `mc_product_to_category` VALUES ('794', '74');
+INSERT INTO `mc_product_to_category` VALUES ('795', '26');
+INSERT INTO `mc_product_to_category` VALUES ('796', '62');
+INSERT INTO `mc_product_to_category` VALUES ('797', '27');
+INSERT INTO `mc_product_to_category` VALUES ('799', '60');
+INSERT INTO `mc_product_to_category` VALUES ('799', '74');
+INSERT INTO `mc_product_to_category` VALUES ('800', '26');
+INSERT INTO `mc_product_to_category` VALUES ('801', '62');
+INSERT INTO `mc_product_to_category` VALUES ('802', '27');
+INSERT INTO `mc_product_to_category` VALUES ('804', '60');
+INSERT INTO `mc_product_to_category` VALUES ('804', '74');
+INSERT INTO `mc_product_to_category` VALUES ('805', '26');
+INSERT INTO `mc_product_to_category` VALUES ('806', '62');
+INSERT INTO `mc_product_to_category` VALUES ('807', '27');
+INSERT INTO `mc_product_to_category` VALUES ('808', '60');
+INSERT INTO `mc_product_to_category` VALUES ('808', '74');
+INSERT INTO `mc_product_to_category` VALUES ('809', '26');
+INSERT INTO `mc_product_to_category` VALUES ('810', '27');
+INSERT INTO `mc_product_to_category` VALUES ('811', '60');
+INSERT INTO `mc_product_to_category` VALUES ('811', '74');
+INSERT INTO `mc_product_to_category` VALUES ('812', '27');
+INSERT INTO `mc_product_to_category` VALUES ('813', '60');
+INSERT INTO `mc_product_to_category` VALUES ('813', '74');
+INSERT INTO `mc_product_to_category` VALUES ('814', '27');
+INSERT INTO `mc_product_to_category` VALUES ('815', '60');
+INSERT INTO `mc_product_to_category` VALUES ('815', '74');
+INSERT INTO `mc_product_to_category` VALUES ('816', '27');
+INSERT INTO `mc_product_to_category` VALUES ('817', '60');
+INSERT INTO `mc_product_to_category` VALUES ('817', '74');
+INSERT INTO `mc_product_to_category` VALUES ('818', '27');
+INSERT INTO `mc_product_to_category` VALUES ('819', '60');
+INSERT INTO `mc_product_to_category` VALUES ('819', '74');
+INSERT INTO `mc_product_to_category` VALUES ('820', '27');
+INSERT INTO `mc_product_to_category` VALUES ('821', '60');
+INSERT INTO `mc_product_to_category` VALUES ('821', '74');
+INSERT INTO `mc_product_to_category` VALUES ('822', '60');
+INSERT INTO `mc_product_to_category` VALUES ('822', '74');
+INSERT INTO `mc_product_to_category` VALUES ('823', '60');
+INSERT INTO `mc_product_to_category` VALUES ('823', '74');
+INSERT INTO `mc_product_to_category` VALUES ('824', '62');
+INSERT INTO `mc_product_to_category` VALUES ('825', '60');
+INSERT INTO `mc_product_to_category` VALUES ('825', '74');
+INSERT INTO `mc_product_to_category` VALUES ('826', '62');
+INSERT INTO `mc_product_to_category` VALUES ('827', '60');
+INSERT INTO `mc_product_to_category` VALUES ('827', '74');
+INSERT INTO `mc_product_to_category` VALUES ('828', '62');
+INSERT INTO `mc_product_to_category` VALUES ('829', '60');
+INSERT INTO `mc_product_to_category` VALUES ('829', '74');
+INSERT INTO `mc_product_to_category` VALUES ('830', '62');
+INSERT INTO `mc_product_to_category` VALUES ('831', '62');
+INSERT INTO `mc_product_to_category` VALUES ('832', '62');
+INSERT INTO `mc_product_to_category` VALUES ('833', '62');
+INSERT INTO `mc_product_to_category` VALUES ('834', '62');
+INSERT INTO `mc_product_to_category` VALUES ('835', '62');
+INSERT INTO `mc_product_to_category` VALUES ('836', '62');
+INSERT INTO `mc_product_to_category` VALUES ('837', '62');
+INSERT INTO `mc_product_to_category` VALUES ('838', '62');
+INSERT INTO `mc_product_to_category` VALUES ('839', '62');
+INSERT INTO `mc_product_to_category` VALUES ('840', '62');
+INSERT INTO `mc_product_to_category` VALUES ('841', '62');
+INSERT INTO `mc_product_to_category` VALUES ('842', '62');
+INSERT INTO `mc_product_to_category` VALUES ('843', '60');
+INSERT INTO `mc_product_to_category` VALUES ('843', '74');
+INSERT INTO `mc_product_to_category` VALUES ('844', '62');
+INSERT INTO `mc_product_to_category` VALUES ('845', '60');
+INSERT INTO `mc_product_to_category` VALUES ('846', '62');
+INSERT INTO `mc_product_to_category` VALUES ('847', '60');
+INSERT INTO `mc_product_to_category` VALUES ('848', '62');
+INSERT INTO `mc_product_to_category` VALUES ('849', '60');
+INSERT INTO `mc_product_to_category` VALUES ('850', '62');
+INSERT INTO `mc_product_to_category` VALUES ('851', '60');
+INSERT INTO `mc_product_to_category` VALUES ('852', '62');
+INSERT INTO `mc_product_to_category` VALUES ('853', '60');
+INSERT INTO `mc_product_to_category` VALUES ('854', '62');
+INSERT INTO `mc_product_to_category` VALUES ('855', '60');
+INSERT INTO `mc_product_to_category` VALUES ('856', '62');
+INSERT INTO `mc_product_to_category` VALUES ('857', '60');
+INSERT INTO `mc_product_to_category` VALUES ('858', '62');
+INSERT INTO `mc_product_to_category` VALUES ('859', '60');
+INSERT INTO `mc_product_to_category` VALUES ('860', '62');
+INSERT INTO `mc_product_to_category` VALUES ('861', '60');
+INSERT INTO `mc_product_to_category` VALUES ('862', '62');
+INSERT INTO `mc_product_to_category` VALUES ('863', '60');
+INSERT INTO `mc_product_to_category` VALUES ('864', '62');
+INSERT INTO `mc_product_to_category` VALUES ('865', '60');
+INSERT INTO `mc_product_to_category` VALUES ('866', '62');
+INSERT INTO `mc_product_to_category` VALUES ('867', '60');
+INSERT INTO `mc_product_to_category` VALUES ('868', '62');
+INSERT INTO `mc_product_to_category` VALUES ('869', '60');
+INSERT INTO `mc_product_to_category` VALUES ('870', '62');
+INSERT INTO `mc_product_to_category` VALUES ('871', '60');
+INSERT INTO `mc_product_to_category` VALUES ('872', '62');
+INSERT INTO `mc_product_to_category` VALUES ('873', '60');
+INSERT INTO `mc_product_to_category` VALUES ('874', '62');
+INSERT INTO `mc_product_to_category` VALUES ('875', '60');
+INSERT INTO `mc_product_to_category` VALUES ('876', '62');
+INSERT INTO `mc_product_to_category` VALUES ('877', '60');
+INSERT INTO `mc_product_to_category` VALUES ('878', '62');
+INSERT INTO `mc_product_to_category` VALUES ('879', '60');
+INSERT INTO `mc_product_to_category` VALUES ('880', '62');
+INSERT INTO `mc_product_to_category` VALUES ('881', '60');
+INSERT INTO `mc_product_to_category` VALUES ('882', '62');
+INSERT INTO `mc_product_to_category` VALUES ('883', '60');
+INSERT INTO `mc_product_to_category` VALUES ('884', '60');
+INSERT INTO `mc_product_to_category` VALUES ('885', '60');
+INSERT INTO `mc_product_to_category` VALUES ('886', '62');
+INSERT INTO `mc_product_to_category` VALUES ('887', '60');
+INSERT INTO `mc_product_to_category` VALUES ('888', '62');
+INSERT INTO `mc_product_to_category` VALUES ('889', '60');
+INSERT INTO `mc_product_to_category` VALUES ('890', '60');
+INSERT INTO `mc_product_to_category` VALUES ('891', '60');
+INSERT INTO `mc_product_to_category` VALUES ('892', '60');
+INSERT INTO `mc_product_to_category` VALUES ('893', '60');
+INSERT INTO `mc_product_to_category` VALUES ('894', '60');
+INSERT INTO `mc_product_to_category` VALUES ('895', '60');
+INSERT INTO `mc_product_to_category` VALUES ('896', '60');
+INSERT INTO `mc_product_to_category` VALUES ('897', '60');
+INSERT INTO `mc_product_to_category` VALUES ('898', '60');
+INSERT INTO `mc_product_to_category` VALUES ('899', '60');
+INSERT INTO `mc_product_to_category` VALUES ('900', '60');
+INSERT INTO `mc_product_to_category` VALUES ('901', '60');
+INSERT INTO `mc_product_to_category` VALUES ('902', '60');
+INSERT INTO `mc_product_to_category` VALUES ('903', '60');
+INSERT INTO `mc_product_to_category` VALUES ('904', '60');
+INSERT INTO `mc_product_to_category` VALUES ('905', '60');
+INSERT INTO `mc_product_to_category` VALUES ('906', '60');
+INSERT INTO `mc_product_to_category` VALUES ('907', '60');
+INSERT INTO `mc_product_to_category` VALUES ('908', '60');
+INSERT INTO `mc_product_to_category` VALUES ('909', '60');
+INSERT INTO `mc_product_to_category` VALUES ('910', '60');
+INSERT INTO `mc_product_to_category` VALUES ('911', '60');
+INSERT INTO `mc_product_to_category` VALUES ('912', '60');
+INSERT INTO `mc_product_to_category` VALUES ('913', '60');
+INSERT INTO `mc_product_to_category` VALUES ('914', '60');
+INSERT INTO `mc_product_to_category` VALUES ('915', '60');
+INSERT INTO `mc_product_to_category` VALUES ('916', '60');
+INSERT INTO `mc_product_to_category` VALUES ('917', '60');
+INSERT INTO `mc_product_to_category` VALUES ('918', '60');
+INSERT INTO `mc_product_to_category` VALUES ('919', '60');
+INSERT INTO `mc_product_to_category` VALUES ('920', '60');
+INSERT INTO `mc_product_to_category` VALUES ('921', '60');
+INSERT INTO `mc_product_to_category` VALUES ('922', '60');
+INSERT INTO `mc_product_to_category` VALUES ('923', '60');
+INSERT INTO `mc_product_to_category` VALUES ('924', '60');
+INSERT INTO `mc_product_to_category` VALUES ('925', '60');
+INSERT INTO `mc_product_to_category` VALUES ('926', '60');
+INSERT INTO `mc_product_to_category` VALUES ('927', '60');
+INSERT INTO `mc_product_to_category` VALUES ('928', '60');
+INSERT INTO `mc_product_to_category` VALUES ('929', '60');
+INSERT INTO `mc_product_to_category` VALUES ('930', '60');
+INSERT INTO `mc_product_to_category` VALUES ('931', '60');
+INSERT INTO `mc_product_to_category` VALUES ('932', '60');
+INSERT INTO `mc_product_to_category` VALUES ('933', '60');
+INSERT INTO `mc_product_to_category` VALUES ('934', '60');
+INSERT INTO `mc_product_to_category` VALUES ('935', '60');
+INSERT INTO `mc_product_to_category` VALUES ('936', '60');
+INSERT INTO `mc_product_to_category` VALUES ('937', '60');
+INSERT INTO `mc_product_to_category` VALUES ('938', '60');
+INSERT INTO `mc_product_to_category` VALUES ('939', '60');
+INSERT INTO `mc_product_to_category` VALUES ('940', '60');
+INSERT INTO `mc_product_to_category` VALUES ('941', '60');
+INSERT INTO `mc_product_to_category` VALUES ('942', '60');
+INSERT INTO `mc_product_to_category` VALUES ('943', '60');
+INSERT INTO `mc_product_to_category` VALUES ('944', '60');
+INSERT INTO `mc_product_to_category` VALUES ('945', '60');
+INSERT INTO `mc_product_to_category` VALUES ('946', '60');
+INSERT INTO `mc_product_to_category` VALUES ('947', '60');
+INSERT INTO `mc_product_to_category` VALUES ('948', '60');
+INSERT INTO `mc_product_to_category` VALUES ('949', '60');
+INSERT INTO `mc_product_to_category` VALUES ('950', '60');
+INSERT INTO `mc_product_to_category` VALUES ('951', '60');
+INSERT INTO `mc_product_to_category` VALUES ('952', '60');
+INSERT INTO `mc_product_to_category` VALUES ('953', '60');
+INSERT INTO `mc_product_to_category` VALUES ('954', '60');
+INSERT INTO `mc_product_to_category` VALUES ('955', '60');
+INSERT INTO `mc_product_to_category` VALUES ('956', '60');
+INSERT INTO `mc_product_to_category` VALUES ('957', '60');
+INSERT INTO `mc_product_to_category` VALUES ('958', '60');
+INSERT INTO `mc_product_to_category` VALUES ('959', '60');
+INSERT INTO `mc_product_to_category` VALUES ('960', '60');
+INSERT INTO `mc_product_to_category` VALUES ('961', '60');
+INSERT INTO `mc_product_to_category` VALUES ('962', '60');
+INSERT INTO `mc_product_to_category` VALUES ('963', '60');
+INSERT INTO `mc_product_to_category` VALUES ('964', '60');
+INSERT INTO `mc_product_to_category` VALUES ('965', '60');
+INSERT INTO `mc_product_to_category` VALUES ('966', '60');
+INSERT INTO `mc_product_to_category` VALUES ('967', '60');
+INSERT INTO `mc_product_to_category` VALUES ('968', '60');
+INSERT INTO `mc_product_to_category` VALUES ('969', '60');
+INSERT INTO `mc_product_to_category` VALUES ('970', '60');
+INSERT INTO `mc_product_to_category` VALUES ('971', '60');
+INSERT INTO `mc_product_to_category` VALUES ('972', '60');
+INSERT INTO `mc_product_to_category` VALUES ('972', '74');
+INSERT INTO `mc_product_to_category` VALUES ('973', '60');
+INSERT INTO `mc_product_to_category` VALUES ('973', '74');
+INSERT INTO `mc_product_to_category` VALUES ('974', '60');
+INSERT INTO `mc_product_to_category` VALUES ('974', '74');
+INSERT INTO `mc_product_to_category` VALUES ('975', '60');
+INSERT INTO `mc_product_to_category` VALUES ('975', '74');
+INSERT INTO `mc_product_to_category` VALUES ('976', '60');
+INSERT INTO `mc_product_to_category` VALUES ('976', '74');
+INSERT INTO `mc_product_to_category` VALUES ('977', '60');
+INSERT INTO `mc_product_to_category` VALUES ('977', '74');
+INSERT INTO `mc_product_to_category` VALUES ('978', '60');
+INSERT INTO `mc_product_to_category` VALUES ('978', '74');
+INSERT INTO `mc_product_to_category` VALUES ('979', '60');
+INSERT INTO `mc_product_to_category` VALUES ('979', '74');
+INSERT INTO `mc_product_to_category` VALUES ('980', '60');
+INSERT INTO `mc_product_to_category` VALUES ('980', '74');
+INSERT INTO `mc_product_to_category` VALUES ('981', '60');
+INSERT INTO `mc_product_to_category` VALUES ('981', '74');
+INSERT INTO `mc_product_to_category` VALUES ('982', '60');
+INSERT INTO `mc_product_to_category` VALUES ('982', '74');
+INSERT INTO `mc_product_to_category` VALUES ('983', '60');
+INSERT INTO `mc_product_to_category` VALUES ('983', '74');
+INSERT INTO `mc_product_to_category` VALUES ('984', '60');
+INSERT INTO `mc_product_to_category` VALUES ('984', '74');
+INSERT INTO `mc_product_to_category` VALUES ('985', '60');
+INSERT INTO `mc_product_to_category` VALUES ('985', '74');
+INSERT INTO `mc_product_to_category` VALUES ('986', '60');
+INSERT INTO `mc_product_to_category` VALUES ('986', '74');
+INSERT INTO `mc_product_to_category` VALUES ('987', '60');
+INSERT INTO `mc_product_to_category` VALUES ('987', '74');
+INSERT INTO `mc_product_to_category` VALUES ('988', '60');
+INSERT INTO `mc_product_to_category` VALUES ('988', '74');
+INSERT INTO `mc_product_to_category` VALUES ('989', '60');
+INSERT INTO `mc_product_to_category` VALUES ('989', '74');
+INSERT INTO `mc_product_to_category` VALUES ('990', '60');
+INSERT INTO `mc_product_to_category` VALUES ('990', '74');
+INSERT INTO `mc_product_to_category` VALUES ('991', '60');
+INSERT INTO `mc_product_to_category` VALUES ('991', '74');
+INSERT INTO `mc_product_to_category` VALUES ('992', '60');
+INSERT INTO `mc_product_to_category` VALUES ('992', '74');
+INSERT INTO `mc_product_to_category` VALUES ('993', '60');
+INSERT INTO `mc_product_to_category` VALUES ('993', '74');
+INSERT INTO `mc_product_to_category` VALUES ('994', '60');
+INSERT INTO `mc_product_to_category` VALUES ('994', '74');
+INSERT INTO `mc_product_to_category` VALUES ('995', '60');
+INSERT INTO `mc_product_to_category` VALUES ('995', '74');
+INSERT INTO `mc_product_to_category` VALUES ('996', '60');
+INSERT INTO `mc_product_to_category` VALUES ('996', '74');
+INSERT INTO `mc_product_to_category` VALUES ('997', '60');
+INSERT INTO `mc_product_to_category` VALUES ('997', '74');
+INSERT INTO `mc_product_to_category` VALUES ('998', '60');
+INSERT INTO `mc_product_to_category` VALUES ('998', '74');
+INSERT INTO `mc_product_to_category` VALUES ('999', '60');
+INSERT INTO `mc_product_to_category` VALUES ('999', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1000', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1000', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1001', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1001', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1002', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1002', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1003', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1003', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1004', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1004', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1005', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1005', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1006', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1006', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1007', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1007', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1008', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1008', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1009', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1009', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1010', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1010', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1011', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1011', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1012', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1012', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1013', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1013', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1014', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1014', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1015', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1015', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1016', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1016', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1017', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1017', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1018', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1018', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1019', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1019', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1020', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1020', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1021', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1021', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1022', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1022', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1023', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1023', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1024', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1024', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1025', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1025', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1026', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1026', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1027', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1027', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1028', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1028', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1029', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1029', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1030', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1030', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1031', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1031', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1032', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1032', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1033', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1033', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1034', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1034', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1035', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1035', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1036', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1036', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1037', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1037', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1038', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1038', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1039', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1039', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1040', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1040', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1041', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1041', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1042', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1042', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1043', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1043', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1044', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1044', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1045', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1045', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1046', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1046', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1047', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1047', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1048', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1048', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1049', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1049', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1050', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1050', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1051', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1051', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1052', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1052', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1053', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1053', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1054', '60');
+INSERT INTO `mc_product_to_category` VALUES ('1054', '74');
+INSERT INTO `mc_product_to_category` VALUES ('1056', '60');
 
 -- ----------------------------
 -- Table structure for mc_product_to_download
@@ -7316,7 +9095,70 @@ CREATE TABLE `mc_product_to_layout` (
 -- ----------------------------
 -- Records of mc_product_to_layout
 -- ----------------------------
-INSERT INTO `mc_product_to_layout` VALUES ('43', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('381', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('101', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('99', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('475', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('463', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('235', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('258', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('271', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('301', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('317', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('349', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('365', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('378', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('389', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('411', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('423', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('435', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('461', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('460', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('472', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('473', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('664', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('972', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('177', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('553', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('563', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('573', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('625', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('185', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('630', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('636', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('642', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('648', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('656', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('809', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('805', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('800', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('795', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('790', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('785', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('762', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('780', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('774', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('768', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('666', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('695', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('755', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('711', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('732', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('738', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('717', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('722', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('749', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('727', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('743', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('674', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('687', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('702', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('524', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('641', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('416', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('1056', '0', '11');
+INSERT INTO `mc_product_to_layout` VALUES ('200', '0', '0');
+INSERT INTO `mc_product_to_layout` VALUES ('1057', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_product_to_serie
@@ -7380,6 +9222,794 @@ INSERT INTO `mc_product_to_serie` VALUES ('49', '28');
 INSERT INTO `mc_product_to_serie` VALUES ('49', '57');
 
 -- ----------------------------
+-- Table structure for mc_product_to_series
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_product_to_series`;
+CREATE TABLE `mc_product_to_series` (
+  `product_id` int(11) NOT NULL,
+  `series_id` int(11) NOT NULL,
+  PRIMARY KEY (`product_id`,`series_id`),
+  KEY `category_id` (`series_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_product_to_series
+-- ----------------------------
+INSERT INTO `mc_product_to_series` VALUES ('90', '61');
+INSERT INTO `mc_product_to_series` VALUES ('91', '61');
+INSERT INTO `mc_product_to_series` VALUES ('92', '61');
+INSERT INTO `mc_product_to_series` VALUES ('93', '61');
+INSERT INTO `mc_product_to_series` VALUES ('95', '61');
+INSERT INTO `mc_product_to_series` VALUES ('96', '61');
+INSERT INTO `mc_product_to_series` VALUES ('97', '61');
+INSERT INTO `mc_product_to_series` VALUES ('98', '62');
+INSERT INTO `mc_product_to_series` VALUES ('99', '61');
+INSERT INTO `mc_product_to_series` VALUES ('100', '62');
+INSERT INTO `mc_product_to_series` VALUES ('101', '61');
+INSERT INTO `mc_product_to_series` VALUES ('103', '62');
+INSERT INTO `mc_product_to_series` VALUES ('104', '61');
+INSERT INTO `mc_product_to_series` VALUES ('106', '62');
+INSERT INTO `mc_product_to_series` VALUES ('107', '61');
+INSERT INTO `mc_product_to_series` VALUES ('109', '62');
+INSERT INTO `mc_product_to_series` VALUES ('110', '61');
+INSERT INTO `mc_product_to_series` VALUES ('113', '62');
+INSERT INTO `mc_product_to_series` VALUES ('114', '61');
+INSERT INTO `mc_product_to_series` VALUES ('117', '62');
+INSERT INTO `mc_product_to_series` VALUES ('118', '61');
+INSERT INTO `mc_product_to_series` VALUES ('120', '62');
+INSERT INTO `mc_product_to_series` VALUES ('121', '61');
+INSERT INTO `mc_product_to_series` VALUES ('122', '61');
+INSERT INTO `mc_product_to_series` VALUES ('126', '62');
+INSERT INTO `mc_product_to_series` VALUES ('127', '61');
+INSERT INTO `mc_product_to_series` VALUES ('130', '62');
+INSERT INTO `mc_product_to_series` VALUES ('131', '61');
+INSERT INTO `mc_product_to_series` VALUES ('133', '62');
+INSERT INTO `mc_product_to_series` VALUES ('134', '61');
+INSERT INTO `mc_product_to_series` VALUES ('139', '62');
+INSERT INTO `mc_product_to_series` VALUES ('140', '61');
+INSERT INTO `mc_product_to_series` VALUES ('147', '62');
+INSERT INTO `mc_product_to_series` VALUES ('148', '61');
+INSERT INTO `mc_product_to_series` VALUES ('152', '26');
+INSERT INTO `mc_product_to_series` VALUES ('153', '62');
+INSERT INTO `mc_product_to_series` VALUES ('154', '61');
+INSERT INTO `mc_product_to_series` VALUES ('158', '26');
+INSERT INTO `mc_product_to_series` VALUES ('159', '62');
+INSERT INTO `mc_product_to_series` VALUES ('161', '61');
+INSERT INTO `mc_product_to_series` VALUES ('162', '61');
+INSERT INTO `mc_product_to_series` VALUES ('164', '60');
+INSERT INTO `mc_product_to_series` VALUES ('164', '74');
+INSERT INTO `mc_product_to_series` VALUES ('167', '26');
+INSERT INTO `mc_product_to_series` VALUES ('168', '62');
+INSERT INTO `mc_product_to_series` VALUES ('169', '61');
+INSERT INTO `mc_product_to_series` VALUES ('174', '60');
+INSERT INTO `mc_product_to_series` VALUES ('177', '26');
+INSERT INTO `mc_product_to_series` VALUES ('178', '62');
+INSERT INTO `mc_product_to_series` VALUES ('179', '61');
+INSERT INTO `mc_product_to_series` VALUES ('183', '60');
+INSERT INTO `mc_product_to_series` VALUES ('185', '26');
+INSERT INTO `mc_product_to_series` VALUES ('186', '62');
+INSERT INTO `mc_product_to_series` VALUES ('187', '61');
+INSERT INTO `mc_product_to_series` VALUES ('193', '60');
+INSERT INTO `mc_product_to_series` VALUES ('195', '26');
+INSERT INTO `mc_product_to_series` VALUES ('196', '62');
+INSERT INTO `mc_product_to_series` VALUES ('197', '61');
+INSERT INTO `mc_product_to_series` VALUES ('200', '60');
+INSERT INTO `mc_product_to_series` VALUES ('202', '26');
+INSERT INTO `mc_product_to_series` VALUES ('203', '62');
+INSERT INTO `mc_product_to_series` VALUES ('204', '61');
+INSERT INTO `mc_product_to_series` VALUES ('207', '60');
+INSERT INTO `mc_product_to_series` VALUES ('209', '26');
+INSERT INTO `mc_product_to_series` VALUES ('210', '62');
+INSERT INTO `mc_product_to_series` VALUES ('211', '61');
+INSERT INTO `mc_product_to_series` VALUES ('216', '60');
+INSERT INTO `mc_product_to_series` VALUES ('218', '26');
+INSERT INTO `mc_product_to_series` VALUES ('219', '62');
+INSERT INTO `mc_product_to_series` VALUES ('220', '61');
+INSERT INTO `mc_product_to_series` VALUES ('227', '60');
+INSERT INTO `mc_product_to_series` VALUES ('229', '26');
+INSERT INTO `mc_product_to_series` VALUES ('230', '62');
+INSERT INTO `mc_product_to_series` VALUES ('231', '61');
+INSERT INTO `mc_product_to_series` VALUES ('233', '69');
+INSERT INTO `mc_product_to_series` VALUES ('235', '60');
+INSERT INTO `mc_product_to_series` VALUES ('237', '26');
+INSERT INTO `mc_product_to_series` VALUES ('238', '62');
+INSERT INTO `mc_product_to_series` VALUES ('239', '61');
+INSERT INTO `mc_product_to_series` VALUES ('241', '69');
+INSERT INTO `mc_product_to_series` VALUES ('245', '60');
+INSERT INTO `mc_product_to_series` VALUES ('246', '26');
+INSERT INTO `mc_product_to_series` VALUES ('247', '62');
+INSERT INTO `mc_product_to_series` VALUES ('248', '61');
+INSERT INTO `mc_product_to_series` VALUES ('252', '69');
+INSERT INTO `mc_product_to_series` VALUES ('258', '60');
+INSERT INTO `mc_product_to_series` VALUES ('259', '26');
+INSERT INTO `mc_product_to_series` VALUES ('260', '62');
+INSERT INTO `mc_product_to_series` VALUES ('261', '61');
+INSERT INTO `mc_product_to_series` VALUES ('264', '72');
+INSERT INTO `mc_product_to_series` VALUES ('266', '69');
+INSERT INTO `mc_product_to_series` VALUES ('271', '60');
+INSERT INTO `mc_product_to_series` VALUES ('272', '26');
+INSERT INTO `mc_product_to_series` VALUES ('273', '26');
+INSERT INTO `mc_product_to_series` VALUES ('274', '62');
+INSERT INTO `mc_product_to_series` VALUES ('275', '61');
+INSERT INTO `mc_product_to_series` VALUES ('280', '72');
+INSERT INTO `mc_product_to_series` VALUES ('282', '69');
+INSERT INTO `mc_product_to_series` VALUES ('286', '60');
+INSERT INTO `mc_product_to_series` VALUES ('287', '26');
+INSERT INTO `mc_product_to_series` VALUES ('288', '62');
+INSERT INTO `mc_product_to_series` VALUES ('289', '61');
+INSERT INTO `mc_product_to_series` VALUES ('294', '72');
+INSERT INTO `mc_product_to_series` VALUES ('296', '69');
+INSERT INTO `mc_product_to_series` VALUES ('301', '60');
+INSERT INTO `mc_product_to_series` VALUES ('302', '26');
+INSERT INTO `mc_product_to_series` VALUES ('303', '62');
+INSERT INTO `mc_product_to_series` VALUES ('304', '61');
+INSERT INTO `mc_product_to_series` VALUES ('311', '72');
+INSERT INTO `mc_product_to_series` VALUES ('313', '69');
+INSERT INTO `mc_product_to_series` VALUES ('317', '60');
+INSERT INTO `mc_product_to_series` VALUES ('318', '26');
+INSERT INTO `mc_product_to_series` VALUES ('319', '62');
+INSERT INTO `mc_product_to_series` VALUES ('320', '61');
+INSERT INTO `mc_product_to_series` VALUES ('326', '72');
+INSERT INTO `mc_product_to_series` VALUES ('327', '72');
+INSERT INTO `mc_product_to_series` VALUES ('329', '69');
+INSERT INTO `mc_product_to_series` VALUES ('333', '60');
+INSERT INTO `mc_product_to_series` VALUES ('334', '26');
+INSERT INTO `mc_product_to_series` VALUES ('335', '62');
+INSERT INTO `mc_product_to_series` VALUES ('343', '72');
+INSERT INTO `mc_product_to_series` VALUES ('344', '72');
+INSERT INTO `mc_product_to_series` VALUES ('345', '69');
+INSERT INTO `mc_product_to_series` VALUES ('349', '60');
+INSERT INTO `mc_product_to_series` VALUES ('350', '26');
+INSERT INTO `mc_product_to_series` VALUES ('351', '62');
+INSERT INTO `mc_product_to_series` VALUES ('352', '64');
+INSERT INTO `mc_product_to_series` VALUES ('359', '72');
+INSERT INTO `mc_product_to_series` VALUES ('360', '69');
+INSERT INTO `mc_product_to_series` VALUES ('361', '69');
+INSERT INTO `mc_product_to_series` VALUES ('365', '60');
+INSERT INTO `mc_product_to_series` VALUES ('366', '26');
+INSERT INTO `mc_product_to_series` VALUES ('367', '62');
+INSERT INTO `mc_product_to_series` VALUES ('368', '64');
+INSERT INTO `mc_product_to_series` VALUES ('376', '69');
+INSERT INTO `mc_product_to_series` VALUES ('378', '60');
+INSERT INTO `mc_product_to_series` VALUES ('379', '26');
+INSERT INTO `mc_product_to_series` VALUES ('380', '62');
+INSERT INTO `mc_product_to_series` VALUES ('381', '64');
+INSERT INTO `mc_product_to_series` VALUES ('387', '69');
+INSERT INTO `mc_product_to_series` VALUES ('389', '60');
+INSERT INTO `mc_product_to_series` VALUES ('390', '26');
+INSERT INTO `mc_product_to_series` VALUES ('391', '62');
+INSERT INTO `mc_product_to_series` VALUES ('392', '64');
+INSERT INTO `mc_product_to_series` VALUES ('398', '69');
+INSERT INTO `mc_product_to_series` VALUES ('400', '60');
+INSERT INTO `mc_product_to_series` VALUES ('401', '26');
+INSERT INTO `mc_product_to_series` VALUES ('402', '62');
+INSERT INTO `mc_product_to_series` VALUES ('403', '64');
+INSERT INTO `mc_product_to_series` VALUES ('409', '69');
+INSERT INTO `mc_product_to_series` VALUES ('411', '60');
+INSERT INTO `mc_product_to_series` VALUES ('412', '26');
+INSERT INTO `mc_product_to_series` VALUES ('413', '62');
+INSERT INTO `mc_product_to_series` VALUES ('414', '61');
+INSERT INTO `mc_product_to_series` VALUES ('415', '64');
+INSERT INTO `mc_product_to_series` VALUES ('416', '63');
+INSERT INTO `mc_product_to_series` VALUES ('417', '27');
+INSERT INTO `mc_product_to_series` VALUES ('421', '69');
+INSERT INTO `mc_product_to_series` VALUES ('423', '60');
+INSERT INTO `mc_product_to_series` VALUES ('424', '26');
+INSERT INTO `mc_product_to_series` VALUES ('425', '62');
+INSERT INTO `mc_product_to_series` VALUES ('426', '61');
+INSERT INTO `mc_product_to_series` VALUES ('427', '64');
+INSERT INTO `mc_product_to_series` VALUES ('428', '63');
+INSERT INTO `mc_product_to_series` VALUES ('433', '69');
+INSERT INTO `mc_product_to_series` VALUES ('435', '60');
+INSERT INTO `mc_product_to_series` VALUES ('436', '26');
+INSERT INTO `mc_product_to_series` VALUES ('437', '62');
+INSERT INTO `mc_product_to_series` VALUES ('438', '61');
+INSERT INTO `mc_product_to_series` VALUES ('439', '64');
+INSERT INTO `mc_product_to_series` VALUES ('440', '63');
+INSERT INTO `mc_product_to_series` VALUES ('441', '27');
+INSERT INTO `mc_product_to_series` VALUES ('446', '69');
+INSERT INTO `mc_product_to_series` VALUES ('448', '60');
+INSERT INTO `mc_product_to_series` VALUES ('449', '26');
+INSERT INTO `mc_product_to_series` VALUES ('450', '62');
+INSERT INTO `mc_product_to_series` VALUES ('451', '61');
+INSERT INTO `mc_product_to_series` VALUES ('452', '64');
+INSERT INTO `mc_product_to_series` VALUES ('453', '63');
+INSERT INTO `mc_product_to_series` VALUES ('454', '27');
+INSERT INTO `mc_product_to_series` VALUES ('458', '69');
+INSERT INTO `mc_product_to_series` VALUES ('460', '60');
+INSERT INTO `mc_product_to_series` VALUES ('461', '60');
+INSERT INTO `mc_product_to_series` VALUES ('462', '26');
+INSERT INTO `mc_product_to_series` VALUES ('463', '61');
+INSERT INTO `mc_product_to_series` VALUES ('464', '64');
+INSERT INTO `mc_product_to_series` VALUES ('465', '63');
+INSERT INTO `mc_product_to_series` VALUES ('466', '27');
+INSERT INTO `mc_product_to_series` VALUES ('470', '69');
+INSERT INTO `mc_product_to_series` VALUES ('472', '60');
+INSERT INTO `mc_product_to_series` VALUES ('473', '60');
+INSERT INTO `mc_product_to_series` VALUES ('474', '26');
+INSERT INTO `mc_product_to_series` VALUES ('475', '61');
+INSERT INTO `mc_product_to_series` VALUES ('476', '64');
+INSERT INTO `mc_product_to_series` VALUES ('477', '63');
+INSERT INTO `mc_product_to_series` VALUES ('478', '27');
+INSERT INTO `mc_product_to_series` VALUES ('483', '60');
+INSERT INTO `mc_product_to_series` VALUES ('484', '26');
+INSERT INTO `mc_product_to_series` VALUES ('485', '61');
+INSERT INTO `mc_product_to_series` VALUES ('486', '64');
+INSERT INTO `mc_product_to_series` VALUES ('487', '63');
+INSERT INTO `mc_product_to_series` VALUES ('488', '27');
+INSERT INTO `mc_product_to_series` VALUES ('493', '60');
+INSERT INTO `mc_product_to_series` VALUES ('494', '26');
+INSERT INTO `mc_product_to_series` VALUES ('495', '61');
+INSERT INTO `mc_product_to_series` VALUES ('496', '64');
+INSERT INTO `mc_product_to_series` VALUES ('497', '63');
+INSERT INTO `mc_product_to_series` VALUES ('498', '27');
+INSERT INTO `mc_product_to_series` VALUES ('504', '60');
+INSERT INTO `mc_product_to_series` VALUES ('505', '26');
+INSERT INTO `mc_product_to_series` VALUES ('506', '61');
+INSERT INTO `mc_product_to_series` VALUES ('507', '64');
+INSERT INTO `mc_product_to_series` VALUES ('508', '63');
+INSERT INTO `mc_product_to_series` VALUES ('509', '27');
+INSERT INTO `mc_product_to_series` VALUES ('514', '60');
+INSERT INTO `mc_product_to_series` VALUES ('515', '26');
+INSERT INTO `mc_product_to_series` VALUES ('516', '61');
+INSERT INTO `mc_product_to_series` VALUES ('517', '64');
+INSERT INTO `mc_product_to_series` VALUES ('518', '63');
+INSERT INTO `mc_product_to_series` VALUES ('519', '27');
+INSERT INTO `mc_product_to_series` VALUES ('524', '60');
+INSERT INTO `mc_product_to_series` VALUES ('525', '26');
+INSERT INTO `mc_product_to_series` VALUES ('526', '64');
+INSERT INTO `mc_product_to_series` VALUES ('527', '63');
+INSERT INTO `mc_product_to_series` VALUES ('528', '27');
+INSERT INTO `mc_product_to_series` VALUES ('535', '60');
+INSERT INTO `mc_product_to_series` VALUES ('536', '26');
+INSERT INTO `mc_product_to_series` VALUES ('537', '64');
+INSERT INTO `mc_product_to_series` VALUES ('538', '63');
+INSERT INTO `mc_product_to_series` VALUES ('539', '27');
+INSERT INTO `mc_product_to_series` VALUES ('543', '60');
+INSERT INTO `mc_product_to_series` VALUES ('544', '26');
+INSERT INTO `mc_product_to_series` VALUES ('545', '62');
+INSERT INTO `mc_product_to_series` VALUES ('546', '64');
+INSERT INTO `mc_product_to_series` VALUES ('547', '63');
+INSERT INTO `mc_product_to_series` VALUES ('548', '27');
+INSERT INTO `mc_product_to_series` VALUES ('552', '60');
+INSERT INTO `mc_product_to_series` VALUES ('553', '26');
+INSERT INTO `mc_product_to_series` VALUES ('554', '62');
+INSERT INTO `mc_product_to_series` VALUES ('555', '64');
+INSERT INTO `mc_product_to_series` VALUES ('556', '63');
+INSERT INTO `mc_product_to_series` VALUES ('557', '27');
+INSERT INTO `mc_product_to_series` VALUES ('558', '27');
+INSERT INTO `mc_product_to_series` VALUES ('562', '60');
+INSERT INTO `mc_product_to_series` VALUES ('563', '26');
+INSERT INTO `mc_product_to_series` VALUES ('564', '62');
+INSERT INTO `mc_product_to_series` VALUES ('565', '64');
+INSERT INTO `mc_product_to_series` VALUES ('566', '63');
+INSERT INTO `mc_product_to_series` VALUES ('567', '27');
+INSERT INTO `mc_product_to_series` VALUES ('572', '60');
+INSERT INTO `mc_product_to_series` VALUES ('573', '26');
+INSERT INTO `mc_product_to_series` VALUES ('574', '62');
+INSERT INTO `mc_product_to_series` VALUES ('575', '64');
+INSERT INTO `mc_product_to_series` VALUES ('576', '63');
+INSERT INTO `mc_product_to_series` VALUES ('577', '27');
+INSERT INTO `mc_product_to_series` VALUES ('581', '60');
+INSERT INTO `mc_product_to_series` VALUES ('582', '62');
+INSERT INTO `mc_product_to_series` VALUES ('583', '64');
+INSERT INTO `mc_product_to_series` VALUES ('584', '63');
+INSERT INTO `mc_product_to_series` VALUES ('585', '27');
+INSERT INTO `mc_product_to_series` VALUES ('590', '62');
+INSERT INTO `mc_product_to_series` VALUES ('591', '64');
+INSERT INTO `mc_product_to_series` VALUES ('592', '63');
+INSERT INTO `mc_product_to_series` VALUES ('593', '27');
+INSERT INTO `mc_product_to_series` VALUES ('599', '62');
+INSERT INTO `mc_product_to_series` VALUES ('600', '64');
+INSERT INTO `mc_product_to_series` VALUES ('601', '63');
+INSERT INTO `mc_product_to_series` VALUES ('602', '27');
+INSERT INTO `mc_product_to_series` VALUES ('607', '62');
+INSERT INTO `mc_product_to_series` VALUES ('608', '64');
+INSERT INTO `mc_product_to_series` VALUES ('609', '63');
+INSERT INTO `mc_product_to_series` VALUES ('610', '27');
+INSERT INTO `mc_product_to_series` VALUES ('613', '62');
+INSERT INTO `mc_product_to_series` VALUES ('614', '64');
+INSERT INTO `mc_product_to_series` VALUES ('615', '63');
+INSERT INTO `mc_product_to_series` VALUES ('617', '62');
+INSERT INTO `mc_product_to_series` VALUES ('618', '64');
+INSERT INTO `mc_product_to_series` VALUES ('619', '63');
+INSERT INTO `mc_product_to_series` VALUES ('621', '62');
+INSERT INTO `mc_product_to_series` VALUES ('622', '64');
+INSERT INTO `mc_product_to_series` VALUES ('623', '63');
+INSERT INTO `mc_product_to_series` VALUES ('624', '27');
+INSERT INTO `mc_product_to_series` VALUES ('625', '26');
+INSERT INTO `mc_product_to_series` VALUES ('626', '62');
+INSERT INTO `mc_product_to_series` VALUES ('627', '64');
+INSERT INTO `mc_product_to_series` VALUES ('628', '63');
+INSERT INTO `mc_product_to_series` VALUES ('629', '27');
+INSERT INTO `mc_product_to_series` VALUES ('630', '26');
+INSERT INTO `mc_product_to_series` VALUES ('631', '62');
+INSERT INTO `mc_product_to_series` VALUES ('632', '64');
+INSERT INTO `mc_product_to_series` VALUES ('633', '63');
+INSERT INTO `mc_product_to_series` VALUES ('634', '27');
+INSERT INTO `mc_product_to_series` VALUES ('635', '60');
+INSERT INTO `mc_product_to_series` VALUES ('636', '26');
+INSERT INTO `mc_product_to_series` VALUES ('637', '62');
+INSERT INTO `mc_product_to_series` VALUES ('638', '64');
+INSERT INTO `mc_product_to_series` VALUES ('639', '63');
+INSERT INTO `mc_product_to_series` VALUES ('640', '27');
+INSERT INTO `mc_product_to_series` VALUES ('641', '60');
+INSERT INTO `mc_product_to_series` VALUES ('642', '26');
+INSERT INTO `mc_product_to_series` VALUES ('643', '62');
+INSERT INTO `mc_product_to_series` VALUES ('644', '64');
+INSERT INTO `mc_product_to_series` VALUES ('645', '63');
+INSERT INTO `mc_product_to_series` VALUES ('646', '27');
+INSERT INTO `mc_product_to_series` VALUES ('647', '60');
+INSERT INTO `mc_product_to_series` VALUES ('648', '26');
+INSERT INTO `mc_product_to_series` VALUES ('649', '62');
+INSERT INTO `mc_product_to_series` VALUES ('650', '64');
+INSERT INTO `mc_product_to_series` VALUES ('651', '63');
+INSERT INTO `mc_product_to_series` VALUES ('652', '27');
+INSERT INTO `mc_product_to_series` VALUES ('655', '60');
+INSERT INTO `mc_product_to_series` VALUES ('656', '26');
+INSERT INTO `mc_product_to_series` VALUES ('657', '62');
+INSERT INTO `mc_product_to_series` VALUES ('658', '64');
+INSERT INTO `mc_product_to_series` VALUES ('659', '63');
+INSERT INTO `mc_product_to_series` VALUES ('660', '27');
+INSERT INTO `mc_product_to_series` VALUES ('664', '60');
+INSERT INTO `mc_product_to_series` VALUES ('665', '60');
+INSERT INTO `mc_product_to_series` VALUES ('666', '26');
+INSERT INTO `mc_product_to_series` VALUES ('667', '62');
+INSERT INTO `mc_product_to_series` VALUES ('668', '64');
+INSERT INTO `mc_product_to_series` VALUES ('669', '63');
+INSERT INTO `mc_product_to_series` VALUES ('670', '27');
+INSERT INTO `mc_product_to_series` VALUES ('673', '60');
+INSERT INTO `mc_product_to_series` VALUES ('674', '26');
+INSERT INTO `mc_product_to_series` VALUES ('675', '62');
+INSERT INTO `mc_product_to_series` VALUES ('676', '64');
+INSERT INTO `mc_product_to_series` VALUES ('677', '63');
+INSERT INTO `mc_product_to_series` VALUES ('678', '27');
+INSERT INTO `mc_product_to_series` VALUES ('679', '27');
+INSERT INTO `mc_product_to_series` VALUES ('686', '60');
+INSERT INTO `mc_product_to_series` VALUES ('687', '26');
+INSERT INTO `mc_product_to_series` VALUES ('688', '62');
+INSERT INTO `mc_product_to_series` VALUES ('689', '64');
+INSERT INTO `mc_product_to_series` VALUES ('690', '63');
+INSERT INTO `mc_product_to_series` VALUES ('691', '27');
+INSERT INTO `mc_product_to_series` VALUES ('694', '60');
+INSERT INTO `mc_product_to_series` VALUES ('695', '26');
+INSERT INTO `mc_product_to_series` VALUES ('696', '62');
+INSERT INTO `mc_product_to_series` VALUES ('697', '64');
+INSERT INTO `mc_product_to_series` VALUES ('698', '27');
+INSERT INTO `mc_product_to_series` VALUES ('701', '60');
+INSERT INTO `mc_product_to_series` VALUES ('701', '74');
+INSERT INTO `mc_product_to_series` VALUES ('702', '26');
+INSERT INTO `mc_product_to_series` VALUES ('703', '62');
+INSERT INTO `mc_product_to_series` VALUES ('704', '64');
+INSERT INTO `mc_product_to_series` VALUES ('705', '27');
+INSERT INTO `mc_product_to_series` VALUES ('710', '60');
+INSERT INTO `mc_product_to_series` VALUES ('710', '74');
+INSERT INTO `mc_product_to_series` VALUES ('711', '26');
+INSERT INTO `mc_product_to_series` VALUES ('712', '62');
+INSERT INTO `mc_product_to_series` VALUES ('713', '64');
+INSERT INTO `mc_product_to_series` VALUES ('716', '60');
+INSERT INTO `mc_product_to_series` VALUES ('716', '74');
+INSERT INTO `mc_product_to_series` VALUES ('717', '26');
+INSERT INTO `mc_product_to_series` VALUES ('718', '62');
+INSERT INTO `mc_product_to_series` VALUES ('721', '60');
+INSERT INTO `mc_product_to_series` VALUES ('721', '74');
+INSERT INTO `mc_product_to_series` VALUES ('722', '26');
+INSERT INTO `mc_product_to_series` VALUES ('723', '62');
+INSERT INTO `mc_product_to_series` VALUES ('726', '60');
+INSERT INTO `mc_product_to_series` VALUES ('726', '74');
+INSERT INTO `mc_product_to_series` VALUES ('727', '26');
+INSERT INTO `mc_product_to_series` VALUES ('728', '62');
+INSERT INTO `mc_product_to_series` VALUES ('731', '60');
+INSERT INTO `mc_product_to_series` VALUES ('731', '74');
+INSERT INTO `mc_product_to_series` VALUES ('732', '26');
+INSERT INTO `mc_product_to_series` VALUES ('733', '62');
+INSERT INTO `mc_product_to_series` VALUES ('737', '60');
+INSERT INTO `mc_product_to_series` VALUES ('737', '74');
+INSERT INTO `mc_product_to_series` VALUES ('738', '26');
+INSERT INTO `mc_product_to_series` VALUES ('739', '62');
+INSERT INTO `mc_product_to_series` VALUES ('742', '60');
+INSERT INTO `mc_product_to_series` VALUES ('742', '74');
+INSERT INTO `mc_product_to_series` VALUES ('743', '26');
+INSERT INTO `mc_product_to_series` VALUES ('744', '62');
+INSERT INTO `mc_product_to_series` VALUES ('745', '64');
+INSERT INTO `mc_product_to_series` VALUES ('748', '60');
+INSERT INTO `mc_product_to_series` VALUES ('748', '74');
+INSERT INTO `mc_product_to_series` VALUES ('749', '26');
+INSERT INTO `mc_product_to_series` VALUES ('750', '62');
+INSERT INTO `mc_product_to_series` VALUES ('751', '27');
+INSERT INTO `mc_product_to_series` VALUES ('754', '60');
+INSERT INTO `mc_product_to_series` VALUES ('754', '74');
+INSERT INTO `mc_product_to_series` VALUES ('755', '26');
+INSERT INTO `mc_product_to_series` VALUES ('756', '62');
+INSERT INTO `mc_product_to_series` VALUES ('757', '27');
+INSERT INTO `mc_product_to_series` VALUES ('761', '60');
+INSERT INTO `mc_product_to_series` VALUES ('761', '74');
+INSERT INTO `mc_product_to_series` VALUES ('762', '26');
+INSERT INTO `mc_product_to_series` VALUES ('763', '62');
+INSERT INTO `mc_product_to_series` VALUES ('764', '27');
+INSERT INTO `mc_product_to_series` VALUES ('767', '60');
+INSERT INTO `mc_product_to_series` VALUES ('767', '74');
+INSERT INTO `mc_product_to_series` VALUES ('768', '26');
+INSERT INTO `mc_product_to_series` VALUES ('769', '62');
+INSERT INTO `mc_product_to_series` VALUES ('770', '27');
+INSERT INTO `mc_product_to_series` VALUES ('773', '60');
+INSERT INTO `mc_product_to_series` VALUES ('773', '74');
+INSERT INTO `mc_product_to_series` VALUES ('774', '26');
+INSERT INTO `mc_product_to_series` VALUES ('775', '62');
+INSERT INTO `mc_product_to_series` VALUES ('776', '27');
+INSERT INTO `mc_product_to_series` VALUES ('779', '60');
+INSERT INTO `mc_product_to_series` VALUES ('779', '74');
+INSERT INTO `mc_product_to_series` VALUES ('780', '26');
+INSERT INTO `mc_product_to_series` VALUES ('781', '62');
+INSERT INTO `mc_product_to_series` VALUES ('784', '60');
+INSERT INTO `mc_product_to_series` VALUES ('784', '74');
+INSERT INTO `mc_product_to_series` VALUES ('785', '26');
+INSERT INTO `mc_product_to_series` VALUES ('786', '62');
+INSERT INTO `mc_product_to_series` VALUES ('789', '60');
+INSERT INTO `mc_product_to_series` VALUES ('789', '74');
+INSERT INTO `mc_product_to_series` VALUES ('790', '26');
+INSERT INTO `mc_product_to_series` VALUES ('791', '62');
+INSERT INTO `mc_product_to_series` VALUES ('792', '27');
+INSERT INTO `mc_product_to_series` VALUES ('794', '60');
+INSERT INTO `mc_product_to_series` VALUES ('794', '74');
+INSERT INTO `mc_product_to_series` VALUES ('795', '26');
+INSERT INTO `mc_product_to_series` VALUES ('796', '62');
+INSERT INTO `mc_product_to_series` VALUES ('797', '27');
+INSERT INTO `mc_product_to_series` VALUES ('799', '60');
+INSERT INTO `mc_product_to_series` VALUES ('799', '74');
+INSERT INTO `mc_product_to_series` VALUES ('800', '26');
+INSERT INTO `mc_product_to_series` VALUES ('801', '62');
+INSERT INTO `mc_product_to_series` VALUES ('802', '27');
+INSERT INTO `mc_product_to_series` VALUES ('804', '60');
+INSERT INTO `mc_product_to_series` VALUES ('804', '74');
+INSERT INTO `mc_product_to_series` VALUES ('805', '26');
+INSERT INTO `mc_product_to_series` VALUES ('806', '62');
+INSERT INTO `mc_product_to_series` VALUES ('807', '27');
+INSERT INTO `mc_product_to_series` VALUES ('808', '60');
+INSERT INTO `mc_product_to_series` VALUES ('808', '74');
+INSERT INTO `mc_product_to_series` VALUES ('809', '26');
+INSERT INTO `mc_product_to_series` VALUES ('810', '27');
+INSERT INTO `mc_product_to_series` VALUES ('811', '60');
+INSERT INTO `mc_product_to_series` VALUES ('811', '74');
+INSERT INTO `mc_product_to_series` VALUES ('812', '27');
+INSERT INTO `mc_product_to_series` VALUES ('813', '60');
+INSERT INTO `mc_product_to_series` VALUES ('813', '74');
+INSERT INTO `mc_product_to_series` VALUES ('814', '27');
+INSERT INTO `mc_product_to_series` VALUES ('815', '60');
+INSERT INTO `mc_product_to_series` VALUES ('815', '74');
+INSERT INTO `mc_product_to_series` VALUES ('816', '27');
+INSERT INTO `mc_product_to_series` VALUES ('817', '60');
+INSERT INTO `mc_product_to_series` VALUES ('817', '74');
+INSERT INTO `mc_product_to_series` VALUES ('818', '27');
+INSERT INTO `mc_product_to_series` VALUES ('819', '60');
+INSERT INTO `mc_product_to_series` VALUES ('819', '74');
+INSERT INTO `mc_product_to_series` VALUES ('820', '27');
+INSERT INTO `mc_product_to_series` VALUES ('821', '60');
+INSERT INTO `mc_product_to_series` VALUES ('821', '74');
+INSERT INTO `mc_product_to_series` VALUES ('822', '60');
+INSERT INTO `mc_product_to_series` VALUES ('822', '74');
+INSERT INTO `mc_product_to_series` VALUES ('823', '60');
+INSERT INTO `mc_product_to_series` VALUES ('823', '74');
+INSERT INTO `mc_product_to_series` VALUES ('824', '62');
+INSERT INTO `mc_product_to_series` VALUES ('825', '60');
+INSERT INTO `mc_product_to_series` VALUES ('825', '74');
+INSERT INTO `mc_product_to_series` VALUES ('826', '62');
+INSERT INTO `mc_product_to_series` VALUES ('827', '60');
+INSERT INTO `mc_product_to_series` VALUES ('827', '74');
+INSERT INTO `mc_product_to_series` VALUES ('828', '62');
+INSERT INTO `mc_product_to_series` VALUES ('829', '60');
+INSERT INTO `mc_product_to_series` VALUES ('829', '74');
+INSERT INTO `mc_product_to_series` VALUES ('830', '62');
+INSERT INTO `mc_product_to_series` VALUES ('831', '62');
+INSERT INTO `mc_product_to_series` VALUES ('832', '62');
+INSERT INTO `mc_product_to_series` VALUES ('833', '62');
+INSERT INTO `mc_product_to_series` VALUES ('834', '62');
+INSERT INTO `mc_product_to_series` VALUES ('835', '62');
+INSERT INTO `mc_product_to_series` VALUES ('836', '62');
+INSERT INTO `mc_product_to_series` VALUES ('837', '62');
+INSERT INTO `mc_product_to_series` VALUES ('838', '62');
+INSERT INTO `mc_product_to_series` VALUES ('839', '62');
+INSERT INTO `mc_product_to_series` VALUES ('840', '62');
+INSERT INTO `mc_product_to_series` VALUES ('841', '62');
+INSERT INTO `mc_product_to_series` VALUES ('842', '62');
+INSERT INTO `mc_product_to_series` VALUES ('843', '60');
+INSERT INTO `mc_product_to_series` VALUES ('843', '74');
+INSERT INTO `mc_product_to_series` VALUES ('844', '62');
+INSERT INTO `mc_product_to_series` VALUES ('845', '60');
+INSERT INTO `mc_product_to_series` VALUES ('846', '62');
+INSERT INTO `mc_product_to_series` VALUES ('847', '60');
+INSERT INTO `mc_product_to_series` VALUES ('848', '62');
+INSERT INTO `mc_product_to_series` VALUES ('849', '60');
+INSERT INTO `mc_product_to_series` VALUES ('850', '62');
+INSERT INTO `mc_product_to_series` VALUES ('851', '60');
+INSERT INTO `mc_product_to_series` VALUES ('852', '62');
+INSERT INTO `mc_product_to_series` VALUES ('853', '60');
+INSERT INTO `mc_product_to_series` VALUES ('854', '62');
+INSERT INTO `mc_product_to_series` VALUES ('855', '60');
+INSERT INTO `mc_product_to_series` VALUES ('856', '62');
+INSERT INTO `mc_product_to_series` VALUES ('857', '60');
+INSERT INTO `mc_product_to_series` VALUES ('858', '62');
+INSERT INTO `mc_product_to_series` VALUES ('859', '60');
+INSERT INTO `mc_product_to_series` VALUES ('860', '62');
+INSERT INTO `mc_product_to_series` VALUES ('861', '60');
+INSERT INTO `mc_product_to_series` VALUES ('862', '62');
+INSERT INTO `mc_product_to_series` VALUES ('863', '60');
+INSERT INTO `mc_product_to_series` VALUES ('864', '62');
+INSERT INTO `mc_product_to_series` VALUES ('865', '60');
+INSERT INTO `mc_product_to_series` VALUES ('866', '62');
+INSERT INTO `mc_product_to_series` VALUES ('867', '60');
+INSERT INTO `mc_product_to_series` VALUES ('868', '62');
+INSERT INTO `mc_product_to_series` VALUES ('869', '60');
+INSERT INTO `mc_product_to_series` VALUES ('870', '62');
+INSERT INTO `mc_product_to_series` VALUES ('871', '60');
+INSERT INTO `mc_product_to_series` VALUES ('872', '62');
+INSERT INTO `mc_product_to_series` VALUES ('873', '60');
+INSERT INTO `mc_product_to_series` VALUES ('874', '62');
+INSERT INTO `mc_product_to_series` VALUES ('875', '60');
+INSERT INTO `mc_product_to_series` VALUES ('876', '62');
+INSERT INTO `mc_product_to_series` VALUES ('877', '60');
+INSERT INTO `mc_product_to_series` VALUES ('878', '62');
+INSERT INTO `mc_product_to_series` VALUES ('879', '60');
+INSERT INTO `mc_product_to_series` VALUES ('880', '62');
+INSERT INTO `mc_product_to_series` VALUES ('881', '60');
+INSERT INTO `mc_product_to_series` VALUES ('882', '62');
+INSERT INTO `mc_product_to_series` VALUES ('883', '60');
+INSERT INTO `mc_product_to_series` VALUES ('884', '60');
+INSERT INTO `mc_product_to_series` VALUES ('885', '60');
+INSERT INTO `mc_product_to_series` VALUES ('886', '62');
+INSERT INTO `mc_product_to_series` VALUES ('887', '60');
+INSERT INTO `mc_product_to_series` VALUES ('888', '62');
+INSERT INTO `mc_product_to_series` VALUES ('889', '60');
+INSERT INTO `mc_product_to_series` VALUES ('890', '60');
+INSERT INTO `mc_product_to_series` VALUES ('891', '60');
+INSERT INTO `mc_product_to_series` VALUES ('892', '60');
+INSERT INTO `mc_product_to_series` VALUES ('893', '60');
+INSERT INTO `mc_product_to_series` VALUES ('894', '60');
+INSERT INTO `mc_product_to_series` VALUES ('895', '60');
+INSERT INTO `mc_product_to_series` VALUES ('896', '60');
+INSERT INTO `mc_product_to_series` VALUES ('897', '60');
+INSERT INTO `mc_product_to_series` VALUES ('898', '60');
+INSERT INTO `mc_product_to_series` VALUES ('899', '60');
+INSERT INTO `mc_product_to_series` VALUES ('900', '60');
+INSERT INTO `mc_product_to_series` VALUES ('901', '60');
+INSERT INTO `mc_product_to_series` VALUES ('902', '60');
+INSERT INTO `mc_product_to_series` VALUES ('903', '60');
+INSERT INTO `mc_product_to_series` VALUES ('904', '60');
+INSERT INTO `mc_product_to_series` VALUES ('905', '60');
+INSERT INTO `mc_product_to_series` VALUES ('906', '60');
+INSERT INTO `mc_product_to_series` VALUES ('907', '60');
+INSERT INTO `mc_product_to_series` VALUES ('908', '60');
+INSERT INTO `mc_product_to_series` VALUES ('909', '60');
+INSERT INTO `mc_product_to_series` VALUES ('910', '60');
+INSERT INTO `mc_product_to_series` VALUES ('911', '60');
+INSERT INTO `mc_product_to_series` VALUES ('912', '60');
+INSERT INTO `mc_product_to_series` VALUES ('913', '60');
+INSERT INTO `mc_product_to_series` VALUES ('914', '60');
+INSERT INTO `mc_product_to_series` VALUES ('915', '60');
+INSERT INTO `mc_product_to_series` VALUES ('916', '60');
+INSERT INTO `mc_product_to_series` VALUES ('917', '60');
+INSERT INTO `mc_product_to_series` VALUES ('918', '60');
+INSERT INTO `mc_product_to_series` VALUES ('919', '60');
+INSERT INTO `mc_product_to_series` VALUES ('920', '60');
+INSERT INTO `mc_product_to_series` VALUES ('921', '60');
+INSERT INTO `mc_product_to_series` VALUES ('922', '60');
+INSERT INTO `mc_product_to_series` VALUES ('923', '60');
+INSERT INTO `mc_product_to_series` VALUES ('924', '60');
+INSERT INTO `mc_product_to_series` VALUES ('925', '60');
+INSERT INTO `mc_product_to_series` VALUES ('926', '60');
+INSERT INTO `mc_product_to_series` VALUES ('927', '60');
+INSERT INTO `mc_product_to_series` VALUES ('928', '60');
+INSERT INTO `mc_product_to_series` VALUES ('929', '60');
+INSERT INTO `mc_product_to_series` VALUES ('930', '60');
+INSERT INTO `mc_product_to_series` VALUES ('931', '60');
+INSERT INTO `mc_product_to_series` VALUES ('932', '60');
+INSERT INTO `mc_product_to_series` VALUES ('933', '60');
+INSERT INTO `mc_product_to_series` VALUES ('934', '60');
+INSERT INTO `mc_product_to_series` VALUES ('935', '60');
+INSERT INTO `mc_product_to_series` VALUES ('936', '60');
+INSERT INTO `mc_product_to_series` VALUES ('937', '60');
+INSERT INTO `mc_product_to_series` VALUES ('938', '60');
+INSERT INTO `mc_product_to_series` VALUES ('939', '60');
+INSERT INTO `mc_product_to_series` VALUES ('940', '60');
+INSERT INTO `mc_product_to_series` VALUES ('941', '60');
+INSERT INTO `mc_product_to_series` VALUES ('942', '60');
+INSERT INTO `mc_product_to_series` VALUES ('943', '60');
+INSERT INTO `mc_product_to_series` VALUES ('944', '60');
+INSERT INTO `mc_product_to_series` VALUES ('945', '60');
+INSERT INTO `mc_product_to_series` VALUES ('946', '60');
+INSERT INTO `mc_product_to_series` VALUES ('947', '60');
+INSERT INTO `mc_product_to_series` VALUES ('948', '60');
+INSERT INTO `mc_product_to_series` VALUES ('949', '60');
+INSERT INTO `mc_product_to_series` VALUES ('950', '60');
+INSERT INTO `mc_product_to_series` VALUES ('951', '60');
+INSERT INTO `mc_product_to_series` VALUES ('952', '60');
+INSERT INTO `mc_product_to_series` VALUES ('953', '60');
+INSERT INTO `mc_product_to_series` VALUES ('954', '60');
+INSERT INTO `mc_product_to_series` VALUES ('955', '60');
+INSERT INTO `mc_product_to_series` VALUES ('956', '60');
+INSERT INTO `mc_product_to_series` VALUES ('957', '60');
+INSERT INTO `mc_product_to_series` VALUES ('958', '60');
+INSERT INTO `mc_product_to_series` VALUES ('959', '60');
+INSERT INTO `mc_product_to_series` VALUES ('960', '60');
+INSERT INTO `mc_product_to_series` VALUES ('961', '60');
+INSERT INTO `mc_product_to_series` VALUES ('962', '60');
+INSERT INTO `mc_product_to_series` VALUES ('963', '60');
+INSERT INTO `mc_product_to_series` VALUES ('964', '60');
+INSERT INTO `mc_product_to_series` VALUES ('965', '60');
+INSERT INTO `mc_product_to_series` VALUES ('966', '60');
+INSERT INTO `mc_product_to_series` VALUES ('967', '60');
+INSERT INTO `mc_product_to_series` VALUES ('968', '60');
+INSERT INTO `mc_product_to_series` VALUES ('969', '60');
+INSERT INTO `mc_product_to_series` VALUES ('970', '60');
+INSERT INTO `mc_product_to_series` VALUES ('971', '60');
+INSERT INTO `mc_product_to_series` VALUES ('972', '60');
+INSERT INTO `mc_product_to_series` VALUES ('972', '74');
+INSERT INTO `mc_product_to_series` VALUES ('973', '60');
+INSERT INTO `mc_product_to_series` VALUES ('973', '74');
+INSERT INTO `mc_product_to_series` VALUES ('974', '60');
+INSERT INTO `mc_product_to_series` VALUES ('974', '74');
+INSERT INTO `mc_product_to_series` VALUES ('975', '60');
+INSERT INTO `mc_product_to_series` VALUES ('975', '74');
+INSERT INTO `mc_product_to_series` VALUES ('976', '60');
+INSERT INTO `mc_product_to_series` VALUES ('976', '74');
+INSERT INTO `mc_product_to_series` VALUES ('977', '60');
+INSERT INTO `mc_product_to_series` VALUES ('977', '74');
+INSERT INTO `mc_product_to_series` VALUES ('978', '60');
+INSERT INTO `mc_product_to_series` VALUES ('978', '74');
+INSERT INTO `mc_product_to_series` VALUES ('979', '60');
+INSERT INTO `mc_product_to_series` VALUES ('979', '74');
+INSERT INTO `mc_product_to_series` VALUES ('980', '60');
+INSERT INTO `mc_product_to_series` VALUES ('980', '74');
+INSERT INTO `mc_product_to_series` VALUES ('981', '60');
+INSERT INTO `mc_product_to_series` VALUES ('981', '74');
+INSERT INTO `mc_product_to_series` VALUES ('982', '60');
+INSERT INTO `mc_product_to_series` VALUES ('982', '74');
+INSERT INTO `mc_product_to_series` VALUES ('983', '60');
+INSERT INTO `mc_product_to_series` VALUES ('983', '74');
+INSERT INTO `mc_product_to_series` VALUES ('984', '60');
+INSERT INTO `mc_product_to_series` VALUES ('984', '74');
+INSERT INTO `mc_product_to_series` VALUES ('985', '60');
+INSERT INTO `mc_product_to_series` VALUES ('985', '74');
+INSERT INTO `mc_product_to_series` VALUES ('986', '60');
+INSERT INTO `mc_product_to_series` VALUES ('986', '74');
+INSERT INTO `mc_product_to_series` VALUES ('987', '60');
+INSERT INTO `mc_product_to_series` VALUES ('987', '74');
+INSERT INTO `mc_product_to_series` VALUES ('988', '60');
+INSERT INTO `mc_product_to_series` VALUES ('988', '74');
+INSERT INTO `mc_product_to_series` VALUES ('989', '60');
+INSERT INTO `mc_product_to_series` VALUES ('989', '74');
+INSERT INTO `mc_product_to_series` VALUES ('990', '60');
+INSERT INTO `mc_product_to_series` VALUES ('990', '74');
+INSERT INTO `mc_product_to_series` VALUES ('991', '60');
+INSERT INTO `mc_product_to_series` VALUES ('991', '74');
+INSERT INTO `mc_product_to_series` VALUES ('992', '60');
+INSERT INTO `mc_product_to_series` VALUES ('992', '74');
+INSERT INTO `mc_product_to_series` VALUES ('993', '60');
+INSERT INTO `mc_product_to_series` VALUES ('993', '74');
+INSERT INTO `mc_product_to_series` VALUES ('994', '60');
+INSERT INTO `mc_product_to_series` VALUES ('994', '74');
+INSERT INTO `mc_product_to_series` VALUES ('995', '60');
+INSERT INTO `mc_product_to_series` VALUES ('995', '74');
+INSERT INTO `mc_product_to_series` VALUES ('996', '60');
+INSERT INTO `mc_product_to_series` VALUES ('996', '74');
+INSERT INTO `mc_product_to_series` VALUES ('997', '60');
+INSERT INTO `mc_product_to_series` VALUES ('997', '74');
+INSERT INTO `mc_product_to_series` VALUES ('998', '60');
+INSERT INTO `mc_product_to_series` VALUES ('998', '74');
+INSERT INTO `mc_product_to_series` VALUES ('999', '60');
+INSERT INTO `mc_product_to_series` VALUES ('999', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1000', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1000', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1001', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1001', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1002', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1002', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1003', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1003', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1004', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1004', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1005', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1005', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1006', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1006', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1007', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1007', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1008', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1008', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1009', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1009', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1010', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1010', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1011', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1011', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1012', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1012', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1013', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1013', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1014', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1014', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1015', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1015', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1016', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1016', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1017', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1017', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1018', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1018', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1019', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1019', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1020', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1020', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1021', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1021', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1022', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1022', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1023', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1023', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1024', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1024', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1025', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1025', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1026', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1026', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1027', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1027', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1028', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1028', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1029', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1029', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1030', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1030', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1031', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1031', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1032', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1032', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1033', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1033', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1034', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1034', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1035', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1035', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1036', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1036', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1037', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1037', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1038', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1038', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1039', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1039', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1040', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1040', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1041', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1041', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1042', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1042', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1043', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1043', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1044', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1044', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1045', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1045', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1046', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1046', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1047', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1047', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1048', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1048', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1049', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1049', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1050', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1050', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1051', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1051', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1052', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1052', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1053', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1053', '74');
+INSERT INTO `mc_product_to_series` VALUES ('1054', '60');
+INSERT INTO `mc_product_to_series` VALUES ('1054', '74');
+
+-- ----------------------------
 -- Table structure for mc_product_to_store
 -- ----------------------------
 DROP TABLE IF EXISTS `mc_product_to_store`;
@@ -7392,25 +10022,665 @@ CREATE TABLE `mc_product_to_store` (
 -- ----------------------------
 -- Records of mc_product_to_store
 -- ----------------------------
-INSERT INTO `mc_product_to_store` VALUES ('28', '0');
-INSERT INTO `mc_product_to_store` VALUES ('29', '0');
-INSERT INTO `mc_product_to_store` VALUES ('30', '0');
-INSERT INTO `mc_product_to_store` VALUES ('31', '0');
-INSERT INTO `mc_product_to_store` VALUES ('32', '0');
-INSERT INTO `mc_product_to_store` VALUES ('33', '0');
-INSERT INTO `mc_product_to_store` VALUES ('34', '0');
-INSERT INTO `mc_product_to_store` VALUES ('35', '0');
-INSERT INTO `mc_product_to_store` VALUES ('36', '0');
-INSERT INTO `mc_product_to_store` VALUES ('40', '0');
-INSERT INTO `mc_product_to_store` VALUES ('41', '0');
-INSERT INTO `mc_product_to_store` VALUES ('42', '0');
-INSERT INTO `mc_product_to_store` VALUES ('43', '0');
-INSERT INTO `mc_product_to_store` VALUES ('44', '0');
-INSERT INTO `mc_product_to_store` VALUES ('45', '0');
-INSERT INTO `mc_product_to_store` VALUES ('46', '0');
-INSERT INTO `mc_product_to_store` VALUES ('47', '0');
-INSERT INTO `mc_product_to_store` VALUES ('48', '0');
-INSERT INTO `mc_product_to_store` VALUES ('49', '0');
+INSERT INTO `mc_product_to_store` VALUES ('90', '0');
+INSERT INTO `mc_product_to_store` VALUES ('91', '0');
+INSERT INTO `mc_product_to_store` VALUES ('92', '0');
+INSERT INTO `mc_product_to_store` VALUES ('93', '0');
+INSERT INTO `mc_product_to_store` VALUES ('95', '0');
+INSERT INTO `mc_product_to_store` VALUES ('96', '0');
+INSERT INTO `mc_product_to_store` VALUES ('97', '0');
+INSERT INTO `mc_product_to_store` VALUES ('98', '0');
+INSERT INTO `mc_product_to_store` VALUES ('99', '0');
+INSERT INTO `mc_product_to_store` VALUES ('100', '0');
+INSERT INTO `mc_product_to_store` VALUES ('101', '0');
+INSERT INTO `mc_product_to_store` VALUES ('103', '0');
+INSERT INTO `mc_product_to_store` VALUES ('104', '0');
+INSERT INTO `mc_product_to_store` VALUES ('106', '0');
+INSERT INTO `mc_product_to_store` VALUES ('107', '0');
+INSERT INTO `mc_product_to_store` VALUES ('109', '0');
+INSERT INTO `mc_product_to_store` VALUES ('110', '0');
+INSERT INTO `mc_product_to_store` VALUES ('113', '0');
+INSERT INTO `mc_product_to_store` VALUES ('114', '0');
+INSERT INTO `mc_product_to_store` VALUES ('117', '0');
+INSERT INTO `mc_product_to_store` VALUES ('118', '0');
+INSERT INTO `mc_product_to_store` VALUES ('120', '0');
+INSERT INTO `mc_product_to_store` VALUES ('121', '0');
+INSERT INTO `mc_product_to_store` VALUES ('122', '0');
+INSERT INTO `mc_product_to_store` VALUES ('126', '0');
+INSERT INTO `mc_product_to_store` VALUES ('127', '0');
+INSERT INTO `mc_product_to_store` VALUES ('130', '0');
+INSERT INTO `mc_product_to_store` VALUES ('131', '0');
+INSERT INTO `mc_product_to_store` VALUES ('133', '0');
+INSERT INTO `mc_product_to_store` VALUES ('134', '0');
+INSERT INTO `mc_product_to_store` VALUES ('139', '0');
+INSERT INTO `mc_product_to_store` VALUES ('140', '0');
+INSERT INTO `mc_product_to_store` VALUES ('147', '0');
+INSERT INTO `mc_product_to_store` VALUES ('148', '0');
+INSERT INTO `mc_product_to_store` VALUES ('152', '0');
+INSERT INTO `mc_product_to_store` VALUES ('153', '0');
+INSERT INTO `mc_product_to_store` VALUES ('154', '0');
+INSERT INTO `mc_product_to_store` VALUES ('158', '0');
+INSERT INTO `mc_product_to_store` VALUES ('159', '0');
+INSERT INTO `mc_product_to_store` VALUES ('161', '0');
+INSERT INTO `mc_product_to_store` VALUES ('162', '0');
+INSERT INTO `mc_product_to_store` VALUES ('164', '0');
+INSERT INTO `mc_product_to_store` VALUES ('167', '0');
+INSERT INTO `mc_product_to_store` VALUES ('168', '0');
+INSERT INTO `mc_product_to_store` VALUES ('169', '0');
+INSERT INTO `mc_product_to_store` VALUES ('174', '0');
+INSERT INTO `mc_product_to_store` VALUES ('177', '0');
+INSERT INTO `mc_product_to_store` VALUES ('178', '0');
+INSERT INTO `mc_product_to_store` VALUES ('179', '0');
+INSERT INTO `mc_product_to_store` VALUES ('183', '0');
+INSERT INTO `mc_product_to_store` VALUES ('185', '0');
+INSERT INTO `mc_product_to_store` VALUES ('186', '0');
+INSERT INTO `mc_product_to_store` VALUES ('187', '0');
+INSERT INTO `mc_product_to_store` VALUES ('193', '0');
+INSERT INTO `mc_product_to_store` VALUES ('195', '0');
+INSERT INTO `mc_product_to_store` VALUES ('196', '0');
+INSERT INTO `mc_product_to_store` VALUES ('197', '0');
+INSERT INTO `mc_product_to_store` VALUES ('200', '0');
+INSERT INTO `mc_product_to_store` VALUES ('202', '0');
+INSERT INTO `mc_product_to_store` VALUES ('203', '0');
+INSERT INTO `mc_product_to_store` VALUES ('204', '0');
+INSERT INTO `mc_product_to_store` VALUES ('207', '0');
+INSERT INTO `mc_product_to_store` VALUES ('209', '0');
+INSERT INTO `mc_product_to_store` VALUES ('210', '0');
+INSERT INTO `mc_product_to_store` VALUES ('211', '0');
+INSERT INTO `mc_product_to_store` VALUES ('216', '0');
+INSERT INTO `mc_product_to_store` VALUES ('218', '0');
+INSERT INTO `mc_product_to_store` VALUES ('219', '0');
+INSERT INTO `mc_product_to_store` VALUES ('220', '0');
+INSERT INTO `mc_product_to_store` VALUES ('227', '0');
+INSERT INTO `mc_product_to_store` VALUES ('229', '0');
+INSERT INTO `mc_product_to_store` VALUES ('230', '0');
+INSERT INTO `mc_product_to_store` VALUES ('231', '0');
+INSERT INTO `mc_product_to_store` VALUES ('233', '0');
+INSERT INTO `mc_product_to_store` VALUES ('235', '0');
+INSERT INTO `mc_product_to_store` VALUES ('237', '0');
+INSERT INTO `mc_product_to_store` VALUES ('238', '0');
+INSERT INTO `mc_product_to_store` VALUES ('239', '0');
+INSERT INTO `mc_product_to_store` VALUES ('241', '0');
+INSERT INTO `mc_product_to_store` VALUES ('245', '0');
+INSERT INTO `mc_product_to_store` VALUES ('246', '0');
+INSERT INTO `mc_product_to_store` VALUES ('247', '0');
+INSERT INTO `mc_product_to_store` VALUES ('248', '0');
+INSERT INTO `mc_product_to_store` VALUES ('252', '0');
+INSERT INTO `mc_product_to_store` VALUES ('258', '0');
+INSERT INTO `mc_product_to_store` VALUES ('259', '0');
+INSERT INTO `mc_product_to_store` VALUES ('260', '0');
+INSERT INTO `mc_product_to_store` VALUES ('261', '0');
+INSERT INTO `mc_product_to_store` VALUES ('264', '0');
+INSERT INTO `mc_product_to_store` VALUES ('266', '0');
+INSERT INTO `mc_product_to_store` VALUES ('271', '0');
+INSERT INTO `mc_product_to_store` VALUES ('272', '0');
+INSERT INTO `mc_product_to_store` VALUES ('273', '0');
+INSERT INTO `mc_product_to_store` VALUES ('274', '0');
+INSERT INTO `mc_product_to_store` VALUES ('275', '0');
+INSERT INTO `mc_product_to_store` VALUES ('280', '0');
+INSERT INTO `mc_product_to_store` VALUES ('282', '0');
+INSERT INTO `mc_product_to_store` VALUES ('286', '0');
+INSERT INTO `mc_product_to_store` VALUES ('287', '0');
+INSERT INTO `mc_product_to_store` VALUES ('288', '0');
+INSERT INTO `mc_product_to_store` VALUES ('289', '0');
+INSERT INTO `mc_product_to_store` VALUES ('294', '0');
+INSERT INTO `mc_product_to_store` VALUES ('296', '0');
+INSERT INTO `mc_product_to_store` VALUES ('301', '0');
+INSERT INTO `mc_product_to_store` VALUES ('302', '0');
+INSERT INTO `mc_product_to_store` VALUES ('303', '0');
+INSERT INTO `mc_product_to_store` VALUES ('304', '0');
+INSERT INTO `mc_product_to_store` VALUES ('311', '0');
+INSERT INTO `mc_product_to_store` VALUES ('313', '0');
+INSERT INTO `mc_product_to_store` VALUES ('317', '0');
+INSERT INTO `mc_product_to_store` VALUES ('318', '0');
+INSERT INTO `mc_product_to_store` VALUES ('319', '0');
+INSERT INTO `mc_product_to_store` VALUES ('320', '0');
+INSERT INTO `mc_product_to_store` VALUES ('326', '0');
+INSERT INTO `mc_product_to_store` VALUES ('327', '0');
+INSERT INTO `mc_product_to_store` VALUES ('329', '0');
+INSERT INTO `mc_product_to_store` VALUES ('333', '0');
+INSERT INTO `mc_product_to_store` VALUES ('334', '0');
+INSERT INTO `mc_product_to_store` VALUES ('335', '0');
+INSERT INTO `mc_product_to_store` VALUES ('343', '0');
+INSERT INTO `mc_product_to_store` VALUES ('344', '0');
+INSERT INTO `mc_product_to_store` VALUES ('345', '0');
+INSERT INTO `mc_product_to_store` VALUES ('349', '0');
+INSERT INTO `mc_product_to_store` VALUES ('350', '0');
+INSERT INTO `mc_product_to_store` VALUES ('351', '0');
+INSERT INTO `mc_product_to_store` VALUES ('352', '0');
+INSERT INTO `mc_product_to_store` VALUES ('359', '0');
+INSERT INTO `mc_product_to_store` VALUES ('360', '0');
+INSERT INTO `mc_product_to_store` VALUES ('361', '0');
+INSERT INTO `mc_product_to_store` VALUES ('365', '0');
+INSERT INTO `mc_product_to_store` VALUES ('366', '0');
+INSERT INTO `mc_product_to_store` VALUES ('367', '0');
+INSERT INTO `mc_product_to_store` VALUES ('368', '0');
+INSERT INTO `mc_product_to_store` VALUES ('376', '0');
+INSERT INTO `mc_product_to_store` VALUES ('378', '0');
+INSERT INTO `mc_product_to_store` VALUES ('379', '0');
+INSERT INTO `mc_product_to_store` VALUES ('380', '0');
+INSERT INTO `mc_product_to_store` VALUES ('381', '0');
+INSERT INTO `mc_product_to_store` VALUES ('387', '0');
+INSERT INTO `mc_product_to_store` VALUES ('389', '0');
+INSERT INTO `mc_product_to_store` VALUES ('390', '0');
+INSERT INTO `mc_product_to_store` VALUES ('391', '0');
+INSERT INTO `mc_product_to_store` VALUES ('392', '0');
+INSERT INTO `mc_product_to_store` VALUES ('398', '0');
+INSERT INTO `mc_product_to_store` VALUES ('400', '0');
+INSERT INTO `mc_product_to_store` VALUES ('401', '0');
+INSERT INTO `mc_product_to_store` VALUES ('402', '0');
+INSERT INTO `mc_product_to_store` VALUES ('403', '0');
+INSERT INTO `mc_product_to_store` VALUES ('409', '0');
+INSERT INTO `mc_product_to_store` VALUES ('411', '0');
+INSERT INTO `mc_product_to_store` VALUES ('412', '0');
+INSERT INTO `mc_product_to_store` VALUES ('413', '0');
+INSERT INTO `mc_product_to_store` VALUES ('414', '0');
+INSERT INTO `mc_product_to_store` VALUES ('415', '0');
+INSERT INTO `mc_product_to_store` VALUES ('416', '0');
+INSERT INTO `mc_product_to_store` VALUES ('417', '0');
+INSERT INTO `mc_product_to_store` VALUES ('421', '0');
+INSERT INTO `mc_product_to_store` VALUES ('423', '0');
+INSERT INTO `mc_product_to_store` VALUES ('424', '0');
+INSERT INTO `mc_product_to_store` VALUES ('425', '0');
+INSERT INTO `mc_product_to_store` VALUES ('426', '0');
+INSERT INTO `mc_product_to_store` VALUES ('427', '0');
+INSERT INTO `mc_product_to_store` VALUES ('428', '0');
+INSERT INTO `mc_product_to_store` VALUES ('433', '0');
+INSERT INTO `mc_product_to_store` VALUES ('435', '0');
+INSERT INTO `mc_product_to_store` VALUES ('436', '0');
+INSERT INTO `mc_product_to_store` VALUES ('437', '0');
+INSERT INTO `mc_product_to_store` VALUES ('438', '0');
+INSERT INTO `mc_product_to_store` VALUES ('439', '0');
+INSERT INTO `mc_product_to_store` VALUES ('440', '0');
+INSERT INTO `mc_product_to_store` VALUES ('441', '0');
+INSERT INTO `mc_product_to_store` VALUES ('446', '0');
+INSERT INTO `mc_product_to_store` VALUES ('448', '0');
+INSERT INTO `mc_product_to_store` VALUES ('449', '0');
+INSERT INTO `mc_product_to_store` VALUES ('450', '0');
+INSERT INTO `mc_product_to_store` VALUES ('451', '0');
+INSERT INTO `mc_product_to_store` VALUES ('452', '0');
+INSERT INTO `mc_product_to_store` VALUES ('453', '0');
+INSERT INTO `mc_product_to_store` VALUES ('454', '0');
+INSERT INTO `mc_product_to_store` VALUES ('458', '0');
+INSERT INTO `mc_product_to_store` VALUES ('460', '0');
+INSERT INTO `mc_product_to_store` VALUES ('461', '0');
+INSERT INTO `mc_product_to_store` VALUES ('462', '0');
+INSERT INTO `mc_product_to_store` VALUES ('463', '0');
+INSERT INTO `mc_product_to_store` VALUES ('464', '0');
+INSERT INTO `mc_product_to_store` VALUES ('465', '0');
+INSERT INTO `mc_product_to_store` VALUES ('466', '0');
+INSERT INTO `mc_product_to_store` VALUES ('470', '0');
+INSERT INTO `mc_product_to_store` VALUES ('472', '0');
+INSERT INTO `mc_product_to_store` VALUES ('473', '0');
+INSERT INTO `mc_product_to_store` VALUES ('474', '0');
+INSERT INTO `mc_product_to_store` VALUES ('475', '0');
+INSERT INTO `mc_product_to_store` VALUES ('476', '0');
+INSERT INTO `mc_product_to_store` VALUES ('477', '0');
+INSERT INTO `mc_product_to_store` VALUES ('478', '0');
+INSERT INTO `mc_product_to_store` VALUES ('483', '0');
+INSERT INTO `mc_product_to_store` VALUES ('484', '0');
+INSERT INTO `mc_product_to_store` VALUES ('485', '0');
+INSERT INTO `mc_product_to_store` VALUES ('486', '0');
+INSERT INTO `mc_product_to_store` VALUES ('487', '0');
+INSERT INTO `mc_product_to_store` VALUES ('488', '0');
+INSERT INTO `mc_product_to_store` VALUES ('493', '0');
+INSERT INTO `mc_product_to_store` VALUES ('494', '0');
+INSERT INTO `mc_product_to_store` VALUES ('495', '0');
+INSERT INTO `mc_product_to_store` VALUES ('496', '0');
+INSERT INTO `mc_product_to_store` VALUES ('497', '0');
+INSERT INTO `mc_product_to_store` VALUES ('498', '0');
+INSERT INTO `mc_product_to_store` VALUES ('504', '0');
+INSERT INTO `mc_product_to_store` VALUES ('505', '0');
+INSERT INTO `mc_product_to_store` VALUES ('506', '0');
+INSERT INTO `mc_product_to_store` VALUES ('507', '0');
+INSERT INTO `mc_product_to_store` VALUES ('508', '0');
+INSERT INTO `mc_product_to_store` VALUES ('509', '0');
+INSERT INTO `mc_product_to_store` VALUES ('514', '0');
+INSERT INTO `mc_product_to_store` VALUES ('515', '0');
+INSERT INTO `mc_product_to_store` VALUES ('516', '0');
+INSERT INTO `mc_product_to_store` VALUES ('517', '0');
+INSERT INTO `mc_product_to_store` VALUES ('518', '0');
+INSERT INTO `mc_product_to_store` VALUES ('519', '0');
+INSERT INTO `mc_product_to_store` VALUES ('524', '0');
+INSERT INTO `mc_product_to_store` VALUES ('525', '0');
+INSERT INTO `mc_product_to_store` VALUES ('526', '0');
+INSERT INTO `mc_product_to_store` VALUES ('527', '0');
+INSERT INTO `mc_product_to_store` VALUES ('528', '0');
+INSERT INTO `mc_product_to_store` VALUES ('535', '0');
+INSERT INTO `mc_product_to_store` VALUES ('536', '0');
+INSERT INTO `mc_product_to_store` VALUES ('537', '0');
+INSERT INTO `mc_product_to_store` VALUES ('538', '0');
+INSERT INTO `mc_product_to_store` VALUES ('539', '0');
+INSERT INTO `mc_product_to_store` VALUES ('543', '0');
+INSERT INTO `mc_product_to_store` VALUES ('544', '0');
+INSERT INTO `mc_product_to_store` VALUES ('545', '0');
+INSERT INTO `mc_product_to_store` VALUES ('546', '0');
+INSERT INTO `mc_product_to_store` VALUES ('547', '0');
+INSERT INTO `mc_product_to_store` VALUES ('548', '0');
+INSERT INTO `mc_product_to_store` VALUES ('552', '0');
+INSERT INTO `mc_product_to_store` VALUES ('553', '0');
+INSERT INTO `mc_product_to_store` VALUES ('554', '0');
+INSERT INTO `mc_product_to_store` VALUES ('555', '0');
+INSERT INTO `mc_product_to_store` VALUES ('556', '0');
+INSERT INTO `mc_product_to_store` VALUES ('557', '0');
+INSERT INTO `mc_product_to_store` VALUES ('558', '0');
+INSERT INTO `mc_product_to_store` VALUES ('562', '0');
+INSERT INTO `mc_product_to_store` VALUES ('563', '0');
+INSERT INTO `mc_product_to_store` VALUES ('564', '0');
+INSERT INTO `mc_product_to_store` VALUES ('565', '0');
+INSERT INTO `mc_product_to_store` VALUES ('566', '0');
+INSERT INTO `mc_product_to_store` VALUES ('567', '0');
+INSERT INTO `mc_product_to_store` VALUES ('572', '0');
+INSERT INTO `mc_product_to_store` VALUES ('573', '0');
+INSERT INTO `mc_product_to_store` VALUES ('574', '0');
+INSERT INTO `mc_product_to_store` VALUES ('575', '0');
+INSERT INTO `mc_product_to_store` VALUES ('576', '0');
+INSERT INTO `mc_product_to_store` VALUES ('577', '0');
+INSERT INTO `mc_product_to_store` VALUES ('581', '0');
+INSERT INTO `mc_product_to_store` VALUES ('582', '0');
+INSERT INTO `mc_product_to_store` VALUES ('583', '0');
+INSERT INTO `mc_product_to_store` VALUES ('584', '0');
+INSERT INTO `mc_product_to_store` VALUES ('585', '0');
+INSERT INTO `mc_product_to_store` VALUES ('590', '0');
+INSERT INTO `mc_product_to_store` VALUES ('591', '0');
+INSERT INTO `mc_product_to_store` VALUES ('592', '0');
+INSERT INTO `mc_product_to_store` VALUES ('593', '0');
+INSERT INTO `mc_product_to_store` VALUES ('599', '0');
+INSERT INTO `mc_product_to_store` VALUES ('600', '0');
+INSERT INTO `mc_product_to_store` VALUES ('601', '0');
+INSERT INTO `mc_product_to_store` VALUES ('602', '0');
+INSERT INTO `mc_product_to_store` VALUES ('607', '0');
+INSERT INTO `mc_product_to_store` VALUES ('608', '0');
+INSERT INTO `mc_product_to_store` VALUES ('609', '0');
+INSERT INTO `mc_product_to_store` VALUES ('610', '0');
+INSERT INTO `mc_product_to_store` VALUES ('613', '0');
+INSERT INTO `mc_product_to_store` VALUES ('614', '0');
+INSERT INTO `mc_product_to_store` VALUES ('615', '0');
+INSERT INTO `mc_product_to_store` VALUES ('617', '0');
+INSERT INTO `mc_product_to_store` VALUES ('618', '0');
+INSERT INTO `mc_product_to_store` VALUES ('619', '0');
+INSERT INTO `mc_product_to_store` VALUES ('621', '0');
+INSERT INTO `mc_product_to_store` VALUES ('622', '0');
+INSERT INTO `mc_product_to_store` VALUES ('623', '0');
+INSERT INTO `mc_product_to_store` VALUES ('624', '0');
+INSERT INTO `mc_product_to_store` VALUES ('625', '0');
+INSERT INTO `mc_product_to_store` VALUES ('626', '0');
+INSERT INTO `mc_product_to_store` VALUES ('627', '0');
+INSERT INTO `mc_product_to_store` VALUES ('628', '0');
+INSERT INTO `mc_product_to_store` VALUES ('629', '0');
+INSERT INTO `mc_product_to_store` VALUES ('630', '0');
+INSERT INTO `mc_product_to_store` VALUES ('631', '0');
+INSERT INTO `mc_product_to_store` VALUES ('632', '0');
+INSERT INTO `mc_product_to_store` VALUES ('633', '0');
+INSERT INTO `mc_product_to_store` VALUES ('634', '0');
+INSERT INTO `mc_product_to_store` VALUES ('635', '0');
+INSERT INTO `mc_product_to_store` VALUES ('636', '0');
+INSERT INTO `mc_product_to_store` VALUES ('637', '0');
+INSERT INTO `mc_product_to_store` VALUES ('638', '0');
+INSERT INTO `mc_product_to_store` VALUES ('639', '0');
+INSERT INTO `mc_product_to_store` VALUES ('640', '0');
+INSERT INTO `mc_product_to_store` VALUES ('641', '0');
+INSERT INTO `mc_product_to_store` VALUES ('642', '0');
+INSERT INTO `mc_product_to_store` VALUES ('643', '0');
+INSERT INTO `mc_product_to_store` VALUES ('644', '0');
+INSERT INTO `mc_product_to_store` VALUES ('645', '0');
+INSERT INTO `mc_product_to_store` VALUES ('646', '0');
+INSERT INTO `mc_product_to_store` VALUES ('647', '0');
+INSERT INTO `mc_product_to_store` VALUES ('648', '0');
+INSERT INTO `mc_product_to_store` VALUES ('649', '0');
+INSERT INTO `mc_product_to_store` VALUES ('650', '0');
+INSERT INTO `mc_product_to_store` VALUES ('651', '0');
+INSERT INTO `mc_product_to_store` VALUES ('652', '0');
+INSERT INTO `mc_product_to_store` VALUES ('655', '0');
+INSERT INTO `mc_product_to_store` VALUES ('656', '0');
+INSERT INTO `mc_product_to_store` VALUES ('657', '0');
+INSERT INTO `mc_product_to_store` VALUES ('658', '0');
+INSERT INTO `mc_product_to_store` VALUES ('659', '0');
+INSERT INTO `mc_product_to_store` VALUES ('660', '0');
+INSERT INTO `mc_product_to_store` VALUES ('664', '0');
+INSERT INTO `mc_product_to_store` VALUES ('665', '0');
+INSERT INTO `mc_product_to_store` VALUES ('666', '0');
+INSERT INTO `mc_product_to_store` VALUES ('667', '0');
+INSERT INTO `mc_product_to_store` VALUES ('668', '0');
+INSERT INTO `mc_product_to_store` VALUES ('669', '0');
+INSERT INTO `mc_product_to_store` VALUES ('670', '0');
+INSERT INTO `mc_product_to_store` VALUES ('673', '0');
+INSERT INTO `mc_product_to_store` VALUES ('674', '0');
+INSERT INTO `mc_product_to_store` VALUES ('675', '0');
+INSERT INTO `mc_product_to_store` VALUES ('676', '0');
+INSERT INTO `mc_product_to_store` VALUES ('677', '0');
+INSERT INTO `mc_product_to_store` VALUES ('678', '0');
+INSERT INTO `mc_product_to_store` VALUES ('679', '0');
+INSERT INTO `mc_product_to_store` VALUES ('686', '0');
+INSERT INTO `mc_product_to_store` VALUES ('687', '0');
+INSERT INTO `mc_product_to_store` VALUES ('688', '0');
+INSERT INTO `mc_product_to_store` VALUES ('689', '0');
+INSERT INTO `mc_product_to_store` VALUES ('690', '0');
+INSERT INTO `mc_product_to_store` VALUES ('691', '0');
+INSERT INTO `mc_product_to_store` VALUES ('694', '0');
+INSERT INTO `mc_product_to_store` VALUES ('695', '0');
+INSERT INTO `mc_product_to_store` VALUES ('696', '0');
+INSERT INTO `mc_product_to_store` VALUES ('697', '0');
+INSERT INTO `mc_product_to_store` VALUES ('698', '0');
+INSERT INTO `mc_product_to_store` VALUES ('701', '0');
+INSERT INTO `mc_product_to_store` VALUES ('702', '0');
+INSERT INTO `mc_product_to_store` VALUES ('703', '0');
+INSERT INTO `mc_product_to_store` VALUES ('704', '0');
+INSERT INTO `mc_product_to_store` VALUES ('705', '0');
+INSERT INTO `mc_product_to_store` VALUES ('710', '0');
+INSERT INTO `mc_product_to_store` VALUES ('711', '0');
+INSERT INTO `mc_product_to_store` VALUES ('712', '0');
+INSERT INTO `mc_product_to_store` VALUES ('713', '0');
+INSERT INTO `mc_product_to_store` VALUES ('716', '0');
+INSERT INTO `mc_product_to_store` VALUES ('717', '0');
+INSERT INTO `mc_product_to_store` VALUES ('718', '0');
+INSERT INTO `mc_product_to_store` VALUES ('721', '0');
+INSERT INTO `mc_product_to_store` VALUES ('722', '0');
+INSERT INTO `mc_product_to_store` VALUES ('723', '0');
+INSERT INTO `mc_product_to_store` VALUES ('726', '0');
+INSERT INTO `mc_product_to_store` VALUES ('727', '0');
+INSERT INTO `mc_product_to_store` VALUES ('728', '0');
+INSERT INTO `mc_product_to_store` VALUES ('731', '0');
+INSERT INTO `mc_product_to_store` VALUES ('732', '0');
+INSERT INTO `mc_product_to_store` VALUES ('733', '0');
+INSERT INTO `mc_product_to_store` VALUES ('737', '0');
+INSERT INTO `mc_product_to_store` VALUES ('738', '0');
+INSERT INTO `mc_product_to_store` VALUES ('739', '0');
+INSERT INTO `mc_product_to_store` VALUES ('742', '0');
+INSERT INTO `mc_product_to_store` VALUES ('743', '0');
+INSERT INTO `mc_product_to_store` VALUES ('744', '0');
+INSERT INTO `mc_product_to_store` VALUES ('745', '0');
+INSERT INTO `mc_product_to_store` VALUES ('748', '0');
+INSERT INTO `mc_product_to_store` VALUES ('749', '0');
+INSERT INTO `mc_product_to_store` VALUES ('750', '0');
+INSERT INTO `mc_product_to_store` VALUES ('751', '0');
+INSERT INTO `mc_product_to_store` VALUES ('754', '0');
+INSERT INTO `mc_product_to_store` VALUES ('755', '0');
+INSERT INTO `mc_product_to_store` VALUES ('756', '0');
+INSERT INTO `mc_product_to_store` VALUES ('757', '0');
+INSERT INTO `mc_product_to_store` VALUES ('761', '0');
+INSERT INTO `mc_product_to_store` VALUES ('762', '0');
+INSERT INTO `mc_product_to_store` VALUES ('763', '0');
+INSERT INTO `mc_product_to_store` VALUES ('764', '0');
+INSERT INTO `mc_product_to_store` VALUES ('767', '0');
+INSERT INTO `mc_product_to_store` VALUES ('768', '0');
+INSERT INTO `mc_product_to_store` VALUES ('769', '0');
+INSERT INTO `mc_product_to_store` VALUES ('770', '0');
+INSERT INTO `mc_product_to_store` VALUES ('773', '0');
+INSERT INTO `mc_product_to_store` VALUES ('774', '0');
+INSERT INTO `mc_product_to_store` VALUES ('775', '0');
+INSERT INTO `mc_product_to_store` VALUES ('776', '0');
+INSERT INTO `mc_product_to_store` VALUES ('779', '0');
+INSERT INTO `mc_product_to_store` VALUES ('780', '0');
+INSERT INTO `mc_product_to_store` VALUES ('781', '0');
+INSERT INTO `mc_product_to_store` VALUES ('784', '0');
+INSERT INTO `mc_product_to_store` VALUES ('785', '0');
+INSERT INTO `mc_product_to_store` VALUES ('786', '0');
+INSERT INTO `mc_product_to_store` VALUES ('789', '0');
+INSERT INTO `mc_product_to_store` VALUES ('790', '0');
+INSERT INTO `mc_product_to_store` VALUES ('791', '0');
+INSERT INTO `mc_product_to_store` VALUES ('792', '0');
+INSERT INTO `mc_product_to_store` VALUES ('794', '0');
+INSERT INTO `mc_product_to_store` VALUES ('795', '0');
+INSERT INTO `mc_product_to_store` VALUES ('796', '0');
+INSERT INTO `mc_product_to_store` VALUES ('797', '0');
+INSERT INTO `mc_product_to_store` VALUES ('799', '0');
+INSERT INTO `mc_product_to_store` VALUES ('800', '0');
+INSERT INTO `mc_product_to_store` VALUES ('801', '0');
+INSERT INTO `mc_product_to_store` VALUES ('802', '0');
+INSERT INTO `mc_product_to_store` VALUES ('804', '0');
+INSERT INTO `mc_product_to_store` VALUES ('805', '0');
+INSERT INTO `mc_product_to_store` VALUES ('806', '0');
+INSERT INTO `mc_product_to_store` VALUES ('807', '0');
+INSERT INTO `mc_product_to_store` VALUES ('808', '0');
+INSERT INTO `mc_product_to_store` VALUES ('809', '0');
+INSERT INTO `mc_product_to_store` VALUES ('810', '0');
+INSERT INTO `mc_product_to_store` VALUES ('811', '0');
+INSERT INTO `mc_product_to_store` VALUES ('812', '0');
+INSERT INTO `mc_product_to_store` VALUES ('813', '0');
+INSERT INTO `mc_product_to_store` VALUES ('814', '0');
+INSERT INTO `mc_product_to_store` VALUES ('815', '0');
+INSERT INTO `mc_product_to_store` VALUES ('816', '0');
+INSERT INTO `mc_product_to_store` VALUES ('817', '0');
+INSERT INTO `mc_product_to_store` VALUES ('818', '0');
+INSERT INTO `mc_product_to_store` VALUES ('819', '0');
+INSERT INTO `mc_product_to_store` VALUES ('820', '0');
+INSERT INTO `mc_product_to_store` VALUES ('821', '0');
+INSERT INTO `mc_product_to_store` VALUES ('822', '0');
+INSERT INTO `mc_product_to_store` VALUES ('823', '0');
+INSERT INTO `mc_product_to_store` VALUES ('824', '0');
+INSERT INTO `mc_product_to_store` VALUES ('825', '0');
+INSERT INTO `mc_product_to_store` VALUES ('826', '0');
+INSERT INTO `mc_product_to_store` VALUES ('827', '0');
+INSERT INTO `mc_product_to_store` VALUES ('828', '0');
+INSERT INTO `mc_product_to_store` VALUES ('829', '0');
+INSERT INTO `mc_product_to_store` VALUES ('830', '0');
+INSERT INTO `mc_product_to_store` VALUES ('831', '0');
+INSERT INTO `mc_product_to_store` VALUES ('832', '0');
+INSERT INTO `mc_product_to_store` VALUES ('833', '0');
+INSERT INTO `mc_product_to_store` VALUES ('834', '0');
+INSERT INTO `mc_product_to_store` VALUES ('835', '0');
+INSERT INTO `mc_product_to_store` VALUES ('836', '0');
+INSERT INTO `mc_product_to_store` VALUES ('837', '0');
+INSERT INTO `mc_product_to_store` VALUES ('838', '0');
+INSERT INTO `mc_product_to_store` VALUES ('839', '0');
+INSERT INTO `mc_product_to_store` VALUES ('840', '0');
+INSERT INTO `mc_product_to_store` VALUES ('841', '0');
+INSERT INTO `mc_product_to_store` VALUES ('842', '0');
+INSERT INTO `mc_product_to_store` VALUES ('843', '0');
+INSERT INTO `mc_product_to_store` VALUES ('844', '0');
+INSERT INTO `mc_product_to_store` VALUES ('845', '0');
+INSERT INTO `mc_product_to_store` VALUES ('846', '0');
+INSERT INTO `mc_product_to_store` VALUES ('847', '0');
+INSERT INTO `mc_product_to_store` VALUES ('848', '0');
+INSERT INTO `mc_product_to_store` VALUES ('849', '0');
+INSERT INTO `mc_product_to_store` VALUES ('850', '0');
+INSERT INTO `mc_product_to_store` VALUES ('851', '0');
+INSERT INTO `mc_product_to_store` VALUES ('852', '0');
+INSERT INTO `mc_product_to_store` VALUES ('853', '0');
+INSERT INTO `mc_product_to_store` VALUES ('854', '0');
+INSERT INTO `mc_product_to_store` VALUES ('855', '0');
+INSERT INTO `mc_product_to_store` VALUES ('856', '0');
+INSERT INTO `mc_product_to_store` VALUES ('857', '0');
+INSERT INTO `mc_product_to_store` VALUES ('858', '0');
+INSERT INTO `mc_product_to_store` VALUES ('859', '0');
+INSERT INTO `mc_product_to_store` VALUES ('860', '0');
+INSERT INTO `mc_product_to_store` VALUES ('861', '0');
+INSERT INTO `mc_product_to_store` VALUES ('862', '0');
+INSERT INTO `mc_product_to_store` VALUES ('863', '0');
+INSERT INTO `mc_product_to_store` VALUES ('864', '0');
+INSERT INTO `mc_product_to_store` VALUES ('865', '0');
+INSERT INTO `mc_product_to_store` VALUES ('866', '0');
+INSERT INTO `mc_product_to_store` VALUES ('867', '0');
+INSERT INTO `mc_product_to_store` VALUES ('868', '0');
+INSERT INTO `mc_product_to_store` VALUES ('869', '0');
+INSERT INTO `mc_product_to_store` VALUES ('870', '0');
+INSERT INTO `mc_product_to_store` VALUES ('871', '0');
+INSERT INTO `mc_product_to_store` VALUES ('872', '0');
+INSERT INTO `mc_product_to_store` VALUES ('873', '0');
+INSERT INTO `mc_product_to_store` VALUES ('874', '0');
+INSERT INTO `mc_product_to_store` VALUES ('875', '0');
+INSERT INTO `mc_product_to_store` VALUES ('876', '0');
+INSERT INTO `mc_product_to_store` VALUES ('877', '0');
+INSERT INTO `mc_product_to_store` VALUES ('878', '0');
+INSERT INTO `mc_product_to_store` VALUES ('879', '0');
+INSERT INTO `mc_product_to_store` VALUES ('880', '0');
+INSERT INTO `mc_product_to_store` VALUES ('881', '0');
+INSERT INTO `mc_product_to_store` VALUES ('882', '0');
+INSERT INTO `mc_product_to_store` VALUES ('883', '0');
+INSERT INTO `mc_product_to_store` VALUES ('884', '0');
+INSERT INTO `mc_product_to_store` VALUES ('885', '0');
+INSERT INTO `mc_product_to_store` VALUES ('886', '0');
+INSERT INTO `mc_product_to_store` VALUES ('887', '0');
+INSERT INTO `mc_product_to_store` VALUES ('888', '0');
+INSERT INTO `mc_product_to_store` VALUES ('889', '0');
+INSERT INTO `mc_product_to_store` VALUES ('890', '0');
+INSERT INTO `mc_product_to_store` VALUES ('891', '0');
+INSERT INTO `mc_product_to_store` VALUES ('892', '0');
+INSERT INTO `mc_product_to_store` VALUES ('893', '0');
+INSERT INTO `mc_product_to_store` VALUES ('894', '0');
+INSERT INTO `mc_product_to_store` VALUES ('895', '0');
+INSERT INTO `mc_product_to_store` VALUES ('896', '0');
+INSERT INTO `mc_product_to_store` VALUES ('897', '0');
+INSERT INTO `mc_product_to_store` VALUES ('898', '0');
+INSERT INTO `mc_product_to_store` VALUES ('899', '0');
+INSERT INTO `mc_product_to_store` VALUES ('900', '0');
+INSERT INTO `mc_product_to_store` VALUES ('901', '0');
+INSERT INTO `mc_product_to_store` VALUES ('902', '0');
+INSERT INTO `mc_product_to_store` VALUES ('903', '0');
+INSERT INTO `mc_product_to_store` VALUES ('904', '0');
+INSERT INTO `mc_product_to_store` VALUES ('905', '0');
+INSERT INTO `mc_product_to_store` VALUES ('906', '0');
+INSERT INTO `mc_product_to_store` VALUES ('907', '0');
+INSERT INTO `mc_product_to_store` VALUES ('908', '0');
+INSERT INTO `mc_product_to_store` VALUES ('909', '0');
+INSERT INTO `mc_product_to_store` VALUES ('910', '0');
+INSERT INTO `mc_product_to_store` VALUES ('911', '0');
+INSERT INTO `mc_product_to_store` VALUES ('912', '0');
+INSERT INTO `mc_product_to_store` VALUES ('913', '0');
+INSERT INTO `mc_product_to_store` VALUES ('914', '0');
+INSERT INTO `mc_product_to_store` VALUES ('915', '0');
+INSERT INTO `mc_product_to_store` VALUES ('916', '0');
+INSERT INTO `mc_product_to_store` VALUES ('917', '0');
+INSERT INTO `mc_product_to_store` VALUES ('918', '0');
+INSERT INTO `mc_product_to_store` VALUES ('919', '0');
+INSERT INTO `mc_product_to_store` VALUES ('920', '0');
+INSERT INTO `mc_product_to_store` VALUES ('921', '0');
+INSERT INTO `mc_product_to_store` VALUES ('922', '0');
+INSERT INTO `mc_product_to_store` VALUES ('923', '0');
+INSERT INTO `mc_product_to_store` VALUES ('924', '0');
+INSERT INTO `mc_product_to_store` VALUES ('925', '0');
+INSERT INTO `mc_product_to_store` VALUES ('926', '0');
+INSERT INTO `mc_product_to_store` VALUES ('927', '0');
+INSERT INTO `mc_product_to_store` VALUES ('928', '0');
+INSERT INTO `mc_product_to_store` VALUES ('929', '0');
+INSERT INTO `mc_product_to_store` VALUES ('930', '0');
+INSERT INTO `mc_product_to_store` VALUES ('931', '0');
+INSERT INTO `mc_product_to_store` VALUES ('932', '0');
+INSERT INTO `mc_product_to_store` VALUES ('933', '0');
+INSERT INTO `mc_product_to_store` VALUES ('934', '0');
+INSERT INTO `mc_product_to_store` VALUES ('935', '0');
+INSERT INTO `mc_product_to_store` VALUES ('936', '0');
+INSERT INTO `mc_product_to_store` VALUES ('937', '0');
+INSERT INTO `mc_product_to_store` VALUES ('938', '0');
+INSERT INTO `mc_product_to_store` VALUES ('939', '0');
+INSERT INTO `mc_product_to_store` VALUES ('940', '0');
+INSERT INTO `mc_product_to_store` VALUES ('941', '0');
+INSERT INTO `mc_product_to_store` VALUES ('942', '0');
+INSERT INTO `mc_product_to_store` VALUES ('943', '0');
+INSERT INTO `mc_product_to_store` VALUES ('944', '0');
+INSERT INTO `mc_product_to_store` VALUES ('945', '0');
+INSERT INTO `mc_product_to_store` VALUES ('946', '0');
+INSERT INTO `mc_product_to_store` VALUES ('947', '0');
+INSERT INTO `mc_product_to_store` VALUES ('948', '0');
+INSERT INTO `mc_product_to_store` VALUES ('949', '0');
+INSERT INTO `mc_product_to_store` VALUES ('950', '0');
+INSERT INTO `mc_product_to_store` VALUES ('951', '0');
+INSERT INTO `mc_product_to_store` VALUES ('952', '0');
+INSERT INTO `mc_product_to_store` VALUES ('953', '0');
+INSERT INTO `mc_product_to_store` VALUES ('954', '0');
+INSERT INTO `mc_product_to_store` VALUES ('955', '0');
+INSERT INTO `mc_product_to_store` VALUES ('956', '0');
+INSERT INTO `mc_product_to_store` VALUES ('957', '0');
+INSERT INTO `mc_product_to_store` VALUES ('958', '0');
+INSERT INTO `mc_product_to_store` VALUES ('959', '0');
+INSERT INTO `mc_product_to_store` VALUES ('960', '0');
+INSERT INTO `mc_product_to_store` VALUES ('961', '0');
+INSERT INTO `mc_product_to_store` VALUES ('962', '0');
+INSERT INTO `mc_product_to_store` VALUES ('963', '0');
+INSERT INTO `mc_product_to_store` VALUES ('964', '0');
+INSERT INTO `mc_product_to_store` VALUES ('965', '0');
+INSERT INTO `mc_product_to_store` VALUES ('966', '0');
+INSERT INTO `mc_product_to_store` VALUES ('967', '0');
+INSERT INTO `mc_product_to_store` VALUES ('968', '0');
+INSERT INTO `mc_product_to_store` VALUES ('969', '0');
+INSERT INTO `mc_product_to_store` VALUES ('970', '0');
+INSERT INTO `mc_product_to_store` VALUES ('971', '0');
+INSERT INTO `mc_product_to_store` VALUES ('972', '0');
+INSERT INTO `mc_product_to_store` VALUES ('973', '0');
+INSERT INTO `mc_product_to_store` VALUES ('974', '0');
+INSERT INTO `mc_product_to_store` VALUES ('975', '0');
+INSERT INTO `mc_product_to_store` VALUES ('976', '0');
+INSERT INTO `mc_product_to_store` VALUES ('977', '0');
+INSERT INTO `mc_product_to_store` VALUES ('978', '0');
+INSERT INTO `mc_product_to_store` VALUES ('979', '0');
+INSERT INTO `mc_product_to_store` VALUES ('980', '0');
+INSERT INTO `mc_product_to_store` VALUES ('981', '0');
+INSERT INTO `mc_product_to_store` VALUES ('982', '0');
+INSERT INTO `mc_product_to_store` VALUES ('983', '0');
+INSERT INTO `mc_product_to_store` VALUES ('984', '0');
+INSERT INTO `mc_product_to_store` VALUES ('985', '0');
+INSERT INTO `mc_product_to_store` VALUES ('986', '0');
+INSERT INTO `mc_product_to_store` VALUES ('987', '0');
+INSERT INTO `mc_product_to_store` VALUES ('988', '0');
+INSERT INTO `mc_product_to_store` VALUES ('989', '0');
+INSERT INTO `mc_product_to_store` VALUES ('990', '0');
+INSERT INTO `mc_product_to_store` VALUES ('991', '0');
+INSERT INTO `mc_product_to_store` VALUES ('992', '0');
+INSERT INTO `mc_product_to_store` VALUES ('993', '0');
+INSERT INTO `mc_product_to_store` VALUES ('994', '0');
+INSERT INTO `mc_product_to_store` VALUES ('995', '0');
+INSERT INTO `mc_product_to_store` VALUES ('996', '0');
+INSERT INTO `mc_product_to_store` VALUES ('997', '0');
+INSERT INTO `mc_product_to_store` VALUES ('998', '0');
+INSERT INTO `mc_product_to_store` VALUES ('999', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1000', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1001', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1002', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1003', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1004', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1005', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1006', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1007', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1008', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1009', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1010', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1011', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1012', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1013', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1014', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1015', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1016', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1017', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1018', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1019', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1020', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1021', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1022', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1023', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1024', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1025', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1026', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1027', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1028', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1029', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1030', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1031', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1032', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1033', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1034', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1035', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1036', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1037', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1038', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1039', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1040', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1041', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1042', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1043', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1044', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1045', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1046', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1047', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1048', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1049', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1050', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1051', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1052', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1053', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1054', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1056', '0');
+INSERT INTO `mc_product_to_store` VALUES ('1057', '0');
 
 -- ----------------------------
 -- Table structure for mc_pushurl
@@ -7488,15 +10758,16 @@ CREATE TABLE `mc_return` (
   `return_action_id` int(11) NOT NULL,
   `return_status_id` int(11) NOT NULL,
   `comment` text,
-  `date_ordered` date NOT NULL DEFAULT '0000-00-00',
+  `date_ordered` date NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`return_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_return
 -- ----------------------------
+INSERT INTO `mc_return` VALUES ('1', '16', '0', '7', '李峰', '', '472556417@qq.com', '13146735563', '苹果 iPhone 7 Plus ', '苹果 iPhone 7 Plus 全网通 32G 黑色', '1', '0', '5', '0', '2', '', '2018-12-11', '2018-12-13 07:20:04', '2018-12-13 07:20:04');
 
 -- ----------------------------
 -- Table structure for mc_return_action
@@ -7629,7 +10900,7 @@ CREATE TABLE `mc_seo_url` (
   PRIMARY KEY (`seo_url_id`),
   KEY `query` (`query`),
   KEY `keyword` (`keyword`)
-) ENGINE=MyISAM AUTO_INCREMENT=1022 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1025 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_seo_url
@@ -7745,6 +11016,9 @@ INSERT INTO `mc_seo_url` VALUES ('1005', '0', '1', 'blog_category_id=11', '与�
 INSERT INTO `mc_seo_url` VALUES ('1004', '0', '2', 'blog_category_id=11', 'home-with-god');
 INSERT INTO `mc_seo_url` VALUES ('994', '0', '3', 'blog_category_id=1', '与-神-对-话-1');
 INSERT INTO `mc_seo_url` VALUES ('997', '0', '3', 'blog_category_id=6', '与-神-对-话-3');
+INSERT INTO `mc_seo_url` VALUES ('1022', '0', '1', 'serie_id=64', 'http://localhost/2019/3C-master/3C/admin/index.php?route=catalog/serie/add&amp;user_token=YXT73S0zarGyxj7RkJpMeC68Wn3V6vOh');
+INSERT INTO `mc_seo_url` VALUES ('1023', '0', '1', 'serie_id=65', 'http://localhost/2019/3C-master/3C/admin/index.php?route=catalog/serie/add&amp;user_token=YXT73S0zarGyxj7RkJpMeC68Wn3V6vOh1');
+INSERT INTO `mc_seo_url` VALUES ('1024', '0', '1', 'product_id=1056', 'http://localhost/2019/3C-master/3C/admin/index.php?route=catalog/product/add&amp;user_token=YXT73S0zarGyxj7RkJpMeC68Wn3V6vOh11');
 
 -- ----------------------------
 -- Table structure for mc_serie
@@ -7762,48 +11036,173 @@ CREATE TABLE `mc_serie` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`serie_id`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_serie
 -- ----------------------------
-INSERT INTO `mc_serie` VALUES ('43', '', '34', '0', '0', '0', '1', '2010-09-18 14:06:49', '2011-04-22 01:55:40');
-INSERT INTO `mc_serie` VALUES ('40', '', '34', '0', '0', '0', '1', '2010-09-18 14:05:36', '2010-09-18 14:05:36');
-INSERT INTO `mc_serie` VALUES ('41', '', '34', '0', '0', '0', '1', '2010-09-18 14:05:49', '2011-04-22 01:55:30');
-INSERT INTO `mc_serie` VALUES ('42', '', '34', '0', '0', '0', '1', '2010-09-18 14:06:34', '2010-11-07 20:31:04');
-INSERT INTO `mc_serie` VALUES ('39', '', '34', '0', '0', '0', '1', '2010-09-18 14:04:17', '2011-04-22 01:55:20');
-INSERT INTO `mc_serie` VALUES ('38', '', '34', '0', '0', '0', '1', '2010-09-18 14:03:51', '2010-09-18 14:03:51');
-INSERT INTO `mc_serie` VALUES ('37', '', '34', '0', '0', '0', '1', '2010-09-18 14:03:39', '2011-04-22 01:55:08');
-INSERT INTO `mc_serie` VALUES ('57', '', '28', '0', '0', '3', '1', '2011-04-26 08:53:16', '2016-08-04 12:52:21');
-INSERT INTO `mc_serie` VALUES ('29', '', '32', '0', '0', '1', '1', '2009-02-02 13:11:37', '2016-08-04 12:47:16');
-INSERT INTO `mc_serie` VALUES ('30', '', '32', '0', '0', '1', '1', '2009-02-02 13:11:59', '2016-08-04 12:44:42');
-INSERT INTO `mc_serie` VALUES ('31', '', '32', '0', '0', '1', '1', '2009-02-03 14:17:24', '2016-08-04 12:43:10');
-INSERT INTO `mc_serie` VALUES ('36', '', '28', '0', '0', '0', '1', '2010-09-17 10:07:13', '2016-08-04 12:50:26');
-INSERT INTO `mc_serie` VALUES ('35', '', '28', '0', '0', '0', '1', '2010-09-17 10:06:48', '2016-08-04 12:49:23');
-INSERT INTO `mc_serie` VALUES ('32', '', '25', '0', '0', '1', '1', '2009-02-03 14:17:34', '2016-08-04 12:36:03');
-INSERT INTO `mc_serie` VALUES ('28', '', '25', '0', '0', '1', '1', '2009-02-02 13:11:12', '2016-08-04 12:35:01');
-INSERT INTO `mc_serie` VALUES ('27', '', '20', '0', '0', '2', '1', '2009-01-31 01:55:34', '2017-07-20 09:46:20');
-INSERT INTO `mc_serie` VALUES ('26', '', '20', '0', '0', '1', '1', '2009-01-31 01:55:14', '2016-08-04 12:31:46');
-INSERT INTO `mc_serie` VALUES ('34', 'catalog/demo/ipod_touch_4.jpg', '0', '1', '4', '7', '1', '2009-02-03 14:18:11', '2016-08-13 14:13:13');
-INSERT INTO `mc_serie` VALUES ('17', '', '0', '1', '1', '4', '1', '2009-01-03 21:08:57', '2016-08-04 12:54:23');
-INSERT INTO `mc_serie` VALUES ('25', '', '0', '1', '1', '3', '1', '2009-01-31 01:04:25', '2016-08-04 12:33:28');
-INSERT INTO `mc_serie` VALUES ('20', 'catalog/demo/compaq_presario.jpg', '0', '1', '1', '1', '1', '2009-01-05 21:49:43', '2016-08-04 12:28:28');
-INSERT INTO `mc_serie` VALUES ('44', '', '34', '0', '0', '0', '1', '2010-09-21 15:39:21', '2010-11-07 20:30:55');
-INSERT INTO `mc_serie` VALUES ('47', '', '34', '0', '0', '0', '1', '2010-11-07 11:13:16', '2010-11-07 11:13:16');
-INSERT INTO `mc_serie` VALUES ('48', '', '34', '0', '0', '0', '1', '2010-11-07 11:13:33', '2010-11-07 11:13:33');
-INSERT INTO `mc_serie` VALUES ('49', '', '34', '0', '0', '0', '1', '2010-11-07 11:14:04', '2010-11-07 11:14:04');
-INSERT INTO `mc_serie` VALUES ('50', '', '34', '0', '0', '0', '1', '2010-11-07 11:14:23', '2011-04-22 01:16:01');
-INSERT INTO `mc_serie` VALUES ('51', '', '34', '0', '0', '0', '1', '2010-11-07 11:14:38', '2011-04-22 01:16:13');
-INSERT INTO `mc_serie` VALUES ('52', '', '34', '0', '0', '0', '1', '2010-11-07 11:16:09', '2011-04-22 01:54:57');
-INSERT INTO `mc_serie` VALUES ('53', '', '34', '0', '0', '0', '1', '2010-11-07 11:28:53', '2011-04-22 01:14:36');
-INSERT INTO `mc_serie` VALUES ('54', '', '34', '0', '0', '0', '1', '2010-11-07 11:29:16', '2011-04-22 01:16:50');
-INSERT INTO `mc_serie` VALUES ('55', '', '34', '0', '0', '0', '1', '2010-11-08 10:31:32', '2010-11-08 10:31:32');
-INSERT INTO `mc_serie` VALUES ('56', '', '34', '0', '0', '0', '1', '2010-11-08 10:31:50', '2011-04-22 01:16:37');
-INSERT INTO `mc_serie` VALUES ('58', '', '52', '0', '0', '0', '1', '2011-05-08 13:44:16', '2011-05-08 13:44:16');
-INSERT INTO `mc_serie` VALUES ('59', '', '0', '0', '1', '0', '1', '2019-03-29 17:59:30', '2019-03-29 17:59:30');
-INSERT INTO `mc_serie` VALUES ('60', '', '0', '0', '1', '0', '1', '2019-03-29 18:00:23', '2019-03-29 18:00:23');
-INSERT INTO `mc_serie` VALUES ('61', '', '0', '0', '1', '0', '1', '2019-03-29 18:13:15', '2019-03-29 18:13:15');
-INSERT INTO `mc_serie` VALUES ('62', '', '0', '0', '1', '0', '1', '2019-03-29 18:17:01', '2019-03-29 18:17:01');
+INSERT INTO `mc_serie` VALUES ('64', '', '60', '0', '1', '0', '1', '2019-03-30 12:26:53', '2019-03-30 12:26:53');
+INSERT INTO `mc_serie` VALUES ('65', '', '60', '0', '1', '1', '1', '2019-03-30 12:30:17', '2019-03-30 12:30:17');
+
+-- ----------------------------
+-- Table structure for mc_series
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_series`;
+CREATE TABLE `mc_series` (
+  `series_id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) NOT NULL DEFAULT '0',
+  `top` tinyint(1) NOT NULL,
+  `column` int(3) NOT NULL,
+  `sort_order` int(3) NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL,
+  `date_added` datetime NOT NULL,
+  `date_modified` datetime NOT NULL,
+  PRIMARY KEY (`series_id`),
+  KEY `parent_id` (`parent_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_series
+-- ----------------------------
+INSERT INTO `mc_series` VALUES ('91', '87', '0', '1', '0', '1', '2018-12-08 02:11:27', '2018-12-08 02:11:27');
+INSERT INTO `mc_series` VALUES ('82', '34', '0', '1', '0', '1', '2018-12-08 02:05:08', '2018-12-08 02:05:08');
+INSERT INTO `mc_series` VALUES ('74', '20', '0', '1', '1', '1', '2018-11-25 21:33:05', '2018-12-08 01:42:48');
+INSERT INTO `mc_series` VALUES ('73', '25', '0', '1', '1', '1', '2018-11-08 13:25:31', '2018-12-08 01:55:02');
+INSERT INTO `mc_series` VALUES ('93', '34', '0', '1', '0', '1', '2018-12-08 02:12:54', '2018-12-08 02:12:54');
+INSERT INTO `mc_series` VALUES ('72', '25', '0', '1', '0', '1', '2018-11-08 13:20:52', '2018-11-08 13:20:52');
+INSERT INTO `mc_series` VALUES ('87', '34', '0', '1', '0', '1', '2018-12-08 02:09:41', '2018-12-08 02:09:41');
+INSERT INTO `mc_series` VALUES ('27', '20', '0', '9', '9', '1', '2009-01-31 01:55:34', '2018-12-09 03:56:37');
+INSERT INTO `mc_series` VALUES ('26', '20', '0', '2', '2', '1', '2009-01-31 01:55:14', '2018-12-08 01:43:01');
+INSERT INTO `mc_series` VALUES ('34', '0', '1', '2', '2', '1', '2009-02-03 14:18:11', '2018-12-16 11:24:14');
+INSERT INTO `mc_series` VALUES ('25', '0', '1', '1', '1', '1', '2009-01-31 01:04:25', '2019-03-29 10:44:33');
+INSERT INTO `mc_series` VALUES ('20', '0', '1', '0', '0', '1', '2009-01-05 21:49:43', '2018-12-08 01:55:48');
+INSERT INTO `mc_series` VALUES ('79', '82', '0', '1', '0', '1', '2018-11-26 23:47:45', '2018-12-08 02:05:55');
+INSERT INTO `mc_series` VALUES ('60', '20', '0', '0', '0', '1', '2018-11-08 07:49:24', '2018-12-08 01:42:32');
+INSERT INTO `mc_series` VALUES ('61', '20', '0', '4', '4', '1', '2018-11-08 08:00:51', '2018-12-08 01:44:08');
+INSERT INTO `mc_series` VALUES ('62', '20', '0', '3', '3', '1', '2018-11-08 08:01:19', '2018-12-08 01:43:15');
+INSERT INTO `mc_series` VALUES ('63', '20', '0', '8', '8', '1', '2018-11-08 08:04:33', '2018-12-09 03:56:25');
+INSERT INTO `mc_series` VALUES ('64', '20', '0', '5', '5', '1', '2018-11-08 08:05:02', '2018-12-08 01:44:34');
+INSERT INTO `mc_series` VALUES ('66', '20', '0', '7', '7', '0', '2018-11-08 08:08:23', '2018-12-17 11:00:28');
+INSERT INTO `mc_series` VALUES ('69', '20', '0', '6', '6', '1', '2018-11-08 08:33:27', '2018-12-08 01:44:51');
+INSERT INTO `mc_series` VALUES ('96', '60', '0', '1', '0', '1', '2019-03-29 10:45:22', '2019-03-29 10:45:22');
+
+-- ----------------------------
+-- Table structure for mc_series_description
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_series_description`;
+CREATE TABLE `mc_series_description` (
+  `series_id` int(11) NOT NULL,
+  `language_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  PRIMARY KEY (`series_id`,`language_id`),
+  KEY `name` (`name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_series_description
+-- ----------------------------
+INSERT INTO `mc_series_description` VALUES ('87', '1', '手环', '');
+INSERT INTO `mc_series_description` VALUES ('93', '1', '音响', '');
+INSERT INTO `mc_series_description` VALUES ('72', '2', 'Nokia', '');
+INSERT INTO `mc_series_description` VALUES ('73', '1', '飞利浦', '');
+INSERT INTO `mc_series_description` VALUES ('79', '1', '小天才', '');
+INSERT INTO `mc_series_description` VALUES ('91', '1', '华为手环', '');
+INSERT INTO `mc_series_description` VALUES ('82', '1', '儿童手表', '');
+INSERT INTO `mc_series_description` VALUES ('74', '1', '荣耀', '');
+INSERT INTO `mc_series_description` VALUES ('62', '1', '小米', '&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;/p&gt;');
+INSERT INTO `mc_series_description` VALUES ('34', '1', '智能设备', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;');
+INSERT INTO `mc_series_description` VALUES ('26', '1', '苹果', '');
+INSERT INTO `mc_series_description` VALUES ('60', '1', '华为', '');
+INSERT INTO `mc_series_description` VALUES ('27', '1', 'vivo', '&lt;p&gt;分类描述信息&lt;br&gt;&lt;/p&gt;');
+INSERT INTO `mc_series_description` VALUES ('25', '1', '功能手机', '&lt;p&gt;分类说明信息&lt;/p&gt;\r\n');
+INSERT INTO `mc_series_description` VALUES ('20', '1', '智能手机', '&lt;p&gt;分类说明信息&lt;/p&gt;\r\n');
+INSERT INTO `mc_series_description` VALUES ('72', '1', '诺基亚', '');
+INSERT INTO `mc_series_description` VALUES ('61', '1', '三星', '');
+INSERT INTO `mc_series_description` VALUES ('64', '1', '魅族', '');
+INSERT INTO `mc_series_description` VALUES ('63', '1', 'oppo', '');
+INSERT INTO `mc_series_description` VALUES ('66', '1', '诺基亚', '');
+INSERT INTO `mc_series_description` VALUES ('69', '1', '美图', '');
+INSERT INTO `mc_series_description` VALUES ('96', '1', 'mate 10', '&lt;p&gt;mate 10&lt;br&gt;&lt;/p&gt;');
+
+-- ----------------------------
+-- Table structure for mc_series_path
+-- ----------------------------
+DROP TABLE IF EXISTS `mc_series_path`;
+CREATE TABLE `mc_series_path` (
+  `series_id` int(11) NOT NULL,
+  `path_id` int(11) NOT NULL,
+  `level` int(11) NOT NULL,
+  PRIMARY KEY (`series_id`,`path_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mc_series_path
+-- ----------------------------
+INSERT INTO `mc_series_path` VALUES ('26', '26', '2');
+INSERT INTO `mc_series_path` VALUES ('73', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('73', '73', '2');
+INSERT INTO `mc_series_path` VALUES ('72', '72', '2');
+INSERT INTO `mc_series_path` VALUES ('72', '25', '1');
+INSERT INTO `mc_series_path` VALUES ('25', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('26', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('20', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('74', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('27', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('27', '27', '2');
+INSERT INTO `mc_series_path` VALUES ('79', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('79', '79', '3');
+INSERT INTO `mc_series_path` VALUES ('82', '34', '1');
+INSERT INTO `mc_series_path` VALUES ('82', '82', '2');
+INSERT INTO `mc_series_path` VALUES ('91', '87', '2');
+INSERT INTO `mc_series_path` VALUES ('79', '82', '2');
+INSERT INTO `mc_series_path` VALUES ('34', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('87', '87', '2');
+INSERT INTO `mc_series_path` VALUES ('87', '34', '1');
+INSERT INTO `mc_series_path` VALUES ('62', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('87', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('93', '93', '2');
+INSERT INTO `mc_series_path` VALUES ('73', '25', '1');
+INSERT INTO `mc_series_path` VALUES ('74', '74', '2');
+INSERT INTO `mc_series_path` VALUES ('0', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('26', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('20', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('27', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('93', '34', '1');
+INSERT INTO `mc_series_path` VALUES ('72', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('25', '25', '1');
+INSERT INTO `mc_series_path` VALUES ('74', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('82', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('91', '34', '1');
+INSERT INTO `mc_series_path` VALUES ('34', '34', '1');
+INSERT INTO `mc_series_path` VALUES ('79', '34', '1');
+INSERT INTO `mc_series_path` VALUES ('91', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('60', '60', '2');
+INSERT INTO `mc_series_path` VALUES ('60', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('60', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('61', '61', '2');
+INSERT INTO `mc_series_path` VALUES ('61', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('61', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('62', '62', '2');
+INSERT INTO `mc_series_path` VALUES ('62', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('63', '63', '2');
+INSERT INTO `mc_series_path` VALUES ('63', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('64', '64', '2');
+INSERT INTO `mc_series_path` VALUES ('64', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('64', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('63', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('91', '91', '3');
+INSERT INTO `mc_series_path` VALUES ('93', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('66', '66', '2');
+INSERT INTO `mc_series_path` VALUES ('66', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('66', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('69', '69', '2');
+INSERT INTO `mc_series_path` VALUES ('69', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('69', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('96', '0', '0');
+INSERT INTO `mc_series_path` VALUES ('96', '20', '1');
+INSERT INTO `mc_series_path` VALUES ('96', '60', '2');
+INSERT INTO `mc_series_path` VALUES ('96', '96', '3');
 
 -- ----------------------------
 -- Table structure for mc_serie_description
@@ -7824,105 +11223,8 @@ CREATE TABLE `mc_serie_description` (
 -- ----------------------------
 -- Records of mc_serie_description
 -- ----------------------------
-INSERT INTO `mc_serie_description` VALUES ('42', '3', 'test 9', '', 'test 9', '', '');
-INSERT INTO `mc_serie_description` VALUES ('39', '3', 'test 6', '', 'test 6', '', '');
-INSERT INTO `mc_serie_description` VALUES ('40', '1', 'test 7', '', 'test 7', '', '');
-INSERT INTO `mc_serie_description` VALUES ('40', '2', 'test 7', '', 'test 7', '', '');
-INSERT INTO `mc_serie_description` VALUES ('40', '3', 'test 7', '', 'test 7', '', '');
-INSERT INTO `mc_serie_description` VALUES ('41', '1', 'test 8', '', 'test 8', '', '');
-INSERT INTO `mc_serie_description` VALUES ('41', '2', 'test 8', '', 'test 8', '', '');
-INSERT INTO `mc_serie_description` VALUES ('41', '3', 'test 8', '', 'test 8', '', '');
-INSERT INTO `mc_serie_description` VALUES ('42', '1', 'test 9', '', 'test 9', '', '');
-INSERT INTO `mc_serie_description` VALUES ('42', '2', 'test 9', '', 'test 9', '', '');
-INSERT INTO `mc_serie_description` VALUES ('30', '1', '梳妆台', '', '梳妆台', '', '');
-INSERT INTO `mc_serie_description` VALUES ('29', '1', '床', '', '床', '', '');
-INSERT INTO `mc_serie_description` VALUES ('57', '1', '咖啡桌', '', '咖啡桌', '', '');
-INSERT INTO `mc_serie_description` VALUES ('36', '1', '椅子', '', '椅子', '', '');
-INSERT INTO `mc_serie_description` VALUES ('35', '2', 'Sofa Set', '', 'Sofa Set', '', '');
-INSERT INTO `mc_serie_description` VALUES ('32', '2', 'Bed Room', '', 'Bed Room', '', '');
-INSERT INTO `mc_serie_description` VALUES ('17', '2', 'Lighting', '', 'Lighting', '', '');
-INSERT INTO `mc_serie_description` VALUES ('25', '1', '实木家具', '&lt;p&gt;分类说明信息&lt;/p&gt;\n', '实木家具', '', '');
-INSERT INTO `mc_serie_description` VALUES ('43', '1', 'test 11', '', 'test 11', '', '');
-INSERT INTO `mc_serie_description` VALUES ('31', '2', 'Reading Table', '', 'Reading Table', '', '');
-INSERT INTO `mc_serie_description` VALUES ('31', '3', '書桌', '', '書桌', '', '');
-INSERT INTO `mc_serie_description` VALUES ('37', '1', 'test 5', '', 'test 5', '', '');
-INSERT INTO `mc_serie_description` VALUES ('37', '2', 'test 5', '', 'test 5', '', '');
-INSERT INTO `mc_serie_description` VALUES ('37', '3', 'test 5', '', 'test 5', '', '');
-INSERT INTO `mc_serie_description` VALUES ('29', '3', '床', '', '床', '', '');
-INSERT INTO `mc_serie_description` VALUES ('57', '2', 'Coffee Table', '', 'Coffee Table', '', '');
-INSERT INTO `mc_serie_description` VALUES ('36', '3', '椅子', '', '椅子', '', '');
-INSERT INTO `mc_serie_description` VALUES ('35', '3', '沙發', '', '沙發', '', '');
-INSERT INTO `mc_serie_description` VALUES ('35', '1', '沙发', '', '沙发', '', '');
-INSERT INTO `mc_serie_description` VALUES ('32', '1', '臥室', '', '臥室', '', '');
-INSERT INTO `mc_serie_description` VALUES ('34', '2', 'Home Decor', '&lt;p&gt;\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\n', 'Home Decor', '', '');
-INSERT INTO `mc_serie_description` VALUES ('34', '1', '装饰品', '&lt;p&gt;\n	装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容\n\n&lt;/p&gt;', '装饰品', '', '');
-INSERT INTO `mc_serie_description` VALUES ('17', '1', '灯具', '', '灯具', '', '');
-INSERT INTO `mc_serie_description` VALUES ('43', '2', 'test 11', '', 'test 11', '', '');
-INSERT INTO `mc_serie_description` VALUES ('38', '1', 'test 4', '', 'test 4', '', '');
-INSERT INTO `mc_serie_description` VALUES ('38', '2', 'test 4', '', 'test 4', '', '');
-INSERT INTO `mc_serie_description` VALUES ('38', '3', 'test 4', '', 'test 4', '', '');
-INSERT INTO `mc_serie_description` VALUES ('39', '1', 'test 6', '', 'test 6', '', '');
-INSERT INTO `mc_serie_description` VALUES ('39', '2', 'test 6', '', 'test 6', '', '');
-INSERT INTO `mc_serie_description` VALUES ('29', '2', 'Beds', '', 'Beds', '', '');
-INSERT INTO `mc_serie_description` VALUES ('57', '3', '咖啡桌', '', '咖啡桌', '', '');
-INSERT INTO `mc_serie_description` VALUES ('36', '2', 'Chair', '', 'Chair', '', '');
-INSERT INTO `mc_serie_description` VALUES ('32', '3', '卧室', '', '卧室', '', '');
-INSERT INTO `mc_serie_description` VALUES ('34', '3', '裝飾品', '&lt;p&gt;\n	装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容 装饰品分类描述内容\n\n&lt;/p&gt;', 'MP3 Players', '', '');
-INSERT INTO `mc_serie_description` VALUES ('26', '1', '菜板', '', '菜板', '', '');
-INSERT INTO `mc_serie_description` VALUES ('26', '2', 'Chop board', '', 'Chop board', '', '');
-INSERT INTO `mc_serie_description` VALUES ('26', '3', '菜板', '', '菜板', '', '');
-INSERT INTO `mc_serie_description` VALUES ('27', '1', '餐具', '&lt;p&gt;分类描述信息&lt;br&gt;&lt;/p&gt;', '餐具', '', '');
-INSERT INTO `mc_serie_description` VALUES ('27', '2', 'Dining Set', '', 'Dining Set', '', '');
-INSERT INTO `mc_serie_description` VALUES ('27', '3', '餐具', '&lt;p&gt;分類描述信息&lt;br&gt;&lt;/p&gt;', '餐具', '', '');
-INSERT INTO `mc_serie_description` VALUES ('28', '1', '客厅', '', '客厅', '', '');
-INSERT INTO `mc_serie_description` VALUES ('28', '2', 'Living Room', '', 'Living Room', '', '');
-INSERT INTO `mc_serie_description` VALUES ('28', '3', '客廳', '', '客廳', '', '');
-INSERT INTO `mc_serie_description` VALUES ('17', '3', '燈具', '', '燈具', '', '');
-INSERT INTO `mc_serie_description` VALUES ('25', '3', '實木家具', '&lt;p&gt;\n	分類說明信息&lt;/p&gt;\n', '實木家具', '', '');
-INSERT INTO `mc_serie_description` VALUES ('25', '2', 'Solid Wood', '&lt;p&gt;\n	Example of category description text&lt;/p&gt;\n', 'Solid Wood', '', '');
-INSERT INTO `mc_serie_description` VALUES ('20', '1', '厨房用品', '&lt;p&gt;分类说明信息&lt;/p&gt;\n', '厨房用品', '', '');
-INSERT INTO `mc_serie_description` VALUES ('20', '2', 'Kitchen', '&lt;p&gt;\n	Example of category description text&lt;/p&gt;\n', 'Kitchen', '', '');
-INSERT INTO `mc_serie_description` VALUES ('20', '3', '厨房用品', '&lt;p&gt;\n	分類說明信息&lt;/p&gt;\n', '厨房用品', '', '');
-INSERT INTO `mc_serie_description` VALUES ('30', '2', 'Dressing Table', '', 'Dressing Table', '', '');
-INSERT INTO `mc_serie_description` VALUES ('30', '3', '梳妝台', '', '梳妝台', '', '');
-INSERT INTO `mc_serie_description` VALUES ('31', '1', '书桌', '', '书桌', '', '');
-INSERT INTO `mc_serie_description` VALUES ('43', '3', 'test 11', '', 'test 11', '', '');
-INSERT INTO `mc_serie_description` VALUES ('44', '1', 'test 12', '', 'test 12', '', '');
-INSERT INTO `mc_serie_description` VALUES ('44', '2', 'test 12', '', 'test 12', '', '');
-INSERT INTO `mc_serie_description` VALUES ('44', '3', 'test 12', '', 'test 12', '', '');
-INSERT INTO `mc_serie_description` VALUES ('47', '1', 'test 15', '', 'test 15', '', '');
-INSERT INTO `mc_serie_description` VALUES ('47', '2', 'test 15', '', 'test 15', '', '');
-INSERT INTO `mc_serie_description` VALUES ('47', '3', 'test 15', '', 'test 15', '', '');
-INSERT INTO `mc_serie_description` VALUES ('48', '1', 'test 16', '', 'test 16', '', '');
-INSERT INTO `mc_serie_description` VALUES ('48', '2', 'test 16', '', 'test 16', '', '');
-INSERT INTO `mc_serie_description` VALUES ('48', '3', 'test 16', '', 'test 16', '', '');
-INSERT INTO `mc_serie_description` VALUES ('49', '1', 'test 17', '', 'test 17', '', '');
-INSERT INTO `mc_serie_description` VALUES ('49', '2', 'test 17', '', 'test 17', '', '');
-INSERT INTO `mc_serie_description` VALUES ('49', '3', 'test 17', '', 'test 17', '', '');
-INSERT INTO `mc_serie_description` VALUES ('50', '1', 'test 18', '', 'test 18', '', '');
-INSERT INTO `mc_serie_description` VALUES ('50', '2', 'test 18', '', 'test 18', '', '');
-INSERT INTO `mc_serie_description` VALUES ('50', '3', 'test 18', '', 'test 18', '', '');
-INSERT INTO `mc_serie_description` VALUES ('51', '1', 'test 19', '', 'test 19', '', '');
-INSERT INTO `mc_serie_description` VALUES ('51', '2', 'test 19', '', 'test 19', '', '');
-INSERT INTO `mc_serie_description` VALUES ('51', '3', 'test 19', '', 'test 19', '', '');
-INSERT INTO `mc_serie_description` VALUES ('52', '1', 'test 20', '', 'test 20', '', '');
-INSERT INTO `mc_serie_description` VALUES ('52', '2', 'test 20', '', 'test 20', '', '');
-INSERT INTO `mc_serie_description` VALUES ('52', '3', 'test 20', '', 'test 20', '', '');
-INSERT INTO `mc_serie_description` VALUES ('53', '1', 'test 21', '', 'test 21', '', '');
-INSERT INTO `mc_serie_description` VALUES ('53', '2', 'test 21', '', 'test 21', '', '');
-INSERT INTO `mc_serie_description` VALUES ('53', '3', 'test 21', '', 'test 21', '', '');
-INSERT INTO `mc_serie_description` VALUES ('54', '1', 'test 22', '', 'test 22', '', '');
-INSERT INTO `mc_serie_description` VALUES ('54', '2', 'test 22', '', 'test 22', '', '');
-INSERT INTO `mc_serie_description` VALUES ('54', '3', 'test 22', '', 'test 22', '', '');
-INSERT INTO `mc_serie_description` VALUES ('55', '1', 'test 23', '', 'test 23', '', '');
-INSERT INTO `mc_serie_description` VALUES ('55', '2', 'test 23', '', 'test 23', '', '');
-INSERT INTO `mc_serie_description` VALUES ('55', '3', 'test 23', '', 'test 23', '', '');
-INSERT INTO `mc_serie_description` VALUES ('56', '1', 'test 24', '', 'test 24', '', '');
-INSERT INTO `mc_serie_description` VALUES ('56', '2', 'test 24', '', 'test 24', '', '');
-INSERT INTO `mc_serie_description` VALUES ('56', '3', 'test 24', '', 'test 24', '', '');
-INSERT INTO `mc_serie_description` VALUES ('58', '1', 'test 25', '', 'test 25', '', '');
-INSERT INTO `mc_serie_description` VALUES ('58', '2', 'test 25', '', 'test 25', '', '');
-INSERT INTO `mc_serie_description` VALUES ('58', '3', 'test 25', '', 'test 25', '', '');
+INSERT INTO `mc_serie_description` VALUES ('64', '1', 'meta20', '&lt;p&gt;meta20&lt;br&gt;&lt;/p&gt;', 'meta20', 'meta20', 'meta20');
+INSERT INTO `mc_serie_description` VALUES ('65', '1', 'p30', '&lt;p&gt;p30&lt;/p&gt;', 'p30', 'p30', 'p30');
 
 -- ----------------------------
 -- Table structure for mc_serie_filter
@@ -7937,6 +11239,13 @@ CREATE TABLE `mc_serie_filter` (
 -- ----------------------------
 -- Records of mc_serie_filter
 -- ----------------------------
+INSERT INTO `mc_serie_filter` VALUES ('64', '11');
+INSERT INTO `mc_serie_filter` VALUES ('64', '22');
+INSERT INTO `mc_serie_filter` VALUES ('65', '11');
+INSERT INTO `mc_serie_filter` VALUES ('65', '22');
+INSERT INTO `mc_serie_filter` VALUES ('65', '24');
+INSERT INTO `mc_serie_filter` VALUES ('65', '25');
+INSERT INTO `mc_serie_filter` VALUES ('65', '26');
 
 -- ----------------------------
 -- Table structure for mc_serie_path
@@ -8030,6 +11339,15 @@ INSERT INTO `mc_serie_path` VALUES ('61', '0', '0');
 INSERT INTO `mc_serie_path` VALUES ('61', '61', '1');
 INSERT INTO `mc_serie_path` VALUES ('62', '0', '0');
 INSERT INTO `mc_serie_path` VALUES ('62', '62', '1');
+INSERT INTO `mc_serie_path` VALUES ('63', '20', '0');
+INSERT INTO `mc_serie_path` VALUES ('63', '26', '1');
+INSERT INTO `mc_serie_path` VALUES ('63', '63', '2');
+INSERT INTO `mc_serie_path` VALUES ('64', '0', '0');
+INSERT INTO `mc_serie_path` VALUES ('64', '60', '1');
+INSERT INTO `mc_serie_path` VALUES ('64', '64', '2');
+INSERT INTO `mc_serie_path` VALUES ('65', '0', '0');
+INSERT INTO `mc_serie_path` VALUES ('65', '60', '1');
+INSERT INTO `mc_serie_path` VALUES ('65', '65', '2');
 
 -- ----------------------------
 -- Table structure for mc_serie_to_layout
@@ -8045,6 +11363,9 @@ CREATE TABLE `mc_serie_to_layout` (
 -- ----------------------------
 -- Records of mc_serie_to_layout
 -- ----------------------------
+INSERT INTO `mc_serie_to_layout` VALUES ('63', '0', '15');
+INSERT INTO `mc_serie_to_layout` VALUES ('64', '0', '5');
+INSERT INTO `mc_serie_to_layout` VALUES ('65', '0', '2');
 
 -- ----------------------------
 -- Table structure for mc_serie_to_store
@@ -8092,6 +11413,9 @@ INSERT INTO `mc_serie_to_store` VALUES ('55', '0');
 INSERT INTO `mc_serie_to_store` VALUES ('56', '0');
 INSERT INTO `mc_serie_to_store` VALUES ('57', '0');
 INSERT INTO `mc_serie_to_store` VALUES ('58', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('63', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('64', '0');
+INSERT INTO `mc_serie_to_store` VALUES ('65', '0');
 
 -- ----------------------------
 -- Table structure for mc_session
@@ -8107,20 +11431,98 @@ CREATE TABLE `mc_session` (
 -- ----------------------------
 -- Records of mc_session
 -- ----------------------------
-INSERT INTO `mc_session` VALUES ('14cbe8c11a1a16d789b8bd6225', '{\"api_id\":\"2\"}', '2019-03-28 17:43:17');
-INSERT INTO `mc_session` VALUES ('24698c0b8d1bf8999d441fa49a', '{\"api_id\":\"2\"}', '2019-03-27 17:12:20');
-INSERT INTO `mc_session` VALUES ('41403e4d5514048160796d03af', '{\"api_id\":\"2\"}', '2019-03-26 11:58:44');
-INSERT INTO `mc_session` VALUES ('4cf9f0acfbc897e402002d0da8', '{\"api_id\":\"2\"}', '2019-03-27 17:05:31');
-INSERT INTO `mc_session` VALUES ('4fba0b3dcd2ae3e2df244bd6a1', '{\"api_id\":\"2\"}', '2019-03-28 17:52:52');
-INSERT INTO `mc_session` VALUES ('4fbef6f953c2c24b756a976121', '{\"api_id\":\"2\"}', '2019-03-28 17:53:17');
-INSERT INTO `mc_session` VALUES ('56d330b9661bc516d1cc4eb9ef', '{\"api_id\":\"2\"}', '2019-03-27 16:52:52');
-INSERT INTO `mc_session` VALUES ('761708b5dea965b11b7205a101', '{\"api_id\":\"2\"}', '2019-03-26 14:48:31');
-INSERT INTO `mc_session` VALUES ('915b613ce5dbc834b4dbe9a51a', '{\"api_id\":\"2\"}', '2019-03-29 16:56:52');
-INSERT INTO `mc_session` VALUES ('99300c7e33fd9bff8b07ad45f6', '{\"api_id\":\"2\"}', '2019-03-27 16:46:34');
-INSERT INTO `mc_session` VALUES ('9b959657fc460485839153999a', '{\"api_id\":\"2\"}', '2019-03-26 11:59:45');
-INSERT INTO `mc_session` VALUES ('acb8f0e6b7bfb40c49b8ad964b', '{\"api_id\":\"2\"}', '2019-03-26 16:22:59');
-INSERT INTO `mc_session` VALUES ('d6f02c18ae34385b7a81019ddd', '{\"language\":\"zh-cn\",\"currency\":\"CNY\",\"user_id\":\"1\",\"user_token\":\"z7aKYAZYCbzvs4T7XUO5eZvuewKviAlF\",\"captcha\":\"9c7b96\"}', '2019-03-29 18:41:27');
-INSERT INTO `mc_session` VALUES ('e004f02b2a0d03d90cad8552cf', '{\"api_id\":\"2\"}', '2019-03-27 17:11:32');
+INSERT INTO `mc_session` VALUES ('0426108eafb7062693bbfc871a', '{\"api_id\":\"2\"}', '2019-03-29 00:30:33');
+INSERT INTO `mc_session` VALUES ('04f7616ff7adbe705b142a8648', '{\"api_id\":\"2\"}', '2019-03-30 14:25:48');
+INSERT INTO `mc_session` VALUES ('051b2fe8f4853cb9d1bd9cf48d', '{\"api_id\":\"2\"}', '2019-03-26 16:18:38');
+INSERT INTO `mc_session` VALUES ('092d87fc2903870f28f02181ce', '{\"api_id\":\"2\"}', '2019-03-30 14:39:23');
+INSERT INTO `mc_session` VALUES ('0a57df33545f3f4525f9d467e7', '{\"api_id\":\"2\"}', '2019-03-29 14:47:15');
+INSERT INTO `mc_session` VALUES ('0c6fde5ac7719766d9ec38ca9a', '{\"api_id\":\"2\"}', '2019-03-30 14:39:01');
+INSERT INTO `mc_session` VALUES ('0dcef656b478c8a2722b45ae2b', '{\"api_id\":\"2\"}', '2019-03-30 14:47:01');
+INSERT INTO `mc_session` VALUES ('1157fdac1969f8c3bd22a7b1db', '{\"api_id\":\"2\"}', '2019-03-30 14:39:05');
+INSERT INTO `mc_session` VALUES ('11cafe4ac45104aa8d5e482b0c', '{\"api_id\":\"2\"}', '2019-03-30 14:40:23');
+INSERT INTO `mc_session` VALUES ('1387b3628cd7fed3746800d117', '{\"api_id\":\"2\"}', '2019-03-29 00:33:13');
+INSERT INTO `mc_session` VALUES ('174b0b8c6fa5b3a124db1ad0cd', '{\"api_id\":\"2\"}', '2019-03-30 14:47:56');
+INSERT INTO `mc_session` VALUES ('1957626f8def4b30a21fdeb4bc', '{\"language\":\"zh-cn\",\"currency\":\"CNY\",\"user_id\":\"1\",\"user_token\":\"Ah2C02NZyr8CjSyZgiWFbjtLKKkRxWF2\"}', '2019-03-26 16:27:50');
+INSERT INTO `mc_session` VALUES ('1a6935ac5579958fc06493b357', '{\"api_id\":\"2\"}', '2019-03-27 17:13:18');
+INSERT INTO `mc_session` VALUES ('2a08e42a55b49ea8c53976e451', '{\"language\":\"zh-cn\",\"currency\":\"CNY\"}', '2019-03-27 22:45:19');
+INSERT INTO `mc_session` VALUES ('2a0a9587ed7787bc1e5d498404', '{\"language\":\"zh-cn\",\"currency\":\"CNY\",\"captcha\":\"edecda\"}', '2019-03-25 18:50:08');
+INSERT INTO `mc_session` VALUES ('2d4026e143d8859121aa1aeb4c', '{\"api_id\":\"2\"}', '2019-03-26 15:14:41');
+INSERT INTO `mc_session` VALUES ('2e897391bc962b723363a9db54', '{\"api_id\":\"2\"}', '2019-03-26 11:16:04');
+INSERT INTO `mc_session` VALUES ('30c3c1bb8265386ab402466093', '{\"api_id\":\"2\"}', '2019-03-26 16:11:25');
+INSERT INTO `mc_session` VALUES ('388688bbf39fe5ecc5566cf422', '{\"api_id\":\"2\"}', '2019-03-29 14:46:16');
+INSERT INTO `mc_session` VALUES ('3982dd0cd0f9163edf84dacabb', '{\"api_id\":\"2\"}', '2019-03-30 14:25:12');
+INSERT INTO `mc_session` VALUES ('3c19c471a9aec4e9f37011706e', '{\"user_id\":\"1\",\"user_token\":\"Olki9L0TPuos5L7dHqisvvfbiyz7ZohN\",\"language\":\"zh-cn\",\"currency\":\"CNY\"}', '2019-03-29 14:47:46');
+INSERT INTO `mc_session` VALUES ('3cd7323e46913513736ffe691e', '{\"language\":\"zh-cn\",\"currency\":\"CNY\",\"user_id\":\"1\",\"user_token\":\"kHDOwYGZS2VajrKnqlpd9nm95WkBi7ro\"}', '2019-04-01 00:26:52');
+INSERT INTO `mc_session` VALUES ('403c0fe56907f27a782bb6cd20', '{\"api_id\":\"2\"}', '2019-03-27 11:52:46');
+INSERT INTO `mc_session` VALUES ('411cfbe2a9ab41852d78689b0a', '{\"api_id\":\"2\"}', '2019-03-26 10:32:37');
+INSERT INTO `mc_session` VALUES ('41c46db4a62b73337b6728f3f4', '{\"user_id\":\"1\",\"user_token\":\"UC4u7hy4295Qh6Wmi5vDM80KyhFXr4eH\",\"language\":\"zh-cn\",\"currency\":\"CNY\"}', '2019-03-27 17:13:20');
+INSERT INTO `mc_session` VALUES ('43dc5630558f79e93d82f7a5b1', '{\"language\":\"zh-cn\",\"currency\":\"CNY\",\"user_id\":\"1\",\"user_token\":\"vajap4RyyN7IdhbV4cJIGvJHr8KnNo6h\"}', '2019-03-29 01:15:12');
+INSERT INTO `mc_session` VALUES ('43e89ad7f9a3eda365dcf4c2fa', '{\"api_id\":\"2\"}', '2019-03-29 00:34:01');
+INSERT INTO `mc_session` VALUES ('44dddf77a6b1ab145c0d3d1cd6', '{\"api_id\":\"2\"}', '2019-03-30 14:25:33');
+INSERT INTO `mc_session` VALUES ('4817cca31304381ba9da4cddff', '{\"api_id\":\"2\"}', '2019-03-30 14:42:47');
+INSERT INTO `mc_session` VALUES ('4ef790c8eb188c69b618fb6037', '{\"api_id\":\"2\"}', '2019-03-26 15:54:58');
+INSERT INTO `mc_session` VALUES ('4f4de28361ab06de1e8eb1b02e', '{\"api_id\":\"2\"}', '2019-03-30 14:44:04');
+INSERT INTO `mc_session` VALUES ('4fa89e84caf3d396d43209dae5', '{\"api_id\":\"2\"}', '2019-03-26 16:21:54');
+INSERT INTO `mc_session` VALUES ('52e0dc5d0583572f689e1f1110', '{\"api_id\":\"2\"}', '2019-03-26 15:56:44');
+INSERT INTO `mc_session` VALUES ('54840a87ed5e2d9346101ef809', '{\"api_id\":\"2\"}', '2019-03-30 14:25:52');
+INSERT INTO `mc_session` VALUES ('56b0a396cdb2e553805fe349d5', '{\"language\":\"zh-cn\",\"currency\":\"CNY\"}', '2019-03-25 22:41:25');
+INSERT INTO `mc_session` VALUES ('59a8d624f7b36b902e887ea597', '{\"api_id\":\"2\"}', '2019-03-25 23:50:20');
+INSERT INTO `mc_session` VALUES ('5a6620c249dbc991f6f858c1e6', '{\"api_id\":\"2\"}', '2019-03-26 11:01:55');
+INSERT INTO `mc_session` VALUES ('5ee35e4b32099964bb6c21fa3a', '{\"api_id\":\"2\"}', '2019-03-30 14:25:06');
+INSERT INTO `mc_session` VALUES ('6182a91ee2c47f32c0d31e3924', '{\"api_id\":\"2\"}', '2019-03-26 15:56:24');
+INSERT INTO `mc_session` VALUES ('61859bf3861b9daf613b77853b', '{\"api_id\":\"2\"}', '2019-03-30 14:39:17');
+INSERT INTO `mc_session` VALUES ('6c5dc894e29dbaeb35b1ca6a5f', '{\"api_id\":\"2\"}', '2019-03-26 16:22:16');
+INSERT INTO `mc_session` VALUES ('6e40c35c187b52d3ac65a9ab4d', '{\"api_id\":\"2\"}', '2019-03-26 10:58:22');
+INSERT INTO `mc_session` VALUES ('6f3a3a9fdc7510dcf106f5c9c6', '{\"language\":\"zh-cn\",\"currency\":\"CNY\"}', '2019-03-27 11:52:33');
+INSERT INTO `mc_session` VALUES ('704c0e572ad7baf5b3ed4c2452', '{\"api_id\":\"2\"}', '2019-03-30 12:38:16');
+INSERT INTO `mc_session` VALUES ('7486349a4cef7824d6fec8e926', '{\"api_id\":\"2\"}', '2019-03-30 14:46:39');
+INSERT INTO `mc_session` VALUES ('76bd952b500e8f894c0d76e64e', '{\"api_id\":\"2\"}', '2019-03-30 14:48:09');
+INSERT INTO `mc_session` VALUES ('7a61adf1f684295d4b59c4ebe9', '{\"api_id\":\"2\"}', '2019-03-30 12:54:26');
+INSERT INTO `mc_session` VALUES ('862dfe1ce58fa0ce563d7751e8', '{\"api_id\":\"2\"}', '2019-03-26 16:11:09');
+INSERT INTO `mc_session` VALUES ('882bd07d0a6da7029d4bc7bbd4', '{\"api_id\":\"2\"}', '2019-03-26 16:11:15');
+INSERT INTO `mc_session` VALUES ('8c0cede164ee68e5bbefb60254', '{\"api_id\":\"2\"}', '2019-03-26 15:14:47');
+INSERT INTO `mc_session` VALUES ('925a490cac2039706f6b776f1d', '{\"api_id\":\"2\"}', '2019-03-29 11:48:20');
+INSERT INTO `mc_session` VALUES ('97ec1d4169408620b4d399558b', '{\"api_id\":\"2\"}', '2019-03-30 14:25:38');
+INSERT INTO `mc_session` VALUES ('9882d1bed5feedfaa214840170', '{\"api_id\":\"2\"}', '2019-03-26 15:14:45');
+INSERT INTO `mc_session` VALUES ('9a611cf35c4e6866788b05a717', '{\"api_id\":\"2\"}', '2019-03-26 11:08:48');
+INSERT INTO `mc_session` VALUES ('a32fa21c6d0c6bab8136323821', '{\"api_id\":\"2\"}', '2019-03-30 14:43:18');
+INSERT INTO `mc_session` VALUES ('a4864bf15af3ae563ba9dd8bf0', '{\"api_id\":\"2\"}', '2019-03-26 16:22:24');
+INSERT INTO `mc_session` VALUES ('ac0e7cd8b1bba721f121ab0a4e', '{\"api_id\":\"2\"}', '2019-03-30 14:47:26');
+INSERT INTO `mc_session` VALUES ('b15ab676978aef4a2107b32f11', 'false', '2019-03-29 10:43:30');
+INSERT INTO `mc_session` VALUES ('b3de8a888d06d6a5530a582e2c', 'false', '2019-03-29 00:30:30');
+INSERT INTO `mc_session` VALUES ('b63951bd170f452882249bf486', '{\"api_id\":\"2\"}', '2019-03-30 14:42:54');
+INSERT INTO `mc_session` VALUES ('b650e7b242eca3fcbdf1629861', '{\"api_id\":\"2\"}', '2019-03-26 16:22:08');
+INSERT INTO `mc_session` VALUES ('b7ea446b40e8752f9841391b41', '{\"api_id\":\"2\"}', '2019-03-26 15:54:31');
+INSERT INTO `mc_session` VALUES ('beffc4ca65cae11092ec48109f', '{\"api_id\":\"2\"}', '2019-03-25 23:46:11');
+INSERT INTO `mc_session` VALUES ('bf9e62beae682b1fc3c11ea8fe', '{\"api_id\":\"2\"}', '2019-03-26 16:21:45');
+INSERT INTO `mc_session` VALUES ('c1592337f6beecb6ec572edfa1', '{\"api_id\":\"2\"}', '2019-03-30 14:39:31');
+INSERT INTO `mc_session` VALUES ('c1f07b179b7aff9bef1572eb84', '{\"language\":\"zh-cn\",\"currency\":\"CNY\"}', '2019-03-27 11:52:33');
+INSERT INTO `mc_session` VALUES ('c3d9cb70361c3eb652a58488f2', '{\"api_id\":\"2\"}', '2019-03-26 15:56:35');
+INSERT INTO `mc_session` VALUES ('c4a44499577766ada3043fadf6', '{\"language\":\"zh-cn\",\"currency\":\"CNY\"}', '2019-03-30 23:40:09');
+INSERT INTO `mc_session` VALUES ('c65fe0ee8779f8f63f5b947998', '{\"api_id\":\"2\"}', '2019-03-30 13:19:42');
+INSERT INTO `mc_session` VALUES ('c93b0cfde9c81fea7c138d8429', '{\"api_id\":\"2\"}', '2019-03-30 14:24:47');
+INSERT INTO `mc_session` VALUES ('cc9153b46c44673eed82009f9f', '{\"api_id\":\"2\"}', '2019-03-26 15:54:42');
+INSERT INTO `mc_session` VALUES ('cd54c03a3ef913516ec3b6d714', '{\"user_id\":\"1\",\"user_token\":\"YXT73S0zarGyxj7RkJpMeC68Wn3V6vOh\",\"language\":\"zh-cn\",\"currency\":\"CNY\"}', '2019-03-30 17:03:37');
+INSERT INTO `mc_session` VALUES ('cdf72cf90ee9a38bc1b92d5a0b', '{\"language\":\"zh-cn\",\"currency\":\"CNY\",\"captcha\":\"1c7e18\"}', '2019-03-25 23:53:53');
+INSERT INTO `mc_session` VALUES ('d28e52f984766338eb5c828a2f', '{\"api_id\":\"2\"}', '2019-03-30 14:40:17');
+INSERT INTO `mc_session` VALUES ('d3236171fa430dc2870d93b784', '{\"api_id\":\"2\"}', '2019-03-29 14:34:31');
+INSERT INTO `mc_session` VALUES ('d4e170fe4ec68a03db4351f165', '{\"api_id\":\"2\"}', '2019-03-30 14:24:07');
+INSERT INTO `mc_session` VALUES ('d54c83f2fc8abfded60028da6f', '{\"api_id\":\"2\"}', '2019-03-30 14:39:38');
+INSERT INTO `mc_session` VALUES ('d7bffdcf276af5d1d363141fc9', '{\"api_id\":\"2\"}', '2019-03-30 14:25:25');
+INSERT INTO `mc_session` VALUES ('d99065bd2fe1fa36c75bbaf292', '{\"api_id\":\"2\"}', '2019-03-30 14:39:26');
+INSERT INTO `mc_session` VALUES ('d9c824430e26695cc89dbb53ea', '{\"api_id\":\"2\"}', '2019-03-30 14:40:44');
+INSERT INTO `mc_session` VALUES ('da1a1f4c863b477a4db57cd6d4', '{\"api_id\":\"2\"}', '2019-03-30 14:40:06');
+INSERT INTO `mc_session` VALUES ('dcf3bc888d17024e69648bb6ee', '{\"api_id\":\"2\"}', '2019-03-30 14:48:19');
+INSERT INTO `mc_session` VALUES ('dcfdcabd5c90abfa03d92864e8', '{\"api_id\":\"2\"}', '2019-03-30 14:24:43');
+INSERT INTO `mc_session` VALUES ('e28f404e34c34a3e6d4636a109', '{\"api_id\":\"2\"}', '2019-03-30 14:26:01');
+INSERT INTO `mc_session` VALUES ('e46ccb6afe6fe0464aca5e57ee', '{\"api_id\":\"2\"}', '2019-03-30 14:23:44');
+INSERT INTO `mc_session` VALUES ('e522eee958a253c40118040500', '{\"api_id\":\"2\"}', '2019-03-30 14:39:13');
+INSERT INTO `mc_session` VALUES ('e6fbfe0b00c1ab24d42ff3560f', '{\"api_id\":\"2\"}', '2019-03-26 15:14:50');
+INSERT INTO `mc_session` VALUES ('e7834516cd724bbc4051d37f0a', '{\"api_id\":\"2\"}', '2019-03-30 14:25:57');
+INSERT INTO `mc_session` VALUES ('ece5e070c8a33c622d73b7938b', '{\"api_id\":\"2\"}', '2019-03-30 14:39:09');
+INSERT INTO `mc_session` VALUES ('edaec0c39288a14936301d75ab', '{\"api_id\":\"2\"}', '2019-03-30 14:40:28');
+INSERT INTO `mc_session` VALUES ('f2269dc640b1ac5a8f5346beb3', '{\"api_id\":\"2\"}', '2019-03-30 14:46:46');
+INSERT INTO `mc_session` VALUES ('ff4034afe8719115d6395df18a', '{\"api_id\":\"2\"}', '2019-03-29 14:47:36');
 
 -- ----------------------------
 -- Table structure for mc_setting
@@ -8134,35 +11536,37 @@ CREATE TABLE `mc_setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5029 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7770 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_setting
 -- ----------------------------
-INSERT INTO `mc_setting` VALUES ('5019', '0', 'config', 'config_file_max_size', '300000', '0');
-INSERT INTO `mc_setting` VALUES ('5020', '0', 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', '0');
-INSERT INTO `mc_setting` VALUES ('5021', '0', 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', '0');
-INSERT INTO `mc_setting` VALUES ('5003', '0', 'config', 'config_mail_parameter', '', '0');
-INSERT INTO `mc_setting` VALUES ('5004', '0', 'config', 'config_mail_smtp_hostname', '', '0');
-INSERT INTO `mc_setting` VALUES ('5005', '0', 'config', 'config_mail_smtp_username', '', '0');
-INSERT INTO `mc_setting` VALUES ('5006', '0', 'config', 'config_mail_smtp_password', '', '0');
-INSERT INTO `mc_setting` VALUES ('5007', '0', 'config', 'config_mail_smtp_port', '25', '0');
-INSERT INTO `mc_setting` VALUES ('5008', '0', 'config', 'config_mail_smtp_timeout', '5', '0');
-INSERT INTO `mc_setting` VALUES ('5009', '0', 'config', 'config_mail_alert', '[\"account\",\"affiliate\",\"order\",\"review\"]', '1');
-INSERT INTO `mc_setting` VALUES ('5010', '0', 'config', 'config_mail_alert_email', '', '0');
-INSERT INTO `mc_setting` VALUES ('5011', '0', 'config', 'config_maintenance', '0', '0');
-INSERT INTO `mc_setting` VALUES ('5012', '0', 'config', 'config_seo_url', '0', '0');
-INSERT INTO `mc_setting` VALUES ('5013', '0', 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', '0');
-INSERT INTO `mc_setting` VALUES ('5027', '0', 'config', 'config_encryption', 'vzA9ibUbFOaS4rnBQKDJ7GjHYlJ3kCBEF4aPlPrQ3mF9NzgfcEbVl47zJtFIO9p3YRHCluN6XJWdkZPcqnu5ukevJ25JJK4Mvyw054ns09lraWoFggk66bLlDkIyOq4TN1BxjMVD8gFOTiiTvokyKZ7NRk3G5lTU1uXDjO4Gu3NJIgsz6mtzyOEXQFp7q6QGfMtlT5OW1l2tITe6LK6vmLdM6Yy6XHt5Kzy0uar9E8Yf1RjbDwUGzrJtco2K29Pcbi6UzFkaepOqnnbIOovfxlRnkMlzBSOEspeJbYvV9JgrF9Qioil4RonkahkR5CgAXz0OGY9TxYpe6HIVnOghFfnsPnQy0LruFdTmb6rzcHMlfFv0HJqDHteJgvW8EeTUvaWKFZck7pM0xv3DkTTZII27oZigG6aJaC0erzMBnRmU5OtwTH6Jb85QTRNoj7o9jeSOivNTRgAuMEHL4QSCwImkacl8THOHeaHPdY72NPdBNWjjBDIJUAg0mCqf5qi2SjCEmYcMVikLRv1DkYPG3NGFRwL8ItROpSNq5dUkqstLn5WQXUzFK9ztdFUrQap3uM07JFG55drNWmqqfQgEhf5t4QLS8hPBu2T2Rz8RXpbpqb8gEKMElq4doOewR1nBIdOiVU9IvUdUWGY28fdicNp4LRl8wdRSwMkb1R29A97YCapN9BFKMmPTmOu4AUKpkGUUchC0JcjTUbCpJvIgKePZuIqIo9FwnRvI2XiGrCZhofrj2koq57eN8p6yp6uSnb4BYKVHLbSP3fRiJt5pKeQQaSPhuBqFAbq9d48HNPN97gGhITI8vbxJxtAyPtFS6uFvuRAA8Y9s0dOVSVnyyEjFNm8zFLp1YBAWeKZ7TYAaKYCq0su8aogGqExFnHhj27aC3QevI0spT5Et5FHMIFG25wNjzsy41L2eMLoehUKcVCnB2I9IPjr3un6pNkGILGzBuzVfQu28honTbsB91fDfJYKse7YICgdopuct2Ar3nyxWEIHjKdVws2znNPTD', '0');
-INSERT INTO `mc_setting` VALUES ('5014', '0', 'config', 'config_compression', '0', '0');
-INSERT INTO `mc_setting` VALUES ('5015', '0', 'config', 'config_secure', '0', '0');
-INSERT INTO `mc_setting` VALUES ('5016', '0', 'config', 'config_password', '1', '0');
-INSERT INTO `mc_setting` VALUES ('5017', '0', 'config', 'config_shared', '0', '0');
-INSERT INTO `mc_setting` VALUES ('5002', '0', 'config', 'config_mail_engine', 'mail', '0');
-INSERT INTO `mc_setting` VALUES ('5000', '0', 'config', 'config_logo', 'catalog/logo.png', '0');
-INSERT INTO `mc_setting` VALUES ('5001', '0', 'config', 'config_icon', 'catalog/cart.png', '0');
-INSERT INTO `mc_setting` VALUES ('4999', '0', 'config', 'config_limit_autocomplete', '50', '0');
-INSERT INTO `mc_setting` VALUES ('4998', '0', 'config', 'config_sms_page', '[\"register\",\"edit_account\",\"order_admin\",\"order_customer\"]', '1');
+INSERT INTO `mc_setting` VALUES ('7753', '0', 'shipping_feiying', 'shipping_feiying_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7750', '0', 'shipping_feiying', 'shipping_feiying_cost', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7749', '0', 'shipping_jd', 'shipping_jd_sort_order', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7748', '0', 'shipping_jd', 'shipping_jd_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7747', '0', 'shipping_jd', 'shipping_jd_geo_zone_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7468', '0', 'module_filter', 'module_filter_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7745', '0', 'shipping_jd', 'shipping_jd_cost', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7746', '0', 'shipping_jd', 'shipping_jd_tax_class_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('6148', '0', 'developer', 'developer_sass', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6381', '0', 'cms_blog', 'cms_blog_show_comment_counter', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7733', '0', 'config', 'config_compression', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7734', '0', 'config', 'config_secure', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7735', '0', 'config', 'config_password', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7736', '0', 'config', 'config_shared', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7737', '0', 'config', 'config_encryption', '9ah3DskiCOcZFmbSEPlojIz3DYaLfKmZxVrxFgdKqfFZXJT0LwTY86kpRsife9K70jAcbc23zdXNU0uBW218msK8OP4QdyNo0vj3bUsXAJY5CALL55dYgrp3TvYugHPTFJ5TiNLDAf10yfJtCH7X70Hf4hWqMMJlvRIOVB3yaUmzy40g9vkw5MBaChMFPP9HkYGKKbTyv2SodPUPu1VFZ3O60H9zcUjzojl059KIG1zcvMBsQ7DHLwoN20YfY2RQa4VZ7tJ4sQXoY2XGBuLtVL5or1AraGT2aDOyqswgWloDt0CBaFw1Kqlj9ELtO34gLcIhUt52wPLUoBZn9m08pqIrSGngz6o6SewhYzqvVsHOWoqumZ00WhvhP55oep6WObgMCGWgRWAPRoCv905YDwDHT5LcGbVihXkGC3Lfg2Iol9YvD9AWDH5hKBD92e0nnNH4q4eLMaBDARN7LMKnhWLcEyveFN8PJEgoBylasyWkXEO35Ej6osw4SmGLPBFJT8NO0to6FQLlxcQne4i6mbHtbwcVeI7kGAjvjoFVkZYqdZA2a130nSpWdUTh4KzCZv5NLHJwPrsdJAiaNyAbxyn0P8FHK7FluW0UROJoUZegCaJj8JiuI0mJF3nJhFHConAWzVp6HVE90CjCOm44OnYjcZxcyEToCIxaEPJpGUhnJecgSz5BzzhKX761RowfHN8xPNBlZodp6xYU4oQnlPOD1eomNi5IR6lOR6jNzI6XAfWToPswOLCQvW2sEmoxVtTrRoH9bCdmoOncVrP4IYNbSoLg61cRmw5ljZltbH9Y2fJcEnzhbKWsYOYQKNCTLl4HmVwEH46xSCMbcsbciAL2Jzdt5wrqc20zYgjook6oyEqjThESGiGIbdkN4yxLYzYjcNx3WspTLlsVx5rQTgQnarNy5LPB81IofTnsU23HX2cztbneQBiJHxanmME2igBTIgPtAm5ZTMV6SPb5eG3uW0di5v62To8XwKlEGKkAG7HWfdMTVtyf7D1ZdbyX', '0');
+INSERT INTO `mc_setting` VALUES ('7744', '0', 'config', 'config_baidu_api', '', '0');
+INSERT INTO `mc_setting` VALUES ('7743', '0', 'config', 'config_error_filename', 'error.log', '0');
+INSERT INTO `mc_setting` VALUES ('7738', '0', 'config', 'config_file_max_size', '300000', '0');
+INSERT INTO `mc_setting` VALUES ('7739', '0', 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', '0');
+INSERT INTO `mc_setting` VALUES ('7740', '0', 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', '0');
+INSERT INTO `mc_setting` VALUES ('7741', '0', 'config', 'config_error_display', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7742', '0', 'config', 'config_error_log', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7729', '0', 'config', 'config_mail_alert_email', '', '0');
+INSERT INTO `mc_setting` VALUES ('7730', '0', 'config', 'config_maintenance', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7731', '0', 'config', 'config_seo_url', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7732', '0', 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', '0');
 INSERT INTO `mc_setting` VALUES ('670', '0', 'voucher', 'voucher_sort_order', '8', '0');
 INSERT INTO `mc_setting` VALUES ('669', '0', 'voucher', 'voucher_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('95', '0', 'free_checkout', 'free_checkout_status', '1', '0');
@@ -8217,111 +11621,87 @@ INSERT INTO `mc_setting` VALUES ('648', '0', 'theme_default', 'theme_default_pro
 INSERT INTO `mc_setting` VALUES ('647', '0', 'theme_default', 'theme_default_product_limit', '15', '0');
 INSERT INTO `mc_setting` VALUES ('646', '0', 'theme_default', 'theme_default_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('645', '0', 'theme_default', 'theme_default_directory', 'default', '0');
-INSERT INTO `mc_setting` VALUES ('636', '0', 'dashboard_activity', 'dashboard_activity_sort_order', '7', '0');
-INSERT INTO `mc_setting` VALUES ('635', '0', 'dashboard_activity', 'dashboard_activity_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6396', '0', 'dashboard_activity', 'dashboard_activity_sort_order', '7', '0');
+INSERT INTO `mc_setting` VALUES ('6395', '0', 'dashboard_activity', 'dashboard_activity_status', '0', '0');
 INSERT INTO `mc_setting` VALUES ('152', '0', 'dashboard_sale', 'dashboard_sale_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('153', '0', 'dashboard_sale', 'dashboard_sale_width', '3', '0');
 INSERT INTO `mc_setting` VALUES ('154', '0', 'dashboard_chart', 'dashboard_chart_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('155', '0', 'dashboard_chart', 'dashboard_chart_width', '6', '0');
-INSERT INTO `mc_setting` VALUES ('156', '0', 'dashboard_customer', 'dashboard_customer_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('157', '0', 'dashboard_customer', 'dashboard_customer_width', '3', '0');
-INSERT INTO `mc_setting` VALUES ('158', '0', 'dashboard_map', 'dashboard_map_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('159', '0', 'dashboard_map', 'dashboard_map_width', '6', '0');
+INSERT INTO `mc_setting` VALUES ('6393', '0', 'dashboard_customer', 'dashboard_customer_sort_order', '3', '0');
+INSERT INTO `mc_setting` VALUES ('6392', '0', 'dashboard_customer', 'dashboard_customer_status', '0', '0');
+INSERT INTO `mc_setting` VALUES ('6338', '0', 'dashboard_map', 'dashboard_map_sort_order', '5', '0');
+INSERT INTO `mc_setting` VALUES ('6337', '0', 'dashboard_map', 'dashboard_map_status', '0', '0');
 INSERT INTO `mc_setting` VALUES ('160', '0', 'dashboard_online', 'dashboard_online_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('161', '0', 'dashboard_online', 'dashboard_online_width', '3', '0');
 INSERT INTO `mc_setting` VALUES ('162', '0', 'dashboard_order', 'dashboard_order_sort_order', '1', '0');
 INSERT INTO `mc_setting` VALUES ('163', '0', 'dashboard_order', 'dashboard_order_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('164', '0', 'dashboard_order', 'dashboard_order_width', '3', '0');
 INSERT INTO `mc_setting` VALUES ('165', '0', 'dashboard_sale', 'dashboard_sale_sort_order', '2', '0');
-INSERT INTO `mc_setting` VALUES ('166', '0', 'dashboard_customer', 'dashboard_customer_sort_order', '3', '0');
+INSERT INTO `mc_setting` VALUES ('6391', '0', 'dashboard_customer', 'dashboard_customer_width', '3', '0');
 INSERT INTO `mc_setting` VALUES ('167', '0', 'dashboard_online', 'dashboard_online_sort_order', '4', '0');
-INSERT INTO `mc_setting` VALUES ('168', '0', 'dashboard_map', 'dashboard_map_sort_order', '5', '0');
+INSERT INTO `mc_setting` VALUES ('6336', '0', 'dashboard_map', 'dashboard_map_width', '6', '0');
 INSERT INTO `mc_setting` VALUES ('169', '0', 'dashboard_chart', 'dashboard_chart_sort_order', '6', '0');
 INSERT INTO `mc_setting` VALUES ('170', '0', 'dashboard_recent', 'dashboard_recent_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('171', '0', 'dashboard_recent', 'dashboard_recent_sort_order', '8', '0');
-INSERT INTO `mc_setting` VALUES ('634', '0', 'dashboard_activity', 'dashboard_activity_width', '4', '0');
+INSERT INTO `mc_setting` VALUES ('6394', '0', 'dashboard_activity', 'dashboard_activity_width', '4', '0');
 INSERT INTO `mc_setting` VALUES ('173', '0', 'dashboard_recent', 'dashboard_recent_width', '8', '0');
 INSERT INTO `mc_setting` VALUES ('633', '0', 'basic_captcha', 'basic_captcha_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('668', '0', 'theme_default', 'theme_default_image_location_height', '50', '0');
 INSERT INTO `mc_setting` VALUES ('667', '0', 'theme_default', 'theme_default_image_location_width', '268', '0');
 INSERT INTO `mc_setting` VALUES ('666', '0', 'theme_default', 'theme_default_image_cart_height', '47', '0');
-INSERT INTO `mc_setting` VALUES ('4997', '0', 'config', 'config_sms', 'chuanglan', '0');
-INSERT INTO `mc_setting` VALUES ('4996', '0', 'config', 'config_captcha_page', '[\"register\",\"guest\",\"review\",\"return\",\"contact\"]', '1');
-INSERT INTO `mc_setting` VALUES ('4994', '0', 'config', 'config_return_status_id', '2', '0');
-INSERT INTO `mc_setting` VALUES ('4995', '0', 'config', 'config_captcha', 'basic', '0');
-INSERT INTO `mc_setting` VALUES ('4993', '0', 'config', 'config_return_id', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4992', '0', 'config', 'config_affiliate_id', '4', '0');
-INSERT INTO `mc_setting` VALUES ('4991', '0', 'config', 'config_affiliate_commission', '5', '0');
-INSERT INTO `mc_setting` VALUES ('4990', '0', 'config', 'config_affiliate_auto', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4989', '0', 'config', 'config_affiliate_approval', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4988', '0', 'config', 'config_affiliate_group_id', '2', '0');
-INSERT INTO `mc_setting` VALUES ('4987', '0', 'config', 'config_stock_checkout', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4985', '0', 'config', 'config_stock_display', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4986', '0', 'config', 'config_stock_warning', '0', '0');
-INSERT INTO `mc_setting` VALUES ('5028', '0', 'config', 'config_api_id', '2', '0');
-INSERT INTO `mc_setting` VALUES ('4983', '0', 'config', 'config_fraud_status_id', '7', '0');
-INSERT INTO `mc_setting` VALUES ('4727', '0', 'cms_press', 'cms_press_items_per_page', '20', '0');
-INSERT INTO `mc_setting` VALUES ('4726', '0', 'cms_press', 'cms_press_brief_length', '200', '0');
-INSERT INTO `mc_setting` VALUES ('4762', '0', 'cms_blog', 'cms_blog_show_blog_related', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4761', '0', 'cms_blog', 'cms_blog_product_related_per_row', '3', '0');
-INSERT INTO `mc_setting` VALUES ('4760', '0', 'cms_blog', 'cms_blog_product_scroll_related', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4759', '0', 'cms_blog', 'cms_blog_show_product_related', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4758', '0', 'cms_blog', 'cms_blog_show_category', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4757', '0', 'cms_blog', 'cms_blog_show_author', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4756', '0', 'cms_blog', 'cms_blog_show_image', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4755', '0', 'cms_blog', 'cms_blog_show_title', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4754', '0', 'cms_blog', 'cms_blog_image_type', 'l', '0');
-INSERT INTO `mc_setting` VALUES ('4753', '0', 'cms_blog', 'cms_blog_category_page_show_comment_counter', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4752', '0', 'cms_blog', 'cms_blog_category_page_show_hits', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4751', '0', 'cms_blog', 'cms_blog_category_page_show_created_date', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4750', '0', 'cms_blog', 'cms_blog_category_page_show_category', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4749', '0', 'cms_blog', 'cms_blog_category_page_show_author', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4748', '0', 'cms_blog', 'cms_blog_category_page_show_image', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4747', '0', 'cms_blog', 'cms_blog_category_page_show_readmore', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4746', '0', 'cms_blog', 'cms_blog_category_page_show_brief', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4745', '0', 'cms_blog', 'cms_blog_category_page_show_title', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4744', '0', 'cms_blog', 'cms_blog_category_columns_secondary_blogs', '  ', '0');
-INSERT INTO `mc_setting` VALUES ('4743', '0', 'cms_blog', 'cms_blog_category_columns_leading_blog', '  ', '0');
-INSERT INTO `mc_setting` VALUES ('4742', '0', 'cms_blog', 'cms_blog_category_secondary_image_type', 's', '0');
+INSERT INTO `mc_setting` VALUES ('7726', '0', 'config', 'config_mail_smtp_port', '25', '0');
+INSERT INTO `mc_setting` VALUES ('7727', '0', 'config', 'config_mail_smtp_timeout', '5', '0');
+INSERT INTO `mc_setting` VALUES ('6379', '0', 'cms_blog', 'cms_blog_show_created_date', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6378', '0', 'cms_blog', 'cms_blog_article_related_per_row', '6', '0');
+INSERT INTO `mc_setting` VALUES ('6377', '0', 'cms_blog', 'cms_blog_article_scroll_related', '0', '0');
+INSERT INTO `mc_setting` VALUES ('6376', '0', 'cms_blog', 'cms_blog_show_blog_related', '0', '0');
+INSERT INTO `mc_setting` VALUES ('6375', '0', 'cms_blog', 'cms_blog_product_related_per_row', '3', '0');
+INSERT INTO `mc_setting` VALUES ('6374', '0', 'cms_blog', 'cms_blog_product_scroll_related', '0', '0');
+INSERT INTO `mc_setting` VALUES ('6373', '0', 'cms_blog', 'cms_blog_show_product_related', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6372', '0', 'cms_blog', 'cms_blog_show_category', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6371', '0', 'cms_blog', 'cms_blog_show_author', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6370', '0', 'cms_blog', 'cms_blog_show_image', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6369', '0', 'cms_blog', 'cms_blog_show_title', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6368', '0', 'cms_blog', 'cms_blog_image_type', 'l', '0');
+INSERT INTO `mc_setting` VALUES ('6367', '0', 'cms_blog', 'cms_blog_category_page_show_comment_counter', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6366', '0', 'cms_blog', 'cms_blog_category_page_show_hits', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6365', '0', 'cms_blog', 'cms_blog_category_page_show_created_date', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6364', '0', 'cms_blog', 'cms_blog_category_page_show_category', '1', '0');
 INSERT INTO `mc_setting` VALUES ('4776', '0', 'cms_faq', 'cms_faq_items_per_page', '20', '0');
 INSERT INTO `mc_setting` VALUES ('1663', '0', 'blog_search', 'blog_search_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4359', '0', 'module_blog_category', 'module_blog_category_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4741', '0', 'cms_blog', 'cms_blog_category_leading_image_type', 'l', '0');
-INSERT INTO `mc_setting` VALUES ('4740', '0', 'cms_blog', 'cms_blog_category_limit_secondary_blog', '', '0');
+INSERT INTO `mc_setting` VALUES ('6380', '0', 'cms_blog', 'cms_blog_show_hits', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6363', '0', 'cms_blog', 'cms_blog_category_page_show_author', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6362', '0', 'cms_blog', 'cms_blog_category_page_show_image', '1', '0');
 INSERT INTO `mc_setting` VALUES ('1761', '0', 'press_latest', 'press_latest_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('4357', '0', 'module_press_category', 'module_press_category_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('1763', '0', 'faq_category', 'faq_category_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4725', '0', 'cms_press', 'cms_press_description', '{\"2\":{\"title\":\"MyCnCart News\",\"meta_title\":\"MyCnCart News\",\"meta_description\":\"MyCnCart News\",\"meta_keyword\":\"MyCnCart, News\"},\"1\":{\"title\":\"MyCnCart \\u65b0\\u95fb\",\"meta_title\":\"MyCnCart \\u65b0\\u95fb\",\"meta_description\":\"MyCnCart \\u65b0\\u95fb\",\"meta_keyword\":\"MyCnCart, \\u65b0\\u95fb\"},\"3\":{\"title\":\"MyCnCart \\u65b0\\u805e\",\"meta_title\":\"MyCnCart \\u65b0\\u805e\",\"meta_description\":\"MyCnCart \\u65b0\\u805e\",\"meta_keyword\":\"MyCnCart, \\u65b0\\u805e\"}}', '1');
+INSERT INTO `mc_setting` VALUES ('6619', '0', 'cms_press', 'cms_press_description', '{\"1\":{\"title\":\"\\u4e09\\u5f69*\\u65b0\\u95fb\",\"meta_title\":\"\\u4e09\\u5f69*\\u65b0\\u95fb\",\"meta_description\":\"\\u4e09\\u5f69*\\u65b0\\u95fb\",\"meta_keyword\":\"\\u4e09\\u5f69\\uff0c\\u65b0\\u95fb\"}}', '1');
+INSERT INTO `mc_setting` VALUES ('6620', '0', 'cms_press', 'cms_press_brief_length', '200', '0');
+INSERT INTO `mc_setting` VALUES ('6621', '0', 'cms_press', 'cms_press_items_per_page', '20', '0');
+INSERT INTO `mc_setting` VALUES ('7754', '0', 'shipping_feiying', 'shipping_feiying_sort_order', '1', '0');
 INSERT INTO `mc_setting` VALUES ('4775', '0', 'cms_faq', 'cms_faq_description', '{\"2\":{\"title\":\"FAQs\",\"meta_title\":\"FAQs\",\"meta_description\":\"FAQs\",\"meta_keyword\":\"FAQs\"},\"1\":{\"title\":\"\\u5e38\\u89c1\\u95ee\\u9898\\u4e0e\\u89e3\\u7b54(FAQs)\",\"meta_title\":\"\\u5e38\\u89c1\\u95ee\\u9898\\u4e0e\\u89e3\\u7b54(FAQs)\",\"meta_description\":\"\\u5e38\\u89c1\\u95ee\\u9898\\u4e0e\\u89e3\\u7b54(FAQs)\",\"meta_keyword\":\"\\u5e38\\u89c1\\u95ee\\u9898\\u4e0e\\u89e3\\u7b54(FAQs)\"},\"3\":{\"title\":\"\\u5e38\\u898b\\u554f\\u984c\\u8207\\u89e3\\u7b54(FAQs)\",\"meta_title\":\"\\u5e38\\u898b\\u554f\\u984c\\u8207\\u89e3\\u7b54(FAQs)\",\"meta_description\":\"\\u5e38\\u898b\\u554f\\u984c\\u8207\\u89e3\\u7b54(FAQs)\",\"meta_keyword\":\"\\u5e38\\u898b\\u554f\\u984c\\u8207\\u89e3\\u7b54(FAQs)\"}}', '1');
 INSERT INTO `mc_setting` VALUES ('2571', '0', 'free', 'free_total', '0.01', '0');
 INSERT INTO `mc_setting` VALUES ('2572', '0', 'free', 'free_geo_zone_id', '0', '0');
 INSERT INTO `mc_setting` VALUES ('2573', '0', 'free', 'free_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('2574', '0', 'free', 'free_sort_order', '2', '0');
 INSERT INTO `mc_setting` VALUES ('4931', '0', 'chuanglan', 'chuanglan_password', '4sdAckaJeV39bc', '0');
-INSERT INTO `mc_setting` VALUES ('4982', '0', 'config', 'config_complete_status', '[\"5\",\"3\"]', '1');
-INSERT INTO `mc_setting` VALUES ('4981', '0', 'config', 'config_processing_status', '[\"2\",\"5\",\"3\",\"1\"]', '1');
-INSERT INTO `mc_setting` VALUES ('4980', '0', 'config', 'config_order_status_id', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4979', '0', 'config', 'config_checkout_id', '5', '0');
-INSERT INTO `mc_setting` VALUES ('4978', '0', 'config', 'config_checkout_guest', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4977', '0', 'config', 'config_cart_weight', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4976', '0', 'config', 'config_invoice_prefix', 'INV-2019-00', '0');
-INSERT INTO `mc_setting` VALUES ('4975', '0', 'config', 'config_account_id', '3', '0');
-INSERT INTO `mc_setting` VALUES ('4974', '0', 'config', 'config_login_attempts', '5', '0');
-INSERT INTO `mc_setting` VALUES ('4973', '0', 'config', 'config_customer_price', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4972', '0', 'config', 'config_customer_group_display', '[\"1\"]', '1');
-INSERT INTO `mc_setting` VALUES ('4971', '0', 'config', 'config_customer_group_id', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4970', '0', 'config', 'config_customer_search', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4969', '0', 'config', 'config_customer_activity', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4968', '0', 'config', 'config_customer_online', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4967', '0', 'config', 'config_tax_customer', '', '0');
-INSERT INTO `mc_setting` VALUES ('4966', '0', 'config', 'config_tax_default', '', '0');
-INSERT INTO `mc_setting` VALUES ('4965', '0', 'config', 'config_tax', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4964', '0', 'config', 'config_voucher_max', '1000', '0');
-INSERT INTO `mc_setting` VALUES ('4963', '0', 'config', 'config_voucher_min', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7728', '0', 'config', 'config_mail_alert', '[\"account\",\"affiliate\",\"order\"]', '1');
+INSERT INTO `mc_setting` VALUES ('7725', '0', 'config', 'config_mail_smtp_password', '', '0');
+INSERT INTO `mc_setting` VALUES ('7724', '0', 'config', 'config_mail_smtp_username', '', '0');
+INSERT INTO `mc_setting` VALUES ('7723', '0', 'config', 'config_mail_smtp_hostname', '', '0');
+INSERT INTO `mc_setting` VALUES ('7722', '0', 'config', 'config_mail_parameter', '', '0');
+INSERT INTO `mc_setting` VALUES ('7720', '0', 'config', 'config_icon', 'catalog/web/cart.png', '0');
+INSERT INTO `mc_setting` VALUES ('7721', '0', 'config', 'config_mail_engine', 'mail', '0');
+INSERT INTO `mc_setting` VALUES ('7719', '0', 'config', 'config_logo', 'catalog/web/logo_3cc.png', '0');
+INSERT INTO `mc_setting` VALUES ('7718', '0', 'config', 'config_limit_autocomplete', '30', '0');
+INSERT INTO `mc_setting` VALUES ('7717', '0', 'config', 'config_sms_page', '[\"register\",\"edit_account\",\"order_admin\",\"order_customer\"]', '1');
+INSERT INTO `mc_setting` VALUES ('7716', '0', 'config', 'config_sms', '', '0');
+INSERT INTO `mc_setting` VALUES ('7715', '0', 'config', 'config_captcha_page', '[\"register\",\"guest\",\"review\",\"return\",\"contact\"]', '1');
+INSERT INTO `mc_setting` VALUES ('7714', '0', 'config', 'config_captcha', 'basic', '0');
 INSERT INTO `mc_setting` VALUES ('3949', '0', 'shipping_flat', 'shipping_flat_cost', '5', '0');
 INSERT INTO `mc_setting` VALUES ('3950', '0', 'shipping_flat', 'shipping_flat_tax_class_id', '0', '0');
 INSERT INTO `mc_setting` VALUES ('3951', '0', 'shipping_flat', 'shipping_flat_geo_zone_id', '0', '0');
-INSERT INTO `mc_setting` VALUES ('3952', '0', 'shipping_flat', 'shipping_flat_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('3952', '0', 'shipping_flat', 'shipping_flat_status', '0', '0');
 INSERT INTO `mc_setting` VALUES ('3953', '0', 'shipping_flat', 'shipping_flat_sort_order', '', '0');
 INSERT INTO `mc_setting` VALUES ('3954', '0', 'payment_free_checkout', 'payment_free_checkout_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('3955', '0', 'payment_free_checkout', 'payment_free_checkout_sort_order', '', '0');
@@ -8330,66 +11710,55 @@ INSERT INTO `mc_setting` VALUES ('3957', '0', 'payment_cod', 'payment_cod_order_
 INSERT INTO `mc_setting` VALUES ('3958', '0', 'payment_cod', 'payment_cod_geo_zone_id', '0', '0');
 INSERT INTO `mc_setting` VALUES ('3959', '0', 'payment_cod', 'payment_cod_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('3960', '0', 'payment_cod', 'payment_cod_sort_order', '', '0');
-INSERT INTO `mc_setting` VALUES ('3961', '0', 'total_coupon', 'total_coupon_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('3962', '0', 'total_coupon', 'total_coupon_sort_order', '4', '0');
-INSERT INTO `mc_setting` VALUES ('3963', '0', 'total_credit', 'total_credit_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('3964', '0', 'total_credit', 'total_credit_sort_order', '7', '0');
+INSERT INTO `mc_setting` VALUES ('7751', '0', 'shipping_feiying', 'shipping_feiying_tax_class_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('6903', '0', 'total_credit', 'total_credit_sort_order', '2', '0');
+INSERT INTO `mc_setting` VALUES ('6902', '0', 'total_credit', 'total_credit_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('3965', '0', 'total_sub_total', 'total_sub_total_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('94', '0', 'total_sub_total', 'total_sub_total_sort_order', '1', '0');
-INSERT INTO `mc_setting` VALUES ('3966', '0', 'total_total', 'total_total_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('3967', '0', 'total_total', 'total_total_sort_order', '9', '0');
-INSERT INTO `mc_setting` VALUES ('3968', '0', 'total_shipping', 'total_shipping_estimator', '1', '0');
-INSERT INTO `mc_setting` VALUES ('3969', '0', 'total_shipping', 'total_shipping_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('3970', '0', 'total_shipping', 'total_shipping_sort_order', '3', '0');
-INSERT INTO `mc_setting` VALUES ('3971', '0', 'total_tax', 'total_tax_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('3972', '0', 'total_tax', 'total_tax_sort_order', '5', '0');
-INSERT INTO `mc_setting` VALUES ('3973', '0', 'total_voucher', 'total_voucher_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('3974', '0', 'total_voucher', 'total_voucher_sort_order', '8', '0');
-INSERT INTO `mc_setting` VALUES ('3975', '0', 'total_reward', 'total_reward_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('3976', '0', 'total_reward', 'total_reward_sort_order', '2', '0');
-INSERT INTO `mc_setting` VALUES ('4739', '0', 'cms_blog', 'cms_blog_category_limit_leading_blog', '', '0');
-INSERT INTO `mc_setting` VALUES ('4738', '0', 'cms_blog', 'cms_blog_general_cheight', '', '0');
-INSERT INTO `mc_setting` VALUES ('4737', '0', 'cms_blog', 'cms_blog_general_cwidth', '', '0');
-INSERT INTO `mc_setting` VALUES ('4736', '0', 'cms_blog', 'cms_blog_children_columns', '', '0');
-INSERT INTO `mc_setting` VALUES ('4735', '0', 'cms_blog', 'cms_blog_items_per_page', '20', '0');
-INSERT INTO `mc_setting` VALUES ('4734', '0', 'cms_blog', 'cms_blog_small_image_height', '300', '0');
-INSERT INTO `mc_setting` VALUES ('4733', '0', 'cms_blog', 'cms_blog_small_image_width', '620', '0');
+INSERT INTO `mc_setting` VALUES ('7190', '0', 'total_coupon', 'total_coupon_sort_order', '5', '0');
+INSERT INTO `mc_setting` VALUES ('6906', '0', 'total_total', 'total_total_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6907', '0', 'total_total', 'total_total_sort_order', '4', '0');
+INSERT INTO `mc_setting` VALUES ('7713', '0', 'config', 'config_return_status_id', '2', '0');
+INSERT INTO `mc_setting` VALUES ('7712', '0', 'config', 'config_return_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7711', '0', 'config', 'config_affiliate_id', '4', '0');
+INSERT INTO `mc_setting` VALUES ('7188', '0', 'total_voucher', 'total_voucher_sort_order', '3', '0');
+INSERT INTO `mc_setting` VALUES ('7187', '0', 'total_voucher', 'total_voucher_status', '0', '0');
+INSERT INTO `mc_setting` VALUES ('6361', '0', 'cms_blog', 'cms_blog_category_page_show_readmore', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6360', '0', 'cms_blog', 'cms_blog_category_page_show_brief', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6359', '0', 'cms_blog', 'cms_blog_category_page_show_title', '1', '0');
 INSERT INTO `mc_setting` VALUES ('4694', '0', 'captcha_basic', 'captcha_basic_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4962', '0', 'config', 'config_review_guest', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7710', '0', 'config', 'config_affiliate_commission', '5', '0');
 INSERT INTO `mc_setting` VALUES ('4307', '0', 'module_category', 'module_category_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4729', '0', 'cms_blog', 'cms_blog_large_image_width', '845', '0');
-INSERT INTO `mc_setting` VALUES ('4730', '0', 'cms_blog', 'cms_blog_large_image_height', '300', '0');
-INSERT INTO `mc_setting` VALUES ('4731', '0', 'cms_blog', 'cms_blog_middle_image_width', '620', '0');
-INSERT INTO `mc_setting` VALUES ('4732', '0', 'cms_blog', 'cms_blog_middle_image_height', '300', '0');
-INSERT INTO `mc_setting` VALUES ('4358', '0', 'module_faq_category', 'module_faq_category_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4360', '0', 'module_blog_search', 'module_blog_search_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6358', '0', 'cms_blog', 'cms_blog_category_columns_secondary_blogs', '  ', '0');
+INSERT INTO `mc_setting` VALUES ('6357', '0', 'cms_blog', 'cms_blog_category_columns_leading_blog', '  ', '0');
+INSERT INTO `mc_setting` VALUES ('6390', '0', 'module_faq_category', 'module_faq_category_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6335', '0', 'module_blog_search', 'module_blog_search_status', '0', '0');
 INSERT INTO `mc_setting` VALUES ('4361', '0', 'module_press_latest', 'module_press_latest_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4728', '0', 'cms_blog', 'cms_blog_description', '{\"2\":{\"title\":\"MyCnCart Blog\",\"meta_title\":\"MyCnCart Blog\",\"meta_description\":\"MyCnCart Blog\",\"meta_keyword\":\"MyCnCart, Blog\"},\"1\":{\"title\":\"MyCnCart \\u535a\\u5ba2\",\"meta_title\":\"MyCnCart \\u535a\\u5ba2\",\"meta_description\":\"MyCnCart \\u535a\\u5ba2\",\"meta_keyword\":\"MyCnCart, \\u535a\\u5ba2\"},\"3\":{\"title\":\"MyCnCart \\u535a\\u5ba2\",\"meta_title\":\"MyCnCart \\u535a\\u5ba2\",\"meta_description\":\"MyCnCart \\u535a\\u5ba2\",\"meta_keyword\":\"MyCnCart, \\u535a\\u5ba2\"}}', '1');
-INSERT INTO `mc_setting` VALUES ('4409', '0', 'module_qq_login', 'module_qq_login_appid', '101348698', '0');
-INSERT INTO `mc_setting` VALUES ('4410', '0', 'module_qq_login', 'module_qq_login_appkey', '1b711c4b7ece8135eba5288a6bbedfb5', '0');
-INSERT INTO `mc_setting` VALUES ('4411', '0', 'module_qq_login', 'module_qq_login_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4961', '0', 'config', 'config_review_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4960', '0', 'config', 'config_limit_admin', '20', '0');
-INSERT INTO `mc_setting` VALUES ('4959', '0', 'config', 'config_product_count', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4958', '0', 'config', 'config_weight_class_id', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4956', '0', 'config', 'config_currency_auto', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4957', '0', 'config', 'config_length_class_id', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4955', '0', 'config', 'config_currency', 'CNY', '0');
-INSERT INTO `mc_setting` VALUES ('4953', '0', 'config', 'config_language', 'zh-cn', '0');
-INSERT INTO `mc_setting` VALUES ('4954', '0', 'config', 'config_admin_language', 'zh-cn', '0');
-INSERT INTO `mc_setting` VALUES ('4952', '0', 'config', 'config_zone_id', '707', '0');
-INSERT INTO `mc_setting` VALUES ('4950', '0', 'config', 'config_comment', '', '0');
-INSERT INTO `mc_setting` VALUES ('4951', '0', 'config', 'config_country_id', '44', '0');
-INSERT INTO `mc_setting` VALUES ('4947', '0', 'config', 'config_fax', '', '0');
-INSERT INTO `mc_setting` VALUES ('4505', '0', 'module_weibo_login', 'module_weibo_login_appkey', '1726168132', '0');
-INSERT INTO `mc_setting` VALUES ('4506', '0', 'module_weibo_login', 'module_weibo_login_appsecret', '0b7ce985553131d49b5ee37db8df18da', '0');
-INSERT INTO `mc_setting` VALUES ('4507', '0', 'module_weibo_login', 'module_weibo_login_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4948', '0', 'config', 'config_image', '', '0');
-INSERT INTO `mc_setting` VALUES ('4949', '0', 'config', 'config_open', '', '0');
-INSERT INTO `mc_setting` VALUES ('4946', '0', 'config', 'config_sms_telephone', '18561800618', '0');
-INSERT INTO `mc_setting` VALUES ('4692', '0', 'developer', 'developer_theme', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4693', '0', 'developer', 'developer_sass', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4695', '0', 'feed_google_sitemap', 'feed_google_sitemap_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6347', '0', 'cms_blog', 'cms_blog_small_image_width', '620', '0');
+INSERT INTO `mc_setting` VALUES ('6348', '0', 'cms_blog', 'cms_blog_small_image_height', '300', '0');
+INSERT INTO `mc_setting` VALUES ('6349', '0', 'cms_blog', 'cms_blog_items_per_page', '20', '0');
+INSERT INTO `mc_setting` VALUES ('6350', '0', 'cms_blog', 'cms_blog_children_columns', '', '0');
+INSERT INTO `mc_setting` VALUES ('6351', '0', 'cms_blog', 'cms_blog_general_cwidth', '', '0');
+INSERT INTO `mc_setting` VALUES ('6352', '0', 'cms_blog', 'cms_blog_general_cheight', '', '0');
+INSERT INTO `mc_setting` VALUES ('6353', '0', 'cms_blog', 'cms_blog_category_limit_leading_blog', '', '0');
+INSERT INTO `mc_setting` VALUES ('6354', '0', 'cms_blog', 'cms_blog_category_limit_secondary_blog', '', '0');
+INSERT INTO `mc_setting` VALUES ('6355', '0', 'cms_blog', 'cms_blog_category_leading_image_type', 'l', '0');
+INSERT INTO `mc_setting` VALUES ('6356', '0', 'cms_blog', 'cms_blog_category_secondary_image_type', 's', '0');
+INSERT INTO `mc_setting` VALUES ('7752', '0', 'shipping_feiying', 'shipping_feiying_geo_zone_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7709', '0', 'config', 'config_affiliate_auto', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7708', '0', 'config', 'config_affiliate_approval', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7707', '0', 'config', 'config_affiliate_group_id', '2', '0');
+INSERT INTO `mc_setting` VALUES ('7706', '0', 'config', 'config_stock_checkout', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7705', '0', 'config', 'config_stock_warning', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7704', '0', 'config', 'config_stock_display', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7703', '0', 'config', 'config_api_id', '2', '0');
+INSERT INTO `mc_setting` VALUES ('7702', '0', 'config', 'config_fraud_status_id', '7', '0');
+INSERT INTO `mc_setting` VALUES ('7701', '0', 'config', 'config_complete_status', '[\"5\",\"3\"]', '1');
+INSERT INTO `mc_setting` VALUES ('7700', '0', 'config', 'config_processing_status', '[\"2\",\"5\",\"3\",\"1\"]', '1');
+INSERT INTO `mc_setting` VALUES ('7699', '0', 'config', 'config_order_status_id', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7698', '0', 'config', 'config_checkout_id', '5', '0');
+INSERT INTO `mc_setting` VALUES ('7697', '0', 'config', 'config_checkout_guest', '0', '0');
+INSERT INTO `mc_setting` VALUES ('6147', '0', 'developer', 'developer_theme', '1', '0');
 INSERT INTO `mc_setting` VALUES ('4696', '0', 'report_customer_activity', 'report_customer_activity_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('4697', '0', 'report_customer_activity', 'report_customer_activity_sort_order', '', '0');
 INSERT INTO `mc_setting` VALUES ('4698', '0', 'report_customer_order', 'report_customer_order_status', '1', '0');
@@ -8414,37 +11783,78 @@ INSERT INTO `mc_setting` VALUES ('4716', '0', 'report_sale_return', 'report_sale
 INSERT INTO `mc_setting` VALUES ('4717', '0', 'report_sale_return', 'report_sale_return_sort_order', '', '0');
 INSERT INTO `mc_setting` VALUES ('4718', '0', 'report_sale_shipping', 'report_sale_shipping_status', '1', '0');
 INSERT INTO `mc_setting` VALUES ('4719', '0', 'report_sale_shipping', 'report_sale_shipping_sort_order', '', '0');
-INSERT INTO `mc_setting` VALUES ('4720', '0', 'report_sale_tax', 'report_sale_tax_status', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4721', '0', 'report_sale_tax', 'report_sale_tax_sort_order', '', '0');
-INSERT INTO `mc_setting` VALUES ('4763', '0', 'cms_blog', 'cms_blog_article_scroll_related', '0', '0');
-INSERT INTO `mc_setting` VALUES ('4764', '0', 'cms_blog', 'cms_blog_article_related_per_row', '6', '0');
-INSERT INTO `mc_setting` VALUES ('4765', '0', 'cms_blog', 'cms_blog_show_created_date', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4766', '0', 'cms_blog', 'cms_blog_show_hits', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4767', '0', 'cms_blog', 'cms_blog_show_comment_counter', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4768', '0', 'cms_blog', 'cms_blog_show_comment_form', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4769', '0', 'cms_blog', 'cms_blog_show_auto_publish_comment', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4770', '0', 'cms_blog', 'cms_blog_comment_email', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4771', '0', 'cms_blog', 'cms_blog_show_recaptcha', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4772', '0', 'cms_blog', 'cms_blog_show_need_login_to_comment', '1', '0');
-INSERT INTO `mc_setting` VALUES ('4773', '0', 'cms_blog', 'cms_blog_brief_length', '200', '0');
-INSERT INTO `mc_setting` VALUES ('4774', '0', 'cms_blog', 'cms_blog_comment_length', '200', '0');
-INSERT INTO `mc_setting` VALUES ('4945', '0', 'config', 'config_telephone', '18561800618', '0');
-INSERT INTO `mc_setting` VALUES ('4943', '0', 'config', 'config_geocode', '120.191457,35.959145', '0');
-INSERT INTO `mc_setting` VALUES ('5026', '0', 'config', 'config_email', '1078619622@qq.com', '0');
-INSERT INTO `mc_setting` VALUES ('4935', '0', 'config', 'config_meta_keyword', 'MyCnCart, 我的B2C中国网店', '0');
-INSERT INTO `mc_setting` VALUES ('4936', '0', 'config', 'config_theme', 'default', '0');
-INSERT INTO `mc_setting` VALUES ('4937', '0', 'config', 'config_layout_id', '4', '0');
-INSERT INTO `mc_setting` VALUES ('4938', '0', 'config', 'config_name', '我的B2C中国网店', '0');
-INSERT INTO `mc_setting` VALUES ('4939', '0', 'config', 'config_owner', '青岛万物一体网络科技有限公司', '0');
-INSERT INTO `mc_setting` VALUES ('4940', '0', 'config', 'config_address', '中国山东省青岛市长江中路汇商国际大厦', '0');
-INSERT INTO `mc_setting` VALUES ('4941', '0', 'config', 'config_miit', '鲁ICP备16025901号', '0');
-INSERT INTO `mc_setting` VALUES ('4942', '0', 'config', 'config_map_select', 'baidu', '0');
-INSERT INTO `mc_setting` VALUES ('4934', '0', 'config', 'config_meta_description', 'MyCnCart - 我的B2C中国网店', '0');
-INSERT INTO `mc_setting` VALUES ('4933', '0', 'config', 'config_meta_title', 'MyCnCart - 我的B2C中国网店', '0');
-INSERT INTO `mc_setting` VALUES ('5022', '0', 'config', 'config_error_display', '1', '0');
-INSERT INTO `mc_setting` VALUES ('5023', '0', 'config', 'config_error_log', '1', '0');
-INSERT INTO `mc_setting` VALUES ('5024', '0', 'config', 'config_error_filename', 'error.log', '0');
-INSERT INTO `mc_setting` VALUES ('5025', '0', 'config', 'config_baidu_api', '', '0');
+INSERT INTO `mc_setting` VALUES ('7189', '0', 'total_coupon', 'total_coupon_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6346', '0', 'cms_blog', 'cms_blog_middle_image_height', '300', '0');
+INSERT INTO `mc_setting` VALUES ('6345', '0', 'cms_blog', 'cms_blog_middle_image_width', '620', '0');
+INSERT INTO `mc_setting` VALUES ('6344', '0', 'cms_blog', 'cms_blog_large_image_height', '300', '0');
+INSERT INTO `mc_setting` VALUES ('6343', '0', 'cms_blog', 'cms_blog_large_image_width', '845', '0');
+INSERT INTO `mc_setting` VALUES ('6342', '0', 'cms_blog', 'cms_blog_description', '{\"1\":{\"title\":\"MyCnCart \\u535a\\u5ba2\",\"meta_title\":\"MyCnCart \\u535a\\u5ba2\",\"meta_description\":\"MyCnCart \\u535a\\u5ba2\",\"meta_keyword\":\"MyCnCart, \\u535a\\u5ba2\"}}', '1');
+INSERT INTO `mc_setting` VALUES ('7696', '0', 'config', 'config_cart_weight', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7695', '0', 'config', 'config_invoice_prefix', 'INV2018-', '0');
+INSERT INTO `mc_setting` VALUES ('7694', '0', 'config', 'config_account_id', '3', '0');
+INSERT INTO `mc_setting` VALUES ('7693', '0', 'config', 'config_login_attempts', '5', '0');
+INSERT INTO `mc_setting` VALUES ('7692', '0', 'config', 'config_customer_price', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7691', '0', 'config', 'config_customer_group_id', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7690', '0', 'config', 'config_customer_search', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7689', '0', 'config', 'config_customer_activity', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7688', '0', 'config', 'config_customer_online', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7687', '0', 'config', 'config_tax_customer', '', '0');
+INSERT INTO `mc_setting` VALUES ('7686', '0', 'config', 'config_tax_default', '', '0');
+INSERT INTO `mc_setting` VALUES ('7685', '0', 'config', 'config_tax', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7684', '0', 'config', 'config_voucher_max', '10', '0');
+INSERT INTO `mc_setting` VALUES ('7683', '0', 'config', 'config_voucher_min', '5', '0');
+INSERT INTO `mc_setting` VALUES ('7682', '0', 'config', 'config_review_guest', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7681', '0', 'config', 'config_review_status', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7680', '0', 'config', 'config_limit_admin', '20', '0');
+INSERT INTO `mc_setting` VALUES ('7679', '0', 'config', 'config_product_count', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7678', '0', 'config', 'config_weight_class_id', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7677', '0', 'config', 'config_length_class_id', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7676', '0', 'config', 'config_currency_auto', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7675', '0', 'config', 'config_currency', 'CNY', '0');
+INSERT INTO `mc_setting` VALUES ('7674', '0', 'config', 'config_admin_language', 'zh-cn', '0');
+INSERT INTO `mc_setting` VALUES ('7673', '0', 'config', 'config_language', 'zh-cn', '0');
+INSERT INTO `mc_setting` VALUES ('7672', '0', 'config', 'config_zone_id', '695', '0');
+INSERT INTO `mc_setting` VALUES ('7671', '0', 'config', 'config_country_id', '44', '0');
+INSERT INTO `mc_setting` VALUES ('7670', '0', 'config', 'config_comment', '', '0');
+INSERT INTO `mc_setting` VALUES ('7667', '0', 'config', 'config_fax', '', '0');
+INSERT INTO `mc_setting` VALUES ('7668', '0', 'config', 'config_image', 'catalog/logo_3cc.png', '0');
+INSERT INTO `mc_setting` VALUES ('7669', '0', 'config', 'config_open', '', '0');
+INSERT INTO `mc_setting` VALUES ('7666', '0', 'config', 'config_sms_telephone', '1566062666', '0');
+INSERT INTO `mc_setting` VALUES ('7663', '0', 'config', 'config_geocode', '', '0');
+INSERT INTO `mc_setting` VALUES ('7664', '0', 'config', 'config_email', '472556417@qq.com', '0');
+INSERT INTO `mc_setting` VALUES ('7665', '0', 'config', 'config_telephone', '1566062666', '0');
+INSERT INTO `mc_setting` VALUES ('7662', '0', 'config', 'config_map_select', 'baidu', '0');
+INSERT INTO `mc_setting` VALUES ('7661', '0', 'config', 'config_miit', '豫ICP备16025901号', '0');
+INSERT INTO `mc_setting` VALUES ('7660', '0', 'config', 'config_address', '郑州市二七区兴华南街17号附1号', '0');
+INSERT INTO `mc_setting` VALUES ('7658', '0', 'config', 'config_name', '3C.SHOP - 三彩商城', '0');
+INSERT INTO `mc_setting` VALUES ('7659', '0', 'config', 'config_owner', '郑州善生网络科技有限公司', '0');
+INSERT INTO `mc_setting` VALUES ('7657', '0', 'config', 'config_layout_id', '4', '0');
+INSERT INTO `mc_setting` VALUES ('7656', '0', 'config', 'config_theme', 'default', '0');
+INSERT INTO `mc_setting` VALUES ('7655', '0', 'config', 'config_meta_keyword', '3C.SHOP, 3C商城, 商品采购,手机批发, 苹果, 华为, 电商, 在线支付', '0');
+INSERT INTO `mc_setting` VALUES ('7654', '0', 'config', 'config_meta_description', '3C.SHOP - 三彩商城', '0');
+INSERT INTO `mc_setting` VALUES ('7653', '0', 'config', 'config_meta_title', '3C.SHOP - 三彩商城', '0');
+INSERT INTO `mc_setting` VALUES ('6382', '0', 'cms_blog', 'cms_blog_show_comment_form', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6383', '0', 'cms_blog', 'cms_blog_show_auto_publish_comment', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6384', '0', 'cms_blog', 'cms_blog_comment_email', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6385', '0', 'cms_blog', 'cms_blog_show_recaptcha', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6386', '0', 'cms_blog', 'cms_blog_show_need_login_to_comment', '1', '0');
+INSERT INTO `mc_setting` VALUES ('6387', '0', 'cms_blog', 'cms_blog_brief_length', '200', '0');
+INSERT INTO `mc_setting` VALUES ('6388', '0', 'cms_blog', 'cms_blog_comment_length', '200', '0');
+INSERT INTO `mc_setting` VALUES ('7769', '0', 'shipping_zt', 'shipping_zt_sort_order', '4', '0');
+INSERT INTO `mc_setting` VALUES ('7768', '0', 'shipping_zt', 'shipping_zt_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7767', '0', 'shipping_zt', 'shipping_zt_geo_zone_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7766', '0', 'shipping_zt', 'shipping_zt_tax_class_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7765', '0', 'shipping_zt', 'shipping_zt_cost', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7764', '0', 'shipping_ccd', 'shipping_ccd_sort_order', '3', '0');
+INSERT INTO `mc_setting` VALUES ('7763', '0', 'shipping_ccd', 'shipping_ccd_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7762', '0', 'shipping_ccd', 'shipping_ccd_geo_zone_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7761', '0', 'shipping_ccd', 'shipping_ccd_tax_class_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7760', '0', 'shipping_ccd', 'shipping_ccd_cost', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7759', '0', 'shipping_sf', 'shipping_sf_sort_order', '2', '0');
+INSERT INTO `mc_setting` VALUES ('7758', '0', 'shipping_sf', 'shipping_sf_status', '1', '0');
+INSERT INTO `mc_setting` VALUES ('7757', '0', 'shipping_sf', 'shipping_sf_geo_zone_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7756', '0', 'shipping_sf', 'shipping_sf_tax_class_id', '0', '0');
+INSERT INTO `mc_setting` VALUES ('7755', '0', 'shipping_sf', 'shipping_sf_cost', '0', '0');
 
 -- ----------------------------
 -- Table structure for mc_shipping_courier
@@ -8542,7 +11952,7 @@ CREATE TABLE `mc_store` (
   `url` varchar(255) NOT NULL,
   `ssl` varchar(255) NOT NULL,
   PRIMARY KEY (`store_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_store
@@ -8637,11 +12047,13 @@ CREATE TABLE `mc_theme` (
   `code` mediumtext NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`theme_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_theme
 -- ----------------------------
+INSERT INTO `mc_theme` VALUES ('4', '0', 'default', 'information/contact', '{{ header }}\n&lt;div id=&quot;information-contact&quot; class=&quot;container&quot;&gt;\n  &lt;ul class=&quot;breadcrumb&quot;&gt;\n    {% for breadcrumb in breadcrumbs %}\n    &lt;li&gt;&lt;a href=&quot;{{ breadcrumb.href }}&quot;&gt;{{ breadcrumb.text }}&lt;/a&gt;&lt;/li&gt;\n    {% endfor %}\n  &lt;/ul&gt;\n  &lt;div class=&quot;row&quot;&gt;{{ column_left }}\n    {% if column_left and column_right %}\n    {% set class = \'col-sm-6\' %}\n    {% elseif column_left or column_right %}\n    {% set class = \'col-sm-9\' %}\n    {% else %}\n    {% set class = \'col-sm-12\' %}\n    {% endif %}\n    &lt;div id=&quot;content&quot; class=&quot;{{ class }}&quot;&gt;{{ content_top }}\n      &lt;h1&gt;{{ heading_title }}&lt;/h1&gt;\n      &lt;h3&gt;{{ text_location }}&lt;/h3&gt;\n      &lt;div class=&quot;panel panel-default&quot;&gt;\n        &lt;div class=&quot;panel-body&quot;&gt;\n          &lt;div class=&quot;row&quot;&gt;\n            {% if image %}\n            &lt;div class=&quot;col-sm-3&quot;&gt;&lt;img src=&quot;{{ image }}&quot; alt=&quot;{{ store }}&quot; title=&quot;{{ store }}&quot; class=&quot;img-thumbnail&quot; /&gt;&lt;/div&gt;\n            {% endif %}\n            &lt;div class=&quot;col-sm-3&quot;&gt;&lt;strong&gt;{{ store }}&lt;/strong&gt;&lt;br /&gt;\n              &lt;address&gt;\n              {{ address }}\n              &lt;/address&gt;\n              &lt;!--\n              {% if geocode %}\n              &lt;a href=&quot;https://maps.google.com/maps?q={{ geocode|url_encode }}&amp;hl={{ geocode_hl }}&amp;t=m&amp;z=15&quot; target=&quot;_blank&quot; class=&quot;btn btn-info&quot;&gt;&lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt; {{ button_map }}&lt;/a&gt;\n              {% endif %}\n				--&gt;\n            &lt;/div&gt;\n            &lt;div class=&quot;col-sm-3&quot;&gt;&lt;strong&gt;{{ text_telephone }}&lt;/strong&gt;&lt;br&gt;\n              {{ telephone }}&lt;br /&gt;\n              &lt;br /&gt;\n              {% if fax %}\n              &lt;strong&gt;{{ text_fax }}&lt;/strong&gt;&lt;br&gt;\n              {{ fax }}\n              {% endif %}\n            &lt;/div&gt;\n            &lt;div class=&quot;col-sm-3&quot;&gt;\n              {% if open %}\n              &lt;strong&gt;{{ text_open }}&lt;/strong&gt;&lt;br /&gt;\n              {{ open }}&lt;br /&gt;\n              &lt;br /&gt;\n              {% endif %}\n              {% if comment %}\n              &lt;strong&gt;{{ text_comment }}&lt;/strong&gt;&lt;br /&gt;\n              {{ comment }}\n              {% endif %}\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      {% if locations %}\n      &lt;h3&gt;{{ text_store }}&lt;/h3&gt;\n      &lt;div class=&quot;panel-group&quot; id=&quot;accordion&quot;&gt;\n        {% for location in locations %}\n        &lt;div class=&quot;panel panel-default&quot;&gt;\n          &lt;div class=&quot;panel-heading&quot;&gt;\n            &lt;h4 class=&quot;panel-title&quot;&gt;&lt;a href=&quot;#collapse-location{{ location.location_id }}&quot; class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot;&gt;{{ location.name }} &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;\n          &lt;/div&gt;\n          &lt;div class=&quot;panel-collapse collapse&quot; id=&quot;collapse-location{{ location.location_id }}&quot;&gt;\n            &lt;div class=&quot;panel-body&quot;&gt;\n              &lt;div class=&quot;row&quot;&gt;\n                {% if location.image %}\n                &lt;div class=&quot;col-sm-3&quot;&gt;&lt;img src=&quot;{{ location.image }}&quot; alt=&quot;{{ location.name }}&quot; title=&quot;{{ location.name }}&quot; class=&quot;img-thumbnail&quot; /&gt;&lt;/div&gt;\n                {% endif %}\n                &lt;div class=&quot;col-sm-3&quot;&gt;&lt;strong&gt;{{ location.name }}&lt;/strong&gt;&lt;br /&gt;\n                  &lt;address&gt;\n                  {{ location.address }}\n                  &lt;/address&gt;\n                  &lt;!--\n                  {% if location.geocode %}\n                  &lt;a href=&quot;https://maps.google.com/maps?q={{ location.geocode|url_encode }}&amp;hl={{ geocode_hl }}&amp;t=m&amp;z=15&quot; target=&quot;_blank&quot; class=&quot;btn btn-info&quot;&gt;&lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt; {{ button_map }}&lt;/a&gt;\n                  {% endif %}\n				  --&gt;\n                &lt;/div&gt;\n                &lt;div class=&quot;col-sm-3&quot;&gt; &lt;strong&gt;{{ text_telephone }}&lt;/strong&gt;&lt;br&gt;\n                  {{ location.telephone }}&lt;br /&gt;\n                  &lt;br /&gt;\n                  {% if location.fax %}\n                  &lt;strong&gt;{{ text_fax }}&lt;/strong&gt;&lt;br&gt;\n                  {{ location.fax }}\n                  {% endif %}\n                &lt;/div&gt;\n                &lt;div class=&quot;col-sm-3&quot;&gt;\n                  {% if location.open %}\n                  &lt;strong&gt;{{ text_open }}&lt;/strong&gt;&lt;br /&gt;\n                  {{ location.open }}&lt;br /&gt;\n                  &lt;br /&gt;\n                  {% endif %}\n                  {% if location.comment %}\n                  &lt;strong&gt;{{ text_comment }}&lt;/strong&gt;&lt;br /&gt;\n                  {{ location.comment }}\n                  {% endif %}\n                &lt;/div&gt;\n              &lt;/div&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n        {% endfor %}\n      &lt;/div&gt;\n      {% endif %}\n      &lt;form action=&quot;{{ action }}&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; class=&quot;form-horizontal&quot;&gt;\n        &lt;fieldset&gt;\n          &lt;legend&gt;{{ text_contact }}&lt;/legend&gt;\n          &lt;div class=&quot;form-group required&quot;&gt;\n            &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;input-name&quot;&gt;{{ entry_name }}&lt;/label&gt;\n            &lt;div class=&quot;col-sm-10&quot;&gt;\n              &lt;input type=&quot;text&quot; name=&quot;name&quot; value=&quot;{{ name }}&quot; id=&quot;input-name&quot; class=&quot;form-control&quot; /&gt;\n              {% if error_name %}\n              &lt;div class=&quot;text-danger&quot;&gt;{{ error_name }}&lt;/div&gt;\n              {% endif %}\n            &lt;/div&gt;\n          &lt;/div&gt;\n          &lt;div class=&quot;form-group required&quot;&gt;\n            &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;input-email&quot;&gt;{{ entry_email }}&lt;/label&gt;\n            &lt;div class=&quot;col-sm-10&quot;&gt;\n              &lt;input type=&quot;text&quot; name=&quot;email&quot; value=&quot;{{ email }}&quot; id=&quot;input-email&quot; class=&quot;form-control&quot; /&gt;\n              {% if error_email %}\n              &lt;div class=&quot;text-danger&quot;&gt;{{ error_email }}&lt;/div&gt;\n              {% endif %}\n            &lt;/div&gt;\n          &lt;/div&gt;\n          &lt;div class=&quot;form-group required&quot;&gt;\n            &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;input-enquiry&quot;&gt;{{ entry_enquiry }}&lt;/label&gt;\n            &lt;div class=&quot;col-sm-10&quot;&gt;\n              &lt;textarea name=&quot;enquiry&quot; rows=&quot;10&quot; id=&quot;input-enquiry&quot; class=&quot;form-control&quot;&gt;{{ enquiry }}&lt;/textarea&gt;\n              {% if error_enquiry %}\n              &lt;div class=&quot;text-danger&quot;&gt;{{ error_enquiry }}&lt;/div&gt;\n              {% endif %}\n            &lt;/div&gt;\n          &lt;/div&gt;\n          {{ captcha }}\n        &lt;/fieldset&gt;\n        &lt;div class=&quot;buttons&quot;&gt;\n          &lt;div class=&quot;pull-right&quot;&gt;\n            &lt;input class=&quot;btn btn-primary&quot; type=&quot;submit&quot; value=&quot;{{ button_submit }}&quot; /&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/form&gt;\n      {{ content_bottom }}&lt;/div&gt;\n    {{ column_right }}&lt;/div&gt;\n&lt;/div&gt;\n{{ footer }}\n', '2018-12-09 21:55:12');
+INSERT INTO `mc_theme` VALUES ('5', '0', 'default', 'account/account', '{{ header }}\n&lt;div id=&quot;account-account&quot; class=&quot;container&quot;&gt;\n  &lt;ul class=&quot;breadcrumb&quot;&gt;\n    {% for breadcrumb in breadcrumbs %}\n    &lt;li&gt;&lt;a href=&quot;{{ breadcrumb.href }}&quot;&gt;{{ breadcrumb.text }}&lt;/a&gt;&lt;/li&gt;\n    {% endfor %}\n  &lt;/ul&gt;\n  {% if success %}\n  &lt;div class=&quot;alert alert-success alert-dismissible&quot;&gt;&lt;i class=&quot;fa fa-check-circle&quot;&gt;&lt;/i&gt; {{ success }}&lt;/div&gt;\n  {% endif %}\n  &lt;div class=&quot;row&quot;&gt;{{ column_left }}\n    {% if column_left and column_right %}\n    {% set class = \'col-sm-6\' %}\n    {% elseif column_left or column_right %}\n    {% set class = \'col-sm-9\' %}\n    {% else %}\n    {% set class = \'col-sm-12\' %}\n    {% endif %}\n    &lt;div id=&quot;content&quot; class=&quot;{{ class }}&quot;&gt;{{ content_top }}\n      &lt;h2&gt;{{ text_my_account }}&lt;/h2&gt;\n      &lt;ul class=&quot;list-unstyled&quot;&gt;\n        &lt;li&gt;&lt;a href=&quot;{{ edit }}&quot;&gt;{{ text_edit }}&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=&quot;{{ password }}&quot;&gt;{{ text_password }}&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=&quot;{{ address }}&quot;&gt;{{ text_address }}&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=&quot;{{ wishlist }}&quot;&gt;{{ text_wishlist }}&lt;/a&gt;&lt;/li&gt;\n      &lt;/ul&gt;\n      {% if credit_cards %}\n      &lt;h2&gt;{{ text_credit_card }}&lt;/h2&gt;\n      &lt;ul class=&quot;list-unstyled&quot;&gt;\n        {% for credit_card in credit_cards %}\n        &lt;li&gt;&lt;a href=&quot;{{ credit_card.href }}&quot;&gt;{{ credit_card.name }}&lt;/a&gt;&lt;/li&gt;\n        {% endfor %}\n      &lt;/ul&gt;\n      {% endif %}\n      &lt;h2&gt;{{ text_my_orders }}&lt;/h2&gt;\n      &lt;ul class=&quot;list-unstyled&quot;&gt;\n        &lt;li&gt;&lt;a href=&quot;{{ order }}&quot;&gt;{{ text_order }}&lt;/a&gt;&lt;/li&gt;\n        {% if reward %}\n        &lt;li&gt;&lt;a href=&quot;{{ reward }}&quot;&gt;{{ text_reward }}&lt;/a&gt;&lt;/li&gt;\n        {% endif %}\n        &lt;li&gt;&lt;a href=&quot;{{ return }}&quot;&gt;{{ text_return }}&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=&quot;{{ transaction }}&quot;&gt;{{ text_transaction }}&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=&quot;{{ recurring }}&quot;&gt;{{ text_recurring }}&lt;/a&gt;&lt;/li&gt;\n      &lt;/ul&gt;\n      &lt;h2&gt;{{ text_my_affiliate }}&lt;/h2&gt;\n      &lt;ul class=&quot;list-unstyled&quot;&gt;\n        {% if not tracking %}\n        &lt;li&gt;&lt;a href=&quot;{{ affiliate }}&quot;&gt;{{ text_affiliate_add }}&lt;/a&gt;&lt;/li&gt;\n        {% else %}\n        &lt;li&gt;&lt;a href=&quot;{{ affiliate }}&quot;&gt;{{ text_affiliate_edit }}&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=&quot;{{ tracking }}&quot;&gt;{{ text_tracking }}&lt;/a&gt;&lt;/li&gt;\n        {% endif %}\n      &lt;/ul&gt;\n      &lt;h2&gt;{{ text_my_newsletter }}&lt;/h2&gt;\n      &lt;ul class=&quot;list-unstyled&quot;&gt;\n        &lt;li&gt;&lt;a href=&quot;{{ newsletter }}&quot;&gt;{{ text_newsletter }}&lt;/a&gt;&lt;/li&gt;\n      &lt;/ul&gt;\n      {{ content_bottom }}&lt;/div&gt;\n    {{ column_right }}&lt;/div&gt;\n&lt;/div&gt;\n{{ footer }}', '2018-12-09 21:59:29');
 
 -- ----------------------------
 -- Table structure for mc_translation
@@ -8698,12 +12110,13 @@ CREATE TABLE `mc_user` (
   `status` tinyint(1) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mc_user
 -- ----------------------------
-INSERT INTO `mc_user` VALUES ('1', '1', 'admin', '724c4f0c44f79f14984d1c9f207e3f06d0b3e335', '8ynqn0op8', 'AdminName', '', '1078619622@qq.com', '', '', '127.0.0.1', '1', '2019-03-26 09:27:36');
+INSERT INTO `mc_user` VALUES ('1', '1', 'admin', 'c58c3b917c02f08bd0dce5d30fb8831dab1a5843', 'jJaVULMnf', 'Admin', 'Y', '472556417@qq.com', 'catalog/mobimg/avatar_512.jpg', '', '::1', '1', '2018-10-30 13:53:32');
+INSERT INTO `mc_user` VALUES ('2', '10', 'demo', '7da7faf98b0ea5883beef9181d27d576d8069734', 'nMSpN8bz1', 'demo', '', '472556417@qq.com', '', '', '115.60.50.146', '1', '2018-12-09 07:19:54');
 
 -- ----------------------------
 -- Table structure for mc_user_group
@@ -8719,8 +12132,8 @@ CREATE TABLE `mc_user_group` (
 -- ----------------------------
 -- Records of mc_user_group
 -- ----------------------------
-INSERT INTO `mc_user_group` VALUES ('1', 'Administrator', '{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"cms\\/blog\",\"cms\\/blog_category\",\"cms\\/blog_comment\",\"cms\\/blog_config\",\"cms\\/faq\",\"cms\\/faq_category\",\"cms\\/faq_config\",\"cms\\/press\",\"cms\\/press_category\",\"cms\\/press_config\",\"common\\/column_left\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/profile\",\"common\\/security\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"event\\/language\",\"event\\/statistics\",\"event\\/theme\",\"extension\\/analytics\\/google\",\"extension\\/captcha\\/basic\",\"extension\\/captcha\\/google\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/report\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/sms\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/module\\/account\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/blog_category\",\"extension\\/module\\/blog_comment\",\"extension\\/module\\/blog_latest\",\"extension\\/module\\/blog_popular\",\"extension\\/module\\/blog_search\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/faq_category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/kefu\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_braintree_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/press_category\",\"extension\\/module\\/press_latest\",\"extension\\/module\\/qq_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/module\\/weibo_login\",\"extension\\/module\\/weixin_login\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/alipay_cross\",\"extension\\/payment\\/alipay_direct\",\"extension\\/payment\\/alipay_wap\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_braintree\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/squareup\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/wechat_pay\",\"extension\\/payment\\/worldpay\",\"extension\\/payment\\/wxpay\",\"extension\\/payment\\/wxpay_web\",\"extension\\/report\\/customer_activity\",\"extension\\/report\\/customer_order\",\"extension\\/report\\/customer_reward\",\"extension\\/report\\/customer_search\",\"extension\\/report\\/customer_transaction\",\"extension\\/report\\/marketing\",\"extension\\/report\\/product_purchased\",\"extension\\/report\\/product_viewed\",\"extension\\/report\\/sale_coupon\",\"extension\\/report\\/sale_order\",\"extension\\/report\\/sale_return\",\"extension\\/report\\/sale_shipping\",\"extension\\/report\\/sale_tax\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/ec_ship\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/sms\\/chuanglan\",\"extension\\/theme\\/default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/city\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/district\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/return\",\"mail\\/reward\",\"mail\\/transaction\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/install\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/openbay\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/excelexportimport\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/feed\\/google_base\",\"catalog\\/serie\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"cms\\/blog\",\"cms\\/blog_category\",\"cms\\/blog_comment\",\"cms\\/blog_config\",\"cms\\/faq\",\"cms\\/faq_category\",\"cms\\/faq_config\",\"cms\\/press\",\"cms\\/press_category\",\"cms\\/press_config\",\"common\\/column_left\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/profile\",\"common\\/security\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"event\\/language\",\"event\\/statistics\",\"event\\/theme\",\"extension\\/analytics\\/google\",\"extension\\/captcha\\/basic\",\"extension\\/captcha\\/google\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/report\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/sms\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/module\\/account\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/blog_category\",\"extension\\/module\\/blog_comment\",\"extension\\/module\\/blog_latest\",\"extension\\/module\\/blog_popular\",\"extension\\/module\\/blog_search\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/faq_category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/kefu\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_braintree_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/press_category\",\"extension\\/module\\/press_latest\",\"extension\\/module\\/qq_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/module\\/weibo_login\",\"extension\\/module\\/weixin_login\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/alipay_cross\",\"extension\\/payment\\/alipay_direct\",\"extension\\/payment\\/alipay_wap\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_braintree\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/squareup\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/wechat_pay\",\"extension\\/payment\\/worldpay\",\"extension\\/payment\\/wxpay\",\"extension\\/payment\\/wxpay_web\",\"extension\\/report\\/customer_activity\",\"extension\\/report\\/customer_order\",\"extension\\/report\\/customer_reward\",\"extension\\/report\\/customer_search\",\"extension\\/report\\/customer_transaction\",\"extension\\/report\\/marketing\",\"extension\\/report\\/product_purchased\",\"extension\\/report\\/product_viewed\",\"extension\\/report\\/sale_coupon\",\"extension\\/report\\/sale_order\",\"extension\\/report\\/sale_return\",\"extension\\/report\\/sale_shipping\",\"extension\\/report\\/sale_tax\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/ec_ship\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/sms\\/chuanglan\",\"extension\\/theme\\/default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/city\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/district\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/return\",\"mail\\/reward\",\"mail\\/transaction\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/install\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/openbay\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/excelexportimport\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/feed\\/google_base\",\"catalog\\/serie\"]}');
-INSERT INTO `mc_user_group` VALUES ('10', 'Demonstration', '');
+INSERT INTO `mc_user_group` VALUES ('1', 'Admin/管理员', '{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/serie\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"cms\\/blog\",\"cms\\/blog_category\",\"cms\\/blog_comment\",\"cms\\/blog_config\",\"cms\\/faq\",\"cms\\/faq_category\",\"cms\\/faq_config\",\"cms\\/press\",\"cms\\/press_category\",\"cms\\/press_config\",\"common\\/column_left\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/profile\",\"common\\/security\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"event\\/language\",\"event\\/statistics\",\"event\\/theme\",\"extension\\/analytics\\/google\",\"extension\\/captcha\\/basic\",\"extension\\/captcha\\/google\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/report\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/sms\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/module\\/account\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/blog_category\",\"extension\\/module\\/blog_comment\",\"extension\\/module\\/blog_latest\",\"extension\\/module\\/blog_popular\",\"extension\\/module\\/blog_search\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/faq_category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/kefu\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_braintree_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/press_category\",\"extension\\/module\\/press_latest\",\"extension\\/module\\/qq_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/module\\/weibo_login\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/alipay_cross\",\"extension\\/payment\\/alipay_direct\",\"extension\\/payment\\/alipay_wap\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_braintree\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/squareup\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/worldpay\",\"extension\\/payment\\/wxpay\",\"extension\\/payment\\/wxpay_web\",\"extension\\/report\\/customer_activity\",\"extension\\/report\\/customer_order\",\"extension\\/report\\/customer_reward\",\"extension\\/report\\/customer_search\",\"extension\\/report\\/customer_transaction\",\"extension\\/report\\/marketing\",\"extension\\/report\\/product_purchased\",\"extension\\/report\\/product_viewed\",\"extension\\/report\\/sale_coupon\",\"extension\\/report\\/sale_order\",\"extension\\/report\\/sale_return\",\"extension\\/report\\/sale_shipping\",\"extension\\/report\\/sale_tax\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/ec_ship\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/sms\\/chuanglan\",\"extension\\/theme\\/default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/city\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/district\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/return\",\"mail\\/reward\",\"mail\\/transaction\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/install\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/openbay\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/excelexportimport\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/module\\/filter\",\"extension\\/payment\\/alipay_cross\",\"extension\\/total\\/tax\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/total\\/coupon\",\"extension\\/total\\/reward\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/free\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/serie\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"cms\\/blog\",\"cms\\/blog_category\",\"cms\\/blog_comment\",\"cms\\/blog_config\",\"cms\\/faq\",\"cms\\/faq_category\",\"cms\\/faq_config\",\"cms\\/press\",\"cms\\/press_category\",\"cms\\/press_config\",\"common\\/column_left\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/profile\",\"common\\/security\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"event\\/language\",\"event\\/statistics\",\"event\\/theme\",\"extension\\/analytics\\/google\",\"extension\\/captcha\\/basic\",\"extension\\/captcha\\/google\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/report\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/sms\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/module\\/account\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/blog_category\",\"extension\\/module\\/blog_comment\",\"extension\\/module\\/blog_latest\",\"extension\\/module\\/blog_popular\",\"extension\\/module\\/blog_search\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/faq_category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/kefu\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_braintree_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/press_category\",\"extension\\/module\\/press_latest\",\"extension\\/module\\/qq_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/module\\/weibo_login\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/alipay_cross\",\"extension\\/payment\\/alipay_direct\",\"extension\\/payment\\/alipay_wap\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_braintree\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/squareup\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/worldpay\",\"extension\\/payment\\/wxpay\",\"extension\\/payment\\/wxpay_web\",\"extension\\/report\\/customer_activity\",\"extension\\/report\\/customer_order\",\"extension\\/report\\/customer_reward\",\"extension\\/report\\/customer_search\",\"extension\\/report\\/customer_transaction\",\"extension\\/report\\/marketing\",\"extension\\/report\\/product_purchased\",\"extension\\/report\\/product_viewed\",\"extension\\/report\\/sale_coupon\",\"extension\\/report\\/sale_order\",\"extension\\/report\\/sale_return\",\"extension\\/report\\/sale_shipping\",\"extension\\/report\\/sale_tax\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/ec_ship\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/sms\\/chuanglan\",\"extension\\/theme\\/default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/city\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/district\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/return\",\"mail\\/reward\",\"mail\\/transaction\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/install\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/openbay\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/excelexportimport\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/module\\/filter\",\"extension\\/payment\\/alipay_cross\",\"extension\\/total\\/tax\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/total\\/coupon\",\"extension\\/total\\/reward\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/free\"]}');
+INSERT INTO `mc_user_group` VALUES ('10', 'Demo/测试', '{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"cms\\/blog\",\"cms\\/blog_category\",\"cms\\/blog_comment\",\"cms\\/blog_config\",\"cms\\/faq\",\"cms\\/faq_category\",\"cms\\/faq_config\",\"cms\\/press\",\"cms\\/press_category\",\"cms\\/press_config\",\"common\\/column_left\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/profile\",\"common\\/security\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"event\\/language\",\"event\\/statistics\",\"event\\/theme\",\"extension\\/analytics\\/google\",\"extension\\/captcha\\/basic\",\"extension\\/captcha\\/google\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/report\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/sms\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/module\\/account\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/blog_category\",\"extension\\/module\\/blog_comment\",\"extension\\/module\\/blog_latest\",\"extension\\/module\\/blog_popular\",\"extension\\/module\\/blog_search\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/faq_category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/kefu\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_braintree_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/press_category\",\"extension\\/module\\/press_latest\",\"extension\\/module\\/qq_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/module\\/weibo_login\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/alipay_cross\",\"extension\\/payment\\/alipay_direct\",\"extension\\/payment\\/alipay_wap\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_braintree\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/qrcode_wxpay\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/squareup\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/worldpay\",\"extension\\/payment\\/wxpay\",\"extension\\/payment\\/wxpay_web\",\"extension\\/report\\/customer_activity\",\"extension\\/report\\/customer_order\",\"extension\\/report\\/customer_reward\",\"extension\\/report\\/customer_search\",\"extension\\/report\\/customer_transaction\",\"extension\\/report\\/marketing\",\"extension\\/report\\/product_purchased\",\"extension\\/report\\/product_viewed\",\"extension\\/report\\/sale_coupon\",\"extension\\/report\\/sale_order\",\"extension\\/report\\/sale_return\",\"extension\\/report\\/sale_shipping\",\"extension\\/report\\/sale_tax\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/ec_ship\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/sms\\/chuanglan\",\"extension\\/theme\\/default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/city\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/district\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/return\",\"mail\\/reward\",\"mail\\/transaction\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/install\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/openbay\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/excelexportimport\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\"]}');
 
 -- ----------------------------
 -- Table structure for mc_voucher
@@ -8819,8 +12232,6 @@ CREATE TABLE `mc_weight_class` (
 -- ----------------------------
 INSERT INTO `mc_weight_class` VALUES ('1', '1.00000000');
 INSERT INTO `mc_weight_class` VALUES ('2', '1000.00000000');
-INSERT INTO `mc_weight_class` VALUES ('5', '2.20460000');
-INSERT INTO `mc_weight_class` VALUES ('6', '35.27400000');
 
 -- ----------------------------
 -- Table structure for mc_weight_class_description
@@ -8839,16 +12250,10 @@ CREATE TABLE `mc_weight_class_description` (
 -- ----------------------------
 INSERT INTO `mc_weight_class_description` VALUES ('1', '3', '公斤', 'kg');
 INSERT INTO `mc_weight_class_description` VALUES ('2', '3', '克', 'g');
-INSERT INTO `mc_weight_class_description` VALUES ('6', '3', '盎司', 'oz');
 INSERT INTO `mc_weight_class_description` VALUES ('1', '2', 'Kilogram', 'kg');
 INSERT INTO `mc_weight_class_description` VALUES ('2', '2', 'Gram', 'g');
-INSERT INTO `mc_weight_class_description` VALUES ('5', '2', 'Pound', 'lb');
-INSERT INTO `mc_weight_class_description` VALUES ('6', '2', 'Ounce', 'oz');
 INSERT INTO `mc_weight_class_description` VALUES ('1', '1', '公斤', 'kg');
 INSERT INTO `mc_weight_class_description` VALUES ('2', '1', '克', 'g');
-INSERT INTO `mc_weight_class_description` VALUES ('5', '1', '磅', 'lb');
-INSERT INTO `mc_weight_class_description` VALUES ('6', '1', '盎司', 'oz');
-INSERT INTO `mc_weight_class_description` VALUES ('5', '3', '磅', 'lb');
 
 -- ----------------------------
 -- Table structure for mc_zone

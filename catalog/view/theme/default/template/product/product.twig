@@ -2,13 +2,13 @@
 <div id="product-product" class="container">
   <div class="filter mb0 indexpictop">
     <dl>
-      <dt>品牌</dt>
+      <dt>系列</dt>
       <dd class="search-brand">
         <div class="brand-list">
           <div class="text-item ppmore text-h25" total="">
-            {% for category in categories %}
-            <a href="{{ category.href }}" title="{{ category.name }}" data-stype="brand" class="">
-              <em>{{ category.name }}</em>
+            {% for serie in series %}
+            <a href="{{ serie.href }}" title="{{ serie.name }}" data-stype="brand" class="">
+              <em>{{ serie.name }}</em>
             </a>
             {% endfor %}
           </div>

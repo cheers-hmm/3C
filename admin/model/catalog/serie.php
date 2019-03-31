@@ -1,6 +1,7 @@
 <?php
 class ModelCatalogSerie extends Model {
 	public function addSerie($data) {
+		// echo $data;
 		$this->db->query("INSERT INTO " . DB_PREFIX . "serie SET parent_id = '" . (int)$data['parent_id'] . "', `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "', `column` = '" . (int)$data['column'] . "', sort_order = '" . (int)$data['sort_order'] . "', status = '" . (int)$data['status'] . "', date_modified = NOW(), date_added = NOW()");
 
 		$serie_id = $this->db->getLastId();

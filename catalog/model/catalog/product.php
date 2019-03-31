@@ -152,7 +152,9 @@ class ModelCatalogProduct extends Model {
 		if (!empty($data['filter_manufacturer_id'])) {
 			$sql .= " AND p.manufacturer_id = '" . (int)$data['filter_manufacturer_id'] . "'";
 		}
-
+		if($data['serie_id']>0){
+			$sql .=" and pd.serie_id=".$data['serie_id'];
+		}
 		$sql .= " GROUP BY p.product_id";
 
 		$sort_data = array(
@@ -415,7 +417,6 @@ class ModelCatalogProduct extends Model {
 
 	public function getTotalProducts($data = array()) {
 		$sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
-
 		if (!empty($data['filter_category_id'])) {
 			if (!empty($data['filter_sub_category'])) {
 				$sql .= " FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (cp.category_id = p2c.category_id)";
@@ -509,7 +510,11 @@ class ModelCatalogProduct extends Model {
 		if (!empty($data['filter_manufacturer_id'])) {
 			$sql .= " AND p.manufacturer_id = '" . (int)$data['filter_manufacturer_id'] . "'";
 		}
-
+		// var_dump($data['serie_id']) ;
+		// print_r($data);
+		if((int)$data['serie_id']>0){
+			$sql .=" and pd.serie_id=".$data['serie_id'];
+		}
 		$query = $this->db->query($sql);
 
 		return $query->row['total'];

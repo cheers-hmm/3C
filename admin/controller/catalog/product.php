@@ -8,7 +8,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('catalog/product');
-
+		// echo 111;
 		$this->getList();
 	}
 
@@ -18,7 +18,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('catalog/product');
-
+		// print_r($this->request);
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_catalog_product->addProduct($this->request->post);
 
@@ -249,6 +249,7 @@ class ControllerCatalogProduct extends Controller {
 	}
 
 	protected function getList() {
+		// print_r($this->request);
 		if (isset($this->request->get['filter_name'])) {
 			$filter_name = $this->request->get['filter_name'];
 		} else {
@@ -614,7 +615,7 @@ class ControllerCatalogProduct extends Controller {
 			'text' => $this->language->get('heading_title'),
 			'href' => $this->url->link('catalog/product', 'user_token=' . $this->session->data['user_token'] . $url, true)
 		);
-
+		// echo isset($this->request->get['product_id']);
 		if (!isset($this->request->get['product_id'])) {
 			$data['action'] = $this->url->link('catalog/product/add', 'user_token=' . $this->session->data['user_token'] . $url, true);
 		} else {
@@ -839,17 +840,17 @@ class ControllerCatalogProduct extends Controller {
 			$data['weight'] = '';
 		}
 
-		$this->load->model('localisation/weight_class');
-
-		$data['weight_classes'] = $this->model_localisation_weight_class->getWeightClasses();
-
-		if (isset($this->request->post['weight_class_id'])) {
-			$data['weight_class_id'] = $this->request->post['weight_class_id'];
-		} elseif (!empty($product_info)) {
-			$data['weight_class_id'] = $product_info['weight_class_id'];
-		} else {
-			$data['weight_class_id'] = $this->config->get('config_weight_class_id');
-		}
+// 		$this->load->model('localisation/weight_class');
+// 
+// 		$data['weight_classes'] = $this->model_localisation_weight_class->getWeightClasses();
+// 
+// 		if (isset($this->request->post['weight_class_id'])) {
+// 			$data['weight_class_id'] = $this->request->post['weight_class_id'];
+// 		} elseif (!empty($product_info)) {
+// 			$data['weight_class_id'] = $product_info['weight_class_id'];
+// 		} else {
+// 			$data['weight_class_id'] = $this->config->get('config_weight_class_id');
+// 		}
 
 		if (isset($this->request->post['length'])) {
 			$data['length'] = $this->request->post['length'];
@@ -886,7 +887,9 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['length_class_id'] = $this->config->get('config_length_class_id');
 		}
-
+// 		echo $data['length_class_id'];
+// 		echo '===>length_class_id';
+		// print_r($data); 
 		$this->load->model('catalog/manufacturer');
 
 		if (isset($this->request->post['manufacturer_id'])) {
@@ -1215,7 +1218,7 @@ class ControllerCatalogProduct extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
-
+         
 		$this->response->setOutput($this->load->view('catalog/product_form', $data));
 	}
 

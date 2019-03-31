@@ -1,5 +1,26 @@
 {{ header }}
 <div id="product-category" class="container">
+	<div class="filter mb0 indexpictop">
+	  <dl>
+	    <dt>系列</dt>
+	    <dd class="search-brand">
+	      <div class="brand-list">
+	        <div class="text-item ppmore text-h25" total="">
+	          {% for serie in series %}
+	          <a href="{{ serie.href }}" title="{{ serie.name }}" data-stype="brand" class="">
+	            <em>{{ serie.name }}</em>
+	          </a>
+	          {% endfor %}
+	        </div>
+	      </div>
+	      <div class="opt-btn">
+	        <a href="javascript:;" class="more" more="">
+	          <span>更多</span><b></b>
+	        </a>
+	      </div>
+	    </dd>
+	  </dl>
+	</div>
   <ul class="breadcrumb">
     {% for breadcrumb in breadcrumbs %}
     <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>

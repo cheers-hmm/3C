@@ -13,34 +13,55 @@ class ControllerProductProduct extends Controller {
 		);
 
 		$this->load->model('catalog/category');
-
+		$this->load->model('catalog/serie');
 		if (isset($this->request->get['path'])) {
 			$path = '';
 
 			$parts = explode('_', (string)$this->request->get['path']);
-
-			$category_id = (int)array_pop($parts);
-
-			foreach ($parts as $path_id) {
-				if (!$path) {
-					$path = $path_id;
-				} else {
-					$path .= '_' . $path_id;
-				}
-
-				$category_info = $this->model_catalog_category->getCategory($path_id);
-
-				if ($category_info) {
-					$data['breadcrumbs'][] = array(
-						'text' => $category_info['name'],
-						'href' => $this->url->link('product/category', 'path=' . $path)
-					);
-				}
+			$temp=(int)array_pop($parts);
+			$lens=count($parts);
+			// print_r($lens);
+			if($lens==1){
+				$category_id = $temp;
+				$parent_id=$temp;
+			}elseif($lens==2){
+				$temp=(int)array_pop($parts);
+				$category_id = $temp;
+				$parent_id=$temp;
 			}
+			
+			// $parent_id = $temp;
+				foreach ($parts as $path_id) {
+					if (!$path) {
+						$path = $path_id;
+					} else {
+						$path .= '_' . $path_id;
+					}
 
+					$category_info = $this->model_catalog_category->getCategory($path_id);
+					if ($category_info) {
+						$data['breadcrumbs'][] = array(
+							'text' => $category_info['name'],
+							'href' => $this->url->link('product/category', 'path=' . $path)
+						);
+					}
+				}	
+				$serie_info = $this->model_catalog_serie->getSeries($parent_id);
+				// print_r($serie_info);
+				if ($serie_info) {
+					foreach ($serie_info as $key => $value) {
+						if(empty($value)||count($value)==0){
+							continue;
+						}
+						$data['series'][] = array(
+						  'name'  => $value['name'],
+						  'href'  => $this->url->link('product/category', 'path=' . implode("_",$parts).'_'.$value['parent_id'] . '_' .$value['serie_id'])
+						);
+					}					
+				}
 			// Set the last category breadcrumb
 			$category_info = $this->model_catalog_category->getCategory($category_id);
-
+			// $serie_info = $this->model_catalog_serie->getSerie($serie_id);
 			if ($category_info) {
 				$url = '';
 
@@ -68,19 +89,19 @@ class ControllerProductProduct extends Controller {
 
       $children = $this->model_catalog_category->getCategories($category_info['parent_id']);
 
-      foreach ($children as $child) {
-        $filter_data = array(
-          'filter_category_id'  => $child['category_id'],
-          'filter_sub_category' => true
-        );
+		  foreach ($children as $child) {
+			$filter_data = array(
+			  'filter_category_id'  => $child['category_id'],
+			  'filter_sub_category' => true
+			);
 
-        $data['categories'][] = array(
-          'name'  => $child['name'],
-          'href'  => $this->url->link('product/category', 'path=' . $category_info['parent_id'] . '_' . $child['category_id'])
-        );
-      }
+			$data['categories'][] = array(
+			  'name'  => $child['name'],
+			  'href'  => $this->url->link('product/category', 'path=' . $category_info['parent_id'] . '_' . $child['category_id'])
+			);
+		  }
 		}
-
+		// print_r($data);
 		$this->load->model('catalog/manufacturer');
 
 		if (isset($this->request->get['manufacturer_id'])) {
@@ -171,6 +192,7 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
+		// print_r($product_info);
         $filter_data = array(
             'filter_name'         => $product_info["name"]
         );
@@ -544,7 +566,7 @@ class ControllerProductProduct extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-			
+			// print_r($data);
 			$this->response->setOutput($this->load->view('error/not_found', $data));
 		}
 	}

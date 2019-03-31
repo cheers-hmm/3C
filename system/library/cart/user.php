@@ -75,11 +75,11 @@ class User {
 		// echo '<br>';
 		if (isset($this->permission[$key])) {
 			// echo in_array($value, $this->permission[$key]);
-			// echo '-------------------------';
-			// echo $value.'<br>';
-			// echo $key.'<br>';
-			// print_r($this->permission[$key]);
-			// echo '<br>';
+// 			echo '-------------------------';
+// 			echo $value.'<br>';
+// 			echo $key.'<br>';
+// 			print_r($this->permission[$key]);
+// 			echo '<br>';
 			return in_array($value, $this->permission[$key]);
 		} else {
 			return false;

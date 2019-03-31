@@ -1,18 +1,18 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://test:8080/chucloud2019/3C/admin/');
-define('HTTP_CATALOG', 'http://test:8080/chucloud2019/3C/');
+define('HTTP_SERVER', 'http://localhost/2019/3C-master/3C/admin/');
+define('HTTP_CATALOG', 'http://localhost/2019/3C-master/3C/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://test:8080/chucloud2019/3C/admin/');
-define('HTTPS_CATALOG', 'http://test:8080/chucloud2019/3C/');
+define('HTTPS_SERVER', 'http://localhost/2019/3C-master/3C/admin/');
+define('HTTPS_CATALOG', 'http://localhost/2019/3C-master/3C/');
 
 // DIR
-define('DIR_APPLICATION', 'E:/xampp/htdocs/demo/chucloud2019/3C/admin/');
-define('DIR_SYSTEM', 'E:/xampp/htdocs/demo/chucloud2019/3C/system/');
-define('DIR_IMAGE', 'E:/xampp/htdocs/demo/chucloud2019/3C/image/');
+define('DIR_APPLICATION', 'F:/www/2019/3C-master/3C/admin/');
+define('DIR_SYSTEM', 'F:/www/2019/3C-master/3C/system/');
+define('DIR_IMAGE', 'F:/www/2019/3C-master/3C/image/');
 define('DIR_STORAGE', DIR_SYSTEM . 'storage/');
-define('DIR_CATALOG', 'E:/xampp/htdocs/demo/chucloud2019/3C/catalog/');
+define('DIR_CATALOG', 'F:/www/2019/3C-master/3C/catalog/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/template/');
 define('DIR_CONFIG', DIR_SYSTEM . 'config/');

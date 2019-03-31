@@ -21,7 +21,8 @@ class ControllerCatalogSerie extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('catalog/serie');
-
+		// print_r($this->request->post);
+		// echo $this->validateForm();
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_catalog_serie->addSerie($this->request->post);
 
@@ -515,7 +516,7 @@ class ControllerCatalogSerie extends Controller {
 	protected function validateForm() {
 // 		echo $this->user->hasPermission('modify', 'catalog/serie');
 // 		echo '<br>';
-// 		print_r($_REQUEST);
+		// print_r($_REQUEST);
 // 		echo '<br>';
 		if (!$this->user->hasPermission('modify', 'catalog/serie')) {
 			$this->error['warning'] = $this->language->get('error_permission');

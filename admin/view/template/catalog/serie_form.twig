@@ -251,18 +251,18 @@
 $('input[name=\'path\']').autocomplete({
 	'source': function(request, response) {
 		$.ajax({
-			url: 'index.php?route=catalog/serie/autocomplete&user_token={{ user_token }}&filter_name=' +  encodeURIComponent(request),
+			url: 'index.php?route=catalog/category/autocomplete&user_token={{ user_token }}&filter_name=' +  encodeURIComponent(request),
 			dataType: 'json',
 			success: function(json) {
 				json.unshift({
-					serie_id: 0,
+					category_id: 0,
 					name: '{{ text_none }}'
 				});
 
 				response($.map(json, function(item) {
 					return {
 						label: item['name'],
-						value: item['serie_id']
+						value: item['category_id']
 					}
 				}));
 			}
